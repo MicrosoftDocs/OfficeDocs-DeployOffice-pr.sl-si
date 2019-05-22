@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 096d6a368965ecedcff3807bbbf3e90649eb8562
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
+ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106904"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34250399"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -85,6 +85,9 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
 Če ne konfigurirate teh nastavitev pravilnika, so na voljo vse vrste povezanih izkušenj. Tako bodo vaši uporabniki lahko dostopali do vseh funkcij, ki so na voljo v storitvi Office 365 ProPlus. Vendar se zavedamo, da morda želite izklopiti nekatere ali vse povezane izkušnje zaradi določenih zahtev vaše organizacije.
+
+> [!IMPORTANT]
+> Trenutno imamo težavo s temi štirimi nastavitvami pravilnika, ki jo poskušamo odpraviti. Če želite onemogočiti eno od teh nastavitev pravilnika z orodjem za upravljanje pravilnika skupine, izberite izbirni gumb **Omogočeno**, nato pa na spustnem seznamu razdelka **Možnosti** izberite **Onemogočeno**. Če izberete izbirni gumb **Onemogočeno**, ne boste onemogočili teh nastavitev pravilnika.
 
 Če se odločite, da svojim uporabnikom ne boste omogočili določenih vrst povezanih izkušenj, bo trak ali meni za te povezane izkušnje zatemnjen oziroma bodo uporabniki prejeli sporočilo o napaki, ker so poskušali uporabiti te povezane izkušnje. V tem primeru [zahtevani podatki storitve](required-service-data.md) za te povezane izkušnje ne bodo poslani Microsoftu.
 
