@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
-ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
+ms.openlocfilehash: a28da8a54ecb37f6fd26576ce2dfb4614521dd19
+ms.sourcegitcommit: c4147043c5e6581d58a6d09edbf95266e67dd796
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34250399"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "34545474"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -87,7 +87,7 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 Če ne konfigurirate teh nastavitev pravilnika, so na voljo vse vrste povezanih izkušenj. Tako bodo vaši uporabniki lahko dostopali do vseh funkcij, ki so na voljo v storitvi Office 365 ProPlus. Vendar se zavedamo, da morda želite izklopiti nekatere ali vse povezane izkušnje zaradi določenih zahtev vaše organizacije.
 
 > [!IMPORTANT]
-> Trenutno imamo težavo s temi štirimi nastavitvami pravilnika, ki jo poskušamo odpraviti. Če želite onemogočiti eno od teh nastavitev pravilnika z orodjem za upravljanje pravilnika skupine, izberite izbirni gumb **Omogočeno**, nato pa na spustnem seznamu razdelka **Možnosti** izberite **Onemogočeno**. Če izberete izbirni gumb **Onemogočeno**, ne boste onemogočili teh nastavitev pravilnika.
+> Težava, povezana z onemogočanjem 4 nastavitev pravilnika, je bila nedavno odpravljena z objavo novih datotek administrativne predloge (ADMX/ADML) v torek 28. maja 2019. Preverite, ali ste prenesli in namestili posodobljene datoteke pravilnika skupine iz [Microsoftovega centra za prenose](https://www.microsoft.com/en-us/download/details.aspx?id=49030).
 
 Če se odločite, da svojim uporabnikom ne boste omogočili določenih vrst povezanih izkušenj, bo trak ali meni za te povezane izkušnje zatemnjen oziroma bodo uporabniki prejeli sporočilo o napaki, ker so poskušali uporabiti te povezane izkušnje. V tem primeru [zahtevani podatki storitve](required-service-data.md) za te povezane izkušnje ne bodo poslani Microsoftu.
 
@@ -207,8 +207,8 @@ Nekateri skrbniki spreminjajo nastavitve neposredno v registru, na primer s skri
 |Konfiguracija ravni diagnostičnih podatkov o programski opremi odjemalca, ki jih Office pošlje Microsoftu  | SendTelemetry |1=zahtevano <br/> 2=izbirno <br/> 3=niti eno niti drugo|
 |Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino  | UserContentDisabled | 1=omogočeno <br/> 2=onemogočeno|
 |Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino  | DownloadContentDisabled | 1=omogočeno <br/> 2=onemogočeno|
-|Omogočanje uporabe dodatnih povezanih izkušenj v Officeu   |  DisconnectedState |1=omogočeno <br/> 2=onemogočeno|
-|Omogočanje uporabe povezanih izkušenj v Officeu | ControllerConnectedServicesEnabled  | 1=omogočeno <br/> 2=onemogočeno|
+|Omogočanje uporabe dodatnih povezanih izkušenj v Officeu   | ControllerConnectedServicesEnabled  |1=omogočeno <br/> 2=onemogočeno|
+|Omogočanje uporabe povezanih izkušenj v Officeu | DisconnectedState  | 1=omogočeno <br/> 2=onemogočeno|
 
 Če želite ustvariti datoteko .reg za nastavitve zasebnosti, odprite Beležko in kopirajte notri te vrstice. Prilagodite vrednosti svojim potrebam, nato pa shranite datoteko. Poskrbite, da bo imelo ime datoteke pripono .reg
 
