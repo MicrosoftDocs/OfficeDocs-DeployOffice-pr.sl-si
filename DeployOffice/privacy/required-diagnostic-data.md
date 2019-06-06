@@ -1217,7 +1217,7 @@ Zbrana so ta polja:
 
   - **Data.IsWorkingBranchAvailableOnOpen** – Diagnostika sledenja spremembam za zagotavljanje najnovejše različice datoteke v skupni rabi.
 
-  - **Data.LicenseStatus** – Stanje licence izdelka za diagnostiko, uporabljenega za preverjanje, ali so ustrezne funkcije izdelka omogočene za vrsto licence uporabnika. 
+  - **Data.LicenseStatus** – stanje licence izdelka za diagnostiko, uporabljenega za preverjanje, ali so ustrezne funkcije izdelka omogočene za vrsto licence uporabnika. 
 
   - **Data.LicenseType** – Označuje stanje licence (brezplačno/plačljivo/preskusna različica itd.).
 
@@ -1853,7 +1853,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
@@ -1901,9 +1901,9 @@ Zbrana so ta polja:
 
   - **Data\_FailureReason:long** – Nabor vnaprej določenih vrednosti vzrokov napake (FileIsCorrupt, BlockedByAntivirus itd.).
 
-  - **Data_FullDownloadRoundTripCount:long** – Število izvedenih povratnih poti do strežnika za prenos celotnega dokumenta.
+  - **Data_FullDownloadRoundTripCount:long** – število izvedenih povratnih poti do strežnika za prenos celotnega dokumenta.
   
-  - **Data_IsProtocolRunInIncOpenMode:bool** – Ali je bil protokol zagnan za postopni prenos – to je vrsta prenosa, pri katerem so deli dokumenta preneseni po tem, ko so bili prikazani uporabniku.
+  - **Data_IsProtocolRunInIncOpenMode:bool** – ali je bil protokol zagnan za postopni prenos – to je vrsta prenosa, pri katerem so deli dokumenta preneseni po tem, ko so bili prikazani uporabniku.
 
   - **Data\_MethodId:long** – Katera vrstica kode je bila zadnja izvedena v postopku.
 
@@ -1975,7 +1975,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
@@ -2295,7 +2295,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
@@ -2987,7 +2987,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -3079,7 +3079,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -3175,7 +3175,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -3291,7 +3291,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -3621,7 +3621,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked:bool –** ima vrednost true, če gre za dokument strežnika, ki je na voljo lokalno in je sinhroniziran s strežnikom (npr. prek storitve OneDrive ali odjemalskih aplikacij ODB)
 
@@ -4053,7 +4053,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked:bool –** ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive
 
@@ -4413,7 +4413,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked –** zastavica ponazarja, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
 
@@ -4535,7 +4535,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -4656,7 +4656,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -4779,7 +4779,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – Vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
   - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
 
@@ -5229,19 +5229,19 @@ Zbrano, ko je zagnana Officeova aplikacija. Vključuje podatke o tem, kdaj je bi
 
 Zbrana so ta polja:
 
-  - **ActivationKind** – Ali je bila aplikacija zagnana z zagonom v začetnem meniju, z odpiranjem datoteke ali z avtomatizacijo OLE.
+  - **ActivationKind** – ali je bila aplikacija zagnana z zagonom v začetnem meniju, z odpiranjem datoteke ali z avtomatizacijo OLE.
 
-  - **FirstBoot** – Ali je bil to prvi zagon aplikacije.
+  - **FirstBoot** – ali je bil to prvi zagon aplikacije.
 
-  - **InitializationDuration** – Koliko časa v mikrosekundah je preteklo za prvo inicializacijo Officeovega postopka.
+  - **InitializationDuration** – koliko časa v mikrosekundah je preteklo za prvo inicializacijo Officeovega postopka.
 
   - **InterruptionMessageId** – ID pogovornega okna, če je zagon prekinilo pogovorno okno, ki je uporabnika pozivalo k vnosu podatkov.
 
-  - **TotalWorkingSetMB** – Količina pomnilnika v megabajtih v delovnem naboru postopka.
+  - **TotalWorkingSetMB** – količina pomnilnika v megabajtih v delovnem naboru postopka.
 
-  - **VirtualSetMB** – Količina pomnilnika v megabajtih v navideznem naboru postopka. (Samo MacOS/iOS)
+  - **VirtualSetMB** – količina pomnilnika v megabajtih v navideznem naboru postopka. (Samo MacOS/iOS)
 
-  - **WorkingSetPeakMB** – Največja količina pomnilnika v megabajtih, ki je bila doslej v delovnem naboru postopka.
+  - **WorkingSetPeakMB** – največja količina pomnilnika v megabajtih, ki je bila doslej v delovnem naboru postopka.
 
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
 
@@ -5249,13 +5249,13 @@ Sledenje dejavnosti. Ali je mogoče pomnilniški blok storitve Office Insider pr
 
 Zbrana so ta polja:
 
-  - **Data_CanShow** – Označuje, ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
+  - **Data_CanShow** – označuje, ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
   
-  - **Data_Event** – Neuporabljeno
+  - **Data_Event** – neuporabljeno
 
-  - **Data_EventInfo** – Neuporabljeno
+  - **Data_EventInfo** – neuporabljeno
 
-  - **Data_Reason** – Neuporabljeno
+  - **Data_Reason** – neuporabljeno
 
 #### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
 
@@ -5265,21 +5265,21 @@ Zbrana so ta polja:
 
   - **Data_AcceptedContactMeNew** – Ko izberete raven Insider in ko je izbor uporabnika uspešno zabeležen, označuje, ali je uporabnik podal soglasje, da lahko družba Microsoft vzpostavit stik z njim.
 
-  - **Data_DialogChoice** = Neuporabljeno
+  - **Data_DialogChoice** = neuporabljeno
   
-  - **Data_DialogId** = Neuporabljeno
+  - **Data_DialogId** = neuporabljeno
   
-  - **Data_Event** – Neuporabljeno
+  - **Data_Event** – neuporabljeno
   
-  - **Data_EventInfo** – Neuporabljeno
+  - **Data_EventInfo** – neuporabljeno
   
-  - **Data_InsiderLevel** – Raven programa Insider, ko je pogovorno okno prvič prikazano uporabniku.
+  - **Data_InsiderLevel** – raven programa Insider, ko je pogovorno okno prvič prikazano uporabniku.
   
-  - **Data_InsiderLevelNew** – Nova raven programa Insider, ki jo je izbral uporabnik.
+  - **Data_InsiderLevelNew** – nova raven programa Insider, ki jo je izbral uporabnik.
   
-  - **Data_IsInternalUser** – Označuje, ali se aplikacija izvaja s poverilnicami računa @microsoft.com account.
+  - **Data_IsInternalUser** – označuje, ali se aplikacija izvaja s poverilnicami računa @microsoft.com account.
   
-  - **Data_IsInternalUserInit** – Označuje, ali lahko koda določi, ali se aplikacija izvaja s poverilnicami računa @microsoft.com.
+  - **Data_IsInternalUserInit** – označuje, ali lahko koda določi, ali se aplikacija izvaja s poverilnicami računa @microsoft.com.
   
   - **Data_OpenNewsletterWebpage** – Ko je omogočena funkcija naročnine na glasilo za Office Insider in uporabnik z ravni Production preklopi na raven programa Insider, označuje, ali je bila aktivirana povezava za naročnino na glasilo za Office Insider za krmarjenje v brskalniku.
 
