@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: a5ac5dfded3dbb51693b5d15616675b067c59dc3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701714"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813318"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -64,7 +64,8 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 | | [Varnost](#security-subtype)  | Stanje napak dokumentov, funkcij in dodatkov, ki lahko ogrozijo varnost in pripravljenost izdelka za posodobitve.  |
 | **Uporaba izdelka in storitev**    | [Uspešnost izvajanja funkcije aplikacije](#application-feature-success-subtype)   | Uspešnost delovanja aplikacije. Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje). |
 | | [Stanje in zagon aplikacije](#application-status-and-boot-subtype)    | Prepoznavanje, ali so bili izvedeni določeni dogodki funkcij, kot je zagon ali ustavitev, oz. če se funkcije izvajajo.   |
-| | [Konfiguracija za dostopnost sistema Office](#office-accessibility-configuration-subtype)  | Officeove funkcije dostopnosti.       |
+| | [Konfiguracija za dostopnost sistema Office](#office-accessibility-configuration-subtype)  | Officeove funkcije dostopnosti       |
+| | [Zasebnost](#privacy-subtype)| Nastavitve zasebnosti za Office|
 | **Učinkovitost delovanja izdelka in storitve**       | [Nepričakovano zapiranje aplikacije (zrušitev)](#unexpected-application-exit-crash-subtype)  | Nepričakovana zapiranja aplikacije in stanje aplikacije, ko pride do tega.    |
 |  | [Učinkovitost delovanja funkcije aplikacije](#application-feature-performance-subtype)  | Slab odzivni čas ali slaba učinkovitost delovanja za scenarije, kot sta zagon aplikacije ali odpiranje datoteke. |
 |  | [Napaka dejavnosti aplikacije](#application-activity-error-subtype)   | Napake delovanja funkcij ali uporabniške izkušnje.  |
@@ -971,6 +972,7 @@ V nadaljevanju tega članka so navedeni podatkovni podtipi v tej kategoriji:
 - [Uspešnost izvajanja funkcije aplikacije](#application-feature-success-subtype)
 - [Stanje in zagon aplikacije](#application-status-and-boot-subtype)
 - [Konfiguracija za dostopnost sistema Office](#office-accessibility-configuration-subtype)
+- [Zasebnost](#privacy-subtype)
 
 
 ### <a name="application-feature-success-subtype"></a>*Podtip uspešnosti izvajanja funkcije aplikacije*
@@ -1605,7 +1607,7 @@ Zbrana so ta polja:
 
 #### <a name="officeoutlookdesktopaccountconfigurationcreateaccountresult"></a>Office.Outlook.Desktop.AccountConfiguration.CreateAccountResult
 
-Rezultati dodajanja računa v nov profil v Outlooku iz pogleda »Office Backstage« ali pogovornega okna z nastavitvami računa. Podatke aktivno spremljamo, da zaznamo morebitne konice napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki bi jih morali izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti.
+Rezultati dodajanja računa v nov profil v Outlooku iz pogleda »Office Backstage« ali pogovornega okna z nastavitvami računa. Podatke aktivno spremljamo, da zaznamo morebitne konice napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti.
 
 Zbrana so ta polja:
 
@@ -4000,8 +4002,12 @@ Zbrana so sledeča polja:
   - **Data\_CheckRequiredPartsLoaded –** trajanje izvedbe za način CheckRequiredPartsLoaded v milisekundah
 
   - **Data\_CheckWebSharingViolationForIncOpen –** trajanje izvedbe za način CheckWebSharingViolationForIncOpen v milisekundah
+   
+  - **Data_CloseAndReopenWithoutDiscard –** ali je bil dokument zaprt in ponovno odprt med postopkom odpiranja brez zavrženja.
 
   - **Data\_ContentTransaction –** nabor vnaprej določenih vrednosti, ko je mogoče ustvariti transakcijo (AllowedOnLoadDocument, AllowedOnOpenComplete itd.)
+
+  - **Data_CorrelationId –** GUID, ki je bil v PowerPoint posredovan z rutino ProtocolHandler za korelacijo telemetrije. ProtocolHandler je ločen proces, ki obravnava Officeove povezave za OS.
 
   - **Data\_CppUncaughtExceptionCount:long –** nezaznane izvirne izjeme med dejavnostjo
 
@@ -4911,6 +4917,50 @@ Ta dogodek ponazarja, da je Microsoft Office Word prenehal naglas brati besedilo
 Zbrana so sledeča polja:
 
   - Brez
+
+### <a name="privacy-subtype"></a>*Podvrsta zasebnosti*
+
+Nastavitve zasebnosti za Office 
+
+#### <a name="officeintelligentserviceprivacyconsentprivacyevent"></a>Office.IntelligentService.PrivacyConsent.PrivacyEvent
+
+Ta dogodek predstavlja dejanje uporabnika ali sistema, ki je del uporabniške izkušnje z zasebnostjo za Office. Aktivira se v pogovornih oknih zasebnosti ob prvem zagonu, pogovornem oknu zasebnosti računa in obvestilih o zasebnosti. Dogodek se uporablja za naslednje: razumevanje soglasja uporabnikov za nastavitve zasebnosti za Office, uporabnikovo spreminjanje nastavitev zasebnosti za Office in za posodabljanje nastavitev zasebnosti za Office v uporabniških sejah.
+
+Zbrana so sledeča polja:
+
+  - **Data_ActionId –** dejanje uporabnika v pogovornem oknu zasebnosti
+
+  - **Data_ControllerConnectedServicesState –** nastavitev pravilnika uporabnika za dodatne izbirne povezane izkušnje
+
+  - **Data_DownloadedContentServiceGroupState –** nastavitev uporabnika za preneseno vsebino 
+ 
+  - **Data_ForwardLinkId –** povezava do dokumentacije o zasebnosti za scenarij uporabnika
+
+  - **Data_HRESULT –** zapisovanje napak med interakcijo v pogovornem oknu zasebnosti
+
+  - **Data_IsEnterpriseUser –** kategorija licenc uporabnikov
+
+  - **Data_OfficeServiceConnectionState –** nastavitev uporabnika za povezane storitve
+
+  - **Data_RecordRegistry –** zapis, ki prikazuje pogovorno okno zasebnosti podjetja
+
+  - **Data_Scenario –** prvi scenarij, izveden glede na licenco uporabnika in kategorijo
+
+  - **Data_SeenInsidersDialog –** zapis, ki prikazuje pogovorno okno zasebnosti za člane programa Insider
+
+  - **Data_SendTelemetryOption –** nastavitev uporabnika za telemetrijo
+
+  - **Data_SendTelemetryOptionPolicy –** nastavitev pravilnika uporabnika za telemetrijo
+
+  - **Data_UserCategory –** vrsta uporabniškega računa  
+
+  - **Data_UserCCSDisabled –** preglasitev uporabnika za dodatne izbirne povezane izkušnje
+
+   - **Data_UserContentServiceGroupState –** nastavitev uporabnika za analizo vsebine
+
+  - **Data_WillShowDialogs –** zapis uporabnika, zahtevan pri pogovornih oknih zasebnosti ob prvem zagonu
+
+
 
 ## <a name="product-and-service-performance-data-events"></a>Dogodki podatkov o učinkovitosti delovanja izdelkov in storitev
 
