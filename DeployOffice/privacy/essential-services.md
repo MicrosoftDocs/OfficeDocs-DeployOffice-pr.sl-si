@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
+ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813354"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "35817986"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -50,7 +50,7 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 | ------ | ---- |
 | [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki je na voljo v različnih platformah, s katero lahko preverite veljavnost identitete uporabnika v Officeu.  S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
 | [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti. Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
-| [Izboljšana konfiguracijska storitev (ECS)](#experimentation-and-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
+| [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
 | [Konfiguracija storitev](#services-configuration-events)  | Konfiguracija storitev omogoča posodobitve konfiguracijskih nastavitev za Office za omogočanje oziroma onemogočanje odjemalskih funkcij. Storitev se aktivira vsakič, ko se zažene Officeova aplikacija, in zagotavlja podrobnosti o drugih konfiguracijah ter storitvah v Officeu. Storitve konfiguracije prav tako nadzorujejo, katere storitve so opredeljene kot osnovne storitve.  |
 | [Telemetrija](#telemetry-events)  | Storitev telemetrije se uporablja za zbiranje diagnostičnih podatkov iz Officeovih aplikacij. Omogoča zbiranje diagnostičnih podatkov, ki jih ustvarja Office (zahtevanih in izbirnih diagnostičnih podatkov). Storitev je prav tako odgovorna za zbiranje dela diagnostičnih podatkov storitve za zahtevano storitev za Office.  |
@@ -2395,7 +2395,7 @@ Zbrana so sledeča polja:
   - **Data\_targetBuild** – različica Officea, na katero želimo posodobiti
 
 
-## <a name="experimentation-and-configuration-service-ecs-events"></a>Dogodki storitve ECS
+## <a name="enhanced-configuration-service-ecs-events"></a>Dogodki izboljšane konfiguracijske storitve (ECS)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
 
@@ -2492,7 +2492,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinggetentitlement"></a>Office.Licensing.GetEntitlement 
 
-Te podatke zberemo, ko uporabnik nastavi napravo in pokličemo storitev licenciranja, da zazna, ali je prijavljeni uporabnik upravičen do Office ali ne. Da dogodek vrne rezultat klica. Dogodek je pomemben pri zaznavanju, ali je uporabnik v dobrem stanju in nima omogočene vse funkcionalnosti; uporabljajo se za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Te podatke zberemo, ko uporabnik nastavi napravo in pokličemo storitev licenciranja, da zazna, ali je prijavljeni uporabnik upravičen do Officea ali ne. Da dogodek vrne rezultat klica. Dogodek je pomemben pri zaznavanju, ali je uporabnik v dobrem stanju in nima omogočene vse funkcionalnosti; uporabljajo se za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Ta dogodek ne zbere nobenega polja.
 
@@ -2556,7 +2556,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Ta signal posredujemo, da ponazorimo, da je prišlo do zapiranja/zrušitve Officea zaradi težave z licenciranjem. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Ta signal posredujemo, da ponazorimo, da je prišlo do zapiranja ali zrušitve Officea zaradi težave z licenciranjem. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -2616,7 +2616,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingofficeclientlicensingdolicensevalidation"></a>Office.Licensing.OfficeClientLicensing.DoLicenseValidation 
 
-Predstavlja metapodatke za licenciranje, ki se pridobijo iz naprave ob vsakem zagonu, in iz katerih so razvidni identifikator licence, stanje licence, vrsta in druge lastnosti licence. Ti parametri so pomembni pri prepoznavanju nabora funkcij, ki so na voljo za uporabnika. To je zelo pomembno pri prepoznavanju nabora funkcij, ki so na voljo za uporabnika, in ali uporabnik morda ni deležen nekatere funkcionalnosti. Ta dogodek se prav tako uporablja za izračune dnevnih aktivnih uporabnikov/mesečnih aktivnih uporabnikov in za druga poročila, ki jih ustvarjajo različne skupine (trženje, DIG, licenciranje), saj je iz njih razvidna vrsta izdelka, ki ga uporablja uporabnik, ali gre za naročniški izdelek in ali je za uporabnike morda onemogočena določena funkcionalnost.
+Predstavlja metapodatke za licenciranje, ki se pridobijo iz naprave ob vsakem zagonu, in iz katerih so razvidni identifikator licence, stanje licence, vrsta in druge lastnosti licence. Ti parametri so pomembni pri prepoznavanju nabora funkcij, ki so na voljo za uporabnika. To je zelo pomembno pri prepoznavanju nabora funkcij, ki so na voljo za uporabnika, in ali uporabnik morda ni deležen nekatere funkcionalnosti. Ta dogodek se prav tako uporablja za izračune dnevnih aktivnih uporabnikov/mesečnih aktivnih uporabnikov in za druga poročila, ki jih ustvarjajo različne skupine v Officeu, saj je iz njih razvidna vrsta izdelka, ki ga uporablja uporabnik, ali gre za naročniški izdelek in ali je za uporabnike morda onemogočena določena funkcionalnost.
 
 Zbrana so sledeča polja:
 
