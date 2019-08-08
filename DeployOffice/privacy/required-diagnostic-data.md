@@ -5443,7 +5443,7 @@ ms.locfileid: "34813318"
 
   - <span data-ttu-id="b2711-3219">**Data\_TagID** – identifikator zaznane okvare</span><span class="sxs-lookup"><span data-stu-id="b2711-3219">**Data\_TagID** - The identifier of the failure that occurred</span></span>
 
-#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a><span data-ttu-id="b2711-3220">Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error</span><span class="sxs-lookup"><span data-stu-id="b2711-3220">Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error</span></span>
+#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfolder_error"></a><span data-ttu-id="b2711-3220">Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error</span><span class="sxs-lookup"><span data-stu-id="b2711-3220">Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error</span></span>
 
 <span data-ttu-id="b2711-3221">Zbira informacije o zaznanih okvarah med prikazom koledarja v skupni rabi.</span><span class="sxs-lookup"><span data-stu-id="b2711-3221">Collects information when any failure occurs when while Navigation to shared Calendar.</span></span> <span data-ttu-id="b2711-3222">Ti podatki se uporabljajo za nadzor stanja programskega vmesnika za skupno rabo koledarja in Outlookove interakcije s koledarji v skupni rabi.</span><span class="sxs-lookup"><span data-stu-id="b2711-3222">This data is used to monitor the health of the calendar sharing API as well as Outlooks interaction with shared calendars.</span></span>
 
