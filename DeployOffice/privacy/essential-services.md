@@ -2498,7 +2498,7 @@ Ta dogodek ne zbere nobenega polja.
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
-Za vsako sejo preverimo, ali je minilo 72 ur od zadnje obnovitve licence, in poskušamo podaljšati potek trenutne licence. S pomočjo tega dogodka lahko ugotovimo uspeh/neuspeh klica, s katerim potrdimo, da lahko podaljšamo potek licence in omogočimo funkcionalnost Officea, ki ga je namestil uporabnik. Pri diagnosticiranju težav, povezanih z naročnino, in težav storitev je ta dogodek ključen za uporabnika in pri zaznavanju regresij za že aktitivrane uporabnike naročnine.
+Za vsako sejo preverimo, ali je minilo 72 ur od zadnje obnovitve licence, in poskušamo podaljšati potek trenutne licence. S pomočjo tega dogodka lahko ugotovimo, ali je bil klic uspešen ali neuspešen, da lahko podaljšamo potek licence in omogočimo funkcionalnost Officea, ki ga je namestil uporabnik. Pri diagnosticiranju težav, povezanih z naročnino, in težav storitev je ta dogodek ključen za uporabnika in pri zaznavanju regresij za že aktitivrane uporabnike naročnine.
 
 Zbrana so sledeča polja:
 
@@ -2754,7 +2754,7 @@ Zbrana so sledeča polja:
 
   - **IsCeip** – ali je bila namestitev Officea vključena v ukinjeni program za izboljšanje uporabniške izkušnje
 
-  - **IsDebug** – ali je to gradnja Officea za odpravljanje napak
+  - **IsDebug** – ali je to graditev Officea za odpravljanje napak
 
   - **IsImmersive** – ali Officeova aplikacija predstavlja univerzalno ali potopno aplikacijo sistema Windows
 
@@ -2866,7 +2866,7 @@ Zbrana so sledeča polja:
 
   - **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
 
-  - **PreviousBuild** – različica Officea, iz katere je bila ta gradnja nadgrajena ali povrnjena na prejšnjo različico.
+  - **PreviousBuild** – različica Officea, na katero je bila ta graditev nadgrajena ali s katere je bila povrnjena na prejšnjo različico.
 
   - **State** – stanje, v katerega se je spremenila seja
 
@@ -3438,7 +3438,7 @@ Zbrana so sledeča polja:
 
   - **InteractionSessionID** – identifikator seje
 
-  - **PreviousBuild** – različica Officea, iz katere je bila ta gradnja nadgrajena ali povrnjena na prejšnjo različico.
+  - **PreviousBuild** – različica Officea, na katero je bila ta graditev nadgrajena ali s katere je bila povrnjena na prejšnjo različico.
 
   - **State** – stanje, v katerega se je spremenila seja
 

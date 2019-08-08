@@ -5443,7 +5443,7 @@ Zbrana so sledeča polja:
 
   - **Data\_TagID** – identifikator zaznane okvare
 
-#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
+#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfolder_error"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
 
 Zbira informacije o zaznanih okvarah med prikazom koledarja v skupni rabi. Ti podatki se uporabljajo za nadzor stanja programskega vmesnika za skupno rabo koledarja in Outlookove interakcije s koledarji v skupni rabi.
 
