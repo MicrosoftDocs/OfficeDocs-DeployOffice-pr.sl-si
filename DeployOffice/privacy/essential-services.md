@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
-ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
+ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "35817986"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239187"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -27,7 +27,8 @@ ms.locfileid: "35817986"
 > - Office 365 ProPlus in Office 365 Business
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
-
+>
+> Informacije veljajo tudi za različico 16,28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ko določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika, povezane z varnostjo. Te podatke si lahko ogledate s pregledovalnikom diagnostičnih podatkov.
 
@@ -41,6 +42,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Seznam osnovnih storitev za Office 
 
@@ -52,7 +54,9 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 | [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti. Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
 | [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
-| [Konfiguracija storitev](#services-configuration-events)  | Konfiguracija storitev omogoča posodobitve konfiguracijskih nastavitev za Office za omogočanje oziroma onemogočanje odjemalskih funkcij. Storitev se aktivira vsakič, ko se zažene Officeova aplikacija, in zagotavlja podrobnosti o drugih konfiguracijah ter storitvah v Officeu. Storitve konfiguracije prav tako nadzorujejo, katere storitve so opredeljene kot osnovne storitve.  |
+|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft autoupdate (MAU) je tehnologija, ki se uporablja za posodobitev Microsoftovih aplikacij, ustvarjenih za MacOS, kot je Office. MAU bo zaznal potrebo po storitvi, izvedla prenos in namestitev posodobitev programov, vključno z varnostnimi posodobitvami.|
+|[Sinhronizacija programa OneNote](#onenote-sync-events)|OneNote za Mac podpira le zvezke, ki so shranjeni v internetu v OneDrive ali SharePoint Online. OneNote za Mac nenehno sinhronizira vse zapiske uporabnikov z OneDrive ali storitvijo SharePoint online. Tako lahko uporabniki odprejo, si ogledajo in urejajo svoje zvezke v vseh svojih napravah, tako da so njihovi zvezki vedno posodobljeni.
+ [Konfiguracija storitev](#services-configuration-events)  | Konfiguracija storitev omogoča posodobitve konfiguracijskih nastavitev za Office za omogočanje oziroma onemogočanje odjemalskih funkcij. Storitev se aktivira vsakič, ko se zažene Officeova aplikacija, in zagotavlja podrobnosti o drugih konfiguracijah ter storitvah v Officeu. Storitve konfiguracije prav tako nadzorujejo, katere storitve so opredeljene kot osnovne storitve.  |
 | [Telemetrija](#telemetry-events)  | Storitev telemetrije se uporablja za zbiranje diagnostičnih podatkov iz Officeovih aplikacij. Omogoča zbiranje diagnostičnih podatkov, ki jih ustvarja Office (zahtevanih in izbirnih diagnostičnih podatkov). Storitev je prav tako odgovorna za zbiranje dela diagnostičnih podatkov storitve za zahtevano storitev za Office.  |
 
 ## <a name="events-and-data-fields-for-essential-services-for-office"></a>Dogodki in podatkovna polja za osnovne storitve za Office
@@ -2362,6 +2366,51 @@ Zbrana so sledeča polja:
 
   - **Data\_Version** – različica Officea 
 
+### <a name="officeclicktoruntransport"></a>Office.ClickToRun.Transport
+
+Poročila v datoteki Prenesite dejanja, da ugotovite uspešnost operacije, vrsto prenosa izvedenih in diagnostičnih informacij.
+
+
+- **BytesFromGroupPeers –** bajti iz skupinskega sovrstnika, le za prenose z uporabo optimizacije dostave
+
+- **BytesFromHttp –** bajti od http, le za prenose z uporabo optimizacije dostave
+
+- **BytesFromInternetPeers –** bajti iz skupinskega sovrstnika, le za prenose z uporabo optimizacije dostave 
+
+- **BytesFromLanPeers –** bajti iz Lan vrstnikov, le za prenose z uporabo optimizacije dostave 
+
+- **CancelledJobs –** število preklicanih zahtev v seji
+
+- **Povezano –** ne glede na to, ali je povezano z virom
+
+- **ErrorCode –** koda zadnje napake
+
+- **ErrorDetails –** podrobnosti o zadnji napaki
+
+- **»ErrorMessage«–** sporočilo o zadnji napaki 
+
+- **ErrorSource –** vir zadnje napake npr. povezava, LoadFile ali LoadRange
+
+- **FailedJob –** število spodletelih zahtev v seji
+
+- **Velikost datoteke -**   velikosti vira
+
+- **SourcePathNoFilePath –** izvorna pot vira le vir http je Javljena, lokalna pot datoteke ali pot UNC je filtrirana
+
+- **SucceededJobs –** število uspešnih zahtev v seji
+
+- **TotalJobs –** skupno število zahtev v seji
+
+- **TotalRequestedBytes –** skupni zahtevani bajti v seji
+
+- **TotalTransferTime –** skupen čas prenosa v seji
+
+- **TransferredBytes –** vsota prenesenih bajtov v seji
+
+- **TransportType –** vrsta prevoza (na primer v pomnilniku optimizacija, http, ozadje inteligentna storitev prenosa)
+
+
+
 ### <a name="officeclicktoruntransportexperimentaltransportpipelinecreatetransport"></a>Office.ClickToRun.Transport.ExperimentalTransport.PipelineCreateTransport
 
 Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo zagona s klikom ustvarja tok za prenos Officeovih datotek. Dogodki se uporabljajo za določanja stanja različnih tehnologij prenosa (npr. HTTP, BITS, SO), kar je kritičnega pomena za pravilno prenašanje Officea za namestitev in posodobitve.
@@ -2393,6 +2442,190 @@ Zbrana so sledeča polja:
   - **Data\_status** – kratko stanje o poteku med posodobitvijo, npr. »Uspelo« ali »Ni uspelo«
 
   - **Data\_targetBuild** – različica Officea, na katero želimo posodobiti
+
+
+### <a name="officeclicktorununiversalbootstrapperapplication"></a>Office.ClickToRun.UniversalBootstrapper.Application
+
+Poroča o rezultatu poskusa pokončne namestitve
+
+ - **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
+
+ - **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb» thrower «)
+
+ - **» ErrorMessage «–** niz, ki je definiran na mestu, kjer je bila zavrnjena Neobravnavana izjema, z opisom narave napake
+
+ - **ErrorType –** niz z opisom kategorije neobravnavane izjeme
+
+ - **ExitCode –** celo število, ki je povezano z rezultatom zagona Bootstrapper, pri čemer je razvidno, da je uspeh v primerjavi s posebnimi vrstami spodletelih.
+
+### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
+
+Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
+
+- **BitField –** celoštevilska vrednost argumenta» BitField «, ki nam pove, ali je zahteva za eksplicitno namestitev/posodobitev zahtevana (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni)
+
+- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala Update/install (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni, neveljaven)
+
+- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe.
+
+- **C2RClientUICulture –** kultura C2R odjemalca za namestitev
+
+- **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
+
+- **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb »thrower«)
+
+- **ErrorMessage –** niz, ki je definiran na mestu, kjer je bila zavrnjena neobravnavana izjema, z opisom narave napake
+
+- **ErrorType –** niz z opisom kategorije neobravnavane izjeme
+
+- **ExcludedApps –** niz, na katerem so na voljo imena posameznih Officeovih aplikacij, ki jih želite izključiti iz nameščenih Officeovih zbirk
+
+- **InstalledCabVersion –** različica» 16.0. xxxxx. llll «, ki jo je že namestil odjemalec za Office C2R.
+
+- **InstalledProductVersion –** različica programa za Office C2R, ki je že nameščena v različici» 16.0. xxxxx. llll «
+
+- **IsC2RServiceRunning –** logična zastavica, ki označuje, ali je v napravi nameščeno lokalno strojno storitev C2R odjemalca.
+
+- **IsElevatedFlagSet –** logična zastavica, ki označuje, ali je Bootstrapper že poskusil pridobiti skrbniško zvišanje
+
+- **IsFireFlyInstalled –** logična zastavica, ki označuje, ali je trenutno nameščen odjemalec sistema Office 2013 RTM C2R
+
+- **IsFireflyServiceRunning –** logična zastavica, ki označuje, ali je storitev lokalnega računalnika odjemalca 2013 RTM C2R in deluje v napravi
+
+- **IsOfficeInstalled –** logična zastavica, ki označuje, ali je že nameščen sodobni Officeov odjemalec.
+
+- **OfficeCultures –** seznam Office kultur, ki jih je treba namestiti
+
+- **OfficeSourceType –** prijazna vrvica, povezana z vrednostjo enum za vir namestitve (CDN, http, UNC, CMBITS, DVD, Local)
+
+- **Poreklo –** vrednost niza, ki nam sporoča, kateri od podprtih izvorov (Puerto Rico [PR], Singapur [SG], Dublin [DB]) bi bilo treba uporabiti za začetno pretočni prenos
+
+- **PlatformFromLink –** niz, ki označuje zahtevano x86 | x64 | privzeta bitnostjo sistema Office, ki ga zahteva storitev C2R setup
+
+- **PlatformOfExistingInstallation –** niz, ki označuje, ali je bil x86 vs. x64 Office že nameščen v napravi
+
+- **PlatformToInstall –** niz, ki označuje končno odločitev o tem, ali je treba namestiti x86 vs. x64 Office. Možnosti so: Autorun, Configure, Consumer, download, Help, pakirnice
+
+- **PRID –** vrednost niza, ki predstavlja zahtevani ID izdaje izdelka v scenariju namestitve potrošnika (na primer» O365ProPlusRetail «)
+
+- **ProductsToAdd –** sestavljen niz, ki naroča C2R odjemalcu, na katerem je treba namestiti kombinacije izdelka/kulture.
+
+- **ProductsToRemove –** sestavljen niz, ki naroča C2R odjemalcu, na katerem so kombinacije izdelkov/kulture, ki jih je treba odstraniti
+
+- **SharedComputerLicensing –** logična vrednost, ki označuje, ali je skrbnik za IT zahteval nastavitev, ki omogoča funkcijo »SharedComputerLicensing«
+
+- **ShouldActivate –** logična vrednost, ki označuje, ali je skrbnik za IT zahteval samodejno aktivacijo licenc, ki je bil izveden v konfiguraciji. XML
+
+- **VersionToInstall –** vrednost niza Officea »16.0. xxxxx. llll«, ki je nameščena
+ 
+
+### <a name="officeclicktorununiversalbootstrappercollectembeddedsignature"></a>Office.ClickToRun.UniversalBootstrapper.CollectEmbeddedSignature
+
+Poročila o dejanjih, ki preberejo označeno vnašanje iz vdelanega podpisa exe.  To je nedokazano pojmovanje prejšnjega ponovitve namestitve. exe ni bilo mogoče izvesti in je odvisno od tega, na kaj se zanašamo, da bi v postopku setup. exe prenašali možnosti uporabnikov izdelek/jezik/bitnostjo.
+ 
+- **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
+
+- **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb »thrower«)
+
+- **ErrorMessage –** niz, ki je definiran na mestu, kjer je bila zavrnjena neobravnavana izjema, z opisom narave napake
+
+- **ErrorType –** niz z opisom kategorije neobravnavane izjeme
+
+### <a name="officeclicktorununiversalbootstrappercollectparameters"></a>Office.ClickToRun.UniversalBootstrapper.CollectParameters
+
+Sporoči parametre, ki se uporabljajo za namestitev Officea
+
+- **BitField –** celoštevilska vrednost argumenta» BitField «, ki nam pove, ali je zahteva za eksplicitno namestitev/posodobitev zahtevana (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni)
+
+- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala Update/install (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni, neveljaven)
+
+- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe. Možnosti so: Autorun, Configure, Consumer, download, Help, pakirnice
+
+- **C2RClientUICulture –** kultura C2R odjemalca za namestitev
+
+- **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
+
+- **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb »thrower«)
+
+- **ErrorMessage –** niz, ki je definiran na mestu, kjer je bila zavrnjena neobravnavana izjema, z opisom narave napake
+
+- **ErrorType –** niz z opisom kategorije neobravnavane izjeme
+
+- **ExcludedApps –** niz, na katerem so na voljo imena posameznih Officeovih aplikacij, ki jih želite izključiti iz nameščenih Officeovih zbirk
+
+- **InstalledCabVersion –** različica» 16.0. xxxxx. llll «, ki jo je že namestil odjemalec za Office C2R.
+
+- **InstalledProductVersion –** različica programa za Office C2R, ki je že nameščena v različici» 16.0. xxxxx. llll «
+
+- **IsC2RServiceRunning –** logična zastavica, ki označuje, ali je v napravi nameščeno lokalno strojno storitev C2R odjemalca.
+
+- **IsElevatedFlagSet –** logična zastavica, ki označuje, ali je Bootstrapper že poskusil pridobiti skrbniško zvišanje
+
+- **IsFireFlyInstalled –** logična zastavica, ki označuje, ali je trenutno nameščen odjemalec sistema Office 2013 RTM C2R
+
+- **IsFireflyServiceRunning –** logična zastavica, ki označuje, ali je storitev lokalnega računalnika odjemalca 2013 RTM C2R in deluje v napravi
+
+- **IsOfficeInstalled –** logična zastavica, ki označuje, ali je že nameščen sodobni Officeov odjemalec.
+
+- **OfficeCultures –** seznam Office kultur, ki jih je treba namestiti
+
+- **OfficeSourceType –** prijazna vrvica, povezana z vrednostjo enum za vir namestitve (CDN, http, UNC, CMBITS, DVD, Local)
+
+- **Poreklo –** vrednost niza, ki nam sporoča, kateri od podprtih izvorov (Puerto Rico [PR], Singapur [SG], Dublin [DB]) bi bilo treba uporabiti za začetno pretočni prenos
+
+- **PlatformFromLink –** niz, ki označuje zahtevano x86 | x64 | privzeta bitnostjo sistema Office, ki ga zahteva storitev C2R setup
+
+- **PlatformOfExistingInstallation –** niz, ki označuje, ali je bil x86 vs. x64 Office že nameščen v napravi
+
+- **PlatformToInstall –** niz, ki označuje končno odločitev o tem, ali je treba namestiti x86 vs. x64 Office.
+
+- **ProductsToRemove –** sestavljen niz, ki naroča C2R odjemalcu, na katerem so kombinacije izdelkov/kulture, ki jih je treba odstraniti
+
+- **PRID –** vrednost niza, ki predstavlja zahtevani ID izdaje izdelka v scenariju namestitve potrošnika (na primer» O365ProPlusRetail «)
+
+- **ProductsToAdd –** sestavljen niz, ki naroča C2R odjemalcu, na katerem je treba namestiti kombinacije izdelka/kulture.
+
+- **SharedComputerLicensing –** logična vrednost, ki označuje, ali je skrbnik za IT zahteval nastavitev, ki omogoča funkcijo »SharedComputerLicensing«
+
+- **ShouldActivate –** logična vrednost, ki označuje, ali je skrbnik za IT zahteval samodejno aktivacijo licenc, ki je bil izveden v konfiguraciji. XML
+
+- **VersionToInstall –** vrednost niza Officea »16.0. xxxxx. llll«, ki je nameščena
+
+### <a name="officeclicktorununiversalbootstrapperexecute"></a>Office.ClickToRun.UniversalBootstrapper.Execute
+
+Poročila o izvedenih sprejetih dejanjih, kot je določeno z obrazloženimi podatki iz »CalculateParameters«
+
+- **AvailableClientVersionText –** vrednost niza odjemalca C2R» 16.0. xxxxx. llll «, ki je na voljo v XML deskriptorju različice, ki se uporablja za določanje, ali je treba posodobiti trenutno nameščenega odjemalca C2R
+
+- **CleanFireflyAction –** »TRUE«, če je načrtovano opravilo »CleanFireflyAction«, ki se izvaja med to namestitvijo
+
+- **CleanO15Action –** »TRUE«, če je načrtovano opravilo »CleanO15Action«, ki se izvaja med to namestitvijo
+
+- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe. Možnosti so: Autorun, Configure, Consumer, download, Help, pakirnice
+
+- **DeliveryMechanism –** GUID »FFNRoot«, ki je bil pridobljen iz XML deskriptorja različic (ki ga je ožigosal RDX), v katerem je navedeno, za katero publiko/kanal je prišel vir gradnje
+
+- **DownloadC2RClientAction –** »TRUE«, če je načrtovano opravilo »DownloadC2RClientAction«, ki se izvaja med to namestitvijo
+
+- **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
+
+- **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb »thrower«)
+
+- **ErrorMessage –** niz, ki je definiran na mestu, kjer je bila zavrnjena neobravnavana izjema, z opisom narave napake
+
+- **ErrorType –** niz z opisom kategorije neobravnavane izjeme
+
+- **ExitCode –** celo število, ki je povezano z rezultatom zagona izvršitvene faze Bootstrapper, pri čemer je navedeno, da je uspeh v primerjavi s posebnimi vrstami spodletelih.
+
+- **LaunchAction –** » TRUE «, če je načrtovano opravilo» LaunchAction «, ki se izvaja med to namestitvijo
+
+- **LaunchUpdateAction –** »TRUE«, če je načrtovano opravilo »LaunchUpdateAction«, ki se izvaja med to namestitvijo
+
+- **PreReqResult –** celo število enum vrednosti rezultata, ko so bile izvedene predzahtevi kontrole (pass/neuspel/ponovni zagon)
+
+- **UnexpectedAction –** »TRUE«, če je v tej namestitvi načrtovano opravilo »UnexpectedAction« (primer napake)
+
+- **VersionToInstall –** vrednost niza Officea »16.0. xxxxx. llll«, ki je nameščena
 
 
 ## <a name="enhanced-configuration-service-ecs-events"></a>Dogodki izboljšane konfiguracijske storitve (ECS)
@@ -2582,7 +2815,9 @@ Zbrana so sledeča polja:
 
   - **OptInShown** – ponazarja, ali je bilo izbirno pogovorno okno, ki se prikaže ob prvem zagonu aplikacije, že prikazano
 
-  - **Office.Licensing.NextUserLicensingEligible** – ta signal nam sporoča, ali uporabnik izpolnjuje ustrezne pogoje za prehod na novo zbirko licenciranja. To je pomembno pri količinskem vplivu na obstoječe uporabnike, ko uvajamo novo zbirko licenciranja, ter da se prepričamo, da uporabniki ne izgubljajo na funkcionalnosti.
+### <a name="officelicensingnextuserlicensingeligible"></a>Office.Licensing.NextUserLicensingEligible 
+
+S tem signalom nam sporočite, ali je uporabnik usposobljen za selitev v nov sklad licenciranja. To je pomembno pri količinskem vplivu na obstoječe uporabnike, ko uvajamo novo zbirko licenciranja, ter da se prepričamo, da uporabniki ne izgubljajo na funkcionalnosti.
 
 Ta dogodek ne zbere nobenega polja.
 
@@ -2701,6 +2936,7093 @@ Zbrana so sledeča polja:
   - **OpportunisticTokenRenewalAttempted** – označuje, ali smo priložnostno poskušali obnoviti licenco za uporabnika v način za aktivacijo računalnika v skupni rabi
 
   - **ReArmResult** – označuje rezultat vrnitve v obdobje pred aktiviranjem nameščenega ključa, s katerem je mogoče razširiti trenutno licenco
+
+## <a name="microsoft-autoupdate-mau-events"></a>Dogodki Microsoft autoupdate (MAU)
+
+### <a name="appdelegate_launch"></a>appdelegate_launch
+
+Ta dogodek pomeni, da je prišlo do poskusa zagona aplikacije. Zabeležimo njegov rezultat (neuspeh ali uspeh). S tem dogodkom ugotovimo primere, v katerih MAU ne bo začela
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprava (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+ - **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – nabor statičnega besedila, ki označuje stanje izstrelitve.
+
+- **PipelineInfo_ClientCountry** – država naprava (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="appdelegate_terminate"></a>appdelegate_terminate
+
+Ta dogodek pomeni, da je prišlo do uporabe ljubkega izhoda. Ta dogodek uporabljamo, da razločimo ljubke izhodne aplikacije iz neusmiljenih.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+    
+- **Device_NetworkCountry** – država naprava (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+    
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo, v katerem je navedeno, da je Microsoft autoupdate prekinjen.
+
+- **PipelineInfo_ClientCountry** – država naprava (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="appinstall_connecttoxpc"></a>appinstall_connecttoxpc
+
+Ta dogodek pomeni, da je prišlo do napake pri vzpostavljanju povezave s pomočnikom MAU (komponenta, ki izvede namestitev programa).  V tem primeru se prikaže možna korupcija aplikacije MAU. Naprava ne bo mogla namestiti posodobitev.
+
+Zbrana so sledeča polja: 
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije o napakah pri težavi s povezavo.
+
+- **PipelineInfo_ClientCountry** – država naprava (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="appregistry_info"></a>appregistry_info
+
+V tem primeru se prikaže sporočilo, da se je program zagnal. Ta dogodek uporabljamo za seznam programov, za katere lahko MAU nadzoruje posodobitve, število kopij, ki so na voljo, ter njihovo različico in lokacijo namestitve (privzeto ali drugo).
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije na seznamu identifikatorjev programa, ki se uporablja za registracijo z Microsoftovimi storitvami za samodejno posodabljanje in številom namestitve, ki so registrirane za aplikacijo.
+
+- **PipelineInfo_ClientCountry** – država naprava (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="appregistry_remove"></a>appregistry_remove
+
+Ta dogodek pomeni, da je prišlo do poskusa odstranitve aplikacije s seznama programov, ki jih upravlja MAU. Ta dogodek uporabljamo, da bi preverili, ali so le MAU – izdane aplikacije upravljane prek MAU (ne bi smelo biti tukaj prikazane aplikacije AppStore).
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – ime in identifikator aplikacije, ki jo odstranite, ne glede na to, ali aplikacija še vedno obstaja na registriranem mestu in ali je bil program nameščen iz storitve AppStore.
+
+- **PipelineInfo_ClientCountry** – država naprava (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="catalog_errorsignature"></a>catalog_errorsignature
+
+Ta dogodek pomeni, da je prišlo do napake pri izvajanju preverjanja veljavnosti kode v datoteki s posodobitvijo zavarovanja.  Vsa zavarovanja, ki niso bile podpisane z vpisom kode, je treba upoštevati kot neveljavna.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime datoteke s katalogom z neveljavnim podpisom. V različnih statičnih besedilih so opisani različni pogoji napake.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
+
+Ta dogodek zabeleži težave z namestitvijo klona (tj. ne bomo se povezali z pomočnikom, da bi uporabili posodobitev, ali pa vzpostavili povezavo, vendar pomočnik ne more uporabiti posodobitve). Če smo zabeležili kartoteko, to pomeni, da ni bilo mogoče namestiti klona in se bo zdaj treba odkupiti posodobitvi na mestu uporabe.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID za prepoznavanje dejavnosti z eno posodobitvijo in napake strežnika proxy, ki so bile sporočene med postopkom kloniranja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="configuration_channel"></a>configuration_channel
+
+Ti zapisi dogodkov poskušajo zamenjati kanale (skupina občinstva) v MAU.  To uporabljamo za beleženje poskusov in rezultatov (uspeh ali neuspeh).
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje izbrano ime kanala.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="configuration_metadata"></a>configuration_metadata
+
+Ta dogodek se zabeleži vsakič, ko se MAU inicializira. To je MAU bitje srca vrsta dogodka
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo, ki označuje posamezne metapodatke, je inicializirano ali pa je konfiguracija inicializirana.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo.
+
+
+### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
+
+Ta dogodek pomeni, da je MAU padel v neuporabljivo/nepopravljivo stanje in ga je treba znova namestiti. V tem primeru je zahtevano sporočilo o nepopravljivi napaki in posredovanju uporabnika.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje enumeriran izbor uporabnika.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_alertmanager_tmpdiskfull"></a>controller_alertmanager_tmpdiskfull
+
+Ta dogodek pomeni, da je bila zaznana pomanjkljiva disketa. Posodobitev ne bo mogoče namestiti zaradi nezadostnega prostora na disku.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_alertmanager_tmpdiskfullretry"></a>controller_alertmanager_tmpdiskfullretry
+
+Ta dogodek pomeni, da je bil poskus vnovične namestitve posodobitve zagnan, ko je bil zaznan zadosten prostor na disku. Če ne morete namestiti posodobitev zaradi pomanjkljivega prostora na disku, znova ponovimo namestitev.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+    
+
+### <a name="controller_alertmanager_tmpdiskfullretrycancel"></a>controller_alertmanager_tmpdiskfullretrycancel
+
+Ta dogodek pomeni, da je bila zaznana funkcija preklica za vnovični poskus vnovičnega poizkusa. Ta dogodek uporabljamo, če želite ugotoviti, ali je bil nadomestni mehanizem dovolj za usmerjanje uporabnika skozi postopek posodabljanja, ko je bil zaznan zadosten disk.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+    
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+    
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
+
+V tem primeru se prikaže potrditveno polje preveri, ali so na voljo posodobitve, ki so bile najdene brez posodobitev, ki jih uporabljamo, če želite zagotoviti, da so posodobitve ponudene pravilno, optimiziranje bremen storitve in določanje, kako pogosti so naši posodobitvi za preverjanje. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+
+### <a name="controller_checkwindow_updatecheck"></a>controller_checkwindow_updatecheck
+
+Ta dogodek pomeni, da je bila izvedena preverjanje posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+    
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
+
+Ta dogodek pomeni, da je bil postopek preverjanja posodobitev izbrisan (uporabnik ali sistem). Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_checkwindow_updatecheckcanceluser"></a>controller_checkwindow_updatecheckcanceluser
+
+Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+    
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_checkwindow_updatesfound"></a>controller_checkwindow_updatesfound
+
+Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_checkwindow_uptodate"></a>controller_checkwindow_uptodate
+
+Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_applaunchwithpendingupdate"></a>controller_downloadwindow_applaunchwithpendingupdate
+
+Ta dogodek pomeni, da se je zagnala aplikacija, ki je v postopku pridobivanja posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno. Če želite odpreti programe, ne morete začeti posodabljati. Programe je treba zapreti pred posodobitvijo.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+    
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_closeapplicationdialog"></a>controller_downloadwindow_closeapplicationdialog
+
+Ta dogodek pomeni, da se je zagnala aplikacija, ki je v postopku pridobivanja posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno. Če želite odpreti programe, ne morete začeti posodabljati. Programe je treba zapreti pred posodobitvijo.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_curtasknull"></a>controller_downloadwindow_curtasknull
+
+Ta dogodek pomeni, da je prišlo do nepričakovane napake med poskusom uporabe posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_downloadcancel"></a>controller_downloadwindow_downloadcancel
+
+Ta dogodek pomeni, da je uporabnik preklical postopek prenosa.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – statično besedilo. 
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_downloadfailed"></a>controller_downloadwindow_downloadfailed
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_downloadfailedok"></a>controller_downloadwindow_downloadfailedok
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve, uporabnik pa je bil obveščen. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in da so prenesene pravilno ter da je v primeru napake sporočilo vročeno uporabniku.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_downloadpathmissing"></a>controller_downloadwindow_downloadpathmissing
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. Ta dogodek pomeni, da manjka URL za prenos.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_downloadtasknull"></a>controller_downloadwindow_downloadtasknull
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. V tem primeru je navedeno, da je bila Microsoft autoupdate pozvana, da začasno ustavi ali nadaljuje prenos, vendar ne najde ustreznega upravitelja prenosov.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_filesignaturenotverified"></a>controller_downloadwindow_filesignaturenotverified
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. V tem dogodku je navedeno, da družba Microsoft autoupdate ni mogla preveriti, ali je Microsoft storitev objavila to posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. 
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki vsebuje URL za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_installcomplete"></a>controller_downloadwindow_installcomplete
+
+Ta dogodek pomeni, da je bila namestitev vseh posodobitev, ki jih ponuja Microsoft autoupdate, dokončana. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. 
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+    
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_networkunavailablealert"></a>controller_downloadwindow_networkunavailablealert
+
+Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev.  Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
+
+Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
+
+Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_repairrequired"></a>controller_downloadwindow_repairrequired
+
+V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je določeno, da je bila posodobitev dokončana, vendar je Microsoft autoupdate našel težavo s posodobljeno aplikacijo in popravilom. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+    
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+    
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+### <a name="controller_downloadwindow_updateaborted"></a>controller_downloadwindow_updateaborted
+
+V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je prikazano, da je posodobitev že napredovala daemon in uporabnik je kliknil »v redu«, da prekinete prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_updatefailed"></a>controller_downloadwindow_updatefailed
+
+Ta dogodek pomeni, da je spodletela ena ali več posodobitev trenutnega paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_updatesuccessful"></a>controller_downloadwindow_updatesuccessful
+
+Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_userpaused"></a>controller_downloadwindow_userpaused
+
+Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_downloadwindow_userresumed"></a>controller_downloadwindow_userresumed
+
+Ta dogodek pomeni, da je bil postopek prenosa posodobitev uspešno vzpostavljen, ko je bil zaustavljen. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_mainwindow_setautomaticdownloadinstall"></a>controller_mainwindow_setautomaticdownloadinstall
+
+Ta dogodek pomeni, da je bila naprava včlanjena v način samodejnega posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_mainwindow_setmanualchecking"></a>controller_mainwindow_setmanualchecking
+
+Ta dogodek pomeni, da je bila naprava včlanjena v način ročne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_templateawindow_cancel"></a>controller_templateawindow_cancel
+
+Ta dogodek pomeni, da se je uporabnik odločil, da prekliče ali prezre določeno opozorilno sporočilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_templateawindow_enroll"></a>controller_templateawindow_enroll
+
+Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo za opozorilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+    
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+
+### <a name="controller_templateawindow_install"></a>controller_templateawindow_install
+
+Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo, ki je povezano z uvedbo dejanja namestitve programske opreme. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_updatewindow_begindownloadingapps"></a>controller_updatewindow_begindownloadingapps
+
+Ta dogodek pomeni, da se je zagnala možnost» prenos za posodobitve v oknu posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje slovar razpoložljivih paketov posodobitev in navedbo, ali je uporabnik izbral namestitev tega vnosa.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_updatewindow_networkretry"></a>controller_updatewindow_networkretry
+
+Ta dogodek pomeni, da je bil vnovičen poskus sprožen na listu posodobitev zaradi napake v omrežju. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_updatewindow_networkretrycancel"></a>controller_updatewindow_networkretrycancel
+
+Ta dogodek pomeni, da poskusa ni bilo mogoče sprožiti na listu posodobitev zaradi napake omrežja. V tem dogodku je navedeno, da je uporabnik izvoljen za preklic posodobitev, potem ko je opozorilo, da omrežje ne bo na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_updatewindow_networkunavailable"></a>controller_updatewindow_networkunavailable
+
+Ta dogodek pomeni, da je bila povezljivost z omrežjem nenadoma izgubljena. Ta dogodek pomeni, da Server ni dosegljiv, ko poskuša prenesti paket posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_updatewindow_noupdateavailable"></a>controller_updatewindow_noupdateavailable
+
+Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki niso na voljo. Ta dogodek pomeni, da Microsoft autoupdate ne najde razpoložljivih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_updatewindow_noupdatestoselect"></a>controller_updatewindow_noupdatestoselect
+
+V tem primeru se prikaže sporočilo o napaki, ki je povzročilo prazen seznam posodobitev. V tem primeru je navedeno, da Microsoft autoupdate prikazuje prazen list z posodobitvami. To se ne bi smelo zgoditi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="controller_updatewindow_updateavailable"></a>Controller_UpdateWindow_UpdateAvailable
+
+Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki so bile na voljo. To uporabljamo celo za določanje, ali so na voljo posodobitve, ki si jih lahko uporabnik ogleda, ne glede na to, ali so prikazane pravilne posodobitve ali ali je blokiranje posodobitev delovalo po pričakovanjih. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in za pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje slovar razpoložljivih paketov posodobitev in stanje izbora za vsakega uporabnika.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="controller_updatewindow_updateavailablecancel"></a>controller_updatewindow_updateavailablecancel
+
+Ta dogodek pomeni, da je uporabnik preklical, ko smo prikazali posodobitve na seznamu posodobitev lista. To uporabljamo celo zato, da razložimo razloge za to, da ne moremo posodobiti (tj. uporabnik bo preklical). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadactor_pause"></a>downloadactor_pause
+
+Ta dogodek pomeni, da je uporabnik izdal zahtevo za začasno ustavitev prenosa. To uporabljamo tudi zato, da bi razložili razloge za to, da posodobitve ne bodo dokončane. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadactor_redirect"></a>downloadactor_redirect
+
+V tem dogodku je navedeno, da je agent za prenose opozoril na končno točko, ki bo preusmerila naslov URL-ja za zahtevo prenosa. To funkcijo uporabljamo tudi zato, da razložimo razloge za napake pri prenosu in diagnosticiranje težav z zastopstvom. Prav tako lahko pomaga pri diagnosticiranju razlogov, zakaj so uporabniki opazili, da bodo namestili starejše gradnje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje preusmerjen URL. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="downloadactor_resume"></a>downloadactor_resume
+
+Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadactor_resumeerror"></a>downloadactor_resumeerror
+
+Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki vsebuje URL za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="downloadactor_status"></a>downloadactor_status
+
+Ta dnevnik dogodkov, ki jih poskuša pridobiti datoteke zavarovanja, in njihov rezultat (uspeh ali neuspeh). Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Napačno datoteko, ki jo pridobivate, lahko pomeni težavo z ustvarjanjem/zavarovanjem. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje URL za prenos in kodo napake v primeru napake. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
+
+Ta dogodek je prišlo do napake pri prenosu. Datoteka, ki je ni prenesla, je zabeležena. Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
+
+V tem primeru se prikaže sporočilo, da je bila datoteka uspešno prenesena. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_downloadfail"></a>downloadmanifest_downloadfail
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu. Datoteka manifesta ali paketa, ki ni uspela prenesti, in podrobnosti o napakah, so zabeležene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_downloadfromurl"></a>downloadmanifest_downloadfromurl
+
+Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_downloading"></a>downloadmanifest_downloading
+
+Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_downloadsuccess"></a>downloadmanifest_downloadsuccess
+
+V tem primeru se prikaže sporočilo, da je prišlo do nanašanja datoteke XML in paketa. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="downloadmanifest_downloadurl"></a>downloadmanifest_downloadurl
+
+V tem primeru se prikaže sporočilo, da je prišlo do zahteve za prenos datoteke. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje kodo napake prenosa in URL datoteke za prenos. To je Microsoftova lokacija za prenos, razen če je kanal nastavljen na »po meri«. Za kanal po meri je ta vrednost nastavljena na »lokacija po meri«.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_filenameerror"></a>downloadmanifest_filenameerror
+
+Ta dogodek pomeni, da je prišlo do nepričakovane napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
+
+V tem primeru je spodletela varnostna veljavnost naših datotek. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime prenesene datoteke z neveljavno razpršilno vrednostjo.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_missingdaemon"></a>downloadmanifest_missingdaemon
+
+Ta dogodek pomeni, da je uporabnik poskusil preveriti, ali so na voljo posodobitve, in odkrili smo, da MAU manjka osrednje komponente (Daemon). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_signatureerror"></a>downloadmanifest_signatureerror
+
+Ta dogodek pomeni, da preverjanje podpisa kode ni uspelo za paket. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime prenesene datoteke z neveljavno razpršilno vrednostjo.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmanifest_status"></a>downloadmanifest_status
+
+Ta dogodek zabeleži povzeto seštevanje poskusov/napak, ki so jih prizadele med postopkom prenosa za datoteke manifesta in paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije, vključno z URL-jem (Microsoft Address), predpono datoteke, ki jo prenesete, morebitne napake, ki so bile naletele itd.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmgr_downloadend"></a>downloadmgr_downloadend
+
+Ta dogodek zabeleži oznako, ki označuje, da je proces prenosa končan sam. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije, vključno z URL-jem (Microsoft Address), predpono datoteke, ki jo prenesete, morebitne napake, ki so bile naletele itd.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadmgr_downloadstart"></a>downloadmgr_downloadstart
+
+Ta dogodek zabeleži posodobitev, ki je na voljo za prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime posodobitve, ki je bila prenesena.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
+
+V tem dnevniku dogodkov je prišlo do napake pri prenosu datoteke paketa. Zabeležimo pot posodobitve in napako. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime posodobitve, ki je bila prenesena, in opazite napako.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
+
+Uspešen prenos datoteke paketa. Zabeležimo uporabljeno pot posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje pot posodabljanja za uspešno prenašanje.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_checkforupdate"></a>fba_checkforupdate
+
+Ta dogodek pomeni, da se v ozadju preverjajo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_checkforupdateskip"></a>fba_checkforupdateskip
+
+Ta dogodek pomeni, da je bil postopek za ozadje preskočen zaradi odprtja MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_launchstatus"></a>fba_launchstatus
+
+Ta dogodek se odjavi pri zagonu daemona, medtem ko poskuša zagnati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje OSStatus (koda stanja Apple), ki odseva stanje izstrelitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
+
+Ta dogodek pomeni, da se uporabnik odloča v tihih posodobitvah. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
+
+Ta dogodek pomeni, da je preverjanje prisilnega posodabljanja preskočeno zaradi odprtih programov. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_startforcedupdate"></a>fba_startforcedupdate
+
+Ta dogodek pomeni, da je prišlo do poskusa uporabe prisilne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_terminate"></a>fba_terminate
+
+Ta dogodek pomeni, da se je MAU daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fba_updatefound"></a>fba_updatefound
+
+Ta dogodek pomeni, da je MAU daemon našel razpoložljive posodobitve, ki so na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje število razpoložljivih posodobitev, ki so na voljo.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="fba_updatetimer"></a>fba_updatetimer
+
+V tem primeru je navedeno, da je proces Daemona Microsoft autoupdate postal aktiven za preverjanje, ali so na voljo posodobitve, ko ste spali za določeno časovno obdobje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje podatke o trenutnem času datumov.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
+
+Ta dnevnik dogodkov, če so bile vse aplikacije zaprte pred namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+    
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_applaunchafterupdate"></a>fbasilentupdate_applaunchafterupdate
+
+Ta dogodek se prijavi v poskus ponovne uvedbe programa po tihi posodobitvi in načinu posodabljanja (klon ali ne). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime aplikacije, ki jo je mogoče zagnati.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+    
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_applaunchwileinstalling"></a>fbasilentupdate_applaunchwileinstalling
+
+Ko namestite posodobitev, se prijavite, ko ste zagnali aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_appneedtoclose"></a>fbasilentupdate_appneedtoclose
+
+Ko se začne postopek posodabljanja, se prijavite, da je bila odprta aplikacija za posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, imena ID-ja posodobitev in paketa za pakete uporabe.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
+
+V tem primeru je navedeno, da je Microsoft autoupdate prejel e-dogodek, v katerem je prišlo do prekinitve programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Koristni tovor** – vsebuje identifikator, ki se uporablja za iskanje ID-ja dejavnosti posodobitve in paketa. To lahko vsebuje tudi niz napake, če Microsoft autoupdate določa, da se aplikacija še vedno izvaja, čeprav je bila prejeta prekinitev dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
+
+Ta dogodek zabeleži rezultat preverjanja sooblikovanja, ko uporabite posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje rezultat operacije preverjanja sooblikovanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
+
+Ta dogodek pomeni, da je posodobitev prenesena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_downloadfailed"></a>fbasilentupdate_downloadfailed
+
+Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
+
+V tem primeru je navedeno, da začenjamo prenos nabora posodobitev v ozadju (zabeležimo število posodobitev, ki so bile sočasno prenesene). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje število posodobitev, ki je v čakalni vrsti.
+
+    - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_downloadingrepairupdate"></a>fbasilentupdate_downloadingrepairupdate
+
+Ta dogodek pomeni, da smo sprožili poskus prenosa popravila neuspele posodobitve. Zabeležimo različico in posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_duplicatedownloadattempted"></a>fbasilentupdate_duplicatedownloadattempted
+
+Ta dogodek pomeni, da je prišlo do nepričakovane napake. Naenkrat bi morali le prenesti eno posodobitev za dani program. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_installattemptfailed"></a>fbasilentupdate_installattemptfailed
+
+Ta dogodek pomeni, da je poskus namestitve posodobitve (različica) spodletel. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_installcomplete"></a>fbasilentupdate_installcomplete
+
+Ta dogodek pomeni, da so vse posodobitve v paketu dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_installed"></a>fbasilentupdate_installed
+
+V tem primeru je bil uspešno nameščen posamezen posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka. Vsebuje identifikator posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="fbasilentupdate_installing"></a>fbasilentupdate_installing
+
+V tem primeru je bil uspešno nameščena posamezna posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, imena paketa posodobitev in posodobitev.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
+
+V tem primeru se prikaže sporočilo, da posodobitev, ki je bila blokirana, ni več blokirana. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije (aplikacija identifikatorja, ki se uporablja za registracijo z Microsoftovo storitvijo za samodejno posodabljanje) za prej blokirano aplikacijo.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_queueinstall"></a>fbasilentupdate_queueinstall
+
+Ta dogodek pomeni, da bo posodobitev v čakalni vrsti za tihi namestitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_requiredappsclosed"></a>fbasilentupdate_requiredappsclosed
+
+Ko je program, ki ima čakajočo posodobitev, končan, se prijavite. To pomeni čas, ko se lahko postopek dejanske namestitve izvede. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Koristni tovor** – vsebuje identifikator, ki se uporablja za iskanje ID-ja dejavnosti posodobitve in paketa.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
+
+V tem dogodku je navedeno, da je sproženo obvestilo o posodobitvi na voljo. Če želite, da se prikaže sporočilo o posodobitvi, morate zagotoviti, da pride do povratnega toka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_userclicknotification"></a>fbasilentupdate_userclicknotification
+
+V tem dogodku je navedeno, da je uporabnik kliknil vsebino, ki je na voljo v obvestilu o posodobitvi, in Microsoft autoupdate GUI. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_userselectinstalllater"></a>fbasilentupdate_userselectinstalllater
+
+Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="fbasilentupdate_userselectinstallnow"></a>fbasilentupdate_userselectinstallnow
+
+Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installdata_checkrunning"></a>installdata_checkrunning
+
+Ta dogodek zabeleži rezultat pregleda med aplikacijami, ki jih je treba namestiti, in ali bo poskus namestitve izveden glede na odpiranje aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installdata_cleanup"></a>installdata_cleanup
+
+Datoteke paketa morate odstraniti po namestitvi. Ta dogodek zabeleži primere, v katerih jih ne moremo odstraniti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje preneseno ime datoteke in podrobnosti o napaki.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installedapp_invalidbundle"></a>installedapp_invalidbundle
+
+V tem dogodku je navedeno, da Microsoft autoupdate ni mogel pridobiti informacij o paketu za registrirano aplikacijo na dani poti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installedapp_invalidpreference"></a>installedapp_invalidpreference
+
+Ta dogodek zabeleži primere, v katerih uporabnik preference vsebuje neveljaven vnos programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installedapp_nilbundleid"></a>installedapp_nilbundleid
+
+Ta dogodek zabeleži primere, v katerih ID snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installedapp_nilbundlename"></a>installedapp_nilbundlename
+
+Ta dogodek zabeleži primere, v katerih ime snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installstatus_codesign"></a>installstatus_codesign
+
+Ta dogodek zabeleži stanje binarne funkcije za sonačrtovanje OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installstatus_daemon"></a>installstatus_daemon
+
+Ta dogodek zabeleži stanje stanja Microsoftovega daemona autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje navedbo, ali komponenta daemon obstaja na pričakovanem mestu in ali je sooblikovana.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installstatus_helper"></a>installstatus_helper
+
+Ta dogodek zabeleži stanje stanja Microsoftovega orodja za samodejno posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje navedbo, ali komponenta PrivilegedHelperTool obstaja na pričakovanem mestu in ali je sooblikovana.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_applaunched"></a>installupdatestask_applaunched
+
+V tem dogodku je navedeno, da je Microsoft autoupdate zaznal izdajo programa, ki je blokirana, vendar ni našla ustreznega namestitvenega programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime pobudnika aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_applaunchwithpendingupdate"></a>installupdatestask_applaunchwithpendingupdate
+
+V tem primeru je navedeno, da je Microsoft autoupdate zaznal zagon programa za aplikacijo z čakajočo posodobitvijo. Zagnana aplikacija bo prekinjena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_codesignverificationfail"></a>installupdatestask_codesignverificationfail
+
+Ta dogodek pomeni, da preverjanje sooblikovanja ni uspelo za posodobitev programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, imena posodobljenega programa in kode napake.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_codesignverificationstart"></a>installupdatestask_codesignverificationstart
+
+Ta dogodek pomeni, da se je preverjanje sooblikovanja začelo z posodobitvijo aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobljene aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_codesignverificationsuccess"></a>installupdatestask_codesignverificationsuccess
+
+V tem primeru se prikaže sporočilo o napaki pri preverjanju, ali je bila posodobitev programa posodobljena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobljene aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_failsilentinstall"></a>installupdatestask_failsilentinstall
+
+Ta dnevnik dogodkov ne pride med uporabo tihih posodobitev in ali je bila to klonirana ali navadna namestitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+    
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in vrste posodobitve.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_multiplerelocatablepackage"></a>installupdatestask_multiplerelocatablepackage
+
+V tem dogodku je navedeno, da je Microsoft autoupdate našel več primerkov vnosa aplikacije za dani paket posodobitev, ki je bil naložen manifestu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in za pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_removeclone"></a>installupdatestask_removeclone
+
+Ta dogodek pomeni, da je bil odstranjen klon. Odstranitev klona je izpolnjena, če je bil postopek namestitve postopka kloniranja končan ali ko se začne nov proces, v računalniku pa je na voljo starejša klonirana različica. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve, ime paketa posodobitev, odstranitev statusa klona/podrobnosti o napaki.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_retryfail"></a>installupdatestask_retryfail
+
+Ta dogodek pomeni, da so prišlo do napak med postopkom vnovičnega popravka namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve in ali naj bo namestitev izvedena prek namestitve v klonu
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+
+Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve in podrobnosti o sporočeni napaki strežnika proxy.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+
+Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve in podrobnosti o sporočeni napaki strežnika proxy.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+
+### <a name="installupdatestask_retryresponse"></a>installupdatestask_retryresponse
+
+V tem dnevniku dogodkov, ki jih vnovičen poskus ne deluje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve, različico programa, ime paketa posodobitev in navedbo, ali je bila namestitev v klon vklopljena, ne glede na to, ali je bila namestitev uspešna in katere koli napake, ki so bile sporočene glede napake.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
+
+Ta dogodek zabeleži uspešno namestitev posodobitve po vnovičnem poskusu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve, različico programa, ime paketa posodobitev in navedbo, ali je bila namestitev v klon vklopljena.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="installupdatestask_setreopengui"></a>installupdatestask_setreopengui
+
+V tem primeru je navedeno, ali je nastavitev možnosti za vnovično odpiranje uporabniškega vmesnika» GUI «uspešna. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo prikazuje uspeh operacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
+
+V tem dogodku je navedeno, da je bil ukaz CLI (vmesnik odjemalca) izdan tako, da je uporabljal posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje seznam ID-jev aplikacije, ki jih želite posodobiti.
+    
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
+
+V tem primeru je navedeno, da je modul vmesnika za ukaz» Microsoft autoupdate «prejel dogodek» Apple «, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
+
+V tem dogodku je navedeno, da je modul z uporabniškim vmesnikom ukazne vrstice za samodejno posodabljanje prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="msupdate_monitor_progress_downloaded"></a>msupdate_monitor_progress_downloaded
+
+Ta dogodek pomeni, da so bile posodobitve prenesene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje sezname posodobitev, ki so bile prenesene
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="msupdate_monitor_progress_failure"></a>msupdate_monitor_progress_failure
+
+Ta dogodek zabeleži seznam posodobitev, ki niso bile uporabljene v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje sezname posodobitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="msupdate_monitor_progress_finished"></a>msupdate_monitor_progress_finished
+
+Ta dogodek zabeleži seznam posodobitev, ki so bile dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje sezname posodobitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="msupdate_monitor_progress_queued"></a>msupdate_monitor_progress_queued
+
+Ta dogodek zabeleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje sezname posodobitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="optinnotificationaction"></a>Optinnotificationaction
+
+Ta dogodek prijavi uporabnikov odgovor v pogovorno okno za vpis v tihe posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje statično besedilo, ki predstavlja izbor uporabnika za izbiro samodejnega prenosa in namestitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="sauupdateinfoprovider"></a>sauupdateinfoprovider
+
+Ta dnevnik dogodkov vsakič, ko na podlagi zavarovanja manjka ključ manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje niz, ki se uporablja za iskanje lokacije ali velikosti posodobitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatecore_appregistration"></a>updatecore_appregistration
+
+Ta dnevnik dogodkov poskuša registrirati aplikacijo in rezultat/razlog. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, navedba, ali je na voljo ugodnost, označba, ali je to Vnovična registracija, in navedbo, ali je zahtevana registracija.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatecore_loadinglaunchagent"></a>updatecore_loadinglaunchagent
+
+Ta dogodek pomeni, da je bil naložen agent za zagon. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
+
+Ta dnevnik dogodkov se je prizadela, ko je dosegel dostop do programa CDN. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije o imenu strežnika, ne glede na to, ali je strežnik veljaven in ali je strežnik dosegljiv.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
+
+Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku ne bi mogli pridobiti datuma iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
+
+Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+    
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefilterhelper_missingbuilddate"></a>updatefilterhelper_missingbuilddate
+
+Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefilterhelper_updatebypassedoldage"></a>updatefilterhelper_updatebypassedoldage
+
+Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. Tukaj se prijavite storitev, ki je obšla zaradi starega datuma posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_check_start"></a>updatefinder_check_start
+
+Ta dnevnik dogodkov vsakič, ko začnete preverjanje delovanja posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+    
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije o posodobitvah, ki so na voljo, registrirane aplikacije in prenesene datoteke v začasnem mestu bodo shranjene v.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_check_status"></a>updatefinder_check_status
+
+S tem dogodkom združite stanje preveri, ali so na primer operacije za preverjanje posodabljanja (lij od iskanja do prenašanja). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje informacije o posodobitvah, ki so na voljo, registrirane aplikacije in prenesene datoteke v začasnem mestu bodo shranjene v.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_check_updatefound"></a>updatefinder_check_updatefound
+
+Ko se prikaže potrditveno polje preveri, ali so na voljo posodobitve, se prijavite vsakič, ko se prikaže. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_check_updatenotfound"></a>updatefinder_check_updatenotfound
+
+Ko preverite, ali so na voljo posodobitve, se prijavite vsakič, ko preverimo, ali je prišlo do nobenih posodobitev, ki jih ni bilo mogoče najti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_check_uptodate"></a>updatefinder_check_uptodate
+
+Ko preverimo, ali so na voljo posodobitve, se prijavite vsakič, ko se posodobitve ne ponudijo zaradi vseh programov, ki so že posodobljeni. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
+
+Ko smo blokirali posodobitev, se prijavite vsakič, ko je prišlo do neizpolnjevanja zahtev za OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje najmanjšo zahtevano različico OS, kot je določeno v preneseni datoteki manifesta.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
+
+V tem dogodku je navedeno, da Microsoft autoupdate ni uspel naložiti informacij o paketu za ID aplikacije, ki je naveden v preneseni datoteki manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_offerupdates_updaterulematched"></a>updatefinder_offerupdates_updaterulematched
+
+Ta dogodek pomeni, da je bila za aplikacijo in osnovni načrt najdena posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije in informacije o različici združevanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="updatefinder_registeredapps"></a>updatefinder_registeredapps
+
+Prijavimo aplikacije, ki so nameščene/registrirane/pod nadzorom MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID aplikacije in informacije o različici združevanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
+
+Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi pomanjkanja zavarovanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_suite_staleversion"></a>updatefinder_suite_staleversion
+
+Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi prestaranja različice osnovnega načrta. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime zbirke.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_suite_updateapplicable"></a>updatefinder_suite_updateapplicable
+
+Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke uporablja. Zabeležimo različico osnovne vrstice in AppId paketa. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_suite_updatenotapplicabledefaultpath"></a>updatefinder_suite_updatenotapplicabledefaultpath
+
+Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="updatefinder_suite_updatenotapplicableversion"></a>updatefinder_suite_updatenotapplicableversion
+
+Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_suite_updatenotoffered"></a>updatefinder_suite_updatenotoffered
+
+Posodobitev zbirke – dnevnik se zabeleži vsakič, ko posodobitev zbirke ni na voljo zaradi velikosti zbirke, ki je večja od posameznih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime zbirke.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatefinder_suite_updateoffered"></a>updatefinder_suite_updateoffered
+
+Posodobitev zbirke – dnevnik se zabeleži vsakič, ko je na voljo posodobitev zbirke. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+
+Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje število razpoložljivih posodobitev, ki so na voljo.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="updatemanager_updatespending"></a>updatemanager_updatespending
+
+Ta dogodek pomeni, da so posodobitve našli in čakajoče namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje oznako, ali se opravilo izvaja na glavni navoj in število čakajočih posodobitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
+
+Ta dogodek pomeni, da so bili najdeni tihi kandidati za posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje število najdenih posodobitev in ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="webservices_deltaupdater"></a>webservices_deltaupdater
+
+V tem dnevniku so na voljo interakcije med odjemalčevo kodo in funkcijami vrat, ki nadzorujejo, ali mora odjemalec omogočiti posodobitve za Delta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje odgovor iz spletnih storitev in vrste Updater za uporabo.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="webservices_serviceaction"></a>webservices_serviceaction
+
+Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje podrobnosti o dejanjih, ki jih je treba potiskati iz spletnih storitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="webservices_serviceaction"></a>webservices_serviceaction
+
+Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje podrobnosti o dejanjih, ki jih je treba potiskati iz spletnih storitev.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="webservices_serviceresponse"></a>webservices_serviceresponse
+
+Ta dogodek prijavi zahteve MAU Service, odzivni čas in napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID zahteve, ime aplikacije, čas za odziv in/ali kodo stanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+    
+### <a name="webservices_silentupdate"></a>webservices_silentupdate
+
+Prijavimo zahteve za preverjanje veljavnosti» Force Update «pravil za uporabo, kar pomeni, da moramo sprejeti uporabnika iz gradnje N za izgradnjo N + 1 zaradi nekaj pomembnejših težav. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID zahteve, ime aplikacije, čas za odziv in/ali kodo stanja.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+
+### <a name="webservices_webcontent"></a>webservices_webcontent
+
+Prijavimo zahteve in odgovore, prejete v storitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – vsebuje ID klicatelja za spletne storitve.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+## <a name="onenote-sync-events"></a>Dogodki sinhronizacije za OneNote
+
+### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
+ 
+Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
+ 
+Zbrana so sledeča polja
+
+- **CachedError_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave predpomnjene napake, in/ali razloga, zakaj se je pojavila
+
+- **CachedError_Description** – opis napake v predpomnilniku
+
+- **CachedError_Tag** – določite, kje v kodi je shranjena predpomnjena napaka
+
+- **CachedError_Type** – vrsta predpomnjene napake, na primer Win32Error itd.
+
+- **ExecutionTime** – čas v milisekundah za repliciranje zvezka
+
+- **Gosid** – globalni ID prostora za predmete
+
+- **IdentityType** – vrsta identitete, npr. Windows Live, ID org ipd.
+
+- **InitialReplicationInSession** – ali je to replikacija prva replikacija zvezka po odprtju ali ne
+
+- **IsBackgroundSync** – ali je to sinhroniziranje ozadja ali ne
+
+- **IsCachedErrorSuppressed** – je predpomnjena napaka, ki jo je mogoče zatreti ali ne
+
+- **IsCachedErrorUnexpected** – je predpomnjena napaka, ki je nepričakovana ali ne
+
+- **IsNotebookErrorSuppressed** – je napaka sinhronizacije na ravni zvezka ukinjena ali ne
+
+- **IsNotebookErrorUnexpected** – je napaka sinhronizacije na ravni zvezka nepričakovana ali ne
+
+- **IsSectionErrorSuppressed** – ali je napaka sinhronizacije odseka ukinjena ali ne
+
+- **IsSectionErrorUnexpected** – je napaka sinhronizacije odseka nepričakovana ali ne
+
+- **IsUsingRealtimeSync** – je sinhronizacija zvezka z moderno vsebino strani sinhronizirana ali ne
+
+- **LastAttemptedSync** – časovni žig, ko je bil zvezek poskusil sinhronizirati nazadnje
+
+- **LastBackgroundSync** – časovni žig, ko je bil izveden zadnji sinhronizacijo v ozadju
+
+- **LastNotebookViewedDate** – datum, ko je bil zvezek nazadnje gledan
+
+- **LastSuccessfulSync** – časovni žig, ko je bil zvezek uspešno sinhroniziran
+
+- **NeedToRestartBecauseOfInconsistencies** – ali mora biti sinhronizacija znova zagnana zaradi neskladij ali ne
+
+- **NotebookErrorCode** – koda napake sinhronizacije na ravni zvezek, ki je shranjena v prostoru zvezek Graph
+
+- **NotebookId** – ID zvezka
+
+- **NotebookType** – vrsta zvezka
+
+- **ReplicatingAgainBecauseOfInconsistencies** – ali ponovni zagon sinhronizacije zaradi neskladij ali ne
+
+- **SectionError_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave napake sinhronizacije odseka in/ali razloga, zakaj se je pojavila
+
+- **SectionError_Description** – opis napake sinhronizacije odseka
+
+- **SectionError_Tag** – določite mesto, kjer v kodi je sporočilo o napaki sinhronizacije odseka
+
+- **SectionError_Type** – vrsta napake sinhronizacije odseka, npr. Win32Error itd.
+
+- **Uspeh** – ali je sinhronizacija zvezka uspešna ali ne
+
+- **SyncDestinationType** – vrsta ciljne sinhronizacije, tj. OneDrive ali SharePoint online
+
+- **SyncId** – številka, ki je enolična za vsako sinhronizacijo zvezka
+
+- **SyncWasFirstInSession** – ali je sinhronizirana prva sinhronizacija v trenutni seji
+
+- **SyncWasUserInitiated** – ali je ta uporabnik za sinhronizacijo zagnal ali ne
+
+- **TenantId** – ID najemnika za SharePoint
+
+- **TimeSinceLastAttemptedSync** – ura od zadnjega poskusa sinhronizacije zvezka
+
+- **TimeSinceLastSuccessfulSync** – ura odkar je bila nazadnje uspešna sinhronizacija zvezka
+
+### <a name="officeonenotestoragerealtimewebsocketsessioninfo"></a>Office.OneNote.Storage.RealTime.WebSocketSessionInfo
+ 
+Ta dogodek prijavi rezultate sinhronizacije za sinhronizacijo spletne vtičnice za tako vsebino programa OneNote moderne sinhronizacije Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote. Uporablja se tudi za sodobno delovanje nadzorne plošče za sinhronizacijo programa OneNote.
+ 
+Zbrana so sledeča polja:
+ 
+- **Vzrok** za CloseReason – bližnjica, npr. neobičajno zapiranje itd.
+
+- **DataIsFreshCount** – število uspešnih zahtev za vlečenje v srečanju
+
+- **ID** seje DeviceSessionId – naprave
+
+- **DownloadCount** – število prenosov v seji »samopostrežna vtičnica«
+
+- **Napaka** – je v osnovi Exception_Type + Exception_Description + Exception_Code + Exception_Tag
+
+- **Exception_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave napake, in/ali razloga, zakaj se je pojavila
+
+- **Exception_Description** – opis napake
+
+- **Exception_Tag** – določite, kje v kodi je sporočilo o napaki
+
+- **Exception_Type** – vrsta napake, npr. Win32Error itd.
+
+- **FirstUpdateSize** – dolžina sporočila »prvo posodabljanje«
+
+- **HasError** – ne glede na to, ali je prišlo do napake med sejo 
+
+- **IsEducationNotebook** – je trenutni zvezek za izobraževanje za zvezek ali ne
+
+- **IsHierarchyResource** – je trenutni vir stran ali odsek
+
+- **NotebookId** – ID zvezka za OneNote
+
+- **OperationWithError** – v kateri operaciji je prišlo do napake, na primer na spletnem mestu. Zaprite, v storitvi. Odprite ipd.
+
+- **ResourceId** – stran v OneNotu ali ID vira odseka
+
+- **ID** odseka SectionId – OneNote
+
+- **ID** seje ServerSessionId, ki se uporablja za korelacijo zahteve za OneNote.com
+
+- **SessionDurationInMs** – trajanje seje v milisekundah
+
+- **TenantId** – ID najemnika za SharePoint
+
+- **TimeToFirstUpdateInMs** -čas v milisekundah, ki so bile izvedene za prejem prve posodobitve na strani strežnika, ko je vzpostavljena seja ponudnika
+
+- **UploadAckCount** – število priznanj za prenos v seji v storitvi
+
+- **WebUrl** – podrgnil spletni naslov 
+
+### <a name="officeonenotestoragesectionsyncresult"></a>Office.OneNote.Storage.SectionSyncResult
+ 
+V tem dnevniku je rezultat sinhronizacije odseka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote. Uporablja se tudi za sodobno delovanje nadzorne plošče za sinhronizacijo programa OneNote.
+ 
+Zbrana so sledeča polja
+
+- **Error_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave napake, in/ali razloga, zakaj se je pojavila
+
+- **Error_Description** – opis napake
+
+- **Error_Tag** – določite, kje v kodi je sporočilo o napaki
+
+- **Error_Type** – vrsta napake, npr. Win32Error itd.
+
+- **ErrorLast** – koda napake zadnjega videne napake 
+
+- **ExecutionTime** – čas v milisekundah za repliciranje odseka
+
+- **InitialReplicationInSession** – ali je to replikacija prva replikacija zvezka po odprtju ali ne
+
+- **IsAttachedViaShortcut** – je odsek, ki je pripet prek bližnjice ali ne
+
+- **IsBackgroundSync** – ali je to sinhroniziranje ozadja ali ne
+
+- **IsEncrypted** – ali je odsek šifriran ali ne
+
+- **IsErrorSuppressed** – ali je ta napaka ukinjena ali ne 
+
+- **IsErrorTransient** – ali je ta napaka prehodna ali ne
+
+- **IsErrorUnexpected** – ali je ta napaka nepričakovana ali ne
+
+- **IsUsingRealtimeSync** – je razdelek sinhroniziranje z moderno vsebino strani sinhroniziranje ali ne
+
+- **NotebookId** – ID zvezka
+
+- **NotebookPath** – počistili URL zvezka
+
+- **SectionPath** – obdelani URL odseka »zavarovanje poklicne odgovornosti«
+
+- **SectionReplicatingIsOutbound** – ali je to replikacija odhodna replikacija ali ne
+
+- **SectionReplicatingIsSameIdentity** – ali je to replikacija na podlagi enake identitete datoteke ali ne
+
+- **SectionResourceId** – ID vira razdelka v OneNotu
+
+- **Success** – ali je odsek uspešen ali ne
+
+- **SyncDestinationType** – vrsta ciljne sinhronizacije, tj. OneDrive ali SharePoint online
+
+- **SyncId** – številka, ki je enolična za vsako sinhronizacijo razdelka
+
+- **SyncWasFirstInSession** – ali je sinhronizirana prva sinhronizacija v trenutni seji
+
+- **SyncWasUserInitiated** – ali je ta uporabnik za sinhronizacijo zagnal ali ne
+
+- **TenantId** – ID najemnika za SharePoint
+
+- **ID** razdelka UnmappedGosid pred uporabo GUID-a preslikave
+
+
+### <a name="officeonenotestoragesyncscore"></a>Office.OneNote.Storage.SyncScore
+ 
+Ta dogodek zabeleži vse negativne faktorje v izkušnji sinhronizacije, ki so vidni za uporabnike. Uporablja se za izračun rezultata sinhronizacije za OneNote, ki je kritična metrika za ovrednotenje izkušenj s sinhronizacijo uporabnikov programa OneNote.
+ 
+Zbrana so sledeča polja
+
+- **AutoShowSyncStatus** – ne glede na to, ali je stanje sinhronizacije samodejno prikazano ali ne
+
+- **Vzrok** – kaj je povzročilo, da so strani programa OneNote premaknjene v napačno postavljene odseke
+
+- **Kontekst** – enum categorizes, ki jih uporabnik poskuša narediti, npr. preimenuje razdelek, znova odpre zvezek itd.
+
+- **Error_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave napake, in/ali razloga, zakaj se je pojavila
+
+- **Error_Description** – opis napake
+
+- **Error_Tag** – določite, kje v kodi je sporočilo o napaki
+
+- **Error_Type** – vrsta napake, npr. Win32Error itd.
+
+- **ErrorText** – besedilo napake, ki je prikazano v uporabniškem vmesniku
+
+- **Razlaga** – razloži, katere vrste čakajočih odhodnih sprememb, ki jih je treba premakniti v napačno postavljene odseke
+
+- **fishbowlType** vrsta Fishbowl, npr. stran Fishbowl, oddelek Fishbowl itd.
+
+- **IDS** – celo število identifikator za besedilo, ki je prikazano v uporabniškem vmesniku
+
+- **idsFishbowl** – celo število identifikator za napako »Fishbowl«, ki je prikazana v uporabniškem vmesniku
+
+- **IsUsingRealtimeHierarchySync** – uporablja moderno hierarhično sinhronizacijo ali ne
+
+- **NotebookId** – ID zvezka
+
+- **PageSyncUIState** – niz stanja sinhronizacije strani, na primer UpToDate, sinhronizacija, SaveOffline, SyncError itd. 
+
+- **ServerGosid** – ID vira za novo ustvarjeno stran» Conflict «
+
+- **Vir** – v enum je navedeno, kateri dogodek je sprožil UI, tj. ustvaril novo RedX sliko, napako sinhronizacije v uporabniškem vmesniku za sinhronizacijo, prikazano pogovorno okno napake itd.
+
 
 ## <a name="services-configuration-events"></a>Dogodki za konfiguracijo storitev
 
