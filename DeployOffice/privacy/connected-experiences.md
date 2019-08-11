@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 3b0ac61cf01a588e3af85d1eb83d4b2fd7e8b63e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 1ae21c76eb0cc4addcc0a26e7ca1330aef99eee1
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701800"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238237"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -27,6 +27,8 @@ ms.locfileid: "34701800"
 > - Office 365 ProPlus in Office 365 Business
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+>
+> Informacije veljajo tudi za različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
 
@@ -129,7 +131,10 @@ Izberete lahko, če so določene vrste povezanih izkušenj, kot so povezane izku
 
 Če ste vpisani s službenim ali šolskim računom, bo skrbnik vaše organizacije določil, katere izmed teh povezanih izkušenj bodo na voljo za vas. Če obiščete **»Datoteka«** > **»Račun«** > **»Zasebnost računa«** > **»Upravljanje nastavitev«**, ne boste videli izbir teh povezanih izkušenj.
 
-Če ste skrbnik svoje organizacije, lahko uporabite nastavitve pravilnika, da določite, če so te povezane izkušnje na voljo vašim uporabnikom. Če ne uporabite teh nastavitev pravilnika, so vse povezane izkušnje na voljo vašim uporabnikom. Za več informacij o uporabi teh nastavitev pravilnika, glejte [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md).
+> [!NOTE]
+> Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
+
+Če ste skrbnik svoje organizacije, lahko uporabite nastavitve pravilnika, da določite, če so te povezane izkušnje na voljo vašim uporabnikom. Če ne uporabite teh nastavitev pravilnika, so vse povezane izkušnje na voljo vašim uporabnikom. Če želite izvedeti več o uporabi teh nastavitev pravilnika, preberite [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md) in [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
 
 Če se odločite izklopiti določene vrste povezanih izkušenj, bo ukaz na traku ali menijski ukaz za te povezane izkušnje zatemnjen oziroma boste prejeli sporočilo o napaki, ko boste poskusili uporabiti te povezane izkušnje.
 
@@ -141,3 +146,4 @@ Tudi če se odločite izklopiti te povezane izkušnje, bo še vedno na voljo ome
 - [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md)
 - [Zahtevani podatki storitev za Office](required-service-data.md)
 - [Osnovne storitve za Office](essential-services.md)
+- [Nastavitve zasebnosti računa](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

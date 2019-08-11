@@ -13,19 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: f1d8c16b7e267d49735814ee9d393c578dbf3c28
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701340"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239151"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
 Če imate službeni ali šolski račun, vam je skrbnik organizacije morda omogočil možnost uporabe ene ali več storitev v oblaku (imenujemo jih tudi »izbirne povezane izkušnje«) za uporabo v aplikacijah storitve Office 365 ProPlus. Te storitve v oblaku so izbirne. Sami se odločite, ali jih želite uporabljati. Za storitve veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). V nekaterih primerih lahko veljajo tudi drugi pogoji. V tem članku smo navedli storitve v oblaku, podrobneje razložili njihove pogoje uporabe in opisali, kako jih lahko kadar koli izklopite oz. vklopite.
 
 > [!NOTE]
-> Če ste skrbnik, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md), v katerem boste izvedeli več informacij o podeljevanju ali omejevanju možnosti uporabnikov, da uporabijo izbirne povezane izkušnje.
+> Če ste skrbnik, preberite naslednja članka, v katerih boste izvedeli več o podeljevanju ali omejevanju možnosti uporabnikov, da uporabijo izbirne povezane izkušnje:
+> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
+> - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>S katerimi pogoji uporabe se moram strinjati, če želim uporabljati te storitve?
 
@@ -50,6 +52,10 @@ Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitv
 ### <a name="insert-online-video"></a>Vstavljanje spletnega videoposnetka
 
 [Vstavljanje spletnega videoposnetka](https://support.office.com/article/8340EC69-4CEE-4FE1-AB96-4849154BC6DB) vam omogoča, da v dokument vstavite videodatoteke. Za izkušnjo vstavljanja spletnih videoposnetkov veljata [pogodba o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjava o zasebnosti](https://privacy.microsoft.com/). Dodatni pogoji uporabe lahko veljajo, če dostopate do vsebine prek virov tretjih oseb. Ko se na primer povežete s storitvijo YouTube, veljajo [pogoji uporabe](https://www.youtube.com/t/terms) in [izjavo o zasebnosti](https://policies.google.com/privacy) za YouTube. Microsoft lahko v bodoče dodata še druge ponudnike video vsebine.
+
+### <a name="microsoft-error-reporting-program-merp"></a>Microsoftov program za poročanje o napakah (MERP) 
+
+Program MERP se poveže s storitvijo Watson.microsoft.com in tako pošlje diagnostične podatke ob zrušitvah Officeovih odjemalskih aplikacij v napravah Mac. Program je v lasti Microsofta in upoštevati je treba [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/). MERP ne velja za Officeove odjemalske aplikacije, ki se izvajajo v sistemu Windows.
 
 ### <a name="research"></a>Raziskovanje
 
@@ -80,9 +86,13 @@ Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede upor
 
 Če želite ugotoviti, ali vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office 365 ProPlus, nameščeni v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**. Če vam skrbnik ni podelil nadzora, bo prikazano sporočilo »Skrbnik vaše organizacije upravlja vaše nastavitve zasebnosti in se je odločil, da onemogoči izbirne povezane izkušnje«.
 
+Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
+
 ## <a name="your-privacy-settings"></a>Vaše nastavitve zasebnosti
 
 Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office 365 ProPlus, nameščeni v napravi s sistemom Windows, lahko kadar koli odprete meni **Datoteka** > **Račun** > **Zasebnost računa** in izberete **Upravljanje nastavitev** in konfigurirajte nastavitve. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
+
+Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
 ## <a name="diagnostic-data"></a>Diagnostični podatki
 
@@ -93,3 +103,4 @@ Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede upor
 
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Zahtevani podatki storitev za Office](required-service-data.md)
+- [Nastavitve zasebnosti računa](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

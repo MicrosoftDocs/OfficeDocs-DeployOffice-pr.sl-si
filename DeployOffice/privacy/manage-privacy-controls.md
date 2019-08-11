@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5d38a944c7fe0c2c17cb6cd50339908b1cb7ae6e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701256"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238986"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -41,6 +41,9 @@ V nadaljevanju si lahko ogledate pet novih nastavitev zasebnosti:
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
 Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [pravilnika za Office v oblaku](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Če uporabljate pravilnik skupine, prenesite najnovejše različice datotek za skrbniške predloge (ADMX/ADML) iz [Microsoftovega centra za prenose](https://www.microsoft.com/download/details.aspx?id=49030).
+
+> [!NOTE]
+> Če želite več informacij o upravljanju kontrolnikov zasebnosti za Office for Mac, preberite [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
 
 Če uporabljate orodje za upravljanje pravilnika skupine, vse nastavitve pravilnika najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Zasebnost\\Središče zaupanja.
 
@@ -117,7 +120,7 @@ Te povezane izkušnje so drugačne, saj niso zajete v komercialno pogodbo organi
 
 Z nastavitvijo pravilnika *Dovoli uporabo dodatnih povezanih izkušenj v Officeu* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te izbirne povezane izkušnje na voljo vašim uporabnikom.
 
-Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo meni **Datoteka** > **Račun** > **Zasebnost računa** > **Upravljaj nastavitve**. Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
+Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
 Nekatere od teh izbirnih povezanih izkušenj lahko uvrščamo tudi v povezane izkušnje, s katerimi lahko analizirate vsebino ali prenašate spletno vsebino. Vstavljanje spletnih slik je denimo izbirna povezana izkušnja, ki jo omogoča Microsoft Bing, obenem pa je tudi povezana izkušnja, s katero lahko prenašate spletno vsebino. Če torej onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino*, vstavljanje spletnih slik ne bo na voljo vašim uporabnikom. Prav tako ne bo na voljo, tudi če ste omogočili nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*. Če želite več informacij o tem, s katerimi povezanimi izkušnjami je mogoče analizirati vsebino ali prenašati spletno vsebino, preberite [Povezane izkušnje v Officeu](connected-experiences.md).
 
@@ -174,7 +177,7 @@ Vaši uporabniki bodo morda opazili nekatere spremembe uporabniškega vmesnika v
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Pogovorno okno o izbirnih povezanih izkušnjah
 
-Če ste svojim uporabnikom omogočili [izbirne povezne izkušnje](optional-connected-experiences.md), se jim bo prikazalo informativno pogovorno okno, ko prvič zaženejo Officeovo aplikacijo po posodobitvi na različico 1904. To pogovorno okno vaše uporabnike obvešča, da lahko uporabijo te izbirne povezane izkušnje in spremenijo to nastavitev tako, da odprejo meni **Datoteka** > **Račun** > **Zasebnost računa**.
+Če ste svojim uporabnikom omogočili [izbirne povezne izkušnje](optional-connected-experiences.md), se jim bo prikazalo informativno pogovorno okno, ko prvič zaženejo Officeovo aplikacijo po posodobitvi na različico 1904 ali novejšo. To pogovorno okno vaše uporabnike obvešča, da lahko uporabijo te izbirne povezane izkušnje in spremenijo to nastavitev tako, da odprejo meni **Datoteka** > **Račun** > **Zasebnost računa**.
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Nastavitve zasebnosti, odstranjene iz uporabniškega vmesnika za Office
 

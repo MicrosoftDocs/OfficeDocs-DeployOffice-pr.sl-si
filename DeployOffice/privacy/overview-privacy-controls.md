@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Office 365 ProPlus, vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: a65fd2a6b7169c9098d233a926041d9cbc599886
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701135"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238947"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrolnikov zasebnosti za Office 365 ProPlus
 
@@ -34,9 +34,11 @@ V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesni
 
 > [!IMPORTANT]
 > - Te spremembe veljajo za Access, Excel, OneNote, Outlook, PowerPoint, Publisher in Word.
-> - Te spremembe veljajo obenem tudi za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
-> - Pričakujemo, da bo različica 1904 na voljo v polletnem kanalu (ciljna izdaja) septembra in v polletnem kanalu januarja 2020.
-> - Nove in izboljšane kontrolnike zasebnosti bomo razširili dodatnim Officeovim odjemalcem, vključno z ekipami, sistemom Office for Mac in našimi mobilnimi aplikacijami. Več informacij o teh spremembah bomo razkrili v prihajajočih se mesecih. Še naprej bomo pozorno prisluhnili vašim povratnim informacijam in poskrbeli za izboljšave za vse odjemalce in storitve za Office 365.
+> - Te spremembe se nanašajo tudi na:
+>   - Različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+>   - Različico 1904 ali novejšo za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online Plan 2.
+> - Za kontrolnike zasebnosti, izdani v različici 1904, pričakujemo, da bodo na voljo v polletnem kanalu (ciljna izdaja) septembra 2019 in v polletnem kanalu januarja 2020.
+> - Nove in izboljšane kontrolnike zasebnosti bomo razširili dodatnim Officeovim odjemalcem, vključno z aplikacijo Teams in našimi mobilnimi aplikacijami. Več informacij o teh spremembah bomo razkrili v prihajajočih se mesecih. Še naprej bomo pozorno prisluhnili vašim povratnim informacijam in poskrbeli za izboljšave za vse odjemalce in storitve za Office 365.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Diagnostični podatki, poslani Microsoftu iz storitve Office 365 ProPlus
 
@@ -63,12 +65,12 @@ Kot skrbnik organizacije lahko z nastavitvijo pravilnika določite, katero raven
 Ti diagnostični podatki ne vključujejo imen uporabnikov, njihovih e-poštnih naslovov ali vsebine njihovih datotek v Officeu. Nas sitem ustvari enolični ID, ki ga poveže z diagnostičnimi podatki o vaših uporabnikih. Ko prejmemo diagnostične podatke, iz katerih je razvidno, da se je ena naših aplikacij 100-krat nepravilno zaustavila, lahko s tem ID-jem določimo, ali je 100 zrušitev povzročil en uporabnik oziroma je 100 uporabnikov doživelo vsako po eno zrušitev. Enoličnega ID-ja ne bomo uporabili za prepoznavanje določenega uporabnika.
 
 Če si želite ogledati, katere vrste diagnostičnih podatkov so poslane Microsoftu, uporabite brezplačen pregledovalnik diagnostičnih podatkov, ki ga lahko prenesete in namestite iz Trgovine Microsoft.
-
-Če želite več informacij, preberite te članke:
+7 Če želite več informacij, preberite naslednje članke:
 
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
-- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 - [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Povezane izkušnje za Office 365 ProPlus
@@ -92,7 +94,8 @@ Na voljo je tudi nastavitev pravilnika, s katero lahko izklopite te povezane izk
 Če želite več informacij, preberite te članke:
 
 - [Povezane izkušnje v Officeu](connected-experiences.md)
-- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Izbirne povezane izkušnje za Office 365 ProPlus
 
@@ -102,12 +105,13 @@ To so izbirne povezane izkušnje, ki niso zajete v komercialno pogodbo organizac
 
 Ker te izbirne povezane izkušnje urejajo ločeni pogoji in določila, jih lahko upravljate ločeno od povezanih izkušenj, opredeljenih v tem članku. Kot skrbnik organizacije lahko z nastavitvijo pravilnika določite, ali so te izbirne povezane izkušnje vašim uporabnikom na voljo kot skupina. Če ne konfigurirate te nastavitve pravilnika, so te izbirne povezane izkušnje na voljo vašim uporabnikom.
 
-Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupino tako, da odprejo meni **Datoteka** > **Račun** > **Zasebnost računa** > **Upravljaj nastavitve**. Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
+Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupino tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
 Če želite več informacij, preberite te članke:
 
 - [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Zahtevani podatki storitev za povezane izkušnje
 

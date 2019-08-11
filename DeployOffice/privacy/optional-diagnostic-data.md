@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: cf3a2488d985dd238456e86466688036c0c61ccb
-ms.sourcegitcommit: e6135e9937ef07785f0ce0eb6282ceece401f96e
+ms.openlocfilehash: e4b42e97d7d954a968ad2a1366c6f64235c1d7f0
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35430103"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239022"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
@@ -27,6 +27,8 @@ ms.locfileid: "35430103"
 > - Office 365 ProPlus in Office 365 Business
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+>
+> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
@@ -47,6 +49,7 @@ Med izbirne diagnostične podatke sodijo podatki, ki jih zberemo o oblikah, ki j
 
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije izbirnih diagnostičnih podatkov
 

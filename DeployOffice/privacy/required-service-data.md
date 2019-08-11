@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office nudijo pregled zahtevanih podatkov storitve, ki so zbrani o povezanih izkušnjah v Officeu.
 hideEdit: true
-ms.openlocfilehash: 9a276e00f5c852ffda00844c5e1aaa9187f581c3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701024"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238496"
 ---
 # <a name="required-service-data-for-office"></a>Zahtevani podatki storitev za Office 
 
@@ -27,6 +27,8 @@ ms.locfileid: "34701024"
 > - Office 365 ProPlus in Office 365 Business
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+>
+> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive za podjetja, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
 
@@ -64,6 +66,7 @@ Zahtevani podatki storitve so zbrani in poslani Microsoftu tudi za ključne Offi
 
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primeri dogodkov za diagnostične podatke storitve
 
