@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: e6078bf96c60d0f01aeaea0cabe32f135a8fa1a3
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813318"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238917"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -27,6 +27,8 @@ ms.locfileid: "34813318"
 > - Office 365 ProPlus in Office 365 Business
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+>
+> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
@@ -45,6 +47,7 @@ Z obveznimi diagnostičnimi podatki prepoznate težave z Officeom, ki so morda p
 
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Kategorije, podatkovni podtipi, dogodki in podatkovna polja za obvezne diagnostične podatke
 
@@ -423,6 +426,99 @@ Ta kategorija vsebuje ta polja:
 
   - **TelemetryPermissionLevel** – Vrednost, ki določa, katero raven diagnostičnih podatkov je izbral uporabnik. Omogoča razumevanje ravni diagnostičnih podatkov, ki jih bo ustvarila seja.
 
+## <a name="data-fields-that-are-common-for-onenote-events"></a>Podatkovna polja, ki so skupna za dogodke storitve OneNote
+
+Naslednja podatkovna polja so skupna za vse dogodke storitve OneNote za Mac, iOS in Android.
+
+> [!NOTE]
+> Kadar uporabljate pregledovalnik diagnostičnih podatkov, je prikazano ime »Dejavnost«, »ReportData« ali »Nepričakovano« za dogodke storitve OneNote za Mac, iOS in Android. Če želite najti dejansko ime dogodka, izberite dogodek in si nato oglejte polje »EventName«.
+
+- **Activity_ActivityType** – označuje vrsto tega dogodka dejavnosti. Dejavnost je lahko normalna dejavnost ali dejavnost z visoko vrednostjo.
+
+- **Activity_AggMode** – sporoči sistemu, kako naj združi rezultate dejavnosti. Omogoča, da zmanjšamo količino prenesenih informacij iz uporabnikovega računalnika tako, da združimo rezultate dejavnosti v en dogodek, ki ga redno pošiljamo.
+
+- **Activity_Count** – število izvajanj določene dejavnosti, če pridobljeno število označuje združeni dogodek. Omogoča, da določimo, kolikokrat je bila dejavnost uspešno oz. neuspešno izvedena glede na način združevanja dejavnosti.
+
+- **Activity_CV** – vrednost, ki določa odnos med dejavnostmi in poddejavnostmi. Omogoča, da lahko znova ustvarimo odnos med ugnezdenimi dejavnostmi.
+
+- **Activity_DetachedDurationInMicroseconds** – čas, ko je dejavnost nedejavna in ne izvaja nobenega dejanskega dela, vendar se čas še vedno sešteva za pridobitev skupnega časa dejavnosti.
+
+- **Activity_DurationInMicroseconds** – trajanje izvajanja dejavnosti. Omogoča, da določimo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
+
+- **Activity_Expiration** – datum v številski obliki označuje, kdaj bo prišlo do ustavitve pošiljanja tega dogodka iz odjemalcev.
+
+- **Activity_FailCount** – število, ki pokaže, kolikokrat je bila ta dejavnost neuspešna.
+
+- **Activity_Name** – kratko ime dogodka. Omogoča določitev dogodka, ki ga je poslal odjemalec.
+
+- **Activity_Namespace** – imenski prostor dogodka. Omogoča združevanje dogodkov v skupine.
+
+- **Activity_Reason** – niz, ki označuje razlog, zaradi katerega je dejavnost končana z določenim rezultatom.
+
+- **Activity_Result** – zastavica, ki označuje, ali je bila dejavnost uspešna, neuspešna ali nepričakovano neuspešna. Omogoča, da določimo, ali so bila uporabnikova dejanja v izdelku uspešno oz. neuspešno izvedena. Prepoznamo lahko težave, ki vplivajo na uporabnika.
+
+- **Activity_State** – zastavica označuje, ali je dogodek začetek ali konec dejavnosti uporabnika.
+
+- **Activity_SucceedCount** – število, ki pokaže, kolikokrat je bila ta dejavnost uspešna.
+
+- **ErrorCode** – označuje kodo napake, če je na voljo.
+
+- **ErrorCode2** – označuje drugo kodo napake, če je na voljo.
+
+- **ErrorCode3** – označuje tretjo kodo napake, če je na voljo.
+
+- **ErrorTag** – označuje oznako, ki je povezana s kodo napake, če je na voljo.
+
+- **ErrorType** – označuje vrsto napake, če je na voljo.
+
+- **EventName** – enolično ime dogodka v aplikaciji OneNote. Dogodki v aplikaciji OneNote uporabljajo to polje po meri za določanje enoličnega imena zaradi inženirske omejitve v preteklosti.
+
+- **ExpFeatures** – označuje, ali je uporabnik vklopil stikalo za preskusne funkcije v aplikaciji OneNote ali ne.
+
+- **ExpirationDate** – datum v številski obliki zapisa označuje, kdaj bo ustavljeno pošiljanje tega dogodka iz odjemalcev.
+
+- **IsConsumer** – označuje, ali je uporabnik potrošnik ali ne.
+
+- **IsEdu** – označuje, ali ima uporabnik status uporabnika v izobraževalnem najemniku ali ne
+
+- **IsIW** – označuje, ali je uporabnik poslovni uporabnik ali ne.
+
+- **IsMsftInternal** – označuje, ali je uporabnik zaposleni družbe Microsoft ali ne.
+
+- **IsPremiumUser** – označuje, ali ima uporabnik licenco Premium ali ne.
+
+- **Namespace** – imenski prostor dogodka. Omogoča združevanje dogodkov v skupine.
+
+- **Release_AppStore** – zastavica označuje, ali je graditev pridobljena v trgovini z aplikacijami ali ne.
+
+- **Release_Audience** – določa podskupino občinstva za dano skupino občinstva. Omogoča spremljanje podmnožic skupin občinstva za ocenjevanje razširjenosti in ravni pomembnosti težav.
+
+- **AudienceGroup** – določa krog, kjer so ustvarjeni podatki. Omogoča postopno uvajanje funkcij in prepoznavanje morebitnih težav, preden te dosežejo večji del uporabnikov.
+
+- **Release_Channel** – kanal, v katerem je izdelek izdan. Omogoča, da prepoznamo, ali določene težave različno vplivajo na kanale za uvajanje.
+
+- **RunningMode** – označuje način zagona aplikacije, in sicer s strani uporabnika ali sistemskega procesa.
+
+- **SchemaVersion** – prikazuje trenutno različico sheme telemetrije v telemetrijskem prodajnem lijaku v OneNotu.
+
+- **Session_EcsETag** – indikator sistema pilotnih različic, ki predstavlja pilotne različice, poslane v računalnik. Omogoča, da določimo, katere pilotne različice morda vplivajo na določeno sejo.
+
+- **Session_ImpressionId** – določa nabor pilotnih različic, ki se izvajajo v dani seji. Omogoča, da ugotovimo, katere pilotne različice se izvajajo v seji ter tako določimo, ali je pilotna različica izvor uporabnikovih težav.
+
+- **SessionCorrelationId** – globalni enolični identifikator za sejo gostitelja.
+
+- **SH_ErrorCode** – označuje kodo napake, če je na voljo ob neuspehu dejavnosti.
+
+- **Tag** – oznaka za celo število, ki določa lokacijo v kodi, kjer je ustvarjen dogodek telemetrije.
+
+- **UserInfo_IdType** – niz označuje vrsto uporabniškega računa.
+
+- **UserInfo_OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika.
+
+- **UserInfo_OtherId** – seznam psevdonimnih identifikatorjev, ki niso primarni in predstavljajo uporabniške račune.
+
+- **UserInfo_OtherIdType** – seznam vrst računov, ki niso primarni.
+
 ## <a name="software-setup-and-inventory-data-events"></a>Dogodki podatkov inventarja in nastavitve programske opreme
 
 V nadaljevanju tega članka so navedeni podatkovni podtipi v tej kategoriji:
@@ -451,6 +547,27 @@ Zbrana so ta polja:
 - **status** – Trenutno stanje posodobitve.
 
 - **targetBuild** – Različica, v katero bo Office posodobljen.
+
+#### <a name="officecompliancefileformatballotdisplayedonfirstboot"></a>Office.Compliance.FileFormatBallotDisplayedOnFirstBoot
+
+Označuje, ali je bilo Officeovo pogovorno okno z izbirami oblike zapisa datoteke prikazano uporabniku ob prvem/drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.  Spremlja, ali je prikazano pogovorno okno »Glasovnica za FileFormat« – dogodek je poslan ob prvem/drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.
+
+Zbrana so naslednja polja.
+
+- **CountryRegion** – nastavitev regije države uporabnika v sistemu Windows
+
+- **FileFormatBallotBoxAppIDBootedOnce** – označuje, v kateri aplikaciji (Word, Excel, PowerPoint) je bila obdelana logika prikaza glasovnice oblike zapisa datoteke.
+
+- **FileFormatBallotBoxDisplayedOnFirstBoot** – označuje, kakšen je rezultat prikaza za glasovnico oblike zapisa datoteke (prikazan/ni prikazan kot nepričakovan/ni prikazan zaradi licence/ni prikazan zaradi lokacije).
+
+#### <a name="officecompliancefileformatballotoption"></a>Office.Compliance.FileFormatBallotOption
+
+Spremlja, ali je prikazano pogovorno okno »Glasovnica za FileFormat« – dogodek je poslan ob prvem/drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.  Označuje, ali je pogovorno okno z izbirami oblike zapisa datoteke prikazano ob prvem ali drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.
+
+Zbrana so sledeča polja:
+
+- **FileFormatBallotSelectedOption** – določa možnost oblike zapisa datoteke (OOXML/ODF), ki jo je uporabnik izbral v pogovornem oknu glasovnice oblike zapisa datoteke.
+
 
 #### <a name="officecorrelationmetadatautccorrelationmetadata"></a>Office.CorrelationMetadata.UTCCorrelationMetadata
 
@@ -560,6 +677,26 @@ Zbrana so ta polja:
 
 Dodatki programske opreme in nastavitve.
 
+#### <a name="exceladdindefinedfunctioncustomfunctionsallinone"></a>Excel.AddinDefinedFunction.CustomFunctionsAllInOne
+
+Zbira informacije o tem, kako delujejo funkcije dodatka po meri. Vzdržuje števce poskusov izvedbe, uspešnih dokončanj, napak infrastrukture in napak uporabniških kod. To se uporablja za identifikacijo težav pri zanesljivosti izdelka in odpravljanju težav, ki vplivajo na uporabnike.
+ 
+Zbrana so sledeča polja:
+
+- **AsyncBegin** – število asinhronih funkcij, ki se začnejo izvajati.
+
+- **AsyncEndAddinError** – število asinhronih funkcij, ki se končajo z napako.
+
+- **AsyncEndInfraFailure** – število asinhronih funkcij, ki se končajo z neuspehom infrastrukture.
+
+- **AsyncEndSuccess** – število asinhronih funkcij, ki se končajo uspešno.
+
+- **AsyncRemoveCancel** – število asinhronih funkcij, ki so bile preklicane. 
+
+- **AsyncRemoveRecycle** – število asinhronih funkcij, ki so bile odstranjene zaradi recikliranja. 
+
+- **StreamingCycles1** – števec ciklov pretakanja.
+
 #### <a name="officeextensibilityappcommandsappcmdprojectionstatus"></a>Office.Extensibility.AppCommands.AppCmdProjectionStatus
 
 Zbira podatke za spremljanje, katere namestitve dodatkov za Office so uspešno oz. neuspešno posodobile trak.
@@ -569,6 +706,21 @@ Z njim odpravljamo pogoste težave z registracijo, kjer dodatki niso pravilno na
 Zbrana so ta polja:
 
   - Nobeno
+
+#### <a name="officeextensibilityappcommandsaddsolution"></a>Office.Extensibility.AppCommands.AddSolution
+
+Zbira informacije o namestitvi za Officeove dodatke, ki prilagajajo trak.  Uporablja se zaznavanje težav z načini, na katere dodatki po meri spreminjajo Officeov trak.
+ 
+Zbrana so naslednja polja:
+
+- **AppVersion** – različica aplikacije.
+
+- **SolutionId** – ID rešitve.
+
+- **StoreType** – označuje izvor aplikacije.
+
+- **TelemetryId** – ID telemetrije, ki temelji na vpisani identiteti.
+
 
 #### <a name="officeextensibilitycatalogexchangegetentitlements"></a>Office.Extensibility.Catalog.ExchangeGetEntitlements
 
@@ -746,9 +898,59 @@ Zbrana so ta polja:
 
 Zbira uspešna in neuspešna nalaganja dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje ustreznega delovanja Outlooka s strankinimi dodatki. S temi podatki zaznamo težave in jih raziščemo.
 
-Zbrana so ta polja:
+Zbrana so naslednja polja:
 
   - **Standard HVA Activity** brez koristne vsebine po meri.
+
+#### <a name="officeoutlookmacaddinapiusage"></a>Office.Outlook.Mac.AddinAPIUsage
+
+Zbira uspehe in neuspehe izvedb dodatkov v Outlooku. Te podatke aktivno spremljamo za zagotavljanje ustreznega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+
+Zbrana so naslednja polja:
+
+- **AccountType** – vrsta računa, ki je povezan z dodatkom. 
+
+- **Cookie** – piškotek, ki ga dodatek uporablja.
+
+- **DispId** – identifikator razpošiljanja. 
+
+- **EndTime** – čas zaključka dodatka. 
+
+- **ExecutionTime** – čas, ki je potekel med izvajanjem dodatka. 
+
+- **Result** – rezultat uporabe dodatka v Outlooku. 
+
+- **StartTime** – čas začetka izvedbe dodatka.
+
+
+#### <a name="officeoutlookmacaddineventapisusage"></a>Office.Outlook.Mac.AddinEventAPIsUsage
+
+Zbira uspehe ali neuspehe izvedbe dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje pravilnega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+
+Zbrana so naslednja polja:
+
+- **AddinType** – vrsta dodatka. 
+
+- **EventAction** – dejanje, ki ga dodatek izvede. 
+
+- **EventDispid** – identifikator razpošiljanja.
+
+- **EventResult** – rezultat dejanja, ki ga dodatek izvede. 
+
+#### <a name="officeoutlookmacaddininstallationfrominclientstore"></a>Office.Outlook.Mac.AddInInstallationFromInClientStore
+
+Zbira uspehe ali neuspehe namestitve dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje pravilnega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+
+Zbrana so naslednja polja:
+
+- **AccountType** – vrsta računa, povezanega z dodatkom. 
+
+- **FailureReason** – razlog za neuspeh namestitve dodatka. 
+
+- **MarketplaceAssetId** – identifikator dodatka iz trgovine. 
+
+- **Stanje** – stanje namestitve dodatka.
+
 
 #### <a name="officeprogrammabilityadd-insinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
 
@@ -979,6 +1181,15 @@ V nadaljevanju tega članka so navedeni podatkovni podtipi v tej kategoriji:
 
 Uspešnost delovanja aplikacije. Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje).
 
+#### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
+
+Ustvarjeno je ob zagonu odjemalca, če je končni uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office.  Zbira informacije o tem, kdaj je posrednik za telemetrijo sistema Office prenesel podatke v mapo v skupni rabi. Primarna uporaba tega dogodka je spremljanje ustreznosti stanja posrednika za telemetrijo sistema Office, sekundarna uporaba dogodka pa je ocena uporabe nadzorne plošče za telemetrijo sistema Office.
+
+Zbrana so naslednja polja:
+
+- **UploadTime** – časovni žig zadnjega uspešnega prenosa, ki ga je izvedel posrednik za telemetrijo.
+
+
 #### <a name="officeappcompatappcompatagentscanandupload"></a>Office.AppCompat.AppCompat.AgentScanAndUpload
 
 Podatki so zbrani le, če je uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira informacije o tem, kdaj se izvaja posrednik za telemetrijo sistema Office.  Ti podatki so zbrani le, če je nadzorna plošča za telemetrijo sistema Office omogočena in uporabljena za določanje ustreznosti stanja posrednika za telemetrijo sistema Office.
@@ -1048,6 +1259,36 @@ Zbrana so ta polja:
   - **SolutionId** – GUID, ki predstavlja enolični dodatek.
 
   - **TelemetryId** – GUID, ki predstavlja enoličnega uporabnika.
+
+#### <a name="officeextensibilitycatalogexchangeprocessmanifest"></a>Office.Extensibility.Catalog.ExchangeProcessManifest
+
+Podatki o obdelavi posameznega manifesta za dodatek najemnika storitve Office 365, ki ga dodeli skrbnik. Uporablja se pri analizi težav stranke in ustvarjanju grafikonov strankinega uspeha.
+ 
+Zbrana so naslednja polja:
+
+- **AppVersion** – različica aplikacije.
+
+- **IsAllReturnedManifestsParsed** – logična vrednost, ki označuje, da smo razčlenili vse vrnjene manifeste.
+
+- **IsAppCommand** – logična vrednost, ki označuje, da je to ukaz aplikacije. 
+
+- **ReturnedManifestsParsed** – število razčlenjenih manifestov.
+
+- **SolutionId** – ID rešitve
+
+- **TelemetryId** – ID telemetrije, ki temelji na vpisani identiteti
+
+#### <a name="officeextensibilityodpappcommandsribbonclick"></a>Office.Extensibility.ODPAppCommandsRibbonClick
+
+Zbira podatke o tem, ali je bilo klikanje kontrolnika dodatka po meri uspešno ali ne. Uporablja se za zaznavanje težav pri interakciji uporabnikov s kontrolniki dodatkov.
+ 
+Zbrana so naslednja polja:
+
+- **CommandActionType** – vrsta ukaza dodatka.
+
+- **CommandLabel** – oznaka kliknjenega ukaza.
+
+- **SolutionId** – ID rešitve
 
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
@@ -1605,6 +1846,213 @@ Zbrana so ta polja:
 
   - **Data.Log** – Sporočilo dnevnika po meri, ki označuje, ali je bilo vnaprejšnje preverjanje uspešno oz. neuspešno izvedeno.
 
+
+#### <a name="officeonenotenavigationcreatepage"></a>Office.OneNote.Navigation.CreatePage
+
+Kritični signal, uporabljen za spremljanje možnosti uporabnikov OneNota za ustvarjanje strani v OneNotu.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo ustvariti strani, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **IsAtSectionEnd** – označuje, ali je na koncu odseka ustvarjena nova stran ali ne.
+
+- **IsBlank** – označuje, ali je nova stran prazna ali pa je ustvarjena na podlagi predloge.
+
+- **IsRecentsView** – označuje, ali je stran ustvarjena na podlagi nedavnih elementov ali ne.
+
+- **NavView** – označuje, ali je stran ustvarjena na podlagi pogleda krmarjenja ali ne.
+
+- **NoteType** – označuje vrsto strani (hitra beležka, seznam ali fotografija).
+
+- **QuickNoteType** – označuje vrsto strani (hitra beležka, seznam ali fotografija).
+
+- **RailState** – označuje stanje sledi krmarjenja OneNota pri ustvarjanju strani.
+
+- **Trigger** – označuje vhodno točko, na kateri se začne dejanje ustvarjanja strani.
+
+- **TriggerInfo** – označuje dodatne informacije, povezane s sprožilcem.
+
+
+#### <a name="officeonenotenavigationcreatesection"></a>Office.OneNote.Navigation.CreateSection
+
+Kritični signal, ki se uporablja za spremljanje možnosti uporabnikov OneNota za ustvarjanje odsekov v OneNotu.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo ustvariti strani, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja
+
+- **NotebookID** – enolični identifikator zvezka.
+
+- **SectionID** – enolični identifikator ustvarjenega odseka.
+
+- **Sprožilec** – označuje vstopno točko, na kateri se začne dejanje ustvarjanja odseka.
+
+- **TriggerInfo** – označuje dodatne informacije, povezane s sprožilcem.
+
+
+#### <a name="officeonenotenavigationnavigate"></a>Office.OneNote.Navigation.Navigate
+
+Kritični signal, ki se uporablja za spremljanje možnosti uporabnikov OneNota za krmarjenje med stranmi v OneNotu.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo krmariti, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **FromNotebook** – enolični identifikator zvezka.
+
+- **FromPage** – enolični identifikator strani.
+
+- **FromSection** – enolični identifikator odseka.
+
+- **FromSectionGroup** – enolični identifikator skupine odsekov.
+
+- **IsCurrentUserEduStudent** – označuje, ali ima trenutni uporabnik vlogo študenta v izobraževalnem zvezku ali ne.
+
+- **IsEduNotebook** – označuje, ali je trenutna stran izobraževalni zvezek ali ne.
+
+- **IsEduNotebookReadOnlyPage** – označuje, ali je trenutna stran na voljo »samo za branje« v izobraževalnem zvezku ali ne.
+
+- **ToNotebook** – enolični identifikator zvezka.
+
+- **ToPage** – enolični identifikator strani.
+
+- **ToSection** – enolični identifikator odseka.
+
+- **ToSectionGroup** – enolični identifikator skupine odsekov.
+
+
+#### <a name="officeonenotenotebookmanagementcreatenotebook"></a>Office.OneNote.NotebookManagement.CreateNotebook
+
+Kritični signal, ki se uporablja za spremljanje možnosti uporabnikov OneNota za ustvarjanje zvezkov v OneNotu.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo ustvariti zvezkov, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+    
+- **NotebookID** – enolični identifikator zvezka.
+
+
+#### <a name="officeonenotenotebookmanagementopennotebook"></a>Office.OneNote.NotebookManagement.OpenNotebook
+
+Kritični signal, ki se uporablja za spremljanje možnosti uporabnikov OneNota za odpiranje zvezkov v OneNotu.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo odpreti zvezkov, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+-  **NotebookID** – enolični identifikator zvezka.
+
+    
+#### <a name="officeonenotesearchsearch"></a>Office.OneNote.Search.Search
+
+ID kritičnega signala, uporabljan za spremljanje možnosti OneNotovih uporabnikov za iskanje informacij na več tisoč straneh in v več tisoč zvezkih.   Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo najti informacij v zvezkih, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **PageSearchResultCount** – označuje število rezultatov iskanja, ki so najdeni v načinu iskanja strani.
+
+-  **PageTimeToFirstResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje prvega ujemanja v načinu iskanja strani.
+    
+-  **PageTimeToLastResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje zadnjega ujemanja v načinu iskanja strani.
+
+-  **PageTimeToMedianResultInMs** – označuje mediano časa, ki ga OneNote porabi za iskanje vseh ujemanj v načinu iskanja strani.
+
+-  **SearchResultCount** – označuje število najdenih rezultatov iskanja.
+
+-  **TagSearchResultCount** – označuje število rezultatov iskanja, najdenih v načinu iskanja oznak.
+
+-  **TagTimeToFirstResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje prvega ujemanja v načinu iskanja oznak.
+
+-  **TagTimeToLastResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje zadnjega ujemanja v načinu iskanja oznak.
+
+-  **TagTimeToMedianResultInMs** – označuje mediano časa, ki ga OneNote porabi za iskanje vseh ujemanj v načinu iskanja oznak.
+
+-  **TimeToFirstResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje prvega ujemanja.
+
+-  **TimeToLastResultInMs** – označuje količino časa, ki jo OneNote porabi za iskanje zadnjega ujemanja.
+
+-  **TimeToMedianResultInMs** – označuje mediano časa, ki ga OneNote porabi za iskanje vseh ujemanj.
+
+
+#### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
+ 
+Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
+ 
+Zbrana so naslednja polja
+
+- **CachedError_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave predpomnjene napake, in/ali razloga, zakaj se je pojavila.
+    
+- **CachedError_Description** – opis predpomnjene napake.
+
+- **CachedError_Tag** – označuje, kje v kodi je shranjena predpomnjena napaka.
+
+- **CachedError_Type** – vrsta predpomnjene napake, na primer »Win32Error« itd.
+
+- **ExecutionTime** – čas v milisekundah, porabljen za podvojitev zvezka.
+
+- **Gosid** – globalni ID prostora za predmete.
+
+- **IdentityType** – vrsta identitete, npr. Windows Live, ID organizacije itd.
+
+- **InitialReplicationInSession** – označuje, ali je ta podvojitev prva podvojitev zvezka po odprtju ali ne.
+
+- **IsBackgroundSync** – označuje, ali je to sinhroniziranje ozadja ali ne.
+
+- **IsCachedErrorSuppressed** – označuje, ali je predpomnjena napaka onemogočena ali ne.
+
+- **IsCachedErrorUnexpected** – označuje, ali je predpomnjena napaka nepričakovana ali ne.
+
+- **IsNotebookErrorSuppressed** – označuje, ali je napaka sinhronizacije na ravni zvezka onemogočena ali ne.
+
+- **IsNotebookErrorUnexpected** – označuje, ali je napaka sinhronizacije na ravni zvezka nepričakovana ali ne.
+
+- **IsSectionErrorSuppressed** – označuje, ali je napaka sinhronizacije odseka onemogočena ali ne.
+
+- **IsSectionErrorUnexpected** – označuje, ali je napaka sinhronizacije odseka nepričakovana ali ne.
+
+- **IsUsingRealtimeSync** – označuje, ali je sinhronizacija zvezka z moderno vsebino strani izvedena ali ne.
+
+- **LastAttemptedSync** – časovni žig, ko je bil nazadnje izveden poskus sinhronizacije zvezka.
+
+- **LastBackgroundSync** – časovni žig, ko je bil izveden zadnji poskus sinhronizacije v ozadju.
+
+- **LastNotebookViewedDate** – datum, ko je bil zvezek nazadnje gledan.
+
+- **LastSuccessfulSync** – časovni žig, ko je bil zvezek uspešno predhodno sinhroniziran.
+
+- **NeedToRestartBecauseOfInconsistencies** – označuje, ali je potreben ponovni zagon sinhronizacije zaradi nedoslednosti ali ne.
+
+- **NotebookErrorCode** – koda napake sinhronizacije na ravni zvezka, ki je shranjena v prostoru zvezka »Graph«.
+
+- **NotebookId** – ID zvezka.
+
+- **NotebookType** – vrsta zvezka.
+
+- **ReplicatingAgainBecauseOfInconsistencies** – označuje, ali se ponovni zagon sinhronizacije izvede zaradi nedoslednosti ali ne.
+
+- **SectionError_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave napake sinhronizacije odseka in/ali razloga, zakaj se je pojavila.
+
+- **SectionError_Description** – opis napake sinhronizacije odseka.
+
+- **SectionError_Tag** – določite mesto v kodi, kjer je vrnjena napaka sinhronizacije odseka.
+
+- **SectionError_Type** – vrsta napake sinhronizacije odseka, npr. »Win32Error« itd.
+
+- **Success** – označuje, ali je sinhronizacija zvezka uspešna ali ne.
+
+- **SyncDestinationType** – vrsta cilja sinhronizacije, tj. OneDrive ali SharePoint Online.
+
+- **SyncId** – številka, ki je enolična za vsako sinhronizacijo zvezka.
+
+- **SyncWasFirstInSession** – označuje, ali je ta sinhronizacija prva sinhronizacija v trenutni seji.
+
+- **SyncWasUserInitiated** – označuje, ali je to sinhronizacijo inicializiral uporabnik ali ne.
+
+- **TenantId** – ID najemnika za SharePoint.
+
+- **TimeSinceLastAttemptedSync** – čas od zadnjega poskusa sinhronizacije zvezka.
+
+- **TimeSinceLastSuccessfulSync** – čas od zadnje uspešne sinhronizacije zvezka.
+
+
+#### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
+
+Nato je uporabljen kritični signal, da se uporabnikom storitve OneNote zagotovi uspešen zagon aplikacije.
+Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo zagnati aplikacije v našem oknu učinkovitosti delovanja, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:     Brez
+
 #### <a name="officeoutlookdesktopaccountconfigurationcreateaccountresult"></a>Office.Outlook.Desktop.AccountConfiguration.CreateAccountResult
 
 Rezultati dodajanja računa v nov profil v Outlooku iz pogleda »Office Backstage« ali pogovornega okna z nastavitvami računa. Podatke aktivno spremljamo, da zaznamo morebitne konice napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti.
@@ -1670,6 +2118,68 @@ Zbrana so ta polja:
   - **StoreType** – Vrsta ustvarjene shrambe (OST/PST/NST).
 
   - **StoreVersion** – Različica ustvarjene shrambe (majhna/velika/Tardis).
+
+#### <a name="officeoutlookmacaccountaddworkflow"></a>Office.Outlook.Mac.AccountAddWorkflow
+
+Rezultat dodajanja računa v Outlook. Podatke spremljamo, da zagotovimo, da ne pride do morebitnih konic napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti. 
+
+Zbrana so naslednja polja:
+
+- **AccountConfigMethod** – način konfiguracije računa.
+
+- **AccountType** – vrsta konfiguriranega računa.
+
+- **AccountWorkflowSession** – seja, v kateri je izveden poskus poteka dela računa.
+
+- **SessionDuration** – trajanje seje. 
+
+- **ThreadId** – identifikator niti.
+
+
+#### <a name="officeoutlookmacaccountonboardingflow"></a>Office.Outlook.Mac.AccountOnboardingFlow
+
+Rezultat dodajanja računa v Outlook z uporabo nove izkušnje konfiguracije računa. Podatke spremljamo, da zagotovimo, da ne pride do morebitnih konic napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti. 
+
+Zbrana so naslednja polja:
+
+- **AccountConfigAutoSignIn** – samodejna konfiguracija računa, ki jo nastavi skrbnik.
+
+- **AccountConfigDomain** – domena, določena med konfiguracijo računa. 
+
+- **AccountConfigEntryPoint** – vstopna točka, na kateri je uporabnik vnesel konfiguracijo računa. 
+
+- **AccountConfigErrorCode** – koda napake, do katere pride med konfiguracijo računa. 
+
+- **AccountConfigErrorCode** – napaka, do katere pride med konfiguracijo računa.
+
+- **AccountConfigMethod** – način konfiguracije računa
+
+- **AccountConfigPhase** – trenutni korak poteka dela konfiguracije računa.
+
+- **AccountConfigPhaseFrom** – začetni korak poteka dela konfiguracije računa. 
+
+- **AccountConfigPhase** – zadnji korak poteka dela konfiguracije računa. 
+
+- **AccountType** – vrsta računa, ki je konfiguriran.
+
+- **AccountWorkflowSession** – seja, v kateri je izveden poskus poteka dela računa.
+
+- **SessionDuration** – trajanje seje.
+
+
+#### <a name="officeoutlookmacdeleteaccountusage"></a>Office.Outlook.Mac.DeleteAccountUsage
+
+Rezultat brisanja računa v Outlooku. Podatke spremljamo, da zagotovimo, da ne pride do morebitnih konic napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. Z vsako izdajo se trudimo izboljšati to raven uspešnosti. 
+
+Zbrana so naslednja polja:
+
+- **AccountType** – vrsta računa, ki je konfiguriran.
+
+- **AccountID** – identifikator računa.
+
+- **DeprovisionAccount** – označuje, ali je račun odstranjen iz strežnika.
+
+- **IsFastDelete** – označuje, ali je račun izbrisan v niti ozadja.
 
 #### <a name="officepowerpointdocoperationclose"></a>Office.PowerPoint.DocOperation.Close
 
@@ -2075,457 +2585,481 @@ Zbrana so ta polja:
 
 #### <a name="officepowerpointdocoperationsaveas"></a>Office.PowerPoint.DocOperation.SaveAs
 
-Podatki so zbrani, kadar koli PowerPoint izvede postopek »Shrani kot«. Dogodek vsebuje vrsto rezultata uspešne oz. neuspešne metrike učinkovitosti shranjevanja in pomembne metapodatke dokumenta. Napake pri shranjevanju lahko privedejo do izgube podatkov.
+Podatki so zbrani, kadar koli PowerPoint izvede postopek »Shrani kot«. Dogodek vsebuje vrsto rezultata uspešne oz. neuspešne metrike učinkovitosti shranjevanja in pomembne metapodatke dokumenta. Napake pri shranjevanju lahko privedejo do izgube podatkov.  Microsoft uporablja te podatke za zagotavljanje ustreznega delovanje funkcije in uspešnega shranjevanja uporabnikove vsebine.
 
-Microsoft uporablja te podatke za zagotavljanje ustreznega delovanje funkcije in uspešnega shranjevanja uporabnikove vsebine.
+Zbrana so sledeča polja:
 
-Zbrana so ta polja:
+- **Data_AddDocTelemetryResult:long** – označuje, ali ima ta dolgi vnos vso zahtevano telemetrijo dokumenta (polja »Data_Doc_*«)? Če je nima, zakaj?
 
-  - **Data\_AddDocTelemetryResult:long** – Ali ima ta dolgi vnos vso zahtevano telemetrijo dokumenta (polja »Data\_Doc\_\*«)? Če je nima, zakaj?
+- **Data_CppUncaughtExceptionCount:long** – nezaznane izvirne izjeme med izvedbo dejavnosti.
 
-  - **Data\_CppUncaughtExceptionCount:long** – Nezaznane izvorne izjeme med izvajanjem dejavnosti.
+- **Data_DetachedDuration:long** – čas, v katerem je bila dejavnost ločena/ni bila izvajana.
 
-  - **Data\_DetachedDuration:long** – Čas odpete dejavnosti/neizvajanja dejavnosti.
+- **Data_DstDoc_AccessMode:long** – način odpiranja tega dokumenta (samo za branje | branje in pisanje).
 
-  - **Data\_DstDoc\_AccessMode:long** – Način odpiranja dokumenta (samo za branje/branje in pisanje).
+- **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_DstDoc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
-  - **Data\_DstDoc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
+- **Data_DstDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
-  - **Data\_DstDoc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
+- **Data_DstDoc_Ext:string** – pripona dokumenta.
 
-  - **Data\_DstDoc\_Ext:string** – Pripona dokumenta.
+- **Data_DstDoc_Extension:string** – pripona dokumenta.
 
-  - **Data\_DstDoc\_Extension:string** – Pripona dokumenta.
+- **Data_DstDoc_FileFormat:long** – nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
 
-  - **Data\_DstDoc\_FileFormat:long** – Nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
+- **Data_DstDoc_Fqdn:string** – mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+    
+- **Data_DstDoc_FqdnHash:string** – zgoščena vrednost mesta shrambe dokumenta.
 
-  - **Data\_DstDoc\_Fqdn:string** – Mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+- **Data_DstDoc_IdentityTelemetryId:string** – enolični GUID uporabnika.
 
-  - **Data\_DstDoc\_FqdnHash:string** – Zgoščena vrednost mesta shrambe dokumenta.
+- **Data_DstDoc_IdentityUniqueId:string** – enolični identifikator identitete, ki je bila uporabljena za dejanje dokumentov v skupni rabi.
 
-  - **Data\_DstDoc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
+- **Data_DstDoc_IOFlags:long** – bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
-  - **Data\_DstDoc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+- **Data_DstDoc_IrmRights:long** – nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Posredovanje«, »Odgovarjanje«, »SecureReader«, »Urejanje« itd.).
+    
+- **Data_DstDoc_IsCloudCollabEnabled:bool** – ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki jo je poslala zahteva OPTIONS.
 
-  - **Data\_DstDoc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+- **Data_DstDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-  - **Data\_DstDoc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+- **Data_DstDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
 
-  - **Data\_DstDoc\_IsCloudCollabEnabled:bool** – Ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki njo je poslala zahteva OPTIONS.
+- **Data_DstDoc_IsOpeningOfflineCopy:bool** – preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data\_DstDoc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
+- **Data_DstDoc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+    
+- **Data_DstDoc_Location:long** – nabor vnaprej določenih vrednosti za mesto shrambe dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
 
-  - **Data\_DstDoc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_DstDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_DstDoc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
+- **Data_DstDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
 
-  - **Data\_DstDoc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+- **Data_DstDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
-  - **Data\_DstDoc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
+- **Data_DstDoc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.).
 
-  - **Data\_DstDoc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
+- **Data_DstDoc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+- **Data_DstDoc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
+- **Data_DstDoc_ServerProtocol:long** – nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_DstDoc\_ReadOnlyReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.).
+- **Data_DstDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-  - **Data\_DstDoc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
 
-  - **Data\_DstDoc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+- **Data_DstDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
-  - **Data\_DstDoc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
+- **Data_DstDoc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
-  - **Data\_DstDoc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+- **Data_DstDoc_SizeInBytes:long** – velikost dokumenta v bajtih.
 
-  - **Data\_DstDoc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+- **Data_DstDoc_SpecialChars:long** – bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
 
-  - **Data\_DstDoc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+- **Data_DstDoc_StorageProviderId:string** – niz, ki prepozna ponudnika shrambe dokumentov, npr. »DropBox«.
 
-  - **Data\_DstDoc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
+- **Data_DstDoc_StorageProviderId:string** – nabor vnaprej določenih vrednosti za stanje toka dokumentov (na voljo, stalno onemogočeno, ni na voljo).
 
-  - **Data\_DstDoc\_SizeInBytes:long** – Velikost dokumenta v bajtih.
+- **Data_DstDoc_UrlHash:string** – zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_SpecialChars:long** – Bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
+- **Data_DstDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-  - **Data\_DstDoc\_StorageProviderId:string** – Niz, ki prepozna ponudnika za shranjevanje dokumentov, npr. »DropBox«.
+- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
 
-  - **Data\_DstDoc\_StreamAvailability:long** – Nabor vnaprej določenih vrednosti za stanje dokumenta Stream (na voljo, stalno onemogočeno, ni na voljo).
+- **Data_FileType:long** – nabor vnaprej določenih vrednosti notranje vrste datoteke.
 
-  - **Data\_DstDoc\_UrlHash:string** – Zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
+- **Data_fLifeguarded:bool** – označuje, ali je bil dokument kdaj zavarovan (funkcija za samodejno odpravljanje težav z dokumenti brez pozivanja uporabnika)?
 
-  - **Data\_DstDoc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
+- **Data_FWebCreated:bool** – označuje, ali ta dokument vsebuje zastavico »WebCreator«?
 
-  - **Data\_DstDoc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. Dropbox.
+- **Data_SaveReason:long** – nabor vnaprej določenih vrednosti, zakaj je bilo izvedeno to shranjevanje. (AutoSave, ToOCSTransitionSave, ToCSITransitionSave itd.).
 
-  - **Data\_FileType:long** – Nabor vnaprej določenih vrednosti notranje vrste datoteke.
+- **Data_SaveType:long** – nabor vnaprej določenih vrednosti vrste shranjevanja (»SaveAs«, »Publish«, »Manual«, OMSave itd.). 
 
-  - **Data\_fLifeguarded:bool** – Ali je bil dokument kdaj zavarovan (funkcija za samodejno odpravljanje težav z dokumenti brez pozivanja uporabnika)?
+- **Data_SrcDoc_AccessMode:long** – način odpiranja tega dokumenta (samo za branje | branje in pisanje).
 
-  - **Data\_FWebCreated:bool** – Ali ta dokument vsebuje zastavico »WebCreator«?
+- **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_SaveReason:long** – Nabor vnaprej določenih vrednosti, zakaj je bilo izvedeno to shranjevanje. (AutoSave, ToOCSTransitionSave, ToCSITransitionSave itd.).
+- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu. 
 
-  - **Data\_SaveType:long** – Nabor vnaprej določenih vrednosti vrste shranjevanja (SaveAs, Publish, Manual, OMSave itd.).
+- **Data_SrcDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
-  - **Data\_SrcDoc\_AccessMode:long** – Način odpiranja dokumenta (samo za branje/branje in pisanje).
+- **Data_SrcDoc_Ext:string** – pripona dokumenta.
 
-  - **Data\_SrcDoc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_SrcDoc_Extension:string** – pripona dokumenta.
 
-  - **Data\_SrcDoc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
+- **Data_SrcDoc_FileFormat:long** – nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
 
-  - **Data\_SrcDoc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
+- **Data_SrcDoc_Fqdn:string** – mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
 
-  - **Data\_SrcDoc\_Ext:string** – Pripona dokumenta.
+- **Data_SrcDoc_FqdnHash:string** – zgoščena vrednost mesta shrambe dokumenta.
 
-  - **Data\_SrcDoc\_Extension:string** – Pripona dokumenta.
+- **Data_SrcDoc_IdentityTelemetryId:string** – enolični GUID uporabnika.
 
-  - **Data\_SrcDoc\_FileFormat:long** – Nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
+- **Data_SrcDoc_IdentityUniqueId:string** – enolični identifikator identitete, ki je bila uporabljena za dejanje dokumentov v skupni rabi.
 
-  - **Data\_SrcDoc\_Fqdn:string** – Mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+- **Data_SrcDoc_IOFlags:long** – bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
-  - **Data\_SrcDoc\_FqdnHash:string** – Zgoščena vrednost mesta shrambe dokumenta.
+- **Data_SrcDoc_IrmRights:long** – nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
 
-  - **Data\_SrcDoc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
+- **Data_SrcDoc_IsCloudCollabEnabled:bool** – ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki jo je poslala zahteva OPTIONS.
 
-  - **Data\_SrcDoc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+- **Data_SrcDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-  - **Data\_SrcDoc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
 
-  - **Data\_SrcDoc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+- **Data_SrcDoc_IsOpeningOfflineCopy:bool** – preverja, ali je dokument odprt v lokalnem predpomnilniku.
 
-  - **Data\_SrcDoc\_IsCloudCollabEnabled:bool** – Ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki njo je poslala zahteva OPTIONS.
+- **Data_SrcDoc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
-  - **Data\_SrcDoc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
+- **Data_SrcDoc_Location:long** – nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
 
-  - **Data\_SrcDoc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_SrcDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.).
 
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
+- **Data_SrcDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
 
-  - **Data\_SrcDoc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+- **Data_SrcDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
-  - **Data\_SrcDoc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
+- **Data_SrcDoc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.).
 
-  - **Data\_SrcDoc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.).
+- **Data_SrcDoc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+- **Data_SrcDoc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
+- **Data_SrcDoc_ServerProtocol:long** – nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_SrcDoc\_ReadOnlyReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.).
+- **Data_SrcDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-  - **Data\_SrcDoc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16. »DataSrcDocSessionId:long« – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa
 
-  - **Data\_SrcDoc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+- **Data_SrcDoc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
-  - **Data\_SrcDoc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
+- **Data_SrcDoc_SizeInBytes:long** – velikost dokumenta v bajtih.
 
-  - **Data\_SrcDoc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+- **Data_SrcDoc_SpecialChars:long** – bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
 
-  - **Data\_SrcDoc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16. »Data\_SrcDoc\_SessionId:long« – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+- **Data_SrcDoc_StorageProviderId:string** – niz, ki prepozna ponudnika shrambe dokumentov, npr. »DropBox«.
 
-  - **Data\_SrcDoc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
+- **Data_SrcDoc_StreamAvailability:long** – nabor vnaprej določenih vrednosti za stanje toka dokumentov (na voljo, stalno onemogočeno, ni na voljo).
 
-  - **Data\_SrcDoc\_SizeInBytes:long** – Velikost dokumenta v bajtih.
+- **Data_SrcDoc_UrlHash:string** – zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_SpecialChars:long** – Bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
+- **Data_SrcDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-  - **Data\_SrcDoc\_StorageProviderId:string** – Niz, ki prepozna ponudnika za shranjevanje dokumentov, npr. »DropBox«.
+- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«.
 
-  - **Data\_SrcDoc\_StreamAvailability:long** – Nabor vnaprej določenih vrednosti za stanje dokumenta Stream (na voljo, stalno onemogočeno, ni na voljo).
+- **Data_StopwatchDuration:long** – skupni čas dejavnosti.
 
-  - **Data\_SrcDoc\_UrlHash:string** – Zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
+- **Data_TypeOfSaveDialog:long** – vnaprej opredeljen nabor vrednosti pogovornega okna (RUN_SAVEAS_DLG,RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG itd.)
 
-  - **Data\_SrcDoc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
+- **DstDoc** – nova lokacija dokumenta. 
 
-  - **Data\_SrcDoc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+- **SrcDoc** – izvirna lokacija dokumenta.
 
-  - **Data\_StopwatchDuration:long** – Skupni čas dejavnosti.
-
-  - **Data\_TypeOfSaveDialog:long** – Nabor vnaprej določenih vrednosti pogovornega okna (RUN\_SAVEAS\_DLG, RUN\_SAVEMEDIA\_DLG, RUN\_SAVEAS\_VIDEO\_DLG itd.).
-
-  - **DstDoc** – Novo mesto dokumenta.
-
-  - **SrcDoc** – Izvirno mesto dokumenta.
 
 #### <a name="officepowerpointdocoperationsavelegacy"></a>Office.PowerPoint.DocOperation.SaveLegacy
 
-Podatki so zbrani, kadar koli PowerPoint izvede postopek shranjevanja s potjo podedovane kode. Dogodek vsebuje vrsto rezultata uspešne oz. neuspešne metrike učinkovitosti shranjevanja in pomembne metapodatke dokumenta. Napake pri shranjevanju lahko privedejo do izgube podatkov. Microsoft uporablja te podatke za zagotavljanje ustreznega delovanje funkcije in uspešnega shranjevanja uporabnikove vsebine.
+Podatki so zbrani, kadar koli PowerPoint izvede postopek shranjevanja s potjo podedovane kode. Dogodek vsebuje vrsto rezultata uspešne oz. neuspešne metrike učinkovitosti shranjevanja in pomembne metapodatke dokumenta.  Napake pri shranjevanju lahko privedejo do izgube podatkov.  Microsoft uporablja te podatke za zagotavljanje ustreznega delovanje funkcije in uspešnega shranjevanja uporabnikove vsebine.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemetryResult:long** – Ali ima ta dolgi vnos vso zahtevano telemetrijo dokumenta (polja »Data\_Doc\_\*«)? Če je nima, zakaj?
+- **Data_AddDocTelemetryResult:long** – označuje, ali ima ta dolgi vnos vso zahtevano telemetrijo dokumenta (polja »Data_Doc_*«)? Če je nima, zakaj?
 
-  - **Data\_CppUncaughtExceptionCount:long** – Nezaznane izvorne izjeme med izvajanjem dejavnosti.
+- **Data_CppUncaughtExceptionCount:long** – nezaznane izvirne izjeme med izvedbo dejavnosti.
 
-  - **Data\_DetachedDuration:long** – Čas odpete dejavnosti/neizvajanja dejavnosti.
+- **Data_DetachedDuration:long** – čas, v katerem je bila dejavnost ločena/ni bila izvajana.
 
-  - **Data\_Doc\_AccessMode:long** – Način odpiranja dokumenta (samo za branje/branje in pisanje).
+- **Data_Doc_AccessMode:long** – način odpiranja dokumenta (samo za branje | branje in pisanje)
 
-  - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_Doc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
+- **Data_Doc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
-  - **Data\_Doc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
+- **Data_Doc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
-  - **Data\_Doc\_Ext:string** – Pripona dokumenta.
+- **Data_Doc_Ext:string** – pripona dokumenta.
 
-  - **Data\_Doc\_Extenstion:string** – Pripona dokumenta.
+- **Data_Doc_Extension:string** – pripona dokumenta.
 
-  - **Data\_Doc\_FileFormat:long** – Nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
+- **Data_Doc_FileFormat:long** – nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
 
-  - **Data\_Doc\_Fqdn:string** – Mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+- **Data_Doc_Fqdn:string** – mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
 
-  - **Data\_Doc\_FqdnHash:string** – Zgoščena vrednost mesta shrambe dokumenta.
+- **Data_Doc_FqdnHash:string** – zgoščena vrednost mesta shrambe dokumenta.
 
-  - **Data\_Doc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
+- **Data_Doc_IdentityTelemetryId:string** – enolični GUID uporabnika.
 
-  - **Data\_Doc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+- **Data_Doc_IdentityUniqueId:string** – enolični identifikator identitete, ki je bila uporabljena za dejanje dokumentov v skupni rabi.
 
-  - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+- **Data_Doc_IOFlags:long** – bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
-  - **Data\_Doc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+- **Data_Doc_IrmRights:long** – nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Posredovanje«, »Odgovarjanje«, »SecureReader«, »Urejanje« itd.).
 
-  - **Data\_Doc\_IsCloudCollabEnabled:bool** – Ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki njo je poslala zahteva OPTIONS.
+- **Data_Doc_IsCloudCollabEnabled:bool** – ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki jo je poslala zahteva OPTIONS.
 
-  - **Data\_Doc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
+- **Data_Doc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-  - **Data\_Doc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_Doc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
+- **Data_Doc_IsOpeningOfflineCopy:bool** – preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+- **Data_Doc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
-  - **Data\_Doc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
+- **Data_Doc_Location:long** – nabor vnaprej določenih vrednosti za mesto shrambe dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
 
-  - **Data\_Doc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
+- **Data_Doc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_Doc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+- **Data_Doc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
 
-  - **Data\_Doc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
+- **Data_Doc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
-  - **Data\_Doc\_ReadOnlyReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.).
+- **Data_Doc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.).
 
-  - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+- **Data_Doc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+- **Data_Doc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
+- **Data_Doc_ServerProtocol:long** – nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_Doc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+- **Data_Doc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI). 
 
-  - **Data\_Doc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+- **Data_Doc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
 
-  - **Data\_Doc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+- **Data_Doc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
-  - **Data\_Doc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
+- **Data_Doc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
-  - **Data\_Doc\_SizeInBytes:long** – Velikost dokumenta v bajtih.
+- **Data_Doc_SizeInBytes:long** – velikost dokumenta v bajtih.
 
-  - **Data\_Doc\_SpecialChars:long** – Bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
+- **Data_Doc_SpecialChars:long** – bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_StorageProviderId:string** – Niz, ki prepozna ponudnika za shranjevanje dokumentov, npr. »DropBox«.
+- **Data_Doc_StorageProviderId:string** – niz, ki prepozna ponudnika shrambe dokumentov, npr. »DropBox«.
 
-  - **Data\_Doc\_StreamAvailability:long** – Nabor vnaprej določenih vrednosti za stanje dokumenta Stream (na voljo, stalno onemogočeno, ni na voljo).
+- **Data_Doc_StreamAvailability:long** – nabor vnaprej določenih vrednosti za stanje toka dokumentov (na voljo, stalno onemogočeno, ni na voljo).
 
-  - **Data\_Doc\_UrlHash:string** – Zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
+- **Data_Doc_UrlHash:string** – zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
+- **Data_Doc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+- **Data_Doc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
 
-  - **Data\_DstDoc\_AccessMode:long** – Način odpiranja dokumenta (samo za branje/branje in pisanje).
+- **Data_DstDoc_AccessMode:long** – način odpiranja tega dokumenta (samo za branje | branje in pisanje).
 
-  - **Data\_DstDoc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_DstDoc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
+- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
-  - **Data\_DstDoc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
+- **Data_DstDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
-  - **Data\_DstDoc\_Ext:string** – Pripona dokumenta.
+- **Data_DstDoc_Ext:string** – pripona dokumenta.
 
-  - **Data\_DstDoc\_Extension:string** – Pripona dokumenta.
+- **Data_DstDoc_Extension:string** – pripona dokumenta.
 
-  - **Data\_DstDoc\_FileFormat:long** – Nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
+- **Data_DstDoc_FileFormat:long** – nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
 
-  - **Data\_DstDoc\_Fqdn:string** – Mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+- **Data_DstDoc_Fqdn:string** – mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+    
+- **Data_DstDoc_FqdnHash:string** – zgoščena vrednost mesta shrambe dokumenta.
 
-  - **Data\_DstDoc\_FqdnHash:string** – Zgoščena vrednost mesta shrambe dokumenta.
+- **Data_DstDoc_IdentityTelemetryId:string** – enolični GUID uporabnika.
 
-  - **Data\_DstDoc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
+- **Data_DstDoc_IdentityUniqueId:string** – enolični identifikator identitete, ki je bila uporabljena za dejanje dokumentov v skupni rabi.
 
-  - **Data\_DstDoc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+- **Data_DstDoc_IOFlags:long** – bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
-  - **Data\_DstDoc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+- **Data_DstDoc_IrmRights:long** – nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Posredovanje«, »Odgovarjanje«, »SecureReader«, »Urejanje« itd.).
 
-  - **Data\_DstDoc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+- **Data_DstDoc_IsCloudCollabEnabled:bool** – ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki jo je poslala zahteva OPTIONS.
 
-  - **Data\_DstDoc\_IsCloudCollabEnabled:bool** – Ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki njo je poslala zahteva OPTIONS.
+- **Data_DstDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-  - **Data\_DstDoc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
+- **Data_DstDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
 
-  - **Data\_DstDoc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_DstDoc_IsOpeningOfflineCopy:bool** – preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data\_DstDoc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
+- **Data_DstDoc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
-  - **Data\_DstDoc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+- **Data_DstDoc_Location:long** – nabor vnaprej določenih vrednosti za mesto shrambe dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
 
-  - **Data\_DstDoc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
+- **Data_DstDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_DstDoc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
+- **Data_DstDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
 
-  - **Data\_DstDoc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+- **Data_DstDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
-  - **Data\_DstDoc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
+- **Data_DstDoc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.)
 
-  - **Data\_DstDoc\_ReadOnlyReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.).
+- **Data_DstDoc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+- **Data_DstDoc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+- **Data_DstDoc_ServerProtocol:long** – nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_DstDoc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
+- **Data_DstDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-  - **Data\_DstDoc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
 
-  - **Data\_DstDoc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+- **Data_DstDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
-  - **Data\_DstDoc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+- **Data_DstDoc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
-  - **Data\_DstDoc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
+- **Data_DstDoc_SizeInBytes:long** – velikost dokumenta v bajtih.
 
-  - **Data\_DstDoc\_SizeInBytes:long** – Velikost dokumenta v bajtih.
+- **Data_DstDoc_SpecialChars:long** – bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
 
-  - **Data\_DstDoc\_SpecialChars:long** – Bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
+- **Data_DstDoc_StorageProviderId:string** – niz, ki prepozna ponudnika shrambe dokumentov, npr. »DropBox«.
 
-  - **Data\_DstDoc\_StorageProviderId:string** – Niz, ki prepozna ponudnika za shranjevanje dokumentov, npr. »DropBox«.
+- **Data_DstDoc_StorageProviderId:string** – nabor vnaprej določenih vrednosti za stanje toka dokumentov (na voljo, stalno onemogočeno, ni na voljo).
 
-  - **Data\_DstDoc\_StreamAvailability:long** – Nabor vnaprej določenih vrednosti za stanje dokumenta Stream (na voljo, stalno onemogočeno, ni na voljo).
+- **Data_DstDoc_UrlHash:string** – zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
 
-  - **Data\_DstDoc\_UrlHash:string** – Zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
+- **Data_DstDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-  - **Data\_DstDoc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
+- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
 
-  - **Data\_DstDoc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. Dropbox.
+- **Data_FileType:long** – nabor vnaprej določenih vrednosti notranje vrste datoteke.
 
-  - **Data\_FileType:long** – Nabor vnaprej določenih vrednosti notranje vrste datoteke.
+- **Data_fLifeguarded:bool** – označuje, ali je bil dokument kdaj zavarovan (funkcija za samodejno odpravljanje težav z dokumenti brez pozivanja uporabnika)?
 
-  - **Data\_fLifeguarded:bool** – Ali je bil dokument kdaj zavarovan (funkcija za samodejno odpravljanje težav z dokumenti brez pozivanja uporabnika)?
+- **Data_SaveReason:long** – nabor vnaprej določenih vrednosti, zakaj je bilo izvedeno to shranjevanje. (AutoSave, ToOCSTransitionSave, ToCSITransitionSave itd.)
 
-  - **Data\_SaveReason:long** – Nabor vnaprej določenih vrednosti, zakaj je bilo izvedeno to shranjevanje. (AutoSave, ToOCSTransitionSave, ToCSITransitionSave itd.).
+- **Data_SaveType:long** – nabor vnaprej določenih vrednosti vrste shranjevanja (»SaveAs«, »Publish«, »Manual«, OMSave itd.)
 
-  - **Data\_SaveType:long** – Nabor vnaprej določenih vrednosti vrste shranjevanja (SaveAs, Publish, Manual, OMSave itd.).
+- **Data_SrcDoc_AccessMode:long** – način odpiranja tega dokumenta (samo za branje | branje in pisanje).
 
-  - **Data\_SrcDoc\_AccessMode:long** – Način odpiranja dokumenta (samo za branje/branje in pisanje).
+- **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_SrcDoc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
-  - **Data\_SrcDoc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
+- **Data_SrcDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
-  - **Data\_SrcDoc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
+- **Data_SrcDoc_Ext:string** – pripona dokumenta.
 
-  - **Data\_SrcDoc\_Ext:string** – Pripona dokumenta.
+- **Data_SrcDoc_Extension:string** – pripona dokumenta.
 
-  - **Data\_SrcDoc\_Extension:string** – Pripona dokumenta.
+- **Data_SrcDoc_FileFormat:long** – nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
 
-  - **Data\_SrcDoc\_FileFormat:long** – Nabor vnaprej določenih vrednosti za obliko zapisa datoteke (bolj podrobno kot za pripono).
+- **Data_SrcDoc_Fqdn:string** – mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
 
-  - **Data\_SrcDoc\_Fqdn:string** – Mesto, kjer je dokument shranjen (SharePoint.com, live.net); na voljo samo za domene v storitvi Office 365.
+- **Data_SrcDoc_FqdnHash:string** – zgoščena vrednost mesta shrambe dokumenta. 
 
-  - **Data\_SrcDoc\_FqdnHash:string** – Zgoščena vrednost mesta shrambe dokumenta.
+- **Data_SrcDoc_IdentityTelemetryId:string** – enolični GUID uporabnika.
 
-  - **Data\_SrcDoc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
+- **Data_SrcDoc_IdentityUniqueId:string** – enolični identifikator identitete, ki je bila uporabljena za dejanje dokumentov v skupni rabi.
 
-  - **Data\_SrcDoc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+- **Data_SrcDoc_IOFlags:long** – bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
-  - **Data\_SrcDoc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+- **Data_SrcDoc_IrmRights:long** – nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+    
+- **Data_SrcDoc_IsCloudCollabEnabled:bool** – ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki jo je poslala zahteva OPTIONS.
 
-  - **Data\_SrcDoc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
+- **Data_SrcDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-  - **Data\_SrcDoc\_IsCloudCollabEnabled:bool** – Ima vrednost »true«, če je bila že prejeta glava HTTP »IsCloudCollabEnabled«, ki njo je poslala zahteva OPTIONS.
+- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
 
-  - **Data\_SrcDoc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
+- **Data_SrcDoc_IsOpeningOfflineCopy:bool** – preverja, ali je dokument odprt v lokalnem predpomnilniku.
 
-  - **Data\_SrcDoc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_SrcDoc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
+- **Data_SrcDoc_Location:long** – nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
 
-  - **Data\_SrcDoc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
+- **Data_SrcDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.)
 
-  - **Data\_SrcDoc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
+- **Data_SrcDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
 
-  - **Data\_SrcDoc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.).
+- **Data_SrcDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
-  - **Data\_SrcDoc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+- **Data_SrcDoc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.).
 
-  - **Data\_SrcDoc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
+- **Data_SrcDoc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_ReadOnlyReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.).
+- **Data_SrcDoc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+- **Data_SrcDoc_ServerProtocol:long** – nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_SrcDoc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+- **Data_SrcDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-  - **Data\_SrcDoc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
+- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
 
-  - **Data\_SrcDoc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+- **Data_SrcDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
-  - **Data\_SrcDoc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+- **Data_SrcDoc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
-  - **Data\_SrcDoc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+- **Data_SrcDoc_SizeInBytes:long** – velikost dokumenta v bajtih.
 
-  - **Data\_SrcDoc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
+- **Data_SrcDoc_SpecialChars:long** – bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
 
-  - **Data\_SrcDoc\_SizeInBytes:long** – Velikost dokumenta v bajtih.
+- **Data_SrcDoc_StorageProviderId:string** – niz, ki prepozna ponudnika shrambe dokumentov, npr. »DropBox«.
 
-  - **Data\_SrcDoc\_SpecialChars:long** – Bitna maska, ki označuje posebne znake v URL-ju ali poti dokumenta.
+- **Data_SrcDoc_StreamAvailability:long** – nabor vnaprej določenih vrednosti za stanje toka dokumentov (na voljo, stalno onemogočeno, ni na voljo).
 
-  - **Data\_SrcDoc\_StorageProviderId:string** – Niz, ki prepozna ponudnika za shranjevanje dokumentov, npr. »DropBox«.
+- **Data_SrcDoc_UrlHash:string** – zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
 
-  - **Data\_SrcDoc\_StreamAvailability:long** – Nabor vnaprej določenih vrednosti za stanje dokumenta Stream (na voljo, stalno onemogočeno, ni na voljo).
+- **Data_SrcDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-  - **Data\_SrcDoc\_UrlHash:string** – Zgoščena vrednost polnega URL-ja za dokumente, shranjene v oblaku.
+- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«.
 
-  - **Data\_SrcDoc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
+- **Data_StopwatchDuration:long** – skupni čas dejavnosti.
 
-  - **Data\_SrcDoc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+- **Data_TypeOfSaveDialog:long** – vnaprej opredeljen nabor vrednosti pogovornega okna (RUN_SAVEAS_DLG, RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG itd.)
 
-  - **Data\_StopwatchDuration:long** – Skupni čas dejavnosti.
+- **Doc** – trenutni dokument za shranjevanje.
 
-  - **Data\_TypeOfSaveDialog:long** – Nabor vnaprej določenih vrednosti pogovornega okna (RUN\_SAVEAS\_DLG, RUN\_SAVEMEDIA\_DLG, RUN\_SAVEAS\_VIDEO\_DLG itd.).
+- **DstDoc** – novo mesto dokumenta (v primeru možnosti »Shrani kot«).
 
-  - **Doc** – Trenutni dokument za shranjevanje.
+- **SrcDoc** – izvirno mesto dokumenta (v primeru možnosti »Shrani kot«).
 
-  - **DstDoc** – Novo mesto dokumenta (v primeru možnosti »Shrani kot«).
+#### <a name="officepowerpointpptmacshellprintinfo"></a>Office.PowerPoint.PPT.Mac.Shell.PrintInfo
 
-  - **SrcDoc** – Izvirno mesto dokumenta (v primeru možnosti »Shrani kot«).
+Ti podatki so zbrani vsakič, ko je dokončana operacija tiskanja datoteke PDF ali izvoza datoteke PDF, in vsebujejo informacije o vrsti postavitve in uspešnosti operacije. Te informacije so kritične za identifikacijo uspešnosti operacij tiskanja in izvažanja datoteke PDF za našo aplikacijo.
+
+Zbrana so naslednja polja:
+
+- **Data_ExportAsPDFSucceed** – logična vrednost, ki označuje, ali je bil izvoz v obliki datoteke PDF uspešen.
+
+- **Data_SavePrintLayoutType** – vrsta postavitve tiskanja na začetku operacije tiskanja ali izvažanja.
+
 
 #### <a name="officepowerpointpptsharedslideshowfailure"></a>Office.PowerPoint.PPT.Shared.SlideShow.Failure
 
-Ta dogodek zbira napake med diaprojekcijo. Diaprojekcija je ključna funkcija PowerPointa. Microsoft zbira te podatke v primeru napak med diaprojekcijo za izboljšanje uporabniške izkušnje diaprojekcije. Microsoft uporablja te podatke za pridobivanje diagnostičnih informacij o tem, kje je prišlo do napake med izvajanjem uporabnikove diaprojekcije.
+Zbiranje neuspehov med diaprojekcijo kot ključna funkcija za PowerPoint. Microsoft zbira te podatke v primeru napak med diaprojekcijo za izboljšanje uporabniške izkušnje diaprojekcije. Microsoft uporablja te podatke za pridobivanje diagnostičnih informacij o tem, kje je prišlo do napake med izvajanjem uporabnikove diaprojekcije.
 
-Zbrana so ta polja:
+Zbrana so naslednja polja:
 
-  - **CountSlideShowErrors** – Skupno število napak diaprojekcije.
+- **CountOArtErrors** – Skupno število napak OArt.
 
-  - **CountPPTErrors** – Skupno število napak PPT.
+- **CountOtherErrors** – Skupno število drugih napak.
 
-  - **CountOArtErrors** – Skupno število napak OArt.
+- **CountPPTErrors** – Skupno število napak PPT.
 
-  - **CountOtherErrors** – Skupno število drugih napak.
+- **CountSlideShowErrors** – Skupno število napak diaprojekcije.
 
-  - **FirstSlideShowError** – Prva napaka v diaprojekciji.
+- **FirstOArtError** – Prva napaka v komponenti OArt.
 
-  - **FirstOArtError** – Prva napaka v komponenti OArt.
+- **FirstOtherError** – Prva napaka v drugih območjih.
 
-  - **FirstPPTError** – Prva napaka v datoteki PPT.
+- **FirstPPTError** – Prva napaka v datoteki PPT.
 
-  - **FirstOtherError** – Prva napaka v drugih območjih.
+- **FirstSlideShowError** – Prva napaka v diaprojekciji.
+
+    
+#### <a name="officepowerpointrunprintoperation"></a>Office.PowerPoint.RunPrintOperation
+
+Ti podatki so zbrani vsakič, ko je dokončana operacija tiskanja datoteke PDF, in vsebujejo informacije o vrsti postavitve, uporabi številk diapozitivov in uspešnosti operacije. Te informacije so kritične za identifikacijo uspešnosti operacij tiskanja datoteke PDF za našo aplikacijo.
+
+Zbrana so naslednja polja:
+
+- **Data_PrintWithSlideNumbers** – logična vrednost, ki označuje, ali uporabnik pri tiskanju uporablja številke diapozitivov.
+
+- **Data_SavePrintLayoutType** – vrsta postavitve tiskanja na začetku operacije tiskanja ali izvažanja.
+
+- **Data_Success** – logična vrednost, ki označuje, ali je bilo tiskanje uspešno.
+
 
 #### <a name="officeprojectprojectfilesave"></a>Office.Project.ProjectFileSave
 
@@ -2645,295 +3179,296 @@ Zbrana so ta polja:
 
   - **Data\_RequestUrl** – URL sredstev CDN, ki jih želimo pridobiti.
 
+
+
 #### <a name="officetranslatordocumenttranslated"></a>Office.Translator.DocumentTranslated
 
 Zbira podatke o uspešnem oz. neuspešnem prevajanju celotnega dokumenta, ki ga je uporabnik zagnal z orodjem Translator SDX. Ti podatki so ključni za ocenjevanje ustreznosti stanja funkcije prevajanja in odzivanje na morebitne izpade delovanja. S tem dogodkom spremljamo scenarij »Prevajanje dokumenta« v Wordu.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
-  - **Data.actionSource** – Kako je bilo prevajanje sproženo.
+- **Data.actionSource** – kako je bil sprožen izbor prevajanja.
 
-  - **Data.bodyBackgroundColor** – Barva ozadja vsebnika Officeove teme.
+- **Data.bodyBackgroundColor** – barva ozadja vsebnika Officeove teme.
 
-  - **Data.bodyForegroundColor** – Barva ospredja vsebnika Officeove teme.
+- **Data.bodyForegroundColor** – barva ospredja vsebnika Officeove teme.
 
-  - **Data.browserLang** – Trenutni jezik prikaza uporabniškega vmesnika.
+- **Data.browserLang** – trenutni jezik prikaza brskalnika.
 
-  - **Data.browserOnline** – Zastarelo.
+- **Data.browserOnline** – zastarelo.
 
-  - **Data.browserPlatform** – Platforma brskalnika.
+- **Data.browserPlatform** – platforma brskalnika.
 
-  - **Data.browserUserAgent** – Uporabnikov posrednik brskalnika.
+- **Data.browserUserAgent** – uporabnikov posrednik v brskalniku.
 
-  - **Data.colorDepth** – Barvna globina sistema.
+- **Data.colorDepth** – barvna globina sistema.
 
-  - **Data.contentLanguage** – Zaznani jezik vsebine, ki jo je treba prevesti.
+- **Data.contentLanguage** – zaznani jezik vsebine, ki jo je treba prevesti.
 
-  - **Data.controlBackgroundColor** – Barva ozadja kontrolnika Officeove teme.
+- **Data.controlBackgroundColor** – barva ozadja kontrolnika Officeove teme.
 
-  - **Data.controlForegroundColor** – Barva ospredja kontrolnika Officeove teme.
+- **Data.controlForegroundColor** – barva ospredja kontrolnika Officeove teme.
 
-  - **Data.correlationId** – Enolični identifikator zahteve, poslane storitvi.
+- **Data.correlationId** – enolični identifikator zahteve, poslane v storitev.
 
-  - **Data.crossSessionId** – Enolični identifikator uporabnika.
+- **Data.crossSessionId** – enolični identifikator uporabnika.
 
-  - **Data.crossSessionStartTime** – Časovni žig UTC, ko se je seja prevajanja začela.
+- **Data.crossSessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-  - **Data.currentTime** – Časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
+- **Data.currentTime** – časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
 
-  - **Data.displayLanguage** – Jezik prikaza sistema Office.
+- **Data.displayLanguage** – jezik prikaza sistema Office.
 
-  - **Data.documentSourceLang** – Jezik vsebine dokumenta.
+- **Data.documentSourceLang** – jezik vsebine dokumenta.
 
-  - **Data.documentTargetLang** – Jezik, v katerega bo preveden dokument.
+- **Data.documentTargetLang** – jezik, v katerega bo preveden dokument.
 
-  - **Data.environment** – Okolje storitve, kamor je poslana zahteva.
+- **Data.environment** – okolje storitve, kamor je poslana zahteva.
 
-  - **Data.errorMessage** – Sporočilo o napaki, ki ga je poslala storitev.
+- **Data.errorMessage** – sporočilo o napaki, ki ga je poslala storitev.
 
-  - **Data.eventActionType** – Vrsta dogodka telemetrije.
+- **Data.eventActionType** – vrsta dogodka telemetrije.
 
-  - **Data.eventTagId** – Enolični identifikator vrstice kode, ki je ustvarila to sporočilo telemetrije.
+- **Data.eventTagId"** – enolični identifikator vrstice kode, ki je ustvarila to sporočilo telemetrije.
 
-  - **Data.flights** – Omogočene pilotne različice.
+- **Data.flights** – omogočene pilotne različice.
 
-  - **Data.fileSize** – Velikost Wordove datoteke, ki jo je treba prevesti.
+- **Data.fileSize** – velikost Wordove datoteke, ki jo je treba prevesti.
 
-  - **Data.fileSource** – Mesto, kjer gostuje Wordova datoteka (ni v spletu, v spletu).
+- **Data.fileSource** – mesto, kjer gostuje Wordova datoteka (ni v spletu, v spletu).
 
-  - **Data.fileType** – Pripona Wordove datoteke.
+- **Data.fileType** – pripona Wordove datoteke.
 
-  - **Data.innerHeight"** – Višina vsebnika stranskega podokna.
+- **Data.innerHeight** – višina vsebnika stranskega podokna.
 
-  - **Data.innerWidth"** – Širina vsebnika stranskega podokna.
+- **Data.innerWidth** – širina vsebnika stranskega podokna.
 
-  - **Data.lookupSourceLang** – Ni uporabljeno za prevajanje dokumenta.
+- **Data.lookupSourceLang** – ni uporabljeno za prevajanje dokumenta.
 
-  - **Data.lookupTargetLang** – Ni uporabljeno za prevajanje dokumenta.
+- **Data.lookupTargetLang** – ni uporabljeno za prevajanje dokumenta.
 
-  - **Data.officeHost** – Officeova aplikacija, ki gosti stransko podokno.
+- **Data.officeHost** – Officeova aplikacija, ki gosti stransko podokno.
 
-  - **Data.officeLocale** – Uporabniški jezik sistema Office.
+- **Data.officeLocale** – uporabniški jezik sistema Office.
 
-  - **Data.officeMachineId** – Enolični identifikator naprave.
+- **Data.officeMachineId** – enolični identifikator naprave.
 
-  - **Data.officePlatform** – Platforma naprave.
+- **Data.officePlatform** – platforma naprave.
 
-  - **Data.officeSessionId** – Identifikator seje za Office.
+- **Data.officeSessionId** – identifikator seje za Office.
 
-  - **Data.officeUserId** – Uporabniški enolični identifikator za Office.
+- **Data.officeUserId** – uporabniški enolični identifikator za Office.
 
-  - **Data.officeVersion** – Različica Officea.
+- **Data.officeVersion** – različica Officea.
 
-  - **Data.pageXOffset** – Položaj vodoravnega drsnika stranskega podokna na levi strani podokna.
+- **Data.pageXOffset** – položaj vodoravnega drsnika stranskega podokna na levi strani podokna.
 
-  - **Data.pageYOffset** – Položaj navpičnega drsnika stranskega podokna v zgornjem delu podokna.
+- **Data.pageYOffset** – položaj navpičnega drsnika stranskega podokna v zgornjem delu podokna.
 
-  - **Data.pixelDepth** – Ločljivost barve zaslona.
+- **Data.pixelDepth** – ločljivost barve zaslona.
 
-  - **Data.responseCode** – Koda odziva storitve na zahtevo.
+- **Data.responseCode** – koda odziva storitve na zahtevo.
 
-  - **Data.responseTime** – Pretečeni čas odziva na zahtevo.
+- **Data.responseTime** – pretečeni čas odziva na zahtevo. 
 
-  - **Data.resultType** – Rezultat zahteve.
+- **Data.resultType** – rezultat zahteve.
 
-  - **Data.screenHeight** – Višina zaslona v slikovnih pikah.
+- **Data.screenHeight** – višina zaslona v slikovnih pikah.
 
-  - **Data.screenLeft** – Vodoravna koordinata okna glede na zaslon.
+- **Data.screenLeft** – vodoravna koordinata okna glede na zaslon.
 
-  - **Data.screenTop** – Navpična koordinata okna glede na zaslon.
+- **Data.screenTop** – navpična koordinata okna glede na zaslon.
 
-  - **Data.screenWidth** – Širina zaslona v slikovnih pikah.
+- **Data.screenWidth** – širina zaslona v slikovnih pikah.
 
-  - **Data.selectedTab** – Vrsta izbranega zavihka (izbor ali dokument).
+- **Data.selectedTab** – vrsta izbranega zavihka (»Izbor« ali »Dokument«).
 
-  - **Data.serverUrl** – URL storitve prevajanja.
+- **Data.serverUrl** – URL storitve prevajanja.
 
-  - **Data.sessionId** – Identifikator seje stranskega podokna.
+- **Data.sessionId** – identifikator seje stranskega podokna.
 
-  - **Data.sessionStartTime** – Časovni žig UTC, ko se je seja prevajanja začela.
+- **Data.sessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-  - **Data.sourceTextHash** – Zgoščena vrednost besedila, ki ga je treba prevesti.
+- **Data.sourceTextHash** – zgoščena vrednost besedila, ki ga je treba prevesti.
 
-  - **Data.sourceTextLength** Dolžina besedila, ki ga je treba prevesti.
+- **Data.sourceTextLength** dolžina besedila, ki ga je treba prevesti.
 
-  - **Data.sourceTextWords** – Število besed v besedilu, ki ga je treba prevesti.
+- **Data.sourceTextWords** – število besed v besedilu, ki ga je treba prevesti.
 
-  - **Data.warningMessage** – Opozorilno sporočilo, ki ga pošlje storitev.
+- **Data.warningMessage** – opozorilno sporočilo, ki ga pošlje storitev.
+
 
 #### <a name="officetranslatortexttranslated"></a>Office.Translator.TextTranslated
 
 Zbira podatke o uspešnem oz. neuspešnem prevajanju izbora, ki ga zažene dejanje uporabnika v orodju Translator SDX. Ti podatki so ključni za ocenjevanje ustreznosti stanja funkcije prevajanja in odzivanje na morebitne izpade delovanja. S tem dogodkom spremljamo scenarij »Prevajanje izbora« v Excelu, PowerPointu in Wordu.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
-  - **Data.actionSource** – Kako je bilo prevajanje sproženo.
+- **Data.actionSource** – kako je bil sprožen izbor prevajanja.
 
-  - **Data.bodyBackgroundColor** – Barva ozadja vsebnika Officeove teme.
+- **Data.bodyBackgroundColor** – barva ozadja vsebnika Officeove teme.
 
-  - **Data.bodyForegroundColor** – Barva ospredja vsebnika Officeove teme.
+- **Data.bodyForegroundColor** – barva ospredja vsebnika Officeove teme.
 
-  - **Data.browserLang** – Trenutni jezik prikaza uporabniškega vmesnika.
+- **Data.browserLang** – trenutni jezik prikaza brskalnika.
 
-  - **Data.browserOnline** – Zastarelo.
+- **Data.browserOnline** – zastarelo.
 
-  - **Data.browserPlatform** – Platforma brskalnika.
+- **Data.browserPlatform** – platforma brskalnika.
 
-  - **Data.browserUserAgent** – Uporabnikov posrednik brskalnika.
+- **Data.browserUserAgent** – uporabnikov posrednik v brskalniku.
 
-  - **Data.colorDepth** – Barvna globina sistema.
+- **Data.colorDepth** – barvna globina sistema.
 
-  - **Data.contentLanguage** – Zaznani jezik vsebine, ki jo je treba prevesti.
+- **Data.contentLanguage** – zaznani jezik vsebine, ki jo je treba prevesti.
 
-  - **Data.controlBackgroundColor** – Barva ozadja kontrolnika Officeove teme.
+- **Data.controlBackgroundColor** – barva ozadja kontrolnika Officeove teme.
 
-  - **Data.controlForegroundColor** – Barva ospredja kontrolnika Officeove teme.
+- **Data.controlForegroundColor** – barva ospredja kontrolnika Officeove teme.
 
-  - **Data.correlationId** – Enolični identifikator zahteve, poslane storitvi.
+- **Data.correlationId** – enolični identifikator zahteve, poslane v storitev.
 
-  - **Data.crossSessionId** – Enolični identifikator uporabnika.
+- **Data.crossSessionId** – enolični identifikator uporabnika.
 
-  - **Data.crossSessionStartTime** – Časovni žig UTC, ko se je seja prevajanja začela.
+- **Data.crossSessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-  - **Data.currentTime** – Časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
+- **Data.currentTime** – časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
 
-  - **Data.displayLanguage** – Jezik prikaza sistema Office.
+- **Data.displayLanguage** – jezik prikaza sistema Office.
 
-  - **Data.documentSourceLang** – Ni uporabljeno za izbor.
+- **Data.documentSourceLang** – ni uporabljeno za izbor.
 
-  - **Data.documentTargetLang** – Ni uporabljeno za izbor prevajanja.
+- **Data.documentTargetLang** – ni uporabljeno za izbor prevajanja.
 
-  - **Data.environment** – Okolje storitve, kamor je poslana zahteva.
+- **Data.environment** – okolje storitve, kamor je poslana zahteva.
 
-  - **Data.errorMessage** – Sporočilo o napaki, ki ga je poslala storitev.
+- **Data.errorMessage** – sporočilo o napaki, ki ga je poslala storitev.
 
-  - **Data.eventActionType** – Vrsta dogodka telemetrije.
+- **Data.eventActionType** – vrsta dogodka telemetrije.
 
-  - **Data.eventTagId"** – Enolični identifikator vrstice kode, ki je ustvarila to sporočilo telemetrije.
+- **Data.eventTagId"** – enolični identifikator vrstice kode, ki je ustvarila to sporočilo telemetrije
 
-  - **Data.flights** – Omogočene pilotne različice.
+- **Data.flights** – omogočene pilotne različice.
 
-  - **Data.innerHeight** – Višina vsebnika stranskega podokna.
+- **Data.innerHeight** – višina vsebnika stranskega podokna
 
-  - **Data.innerWidth** – Širina vsebnika stranskega podokna.
+- **Data.innerWidth** – širina vsebnika stranskega podokna
 
-  - **Data.lookupSourceLang** – Jezik trenutno izbranega besedila.
+- **Data.lookupSourceLang** – jezik trenutno izbranega besedila.
 
-  - **Data.lookupTargetLang** – Jezik, v katerega bo prevedeno trenutno izbrano besedilo.
+- **Data.lookupTargetLang** – jezik, v katerega bo prevedeno trenutno izbrano besedilo.
 
-  - **Data.officeHost** – Officeova aplikacija, ki gosti stransko podokno.
+- **Data.officeHost** – Officeova aplikacija, ki gosti stransko podokno.
 
-  - **Data.officeLocale** – Uporabniški jezik sistema Office.
+- **Data.officeLocale** – uporabniški jezik sistema Office.
 
-  - **Data.officeMachineId** – Enolični identifikator naprave.
+- **Data.officeMachineId** – enolični identifikator naprave.
 
-  - **Data.officePlatform** – Platforma naprave.
+- **Data.officePlatform** – platforma naprave.
 
-  - **Data.officeSessionId** – Identifikator seje za Office.
+- **Data.officeSessionId** – identifikator seje za Office.
 
-  - **Data.officeUserId** – Uporabniški enolični identifikator za Office.
+- **Data.officeUserId** – uporabniški enolični identifikator za Office.
 
-  - **Data.officeVersion** – Različica Officea.
+- **Data.officeVersion** – različica Officea.
 
-  - **Data.pageXOffset** – Položaj vodoravnega drsnika stranskega podokna na levi strani podokna.
+- **Data.pageXOffset** – položaj vodoravnega drsnika stranskega podokna na levi strani podokna.
 
-  - **Data.pageYOffset** – Položaj navpičnega drsnika stranskega podokna v zgornjem delu podokna.
+- **Data.pageYOffset** – položaj navpičnega drsnika stranskega podokna v zgornjem delu podokna.
 
-  - **Data.pixelDepth** – Ločljivost barve zaslona.
+- **Data.pixelDepth** – ločljivost barve zaslona.
 
-  - **Data.responseCode** – Koda odziva storitve na zahtevo.
+- **Data.responseCode** – koda odziva storitve na zahtevo.
 
-  - **Data.responseTime** – Pretečeni čas odziva na zahtevo.
+- **Data.responseTime** – pretečeni čas odziva na zahtevo.
 
-  - **Data.resultType** – Rezultat zahteve.
+- **Data.resultType** – rezultat zahteve.
 
-  - **Data.screenHeight** – Višina zaslona v slikovnih pikah.
+- **Data.screenHeight** – višina zaslona v slikovnih pikah.
 
-  - **Data.screenLeft** – Vodoravna koordinata okna glede na zaslon.
+- **Data.screenLeft** – vodoravna koordinata okna glede na zaslon.
 
-  - **Data.screenTop** – Navpična koordinata okna glede na zaslon.
+- **Data.screenTop** – navpična koordinata okna glede na zaslon.
 
-  - **Data.screenWidth** – Širina zaslona v slikovnih pikah.
+- **Data.screenWidth** – širina zaslona v slikovnih pikah.
 
-  - **Data.selectedTab** – Vrsta izbranega zavihka (izbor ali dokument).
+- **Data.selectedTab** – vrsta izbranega zavihka (»Izbor« ali »Dokument«).
 
-  - **Data.serverUrl** – URL storitve prevajanja.
+- **Data.serverUrl** – URL storitve prevajanja.
 
-  - **Data.sessionId** – Identifikator seje stranskega podokna.
+- **Data.sessionId** – identifikator seje stranskega podokna.
 
-  - **Data.sessionStartTime** – Časovni žig UTC, ko se je seja prevajanja začela.
+- **Data.sessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-  - **Data.sourceTextHash** – Zgoščena vrednost besedila, ki ga je treba prevesti.
+- **Data.sourceTextHash** – zgoščena vrednost besedila, ki ga je treba prevesti.
 
-  - **Data.sourceTextLength** Dolžina besedila, ki ga je treba prevesti.
+- **Data.sourceTextLength** dolžina besedila, ki ga je treba prevesti.
 
-  - **Data.sourceTextWords** – Število besed v besedilu, ki ga je treba prevesti.
+- **Data.sourceTextWords** – število besed v besedilu, ki ga je treba prevesti.
 
-  - **Data.warningMessage** – Opozorilno sporočilo, ki ga pošlje storitev.
+- **Data.warningMessage** – opozorilno sporočilo, ki ga pošlje storitev.
 
 #### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
 
-Ta dogodke zabeleži statistiko posameznih dokumentov, ko je Office Word zaprt ali začasno prekinjen.
+Ta dogodke zabeleži statistiko posameznih dokumentov, ko je Office Word zaprt ali začasno prekinjen.  S tem dogodkom prepoznamo morebitno soodvisnost elementov urejanja dokumentov, velikosti dokumentov in drugega z napakami, ki se pojavijo pri shranjevanju in skupni rabi dokumentov ter sodelovanju pri urejanju dokumentov v spletu.
 
-S tem dogodkom prepoznamo morebitno soodvisnost elementov urejanja dokumentov, velikosti dokumentov in drugega z napakami, ki se pojavijo pri shranjevanju in skupni rabi dokumentov ter sodelovanju pri urejanju dokumentov v spletu.
+Zbrana so naslednja polja:
 
-Zbrana so ta polja:
+- **Data_BkmkRefCount** – število sklicev zaznamkov v dokumentu.
 
-  - **Data\_BkmkRefCount** – Število sklicev zaznamkov v dokumentu.
+- **Data_CharacterCount** – število znakov v dokumentu.
 
-  - **Data\_CharacterCount** – Število znakov v dokumentu.
+- **Data_CharactersWithSpaceCount** – število znakov in presledkov v dokumentu.
 
-  - **Data\_CharactersWithSpaceCount** – Število znakov in presledkov v dokumentu.
+- **Data_ChartCount** – število grafikonov v dokumentu.
 
-  - **Data\_ChartCount** – Število grafikonov v dokumentu.
+- **Data_CitationCount** – število citatov v dokumentu.
 
-  - **Data\_CitationCount** – Število citatov v dokumentu.
+- **Data_DocumentLocation** – označuje, v kateri storitvi je na voljo dokument (OneDrive, File Server, SharePoint itd.).
 
-  - **Data\_DocumentLocation** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, File Server, SharePoint itd.).
+- **Data_ETW_TrackbackTag** – določa mesto v kodi, kjer je bil ta dogodek sprožen (zapiranje ali začasna prekinitev).
 
-  - **Data\_ETW\_TrackbackTag** – Določa mesto v kodi, kjer je bil sprožen ta dogodek (zapiranje ali začasna prekinitev).
+- **Data_EndnoteDocCount** – število končnih opomb v dokumentu.
 
-  - **Data\_EndnoteDocCount** – Število končnih opomb v dokumentu.
+- **Data_FootnoteDocCount** – število sprotnih opomb v dokumentu.
 
-  - **Data\_FootnoteDocCount** – Število sprotnih opomb v dokumentu.
+- **Data_HasBibliography** – označuje, ali dokument vsebuje bibliografijo.
 
-  - **Data\_HasBibliography** – Označuje, ali dokument vsebuje bibliografijo.
+- **Data_HasHeader** – označuje, ali dokument vsebuje glavo.
 
-  - **Data\_HasHeader** – Označuje, ali dokument vsebuje glavo.
+- **Data_IsImeUsed** – označuje, ali je bil v dokumentu uporabljen urejevalnik vnosne metode.
 
-  - **Data\_IsImeUsed** – Označuje, ali je bil v dokumentu uporabljen urejevalnik vnosne metode.
+- **Data_IsPageCountInProgress** – označuje, ali se v dokumentu trenutno izvaja štetje strani.
+    
+- **Data_IsTouchUsed** – označuje, ali je bil v dokumentu uporabljen vnos na dotik.
 
-  - **Data\_IsPageCountInProgress** – Označuje, ali se v dokumentu trenutno izvaja štetje strani.
+- **Data_IsTrackChangesOn** – označuje, ali je bil za dokument vklopljen način sledenja spremembam.
 
-  - **Data\_IsTouchUsed** – Označuje, ali je bil v dokumentu uporabljen vnos na dotik.
+- **Data_LineCount** – število vrstic v dokumentu.
 
-  - **Data\_IsTrackChangesOn** – Označuje, ali je bil za dokument vklopljen način sledenja spremembam. 
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Office Word.
 
-  - **Data\_LineCount** – Število vrstic v dokumentu.
+- **Data_PageCount** – število strani v dokumentu.
 
-  - **Data\_MainPdod** – Identifikator dokumenta v postopku za Office Word.
+- **Data_PageNumberFieldCount** – število polj za številko strani v dokumentu.
 
-  - **Data\_PageCount** – Število strani v dokumentu.
+- **Data_ParagraphCount** – število odstavkov v dokumentu.
 
-  - **Data\_PageNumberFieldCount** – Število polj za številko strani v dokumentu.
+- **Data_PicCount** – število slik v dokumentu.
 
-  - **Data\_ParagraphCount** – Število odstavkov v dokumentu.
+- **Data_RsidCount** – število identifikatorjev shranjenih revizij v dokumentu.
 
-  - **Data\_PicCount** – Število slik v dokumentu.
+- **Data_TocCount** – število kazal vsebine v dokumentu.
 
-  - **Data\_RsidCount** – Število identifikatorjev shranjenih revizij v dokumentu.
+- **Data_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_TocCount** – Število kazal vsebine v dokumentu.
+- **Data_UserActionID** – to podatkovno polje ni uporabljeno (vrednost je vedno 0).
 
-  - **Data\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_UserActionName** – vedno »DocumentStatsOnCloseAndSuspend«
 
-  - **Data\_UserActionID** – To podatkovno polje ni uporabljeno (vrednost je vedno 0).
-
-  - **Data\_UserActionName** – Vedno »DocumentStatsOnCloseAndSuspend«.
-
-  - **Data\_UserInteractionTimeMsec** – Število milisekund aktivne interakcije uporabnika z dokumentom.
-
-  - **Data\_WordCount** – Število besed v dokumentu.
+- **Data_UserInteractionTimeMsec** – število milisekund aktivne interakcije uporabnika z dokumentom.
+    
+- **Data_WordCount** – število besed v dokumentu.
 
 #### <a name="officewordfilenewcreatenewfile"></a>Office.Word.FileNew.CreateNewFile
 
@@ -2953,561 +3488,537 @@ Zbrana so ta polja:
 
 Ta dogodek označuje, da uporabnik shranjuje spremembe v nov dokument. Dogodek nadzira ustreznost delovanja shranjevanja v nov dokument. Ta dogodek uporabljamo tudi za ocenjevanje števila mesečnih aktivnih uporabnikov/naprav in za metriko zanesljivosti v oblaku.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. To polje uporabljamo za diagnostiko kakovosti podatkov.
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_DetachedDuration** – Koliko časa je bila dejavnost ločena od niti.
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_Doc\_AccessMode** – Dokument je samo za branje/ga je mogoče urejati.
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+    
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_IOFlags** – Poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev.
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_IdentityTelemetryId** – Enostranska zgoščena vrednost identitete uporabnika, ki je bila uporabljena za odpiranje.
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_InitializationScenario** – Zabeleži način odpiranja dokumenta.
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
+    
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+    
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_ReadOnlyReasons** – Razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«.
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo.
 
-  - **Data\_Doc\_ResourceIdHash** – Anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
-  - **Data\_Doc\_ServerDocId** – Nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev.
 
-  - **Data\_Doc\_ServerProtocol** – Različica protokola za komunikacijo s storitvijo.
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_ServerType** – Vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_ServerVersion** – Različica strežnika, ki zagotavlja storitev.
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
 
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_EditorDisablingRename** – identifikator prvega urejevalnika, ki je onemogočil preimenovanje.
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_EditorsCount** – število urednikov v dokumentov
 
-  - **Data\_Doc\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_LastLoggedTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo dvakrat zapored neuspešno izvesti shranjevanje (se uporablja za diagnostiko kakovosti podatkov)
 
-  - **Data\_EditorDisablingRename** – Identifikator prvega urejevalnika, ki je onemogočil preimenovanje.
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta.
 
-  - **Data\_EditorsCount** – Število urejevalnikov v dokumentu.
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_LastLoggedTag** – Enolična oznaka za mesto klica kode, uporabljena za prepoznavanje neuspešnega dvakratnega poskusa shranjevanja (za diagnostiko kakovosti podatkov).
+- **Data_RenameDisabledReason** – napaka, zaradi katere je funkcija preimenovanja za dokument onemogočena.
 
-  - **Data\_MoveDisabledReason** – Napaka, ki onemogoča premik dokumenta.
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_MoveFlightEnabled** – Ali je omogočena pilotna različica funkcije premikanja.
-
-  - **Data\_RenameDisabledReason** – Napaka, zaradi katere je funkcija preimenovanja za ta dokument onemogočena.
-
-  - **Data\_RenameFlightEnabled** – Ali je omogočena pilotna različica za funkcijo preimenovanja.
-
+    
 #### <a name="officewordfilesaveactfconfirmsavedoccoreautorecoverysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreAutoRecoverySave
 
-Ta dogodek označuje, da je Office Word shranil samodejno obnovljen dokument, ki še ni bil shranjen. S tem dogodkom Microsoft zazna napake v funkciji samodejne obnovitve, ki so pomembne zagotavljanje varnosti podatkov v dokumentih.
+Ta dogodek označuje, da je Office Word shranil samodejno obnovljen dokument, ki še ni bil shranjen. S tem dogodkom Microsoft zazna napake v funkciji samodejne obnovitve, ki so pomembne zagotavljanje varnosti podatkov v dokumentih.  Dogodek nadzira ustreznost delovanja funkcije shranjevanja samodejno obnovljenih dokumentov.  Ta dogodek uporabljamo tudi za ocenjevanje števila mesečnih aktivnih uporabnikov/naprav in za metriko zanesljivosti v oblaku.
 
-Dogodek nadzira ustreznost delovanja funkcije shranjevanja samodejno obnovljenih dokumentov.  Ta dogodek uporabljamo tudi za ocenjevanje števila mesečnih aktivnih uporabnikov/naprav in za metriko zanesljivosti v oblaku.
+Zbrana so sledeča polja:
 
-Zbrana so ta polja:
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_DetachedDuration** – Koliko časa je bila dejavnost ločena od niti.
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_Doc\_AccessMode** – Dokument je samo za branje/ga je mogoče urejati.
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+    
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_IdentityTelemetryId** – Enostranska zgoščena vrednost identitete uporabnika, ki je bila uporabljena za odpiranje.
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_InitializationScenario** – Zabeleži način odpiranja dokumenta.
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
 
-  - **Data\_Doc\_IOFlags** – Poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev.
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+    
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_ReadOnlyReasons** – Razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«.
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-  - **Data\_Doc\_ResourceIdHash** – Anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
 
-  - **Data\_Doc\_ServerDocId** – Nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
-  - **Data\_Doc\_ServerProtocol** – Različica protokola za komunikacijo s storitvijo.
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_ServerType** – Vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_ServerVersion** – Različica strežnika, ki zagotavlja storitev.
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
 
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_Doc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_FailureClass** – celo število, ki predstavlja razred napake pri neuspešnih prehodih Officeovih storitev za sodelovanje (OCS).
+    
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Office Word.
 
-  - **Data\_Doc\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_Doc\_WopiServiceId** – Vsebuje enolični identifikator ponudnika storitve WOPI.
+- **Data_OCSSyncbackSaveStarted** – zastavica, ki označuje, da je ta postopek shranjevanja povezan s funkcijo shranjevanja s povratno sinhronizacijo.
 
-  - **Data\_FailureClass** – Celo število, ki predstavlja razred napake pri prehodih Officeovih storitev za sodelovanje (OCS).
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
 
-  - **Data\_MainPdod** – Identifikator dokumenta v postopku za Office Word.
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_MoveFlightEnabled** – Ali je omogočena pilotna različica funkcije premikanja.
+- **Data_SaveInitiateKind** – celo število, ki označuje način inicializacije shranjevanja.
 
-  - **Data\_OCSSyncbackSaveStarted** – Zastavica, ki označuje, da je ta postopek shranjevanja povezan s funkcijo shranjevanja s povratno sinhronizacijo.
+- **Data_SrcDocIsUnnamedOrNew** – označuje, ali je dokument, ki ga želite shraniti, nov dokument.
 
-  - **Data\_RenameDisabledReason** – Napaka, zaradi katere je funkcija preimenovanja za ta dokument onemogočena.
-
-  - **Data\_RenameFlightEnabled** – Ali je omogočena pilotna različica za funkcijo preimenovanja.
-
-  - **Data\_SaveInitiateKind** – Celo število, ki označuje začetek postopka za shranjevanje.
-
-  - **Data\_SrcDocIsUnnamedOrNew** – Označuje, ali je dokument, ki ga želite shraniti, nov dokument.
 
 #### <a name="officewordfilesaveactfconfirmsavedoccorequerysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreQuerySave
 
 Ta dogodek označuje, da Office Word pozove uporabnika k shranjevanju sprememb, ko ta poskuša zapreti dokument. Z njim Microsoft nadzira ustreznost delovanja funkcije shranjevanja dokumenta ob zapiranju ter tako prepreči morebitno izgubo podatkov v dokumentih. Dogodek nadzira, ali način shranjevanja ob zapiranju ustrezno deluje. Ta dogodek uporabljamo tudi za ocenjevanje števila mesečnih aktivnih uporabnikov/naprav in za metriko zanesljivosti v oblaku.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. To polje uporabljamo za diagnostiko kakovosti podatkov.
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_DetachedDuration** – Koliko časa je bila dejavnost ločena od niti.
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_Doc\_AccessMode** – Dokument je samo za branje/ga je mogoče urejati.
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_IdentityTelemetryId** – Enostranska zgoščena vrednost identitete uporabnika, ki je bila uporabljena za odpiranje.
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_InitializationScenario** – Zabeleži način odpiranja dokumenta.
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_IOFlags** – Poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev.
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+    
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
 
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_ReadOnlyReasons** – Razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«.
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_ResourceIdHash** – Anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
-  - **Data\_Doc\_ServerDocId** – Nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-  - **Data\_Doc\_ServerProtocol** – Različica protokola za komunikacijo s storitvijo.
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
 
-  - **Data\_Doc\_ServerType** – Vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
-  - **Data\_Doc\_ServerVersion** – Različica strežnika, ki zagotavlja storitev.
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_Doc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
 
-  - **Data\_Doc\_WopiServiceId –** vsebuje enolični identifikator za ponudnika storitve WOPI
+- **Data_DstDoc_AccessMode** – ciljni dokument je samo za branje ali omogoča urejanje.
 
-  - **Data\_DstDoc\_AccessMode –** ciljni dokument je samo za branje ali omogoča urejanje
+- **Data_DstDoc_EdpState** – nastavitev elektronske zaščite podatkov za ciljni dokument.
 
-  - **Data\_DstDoc\_EdpState – nastavitev elektronske zaščite podatkov za ciljni dokument -**
+- **Data_DstDoc_Ext** – pripona dokumenta (docx/xlsb/pptx, itd.) za ciljni dokument.
 
-  - **Data\_DstDoc\_Ext –** pripona dokumenta (docx/xlsb/pptx, itd.) za ciljni dokument
+- **Data_DstDoc_FileFormat** – različica protokola za obliko zapisa datoteke za ciljni dokument.
 
-  - **Data\_DstDoc\_FileFormat –** različica protokola za obliko zapisa datoteke za ciljni dokument
+- **Data_DstDoc_Location** – označuje, katera storitev zagotavlja mesto shranjevanja za ciljni dokument (OneDrive, datotečni strežnik, SharePoint itd.)
 
-  - **Data\_DstDoc\_Location –** ponazarja storitev, ki zagotavlja mesto shranjevanja za ciljni dokument (OneDrive, strežnik datotek, SharePoint itd.)
+- **Data_DstDoc_LocationDetails** – označuje, v kateri lokalno znani mapi je shranjen ciljni dokument.
 
-  - **Data\_DstDoc\_LocationDetails –** označuje, v kateri lokalno poznani mapi je shranjen ciljni dokument
+- **Data_DstDoc_SessionId** – prepozna določeno sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_DstDoc\_SessionId –** v celotni seji prepozna določeno sejo za urejanje dokumenta
+- **Data_DstDoc_UrlHash** – enostranska zgoščena vrednost, s katero je mogoče ustvariti naivni identifikator dokumenta za ciljni dokument.
 
-  - **Data\_DstDoc\_UrlHash –** enosmerna razpršitev, s katero je mogoče ustvariti naivni identifikator dokumenta za ciljni dokument
+- **Data_FailureClass** – celo število, ki predstavlja razred napake za napake pri prehodih OCS.
 
-  - **Data\_FailureClass –** celo število, ki predstavlja razred napake za napake pri prehodih OCS
+- **Data_LocationPickerSaveStatus** – vrednost celega števila, ki ponazarja dejanje, ki je aktiviralo shranjevanje v pogovornem oknu za shranjevanje ob izhodu.
 
-  - **Data\_LocationPickerSaveStatus –** vrednost celega števila, ki ponazarja dejanje, ki je aktiviralo shranjevanje v oknu za shranjevanje ob izhodu
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Office Word.
 
-  - **Data\_MainPdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_MoveFlightEnabled** – Ali je omogočena pilotna različica funkcije premikanja.
+- **Data_OCSSyncbackSaveStarted** – zastavica, ki označuje, da je ta postopek shranjevanja povezan s funkcijo shranjevanja s povratno sinhronizacijo. 
 
-  - **Data\_OCSSyncbackSaveStarted** – Zastavica, ki označuje, da je ta postopek shranjevanja povezan s funkcijo shranjevanja s povratno sinhronizacijo.
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
 
-  - **Data\_RenameDisabledReason** – Napaka, zaradi katere je funkcija preimenovanja za ta dokument onemogočena.
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_RenameFlightEnabled** – Ali je omogočena pilotna različica za funkcijo preimenovanja.
+- **Data_SaveInitiateKind** – celo število, ki označuje način inicializacije shranjevanja.
 
-  - **Data\_SaveInitiateKind** – Celo število, ki označuje začetek postopka za shranjevanje.
+- **Data_SrcDocIsUnnamedOrNew** – označuje, ali je dokument, ki ga želite shraniti, nov dokument.
 
-  - **Data\_SrcDocIsUnnamedOrNew –** ponazarja, ali je dokument, ki ga želite shraniti, nov dokument
 
 #### <a name="officewordfilesavesaveassavefile"></a>Office.Word.FileSave.SaveAsSaveFile
 
 Ta dogodek ponazarja, da Microsoft Office Word shranjuje dokument v nov dokument. Microsoftu omogoča, da pri funkciji »Shrani kot« zazna napake, ki so pomembne za preprečevanje izgube podatkov v dokumentih. Dogodek nadzira, ali funkcija »Shrani kot« deluje običajno. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
 
-Zbrana so ta polja:
-
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
-
-  - **Data\_AddDocTelemResDst –** ponazarja, ali lahko pravilno naselimo druge vrednosti dogodka za ciljni dokument, povezane s telemetrijo ciljnega dokumenta. Uporablja se za diagnostiko kakovosti podatkov
-
-  - **Data\_AddDocTelemResSrc –** ponazarja, ali lahko pravilno naselimo druge vrednosti dogodka za ciljni dokument, povezane s telemetrijo izvornega dokumenta. Uporablja se za diagnostiko kakovosti podatkov
-
-  - **Data\_DetachedDuration** – Koliko časa je bila dejavnost ločena od niti.
-
-  - **Data\_Doc\_AccessMode** – Dokument je samo za branje/ga je mogoče urejati.
-
-  - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
-
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
-
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
-
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
-
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
-
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
-
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
-
-  - **Data\_Doc\_IdentityTelemetryId –** enosmerna razpršitev identitete uporabnika, ki je bila uporabljena za odpiranje
-
-  - **Data\_Doc\_IOFlags –** poroča predpomnjenje zastavice za nastavitev možnosti odprtih zahtev
-
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
-
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
-
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
-
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
-
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
-
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
-
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
-
-  - **Data\_Doc\_NumberCoAuthors –** število uporabnikov v skupni seji za urejanje
-
-  - **Data\_Doc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
-
-  - **Data\_Doc\_ResourceIdHash** – Anonimni identifikator dokumenta za diagnosticiranje težav.
-
-  - **Data\_Doc\_ServerDocId** – Nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
-
-  - **Data\_Doc\_ServerProtocol** – Različica protokola za komunikacijo s storitvijo.
-
-  - **Data\_Doc\_ServerType** – Vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
-
-  - **Data\_Doc\_ServerVersion** – Različica strežnika, ki zagotavlja storitev.
-
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
-
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
-
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
-
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
-
-  - **Data\_Doc\_StreamAvailability –** indikator, ali je tok dokumenta na voljo/omogočen
-
-  - **Data\_Doc\_UrlHash –** enosmerna razpršitev, s katero je mogoče ustvariti naivni identifikator dokumenta
-
-  - **Data\_DstDoc\_AccessMode –** ciljni dokument je samo za branje ali omogoča urejanje
-
-  - **Data\_DstDoc\_AssistedReadingReasons –** nabor vnaprej določenih vrednosti, zakaj je bil ciljni dokument odprt v načinu vodenega branja
-
-  - **Data\_DstDoc\_ChunkingType –** enote, ki se uporabljajo za postopno odpiranje dokumenta
-
-  - **Data\_DstDoc\_EdpState –** nastavitev elektronske zaščite podatkov za ciljni dokument 
-
-  - **Data\_DstDoc\_Ext –** pripona dokumenta (docx/xlsb/pptx itd.)
-
-  - **Data\_DstDoc\_FileFormat –** različica protokola za obliko zapisa dokumenta
-
-  - **Podatki\_DstDoc\_Fqdn –** ime domene v storitvi OneDrive ali SharePoint Online za ciljni dokument
-
-  - **Data\_DstDoc\_FqdnHash –** enosmerna razpršitev imena domene za ciljni dokument, ki ga stranka lahko prepozna
-
-  - **Data\_DstDoc\_IdentityTelemetryId –** enosmerno zgoščevanje identitete uporabnika, ki je bila uporabljena za odpiranje
-
-  - **Data\_DstDoc\_InitializationScenario –** zapiše način, uporabljen za odpiranje ciljnega dokumenta
-
-  - **Data\_DstDoc\_IOFlags –** poroča predpomnjenje zastavice za nastavitev možnosti odprtih zahtev za ciljni dokument
-
-  - **Data\_DstDoc\_IrmRights –** dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za ciljni dokument/ciljnega uporabnika
-
-  - **Data\_DstDoc\_IsIncrementalOpen –** zastavica, ki ponazarja, da je bil dokument odprt postopoma
-
-  - **Data\_DstDoc\_IsOcsSupported –** zastavica, ki ponazarja, da storitev sodelovanja podpira dokument
-
-  - **Data\_DstDoc\_IsOpeningOfflineCopy –** zastavica ponazarja, da je bila odprta kopija dokumenta brez povezave
-
-  - **Data\_DstDoc\_IsSyncBacked –** zastavica ponazarja, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
-
-  - **Data\_DstDoc\_Location –** ponazarja storitev, ki zagotavlja mesto shranjevanja za ciljni dokument (OneDrive, strežnik datotek, SharePoint itd.)
-
-  - **Data\_DstDoc\_LocationDetails –** ponazarja, katera znana mapa je zagotovila lokalno shranjen dokument
-
-  - **Data\_DstDoc\_NumberCoAuthors –** število uporabnikov v skupni seji za urejanje
-
-  - **Data\_DstDoc\_PasswordFlags –** ponazarja nastavljeno zastavico za branje/pisanje gesla za ciljni dokument
-
-  - **Data\_DstDoc\_ReadOnlyReasons –** razlogi, zakaj je bil ciljni dokument odprt v načinu »Samo za branje«
-
-  - **Data\_DstDoc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
-
-  - **Data\_DstDoc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
-
-  - **Data\_DstDoc\_ServerProtocol –** različica protokola za komunikacijo s storitvijo
-
-  - **Data\_DstDoc\_ServerType –** vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
-
-  - **Data\_DstDoc\_ServerVersion –** različica strežnika, ki zagotavlja storitev
-
-  - **Data\_DstDoc\_SessionId –** v celotni seji prepozna določeno sejo za urejanje dokumenta
-
-  - **Data\_DstDoc\_SharePointServiceContext –** diagnostične informacije iz zahtev storitve SharePoint Online
-
-  - **Data\_DstDoc\_SizeInBytes –** indikator velikosti dokumenta
-
-  - **Data\_DstDoc\_SpecialChars –** indikator posebnih znakov v URL-ju ali poti dokumenta
-
-  - **Data\_DstDoc\_StreamAvailability –** indikator, ali je tok dokumenta na voljo/omogočen
-
-  - **Data\_DstDoc\_SyncBackedType –** indikator vrste dokumenta (lokalno ali storitev)
-
-  - **Data\_DstDoc\_UrlHash –** enosmerna razpršitev, s katero je mogoče ustvariti naivni identifikator dokumenta za ciljni dokument
-
-  - **Data\_DstDoc\_WopiServiceId –** vsebuje enolični identifikator za ponudnika storitve WOPI
-
-  - **Data\_FailureClass –** celo število, ki predstavlja razred napake za napake pri prehodih OCS
-
-  - **Data\_LocationPickerPropagateToSaveTime,spLapsedMsec –** izmeri čas v milisekundah, zahtevan, da se aktivira shranjevanje po tem, ko pridobi rezultat iz izbirnika mesta
-
-  - **Data\_LocationPickerSaveStatus –** stanje, ki ga je vrnil izbirnik mesta
-
-  - **Data\_MainPdod –** identifikator dokumenta v postopku programa Microsoft Office Word
-
-  - **Data\_MoveDisabledReason –** napaka, ki onemogoča premik dokumenta
-
-  - **Data\_MoveFlightEnabled –** ali je omogočen let za funkcijo premikanja
-
-  - **Data\_RenameDisabledReason –** napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena
-
-  - **Data\_RenameFlightEnabled** – Ali je omogočena pilotna različica za funkcijo preimenovanja.
-
-  - **Data\_SaveInitiateKind –** celo število, ki ponazarja začetek postopka za shranjevanje
-
-  - **Data\_SrcDoc\_AccessMode –** izvirni dokument je samo za branje ali omogoča urejanje
-
-  - **Data\_SrcDoc\_AssistedReadingReasons –** nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja
-
-  - **Data\_SrcDoc\_ChunkingType –** enote, ki se uporabljajo za postopno odpiranje dokumenta
-
-  - **Data\_SrcDoc\_EdpState –** nastavitev elektronske zaščite podatkov izvornega dokumenta
-
-  - **Data\_SrcDoc\_Ext –** pripona dokumenta za izvorni dokument (docx/xlsb/pptx itd.)
-
-  - **Data\_SrcDoc\_FileFormat –** različica protokola za obliko zapisa datoteke za izvorni dokument
-
-  - **Podatki\_SrcDoc\_Fqdn –** ime domene v storitvi OneDrive ali SharePoint Online za izvorni dokument
-
-  - **Data\_SrcDoc\_FqdnHash –** enosmerna razpršitev imena domene za izvorni dokument, ki ga stranka lahko prepozna
-
-  - **Data\_SrcDoc\_IdentityTelemetryId –** enosmerna razpršitev identitete uporabnika, ki je bila uporabljena za odpiranje
-
-  - **Data\_SrcDoc\_InitializationScenario –** zapiše način, uporabljen za odpiranje dokumenta
-
-  - **Data\_SrcDoc\_IOFlags –** poroča predpomnjenje zastavice za nastavitev možnosti odprtih zahtev
-
-  - **Data\_SrcDoc\_IrmRights –** dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika
-
-  - **Data\_SrcDoc\_IsIncrementalOpen –** zastavica, ki ponazarja, da je bil dokument odprt postopoma
-
-  - **Data\_SrcDoc\_IsOcsSupported –** zastavica, ki ponazarja, da storitev sodelovanja podpira dokument
-
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy –** zastavica ponazarja, da je bila odprta kopija dokumenta brez povezave
-
-  - **Data\_SrcDoc\_IsSyncBacked –** zastavica ponazarja, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
-
-  - **Data\_SrcDoc\_Location –** ponazarja storitev, ki je zagotovila izvorni dokument (OneDrive, strežnik datotek, SharePoint itd.)
-
-  - **Data\_SrcDoc\_LocationDetails –** ponazarja, katera znana mapa je zagotovila lokalno shranjen dokument
-
-  - **Data\_SrcDoc\_NumberCoAuthors –** število uporabnikov v skupni seji za urejanje
-
-  - **Data\_SrcDoc\_PasswordFlags –** ponazarja nastavljeno zastavico za branje/pisanje gesla
-
-  - **Data\_SrcDoc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
-
-  - **Data\_SrcDoc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
-
-  - **Data\_SrcDoc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
-
-  - **Data\_SrcDoc\_ServerProtocol –** različica protokola za komunikacijo s storitvijo
-
-  - **Data\_SrcDoc\_ServerType –** vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
-
-  - **Data\_SrcDoc\_ServerVersion –** različica strežnika, ki zagotavlja storitev
-
-  - **Data\_SrcDoc\_SessionId –** v celotni seji prepozna določeno sejo za urejanje dokumenta
-
-  - **Data\_SrcDoc\_SharePointServiceContext –** diagnostične informacije iz zahtev storitve SharePoint Online
-
-  - **Data\_SrcDoc\_SizeInBytes –** indikator velikosti dokumenta
-
-  - **Data\_SrcDoc\_SpecialChars –** indikator posebnih znakov v URL-ju ali poti dokumenta
-
-  - **Data\_SrcDoc\_StreamAvailability –** indikator, ali je tok dokumenta na voljo/omogočen
-
-  - **Data\_SrcDoc\_SyncBackedType –** indikator vrste dokumenta (lokalno ali storitev)
-
-  - **Data\_SrcDoc\_UrlHash –** enosmerna razpršitev, s katero je mogoče ustvariti naivni identifikator dokumenta
-
-  - **Data\_SrcDoc\_WopiServiceId –** vsebuje enolični identifikator za ponudnika storitve WOPI
-
-  - **Data\_SrcDocIsUnnamedOrNew –** ponazarja, ali je dokument, ki ga želite shraniti, nov dokument
-
-#### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
-
-Ta dogodek ponazarja, da Microsoft Office Word ureja dokument, zaradi česar se je spremenilo notranje stanje dokumenta v »spremenjeno«. Microsoftu omogoča, da ovrednoti stanje funkcij urejenega dokumenta. Dogodek predstavlja interval obveščanja o urejanjih uporabnika. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave.
-
 Zbrana so sledeča polja:
 
-  - **Data\_CollectionTime –** časovni žig dogodka
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_DocumentLocation –** vrsta za mesto dokumenta
+- **Data_AddDocTelemResDst** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka za ciljni dokument, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_DocumentLocationDetails –** podvrsta za mesto dokumenta
+- **Data_AddDocTelemResSrc** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka za izvorni dokument, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_FAlwaysSaveEnabled –** ponazarja, ali je omogočena funkcija »Vedno shrani«
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_FirstEditTime –** časovni žig prvega urejanja
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_NumberCoAuthors –** število soavtorjev, ki med sejo urejajo dokument
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_NumberOfTimesDocumentDirtied –** število urejanj dokumenta
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Pdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_UrlHash –** razpršitev poti dokumenta
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_ViewKind –** vrsta Wordovega pogleda
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
+
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
+
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
+
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
+
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
+
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
+
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
+
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
+
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
+
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
+
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
+
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
+
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
+
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
+
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
+
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
+
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+
+- **Data_DstDoc_AccessMode** – ciljni dokument je samo za branje ali omogoča urejanje.
+
+- **Data_DstDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil ciljni dokument odprt v načinu vodenega branja.
+    
+- **Data_DstDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
+
+- **Data_DstDoc_EdpState** – nastavitev elektronske zaščite podatkov za ciljni dokument
+
+- **Data_DstDoc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
+
+- **Data_DstDoc_FileFormat** – različica protokola za obliko zapisa dokumenta.
+
+- **Data_DstDoc_Fqdn** – ime domene v storitvi OneDrive ali SharePoint Online za ciljni dokument.
+
+- **Data_DstDoc_FqdnHash** – enostranska zgoščena vrednost imena domene za ciljni dokument, ki ga stranka lahko prepozna.
+
+- **Data_DstDoc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_DstDoc_InitializationScenario** – zabeleži način, uporabljen za odpiranje ciljnega dokumenta.
+
+- **Data_DstDoc_IOFlags** – poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev za ciljni dokument.
+    
+- **Data_DstDoc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za ciljni dokument/ciljnega uporabnika.
+
+- **Data_DstDoc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
+
+- **Data_DstDoc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+
+- **Data_DstDoc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+
+- **Data_DstDoc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
+
+- **Data_DstDoc_Location** – označuje, katera storitev zagotavlja mesto shranjevanja za ciljni dokument (OneDrive, datotečni strežnik, SharePoint itd.).
+
+- **Data_DstDoc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+
+- **Data_DstDoc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
+
+- **Data_DstDoc_PasswordFlags** – označuje nastavljeno zastavico za branje ali branje/pisanje gesla za ciljni dokument.
+
+- **Data_DstDoc_ReadOnlyReasons** – razlogi, zakaj je bil ciljni dokument odprt v načinu »samo za branje«. 
+
+- **Data_DstDoc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_DstDoc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_DstDoc_ServerProtocol** – različica protokola za komunikacijo s storitvijo.
+
+- **Data_DstDoc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+    
+- **Data_DstDoc_ServerVersion** – različica strežnika, ki zagotavlja storitev.
+
+- **Data_DstDoc_SessionId** – prepozna določeno sejo za urejanje dokumenta v celotni seji.
+
+- **Data_DstDoc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
+
+- **Data_DstDoc_SizeInBytes** – indikator velikosti dokumenta.
+
+- **Data_DstDoc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
+
+- **Data_DstDoc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
+
+- **Data_DstDoc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
+
+- **Data_DstDoc_UrlHash** – enostranska zgoščena vrednost, s katero je mogoče ustvariti naivni identifikator dokumenta za ciljni dokument.
+    
+- **Data_DstDoc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
+
+- **Data_FailureClass** – celo število, ki predstavlja razred napake za napake pri prehodih OCS.
+
+- **Data_LocationPickerPropagateToSaveTime,spLapsedMsec** – izmeri čas v milisekundah, ki mora poteči, da se aktivira shranjevanje po pridobivanju rezultata iz izbirnika mesta.
+
+- **Data_LocationPickerSaveStatus** – stanje, ki ga je vrnil izbirnik mesta.
+
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Microsoft Office Word.
+
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta.
+
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
+
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
+
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
+
+- **Data_SaveInitiateKind** – celo število, ki označuje način inicializacije shranjevanja.
+
+- **Data_SrcDoc_AccessMode** – izvirni dokument je samo za branje ali omogoča urejanje.
+
+- **Data_SrcDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+
+- **Data_SrcDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
+
+- **Data_SrcDoc_EdpState** – nastavitev elektronske zaščite podatkov izvornega dokumenta.
+
+- **Data_SrcDoc_Ext** – pripona dokumenta za izvorni dokument (docx/xlsb/pptx itd.).
+
+- **Data_SrcDoc_FileFormat** – različica protokola za obliko zapisa datoteke za izvorni dokument.
+
+- **Data_SrcDoc_Fqdn** – ime domene v storitvi OneDrive ali SharePoint Online za izvorni dokument.
+
+- **Data_SrcDoc_FqdnHash** – enostranska zgoščena vrednost imena domene za izvorni dokument, ki ga stranka lahko prepozna.
+
+- **Data_SrcDoc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_SrcDoc_InitializationScenario** – zabeleži način odpiranja dokumenta.
+
+- **Data_SrcDoc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti odprtih zahtev.
+
+- **Data_SrcDoc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika
+
+- **Data_SrcDoc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
+
+- **Data_SrcDoc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+
+- **Data_SrcDoc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+
+- **Data_SrcDoc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
+    
+- **Data_SrcDoc_Location** – označuje, katera storitev je zagotovila izvorni dokument (OneDrive, datotečni strežnik, SharePoint itd.)
+
+- **Data_SrcDoc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+
+- **Data_SrcDoc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
+
+- **Data_SrcDoc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
+
+- **Data_SrcDoc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
+
+- **Data_SrcDoc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_SrcDoc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_SrcDoc_ServerProtocol**– različica protokola za komunikacijo s storitvijo.
+
+- **Data_SrcDoc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+
+- **Data_SrcDoc_ServerVersion** – različica strežnika, ki zagotavlja storitev.
+
+- **Data_SrcDoc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
+
+- **Data_SrcDoc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
+
+- **Data_SrcDoc_SizeInBytes** – indikator velikosti dokumenta.
+
+- **Data_SrcDoc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
+
+- **Data_SrcDoc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
+
+- **Data_SrcDoc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
+
+- **Data_SrcDoc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+
+- **Data_SrcDoc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
+
+- **Data_SrcDocIsUnnamedOrNew** – označuje, ali je dokument, ki ga želite shraniti, nov dokument.
+
 
 #### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
 
@@ -3569,6 +4080,31 @@ Zbrana so sledeča polja:
 
   - **Data\_WarningShownToConvertToTable:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo, naj Excelove podatke pretvori v obliko zapisa za tabele
 
+#### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
+
+Ta dogodek ponazarja, da Microsoft Office Word ureja dokument, zaradi česar se je spremenilo notranje stanje dokumenta v »spremenjeno«. Microsoftu omogoča, da ovrednoti stanje funkcij urejenega dokumenta. Dogodek predstavlja interval obveščanja o urejanjih uporabnika. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave.
+
+Zbrana so sledeča polja:
+
+  - **Data\_CollectionTime –** časovni žig dogodka
+
+  - **Data\_DocumentLocation –** vrsta za mesto dokumenta
+
+  - **Data\_DocumentLocationDetails –** podvrsta za mesto dokumenta
+
+  - **Data\_FAlwaysSaveEnabled –** ponazarja, ali je omogočena funkcija »Vedno shrani«
+
+  - **Data\_FirstEditTime –** časovni žig prvega urejanja
+
+  - **Data\_NumberCoAuthors –** število soavtorjev, ki med sejo urejajo dokument
+
+  - **Data\_NumberOfTimesDocumentDirtied –** število urejanj dokumenta
+
+  - **Data\_Pdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+
+  - **Data\_UrlHash –** razpršitev poti dokumenta
+
+  - **Data\_ViewKind –** vrsta Wordovega pogleda
 ### <a name="application-status-and-boot-subtype"></a>*Stanje aplikacije in podvrsta zagona*
 
 Določanje, ali je prišlo do specifičnih dogodkov funkcije, kot sta zagon ali zaustavitev, in funkcije, ki se izvaja.
@@ -3853,6 +4389,35 @@ Zbrana so sledeča polja:
 
   - **Office.Visio.VisioFileSaveSync –** ta dogodek zbira statistiko za funkcijo sinhronega shranjevanja za Visio Dev16. Uporablja se za nadzor stopenj uspešnosti in neuspešnosti pri funkciji sinhronega shranjevanja, ki jih preslika z nekaterimi lastnostmi, denimo velikostjo datoteke in mestom shranjevanja, npr. v oblak/lokalno. Lastnosti datoteke nam omogočajo, da hitreje odkrijemo napako in poiščemo glavni vzrok. Ta dogodek nam omogoča, da nadziramo vzroke za napake pri shranjevanju datoteke.
 
+#### <a name="officeextensibilitysandboxodpactivationhanging"></a>Office.Extensibility.Sandbox.ODPActivationHanging
+
+Zbira podatke, ko zagon Officeovega dodatka traja nepričakovano dolgo (> 5 s). Uporablja se za zaznavanje in odpravljanje težav pri zagonih Officeovih dodatkov.
+ 
+Zbrana so naslednja polja:
+
+- **AppId** – ID aplikacije
+
+- **AppInfo** – podatki glede vrste dodatka (podokno opravil ali UILess ali znotraj vsebine itd.) in vrste ponudnika (Omen, SharePoint, datotečni sistem itd.)
+
+- **AppInstanceId** – ID primerka aplikacije 
+
+- **AssetId** – ID sredstva aplikacije.
+
+- **NumberOfAddinsActivated** – števec aktiviranih dodatkov.
+
+- **RemoterType** – določa vrsto remoterja (zaupanja vreden, ni vreden zaupanja, Win32webView, zaupanja vreden UDF itd.), ki se uporablja za aktiviranje dodatka.
+
+- **StoreType** – izvor aplikacije.
+
+- **TimeForAuth** – čas, porabljen za preverjanje pristnosti. 
+
+- **TimeForSandbox** – čas, porabljen za peskovnik.
+
+- **TimeForServerCall** – čas, porabljen za klic strežnika. 
+
+- **TotalTime** – skupni porabljeni čas
+
+
 #### <a name="officeoutlookdesktopexchangepuidandtenantcorrelation"></a>Office.Outlook.Desktop.ExchangePuidAndTenantCorrelation
 
 Zbere uporabniški PUID in identifikator najemnika enkrat na sejo. Korelaciji za PUID in najemnika sta zahtevani za razumevanje in diagnosticiranje Outlookovih težav za najemnika.
@@ -3867,103 +4432,14 @@ Zbrana so sledeča polja:
 
   - **PUID** – Exchengeev PUID za enolično prepoznavanje uporabnikov
 
-#### <a name="officepowerpointpptdesktopbootime"></a>Office.PowerPoint.PPT.Desktop.Bootime
 
-Dogodek za zbiranje načina zagona za PowrPoint. Vključuje podatke o zagonu PowerPointa v zaščitnem načinu, o načinu branja s pomočjo, makru, tiskanju, novem in praznem dokumentu, obnovitvi dokumenta, avtomatizaciji in podatke o tem, ali uporablja tehnologijo zagona s klikom. Prav tako zbira čas, zahtevan za zagon PowerPointa. Ti podatki so ključnega pomena za zagotovitev pravilnega zagona PowerPointa iz različnih načinov. Microsoft te podatke uporablja za zbiranje časa o dolgem zagonu pri odpiranju PowerPointa iz različnih načinov.
+#### <a name="officeoutlookmacmacolkactivationstate"></a>Office.Outlook.Mac.MacOLKActivationState
 
-Zbrana so sledeča polja:
+Zbere podatke o načinu aktiviranja Outlooka, na primer z naročnino ali s količinskim licenciranjem. Podatke spremljamo, da zagotovimo, da ne pride do morebitnih konic napak. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati. 
 
-  - **AssistedReading –** v načinu branja s pomočjo
+Zbrana so naslednja polja:
 
-  - **Automation –** iz avtomatiziranega načina
-
-  - **Benchmark –** zagon preizkusa zmogljivosti
-
-  - **Blank –** prazen dokument
-
-  - **BootTime –** čas, zahtevan za zagon seje
-
-  - **Embedding –** vgrajeni dokument
-
-  - **IsC2R –** ali omogoča tehnologijo zagona s klikom
-
-  - **IsNew –** nov dokument
-
-  - **IsOpen –** je odprt
-
-  - **Macro1 –** zaženi makro
-
-  - **Macro2 –** zaženi makro
-
-  - **NonStandardSpaceInCmdLine** – v ukazni vrstici je preveč presledkov
-
-  - **Print –** natisni dokument
-
-  - **PrintDialog –** natisni dokument s pogovornim oknom
-
-  - **PrintPrinter –** natisni dokument s tiskalnikom
-
-  - **ProtectedView –** v zaščitenem pogledu
-
-  - **Regserver –** registriraj PowerPoint kot strežnik COM
-
-  - **Restore –** obnovi dokument
-
-  - **Show –** pokaži dokument
-
-  - **Time –** čas seje
-
-  - **UnprotectedView –** v nezaščitenem načinu
-
-#### <a name="officepowerpointppthasuserediteddocument"></a>Office.PowerPoint.PPT.HasUserEditedDocument
-
-Ti podatki so zbrani, ko uporabnik začne urejati dokument. Microsoft uporabi te podatke za izračun aktivnih uporabnikov, ki so urejali PowerPointov dokument.
-
-Zbrana so sledeča polja:
-
-  - **CorrelationId** – identifikator za korelacijo dokumenta
-
-#### <a name="officeprojectbootandopenproject"></a>Office.Project.BootAndOpenProject
-
-Project zaženete tako, da odprete datoteko. Ta dogodek ponazarja, da je uporabnik odprl Office Project s povezano datoteko. Vključuje kritične podatke o uspešnosti, s katerimi je mogoče zagotoviti, da Project lahko zažene datoteko in jo naloži.
-
-Zbrana so sledeča polja:
-
-  - **Data\_AlertTime –** čas, ko je bilo aktivno pogovorno okno zagona
-
-  - **Data\_BootTime –** čas, zahtevan za zagon Projecta
-
-  - **Data\_CacheFileSize –** velikost datoteke, če je bila datoteka predpomnjena
-
-  - **Data\_EntDocType –** vrsta odprte datoteke
-
-  - **Data\_IsInCache –** ali je bila datoteka odprta oziroma predpomnjena
-
-  - **Data\_LoadSRAs –** ali uporabnik želi naložiti SRA-je
-
-  - **Data\_Outcome –** skupni čas, zahtevan za zagon in odpiranje datoteke
-
-  - **Data\_OpenFromDocLib –** ali je bila Projectova datoteka odprta iz knjižnice dokumentov
-
-  - **Data\_ProjectServerVersion –** različica in gradnja, v kateri se trenutno izvaja Project
-
-#### <a name="officeprojectbootproject"></a>Office.Project.BootProject
-
-Za zagon Projecta vam ni treba odpreti datoteke. Ta dogodek ponazarja, da je uporabnik odprl Office Project brez povezane datoteke. Vključuje kritične podatke o uspešnosti, s katerimi je mogoče zagotoviti, da Project lahko zaženete.
-
-Zbrana so sledeča polja:
-
-  - **Data\_BootTime –** čas, zahtevan za zagon Projecta
-
-  - **Data\_FileLoaded –** ima vrednost false, če ste datoteko odprli iz zunanjega oz. novega praznega projekta
-
-  - **Data\_IsEntOfflineWithProfile out-space ** ali je uporabnikom bila dodeljena profesionalna inventarna številka in nimajo vzpostavljene povezave s strežnikom
-
-  - **Data\_IsEntOnline –** ali je Projectova seja povezana s Projectovim strežnikom s funkcijami podjetja
-
-  - **Data\_IsLocalOnline –** ali je Projectova seja povezana s Projectovim strežnikom s funkcijami podjetja
-
-  - **Data\_ProjectServerVersion –** različica in gradnja, v kateri se trenutno izvaja Project
+- **SetupUIActivationMethod** – način aktiviranja Outlooka, na primer naročnina ali količinsko licenciranje.
 
 #### <a name="officepowerpointdocoperationopen"></a>Office.PowerPoint.DocOperation.Open 
 
@@ -4297,6 +4773,105 @@ Zbrana so sledeča polja:
 
   - **Data\_ZRTOpenDisabledReasons –** zakaj ni bilo mogoče odpreti dokumenta iz predpomnilnika (nič odhodov in vrnitev)
 
+#### <a name="officepowerpointpptdesktopbootime"></a>Office.PowerPoint.PPT.Desktop.Bootime
+
+Dogodek za zbiranje načina zagona za PowrPoint. Vključuje podatke o zagonu PowerPointa v zaščitnem načinu, o načinu branja s pomočjo, makru, tiskanju, novem in praznem dokumentu, obnovitvi dokumenta, avtomatizaciji in podatke o tem, ali uporablja tehnologijo zagona s klikom. Prav tako zbira čas, zahtevan za zagon PowerPointa. Ti podatki so ključnega pomena za zagotovitev pravilnega zagona PowerPointa iz različnih načinov. Microsoft te podatke uporablja za zbiranje časa o dolgem zagonu pri odpiranju PowerPointa iz različnih načinov.
+
+Zbrana so sledeča polja:
+
+  - **AssistedReading –** v načinu branja s pomočjo
+
+  - **Automation –** iz avtomatiziranega načina
+
+  - **Benchmark –** zagon preizkusa zmogljivosti
+
+  - **Blank –** prazen dokument
+
+  - **BootTime –** čas, zahtevan za zagon seje
+
+  - **Embedding –** vgrajeni dokument
+
+  - **IsC2R –** ali omogoča tehnologijo zagona s klikom
+
+  - **IsNew –** nov dokument
+
+  - **IsOpen –** je odprt
+
+  - **Macro1 –** zaženi makro
+
+  - **Macro2 –** zaženi makro
+
+  - **NonStandardSpaceInCmdLine** – v ukazni vrstici je preveč presledkov
+
+  - **Print –** natisni dokument
+
+  - **PrintDialog –** natisni dokument s pogovornim oknom
+
+  - **PrintPrinter –** natisni dokument s tiskalnikom
+
+  - **ProtectedView –** v zaščitenem pogledu
+
+  - **Regserver –** registriraj PowerPoint kot strežnik COM
+
+  - **Restore –** obnovi dokument
+
+  - **Show –** pokaži dokument
+
+  - **Time –** čas seje
+
+  - **UnprotectedView –** v nezaščitenem načinu
+
+#### <a name="officepowerpointppthasuserediteddocument"></a>Office.PowerPoint.PPT.HasUserEditedDocument
+
+Ti podatki so zbrani, ko uporabnik začne urejati dokument. Microsoft uporabi te podatke za izračun aktivnih uporabnikov, ki so urejali PowerPointov dokument.
+
+Zbrana so sledeča polja:
+
+  - **CorrelationId** – identifikator za korelacijo dokumenta
+
+#### <a name="officeprojectbootandopenproject"></a>Office.Project.BootAndOpenProject
+
+Project zaženete tako, da odprete datoteko. Ta dogodek ponazarja, da je uporabnik odprl Office Project s povezano datoteko. Vključuje kritične podatke o uspešnosti, s katerimi je mogoče zagotoviti, da Project lahko zažene datoteko in jo naloži.
+
+Zbrana so sledeča polja:
+
+  - **Data\_AlertTime –** čas, ko je bilo aktivno pogovorno okno zagona
+
+  - **Data\_BootTime –** čas, zahtevan za zagon Projecta
+
+  - **Data\_CacheFileSize –** velikost datoteke, če je bila datoteka predpomnjena
+
+  - **Data\_EntDocType –** vrsta odprte datoteke
+
+  - **Data\_IsInCache –** ali je bila datoteka odprta oziroma predpomnjena
+
+  - **Data\_LoadSRAs –** ali uporabnik želi naložiti SRA-je
+
+  - **Data\_Outcome –** skupni čas, zahtevan za zagon in odpiranje datoteke
+
+  - **Data\_OpenFromDocLib –** ali je bila Projectova datoteka odprta iz knjižnice dokumentov
+
+  - **Data\_ProjectServerVersion –** različica in gradnja, v kateri se trenutno izvaja Project
+
+#### <a name="officeprojectbootproject"></a>Office.Project.BootProject
+
+Za zagon Projecta vam ni treba odpreti datoteke. Ta dogodek ponazarja, da je uporabnik odprl Office Project brez povezane datoteke. Vključuje kritične podatke o uspešnosti, s katerimi je mogoče zagotoviti, da Project lahko zaženete.
+
+Zbrana so sledeča polja:
+
+  - **Data\_BootTime –** čas, zahtevan za zagon Projecta
+
+  - **Data\_FileLoaded –** ima vrednost false, če ste datoteko odprli iz zunanjega oz. novega praznega projekta
+
+  - **Data\_IsEntOfflineWithProfile out-space ** ali je uporabnikom bila dodeljena profesionalna inventarna številka in nimajo vzpostavljene povezave s strežnikom
+
+  - **Data\_IsEntOnline –** ali je Projectova seja povezana s Projectovim strežnikom s funkcijami podjetja
+
+  - **Data\_IsLocalOnline –** ali je Projectova seja povezana s Projectovim strežnikom s funkcijami podjetja
+
+  - **Data\_ProjectServerVersion –** različica in gradnja, v kateri se trenutno izvaja Project
+
+
 #### <a name="officeprojectopenproject"></a>Office.Project.OpenProject
 
 Project odpre datoteko. Ta dogodek ponazarja, da je uporabnik neposredno odprl Projectovo datoteko. Vključuje kritične podatke o uspešnosti pri odpiranju datotek v Projectu.
@@ -4371,249 +4946,251 @@ Zbrana so sledeča polja:
 
 - **parentSessionId** – naključno ustvarjeni GUID za prepoznavanje seje aplikacije
 
+
 #### <a name="officewordfileopenopencmdfilemrupriv"></a>Office.Word.FileOpen.OpenCmdFileMruPriv
 
-Ta dogodek ponazarja, da je Microsoft Office Word odprl dokument s seznama nedavno uporabljenih elementov. Prav tako vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko s seznama nedavno uporabljenih dokumentov« deluje običajno. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
+Ta dogodek ponazarja, da je Microsoft Office Word odprl dokument s seznama nedavno uporabljenih elementov. Poleg tega vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko s seznama nazadnje uporabljenih datotek« deluje v skladu s pričakovanji. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
 
 Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_BytesAsynchronous –** število bajtov (stisnjenih), za katerega menimo, da lahko odpremo datoteko brez tega števila, če jih pridobimo, preden uporabnik želi začeti urejati dokument oz. ga morda shraniti
+- **Data_BytesAsynchronous** – število bajtov (stisnjenih), brez katerega je morda mogoče odpreti datoteko, če ga pridobimo, preden uporabnik začne urejati dokument oz. se ga morda odloči shraniti.
 
-  - **Data\_BytesAsynchronousWithWork –** število bajtov (stisnjenih), pri katerem morda še lahko odpremo datoteko brez tega števila, vendar bi zato morali občutno spremeniti kodo
+- **Data_BytesAsynchronousWithWork** – število bajtov (stisnjenih), brez katerega morda lahko odpremo datoteko, vendar bi zato morali občutno spremeniti kodo.
 
-  - **Data\_BytesSynchronous –** število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko
+- **Data_BytesSynchronous** – število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko.
 
-  - **Data\_BytesUnknown –** število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli
+- **Data_BytesUnknown** – število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli. 
 
-  - **Data\_DetachedDuration –** koliko časa je bila dejavnost ločena od niti
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_Doc\_AccessMode –** dokument je samo za branje ali omogoča urejanje
+- **Data_Doc_AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_Doc\_AssistedReadingReasons –** nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_IOFlags** – Poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev.
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_IdentityTelemetryId** – Enostranska zgoščena vrednost identitete uporabnika, ki je bila uporabljena za odpiranje.
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_InitializationScenario** – Zabeleži način odpiranja dokumenta.
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsSyncBacked –** zastavica ponazarja, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
 
-  - **Data\_Doc\_Location –** ponazarja storitev, ki je zagotovila dokument (OneDrive, strežnik datotek, SharePoint itd.)
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
 
-  - **Data\_Doc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav 
 
-  - **Data\_Doc\_ServerProtocol –** različica protokola za komunikacijo s storitvijo
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-  - **Data\_Doc\_ServerType –** vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
-  - **Data\_Doc\_ServerVersion –** različica strežnika, ki zagotavlja storitev
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju dokumenta. 
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_Doc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
 
-  - **Data\_Doc\_WopiServiceId –** vsebuje enolični identifikator za ponudnika storitve WOPI
+- **Data_EditorDisablingRename** – identifikator prvega urejevalnika, ki je onemogočil preimenovanje
 
-  - **Data\_EditorDisablingRename –** identifikator prvega urednika, ki je onemogočil preimenovanje
+- **Data_EditorsCount** – število urednikov v dokumentov
 
-  - **Data\_EditorsCount –** število urednikov v dokumentov
+- **Data_ForceReadWriteReason** – vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje pri datoteki.
 
-  - **Data\_FSucceededAfterRecoverableFailure –**  označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta
+- **Data_FSucceededAfterRecoverableFailure** – označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta.
 
-  - **Data\_ForceReadWriteReason –** vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje
+- **Data_LastLoggedTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno odpiranje dvakrat zapored (uporablja se za diagnostiko kakovosti podatkov).
 
-  - **Data\_LastLoggedTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno odpiranje dvakrat zapored (se uporablja za diagnostiko kakovosti podatkov)
+- **Data_LinkStyles** – označuje, ali povezujemo sloge predlog.
 
-  - **Data\_LinkStyles –** označuje, ali povezujemo sloge predlog
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Microsoft Office Word.
 
-  - **Data\_MainPdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+- **Data_Measurements** – šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja.
 
-  - **Data\_Measurements –** šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta.
 
-  - **Data\_MoveDisabledReason –** napaka, ki onemogoča premik dokumenta
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_MoveFlightEnabled –** ali je omogočen let za funkcijo premikanja
+- **Data_PartsUnknown** – število delov dokumenta, za katere nismo uspeli pridobiti podatkov.
 
-  - **Data\_PartsUnknown –** število delov dokumenta, za katere nismo uspeli pridobiti podatkov
+- **Data_RecoverableFailureInitiationLocationTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer poskušamo odpraviti napako pred odpiranjem datoteke.
 
-  - **Data\_RecoverableFailureInitiationLocationTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer smo poskušali odpraviti napako pred odpiranjem datoteke
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
 
-  - **Data\_RenameDisabledReason –** napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_RenameFlightEnabled –** ali je omogočen let za funkcijo preimenovanja
+- **Data_SecondaryTag** – enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih pri odpiranju. 
 
-  - **Data\_SecondaryTag –** enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih za odpiranje
+- **Data_TemplateFormat** – oblika zapisa datoteke za predlogo, na kateri temelji dokument.
 
-  - **Data\_TemplateFormat –** oblika zapisa datoteke za predlogo, na kateri temelji dokument
+- **Data_UsesNormal** – označuje, ali odprti dokument temelji na navadni predlogi.
 
-  - **Data\_UsesNormal –** ponazarja, ali je osnova odprtega dokumenta predstavlja običajna predloga
+- **PathData_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
+
 
 #### <a name="officewordfileopenopenffileopenxstzcore"></a>Office.Word.FileOpen.OpenFFileOpenXstzCore
 
-Ta dogodek ponazarja, da Microsoft Office Word odpira dokument, ki ga je uporabnik dvokliknil. Prav tako vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko z dvojnim klikom« deluje običajno. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
+Ta dogodek ponazarja, da Microsoft Office Word odpira dokument, ki ga je uporabnik dvokliknil. Poleg tega vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko z dvoklikom« deluje v skladu s pričakovanji. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
 
 Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes –** ponazarja, ali lahko pravilno naselimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
+    
+- **Data_BytesAsynchronous** – število bajtov (stisnjenih), brez katerega je morda mogoče odpreti datoteko, če ga pridobimo, preden uporabnik začne urejati dokument oz. se ga morda odloči shraniti.
+    
+- **Data_BytesAsynchronousWithWork** – število bajtov (stisnjenih), brez katerega morda lahko odpremo datoteko, vendar bi zato morali občutno spremeniti kodo.
 
-  - **Data\_BytesAsynchronous –** število bajtov (stisnjenih), za katerega menimo, da lahko odpremo datoteko brez tega števila, če jih pridobimo, preden uporabnik želi začeti urejati dokument oz. ga morda shraniti
+- **Data_BytesSynchronous** – število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko.
+    
+- **Data_BytesUnknown** – število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli.
 
-  - **Data\_BytesAsynchronousWithWork –** število bajtov (stisnjenih), pri katerem morda še lahko odpremo datoteko brez tega števila, vendar bi zato morali občutno spremeniti kodo
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_BytesSynchronous –** število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko
+- **Data_Doc_AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_BytesUnknown –** število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_DetachedDuration –** koliko časa je bila dejavnost ločena od niti
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_AccessMode –** dokument je samo za branje ali omogoča urejanje
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_AssistedReadingReasons –** nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_FqdnHash** – Enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_IOFlags –** poroča predpomnjenje zastavice za nastavitev možnosti odprtih zahtev
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
 
-  - **Data\_Doc\_IdentityTelemetryId –** enosmerna razpršitev identitete uporabnika, ki je bila uporabljena za odpiranje
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_InitializationScenario –** zapiše način, uporabljen za odpiranje dokumenta
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
+    
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
+    
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+    
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev 
 
-  - **Data\_Doc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_ServerProtocol –** različica protokola za komunikacijo s storitvijo
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_ServerType** – Vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
 
-  - **Data\_Doc\_ServerVersion –** različica strežnika, ki zagotavlja storitev
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_SessionId –** različica strežnika, ki zagotavlja storitev
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_SharePointServiceContext-**
+- **Data_Doc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI.
 
-  - **Data\_Doc\_SizeInBytes –** indikator velikosti dokumenta
+- **Data_EditorDisablingRename** – identifikator prvega urejevalnika, ki je onemogočil preimenovanje
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_EditorsCount** – število urednikov v dokumentov
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_FSucceededAfterRecoverableFailure** – označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta.
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_ForceReadWriteReason** – vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje pri datoteki.
+    
+- **Data_LastLoggedTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno odpiranje dvakrat zapored (uporablja se za diagnostiko kakovosti podatkov).
 
-  - **Data\_Doc\_UrlHash** – Enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
+- **Data_LinkStyles** – označuje, ali povezujemo sloge predlog.
 
-  - **Data\_Doc\_WopiServiceId –** vsebuje enolični identifikator za ponudnika storitve WOPI
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Microsoft Office Word.
 
-  - **Data\_EditorDisablingRename –** identifikator prvega urednika, ki je onemogočil preimenovanje
+- **Data_Measurements** – šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja.
+    
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta.
 
-  - **Data\_EditorsCount –** število urednikov v dokumentov
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_FSucceededAfterRecoverableFailure –**  označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta
+- **Data_PartsUnknown** – število delov dokumenta, za katere nismo uspeli pridobiti podatkov.
 
-  - **Data\_ForceReadWriteReason –** vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje
+- **Data_RecoverableFailureInitiationLocationTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer poskušamo odpraviti napako pred odpiranjem datoteke.
 
-  - **Data\_LastLoggedTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno odpiranje dvakrat zapored (se uporablja za diagnostiko kakovosti podatkov)
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
 
-  - **Data\_LinkStyles –** označuje, ali povezujemo sloge predlog
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_MainPdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+- **Data_SecondaryTag** – enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih pri odpiranju.
 
-  - **Data\_Measurements –** šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja
+- **Data_TemplateFormat** – oblika zapisa datoteke za predlogo, na kateri temelji dokument.
 
-  - **Data\_MoveDisabledReason –** napaka, ki onemogoča premik dokumenta
-
-  - **Data\_MoveFlightEnabled –** ali je omogočen let za funkcijo premikanja
-
-  - **Data\_PartsUnknown –** število delov dokumenta, za katere nismo uspeli pridobiti podatkov
-
-  - **Data\_RecoverableFailureInitiationLocationTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer smo poskušali odpraviti napako pred odpiranjem datoteke
-
-  - **Data\_RenameDisabledReason –** napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena
-
-  - **Data\_RenameFlightEnabled –** ali je omogočen let za funkcijo preimenovanja
-
-  - **Data\_SecondaryTag –** enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih za odpiranje
-
-  - **Data\_TemplateFormat –** oblika zapisa datoteke za predlogo, na kateri temelji dokument
-
-  - **Data\_UsesNormal –** ponazarja, ali je osnova odprtega dokumenta predstavlja običajna predloga
+- **Data_UsesNormal** – označuje, ali odprti dokument temelji na navadni predlogi.
 
 
 #### <a name="officewordfileopenopenifrinitargs"></a>Office.Word.FileOpen.OpenIfrInitArgs
@@ -4739,123 +5316,123 @@ Zbrana so sledeča polja:
 
 #### <a name="officewordfileopenopenloadfile"></a>Office.Word.FileOpen.OpenLoadFile
 
-Ta dogodek ponazarja, da Microsoft Office Word odpira dokument s pomočjo pogovornega okna za odpiranje Prav tako vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko s pogovornim oknom za odpiranje« deluje običajno. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
+Ta dogodek ponazarja, da Microsoft Office Word odpira dokument s pomočjo pogovornega okna za odpiranje Poleg tega vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije. Dogodek nadzira, ali funkcija »Odpri datoteko v pogovornem oknu za odpiranje datotek« deluje v skladu s pričakovanji. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku.
 
 Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
-  - **Data\_BytesAsynchronous –** število bajtov (stisnjenih), za katerega menimo, da lahko odpremo datoteko brez tega števila, če jih pridobimo, preden uporabnik želi začeti urejati dokument oz. ga morda shraniti
+- **Data_BytesAsynchronous** – število bajtov (stisnjenih), brez katerega je morda mogoče odpreti datoteko, če ga pridobimo, preden uporabnik začne urejati dokument oz. se ga morda odloči shraniti.
 
-  - **Data\_BytesAsynchronousWithWork –** število bajtov (stisnjenih), pri katerem morda še lahko odpremo datoteko brez tega števila, vendar bi zato morali občutno spremeniti kodo
+- **Data_BytesAsynchronousWithWork** – število bajtov (stisnjenih), brez katerega morda lahko odpremo datoteko, vendar bi zato morali občutno spremeniti kodo.
+    
+- **Data_BytesSynchronous** – število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko.
 
-  - **Data\_BytesSynchronous –** število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko
+- **Data_BytesUnknown** – število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli.
 
-  - **Data\_BytesUnknown –** število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli
+- **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-  - **Data\_DetachedDuration –** koliko časa je bila dejavnost ločena od niti
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
-  - **Data\_Doc\_AccessMode** – Dokument je samo za branje/ga je mogoče urejati.
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
 
-  - **Data\_Doc\_EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.).
 
-  - **Data\_Doc\_Ext** – Pripona dokumenta (docx/xlsb/pptx itd.)
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke.
 
-  - **Data\_Doc\_FileFormat** – Različica protokola za obliko zapisa dokumenta.
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online.
 
-  - **Data\_Doc\_Fqdn** – Ime domene za OneDrive ali SharePoint Online.
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke.
 
-  - **Data\_Doc\_FqdnHash –** enosmerna razpršitev imena domene, ki ga stranka lahko prepozna
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
 
-  - **Data\_Doc\_IdentityTelemetryId –** enosmerna razpršitev identitete uporabnika, ki je bila uporabljena za odpiranje
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta.
 
-  - **Data\_Doc\_InitializationScenario –** zapiše način, uporabljen za odpiranje dokumenta
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje.
 
-  - **Data\_Doc\_IOFlags** – Poroča o predpomnjenih zastavicah za nastavitev možnosti odprtih zahtev.
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika.
+    
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta.
 
-  - **Data\_Doc\_IrmRights** – Dejanja, ki jih je dovolil pravilnik za elektronsko zaščito dokumentov, ki velja za dokument/uporabnika.
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu.
 
-  - **Data\_Doc\_IsIncrementalOpen** – Zastavica, ki označuje postopno odpiranje dokumenta.
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data\_Doc\_IsOcsSupported** – Zastavica, ki označuje, da storitev sodelovanja podpira dokument.
+- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
 
-  - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
 
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
 
-  - **Data\_Doc\_Location** – Označuje, v kateri storitvi je na voljo dokument (OneDrive, strežnik datotek, SharePoint itd.).
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem.
 
-  - **Data\_Doc\_LocationDetails** – Označuje, v kateri znani mapi je na voljo lokalno shranjen dokument.
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla.
 
-  - **Data\_Doc\_NumberCoAuthors** – Število uporabnikov v skupni seji urejanja s sodelovanjem.
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
-  - **Data\_Doc\_PasswordFlags** – Označuje nastavljeno zastavico za branje ali branje/pisanje gesla.
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
 
-  - **Data\_Doc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav 
 
-  - **Data\_Doc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-  - **Data\_Doc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
-  - **Data\_Doc\_ServerProtocol –** različica protokola za komunikacijo s storitvijo
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
-  - **Data\_Doc\_ServerType –** vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+- **Data_Doc_SessionId** – prepozna specifično sejo za urejanje dokumenta v celotni seji.
 
-  - **Data\_Doc\_ServerVersion –** različica strežnika, ki zagotavlja storitev
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online.
 
-  - **Data\_Doc\_SessionId** – Prepozna določeno sejo za urejanje dokumenta v celotni seji.
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta.
 
-  - **Data\_Doc\_SharePointServiceContext ** – Diagnostične informacije SharePoint Onlineovih zahtev.
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta.
 
-  - **Data\_Doc\_SizeInBytes** – Indikator velikosti dokumenta.
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen.
 
-  - **Data\_Doc\_SpecialChars** – Indikator posebnih znakov v URL-ju ali poti dokumenta.
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev).
 
-  - **Data\_Doc\_StreamAvailability** – Indikator, ali je tok dokumenta na voljo/onemogočen.
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta.
 
-  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev).
+- **Data_EditorDisablingRename** – identifikator prvega urejevalnika, ki je onemogočil preimenovanje
 
-  - **Data\_Doc\_UrlHash –** enosmerna razpršitev, s katero je mogoče ustvariti naivni identifikator dokumenta
+- **Data_EditorsCount** – število urednikov v dokumentov
 
-  - **Data\_EditorDisablingRename –** identifikator prvega urednika, ki je onemogočil preimenovanje
+- **Data_ForceReadWriteReason** – vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje pri datoteki.
+    
+- **Data_FSucceededAfterRecoverableFailure** – označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta.
 
-  - **Data\_EditorsCount –** število urednikov v dokumentov
+- **Data_LastLoggedTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo dvakrat zapored neuspešno izvesti shranjevanje (se uporablja za diagnostiko kakovosti podatkov)
 
-  - **Data\_ForceReadWriteReason –** vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje
+- **Data_LinkStyles** – označuje, ali povezujemo sloge predlog.
 
-  - **Data\_FSucceededAfterRecoverableFailure –**  označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Microsoft Office Word.
 
-  - **Data\_LastLoggedTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno opravilo dvakrat zapored (se uporablja za diagnostiko kakovosti podatkov)
+- **Data_Measurements** – šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja.
 
-  - **Data\_LinkStyles –** označuje, ali povezujemo sloge predlog
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta.
 
-  - **Data\_MainPdod –** identifikator dokumenta v postopku programa Microsoft Office Word
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja.
 
-  - **Data\_Measurements –** šifriran niz z razčlenitvijo časa različnih časov odpiranja. Se uporablja za merjenje učinkovitosti delovanja
+- **Data_PartsUnknown** – število delov dokumenta, za katere nismo uspeli pridobiti podatkov.
 
-  - **Data\_MoveDisabledReason –** napaka, ki onemogoča premik dokumenta
+- **Data_RecoverableFailureInitiationLocationTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer poskušamo odpraviti napako pred odpiranjem datoteke.
 
-  - **Data\_MoveFlightEnabled –** ali je omogočen let za funkcijo premikanja
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena.
 
-  - **Data\_PartsUnknown –** število delov dokumenta, za katere nismo uspeli pridobiti podatkov
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja.
 
-  - **Data\_RecoverableFailureInitiationLocationTag –** enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer smo poskušali odpraviti napako pred odpiranjem datoteke
+- **Data_SecondaryTag** – enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih pri odpiranju.
 
-  - **Data\_RenameDisabledReason –** napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena
+- **Data_TemplateFormat** – oblika zapisa datoteke za predlogo, na kateri temelji dokument
 
-  - **Data\_RenameFlightEnabled –** ali je omogočen let za funkcijo preimenovanja
-
-  - **Data\_SecondaryTag –** enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih za odpiranje
-
-  - **Data\_TemplateFormat –** oblika zapisa datoteke za predlogo, na kateri temelji dokument
-
-  - **Data\_UsesNormal –** ponazarja, ali je osnova odprtega dokumenta predstavlja običajna predloga
+- **Data_UsesNormal** – označuje, ali odprti dokument temelji na navadni predlogi.
 
 
 ### <a name="office-accessibility-configuration-subtype"></a>*Podvrsta konfiguracije za dostopnost v Officeu*
@@ -4983,6 +5560,46 @@ Zbrana so sledeča polja:
 
 - **Event Name** – kategorija dogodka in oznaka dogodka predstavljata ime dogodka
 
+#### <a name="officeapplesystemhealthappexitmacandios"></a>Office.Apple.SystemHealthAppExitMacAndiOS
+
+Dogodek ob zagonu, ki zajame nemotena in motena zapiranja aplikacije za nadaljnjo preiskavo.
+
+Zbrana so naslednja polja:
+
+- **AffectedProcessResidentMemoryOnCrash** – pomnilnik, v katerem je shranjena zrušena aplikacija.
+
+- **AffectedProcessSessionID** – »SessionID« postopka pri prejšnjem zapiranju.
+
+- **AffectedProcessUnsymbolicatedChecksum** – uporablja se z zgoščeno vrednostjo sklada za simbolizacijo.
+
+- **AffectedProcessVirtualMemoryOnCrash** – navidezni pomnilnik zrušene aplikacije.
+
+- **AffectedSessionBuildNumber** – različica aplikacije
+
+- **AffectedSessionDuration** – trajanje seje v sekundah pred zrušitvijo.
+
+- **AffectedSessionIDSMatch** – logična vrednost za preverjanje, ali je ID seje poročanja enak kot tisti, ki ga sprejme MERP.
+
+- **AffectedSessionLongBuildNumber** –dolga številka graditve.
+
+- **AffectedSessionMERPSessionID** – ID seje za MERP.
+
+- **AffectedSessionOSLocale** – območne nastavitve operacijskega sistema.
+
+- **AffectedSessionOSVersion** – različica operacijskega sistema.
+
+- **AffectedSessionStackHash** – zgoščena vrednost sledi sklada zrušene aplikacije.
+
+- **AffectedSessionStartTime** – »DateTime« začetka seje.
+
+- **AffectedSessionUAEType** – oštevilčenje, ki zagotavlja informacije o tem, do kakšne vrste zrušitve je prišlo.
+
+- **AffectedSessionVersion** – različica aplikacije.
+
+- **DeviceModel** – model strojne opreme.
+
+- **ExitWasGraceful** – ali je bilo prejšnje zapiranje aplikacije nemoteno?
+
 #### <a name="officeextensibilitycomaddinunhandledexception"></a>Office.Extensibility.COMAddinUnhandledException
 
 Dogodek, ki se ustvari ob zrušitvi dodatka COM
@@ -4992,29 +5609,82 @@ Globalni vpogledi: uporablja se za izračun globalne »pripravljenosti« (ni ome
 
 Zbrana so sledeča polja:
 
-**ScopeId** – obseg trenutne niti
+- **ScopeId** – obseg trenutne niti
 
-**Method** – Officeov način, kjer je prišlo do izjeme
+- **Method** – Officeov način, kjer je prišlo do izjeme
 
-**Interface** – Officeov vmesnik, kjer je prišlo do izjeme
+- **Interface** – Officeov vmesnik, kjer je prišlo do izjeme
 
-**AddinId** – ID razreda za dodatek
+- **AddinId** – ID razreda za dodatek
 
-**AddinProgId** – ID programa za dodatek
+- **AddinProgId** – ID programa za dodatek
 
-**AddinFriendlyName** – prijazno ime dodatka
+- **AddinFriendlyName** – prijazno ime dodatka
 
-**AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL
+- **AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL
 
-**AddinVersion** – različica dodatka
+- **AddinVersion** – različica dodatka
 
-**AddinFileName** – ime datoteke za dodatek brez poti datoteke
+- **AddinFileName** – ime datoteke za dodatek brez poti datoteke
 
-**VSTOAddIn** – ali je dodatek vrste VSTO
+- **VSTOAddIn** – ali je dodatek vrste VSTO
 
-**AddinConnectFlag** – vedenje trenutnega nalaganja
+- **AddinConnectFlag** – vedenje trenutnega nalaganja
 
-**LoadAttempts** – število poskusov za nalaganje izdelka
+- **LoadAttempts** – število poskusov za nalaganje izdelka
+
+#### <a name="officeextensibilitycomaddinunhandledexceptionenterprise"></a>Office.Extensibility.COMAddinUnhandledExceptionEnterprise
+
+Dogodek, ki se ustvari ob zrušitvah dodatka COM.  Uporablja se kot števec pri izračunu ustreznosti stanja poslovnih funkcij za dodatke, ki se uporabljajo za določitev, ali je med pilotnim projektom dodatek »pripravljen na nadgradnjo« v proizvodnem ciklu.
+
+Zbrana so naslednja polja (upoštevajte, da so ta polja zapisana kot označbe mest, da preprečijo prelome obstoječih skriptov: »AddinFriendlyName«, »AddinProgId«, »AddinVersion«, »AddinFileName«).
+
+
+- **AddinConnectFlag** – vedenje trenutnega nalaganja.
+
+- **AddinFileName** – polje je prazno – opuščeno.
+
+- **AddinFriendlyName** – polje je prazno – opuščeno.
+
+- **AddinId** – ID razreda dodatka.
+
+- **AddinProgId** – polje je prazno – opuščeno.
+
+- **AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL.
+
+- **AddinVersion** – polje je prazno – opuščeno.
+
+- **Interface** – Officeov vmesnik, kjer je prišlo do izjeme.
+
+- **LoadAttempts** – število poskusov nalaganja dodatka.
+
+- **Method** – Officeov način, pri katerem je prišlo do izjeme.
+
+- **ScopeId** – obseg trenutne niti.
+
+- **VSTOAddIn** – označuje, ali je dodatek vrste VSTO.
+
+#### <a name="officeextensibilitysandboxodpactivationheartbeat"></a>Office.Extensibility.Sandbox.ODPActivationHeartbeat
+
+Dodatki za Office se zaženejo v peskovniku. Ta dogodek zbira informacije o signalih obveščanja o izvajanju programa ob aktiviranjih. Ko pride do zrušitve dodatka, ta dogodek zbira podatke o tem, zakaj je prišlo do zrušitve v primeru, ki je povezan z našim peskovnikom. Uporablja se za preiskovanje, ko stranke stopnjujejo težave.
+ 
+Zbrana so naslednja polja:
+
+- **AppId** – ID aplikacije
+
+- **AppInfo** – podatki glede vrste dodatka (podokno opravil ali UILess ali znotraj vsebine itd.) in vrste ponudnika (Omen, SharePoint, datotečni sistem itd.).
+
+- **AppInstanceId** – ID primerka aplikacije 
+
+- **AssetId** – ID sredstva aplikacije
+
+- **ErrorCode** – skupni porabljeni čas. 
+
+- **NumberOfAddinsActivated** – števec aktiviranih dodatkov
+
+- **RemoterType** – določa vrsto remoterja (zaupanja vreden, ni vreden zaupanja, Win32webView, zaupanja vreden UDF itd.), ki se uporablja za aktiviranje dodatka
+
+- **StoreType** – izvor aplikacije
 
 #### <a name="officeextensibilityvbatelemetrybreak"></a>Office.Extensibility.VbaTelemetryBreak
 
@@ -5024,13 +5694,24 @@ Namizna analitika: uporablja se kot števec pri izračunu stanja poslovnih funkc
 
 Zbrana so sledeča polja:
 
-**TagId** – ID oznake za telemetrijo
+- **TagId** – ID oznake za telemetrijo
 
-**BreakReason** – razlog za prekinitev (napaka pri izvajanju, prevajanju ali druga napaka.)
+- **BreakReason** – razlog za prekinitev (napaka pri izvajanju, prevajanju ali druga napaka.)
 
-**SolutionType** – vrsta rešitve (dokument, predloga, dodatek aplikacije, dodatek COM)
+- **SolutionType** – vrsta rešitve (dokument, predloga, dodatek aplikacije, dodatek COM)
 
-**Data.ErrorCode** – koda napake, ki jo je zaznal mehanizem VBA
+- **Data.ErrorCode** – koda napake, ki jo je zaznal mehanizem VBA
+
+
+#### <a name="officefindtimeappfailedtostart"></a>Office.FindTime.AppFailedToStart
+
+Podatki so zbrani, če aplikacije ni mogoče zagnati zaradi nepričakovane napake med zagonom. S tem dogodkom spremljamo izjeme in zrušitve.  Omogoča lažje spremljanje ustreznosti stanja aplikacije in odpravljanje napak.
+
+Zbrana so naslednja polja: 
+
+- **DateTime** – časovni žig trenutka, ko je bil dogodek zabeležen.
+
+- **EventName** – ime zabeleženega dogodka.
 
 #### <a name="officeoutlookdesktophangbucketmetrics"></a>Office.Outlook.Desktop.HangBucketMetrics
 
@@ -5220,6 +5901,52 @@ Zbrana so sledeča polja:
 
   - **ProgID** – identifikator programa za dodatek
 
+#### <a name="officesystemsystemhealthungracefulappexitmacandios"></a>Office.System.SystemHealthUngracefulAppExitMacAndiOS
+
+Dogodek ob zagonu, ki zajame motena zapiranja aplikacije za nadaljnjo preiskavo.
+
+Zbrana so naslednja polja:
+
+- **AffectedProcessAppBuild** – številka graditve.
+
+- **AffectedProcessAppBuildRevision** – številka pregleda graditve.
+
+- **AffectedProcessAppMajorVer** – številka glavne različice aplikacije.
+
+- **AffectedProcessAppMinorVer** – številka podrazličice aplikacije.
+
+- **AffectedProcessAppName** – ime aplikacije.
+
+- **AffectedProcessResidentMemoryOnCrash** – pomnilnik, v katerem je shranjena zrušena aplikacija.
+
+- **AffectedProcessUnsymbolicatedChecksum** – uporablja se z zgoščeno vrednostjo sklada za simbolizacijo.
+
+- **AffectedProcessVirtualMemoryOnCrash** – navidezni pomnilnik zrušene aplikacije.
+
+- **AffectedSessionDuration** – trajanje seje v sekundah pred zrušitvijo.
+
+- **AffectedSessionLongBuildNumber** –dolga številka graditve.
+
+- **CrashedProcessSessionID** – »SessionID« postopka pri zrušitvi aplikacije.
+
+- **DetectionTime** – »DateTime« zrušitve aplikacije.
+    
+- **DeviceModel** – model strojne opreme.
+
+- **MERPSessionID** – ID seje MERP.
+
+- **ReportingOsLocaleTag** – območne nastavitve operacijskega sistema.
+
+- **ReportingOSVerStr** – različica operacijskega sistema.
+
+- **SessionBuildNumber** – različica zrušene aplikacije.
+
+- **SessionIDSMatch** – logična vrednost za preverjanje, ali je ID seje poročanja enak kot tisti, ki ga sprejme Merp.
+
+- **SessionVersion** – različica zrušene aplikacije – **StackHash** – zgoščena vrednost sledi sklada zrušene aplikacije.
+
+- **UAEType** – oštevilčenje, ki zagotavlja informacije o tem, do kakšne vrste zrušitve je prišlo.
+
 #### <a name="officethisaddinstartupfailed"></a>Office.ThisAddIn.StartupFailed
 
 Zbira informacije o izjemi, ki se je pojavila med zagonom orodja za pretakanje podatkov. Ti podatki se uporabljajo za nadzor stanja aplikacije. Ta dogodek ustvari Microsoftovo orodje za pretakanje podatkov za Excelov dodatek.
@@ -5234,6 +5961,27 @@ Zbrana so sledeča polja:
 ### <a name="application-feature-performance-subtype"></a>*Podvrsta za učinkovitost delovanja funkcije aplikacije*
 
 Slab odzivni čas ali slaba učinkovitost za scenarije, kot sta zagon aplikacije ali odpiranje datoteke.
+
+#### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
+
+Ko stranka uporablja Officeov dodatek in izvaja klice obogatenega API-ja za zagotavljanje storitve, bo sprožen ta dogodek. Uporablja se za merjenje zanesljivosti, učinkovitosti delovanja in uporabe storitve za priklic načina obogatenega API-ja.
+ 
+Zbrana so naslednja polja:
+
+- **Api** – polno ime API-ja
+
+- **DispFlag** – bitna zastavica, ki opisuje vrsto metode (npr.: 0x1 = METHOD, 0x2 = PROPERTYGET, 0x4 = PROPERTYPUT, 0x8 = PROPERTYPUTREF)
+
+- **Despid** – ID razpošiljanja za metodo, ki je klicana.
+
+- **HResult** – »HResult« za klic metode.
+
+- **Latency** – zakasnitev klica v mikrosekundah.
+
+- **ReqId** – GUID za paketno zahtevo, ki ji ta metoda pripada.
+
+- **TypeId** – GUID za vmesnik, v katerem je ta metoda klicana.
+
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -5273,6 +6021,29 @@ Zbrana so sledeča polja:
 
   - **ShowScanPstDlg** – pregled za popravilo trgovine je prikazal sporočilo o napaki
 
+
+#### <a name="officeoutlookmacbootperf"></a>Office.Outlook.Mac.BootPerf
+
+Zbira čas, zahtevan za zagon Outlooka. Čas zagona Outlooka je aktivno nadzorovan za zaznavanje in diagnosticiranje regresij. Prav tako se uporablja za diagnosticiranje stopnjevanj stranke in za izboljšanje učinkovitosti delovanja zagona v bodoče.
+
+Zbrana so naslednja polja:
+
+- **MacOLKBootPerfDuration** – skupni čas, porabljen za zagon.
+
+- **MacOLKBootPerfID** – identifikator časa, ki je porabljen za zagon.
+
+
+#### <a name="officeoutlookmacperformanceunresponsive"></a>Office.Outlook.Mac.PerformanceUnresponsive
+
+Uporablja se za identifikacijo težav v Outlooku, ki vplivajo na uporabnike in se lahko izrazijo kot poslabšano delovanje. 
+
+Zbrana so naslednja polja:
+
+- **Duration** – čas, potekel od poslabšanega delovanja.
+
+- **EventType** – vrsta dogodka, pri katerem prihaja do izkušnje poslabšane učinkovitosti delovanja.
+
+
 #### <a name="officeperformanceboot"></a>Office.Performance.Boot
 
 Zbrano, ko je zagnana Officeova aplikacija. Vključuje podatke o tem, kdaj je bil zagnan inicializiran z odpiranjem datoteke ali z zagonom prek začetnega menija, ali je bil to prvi zagon aplikacije, koliko pomnilnika porablja aplikacija in ali je bil uporabniku prikazan UV, ki je oviral pogled. Uporabljeno za merjenje hitrosti zagona Officeovih aplikacij in koliko pomnilnika porabijo, ko se zaženejo. Na ta način je zagotovljena sprejemljiva uporabniška izkušnja.
@@ -5293,6 +6064,28 @@ Zbrana so ta polja:
 
   - **WorkingSetPeakMB** – največja količina pomnilnika v megabajtih, ki je bila doslej v delovnem naboru postopka.
 
+#### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
+
+Uporabniška interakcija sledenja kritičnega signala s pogovornim oknom »Pridružite se programu Office Insider«. Uporablja se za identifikacijo kakršnih koli težav pri izvajanju sprememb, ki jih sproži uporabnik, kot sta pridružitev programu Office Insider ali zapuščanje tega programa in spreminjanje ravni programa Office Insider.
+
+Zbrana so naslednja polja:
+
+- **Data_AcceptedContactMeNew** – označuje, ali je uporabnik sprejel možnost vzpostavitve stika s strani družbe Microsoft, ko se je pridružil programu Office Insider.
+
+- **Data_InsiderLevel** – raven programa Insider pri odpiranju pogovornega okna »Pridružite se programu Office Insider«.
+
+- **Data_InsiderLevelNew** – raven programa Insider pri zapiranju pogovornega okna »Pridružite se programu Office Insider«.
+
+- **Data_IsInternalUser** – označuje, ali se aplikacija izvaja s poverilnicami Microsoftovega poslovnega računa.
+
+- **Data_IsInternalUserInit** – označuje, ali lahko koda določi, ali se aplikacija izvaja s poverilnicami Microsoftovega poslovnega računa.
+
+- **Data_OpenNewsletterWebpage** – označuje, ali je bila povezava do naročnine na glasilo »Office Insider« sprožena pod pogojem, da se je uporabnik pridružil programu »Office Insider«, da je omogočena funkcija »Naročnina na glasilo« in da uporabnik ni preklical odpiranja spletne strani z naročnino na glasilo »Office Insider«.
+    
+- **Data_RegisterInsider** – stanje registracije programa Office Insider.
+
+- **Data_RegisterInsiderHr** – koda rezultata za registracijo v programu Office Insider.
+
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
 
 Sledenje dejavnosti. Ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
@@ -5307,31 +6100,6 @@ Zbrana so ta polja:
 
   - **Data_Reason** – neuporabljeno
 
-#### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
-
-Sledenje dejavnosti in učinkovitost delovanja pogovornega okna storitve Office Insider.
-
-Zbrana so ta polja:
-
-  - **Data_AcceptedContactMeNew** – Ko izberete raven Insider in ko je izbor uporabnika uspešno zabeležen, označuje, ali je uporabnik podal soglasje, da lahko družba Microsoft vzpostavit stik z njim.
-
-  - **Data_DialogChoice** = neuporabljeno
-  
-  - **Data_DialogId** = neuporabljeno
-  
-  - **Data_Event** – neuporabljeno
-  
-  - **Data_EventInfo** – neuporabljeno
-  
-  - **Data_InsiderLevel** – raven programa Insider, ko je pogovorno okno prvič prikazano uporabniku.
-  
-  - **Data_InsiderLevelNew** – nova raven programa Insider, ki jo je izbral uporabnik.
-  
-  - **Data_IsInternalUser** – označuje, ali se aplikacija izvaja s poverilnicami računa @microsoft.com account.
-  
-  - **Data_IsInternalUserInit** – označuje, ali lahko koda določi, ali se aplikacija izvaja s poverilnicami računa @microsoft.com.
-  
-  - **Data_OpenNewsletterWebpage** – Ko je omogočena funkcija naročnine na glasilo za Office Insider in uporabnik z ravni Production preklopi na raven programa Insider, označuje, ali je bila aktivirana povezava za naročnino na glasilo za Office Insider za krmarjenje v brskalniku.
 
 #### <a name="officevisiosharedvisiofilerender"></a>Office.Visio.Shared.VisioFileRender
 
@@ -5431,6 +6199,19 @@ Zbrana so sledeča polja:
 
   - **Data\_Timeout** – čas neodzivnosti
 
+#### <a name="officeextensibilitysandboxodperrornotification"></a>Office.Extensibility.Sandbox.ODPErrorNotification
+
+Sledi različnim obvestilom o napakah, ki prispejo iz peskovnika. Uporablja se za zaznavanje scenarijev napak v peskovniku in na podlagi tega za odpravljanje napak, da bi prišlo do izboljšanja storilnosti uporabnika.
+ 
+Zbrana so naslednja polja:
+
+- **AppId** – ID aplikacije.
+
+- **AppUrl** – pomaknjen URL aplikacije. 
+
+- **Result** – koda napake rezultata.
+
+
 #### <a name="officegraphicsarcexceptions"></a>Office.Graphics.ARCExceptions 
 
 Ti podatki poročanja o izjemi so pomembni za ocenjevanje splošnega stanja grafike in za prepoznavanje delov v kodi, kjer pogosto prihaja do napak. Tako lahko določimo vrstni red raziskovanja. Ti podatki poročanja o izjemi so pomembni za ocenjevanje splošnega stanja grafike in za prepoznavanje delov v kodi, kjer pogosto prihaja do napak. Inženir lahko tako določi, katere napake pri upodabljanju vplivajo na večino uporabnikov, kar nam omogoča, da najprej odpravimo težave, katere v največji meri vplivajo na uporabnike.
@@ -5501,67 +6282,67 @@ V pogledih pošte, koledarja in inspektorja v Outlooku zbere podatke o uspešnih
 
 Zbrana so sledeča polja:
 
-  - **CountExceptionForward – število posredovanih izjem srečanj**
+  - **CountExceptionForward** – število posredovanih izjem srečanj.
 
-  - **CountExceptionForwardAsiCal – število posredovanih izjem srečanj kot dejanje iCal**
+  - **CountExceptionForwardAsiCal** – število posredovanih izjem srečanj kot dejanje iCal.
 
-  - **CountExceptionForwardInSplit – število posredovanih izjem srečanj iz menija za razdeljevanje na traku**
+  - **CountExceptionForwardInSplit** – število posredovanih izjem srečanj iz menija za razdeljevanje na traku.
 
-  - **CountExceptionForwardWithAttach – število posredovanih izjem srečanj kot priloga**
+  - **CountExceptionForwardWithAttach** – število posredovanih izjem srečanj kot priloga.
 
-  - **CountRecurringForward – število posredovanih ponavljajočih se srečanj**
+  - **CountRecurringForward** – število posredovanih ponavljajočih se srečanj.
 
-  - **CountRecurringForwardAsiCal – število posredovanih ponavljajočih se srečanj kot dejanje iCal**
+  - **CountRecurringForwardAsiCal** – število posredovanih ponavljajočih se srečanj kot dejanje iCal.
 
-  - **CountRecurringForwardInSplit** – število posredovanih ponavljajočih se srečanj iz menja za razdeljevanje na traku
+  - **CountRecurringForwardInSplit** – število posredovanih ponavljajočih se srečanj iz menja za razdeljevanje na traku.
 
-  - **CountRecurringForwardWithAttach – število posredovanih ponavljajočih se srečanj kot priloga**
+  - **CountRecurringForwardWithAttach** – število posredovanih ponavljajočih se srečanj kot priloga.
 
-  - **CountSingleForward – število posredovanih enkratnih srečanj**
+  - **CountSingleForward** – število posredovanih enkratnih srečanj.
 
-  - **CountSingleForwardAsiCal – število posredovanih enkratnih srečanj kot dejanje iCal**
+  - **CountSingleForwardAsiCal** – število posredovanih enkratnih srečanj kot dejanje iCal.
 
-  - **CountSingleForwardInSplit – število posredovanih enkratnih srečanj iz menja za razdeljevanje na traku**
+  - **CountSingleForwardInSplit** – število posredovanih enkratnih srečanj iz menija za razdeljevanje na traku.
 
-  - **CountSingleForwardWithAttach – število posredovanih enkratnih srečanj kot priloga**
+  - **CountSingleForwardWithAttach** – število posredovanih enkratnih srečanj kot priloga.
 
-  - **HResult- ErrorCode**
+  - **HResult** – »ErrorCode«.
 
-  - **OlkViewName – ponazarja pogled pošte, koledarja ali inšpektorja**
+  - **OlkViewName** – označuje pogled pošte, koledarja ali nadzornika.
 
 #### <a name="officeoutlookdesktopoutlookcalendarusageerrmeetrcptreplyactionsruleo16"></a>Office.Outlook.Desktop.OutlookCalendarUsageErr.MeetRcpt.ReplyActions.Rule.O16
 
 V pogledih pošte, koledarja in inšpektorja v Outlooku zbere podatke o uspešnih in neuspešnih dejanjih »Odgovori«, »Odgovori vsem«, »Odgovori z neposrednim sporočilom« in »Odgovori vsem z neposrednim sporočilom« za enkraten ter ponavljajoči se odziv in odziv izjemnega sestanka. V stopnji neuspeha za dejanja »Odgovori«, »Odgovori vsem«, »Odgovori z neposrednim sporočilom« in »Odgovori vsem z neposrednim sporočilom« aktivno iščemo anomalije. Nenavadna statistika ponazarja neuspeh Outlooka, da izvede osnovno dejanje koledarja. Ti podatki se prav tako uporabljajo za diagnosticiranje drugih zaznanih težav, povezanih s koledarjem.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
-  - **CountExceptionReply – število dejanj »Odgovori« za izjeme srečanj**
+  - **CountExceptionReply** – število dejanj »Odgovori« za srečanja pri izjemah.
 
-  - **CountExceptionReplyAll – število dejanj »Odgovori vsem« za izjeme srečanj**
+  - **CountExceptionReplyAll** – število dejanj »Odgovori vsem« za srečanja pri izjemah.
 
-  - **CountExceptionReplyAllWithIM – število dejanj »Odgovori vsem z neposrednim sporočilom« za izjeme srečanj**
+  - **CountExceptionReplyAllWithIM** – število dejanj »Odgovori vsem z neposrednim sporočilom« za srečanja pri izjemah.
 
-  - **CountExceptionReplyWithIM – število dejanj »Odgovori z neposrednim sporočilom« za izjeme srečanj**
+  - **CountExceptionReplyWithIM** – število dejanj »Odgovori z neposrednim sporočilom« za srečanja pri izjemah.
 
-  - **CountRecurringReply – število dejanj »Odgovori« v ponavljajočih se srečanjih**
+  - **CountRecurringReply** – število dejanj »Odgovori« v ponavljajočih se srečanjih.
 
-  - **CountRecurringReplyAll – število dejanj »Odgovori vsem« v ponavljajočih se srečanjih**
+  - **CountRecurringReplyAll** – število dejanj »Odgovori vsem« v ponavljajočih se srečanjih.
 
-  - **CountRecurringReplyAllWithIM – število dejanj »Odgovori vsem z neposrednim sporočilom« v ponavljajočih se srečanjih**
+  - **CountRecurringReplyAllWithIM** – število dejanj »Odgovori vsem z neposrednim sporočilom« v ponavljajočih se srečanjih.
 
-  - **CountRecurringReplyWithIM – število dejanj »Odgovori z neposrednim sporočilom« v ponavljajočih se srečanjih**
+  - **CountRecurringReplyWithIM** – število dejanj »Odgovori z neposrednim sporočilom« v ponavljajočih se srečanjih.
 
-  - **CountSingleReply – število dejanj »Odgovori« v enkratnih srečanjih**
+  - **CountSingleReply** – število dejanj »Odgovori« v enkratnih srečanjih.
 
-  - **CountSingleReplyAll – število dejanj »Odgovori vsem« v enkratnih srečanjih**
+  - **CountSingleReplyAll** – število dejanj »Odgovori vsem« v enkratnih srečanjih.
 
-  - **CountSingleReplyAllWithIM – število dejanj »Odgovori vsem z neposrednim sporočilom« v enkratnih srečanjih**
+  - **CountSingleReplyAllWithIM** – število dejanj »Odgovori vsem z neposrednim sporočilom« v enkratnih srečanjih.
 
-  - **CountSingleReplyWithIM – število dejanj »Odgovori z neposrednim sporočilom« v enkratnih srečanjih**
+  - **CountSingleReplyWithIM** – število dejanj »Odgovori z neposrednim sporočilom« v enkratnih srečanjih.
 
-  - **HResult- ErrorCode**
+  - **HResult** – »ErrorCode«.
 
-  - **OlkViewName – ponazarja pogled pošte, koledarja ali inšpektorja**
+  - **OlkViewName** – označuje pogled pošte, koledarja ali nadzornika.
 
 #### <a name="officeoutlookdesktopoutlookprivsdlgsingleuserloadfail"></a>Office.Outlook.Desktop.OutlookPrivsDlgSingleUser.LoadFail
 
@@ -5573,13 +6354,37 @@ Zbrana so sledeča polja:
 
   - **CountCreatePIMAccount** – kolikokrat je uporabnik ustvaril profil PIM
 
+#### <a name="officeoutlookmacmacolkasserts"></a>Office.Outlook.Mac.MacOLKAsserts
+
+Uporablja se za identifikacijo težav v Outlooku, ki vplivajo na uporabnike in se lahko izrazijo kot zrušitve ali poslabšanje učinkovitosti delovanja funkcionalnosti. 
+
+Zbrana so naslednja polja:
+
+- **Category** – vrsta potrditve.
+
+- **CollectionTime** – čas zbiranja potrditve.
+
+
+#### <a name="officeoutlookmacmacolkerrors"></a>Office.Outlook.Mac.MacOLKErrors
+
+Uporablja se za identifikacijo težav v Outlooku, ki vplivajo na uporabnike in se lahko izrazijo kot zrušitve ali poslabšanje učinkovitosti delovanja funkcionalnosti. 
+
+Zbrana so naslednja polja:
+
+- **Category** – vrsta napake.
+
+- **CollectionTime** – čas zbiranja napake.
+
+- **ThreadId** – identifikator niti.
+
+
 #### <a name="officesystemsystemhealthasserts"></a>Office.System.SystemHealthAsserts
 
 Napake, ki jih prepozna ta dogodek, nam omogočajo bolje razumeti, kdaj se je poslabšala uporabniška izkušnja. Številne potrditve ShipAsserts povzročajo zrušitve in te informacije nam omogočajo, da jih odpravimo. Zbira potrditve ShipAsserts izdelka, ki nam pomagajo prepoznati napake.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
-Count – število poročanih posameznih potrditev
+ - **Count** – število poročanih posameznih potrditev.
 
   - **EndTime** – čas poročanja za zadnjo potrditev
 
