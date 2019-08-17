@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Office 365 ProPlus, vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: ab024c4ce2eb4d81809880b607e084932658be3c
+ms.sourcegitcommit: 3f2319ff2f8fcde87ae5ffefa3b956a8239c4aed
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238947"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "36441617"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrolnikov zasebnosti za Office 365 ProPlus
 
@@ -65,7 +65,8 @@ Kot skrbnik organizacije lahko z nastavitvijo pravilnika določite, katero raven
 Ti diagnostični podatki ne vključujejo imen uporabnikov, njihovih e-poštnih naslovov ali vsebine njihovih datotek v Officeu. Nas sitem ustvari enolični ID, ki ga poveže z diagnostičnimi podatki o vaših uporabnikih. Ko prejmemo diagnostične podatke, iz katerih je razvidno, da se je ena naših aplikacij 100-krat nepravilno zaustavila, lahko s tem ID-jem določimo, ali je 100 zrušitev povzročil en uporabnik oziroma je 100 uporabnikov doživelo vsako po eno zrušitev. Enoličnega ID-ja ne bomo uporabili za prepoznavanje določenega uporabnika.
 
 Če si želite ogledati, katere vrste diagnostičnih podatkov so poslane Microsoftu, uporabite brezplačen pregledovalnik diagnostičnih podatkov, ki ga lahko prenesete in namestite iz Trgovine Microsoft.
-7 Če želite več informacij, preberite naslednje članke:
+
+Če želite več informacij, preberite te članke:
 
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
