@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239187"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656206"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -28,7 +28,7 @@ ms.locfileid: "36239187"
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
 >
-> Informacije veljajo tudi za različico 16,28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ko določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika, povezane z varnostjo. Te podatke si lahko ogledate s pregledovalnikom diagnostičnih podatkov.
 
@@ -2953,7 +2953,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprava (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -2994,7 +2994,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
     
-- **Device_NetworkCountry** – država naprava (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
     
@@ -3710,7 +3710,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -5561,7 +5561,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **SessionId** – identifikator seje.
 
 
 ### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
@@ -6533,7 +6533,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7499,7 +7499,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9437,7 +9437,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9794,7 +9794,7 @@ Zbrana so sledeča polja:
  
 Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
  
-Zbrana so sledeča polja
+Zbrana so naslednja polja
 
 - **CachedError_Code** – oštevilčena ali alfanumerična koda, ki se uporablja za določanje narave predpomnjene napake, in/ali razloga, zakaj se je pojavila
 
@@ -10504,8 +10504,6 @@ Zbrana so sledeča polja:
 
   - **SysVolSizeMB** – količina prostora v sistemu v megabajtih
 
-<!-- end list -->
-
   - **WindowsErrorReportingMachineId** – dodeljeni identifikator računalnika za poročanje o napakah sistema Windows v napravi, v kateri se izvaja Office
 
   - **WindowsSqmMachineId** – dodeljeni identifikator računalnika s sistemom Windows za napravo, v kateri se izvaja Office
@@ -11163,6 +11161,12 @@ Zbrana so sledeča polja:
   - **ErrorMessage** – sporočilo o napaki razčlenjevanja
 
   - **NodeName** – vozlišče, ki ga ni bilo mogoče razčleniti
+
+### <a name="officetelemetrydynamicconfigpopulatedrequestignored"></a>Office.Telemetry.DynamicConfig.PopulatedRequestIgnored
+
+Ta dogodek se ustvari, ko ne moremo nastaviti cevovoda za konfiguracijo telemetrije.
+
+Ta dogodek ne zbere nobenega polja.
 
 ### <a name="officetelemetrydynamicconfigpopulatetreecalledagain"></a>Office.Telemetry.DynamicConfig.PopulateTreeCalledAgain
 

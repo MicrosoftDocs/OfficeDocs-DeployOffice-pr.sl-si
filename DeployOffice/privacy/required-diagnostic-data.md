@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: e6078bf96c60d0f01aeaea0cabe32f135a8fa1a3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 6a03f23d77aef8f2c8f6548cf462a33194d8a4aa
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238917"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656134"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -954,27 +954,19 @@ Zbrana so naslednja polja:
 
 #### <a name="officeprogrammabilityadd-insinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
 
-Dogodek, ki je ustvarjen ustvari pri nalaganju dodatka COM v napravi s paketom Enterprise. Analitika za namizne aplikacije: število nalaganj se uporablja za ocenjevanje ustreznosti stanja (število zrušitev/število nalaganj) za izračun metrike ustreznosti stanja za pilotne in produkcijske kroge v scenarijih za podjetja. To zahteva, da so podatki natančni in ne vzorčni, saj je število naprav manjše (100–1K).
+Dogodek, ki je ustvarjen pri nalaganju dodatka COM v napravi s paketom Enterprise. 
 
-Zbrana so ta polja:
+Zbrana so naslednja polja:
 
-  - **Add-inconnectFlag** – Vedenje trenutnega nalaganja.
+  - **Rezultat dejavnosti** – stanje uspešnosti povezave.
 
-  - **Add-inDescription** – Opis dodatka.
-
-  - **Add-inFileName** – Ime datoteke dodatka, brez poti datoteke.
-
-  - **Add-inFriendlyName** – Prijazno ime dodatka.
+  - **Add-inconnectFlag** – vedenje trenutnega nalaganja.
 
   - **Add-inId** – ID razreda dodatka.
 
-  - **Add-inProgId** – ID programa za dodatek.
+  - **Add-inTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL.
 
-  - **Add-inProvider** – Ponudnik dodatka.
-
-  - **Add-inTimeDateStamp** – Časovni žig dodatka iz metapodatkov DLL.
-
-  - **Add-inVersion** – Različica dodatka.
+  - **IsBootInProgress** – ali je Officeov program v postopku zagona.
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -3016,13 +3008,11 @@ Zbrana so sledeča polja:
 
 #### <a name="officepowerpointpptmacshellprintinfo"></a>Office.PowerPoint.PPT.Mac.Shell.PrintInfo
 
-Ti podatki so zbrani vsakič, ko je dokončana operacija tiskanja datoteke PDF ali izvoza datoteke PDF, in vsebujejo informacije o vrsti postavitve in uspešnosti operacije. Te informacije so kritične za identifikacijo uspešnosti operacij tiskanja in izvažanja datoteke PDF za našo aplikacijo.
+Ti podatki so zbrani vsakič, ko je dokončan postopek izvoza v obliki datoteke PDF, in vsebujejo informacije o uspešnosti postopka. Te informacije so nujne za prepoznavanje uspešnosti postopkov izvoza v obliki datoteke PDF za našo aplikacijo.
 
 Zbrana so naslednja polja:
 
 - **Data_ExportAsPDFSucceed** – logična vrednost, ki označuje, ali je bil izvoz v obliki datoteke PDF uspešen.
-
-- **Data_SavePrintLayoutType** – vrsta postavitve tiskanja na začetku operacije tiskanja ali izvažanja.
 
 
 #### <a name="officepowerpointpptsharedslideshowfailure"></a>Office.PowerPoint.PPT.Shared.SlideShow.Failure
@@ -3635,7 +3625,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
 - **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
@@ -3732,7 +3722,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
 - **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
@@ -3847,7 +3837,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo
 
-- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.)
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
 - **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev
 
@@ -5602,10 +5592,9 @@ Zbrana so naslednja polja:
 
 #### <a name="officeextensibilitycomaddinunhandledexception"></a>Office.Extensibility.COMAddinUnhandledException
 
-Dogodek, ki se ustvari ob zrušitvi dodatka COM
+Dogodek, ustvarjen ob zrušitvah dodatka COM v potrošniški različici Officeovih aplikacij. 
 
-Namizna analitika: uporablja se kot števec pri izračunu stanja poslovnih funkcij za dodatke, ki se uporabljajo za določitev, ali je med pilotnim projektom dodatek »pripravljen na nadgradnjo« v proizvodnem ciklu.  
-Globalni vpogledi: uporablja se za izračun globalne »pripravljenosti« (ni omejena na podjetje) za dodatek, objavljen na spletnem mestu readyforwindows.com, in druga orodja, kot je komplet orodij Readiness.
+Uporaba: uporablja se za izračun globalnega »sprejetja« Office 365 ProPlus (ni omejeno na podjetje) za dodatek, objavljen na spletnem mestu readyforwindows.com, in druga orodja, kot je komplet orodij Readiness. S tem lahko poslovne stranke preverijo, če so dodatki, ki so bili uvedeni v njihovih podjetjih, združljivi z najnovejšimi različicami sistema Office 365 ProPlus, in ustrezno načrtujejo njihove nadgradnje. 
 
 Zbrana so sledeča polja:
 
@@ -5617,15 +5606,15 @@ Zbrana so sledeča polja:
 
 - **AddinId** – ID razreda za dodatek
 
-- **AddinProgId** – ID programa za dodatek
+- **AddinProgId** – zastarelo.
 
-- **AddinFriendlyName** – prijazno ime dodatka
+- **AddinFriendlyName** – zastarelo.
 
-- **AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL
+- **AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL.
 
-- **AddinVersion** – različica dodatka
+- **AddinVersion** – zastarelo.
 
-- **AddinFileName** – ime datoteke za dodatek brez poti datoteke
+- **AddinFileName** – zastarelo.
 
 - **VSTOAddIn** – ali je dodatek vrste VSTO
 
@@ -5635,34 +5624,33 @@ Zbrana so sledeča polja:
 
 #### <a name="officeextensibilitycomaddinunhandledexceptionenterprise"></a>Office.Extensibility.COMAddinUnhandledExceptionEnterprise
 
-Dogodek, ki se ustvari ob zrušitvah dodatka COM.  Uporablja se kot števec pri izračunu ustreznosti stanja poslovnih funkcij za dodatke, ki se uporabljajo za določitev, ali je med pilotnim projektom dodatek »pripravljen na nadgradnjo« v proizvodnem ciklu.
+Dogodek, ustvarjen ob zrušitvah dodatka COM v poslovni različici Officeovih aplikacij.
 
-Zbrana so naslednja polja (upoštevajte, da so ta polja zapisana kot označbe mest, da preprečijo prelome obstoječih skriptov: »AddinFriendlyName«, »AddinProgId«, »AddinVersion«, »AddinFileName«).
+Uporaba: uporablja se za izračun globalnega »sprejetja« Office 365 ProPlus (ni omejeno na podjetje) za dodatek, objavljen na spletnem mestu readyforwindows.com, in druga orodja, kot je komplet orodij Readiness. S tem lahko poslovne stranke preverijo, če so dodatki, ki so bili uvedeni v njihovih podjetjih, združljivi z najnovejšimi različicami sistema Office 365 ProPlus, in ustrezno načrtujejo njihove nadgradnje. 
 
+- **ScopeId** – obseg trenutne niti
 
-- **AddinConnectFlag** – vedenje trenutnega nalaganja.
+- **Method** – Officeov način, kjer je prišlo do izjeme
 
-- **AddinFileName** – polje je prazno – opuščeno.
+- **Interface** – Officeov vmesnik, kjer je prišlo do izjeme
 
-- **AddinFriendlyName** – polje je prazno – opuščeno.
+- **AddinId** – ID razreda za dodatek
 
-- **AddinId** – ID razreda dodatka.
+- **AddinProgId** – zastarelo.
 
-- **AddinProgId** – polje je prazno – opuščeno.
+- **AddinFriendlyName** – zastarelo.
 
 - **AddinTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL.
 
-- **AddinVersion** – polje je prazno – opuščeno.
+- **AddinVersion** – zastarelo.
 
-- **Interface** – Officeov vmesnik, kjer je prišlo do izjeme.
+- **AddinFileName** – zastarelo.
 
-- **LoadAttempts** – število poskusov nalaganja dodatka.
+- **VSTOAddIn** – ali je dodatek vrste VSTO
 
-- **Method** – Officeov način, pri katerem je prišlo do izjeme.
+- **AddinConnectFlag** – vedenje trenutnega nalaganja
 
-- **ScopeId** – obseg trenutne niti.
-
-- **VSTOAddIn** – označuje, ali je dodatek vrste VSTO.
+- **LoadAttempts** – število poskusov za nalaganje izdelka
 
 #### <a name="officeextensibilitysandboxodpactivationheartbeat"></a>Office.Extensibility.Sandbox.ODPActivationHeartbeat
 
@@ -6050,7 +6038,11 @@ Zbrano, ko je zagnana Officeova aplikacija. Vključuje podatke o tem, kdaj je bi
 
 Zbrana so ta polja:
 
-  - **ActivationKind** – ali je bila aplikacija zagnana z zagonom v začetnem meniju, z odpiranjem datoteke ali z avtomatizacijo OLE.
+  - **ActivationKind** – ali je bila aplikacija zagnana z zagonom v začetnem meniju, z odpiranjem datoteke ali avtomatizacijo OLE.
+  
+  - **BootToStart** – ali se je uporabnik odločil za prikaz začetnega zaslona, ko se ta aplikacija zažene.
+
+  - **Data_DocumentLocation** – pri odpiranju dokumenta označuje, v kateri storitvi je na voljo dokument (OneDrive, File Server, SharePoint itd.).
 
   - **FirstBoot** – ali je bil to prvi zagon aplikacije.
 
@@ -6064,9 +6056,39 @@ Zbrana so ta polja:
 
   - **WorkingSetPeakMB** – največja količina pomnilnika v megabajtih, ki je bila doslej v delovnem naboru postopka.
 
+#### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
+
+Sledenje dejavnosti. Ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
+
+Zbrana so ta polja:
+
+  - **Data_CanShow** – označuje, ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
+  
+  - **Data_Event** – neuporabljeno
+
+  - **Data_EventInfo** – neuporabljeno
+
+  - **Data_Reason** – neuporabljeno.
+ 
+
+#### <a name="officeuxofficeinsiderregistercurrentinsider"></a>Office.UX.OfficeInsider.RegisterCurrentInsider
+
+Kritični signal za spremljanje zmožnosti ali nezmožnosti registracije uporabnikov, ki niso bili registrirani kot uporabniki programa Office Insider, z uporabo gradenj programa Office Insider. Glavni scenarij za to so trenutni uporabniki programa Office Insider, ki so se pridružili programu Office Insider, preden je bila dodana registracija programa Office Insider.
+
+Zbrana so naslednja polja:
+
+- **Data_RegisterInsider** – stanje registracije programa Office Insider.
+
+- **Data_RegisterInsiderHr** – koda rezultata za registracijo v programu Office Insider.
+
+- **Data_RegistrationStateCurrent** – trenutno stanje registracije.
+
+- **Data_RegistrationStateDesired** – zahtevano stanje registracije.
+
+
 #### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
 
-Uporabniška interakcija sledenja kritičnega signala s pogovornim oknom »Pridružite se programu Office Insider«. Uporablja se za identifikacijo kakršnih koli težav pri izvajanju sprememb, ki jih sproži uporabnik, kot sta pridružitev programu Office Insider ali zapuščanje tega programa in spreminjanje ravni programa Office Insider.
+Uporabniška interakcija sledenja kritičnega signala s pogovornim oknom »Pridružite se programu Office Insider«. Uporablja se za prepoznavanje kakršnih koli težav pri izvajanju sprememb, ki jih sproži uporabnik, kot sta pridružitev programu Office Insider ali zapuščanje tega programa in spreminjanje ravni programa Office Insider.
 
 Zbrana so naslednja polja:
 
@@ -6086,19 +6108,11 @@ Zbrana so naslednja polja:
 
 - **Data_RegisterInsiderHr** – koda rezultata za registracijo v programu Office Insider.
 
-#### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
+- **Data_RegistrationStateCurrent** – trenutno stanje registracije.
 
-Sledenje dejavnosti. Ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
+- **Data_RegistrationStateDesired** – zahtevano stanje registracije.
 
-Zbrana so ta polja:
 
-  - **Data_CanShow** – označuje, ali je mogoče pomnilniški blok storitve Office Insider prikazati uporabniku na zavihku »Račun« v uporabniškem vmesniku »Office Backstage«.
-  
-  - **Data_Event** – neuporabljeno
-
-  - **Data_EventInfo** – neuporabljeno
-
-  - **Data_Reason** – neuporabljeno
 
 
 #### <a name="officevisiosharedvisiofilerender"></a>Office.Visio.Shared.VisioFileRender
