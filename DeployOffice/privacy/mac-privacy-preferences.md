@@ -12,7 +12,7 @@ ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
 - Ent_Office_Mac
-description: Officeovim skrbnikom omogoča informacije o načinu uporabe prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac.
+description: Officeovim skrbnikom ponuja informacije o načinu uporabe prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac.
 hideEdit: true
 ms.openlocfilehash: 01bb31f3b6c307ec1dc4762b54fea17185dcf27d
 ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
@@ -99,7 +99,7 @@ Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, lahko v 
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Prednostna nastavitev za izbirne povezane izkušnje
 
-Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije, imenovanih tudi službeni ali šolski računi. Na primer funkcije LinkedIn pomočnika za življenjepis v Wordu ali vrstica za vreme v Outlooku, ki uporablja storitev Vreme MSN. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
+Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije, imenovanih tudi službeni ali šolski računi. Na primer funkcije LinkedIn pomočnika za življenjepis v Wordu ali vrstice za vreme v Outlooku, ki uporablja storitev Vreme MSN. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
 |||
 |:-----|:-----|
@@ -111,7 +111,7 @@ Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodat
 
 Če te prednostne nastavitve ne nastavite, so izbirne povezane izkušnje na voljo uporabnikom z naročnino na Office 365, ki so vpisani s službenim ali šolskim računom, oz. uporabnikom, ki imajo različico sistema Office 2019 za Mac za količinsko licenciranje. Če te prednostne nastavitve ne nastavite na `FALSE`, lahko ti uporabniki v možnosti **Nastavitve** > **Zasebnost** izklopijo izbirne povezane izkušnje.
 
-Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, nimajo možnosti izklopa izbirnih povezanih izkušenj.
+Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, ne morejo izklopiti izbirnih povezanih izkušenj.
 
 ## <a name="preference-setting-for-most-connected-experiences"></a>Prednostna nastavitev za najpogostejše povezane izkušnje
 
