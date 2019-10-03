@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 1ae21c76eb0cc4addcc0a26e7ca1330aef99eee1
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 04d71fcd601f76d2613dda9bd00dccd24ab8e950
+ms.sourcegitcommit: 27db488cae3bd23342bc0d902c53b5bf89ae30a7
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238237"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37379783"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -28,7 +28,7 @@ ms.locfileid: "36238237"
 > - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
 >
-> Informacije veljajo tudi za različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
 
@@ -47,6 +47,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Urejevalnik    | [Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Zamisli     | [Zamisli v Excelu](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
+| Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Napisi in podnapisi v živo |  [Predstavljajte s samodejnimi napisi in podnapisi v realnem času v PowerPointu](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | Zemljevidi v funkciji Power View   | [Zemljevidi v funkciji Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Storitev za predstavitve Office  | [Oddajajte svojo PowerPointovo predstavitev oddaljenemu občinstvu v spletu](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
