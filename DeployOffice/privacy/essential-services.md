@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656206"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386935"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -585,6 +585,27 @@ Zbrana so sledeča polja:
   - **Data\_PrereqFailure\_Type** – zahtevana okvara, do katere je prišlo
 
   - **Data\_ProductReleaseId** – izdelek, ki ga nameščamo, npr. Office 365 ProPlus
+
+### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
+
+Poroča o stanju novega posodobitvenega cevovoda »Zagon s klikom« (»Repoman«), če pa se uspešno prenese, uveljavi posodobitve za Office.
+
+Zbrana so naslednja polja:
+
+  - **ApplySucceeded** – ima vrednost true, če je cevovod uspešno uveljavil posodobitev, v nasprotnem primeru pa vrednost false.
+  
+  - **DownloadSucceeded** – ima vrednost true, če je cevovod uspešno prenesel posodobitev, v nasprotnem primeru pa vrednost false.
+
+  - **ErrorCode** – koda zadnje napake, ki se je pojavila v cevovodu »Zagon s klikom« Repoman.
+
+  - **ErrorCode** – dodatne podrobnosti zadnje napake, ki se je pojavila v cevovodu »Zagon s klikom« Repoman.
+ 
+  - **ErrorMessage** – sporočilo zadnje napake, ki se je pojavila v cevovodu »Zagon s klikom« Repoman.
+
+  - **OpenStreamSessionSucceeded** – ima vrednost true, če cevovod uspešno ustvari sejo za pretakanje Officeove posodobitve, v nasprotnem primeru pa vrednost false.
+
+  - **RepomanErrorMessage** – iz datoteke repoman.dll je bilo prejeto sporočilo o napaki.
+ 
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
@@ -2658,6 +2679,13 @@ Zbrana so sledeča polja:
 
   - **UnmergedConfigs** – seznam konfiguracij, ki niso spojene
 
+### <a name="officeexperimentationtriggeranalysis"></a>Office.Experimentation.TriggerAnalysis
+
+Ta dogodek omogoča analizo obsega uporabe izdelkov in metrike učinkovitosti delovanja (npr. zrušitve, neodzivnost ipd.) za podnabor porabnikov ali naprav, ki so upravičeni do uporabe zadevne funkcije, s tem pa pomaga zagotoviti, da izdelek deluje pravilno.
+
+Zbrana so naslednja polja:
+
+  - **FeatureGate** – določa nabor funkcij, za katere se uporablja sprožitvena analiza.
 
 ## <a name="licensing-events"></a>Licenciranje dogodkov
 
@@ -2957,7 +2985,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -2965,7 +2993,7 @@ Zbrana so sledeča polja:
 
  - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3006,7 +3034,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3047,7 +3075,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3080,7 +3108,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3088,7 +3116,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3111,7 +3139,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3121,7 +3149,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3129,7 +3157,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3170,7 +3198,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3211,7 +3239,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3252,7 +3280,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3285,7 +3313,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3293,7 +3321,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3316,7 +3344,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3326,7 +3354,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3334,7 +3362,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3357,7 +3385,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3367,7 +3395,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3375,13 +3403,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3398,7 +3426,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3408,7 +3436,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3416,13 +3444,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3439,7 +3467,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3449,7 +3477,7 @@ Zbrana so sledeča polja:
     
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3457,13 +3485,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
     
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3480,7 +3508,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3490,7 +3518,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3498,13 +3526,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3522,7 +3550,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3532,7 +3560,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
     
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3540,13 +3568,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3563,7 +3591,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3573,7 +3601,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3581,13 +3609,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3604,7 +3632,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
     
@@ -3614,7 +3642,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3622,13 +3650,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3645,7 +3673,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3655,7 +3683,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3663,13 +3691,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3682,11 +3710,11 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3696,7 +3724,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3704,7 +3732,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3727,7 +3755,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3737,7 +3765,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3745,13 +3773,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3768,7 +3796,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3778,7 +3806,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3786,13 +3814,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3809,7 +3837,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3819,7 +3847,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3827,13 +3855,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3850,7 +3878,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3860,7 +3888,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3868,13 +3896,13 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – statično besedilo. 
+- **Payload** – statično besedilo. 
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -3891,7 +3919,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3901,7 +3929,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3909,7 +3937,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3932,7 +3960,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3942,7 +3970,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3950,7 +3978,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -3973,7 +4001,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3983,7 +4011,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -3991,7 +4019,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4014,7 +4042,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4024,7 +4052,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4032,7 +4060,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4055,7 +4083,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4065,7 +4093,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4073,7 +4101,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4096,7 +4124,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
     
 - **AppversionLong** – različica programa
 
@@ -4106,7 +4134,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4114,7 +4142,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4137,7 +4165,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4147,7 +4175,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4155,7 +4183,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4178,7 +4206,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4188,7 +4216,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4196,7 +4224,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4219,7 +4247,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4229,7 +4257,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4237,7 +4265,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4260,7 +4288,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4270,7 +4298,7 @@ Zbrana so sledeča polja:
     
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
     
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4278,7 +4306,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4300,7 +4328,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4310,7 +4338,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4318,7 +4346,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4341,7 +4369,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4351,7 +4379,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4359,7 +4387,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4382,7 +4410,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4392,7 +4420,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4400,7 +4428,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4423,7 +4451,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4433,7 +4461,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4441,7 +4469,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4464,7 +4492,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4474,7 +4502,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4482,7 +4510,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4505,7 +4533,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4515,7 +4543,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4523,7 +4551,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4546,7 +4574,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4556,7 +4584,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4564,7 +4592,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4587,7 +4615,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4597,7 +4625,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4605,7 +4633,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4628,17 +4656,17 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4646,7 +4674,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4670,7 +4698,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4680,7 +4708,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4688,7 +4716,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4711,7 +4739,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4721,7 +4749,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4729,7 +4757,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4752,7 +4780,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4762,7 +4790,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4770,7 +4798,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4793,7 +4821,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4803,7 +4831,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4811,7 +4839,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4834,7 +4862,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4844,7 +4872,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4852,7 +4880,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4875,7 +4903,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4885,7 +4913,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4893,7 +4921,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4916,7 +4944,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4926,7 +4954,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4934,7 +4962,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4957,7 +4985,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4967,7 +4995,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -4975,7 +5003,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -4998,7 +5026,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5008,7 +5036,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5016,7 +5044,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5039,7 +5067,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5049,7 +5077,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5057,7 +5085,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5080,7 +5108,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5090,7 +5118,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5098,7 +5126,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5121,7 +5149,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5131,7 +5159,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5139,7 +5167,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5162,7 +5190,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5172,7 +5200,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5180,7 +5208,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5203,7 +5231,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5213,7 +5241,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5221,7 +5249,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5244,7 +5272,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5254,7 +5282,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5262,7 +5290,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5285,7 +5313,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5295,7 +5323,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5303,7 +5331,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5326,7 +5354,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5336,7 +5364,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5344,7 +5372,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5367,7 +5395,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5377,7 +5405,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5385,7 +5413,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5408,7 +5436,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5418,7 +5446,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5426,7 +5454,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5449,7 +5477,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5459,7 +5487,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5467,7 +5495,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5490,7 +5518,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5500,7 +5528,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5508,7 +5536,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5531,9 +5559,9 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
@@ -5541,7 +5569,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5549,7 +5577,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5572,7 +5600,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5582,7 +5610,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5590,7 +5618,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5613,7 +5641,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5623,7 +5651,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5631,7 +5659,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5654,7 +5682,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5664,7 +5692,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5672,7 +5700,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5695,7 +5723,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5705,7 +5733,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5713,7 +5741,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5736,7 +5764,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5746,7 +5774,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5754,7 +5782,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5777,7 +5805,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5787,7 +5815,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5795,7 +5823,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5818,7 +5846,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5828,7 +5856,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5836,7 +5864,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5859,7 +5887,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5869,7 +5897,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5877,7 +5905,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5900,7 +5928,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5910,7 +5938,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5918,7 +5946,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5941,7 +5969,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5951,7 +5979,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -5959,7 +5987,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -5982,7 +6010,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -5992,7 +6020,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6000,7 +6028,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6023,7 +6051,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6033,7 +6061,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6041,7 +6069,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6064,7 +6092,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6074,7 +6102,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6082,7 +6110,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6105,7 +6133,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6115,7 +6143,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6123,7 +6151,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6146,7 +6174,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6156,7 +6184,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6164,7 +6192,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6187,7 +6215,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6197,7 +6225,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6205,7 +6233,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6228,7 +6256,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6238,7 +6266,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6246,7 +6274,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6269,7 +6297,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6279,7 +6307,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6287,7 +6315,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6310,7 +6338,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6320,7 +6348,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6328,7 +6356,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6351,7 +6379,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6361,7 +6389,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6369,7 +6397,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6392,7 +6420,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6402,7 +6430,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6410,7 +6438,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6433,7 +6461,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6443,7 +6471,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6451,7 +6479,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6474,7 +6502,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6484,7 +6512,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6492,7 +6520,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6515,7 +6543,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6525,7 +6553,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6556,7 +6584,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6566,7 +6594,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6574,7 +6602,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6597,7 +6625,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6607,7 +6635,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6615,7 +6643,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6638,7 +6666,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6648,7 +6676,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6656,7 +6684,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6679,7 +6707,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6689,7 +6717,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6697,7 +6725,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6720,7 +6748,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6730,7 +6758,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6738,7 +6766,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6761,7 +6789,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6771,7 +6799,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6779,7 +6807,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6802,7 +6830,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6812,7 +6840,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6820,7 +6848,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6843,7 +6871,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6853,7 +6881,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6861,7 +6889,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6884,7 +6912,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6894,7 +6922,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6902,7 +6930,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6925,7 +6953,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6935,7 +6963,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6943,7 +6971,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -6966,7 +6994,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6976,7 +7004,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -6984,7 +7012,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7007,7 +7035,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7017,7 +7045,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7025,7 +7053,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7048,7 +7076,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7058,7 +7086,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7066,7 +7094,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7089,7 +7117,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7099,7 +7127,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7107,7 +7135,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7130,7 +7158,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7140,7 +7168,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7148,7 +7176,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7171,7 +7199,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7181,7 +7209,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7189,7 +7217,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7212,7 +7240,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7222,7 +7250,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7230,7 +7258,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7253,7 +7281,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7263,7 +7291,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7271,7 +7299,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7294,7 +7322,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7304,7 +7332,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7312,7 +7340,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7335,7 +7363,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7345,7 +7373,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7353,7 +7381,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7386,7 +7414,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7394,7 +7422,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7417,7 +7445,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7427,7 +7455,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7435,7 +7463,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7458,7 +7486,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7468,7 +7496,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7476,7 +7504,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7509,7 +7537,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7517,7 +7545,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7540,7 +7568,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7550,7 +7578,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7558,7 +7586,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7581,7 +7609,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7591,7 +7619,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7599,7 +7627,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7622,7 +7650,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7632,7 +7660,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7640,7 +7668,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7663,7 +7691,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7673,7 +7701,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7681,7 +7709,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7704,7 +7732,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7714,7 +7742,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7722,7 +7750,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7745,7 +7773,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7755,7 +7783,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7763,7 +7791,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
     
@@ -7786,7 +7814,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7796,7 +7824,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7804,7 +7832,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7827,7 +7855,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7837,7 +7865,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7845,7 +7873,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7868,7 +7896,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7878,7 +7906,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7886,7 +7914,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7909,7 +7937,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7919,7 +7947,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7927,7 +7955,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7950,7 +7978,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7960,7 +7988,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -7968,7 +7996,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -7992,7 +8020,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8002,7 +8030,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8010,7 +8038,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8033,7 +8061,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8043,7 +8071,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8051,7 +8079,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8074,7 +8102,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8084,7 +8112,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8092,7 +8120,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8115,7 +8143,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8125,7 +8153,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8133,7 +8161,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8156,7 +8184,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8166,7 +8194,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8174,7 +8202,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8197,7 +8225,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8207,7 +8235,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8215,7 +8243,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8238,7 +8266,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8248,7 +8276,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8256,7 +8284,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8279,7 +8307,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8289,7 +8317,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8297,7 +8325,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8320,7 +8348,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8330,7 +8358,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8338,7 +8366,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8361,7 +8389,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8371,7 +8399,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8379,7 +8407,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8402,7 +8430,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8412,7 +8440,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8420,7 +8448,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8443,7 +8471,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8453,7 +8481,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8461,7 +8489,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8484,7 +8512,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8494,7 +8522,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8502,7 +8530,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8525,7 +8553,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8535,7 +8563,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8543,7 +8571,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8566,7 +8594,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8576,7 +8604,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8584,7 +8612,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8607,7 +8635,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8617,7 +8645,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8625,7 +8653,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8648,7 +8676,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8658,7 +8686,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8666,7 +8694,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
     
@@ -8689,7 +8717,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8699,7 +8727,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8707,7 +8735,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8730,7 +8758,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8740,7 +8768,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8748,7 +8776,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8771,7 +8799,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8781,7 +8809,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8789,7 +8817,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8812,7 +8840,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8822,7 +8850,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8830,7 +8858,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8853,7 +8881,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8863,7 +8891,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8871,7 +8899,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8894,7 +8922,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8904,7 +8932,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8912,7 +8940,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8935,7 +8963,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8945,7 +8973,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8953,7 +8981,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -8976,7 +9004,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8986,7 +9014,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -8994,7 +9022,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9017,7 +9045,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9027,7 +9055,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9035,7 +9063,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9058,7 +9086,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9068,7 +9096,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9076,7 +9104,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9099,7 +9127,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9109,7 +9137,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9117,7 +9145,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9140,7 +9168,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9150,7 +9178,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9158,7 +9186,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9181,7 +9209,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9191,7 +9219,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9199,7 +9227,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9222,7 +9250,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9232,7 +9260,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9240,7 +9268,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9263,7 +9291,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9273,7 +9301,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9281,7 +9309,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9304,7 +9332,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9314,7 +9342,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9322,7 +9350,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9345,7 +9373,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9355,7 +9383,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9363,7 +9391,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9386,48 +9414,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
-
-- **AppversionLong** – različica programa
-
-- **Channel** – ugodnost občinstva
-
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
-
-- **DeviceID** – identifikator naprave
-
-- **DeviceInfo_Model** – model strojne opreme naprave
-
-- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
-
-- **DeviceInfo_OsBuild** – različica operacijskega sistema
-
-- **Event_ReceivedTime** – ura prejemanja telemetrijo
-
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
-
-- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
-
-- **HowTocheck** – ugodnost za preverjanje posodobitev
-
-- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
-
-- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
-
-- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
-
-- **ID** seje – identifikator za sejo
-
-
-### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
-
-Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
- 
-Zbrana so sledeča polja:
-
-- **Aplikacija** – postopek prijave, ki pošilja dogodek
-
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9445,7 +9432,48 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Payload** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+
+### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+
+Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave.
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9468,7 +9496,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9478,7 +9506,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9486,7 +9514,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9509,7 +9537,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9519,7 +9547,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9527,7 +9555,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9550,7 +9578,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9560,7 +9588,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9568,7 +9596,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9591,7 +9619,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9601,7 +9629,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9609,7 +9637,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9632,7 +9660,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9642,7 +9670,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9650,7 +9678,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9673,7 +9701,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9683,7 +9711,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9691,7 +9719,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9714,7 +9742,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9724,7 +9752,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9732,7 +9760,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -9756,7 +9784,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9766,7 +9794,7 @@ Zbrana so sledeča polja:
 
 - **DeviceID** – identifikator naprave
 
-- **DeviceInfo_Model** – model strojne opreme naprave
+- **DeviceInfo_Model** – model strojne opreme naprave.
 
 - **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
 
@@ -9774,7 +9802,7 @@ Zbrana so sledeča polja:
 
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
-- **EventInfo_Name** – ime dogodka »telemetrijo«, ki se zabeleži
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
@@ -10392,7 +10420,7 @@ Zbrana so sledeča polja:
 
   - **ComputerSystemProductUuidHash** – enosmerna zgostitev UUID-ja matične plošče
 
-  - **DeviceClass** – identifikator za vrsto naprave, v kateri se izvaja Office
+  - **DeviceClass** – identifikator za vrsto naprave, v kateri se izvaja Office.
 
   - **DeviceMake** – identifikator za vrsto sistema strojne opreme za napravo, v kateri se izvaja Office
 
@@ -10920,9 +10948,9 @@ Zbrana so sledeča polja:
 
 ### <a name="officesystemsystemhealthungracefulapplicationexitwin32"></a>Office.System.SystemHealthUngracefulApplicationExitWin32
 
-Dogodek se uporablja za metrike zrušitev.
+Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanja upravitelja opravil, neodzivnost aplikacije ipd.) v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Metriko motenega zapiranja aplikacij uporabljamo za merjenje stanja Officeovih odjemalskih izdelkov. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
   - **CrashedProcessAppBuild** – identifikator delovne različice za vplivani proces
 
@@ -10932,11 +10960,7 @@ Zbrana so sledeča polja:
 
   - **CrashedAppRevision** – identifikator delovne različice za vplivani proces
 
-  - **CrashedConfigIds** – konfiguracija, dodeljena procesu zrušitve
-
-  - **CrashedEcsETag** – identifikator preskusa za proces zrušitve
-
-  - **CrashedImpressionId** – identifikator vtisa za proces zrušitve
+  - **CrashedEcsETag** – identifikator preskusa za proces zrušitve.
 
   - **CrashedModuleName** – ime modula z napako
 
@@ -10951,6 +10975,8 @@ Zbrana so sledeča polja:
   - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake
 
   - **ExceptionCode** – identifikator razdeljevanja za izjemo
+
+  - **HexCrashTag** – enolični identifikator za kodo zrušitve.
 
   - **HexExceptionAddress** – mesto v programu, kjer je prišlo do napake, v šestnajstiški obliki
 
@@ -10977,6 +11003,8 @@ Zbrana so sledeča polja:
   - **PreviousBuild** – prejšnja nameščena delovna različica
 
   - **UAEOSEnvironment** – identifikator okolja za operacijski sistem
+
+  - **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
 
   - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije
 
