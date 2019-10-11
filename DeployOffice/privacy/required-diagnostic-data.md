@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 6a03f23d77aef8f2c8f6548cf462a33194d8a4aa
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: a5770d3ed30f86dfbf1cb1dfc4a45bbb15179da8
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656134"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386981"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -124,31 +124,31 @@ Ta kategorija vsebuje ta polja:
 
   - **DiagnosticConsentSourceLocation** – Označuje, kako je uporabnik soglašal z uporabo diagnostičnih podatkov.
 
-  - **DiagnosticConsentConsentTime** – Označuje, kdaj je uporabnik soglašal z uporabo diagnostičnih podatkov.
+  - **DiagnosticConsentConsentTime** – Označuje, kdaj je uporabnik soglašal z uporabo diagnostičnih podatkov. Datum bo prikazan kot človeško berljiv datum ali kot strojno kodiran datum, ki je videti kot veliko število.
 
   - **ServiceConnectionState** – Označuje, ali je uporabnik izbral, da želi oz. ne želi uporabljati vse povezane izkušnje.
 
   - **ServiceConnectionStateSourceLocation** – Označuje, kako je uporabnik izbral možnost uporabe vseh povezanih izkušenj.
 
-  - **ServiceConnectionStateConsentTime** – Označuje, kdaj je uporabnik izbral, ali želi uporabljati vse povezane izkušnje.
+  - **ServiceConnectionStateConsentTime** – Označuje, kdaj je uporabnik izbral, ali želi uporabljati vse povezane izkušnje. Datum bo prikazan kot človeško berljiv datum ali kot strojno kodiran datum, ki je videti kot veliko število.
 
   - **ControllerConnectedServicesState** – Označuje, ali ima uporabnik dostop do izbirnih povezanih izkušenj.
 
   - **ControllerConnectedServicesStateSourceLocation** – Označuje, kako je uporabnik izbral uporabo izbirnih povezanih izkušenj.
 
-  - **ControllerConnectedServicesStateConsentTime** – Označuje, kdaj je uporabnik izbral stanje izbirnih povezanih izkušenj.
+  - **ControllerConnectedServicesStateConsentTime** – Označuje, kdaj je uporabnik izbral stanje izbirnih povezanih izkušenj. Datum bo prikazan kot človeško berljiv datum ali kot strojno kodiran datum, ki je videti kot veliko število.
 
   - **UserContentDependentState** – Označuje, ali je uporabnik omogočil oz. onemogočil povezane izkušnje, ki analizirajo vsebino.
 
   - **UserContentDependentStateSourceLocation** – Označuje, kako je uporabnik omogočil oz. onemogočil povezane izkušnje, ki analizirajo vsebino.
 
-  - **UserContentDependentStateConsentTime** – Označuje, kdaj je uporabnik omogočil oz. onemogočil povezane izkušnje, ki analizirajo vsebino.
+  - **UserContentDependentStateConsentTime** – Označuje, kdaj je uporabnik omogočil oz. onemogočil povezane izkušnje, ki analizirajo vsebino. Datum bo prikazan kot človeško berljiv datum ali kot strojno kodiran datum, ki je videti kot veliko število.
 
   - **DownloadContentState** – Označuje, ali je uporabnik omogočil oz. onemogočil povezane izkušnje, ki prenašajo spletno vsebino.
 
   - **DownloadContentStateSourceLocation** – Označuje, kako je uporabnik omogočil oz. onemogočil povezane izkušnje, ki prenašajo spletno vsebino.
 
-  - **DownloadContentStateConsentTime** – Označuje, kdaj je uporabnik omogočil oz. onemogočil povezane izkušnje, ki prenašajo spletno vsebino.
+  - **DownloadContentStateConsentTime** – Označuje, kdaj je uporabnik omogočil oz. onemogočil povezane izkušnje, ki prenašajo spletno vsebino. Datum bo prikazan kot človeško berljiv datum ali kot strojno kodiran datum, ki je videti kot veliko število.
 
 #### <a name="device"></a>Naprava 
 
@@ -305,6 +305,10 @@ Ta kategorija vsebuje ta polja:
   - **MotherboardUUIDHash** – Zgoščena vrednost enoličnega identifikatorja za matično ploščo. Omogoča razvrstitev podatkov glede na osrednjo napravo.
 
   - **Name** – Ime naprave. Omogoča razvrstitev podatkov glede na osrednjo napravo.
+  
+  - **NetworkCost** – Označuje strošek/vrsto omrežja, kot je omejen prenos podatkov, omejeno nad zgornjo mejo.
+  
+  - **NetworkCountry** – koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
 
   - **NumProcPhysCores** – Število fizičnih jeder v računalniku. Omogoča razvrstitev podatkov glede na osrednjo napravo.
 
@@ -613,7 +617,66 @@ Zbrana so ta polja:
 
 - **sessionID** – Naključno ustvarjeni GUID za prepoznavanje seje aplikacije.
 
-- **UTCReplace_AppSessionGuid** – Logična vrednost konstante. Vedno ima vrednost »true«.
+- **UTCReplace_AppSessionGuid** – Logična vrednost konstante. Vedno ima vrednost true.
+
+#### <a name="officeonenotefirstrunfirstrun"></a>Office.OneNote.FirstRun.FirstRun
+
+Kritični signal, ki se uporablja, da lahko novi uporabniki prvič uspešno zaženejo in začnejo uporabljati OneNote.  Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+- **AfterOneDriveFrozenAccountError** – označuje napako OneDrive, ko je račun zamrznjen.
+
+- **Poskus** – kolikokrat je treba izvesti uporabniško izkušnjo prvega zagona.
+
+- **IsDefaultNotebookCreated** – označuje, ali je OneNote ustvaril uporabniški privzeti zvezek ali ne.
+
+- **IsDelayedSignIn** – označuje, ali je prvi zagon v zakasnitvi pri vpisu, kjer se uporabniku ni treba vpisati.
+
+- **IsMSA** – označuje, ali je račun Microsoftov račun ali ne.
+
+#### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
+
+Kritični signal, ki se uporablja, da lahko novi uporabniki (Microsoftov račun) prvič uspešno zaženejo in začnejo uporabljati OneNote.
+Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **Poskus** – kolikokrat je treba izvesti uporabniško izkušnjo prvega zagona.
+
+- **Napaka A** – predmet napake označuje napako med napako med prvim zagonom, če pride do nje.
+
+- **FAllowAddingGuide** – označuje, ali bo OneNote omogočil ustvarjanje zvezka za vodenje ali ne.
+
+- **FrozenOneDriveAccount** – označuje, ali je račun OneDrive zamrznjen ali ne.
+
+- **IsDefaultNotebookCreated** – označuje, ali je OneNote ustvaril uporabniški privzeti zvezek ali ne.
+
+- **NoInternetConnection** – označuje, ali naprava nima nameščene internetne povezave.
+
+- **ProvisioningFailure** – predmet napake v OneNote, ki označuje napako pri omogočanju uporabe, če pride do nje.
+
+- **ProvisioningFinishedTime** – označuje končni čas, ko OneNote dokonča omogočanje uporabe zvezka med izkušnjo prvega zagona.
+
+- **ProvisioningStartedTime** – označuje začetni čas, ko OneNote začne omogočati uporabo zvezka med izkušnjo prvega zagona.
+
+- **ShowSuggestedNotebooks** – označuje, ali OneNote prikaže funkcijo predlaganega zvezka ali ne.
+
+#### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
+
+Kritični signal, ki se uporablja, da lahko novi poslovni uporabniki(AAD/OrgID) prvič uspešno zaženejo in začnejo uporabljati OneNote.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+- **Poskus** – kolikokrat je treba izvesti uporabniško izkušnjo prvega zagona.
+
+- **Napaka** – A predmet napake OneNote označuje napako med prvim zagonom, če pride do nje.
+
+- **FAllowAddingGuide** – označuje, ali bo OneNote omogočil ustvarjanje zvezka za vodenje ali ne.
+
+- **IsDefaultNotebookCreated** – označuje, ali je OneNote ustvaril uporabniški privzeti zvezek ali ne.
+
+- **ProvisioningFailure** – A predmet napake v OneNote, ki označuje napako pri omogočanju uporabe, če pride do nje.
+
+- **ProvisioningFinishedTime** – označuje končni čas, ko OneNote dokonča omogočanje uporabe zvezka med izkušnjo prvega zagona.
+
+- **ProvisioningStartedTime** – označuje začetni čas, ko OneNote začne omogočati uporabo zvezka med izkušnjo prvega zagona.
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
@@ -1173,6 +1236,489 @@ V nadaljevanju tega članka so navedeni podatkovni podtipi v tej kategoriji:
 
 Uspešnost delovanja aplikacije. Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje).
 
+#### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateRepublishingLicense.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+#### <a name="ipcgetlicenseproperty"></a>IpcGetLicenseProperty
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateRepublishingLicense.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicensePropertyType** – vrsta lastnosti licence
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+#### <a name="ipcgetserializedlicenseproperty"></a>IpcGetSerializedLicenseProperty
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateRepublishingLicense.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicensePropertyType** – vrsta lastnosti licence
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+#### <a name="ipcgettemplateissuerlist"></a>IpcGetTemplateIssuerList
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateIssuerList.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
+
+- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+ 
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.Status** – ko prvič dobite potrdilo o računu pravic iz strežnika ali obnovite potrdilo o računu pravic 
+
+- **RMS.Identity.Type** – vrsta uporabniškega računa, kot je račun za Windows ali račun Live
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic 
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika
+
+#### <a name="ipcgettemplatelist"></a>IpcGetTemplateList
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateList.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
+
+- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije http
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+ 
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.Status** – ko prvič dobite potrdilo o računu pravic iz strežnika ali obnovite potrdilo o računu pravic 
+
+- **RMS.Identity.Type** – vrsta uporabniškega računa, kot je račun za Windows ali račun Live
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic 
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TemplatesCount** – število predlog
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika
+
+#### <a name="ipcpcreatelicensefromscratch"></a>IpcpCreateLicenseFromScratch
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateLicenseFromScratch.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic 
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika 
+
+#### <a name="ipcpcreatelicensefromtemplate"></a>IpcpCreateLicenseFromTemplate
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateLicenseFromTemplate. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije http
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+#### <a name="ipcpgettemplatelistforuser"></a>IpcpGetTemplateListForUser
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateListForUser. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
+
+- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.Status** – ko prvič dobite potrdilo o računu pravic iz strežnika ali obnovite potrdilo o računu pravic 
+
+- **RMS.Identity.Type** – vrsta uporabniškega računa, kot je račun za Windows ali račun Live
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic 
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TemplatesCount** – število predlog
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+    
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika 
+
+#### <a name="ipcpserializelicense"></a>IpcpSerializeLicense
+
+Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcpSerializeLicense.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.ContentId** – ID vsebine dokumenta
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije http
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.Status** – ko prvič dobite potrdilo o računu pravic iz strežnika ali obnovite potrdilo o računu pravic 
+
+- **RMS.Identity.Type** – vrsta uporabniškega računa, kot je račun za Windows ali račun Live
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic 
+
+- **RMS.KeyHandle** – pomnilniški naslov kode za dostop
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika 
+
+#### <a name="ipcsetlicenseproperty"></a>IpcSetLicenseProperty
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API  IpcSetLicenseProperty. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API 
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije http
+
+- **RMS.LicensePropertyType** – vrsta lastnosti licence
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – ID scenarija, ki ga določa API
+
+
 #### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
 
 Ustvarjeno je ob zagonu odjemalca, če je končni uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office.  Zbira informacije o tem, kdaj je posrednik za telemetrijo sistema Office prenesel podatke v mapo v skupni rabi. Primarna uporaba tega dogodka je spremljanje ustreznosti stanja posrednika za telemetrijo sistema Office, sekundarna uporaba dogodka pa je ocena uporabe nadzorne plošče za telemetrijo sistema Office.
@@ -1201,6 +1747,20 @@ Ti podatki so zbrani le, če je končni uporabnik (najverjetneje skrbnik) omogo�
 Zbrana so ta polja:
 
   - **Data.CollectionTime** – Časovni žig, kdaj je bil zabeležen dogodek zrušitve.
+
+#### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
+
+Ta dogodek se zbira za Officeove programe, ki se izvajajo na platformah Apple. Dogodek se uporablja za zajemanje napak pri ustvarjanju žetonov za preverjanje pristnosti med InAppPurchase v računalniku Mac (dogodek zabeleži kodo napake, ki jo je prejel).  Ta dogodek se uporablja za odkrivanje in pomoč pri odpravljanju napak pri ustvarjanju žetonov za preverjanje pristnosti
+
+Zbrana so naslednja polja:
+
+- **Data_EmptyAuthToken** – zbrali smo niz, ki predstavlja, kje v neprekinjenem poteku licence je prišlo do napake.
+
+- **Data_TicketAuthError** – koda napake, ki označuje vzrok napake
+
+- **Data_ValidIdentity** – če ima odjemalec veljavno identiteto
+
+
 
 #### <a name="officeconnectdeviceactivitystart"></a>Office.ConnectDevice.Activity.Start
 
@@ -1310,6 +1870,8 @@ Zbrana so ta polja:
 
   - **Data.Doc.AssistedReadingReasons** – To polje je nastavljeno, če je za dokument izbrana elektronska zaščita podatkov.
 
+  - **Data.Doc.AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data.Doc.ChunkingType** – Enote, uporabljene za postopno odpiranje dokumenta.
 
   - **Data.Doc.EdpState** – Nastavitev elektronske zaščite podatkov dokumenta.
@@ -1416,7 +1978,7 @@ Zbrana so ta polja:
 
   - **Data.FullyQualifiedDomainName** – Zastarelo; zamenjalo ga je polje »Data\_Doc\_Fqdn«.
 
-  - **Data.Input.FileOpenState** – Stanje, ki ga zahteva aplikacija (branje/branje in pisanje itd.). **-**
+  - **Data.Input.FileOpenState** – Stanje, ki ga zahteva aplikacija (branje/branje in pisanje itd.)
 
   - **Data.Input.OpenAsync** – Asinhrono odpiranje, ki ga zahteva aplikacija.
 
@@ -1561,6 +2123,8 @@ Zbrana so ta polja:
   - **Data.Doc.AccessMode** – Dokument je samo za branje.
 
   - **Data.Doc.AssistedReadingReasons** – To polje je nastavljeno, če je za dokument izbrana elektronska zaščita podatkov.
+
+  - **Data.Doc.AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data.Doc.ChunkingType** – Enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -1817,6 +2381,84 @@ Zbrana so ta polja:
 
 - **EventName** – Ime zabeleženega dogodka.
 
+#### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
+
+Prijavljen, ko uporabnik odpre Kartico osebe. Uporablja se za opazovanje kritičnih anomalij v stopnjah napake pri uvajanju kartice osebe Live Persona Card.
+
+Zbrana so naslednja polja:
+
+- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+
+- **Data.AppInfo.Name** – ime storitve v uporabi (kartica profila)
+
+- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
+
+- **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
+
+- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
+
+- **Data.clientType** – vrsto naprave, v kateri se izvaja aplikacija.
+
+- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+
+- **Data.exportName**– človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+
+- **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
+
+- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+
+- **Data.hostAppRing** – krog, s katerim je bila aplikacija distribuirana
+
+- **Data.OTelJS.Version**– različica programa OTel Logger
+
+- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+
+- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
+
+- **Data.userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja (dvojnik Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja 
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun
+
+- **Data.UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.userPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun (dvojnik Data.UserInfo.Msald)
+
+- **Data.version** – različica storitve (kartica profila)
+
+- **Data.viewType** – določa vrsto prikazane kartice profila
+
+- **NetworkCost** – Označuje strošek/vrsto omrežja (omejen prenos podatkov, omejeno nad zgornjo mejo itd.)
+
+- **NetworkCountry** – koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
+
+- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru.
+
+    - **bandwidthEstimateMbps** – učinkovita ocena pasovne širine v Mb/s
+
+    - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
+
+    - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
+
+    - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
+
+    - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
+
+    - **immersiveProfileCorrelationId** – globalni enolični identifikator za razširjeno sejo pogleda profila
+
+    - **networkEffectiveType** – učinkovita vrsta omrežne povezave, npr. »slow-2g online«, ki določi, ali je uporabnik povezan z internetom v času, ko prikazuje kartico osebe
+
+    - **networkType** – vrsta omrežne povezljivosti naprave, ki je v uporabi
+
+    - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
+
+    - **roundTripEstimateMs** – ocenjeno učinkovita povratna povezava trenutne povezave v milisekundah
+
+    - **wasOpenedAsCompactCard** – uporablja se za identifikacijo, ali je bila kartica prvotno odprta kot strnjeni pogled
+
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -1957,6 +2599,34 @@ Zbrana so naslednja polja:
 -  **TimeToMedianResultInMs** – označuje mediano časa, ki ga OneNote porabi za iskanje vseh ujemanj.
 
 
+#### <a name="officeonenotestickynotesnotecreated"></a>Office.OneNote.StickyNotes.NoteCreated
+
+To je kritični signal, ki se uporablja za nadzor zmogljivosti Lepljivih zapiskov za ustvarjanje zapiskov v aplikaciji.  Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki ne morejo ustvariti zapiska, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **NoteLocalId** – razpoznavni enolični identifikator, ki je dodeljen zapisku v času, ko uporabnik ustvari zapiski v programu.
+
+- **IsExportable** – zastavica, ki označuje, ali je bil dogodek rezultat dejanja uporabnika ali ne. Mora biti nastavljen na vrednost true, ker je NoteCreated dejanje, ki ga je sprožil uporabnik.
+
+- **StickyNotes – SDKVersion** – številka različice, ki označuje različico Lepljivih zapiskov, ki jo uporablja uporabnik. Omogoča, da določimo, v katerih različicah izdelka je prišlo do težave ter te težave razvrstimo po pomembnosti.
+
+
+#### <a name="officeonenotestickynotesnoteviewed"></a>Office.OneNote.StickyNotes.NoteViewed
+
+To je kritični signal, ki se uporablja za nadzor zmogljivosti Lepljivih zapiskov za ustvarjanje zapiskov v aplikaciji.  Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki ne morejo ustvariti zapiska, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Zbrana so naslednja polja:
+
+- **HasImages** – zastavica, ki označuje, so v ogledanem zapisku shranjene slike.
+
+- **IsExportable** – zastavica, ki označuje, ali je bil dogodek rezultat dejanja uporabnika ali ne. Mora biti nastavljen na vrednost true, ker je NoteViewed dejanje, ki ga je sprožil uporabnik.
+
+- **NoteLocalId** – razpoznavni enolični identifikator, ki je dodeljen zapisku v času, ko uporabnik ustvari zapisek v programu.
+
+- **StickyNotes – SDKVersion** – številka različice, ki označuje različico Lepljivih zapiskov, ki jo uporablja uporabnik. Omogoča, da določimo, v katerih različicah izdelka je prišlo do težave ter te težave razvrstimo po pomembnosti.
+
+
 #### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
 Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
@@ -2040,8 +2710,7 @@ Zbrana so naslednja polja
 
 #### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
 
-Nato je uporabljen kritični signal, da se uporabnikom storitve OneNote zagotovi uspešen zagon aplikacije.
-Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo zagnati aplikacije v našem oknu učinkovitosti delovanja, bo to sprožilo dogodek z visoko stopnjo resnosti.
+Kritični signal, ki se uporablja, da uporabnikom storitve OneNote zagotovi uspešen zagon aplikacije. Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki ne morejo zagnati aplikacije v našem oknu učinkovitosti delovanja, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
 Zbrana so naslednja polja:     Brez
 
@@ -2091,13 +2760,6 @@ Zbrana so ta polja:
 
   - **Result** – Rezultat poskusa posodobitve gesla. Na primer: »Success« ali »Fail\_AllowLessSecureAppsDisabled«.
 
-#### <a name="officeoutlookdesktopprovidersloadproviderlibrary"></a>Office.Outlook.Desktop.Providers.LoadProviderLibrary
-
-S tem dogodkom spremljamo, ali je MAPI uspešno oz. neuspešno naložil ponudnika DLL (npr. contab32.dll, emsmdb32.dll, DLL, ki ga uporablja dodatek itd.). Postopek MAPI, s katerim naložimo ponudnika DLL, je ključen za Outlookov obvezni postopek in njegovo razširljivost (prek dodatkov ali ponudnikov po meri za shrambo/prenos/adresar). Aktivno spremljamo rezultat uspešnosti oz. neuspešnosti tega postopka za zagotavljanje ustreznega delovanja osnovnih funkcij MAPI-ja.
-
-Zbrana so ta polja:
-
-  - **Standard HVA Activity** brez koristne vsebine po meri.
 
 #### <a name="officeoutlookdesktopstorescreatenewstore"></a>Office.Outlook.Desktop.Stores.CreateNewStore
 
@@ -2193,6 +2855,8 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
   - **Data\_Doc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
@@ -2223,8 +2887,6 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
   - **Data\_Doc\_IsSyncBacked:bool** – Preverja, ali je bil dokument odprt v mapi, za katero je uporabljena aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
   - **Data\_Doc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
@@ -2239,7 +2901,9 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+
+  - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
@@ -2327,6 +2991,8 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
   - **Data\_Doc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
@@ -2357,8 +3023,6 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
   - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
   - **Data\_Doc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
@@ -2373,7 +3037,9 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+
+  - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
@@ -2449,6 +3115,8 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
   - **Data\_Doc\_EdpState:long** – Stanje zaščite podatkov podjetja za dokument.
@@ -2479,8 +3147,6 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
   - **Data\_Doc\_IsSyncBacked:bool** –Ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
   - **Data\_Doc\_Location:long** – Nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
@@ -2495,7 +3161,9 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data\_Doc\_ServerDocId:string** – Nespremenljivi identifikator za dokumente, shranjene v oblaku.
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+
+  - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
@@ -2591,7 +3259,9 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
+- **Data_DstDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
+- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
 - **Data_DstDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
@@ -2675,7 +3345,9 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu. 
+- **Data_SrcDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
+- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu 
 
 - **Data_SrcDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
@@ -2768,6 +3440,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
 - **Data_Doc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
@@ -2798,8 +3472,6 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsOpeningOfflineCopy:bool** – preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked:bool** –označuje, ali je bil dokument odprt v mapi, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive.
 
 - **Data_Doc_Location:long** – nabor vnaprej določenih vrednosti za mesto shrambe dokumenta (lokalno, SharePoint, WOPI, omrežje itd.).
@@ -2813,6 +3485,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, končni dokument, zaščiteno z geslom za urejanje itd.).
 
 - **Data_Doc_ResourceIdHash:string** – zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId:string** – nespremenljivi identifikator za dokumente, shranjene v oblaku.
 
@@ -2844,7 +3518,9 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
+- **Data_DstDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
+- **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
 - **Data_DstDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
@@ -2926,7 +3602,9 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
+- **Data_SrcDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
+- **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
 - **Data_SrcDoc_EdpState:long** – stanje zaščite podatkov podjetja za dokument.
 
@@ -3398,6 +4076,68 @@ Zbrana so sledeča polja:
 
 - **Data.warningMessage** – opozorilno sporočilo, ki ga pošlje storitev.
 
+
+#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
+
+Sledi premike funkcij za uporabnike. S tem dogodkom lahko določimo uspešnost ali neuspešnost premikov funkcij.
+
+Zbrana so sledeča polja:
+
+  - **Data\_Enable:bool** – vrednost true ponazarja, da je funkcija omogočena za trenutnega uporabnika
+
+  - **Data\_Feature:string** – ime funkcije
+
+  - **Data\_Flighted:bool** – vrednost true ponazarja, da je funkcija omogočena
+
+  - **Data\_Licensed:bool** – vrednost true ponazarja, da sistem preverja licenco za to funkcijo
+
+  - **Data\_Subscriber:bool** – vrednost true ponazarja, da ima uporabnik licenco za naročnino
+
+#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
+
+Zajame vrednosti osveževanje diagrama, če je datoteka ustvarjena z vmesnikom DV. Na ta način lažje odpravljamo napake in težave pri osveževanju podatkov v diagramu DV.
+
+Zbrana so sledeča polja:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** – ima vrednost true, če je bil osveženi diagram prvotno ustvarjen s povezovalnikom na osnovi zaporedja
+
+  - **Data\_DialogError**:**string** – napaka med osveževanjem pametnega diagrama
+
+  - **Data\_FileError:string** – niz napake, če povezana Excelova datoteka ni veljavna
+
+  - **Data\_OverwriteSelected**:**bool** – ima vrednost true, če je uporabnik med osveževanjem izbral možnost za prepisovanje diagrama
+
+  - **Data\_WarningShown**:**bool** – ima vrednost true, če je uporabnik med postopkom osveževanja podatkov prejel opozorilo
+
+#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
+
+Zajame vrednosti napak pri pisanju nazaj v Excelu, če je datoteka ustvarjena z vmesnikom DV. Na ta način lažje odpravljamo napake in težave pri pisanju podatkov nazaj v Excel v diagramu DV.
+
+Zbrana so sledeča polja:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** – vrednost true pomeni, da so povezovalniki ustvarjeni glede na nastavitve zaporedja
+
+  - **Data\_DataSourceType:string** – to polje ponazarja, ali je bil diagram ustvarjen iz možnosti »Tabela« oz. »ObsegPoMeri«
+
+  - **Data\_DialogError:string** – vrsta napake po meri med ustvarjanjem pametnega diagrama v Excelu
+
+  - **Data\_NoOfShapesAdded:int** – število oblik, ki so bile dodane med postopkom pisanja nazaj v Excelove funkcije
+
+  - **Data\_NoOfShapesDeleted:int** – število oblik, ki so bile izbrisane med postopkom pisanja nazaj v Excelove funkcije
+
+  - **Data\_OverwriteSelected:bool** – ima vrednost true, če je uporabnik izbral možnost prepisovanja podatkov
+
+  - **Data\_SourceDataModified:bool** – vrednost true ponazarja, da so bili izvorni podatki spremenjeni
+
+  - **Data\_WarningShown:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo o posodobitvi podatkov
+
+  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo zaradi formule v Excelu
+
+  - **Data\_WarningShownToAddNextStepID:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo, saj v Excelu ni prisoten identifikator naslednjega koraka
+
+  - **Data\_WarningShownToConvertToTable:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo, naj Excelove podatke pretvori v obliko zapisa za tabele
+
+
 #### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
 
 Ta dogodke zabeleži statistiko posameznih dokumentov, ko je Office Word zaprt ali začasno prekinjen.  S tem dogodkom prepoznamo morebitno soodvisnost elementov urejanja dokumentov, velikosti dokumentov in drugega z napakami, ki se pojavijo pri shranjevanju in skupni rabi dokumentov ter sodelovanju pri urejanju dokumentov v spletu.
@@ -3474,6 +4214,130 @@ Zbrana so ta polja:
 
   - **Data\_UsesCustomTemplate** – Označuje, ali je bil dokument ustvarjen s predlogo po meri.
 
+#### <a name="officewordfileopenuserinitiatedopen"></a>Office.Word.FileOpen.UserInitiatedOpen 
+
+V tem dogodku je navedeno, da je Office Word odprl dokument z zagonom uporabnika namesto na programski način Office Word.  Poleg tega vsebuje kritične podatke o učinkovitosti odpiranja datotek in z vidika uporabnika predstavlja dogodek za zagon aplikacije.  Dogodek nadzira, ali funkcija za odpiranje datoteke deluje pravilno. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave in za metriko zanesljivosti v oblaku. 
+ 
+Zbrana so sledeča polja:
+
+- **Data_AddDocTelemRes** – poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov. 
+
+- **Data_BytesAsynchronous** – število bajtov (stisnjenih), brez katerega je morda mogoče odpreti datoteko, če ga pridobimo, preden uporabnik začne urejati dokument oz. se ga morda odloči shraniti. 
+
+- **Data_BytesAsynchronousWithWork** – število bajtov (stisnjenih), brez katerega morda lahko odpremo datoteko, vendar bi zato morali občutno spremeniti kodo. 
+
+- **Data_BytesSynchronous** – število bajtov (stisnjenih), ki ga moramo pridobiti, preden lahko odpremo datoteko. 
+
+- **Data_BytesUnknown** – število bajtov v delih dokumenta, za katerega menimo, da ga ne bomo našli. 
+
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati. 
+
+- **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja. 
+
+- **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta. 
+
+- **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta. 
+
+- **Data_Doc_Ext** – pripona dokumenta (docx/xlsb/pptx itd.). 
+
+- **Data_Doc_FileFormat** – različica protokola za obliko zapisa datoteke. 
+
+- **Data_Doc_Fqdn** – ime domene za OneDrive ali SharePoint Online. 
+
+- **Data_Doc_FqdnHash** – enostranska zgoščena vrednost imena domene, ki omogoča identifikacijo stranke. 
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje. 
+
+- **Data_Doc_InitializationScenario** – zabeleži način odpiranja dokumenta. 
+
+- **Data_Doc_IOFlags** – poroča o predpomnjenih zastavicah, uporabljenih za nastavitev možnosti zahtev za odpiranje. 
+
+- **Data_Doc_IrmRights** – dejanja, ki jih je dovolil pravilnik za elektronsko zaščito podatkov, ki velja za dokument/uporabnika. 
+
+- **Data_Doc_IsIncrementalOpen** – zastavica, ki označuje postopno odpiranje dokumenta. 
+
+- **Data_Doc_IsOcsSupported** – zastavica, ki označuje, da je storitev sodelovanja podprta v dokumentu. 
+
+- **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave. 
+
+- **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta. 
+
+- **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint) 
+
+- **Data_Doc_LocationDetails** – označuje, v kateri znani mapi je na voljo lokalno shranjen dokument 
+
+- **Data_Doc_NumberCoAuthors** – število souporabnikov v seji urejanja s sodelovanjem. 
+
+- **Data_Doc_PasswordFlags** – označuje nastavljene zastavice za branje ali branje/pisanje gesla. 
+
+- **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«. 
+
+- **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav 
+
+- **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav 
+
+- **Data_Doc_ServerProtocol** – različica protokola za komunikacijo s storitvijo 
+
+- **Data_Doc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.). 
+
+- **Data_Doc_ServerVersion** – različica strežnika, ki zagotavlja storitev 
+
+- **Data_Doc_SessionId** – različica strežnika, ki zagotavlja storitev 
+
+- **Data_Doc_SharePointServiceContext** – diagnostične informacije zahtev storitve SharePoint Online. 
+
+- **Data_Doc_SizeInBytes** – indikator velikosti dokumenta. 
+
+- **Data_Doc_SpecialChars** – indikator posebnih znakov v URL-ju ali poti dokumenta. 
+
+- **Data_Doc_StreamAvailability** – indikator, ali je tok dokumenta na voljo/onemogočen. 
+
+- **Data_Doc_SyncBackedType** – indikator vrste dokumenta (lokalno ali storitev). 
+
+- **Data_Doc_UrlHash** – enostranska zgoščena vrednost za ustvarjanje naivnega identifikatorja dokumenta. 
+
+- **Data_Doc_WopiServiceId** – vsebuje enolični identifikator za ponudnika storitve WOPI. 
+
+- **Data_EditorDisablingRename** – identifikator prvega urejevalnika, ki je onemogočil preimenovanje 
+
+- **Data_EditorsCount** – število urednikov v dokumentov 
+
+- **Data_ForceReadWriteReason** – vrednost celega števila, ki predstavlja vzrok za vsiljeni način za branje/pisanje pri datoteki. 
+
+- **Data_FSucceededAfterRecoverableFailure** – označuje, da je bilo odpiranje uspešno po odpravi napake med odpiranjem dokumenta. 
+
+- **Data_LastLoggedTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje, ko poskušamo izvesti neuspešno odpiranje dvakrat zapored (uporablja se za diagnostiko kakovosti podatkov). 
+
+- **Data_LinkStyles** – označuje, ali povezujemo sloge predlog. 
+
+- **Data_MainPdod** – identifikator dokumenta v postopku programa Microsoft Office Word. 
+
+- **Data_Measurements** – šifriran niz z razčlenitvijo časa različnih časov odpiranja. Uporablja se za diagnosticiranje uspešnost pri odpiranju 
+
+- **Data_MoveDisabledReason** – napaka, ki onemogoča premik dokumenta. 
+
+- **Data_MoveFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo premikanja. 
+
+- **Data_OpenInitiateKind** – vrsta scenarija, v katerem so uporabniki zagnali to operacijo za odpiranje dokumenta. 
+
+- **Data_PartsUnknown** – število delov dokumenta, za katere nismo uspeli pridobiti podatkov 
+
+- **Data_RecoverableFailureInitiationLocationTag** – enolična oznaka za mesto klica kode, ki se uporablja za prepoznavanje mesta v kodi, kjer poskušamo odpraviti napako pred odpiranjem datoteke. 
+
+- **Data_RenameDisabledReason** – napaka, ki povzroča, da je funkcija preimenovanja za ta dokument onemogočena. 
+
+- **Data_RenameFlightEnabled** – označuje, ali je omogočena pilotna različica za funkcijo preimenovanja. 
+
+- **Data_SecondaryTag** – enolična oznaka za mesto klica kode, ki se uporablja za dodajanje dodatnih podatkov o neuspehih pri odpiranju. 
+
+- **Data_TemplateFormat** – oblika zapisa datoteke za predlogo, na kateri temelji dokument. 
+
+- **Data_UsesNormal** – označuje, ali odprti dokument temelji na navadni predlogi. 
+
+- **Data_VerboseMeasurements** – šifriran niz z razčlenitvijo časa različnih časov odpiranja.  Uporablja se za merjenje učinkovitosti delovanja, ki je omogočena le za interne obroče. 
+
+
+
 #### <a name="officewordfilesaveactcmdgosubsaveas"></a>Office.Word.FileSave.ActCmdGosubSaveAs
 
 Ta dogodek označuje, da uporabnik shranjuje spremembe v nov dokument. Dogodek nadzira ustreznost delovanja shranjevanja v nov dokument. Ta dogodek uporabljamo tudi za ocenjevanje števila mesečnih aktivnih uporabnikov/naprav in za metriko zanesljivosti v oblaku.
@@ -3487,7 +4351,9 @@ Zbrana so sledeča polja:
 - **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
-    
+
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -3514,8 +4380,6 @@ Zbrana so sledeča polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -3529,6 +4393,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
@@ -3578,6 +4444,8 @@ Zbrana so sledeča polja:
 - **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
+
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
     
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -3605,8 +4473,6 @@ Zbrana so sledeča polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -3620,6 +4486,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
@@ -3676,6 +4544,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -3702,8 +4572,6 @@ Zbrana so sledeča polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -3717,6 +4585,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
@@ -3795,6 +4665,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -3819,8 +4691,6 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -3832,6 +4702,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav.
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
@@ -3856,6 +4728,8 @@ Zbrana so sledeča polja:
 - **Data_DstDoc_AccessMode** – ciljni dokument je samo za branje ali omogoča urejanje.
 
 - **Data_DstDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil ciljni dokument odprt v načinu vodenega branja.
+
+- **Data_DstDoc_AsyncOpenKind – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
     
 - **Data_DstDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -3943,6 +4817,8 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_SrcDoc_AsyncOpenKind – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_SrcDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_SrcDoc_EdpState** – nastavitev elektronske zaščite podatkov izvornega dokumenta.
@@ -4010,66 +4886,6 @@ Zbrana so sledeča polja:
 - **Data_SrcDocIsUnnamedOrNew** – označuje, ali je dokument, ki ga želite shraniti, nov dokument.
 
 
-#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
-
-Sledi premike funkcij za uporabnike. S tem dogodkom lahko določimo uspešnost ali neuspešnost premikov funkcij.
-
-Zbrana so sledeča polja:
-
-  - **Data\_Enable:bool** – vrednost true ponazarja, da je funkcija omogočena za trenutnega uporabnika
-
-  - **Data\_Feature:string** – ime funkcije
-
-  - **Data\_Flighted:bool** – vrednost true ponazarja, da je funkcija omogočena
-
-  - **Data\_Licensed:bool** – vrednost true ponazarja, da sistem preverja licenco za to funkcijo
-
-  - **Data\_Subscriber:bool** – vrednost true ponazarja, da ima uporabnik licenco za naročnino
-
-#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
-
-Zajame vrednosti osveževanje diagrama, če je datoteka ustvarjena z vmesnikom DV. Na ta način lažje odpravljamo napake in težave pri osveževanju podatkov v diagramu DV.
-
-Zbrana so sledeča polja:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** – ima vrednost true, če je bil osveženi diagram prvotno ustvarjen s povezovalnikom na osnovi zaporedja
-
-  - **Data\_DialogError**:**string** – napaka med osveževanjem pametnega diagrama
-
-  - **Data\_FileError:string** – niz napake, če povezana Excelova datoteka ni veljavna
-
-  - **Data\_OverwriteSelected**:**bool** – ima vrednost true, če je uporabnik med osveževanjem izbral možnost za prepisovanje diagrama
-
-  - **Data\_WarningShown**:**bool** – ima vrednost true, če je uporabnik med postopkom osveževanja podatkov prejel opozorilo
-
-#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
-
-Zajame vrednosti napak pri pisanju nazaj v Excelu, če je datoteka ustvarjena z vmesnikom DV. Na ta način lažje odpravljamo napake in težave pri pisanju podatkov nazaj v Excel v diagramu DV.
-
-Zbrana so sledeča polja:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** – vrednost true pomeni, da so povezovalniki ustvarjeni glede na nastavitve zaporedja
-
-  - **Data\_DataSourceType:string** – to polje ponazarja, ali je bil diagram ustvarjen iz možnosti »Tabela« oz. »ObsegPoMeri«
-
-  - **Data\_DialogError:string** – vrsta napake po meri med ustvarjanjem pametnega diagrama v Excelu
-
-  - **Data\_NoOfShapesAdded:int** – število oblik, ki so bile dodane med postopkom pisanja nazaj v Excelove funkcije
-
-  - **Data\_NoOfShapesDeleted:int** – število oblik, ki so bile izbrisane med postopkom pisanja nazaj v Excelove funkcije
-
-  - **Data\_OverwriteSelected:bool** – ima vrednost true, če je uporabnik izbral možnost prepisovanja podatkov
-
-  - **Data\_SourceDataModified:bool** – vrednost true ponazarja, da so bili izvorni podatki spremenjeni
-
-  - **Data\_WarningShown:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo o posodobitvi podatkov
-
-  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo zaradi formule v Excelu
-
-  - **Data\_WarningShownToAddNextStepID:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo, saj v Excelu ni prisoten identifikator naslednjega koraka
-
-  - **Data\_WarningShownToConvertToTable:bool** – vrednost true ponazarja, da je uporabnik prejel opozorilo, naj Excelove podatke pretvori v obliko zapisa za tabele
-
 #### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
 
 Ta dogodek ponazarja, da Microsoft Office Word ureja dokument, zaradi česar se je spremenilo notranje stanje dokumenta v »spremenjeno«. Microsoftu omogoča, da ovrednoti stanje funkcij urejenega dokumenta. Dogodek predstavlja interval obveščanja o urejanjih uporabnika. Prav tako se uporablja za izračunane mesečne aktivne uporabnike/naprave.
@@ -4095,9 +4911,254 @@ Zbrana so sledeča polja:
   - **Data\_UrlHash –** razpršitev poti dokumenta
 
   - **Data\_ViewKind –** vrsta Wordovega pogleda
+
+
+#### <a name="parselicenseop"></a>ParseLicenseOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija razčlenjevanja dovoljenj. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika Logger 
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+- **RMS.VerifyCertChainDuration** – čas trajanja za preverjanje verige certifikata
+
+- **RMS.VerifySignatureDuration** – čas trajanja za preverjanje podpisa
+
+#### <a name="storeop"></a>StoreOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija shranjevanja dovoljenj storitev za upravljanje pravic. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.ContentId** – ID vsebine v končni uporabniški licenci
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.OperationName** – ime operacije
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+- **RMS.Url** – URL strežnika za upravljanje pravic do storitev
+
+
 ### <a name="application-status-and-boot-subtype"></a>*Stanje aplikacije in podvrsta zagona*
 
 Določanje, ali je prišlo do specifičnih dogodkov funkcije, kot sta zagon ali zaustavitev, in funkcije, ki se izvaja.
+
+#### <a name="dnslookupop"></a>DnsLookupOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija iskanja informacij o strežniku DNS. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije http
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.NoOfDomainsSearched** – število iskanih domen  
+
+- **RMS.NoOfDomainsSkipped** – število preskočenih domen 
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+#### <a name="getuserop"></a>GetUserOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija pridobivanja uporabniških dovoljenj. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.ContentId** – ID vsebine
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake vrnjena iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+- **RMS.Type** – vrsta uporabniških informacij
+
+#### <a name="httpop"></a>HttpOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija za http zahtevo.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+    
+- **AppInfo.Name** – ime aplikacije
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.CallBackStatus** – stanje rezultata povratnega klica za preverjanje pristnosti
+
+- **RMS.CallbackTime** – čas, porabljen za povratni klic za preverjanje pristnosti 
+
+- **RMS.CorrelationId** – ID korelacije zahteve http
+
+- **RMS.DataSize** – velikost podatkov zahteve HTTP
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do ugnezdene operacije http 
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.OperationName** – ime operacije
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+- **RMS.Url** – URL strežnika za upravljanje pravic do storitev
+
+- **RMS.WinhttpCallbackStatus** – stanje rezultata povratnega klica winhttp
+
+#### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateOauth2Token API.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+    
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
 
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
@@ -4116,6 +5177,8 @@ Zbrana so sledeča polja:
   - **Data\_AppSizeWidth –** širina okna za dodatek**-**
 
   - **Data\_AppURL –** URL prijave; zapiše polni URL za dodatke iz trgovine in domeno URL-ja za dogodke, ki jih niste pridobili iz trgovine
+
+  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_AuthorsCount:integer –** število avtorjev, ki so uredili dokument v tej seji
 
@@ -4147,9 +5210,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsIncrementalOpen:bool-**: ali je bil dokument odprt postopoma (nova funkcija, ki dokument odpre, brez da prenese celoten dokument)
 
-  - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
-
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
+  - **Data\_Doc\_IsOpeningOfflineCopy:bool –** ali je bil dokument odprt iz lokalnega predpomnilnika?
 
   - **Data\_Doc\_IsSyncBacked:bool –** ima vrednost true, če gre za dokument strežnika, ki je na voljo lokalno in je sinhroniziran s strežnikom (npr. prek storitve OneDrive ali odjemalskih aplikacij ODB)
 
@@ -4158,6 +5219,8 @@ Zbrana so sledeča polja:
   - **Data\_Doc\_LocationDetails:long –** nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive)
 
   - **Data\_Doc\_ResourceIdHash:string –** razpršitev identifikatorja vira za dokumente, shranjene v oblaku
+
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -4495,6 +5558,8 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long –** nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja
 
+  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data\_Doc\_ChunkingType:long –** način shranjevanja dokumenta v SharePointu
 
   - **Data\_Doc\_EdpState:long –** stanje zaščite dokumentov podjetja za dokument
@@ -4525,8 +5590,6 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
   - **Data\_Doc\_IsSyncBacked:bool –** ali je bil dokument odprt iz mape, za katero se uporablja aplikacija za povratno sinhronizacijo v storitvi OneDrive
 
   - **Data\_Doc\_Location:long-**: nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.)
@@ -4540,6 +5603,8 @@ Zbrana so sledeča polja:
   - **Data\_Doc\_ReadOnlyReasons:long –** nabor vnaprej določenih vrednosti, zakaj je bil ta dokument označen samo za branje (zaklenjeno v strežniku, dokončni dokument, zaščiteno z geslom za urejanje itd.)
 
   - **Data\_Doc\_ResourceIdHash:string –** razpršitev identifikatorja vira za dokumente, shranjene v oblaku
+
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -4959,6 +6024,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -4985,8 +6052,6 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -5000,6 +6065,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav 
 
@@ -5082,6 +6149,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -5108,8 +6177,6 @@ Zbrana so sledeča polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -5123,6 +6190,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
 
@@ -5203,6 +6272,8 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+  - **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
   - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
 
   - **Data\_Doc\_EdpState –** nastavitev elektronske zaščite podatkov dokumenta
@@ -5229,9 +6300,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy** – Zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-  - **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
-  - **Data\_Doc\_IsSyncBacked** – Zastavica, ki označuje, da je v računalniku na voljo samodejno sinhronizirana kopija dokumenta.
+  - **Data\_Doc\_IsSyncBacked –** zastavica ponazarja, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta
 
   - **Data\_Doc\_Location –** ponazarja storitev, ki je zagotovila dokument (OneDrive, strežnik datotek, SharePoint)
 
@@ -5244,6 +6313,8 @@ Zbrana so sledeča polja:
   - **Data\_Doc\_ReadOnlyReasons –** razlogi, zakaj je bil dokument odprt v načinu »Samo za branje«
 
   - **Data\_Doc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
+
+  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
 
@@ -5326,6 +6397,8 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
+- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
 - **Data_Doc_EdpState** – nastavitev elektronske zaščite podatkov dokumenta.
@@ -5352,8 +6425,6 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** – zastavica, ki označuje, da je bila odprta kopija dokumenta brez povezave.
 
-- **Data_Doc_IsRtcAlwaysOn** – vrednost »true« če je za to datoteko vedno vklopljen kanal RTC (real time channel).
-
 - **Data_Doc_IsSyncBacked** – zastavica, ki označuje, da v računalniku obstaja samodejno sinhronizirana kopija dokumenta.
 
 - **Data_Doc_Location** – označuje, v kateri storitvi je dokument na voljo (OneDrive, File Server, SharePoint itd.).
@@ -5367,6 +6438,8 @@ Zbrana so sledeča polja:
 - **Data_Doc_ReadOnlyReasons** – razlogi, zakaj je bil dokument odprt v načinu »samo za branje«.
 
 - **Data_Doc_ResourceIdHash** – anonimni identifikator dokumenta za diagnosticiranje težav
+
+- **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
 - **Data_Doc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav 
 
@@ -5423,6 +6496,83 @@ Zbrana so sledeča polja:
 - **Data_TemplateFormat** – oblika zapisa datoteke za predlogo, na kateri temelji dokument
 
 - **Data_UsesNormal** – označuje, ali odprti dokument temelji na navadni predlogi.
+
+
+#### <a name="renewuserop"></a>RenewUserOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija obnovitve uporabniških dovoljenj. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika Logger 
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
+
+- **RMS.Type** – vrsta uporabniških informacij
+
+#### <a name="servicediscoveryop"></a>ServiceDiscoveryOp
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija odkrivanja. 
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.Duration** – Skupen čas za izvedbo operacije
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če izvira iz operacije
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.OperationName** – ime operacije
+
+- **RMS.Result** – uspeh ali neuspeh operacije
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – koda stanja rezultata operacije
 
 
 ### <a name="office-accessibility-configuration-subtype"></a>*Podvrsta konfiguracije za dostopnost v Officeu*
@@ -5737,7 +6887,7 @@ Zbrana so sledeča polja:
 
   - **ElapsedHanging** – čas neodzivnosti klica
 
-#### <a name="officepowerpointsession"></a>**Office.PowerPoint.Session**
+#### <a name="officepowerpointsession"></a>Office.PowerPoint.Session
 
 Zbiranje uporab funkcije v posameznih PowerPointovih sejah. Ti podatki se uporabljajo za izračun razmerja neprimernih izhodov iz PowerPointa med uporabo funkcije. Razmerje neprimernih izhodov iz PowerPointa predstavlja poglavitni signal za zagotovitev, da PowerPoint ne deluje po pričakovanjih.
 
@@ -5889,6 +7039,12 @@ Zbrana so sledeča polja:
 
   - **ProgID** – identifikator programa za dodatek
 
+#### <a name="officeprogrammabilitytelemetrymacrofileopened"></a>Office.Programmability.Telemetry.MacroFileOpened 
+
+Sproženo ob odpiranju makra (VBA), ki vsebuje datoteko v napravi, katere uporabo je IT skrbnik omogočil v Officeovih aplikacijah kot storitev (OAAS), in kjer je bil aktiviran Office 365 ProPlus z licenco podjetja. Dogodek se uporablja za razumevanje stanja dokumentov, ki vsebujejo makro (VBA) v najemniku in se primerja z Office.Programmability.Telemetry.VbaTelemetryBreak, ki sledi napakam v datotekah, ki vsebujejo VBA. 
+
+Nobena polja niso izbrana.
+
 #### <a name="officesystemsystemhealthungracefulappexitmacandios"></a>Office.System.SystemHealthUngracefulAppExitMacAndiOS
 
 Dogodek ob zagonu, ki zajame motena zapiranja aplikacije za nadaljnjo preiskavo.
@@ -5950,6 +7106,75 @@ Zbrana so sledeča polja:
 
 Slab odzivni čas ali slaba učinkovitost za scenarije, kot sta zagon aplikacije ali odpiranje datoteke.
 
+#### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcpBootstrapUser.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
+
+- **RMS.AuthCallbackProvided** – označite, če zagotavlja preverjanje pristnosti s povratnim klicem kot vhod priklica API ali ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta v  podatkih o povezavi
+
+- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta v podatkih o povezavi
+
+- **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
+
+- **RMS.Duration** – Skupen čas za izvedbo API priklica
+
+- **RMS.DurationWithoutExternalOps** – skupni čas minus zunanje operacije, kot je zakasnitev omrežja.
+
+- **RMS.ErrorCode** – koda napake je vrnjena, če katera koli izvira iz priklica API
+
+- **RMS.GuestTenant** – ID gosta najemnika za uporabnika
+
+- **RMS.HomeTenant** – ID domačega najemnika za uporabnika
+
+- **RMS.HttpCall** – označite, ali je prišlo do operacije HTTP
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.ExtranetUrl** – URL intraneta strežnika za upravljanje pravic za uporabnika, ki je bil zbran pri pridobivanju novega potrdila o računu pravic iz strežnika
+
+- **RMS.Identity.Status** – ko prvič dobite potrdilo o računu pravic iz strežnika ali obnovite potrdilo o računu pravic 
+
+- **RMS.Identity.Type** – vrsta uporabniškega računa, kot je račun za Windows ali račun Live
+
+- **RMS.Identity.UserProvided** – določite, ali je e-poštni naslov naveden ali ne, medtem ko pridobivate novo potrdilo o računu pravic od strežnika
+
+- **RMS.IssuerId** – ID strežnika za upravljanje pravic, ki izda potrdilo o računu pravic  
+
+- **RMS.LicenseFormat** – oblika licence: Xrml ali Json
+
+- **RMS.RACType** – vrsta potrdila o računu pravic
+
+- **RMS.Rezultat** – uspeh ali neuspeh priklica API
+
+- **RMS.ScenarioId** – ID scenarija, ki ga določa API
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
+- **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
+
+- **RMS.StatusCode** – Koda stanja vrnjenega rezultata
+
+- **RMS.TemplatesCount** – število predlog
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **RMS.TokenProvided** – označuje, ali je žeton ponujen kot vhod klica API ali ne 
+
+- **UserInfo.UserObjectId** – ID predmeta uporabnika
 #### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
 
 Ko stranka uporablja Officeov dodatek in izvaja klice obogatenega API-ja za zagotavljanje storitve, bo sprožen ta dogodek. Uporablja se za merjenje zanesljivosti, učinkovitosti delovanja in uporabe storitve za priklic načina obogatenega API-ja.
@@ -6493,6 +7718,35 @@ Zbrana so sledeča polja:
   - **FirstTimeStamp** – prvič, ko je prišlo do napake
 
   - **Trackback** – enolični identifikator za določeno napako
+
+#### <a name="renewidentityfailure"></a>RenewIdentityFailure
+
+Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko obnovitev uporabniških dovoljenj ne uspe.
+
+Zbrana so naslednja polja:
+
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+
+- **AppInfo.Name** – ime aplikacije.
+
+- **AppInfo.Version** – različica aplikacije
+
+- **Failure.Category** – Kategorija napake »UnhandledError«
+
+- **Failure.Detail** – podrobnejše informacije o napaki
+
+- **Failure.Id** – ID napake
+
+- **Failure.Signature** – podpis napake, ki je enaka kot ime dogodka
+
+- **iKey** – ID strežnika za storitev pisanja dnevnika
+
+- **RMS. HRESULT** – rezultat obnovitve potrdila uporabnika
+
+- **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
+
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Podatkovni dogodki povezljivosti in konfiguracije naprave
 

@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
+ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238986"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "37417353"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -119,6 +119,16 @@ Poleg povezanih izkušenj, omenjenih v tem članku, ki so del storitve Office 36
 Te povezane izkušnje so drugačne, saj niso zajete v komercialno pogodbo organizacije z Microsoftom. Izbirne povezane izkušnje, ki jih neposredno ponuja Microsoft uporabnikom in jih ureja [pogodba o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in ne [pogoji spletnih storitev](https://www.microsoft.com/licensing/product-licensing/products). V nekaterih primerih vsebino ali funkcionalnost tretjih oseb omogočajo te izbirne povezane izkušnje, za katere lahko veljajo tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
 Z nastavitvijo pravilnika *Dovoli uporabo dodatnih povezanih izkušenj v Officeu* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te izbirne povezane izkušnje na voljo vašim uporabnikom.
+
+> [!NOTE]
+> Nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušanj v Officeu* lahko uporabite tudi za naslednje aplikacije Office za splet:
+> - Excel za splet
+> - OneNote za splet
+> - PowerPoint za splet
+> - Visio za splet
+> - Word za splet
+>
+> Te aplikacije Office za splet bodo nov kontrolnik zasebnosti za izbirne povezane izkušnje predvidoma začele uporabljati v sredini oktobra 2019, nastavitev pravilnika pa lahko konfigurirate že zdaj. Če želite konfigurirati to nastavitev pravilnika za te aplikacije Office za splet, uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md).
 
 Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
