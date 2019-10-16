@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
-ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
+ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37386935"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510481"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -43,6 +43,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 - [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Seznam osnovnih storitev za Office 
 
@@ -2981,7 +2982,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3022,7 +3023,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
     
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
     
@@ -3063,7 +3064,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3104,7 +3105,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3141,11 +3142,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3186,7 +3187,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3227,7 +3228,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3268,7 +3269,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3309,7 +3310,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3346,11 +3347,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3387,11 +3388,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3428,11 +3429,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3469,11 +3470,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
     
 - **DeviceID** – identifikator naprave
 
@@ -3510,11 +3511,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3552,11 +3553,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
     
@@ -3593,11 +3594,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3634,11 +3635,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
     
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3669,17 +3670,17 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3716,11 +3717,11 @@ Zbrana so naslednja polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3757,11 +3758,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3798,11 +3799,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3833,17 +3834,17 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake med poskusom uporabe posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3874,17 +3875,17 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik preklical postopek prenosa.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3921,11 +3922,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -3962,11 +3963,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4003,11 +4004,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4044,11 +4045,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4085,11 +4086,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4126,11 +4127,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
     
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4167,11 +4168,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4208,11 +4209,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4249,11 +4250,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4290,11 +4291,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
     
 - **DeviceID** – identifikator naprave
 
@@ -4330,11 +4331,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4371,11 +4372,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4412,11 +4413,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4453,11 +4454,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4494,11 +4495,11 @@ Zbrana so sledeča polja:
     
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4535,11 +4536,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4576,11 +4577,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4617,11 +4618,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4658,7 +4659,7 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
@@ -4700,11 +4701,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4741,11 +4742,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4782,11 +4783,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4823,11 +4824,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4864,11 +4865,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4905,11 +4906,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4946,11 +4947,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -4987,11 +4988,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5028,11 +5029,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5069,11 +5070,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5110,11 +5111,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5151,11 +5152,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5192,11 +5193,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5233,11 +5234,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5274,11 +5275,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5315,11 +5316,11 @@ Zbrana so sledeča polja:
     
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5356,11 +5357,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5397,11 +5398,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5438,11 +5439,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5479,11 +5480,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5520,11 +5521,11 @@ Zbrana so sledeča polja:
     
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5565,7 +5566,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5602,11 +5603,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5643,11 +5644,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5684,11 +5685,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5725,11 +5726,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5766,11 +5767,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5807,11 +5808,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5848,11 +5849,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5889,11 +5890,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5930,11 +5931,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -5971,11 +5972,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6012,11 +6013,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6053,11 +6054,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6094,11 +6095,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6135,11 +6136,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6176,11 +6177,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6217,11 +6218,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6258,11 +6259,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6299,11 +6300,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
     
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6340,11 +6341,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6381,11 +6382,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6422,11 +6423,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6463,11 +6464,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6504,11 +6505,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6532,7 +6533,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **SessionId** – identifikator seje.
 
 
 ### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
@@ -6545,11 +6546,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6586,11 +6587,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6627,11 +6628,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6668,11 +6669,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6709,11 +6710,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6750,11 +6751,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6791,11 +6792,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6832,11 +6833,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6873,11 +6874,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6914,11 +6915,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6955,11 +6956,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -6996,11 +6997,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7037,11 +7038,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7078,11 +7079,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7119,11 +7120,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7160,11 +7161,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7201,11 +7202,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7242,11 +7243,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7283,11 +7284,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7324,11 +7325,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7365,11 +7366,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7410,7 +7411,7 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7447,11 +7448,11 @@ Zbrana so sledeča polja:
     
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7488,11 +7489,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7529,11 +7530,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7570,11 +7571,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7611,11 +7612,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7652,11 +7653,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7693,11 +7694,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7734,11 +7735,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7775,11 +7776,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7816,11 +7817,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7857,11 +7858,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7898,11 +7899,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7939,11 +7940,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -7980,11 +7981,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8022,11 +8023,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8063,11 +8064,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8104,11 +8105,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8145,11 +8146,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8186,11 +8187,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8227,11 +8228,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8268,11 +8269,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8309,11 +8310,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8350,11 +8351,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8391,11 +8392,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8432,11 +8433,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8473,11 +8474,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8514,11 +8515,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8555,11 +8556,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8596,11 +8597,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8637,11 +8638,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8678,11 +8679,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8719,11 +8720,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8760,11 +8761,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8801,11 +8802,11 @@ Zbrana so sledeča polja:
     
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8842,11 +8843,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8883,11 +8884,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8924,11 +8925,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -8965,11 +8966,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9006,11 +9007,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9047,11 +9048,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9088,11 +9089,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9129,11 +9130,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9170,11 +9171,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9211,11 +9212,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9252,11 +9253,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9274,7 +9275,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+- **Payload** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -9293,11 +9294,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9315,7 +9316,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+- **Payload** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -9334,11 +9335,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9356,7 +9357,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
+- **Payload** – vsebuje ime, osnovni načrt in različico posodobitve za zbirko.
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -9375,11 +9376,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9416,11 +9417,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9457,11 +9458,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9498,11 +9499,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9539,11 +9540,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9580,11 +9581,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9621,11 +9622,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9662,11 +9663,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9703,11 +9704,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9744,11 +9745,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -9786,11 +9787,11 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
-- **AppversionLong** – različica programa
+- **AppVersionLong** – različica aplikacije
 
 - **Channel** – ugodnost občinstva
 
-- **Device_NetworkCountry** – država naprave (ki temelji na naslovu IP)
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
 
@@ -11406,7 +11407,7 @@ Zbrana so sledeča polja:
 
 Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
   - **ThrottlingTimestamp** – čas, ko je bila omejena telemetrija
 
