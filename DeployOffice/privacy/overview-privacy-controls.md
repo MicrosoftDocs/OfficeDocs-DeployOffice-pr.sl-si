@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Office 365 ProPlus, vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: 708c8b1dae02f54d4c6a6195cec9513c8639b62d
-ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
+ms.openlocfilehash: 24a3d30d05fb2a1456e10d8a8036f31c25c14db7
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "37417443"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510731"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrolnikov zasebnosti za Office 365 ProPlus
 
@@ -38,7 +38,7 @@ V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesni
 >   - Različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 >   - Različico 1904 ali novejšo za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online Plan 2.
 > - Kontrolnike zasebnosti smo vključili v različico 1908 polletnega kanala (ciljno usmerjen), ki je bil izdan 10. septembra 2019. Predvidoma bodo na voljo v polletnem kanalu januarja 2020.
-> - Načrtujemo, da bodo kontrolniki zasebnosti na voljo v drugi polovici oktobra 2019 za različice aplikacij Excel, OneNote, PowerPoint, Visio in Word za iOS. Več informacij vam bomo razkrili v začetku oktobra.
+> - Ti kontrolniki za varnost so na voljo za različico 2.30 in poznejše različice iOS za Excel, OneNote, PowerPoint in Word, kot tudi za različico 1.17 in poznejše različice Visio Viewer za iOS.
 > - Večino aplikacij Office za splet bodo nov kontrolnik zasebnosti za [izbirne povezane izkušnje](optional-connected-experiences.md) predvidoma začele uporabljati v sredini oktobra 2019. Te aplikacije so: Excel za splet, OneNote za splet, PowerPoint za splet, Visio za splet in Word za splet. Pred tem pa lahko uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md), da konfigurirate ustrezno [nastavitev pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
 > - Nove in izboljšane kontrolnike zasebnosti bomo razširili dodatnim Officeovim odjemalcem, vključno z aplikacijo Teams in našimi mobilnimi aplikacijami. Več informacij o teh spremembah bomo razkrili v prihajajočih se mesecih. Še naprej bomo pozorno prisluhnili vašim povratnim informacijam in poskrbeli za izboljšave za vse odjemalce in storitve za Office 365.
 
@@ -73,7 +73,8 @@ Ti diagnostični podatki ne vključujejo imen uporabnikov, njihovih e-poštnih n
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
-- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Povezane izkušnje za Office 365 ProPlus
@@ -98,7 +99,8 @@ Na voljo je tudi nastavitev pravilnika, s katero lahko izklopite te povezane izk
 
 - [Povezane izkušnje v Officeu](connected-experiences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
-- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Izbirne povezane izkušnje za Office 365 ProPlus
 
@@ -114,7 +116,8 @@ Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim upo
 
 - [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
-- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
+- [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Zahtevani podatki storitev za povezane izkušnje
 

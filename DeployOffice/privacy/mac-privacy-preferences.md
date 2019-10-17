@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom ponuja informacije o načinu uporabe prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac.
 hideEdit: true
-ms.openlocfilehash: 01bb31f3b6c307ec1dc4762b54fea17185dcf27d
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36246324"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510229"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Uporaba prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac
 
@@ -34,7 +34,8 @@ Poleg tega je na voljo nova prednostna nastavitev, povezana s pogovornim oknom *
 Če želite več informacij o diagnostičnih podatkih in povezanih izkušnjah, preberite članek [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md).
 
 > [!NOTE]
-> Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom Windows, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom Windows, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom iOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Nastavljanje prednostnih nastavitev
 
@@ -52,12 +53,11 @@ Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje teža
 |**Možne vrednosti**  | `BasicDiagnosticData` *(s tem nastavite raven na možnost »Zahtevana«)* <br/> `FullDiagnosticData` *(s tem nastavite raven na možnost »Izbirna«)* <br/> `ZeroDiagnosticData` *(s tem nastavite raven na možnost »Nobena«)* |
 |**Razpoložljivost** |16.28 in novejše različice |
 
-> [!NOTE]
-> Če nastavite to prednostno nastavitev, bo veljala tudi za te izdelke:
-> - Teams 1.00.217856 za Mac in novejše različice te aplikacije
-> - Skype za podjetja za Mac 16.28 in novejše različice te aplikacije
+Če te prednostne nastavitve ne nastavite, Microsoft v primeru uporabnikov z naročnino na Office 16.30, ki so vpisani s službenim ali šolskim računom, oziroma uporabnikov, ki imajo različico sistema Office 365 za Mac ali Office 2019 za količinsko licenciranje, prejema izbirne in zahtevane diagnostične podatke. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
 
-Če te prednostne nastavitve ne nastavite, Microsoft v primeru uporabnikov z naročnino na Office 365, ki so vpisani s službenim ali šolskim računom, oziroma uporabnikov, ki imajo različico sistema Office 2019 za Mac za količinsko licenciranje, prejema izbirne in zahtevane diagnostične podatke. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
+> [!NOTE]
+> - Če namestite različico 16.28 ali 16.29 in ne nastavite te prednostne nastavitve, bodo Microsoftu poslani tako izbirni kot tudi zahtevani diagnostični podatki. Če nato nadgradite na različico 16.30 ali novejšo različico, bodo Microsoftu še vedno poslani tako izbirni kot tudi zahtevani diagnostični podatki, razen če uporabite to prednostno nastavitev za nastavitev druge vrednosti.
+> - Če nastavite to nastavitev, bo veljala tudi za različico 1.00.217856 in novejše različice Teams za računalnike Mac ter različice 16.28 in novejše različice Skype za podjetja za Mac.
 
 V primeru drugih uporabnikov, kot so domači uporabniki z naročnino na Office 365, Microsoft prejema samo zahtevane diagnostične podatke, razen če uporabnik v možnosti **Nastavitve** > **Zasebnost** izbere, da so poslani tudi izbirni diagnostični podatki.
 
