@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office nudijo pregled zahtevanih podatkov storitve, ki so zbrani o povezanih izkušnjah v Officeu.
 hideEdit: true
-ms.openlocfilehash: eaa659e375d3d5c29d5410ab53db7ae583df6e9d
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: b4cc25ae1c2a34082bff623ad630db664050effb
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510641"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067235"
 ---
 # <a name="required-service-data-for-office"></a>Zahtevani podatki storitev za Office 
 
@@ -68,6 +68,7 @@ Zahtevani podatki storitve so zbrani in poslani Microsoftu tudi za ključne Offi
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primeri dogodkov za diagnostične podatke storitve
 

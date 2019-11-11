@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5f3b63c65d43827befe58ba600c7957410f2d3c0
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510309"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067475"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -45,6 +45,7 @@ Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [prav
 > [!NOTE]
 > - Če želite več informacij o upravljanju kontrolnikov zasebnosti za Office for Mac, preberite [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
 > - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom iOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md).
+> - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom Android, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md).
 
 
 Če uporabljate orodje za upravljanje pravilnika skupine, vse nastavitve pravilnika najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Zasebnost\\Središče zaupanja.

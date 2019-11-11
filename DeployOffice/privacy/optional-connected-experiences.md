@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: c3d6489603ff5cdc5f7a0ea4f187fb24438aeb35
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: f59c737a41c3075f9c29c49f623d88f9876bf32d
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510093"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067296"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -29,6 +29,7 @@ ms.locfileid: "37510093"
 > - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
+> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>S katerimi pogoji uporabe se moram strinjati, če želim uporabljati te storitve?
 

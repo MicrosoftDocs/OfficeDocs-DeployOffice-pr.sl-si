@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: d772a649a78a88112a270e839834cbe48141217f
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: ab40e68df1ed91b1aff7510383d47967e8f13ccb
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510183"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067115"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
@@ -51,6 +51,7 @@ Med izbirne diagnostične podatke sodijo podatki, ki jih zberemo o oblikah, ki j
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije izbirnih diagnostičnih podatkov
 
