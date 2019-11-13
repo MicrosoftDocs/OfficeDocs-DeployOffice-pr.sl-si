@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: f59c737a41c3075f9c29c49f623d88f9876bf32d
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
+ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067296"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "38276510"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -47,9 +47,9 @@ Opomba: z nastavitvijo pravilnika, opisano v nadaljevanju, ni mogoče upravljati
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Izkušnje, ki za delovanje uporabljajo Microsoftove spletne storitve in/ali storitve tretjih oseb
 
-### <a name="office-store"></a>Trgovina Office 
+### <a name="help--suggest-a-feature"></a>Pomoč > Predlog za funkcijo
 
-Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/). Vendar pa so [dodatki za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D), ki jih prenesete iz Trgovine Office, zajeti v pogojih uporabe ponudnika dodatkov. Ti so lahko različne organizacije ali podjetja, ki vam lahko zaračunajo tudi pristojbino za uporabo. Preverite dovoljenja, izjavo o zasebnosti in pogoje licence za vsak dodatek, da izveste, kateri pogoji veljajo. Nato se odločite, ali se strinjate s pogoji uporabe, ki jih ponuja ta organizacija.
+Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če posredujete zamisli prek izkušnje predloga za funkcijo, veljajo [pogoji storitve in pravilnik o zasebnosti za UserVoice](https://outlook.uservoice.com/tos).
 
 ### <a name="insert-online-video"></a>Vstavljanje spletnega videoposnetka
 
@@ -58,6 +58,10 @@ Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitv
 ### <a name="microsoft-error-reporting-program-merp"></a>Microsoftov program za poročanje o napakah (MERP) 
 
 Program MERP se poveže s storitvijo Watson.microsoft.com in tako pošlje diagnostične podatke ob zrušitvah Officeovih odjemalskih aplikacij v napravah Mac. Program je v lasti Microsofta in upoštevati je treba [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/). MERP ne velja za Officeove odjemalske aplikacije, ki se izvajajo v sistemu Windows.
+
+### <a name="office-store"></a>Trgovina Office 
+
+Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/). Vendar pa so [dodatki za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D), ki jih prenesete iz Trgovine Office, zajeti v pogojih uporabe ponudnika dodatkov. Ti so lahko različne organizacije ali podjetja, ki vam lahko zaračunajo tudi pristojbino za uporabo. Preverite dovoljenja, izjavo o zasebnosti in pogoje licence za vsak dodatek, da izveste, kateri pogoji veljajo. Nato se odločite, ali se strinjate s pogoji uporabe, ki jih ponuja ta organizacija.
 
 ### <a name="research"></a>Raziskovanje
 
@@ -70,19 +74,6 @@ Program MERP se poveže s storitvijo Watson.microsoft.com in tako pošlje diagno
 
 V [vrstici za vreme](https://support.office.com/article/d11b7532-7c58-489e-8103-5cc5d727b06b) v Outlooku je prikazana vremenska napoved za geografske lokacije, ki jih izberete. Vrstica za vreme v Outlooku se med uporabo privzeto poveže s storitvijo Vreme MSN. MSN je v lasti Microsofta in upoštevati je treba [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/). Če uporabljate vrstico za vreme s storitvijo Vreme MSN, Microsoft ne zazna vaše lokacije in izbranih mest ni mogoče povezati z vami. [Privzeto nastavitev lahko spremenite](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook), če se želite povezati z drugimi ponudniki vremenskih storitev. Če želite uporabiti drugega ponudnika vremenskih storitev, preberite izjavo o zasebnosti in pogoje licence tega ponudnika, da boste izvedeli, kateri pogoji veljajo.
 
-## <a name="experiences-that-allow-you-to-submit-feedback"></a>Izkušnje, s katerimi lahko pošiljate povratne informacije
-
-### <a name="help--feedback"></a>Pomoč > Povratne informacije
-
-Ko odprete meni **Pomoč** > **Povratne informacije** in posredujete povratne informacij ali odgovorite na enega od naših vprašalnikov »Sporočite nam svoje povratne informacije« med uporabo aplikacije za Office 365 ProPlus, so posredovane informacije poslane Microsoftu in veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). Ko pošljete povratne informacije, uporabite gumb za povratne informacije, po želji lahko pošljete e-poštni naslov in/ali posnetek zaslona okna. To niso zahtevane informacije.  
-
-#### <a name="outlook-is-an-exception"></a>Outlook je izjema
-
-Meni **Pomoč** > **Povratne informacije** v Outlooku se razlikuje od menija **Pomoč** > **Povratne informacije** v drugih aplikacijah za Office 365 ProPlus. Ko pošljete povratne informacije prek menija **Pomoč** > **Povratne informacije** v Outlooku, Microsoftu dovolite, da zbere Outlookove dnevnike za razreševanje morebitnih težav z učinkovitostjo delovanja. Ti dnevniki lahko vsebujejo osebne podatke, kot so vaše ime, e-poštni naslov, vsebina vaših e-poštnih sporočil ali pogoji iskanja. To storitev zagotavlja Microsoftova licenca, ki jo ima vaša organizacija. Če se odločite poslati povratne informacije prek gumba povratnih informacij v Outlooku, vam ni treba podpisati ločene pogodbe z Microsoftom, in nastavitev zasebnosti, opisana v tem članku, ne velja.
-
-### <a name="help--suggest-a-feature"></a>Pomoč > Predlog za funkcijo
-
-Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če posredujete zamisli prek izkušnje predloga za funkcijo, veljajo [pogoji storitve in pravilnik o zasebnosti za UserVoice](https://outlook.uservoice.com/tos).
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako ugotovim, ali mi je skrbnik omogočil uporabo izbirnih povezanih izkušenj
 
