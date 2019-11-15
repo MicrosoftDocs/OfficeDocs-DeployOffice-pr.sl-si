@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 25f594865089d35cb46ebfcc9b97d6b048f6298d
+ms.sourcegitcommit: ad2bb6e42b2432a2cb9370594cd50f3a14f2fbe3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510481"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38310696"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -44,6 +44,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Seznam osnovnih storitev za Office 
 
@@ -6456,7 +6457,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
 
-V tem primeru je navedeno, da je Microsoft autoupdate prejel e-dogodek, v katerem je prišlo do prekinitve programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+V tem primeru je navedeno, da je storitev Microsoft Autoupdate prejela dogodek družbe Apple o prekinitvi aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8179,7 +8180,7 @@ Zbrana so sledeča polja:
 
 ### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
 
-V tem primeru je navedeno, da je modul vmesnika za ukaz» Microsoft autoupdate «prejel dogodek» Apple «, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+V tem primeru je navedeno, da je modul vmesnika ukazne vrstice Microsoft Autoupdate prejel dogodek družbe Apple, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8220,7 +8221,7 @@ Zbrana so sledeča polja:
 
 ### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
 
-V tem dogodku je navedeno, da je modul z uporabniškim vmesnikom ukazne vrstice za samodejno posodabljanje prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+V tem dogodku je navedeno, da je modul vmesnika ukazne vrstice za samodejno posodabljanje sistema Microsoft prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -10058,6 +10059,15 @@ Zbrana so sledeča polja
 Konfiguracija storitev ne zbira nepotrebnih dogodkov diagnostičnih podatkov storitve.
 
 ## <a name="telemetry-events"></a>Dogodki telemetrije
+
+### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+
+Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek se uporablja za nadzor stanja pretoka telemetrije, katerega ste dovolili, pri izkušnji prvega zagona. Zbrali smo kodo, ki poudarja, katero vrsto možnosti zbirke diagnostičnih podatkov je izbral uporabnik.
+
+Zbrana so naslednja polja:
+
+ - **Data_EventId** – koda, ki označuje nastavitve za diagnostično zbirko podatkov, ki jo je izbral uporabnik.
+
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
