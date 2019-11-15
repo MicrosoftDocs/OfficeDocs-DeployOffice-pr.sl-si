@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
 hideEdit: true
-ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
+ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067475"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "38639350"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
 
@@ -92,9 +92,6 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 
 Če ne konfigurirate teh nastavitev pravilnika, so na voljo vse vrste povezanih izkušenj. Tako bodo vaši uporabniki lahko dostopali do vseh funkcij, ki so na voljo v storitvi Office 365 ProPlus. Vendar se zavedamo, da morda želite izklopiti nekatere ali vse povezane izkušnje zaradi določenih zahtev vaše organizacije.
 
-> [!IMPORTANT]
-> Težava, povezana z onemogočanjem 4 nastavitev pravilnika, je bila nedavno odpravljena z objavo novih datotek administrativne predloge (ADMX/ADML) v torek 28. maja 2019. Preverite, ali ste prenesli in namestili posodobljene datoteke pravilnika skupine iz [Microsoftovega centra za prenose](https://www.microsoft.com/en-us/download/details.aspx?id=49030).
-
 Če se odločite, da svojim uporabnikom ne boste omogočili določenih vrst povezanih izkušenj, bo trak ali meni za te povezane izkušnje zatemnjen oziroma bodo uporabniki prejeli sporočilo o napaki, ker so poskušali uporabiti te povezane izkušnje. V tem primeru [zahtevani podatki storitve](required-service-data.md) za te povezane izkušnje ne bodo poslani Microsoftu.
 
 Če so vaši uporabniki vpisani v Office s poverilnicami organizacije, ki jih včasih imenujemo tudi službeni ali šolski račun, ne bodo mogli vklapljati teh povezanih izkušenj, ki so del storitve Office 365 ProPlus, oziroma jih izklapljati.
@@ -131,7 +128,7 @@ Z nastavitvijo pravilnika *Dovoli uporabo dodatnih povezanih izkušenj v Officeu
 > - Visio za splet
 > - Word za splet
 >
-> Te aplikacije Office za splet bodo nov kontrolnik zasebnosti za izbirne povezane izkušnje predvidoma začele uporabljati v sredini oktobra 2019, nastavitev pravilnika pa lahko konfigurirate že zdaj. Če želite konfigurirati to nastavitev pravilnika za te aplikacije Office za splet, uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md).
+> Če želite konfigurirati to nastavitev pravilnika za te aplikacije Office za splet, uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md).
 
 Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
