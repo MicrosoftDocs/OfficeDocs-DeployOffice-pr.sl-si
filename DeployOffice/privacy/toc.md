@@ -1,9 +1,12 @@
 # Zasebnost za Office 365 ProPlus
+
 ## [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md)
-## [Upravljanje kontrolnikov zasebnosti z nastavitvami pravilnika](manage-privacy-controls.md)
-## [Upravljanje kontrolnikov zasebnosti z nastavitvami (Mac)](mac-privacy-preferences.md)
-## [ Upravljanje kontrolnikov zasebnosti z nastavitvami (iOS)](ios-privacy-preferences.md)
-## [Upravljanje kontrolnikov zasebnosti z nastavitvami pravilnika (Android)](android-privacy-controls.md)
+
+## Upravljanje kontrolnikov zasebnosti
+### [Nastavitve pravilnika sistema Windows](manage-privacy-controls.md)
+### [Nastavitve za Mac](mac-privacy-preferences.md)
+### [Nastavitve za iOS](ios-privacy-preferences.md)
+### [Nastavitve pravilnika za Android](android-privacy-controls.md)
 
 ## Diagnostični podatki
 ### [Zahtevani diagnostični podatki](required-diagnostic-data.md)
