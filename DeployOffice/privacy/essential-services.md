@@ -10062,7 +10062,7 @@ Konfiguracija storitev ne zbira nepotrebnih dogodkov diagnostičnih podatkov sto
 
 ### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek se uporablja za nadzor stanja pretoka telemetrije, katerega ste dovolili, pri izkušnji prvega zagona. Zbrali smo kodo, ki poudarja, katero vrsto možnosti zbirke diagnostičnih podatkov je izbral uporabnik.
+Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek se uporablja za nadzor stanja pretoka telemetrije, ki ste ga dovolili, pri izkušnji prvega zagona. Zbiramo kodo, ki označuje vrsto možnosti zbirke diagnostičnih podatkov, ki jo je izbral uporabnik.
 
 Zbrana so naslednja polja:
 
