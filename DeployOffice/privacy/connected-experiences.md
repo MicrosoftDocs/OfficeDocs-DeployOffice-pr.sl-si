@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 5bf39e1fbe7e56b77496cfc0756484a9a1c051a0
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: a2f2a951db371336be1b425b0db45e5e72ea9d75
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067565"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024380"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -29,6 +29,8 @@ ms.locfileid: "38067565"
 > - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
 >
 > Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+>
+> Te informacije bodo veljale za različico Outlooka za iOS in Android, ki bo predvideno izdana konec januarja 2020.
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
 
@@ -49,13 +51,16 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Napisi in podnapisi v živo |  [Predstavljajte s samodejnimi napisi in podnapisi v realnem času v PowerPointu](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
+| Predlogi za lokacije | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
 | Zemljevidi v funkciji Power View   | [Zemljevidi v funkciji Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Storitev za predstavitve Office  | [Oddajajte svojo PowerPointovo predstavitev oddaljenemu občinstvu v spletu](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | Oblikovalnik za PowerPoint   | [Ustvarite strokovne postavitve diapozitivov z Oblikovalnikom za PowerPoint](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Objavi v storitvi Power BI   | [Objavljanje v storitvi Power BI iz Excela](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavi v storitvi Microsoft Stream    | [Pretvorite predstavitev v videoposnetek](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | Raziskovanje   | [Dodajte ali spremenite raziskovalne storitve](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| Optično branje vizitke|  [Optično preberite ali tapnite, da dodate stike v Outlooku za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 | Pametno iskanje   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| Predlagani odgovori | [Kaj so predlagani odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Pretvori v spletno stran   | [Preoblikujte Wordov dokument v Sway spletno stran](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevajalnik   | [Prevajanje besedila v drug jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
@@ -68,14 +73,19 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 
 | **Ime**      | **Več informacij**  |
 | ------------- | ------------- |
+| Aplikacije koledarja| [Kaj so aplikacije koledarja?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Pisave v oblaku                 | [Pisave v oblaku v Officeu](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
 | Podatkovni tipi                  | [Podatkovni tipi v Excelu: Delnice in geografija](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
+| Pogosta vprašanja |Ko v Outlooku za iOS in Android izberete možnost**Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** ste preusmerjeni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Učinki rokopisa                 | [Risanje in pisanje s peresom v Officeu](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Vstavi ikone                | [Vstavljanje ikon v Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Vstavi Microsoft Forms      | [Vstavljanje obrazca ali preskusa znanja v PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
 | Vstavi spletne 3D-modele     | [Bodite ustvarjalni s 3D-modeli](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
 | Vstavi spletne slike      | [Vstavi slike](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
 | Vstavi spletni videoposnetek     | [Vstavljanje videoposnetka iz storitve YouTube ali z drugega spletnega mesta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| Zanimivi koledarji| [Naročite se na koledar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o najljubših športnih ekipah ali TV-oddajah v Outlooku za iOS in Android. |
+| Predlogi za lokacije | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
+| Zemljevidi in podrobnosti dogodka | Izvedite, kje je vaš cilj z [zemljevidi](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) in podrobnostmi dogodka v Outlooku za iOS in Android. |
 | Pomoč za Office                 | Ko izberete **»Pomoč«** > **»Pomoč«** na traku ali uporabite F1 v Officeovem programu   |
 | Iskanje oblik v spletu (Visio) | [Iskanje dodatnih oblik in šablon](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | Orodje za hiter začetek za PowerPoint     | [Raziskava teme z orodjem za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |

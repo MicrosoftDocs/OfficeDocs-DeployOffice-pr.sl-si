@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
-ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
+ms.openlocfilehash: ab9404b93157875589f2625be51a9e30cc3d0795
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "38276510"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024470"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -37,7 +37,15 @@ Pomembno je, da se zavedate, da te izbirne storitve v oblaku niso zajete v Micro
 
 ## <a name="experiences-that-rely-on-bing"></a>Izkušnje, ki za delovanje uporabljajo Bing
 
-Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je v primerjavi s storitvijo Office 365 ProPlus ločena storitev, ki jo upravlja Microsoft. Izkušnje, ki jo uporabljajo v aplikacijah za Office 365 ProPlus, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) in [pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). Za te storitve prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). Poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 ProPlus, so poslane organizaciji Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
+Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je v primerjavi s storitvijo Office 365 ProPlus ločena storitev, ki jo upravlja Microsoft. Izkušnje, ki jo uporabljajo v aplikacijah za Office 365 ProPlus, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) in [pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+
+Izkušnje, ki jih Bing omogoča v Outlooku za iOS in Android, so:
+
+- **Predlogi za lokacijo:**   Ko v element koledarja dodate javni kraj z uličnim naslovom, se polje »Lokacija« izpolni s celotnim uličnim naslovom.
+- **Zanimivi koledarji:**   [Naročite se](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) lahko na koledarje o vaših najljubših športnih ekipah ali TV-oddajah.
+
+
+ Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 ProPlus, so poslane organizaciji Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
 
 ## <a name="experiences-that-rely-on-linkedin"></a>Izkušnje, ki za delovanje uporabljajo LinkedIn
 
@@ -47,9 +55,13 @@ Opomba: z nastavitvijo pravilnika, opisano v nadaljevanju, ni mogoče upravljati
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Izkušnje, ki za delovanje uporabljajo Microsoftove spletne storitve in/ali storitve tretjih oseb
 
+### <a name="help--contact-support"></a>Pomoč > Stik s podporo
+
+V Outlooku za iOS in Android lahko poročate o težavah in se povežete z našo skupino podpore tako, da izberete **Nastavitve** > **Pomoč in povratne informacije** > **Stik s podporo**. To izkušnjo uporablja storitev, ki jo ponuja HelpShift, za katero veljajo [pogoji storitve](https://www.helpshift.com/legal/terms/) in [pravilnik o zasebnosti](https://www.helpshift.com/legal/privacy/) za HelpShift.
+
 ### <a name="help--suggest-a-feature"></a>Pomoč > Predlog za funkcijo
 
-Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če posredujete zamisli prek izkušnje predloga za funkcijo, veljajo [pogoji storitve in pravilnik o zasebnosti za UserVoice](https://outlook.uservoice.com/tos).
+Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če nam zamisli posredujete prek predloga za funkcijo, veljajo [pogoji storitve](https://outlook.uservoice.com/tos) in [pravilnik o zasebnosti](https://outlook.uservoice.com/tos#privacy-policy) za UserVoice.
 
 ### <a name="insert-online-video"></a>Vstavljanje spletnega videoposnetka
 
