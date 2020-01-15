@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: a6003b44bc31f8165e9e102104c4b25336efd4cc
-ms.sourcegitcommit: 17f7bf4bfa65042ad44dfff23489c6a538a004e8
+ms.openlocfilehash: 74f80a494eff6f82310a89cbcc52e10d0a324e15
+ms.sourcegitcommit: 752267dddf9c011bb91136f6223f641053450599
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "39906628"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41109515"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -2391,6 +2391,139 @@ Zbrana so naslednja polja:
 
 - **SolutionId** – ID rešitve
 
+#### <a name="officefeedeventsinitializing"></a>Office.Feed.Events.Initializing
+
+Ta dogodek se zbere ob inicializaciji vira. Ta dogodek se uporablja za označevanje zagona vira in za diagnosticiranje težav z zanesljivostjo pri zagonu vira.
+
+- **AppInfo.Language** – jezik aplikacije v obliki zapisa jezikovne oznake IETF.
+
+- **AppInfo.Name** – ime uporabljene komponente (vir za Office).
+
+- **AppInfo.Version** – različica aplikacije.
+
+- **clientCorrelationId** – globalni enolični identifikator za sejo aplikacije.
+
+- **clientType** – aplikacija, v kateri se izvaja komponenta.
+
+- **DeviceInfo.Make** – proizvajalec naprave ali ime proizvajalca strojne opreme naprave.
+
+- **DeviceInfo.NetworkProvider** – omrežje ali mobilni operater, kot je »AT&T«.
+
+- **DeviceInfo.NetworkType** – vrsta povezljivosti z omrežjem za uporabljeno napravo, na primer »žična«, »Wi-Fi« ali »WWAN« (podatki/mobilno).
+
+- **DeviceInfo.OsName** – ime operacijskega sistema naprave.
+
+- **DeviceInfo.SDKUid** – enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme.
+
+- **eventId** – identifikator za ime dogodka. 
+
+- **EventInfo.SdkVersion** – različica telemetrije kompleta za razvoj programske opreme, s katero je odjemalec ustvaril dogodek.
+
+- **eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
+
+- **feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi.
+
+- **hostAppRing** – število uporabnikov, katerim je bila posredovana aplikacija.
+
+- **properties** – vsebuje dodatne lastnosti metapodatkov, ki so zbrani za vsak dogodek.
+        
+    - **ClientTimeStamp** – časovni žig, ko je odjemalec zabeležil dogodek.
+
+- **publicEventName** – javno ime dogodka.  
+
+- **regija** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
+
+- **tenantAadObjectId** – globalni enolični identifikator uporabnika za poslovnega najemnika.
+
+- **type** – vrsta zabeleženega dogodka, npr. »Sledenje«, »Napaka«, »Dogodek« ali »QoS«.
+
+- **userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja.
+
+- **UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja.
+
+- **UserInfo.IdType** – določa vrsto ID-ja uporabnika. 
+
+- **UserInfo.Language** – jezik uporabnika v obliki zapisa jezikovne oznake IETF.
+
+- **UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun.
+
+- **UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika.
+
+- **UserInfo.TimeZone** – uporabnikov časovni pas glede na UTC.
+
+- **UserPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun.
+
+- **version** – različica odjemalca vira.
+
+#### <a name="officefeedeventsofficefeeddidappear"></a>Office.Feed.Events.OfficeFeedDidAppear
+
+Ta dogodek se zbere ob prikazu vira uporabniku. S tem dogodkom se preveri, ali je bil korak inicializacije vira zaključen in diagnosticira težave z zanesljivostjo pri zagonu vira.
+
+- **AppInfo.Language** – jezik aplikacije v obliki zapisa jezikovne oznake IETF.
+
+- **AppInfo.Name** – ime uporabljene komponente (vir za Office).
+
+- **AppInfo.Version** – različica aplikacije.
+
+- **clientCorrelationId** – globalni enolični identifikator za sejo aplikacije.
+
+- **clientType** – aplikacija, v kateri se izvaja komponenta.
+
+- **DeviceInfo.Make** – proizvajalec naprave ali ime proizvajalca strojne opreme naprave.
+
+- **DeviceInfo.NetworkProvider** – omrežje ali mobilni operater, kot je »AT&T«.
+
+- **DeviceInfo.NetworkType** – vrsta povezljivosti z omrežjem za uporabljeno napravo, na primer »žična«, »Wi-Fi« ali »WWAN« (podatki/mobilno).
+
+- **DeviceInfo.OsName** – ime operacijskega sistema naprave.
+
+- **DeviceInfo.SDKUid** – enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme.
+
+- **eventId** – identifikator za ime dogodka.
+
+- **EventInfo.SdkVersion** – različica telemetrije kompleta za razvoj programske opreme, s katero je odjemalec ustvaril dogodek.
+
+- **eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
+
+- **feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi.
+
+- **hostAppRing** – število uporabnikov, katerim je bila posredovana aplikacija.
+
+- **properties** – vsebuje dodatne lastnosti metapodatkov, ki so zbrani za vsak dogodek.
+        
+  - **bridgeWaitingTime** – metrika za diagnosticiranje učinkovitosti delovanja pri upodabljanju vira.
+    
+  - **ClientTimeStamp** – časovni žig, ko je odjemalec zabeležil dogodek.
+        
+  - **renderTime** – metrika za diagnosticiranje učinkovitosti delovanja pri upodabljanju vira.
+
+- **publicEventName** – javno ime dogodka.  
+
+- **regija** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
+
+- **tenantAadObjectId** – globalni enolični identifikator uporabnika za poslovnega najemnika.
+
+- **type** – vrsta zabeleženega dogodka, npr. »Sledenje«, »Napaka«, »Dogodek« ali »QoS«.
+
+- **userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja.
+
+- **UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja.
+
+- **UserInfo.IdType** – določa vrsto ID-ja uporabnika. 
+
+- **UserInfo.Language** – jezik uporabnika v obliki zapisa jezikovne oznake IETF.
+
+- **UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun.
+
+- **UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika.
+
+- **UserInfo.TimeZone** – uporabnikov časovni pas glede na UTC.
+
+- **UserPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun.
+
+- **version** – različica odjemalca vira.
+
+
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
 S tem dogodkom lahko prepoznamo, ali je bila datoteka uspešno odprta v plasti FIO. Uporabljamo ga za zagotavljanje ustreznosti delovanja funkcij in nadzor.
@@ -3131,6 +3264,191 @@ Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. 
 Zbrana so naslednja polja:
 
 - **Data_FirstRunPanelName** – ime podokna, iz katerega je bila zagnana uporabniška izkušnja
+
+#### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
+
+Dejavnosti beležimo, ko uporabnik zažene aplikacijo za nalaganje kartice osebe in želi odpreti kartico osebe v živo.  S temi podatki določimo, ali je bila kartica naložena pravilno. 
+
+Zbrana so sledeča polja: 
+
+- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
+
+- **Data.AppInfo.Name** – ime uporabljene storitve (kartica profila)
+
+- **Data.AppInfo_Id** – ime gostiteljske aplikacije
+
+- **Data.AppInfo_Version** – različica gostiteljske aplikacije
+
+- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
+
+- **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
+
+- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
+
+- **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
+
+- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+
+- **Data.eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
+
+- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+
+- **Data.OTelJS.Version**– različica zapisovalnika OTel
+
+- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
+
+  - **accountType** – ali uporabnik pripada organizaciji oziroma je domač uporabnik
+
+  - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj
+
+  - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
+
+  - **ClientTimeStamp** – čas v aplikaciji, ko je bil dogodek zabeležen
+
+  - **consumerCorrelationId** – dvojnik za zgornji »Data.clientCorrelationId«
+
+  - **contextType** – iz katere aplikacije je bila kartica zagnana
+
+  - **ecsConfigIds** – identifikatorji različic za funkcije, omogočene na kartici
+
+  - **ecsTagId** – ID oznake za funkcije
+
+  - **externalAppSessionCorrelationId** – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v isti podseji
+
+  - **flights** – funkcije, omogočene na kartici
+
+  - **fromCache** – ali so bili podatki pridobljeni iz pomnilnika
+
+  - **hasFinePointer** – ali ima naprava vgrajeno podporo za kazalca miške
+
+  - **hasHoverEvents** – ali ima naprava vgrajeno podporo za premikanje kazalca miške nad elemente
+
+  - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
+
+  - **offlineResolved** – ali so bili podatki pridobljeni brez povezave
+
+  - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
+
+- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+
+- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
+
+- **Data.userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja (dvojnik Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun
+
+- **Data.UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.userPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun (dvojnik za »Data.UserInfo.Msald«)
+
+- **Data.version** – različica storitve (kartica profila)
+
+- **Data.workloadCulture** – nabor podatkov o kulturi v gostiteljski aplikaciji
+
+- **DeviceInfo_Id** – globalni enolični identifikator naprave za napravo
+
+- **DeviceInfo_Make** – blagovna znamka operacijskega sistema
+
+- **DeviceInfo_Model** – model naprave
+
+- **DeviceInfo_OsName** – ime operacijskega sistema naprave
+
+- **DeviceInfo_OsVersion** – različica operacijskega sistema
+
+- **DeviceInfo_SDKUid** – enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme
+
+#### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
+
+Aktivnosti se beležijo, ko uporabnik odpre razširjeno kartico osebe. Uporablja se za opazovanje kritičnih anomalij v stopnjah napake pri uvajanju kartice osebe Live Persona Card.
+
+Zbrana so sledeča polja:
+
+- **AppInfo_Id** – ime gostiteljske aplikacije
+
+- **AppInfo_Version** – različica gostiteljske aplikacije
+
+- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+
+- **Data.AppInfo.Name** – ime storitve v uporabi (kartica profila)
+
+- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
+
+- **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
+
+- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
+
+- **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
+
+- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+
+- **Data.exportName**– človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+
+- **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
+
+- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+
+- **Data.hostAppRing** – krog, s katerim je bila aplikacija distribuirana
+
+- **Data.OTelJS.Version**– različica programa OTel Logger
+
+- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
+
+  - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
+
+  - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
+
+  - **clientScenario** – se uporablja za prepoznavanje funkcije v aplikaciji, v kateri je bila odprta kartica osebe
+
+  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
+
+  - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
+
+  - **hasPersonalInsightRing** – vpogledi v Office ali LinkedIn so lahko na voljo za uporabnika
+
+  - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
+
+  - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
+
+  - **section** – aktivni razdelek razširjene kartice
+
+- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+
+- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
+
+- **Data.userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja (dvojnik Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja 
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun
+
+- **Data.UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.userPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun (dvojnik Data.UserInfo.Msald)
+
+- **Data.version** – različica storitve (kartica profila)
+
+- **DeviceInfo_Id** – globalni enolični identifikator naprave za napravo
+
+- **DeviceInfo_Make** – blagovna znamka operacijskega sistema
+
+- **DeviceInfo_Model** – model naprave
+
+- **DeviceInfo_OsName** – ime operacijskega sistema naprave
+
+- **DeviceInfo_OsVersion** – različica operacijskega sistema
+
+- **DeviceInfo_SDKUid** – enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme
+
+- **NetworkCost** – označuje strošek/vrsto omrežja (omejen prenos podatkov, omejeno nad zgornjo mejo itd.)
+
+- **NetworkCountry** – koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca
+
 
 #### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
 
@@ -3910,7 +4228,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
 
-  - **Data\_Doc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+  - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
   - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
 
@@ -4174,7 +4492,9 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16. »DataSrcDocSessionId:long« – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa
+- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+
+- **Data_SrcDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
 - **Data_SrcDoc_SharePointServiceContext:string** – neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
@@ -7689,6 +8009,8 @@ Zbrana so naslednja polja:
 - **AssetId** – ID sredstva aplikacije
 
 - **ErrorCode** – skupni porabljeni čas.
+
+- **IsAugmentationScenario** – označuje, ali je razširitvena zanka odgovorna za inicializacijo nadzora Officeovih rešitev
 
 - **IsDebug** – označuje sejo za odpravljanje napak
 
