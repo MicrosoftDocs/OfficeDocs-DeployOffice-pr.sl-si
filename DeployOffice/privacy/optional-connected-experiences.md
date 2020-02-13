@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: ab9404b93157875589f2625be51a9e30cc3d0795
-ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
+ms.openlocfilehash: 3cba95a89c0a1f108485565101d10deea5a70a38
+ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "41024470"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "41917721"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -30,6 +30,8 @@ ms.locfileid: "41024470"
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 > - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
+>
+> Večina poljubnih povezanih izkušenj se lahko upravlja preko kontrolnikov zasebnosti za povezane izkušnje. Na primer, vstavljanje spletnih slik se lahko upravlja tudi preko *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino*nastavitve politike.
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>S katerimi pogoji uporabe se moram strinjati, če želim uporabljati te storitve?
 
