@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: a2f2a951db371336be1b425b0db45e5e72ea9d75
-ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
+ms.openlocfilehash: 6dc32a1456402624ab28e0acbe9c3ef85b6add9d
+ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "41024380"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "41917631"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -42,8 +42,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 
 | **Ime**   | **Več informacij**   |
 | ----------- | ------------------ |
-| 2D-zemljevidi    | [Izdelava grafikona z zemljevidom](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
-| 3D-zemljevidi    | [Uvod v 3D-zemljevide](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+| 3D-zemljevidi\*    | [Uvod v 3D-zemljevide](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Samodejno nadomestno besedilo   | [Vse, kar morate vedeti za pisanje učinkovitih nadomestnih besedil](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Narekovanje  | [Narekovanje z glasom v Officeu](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Urejevalnik    | [Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
@@ -51,19 +50,22 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Napisi in podnapisi v živo |  [Predstavljajte s samodejnimi napisi in podnapisi v realnem času v PowerPointu](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
-| Predlogi za lokacije | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
+| Grafikon z zemljevidom\*    | [Izdelava grafikona z zemljevidom](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Zemljevidi v funkciji Power View   | [Zemljevidi v funkciji Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Storitev za predstavitve Office  | [Oddajajte svojo PowerPointovo predstavitev oddaljenemu občinstvu v spletu](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | Oblikovalnik za PowerPoint   | [Ustvarite strokovne postavitve diapozitivov z Oblikovalnikom za PowerPoint](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Objavi v storitvi Power BI   | [Objavljanje v storitvi Power BI iz Excela](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavi v storitvi Microsoft Stream    | [Pretvorite predstavitev v videoposnetek](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
-| Raziskovanje   | [Dodajte ali spremenite raziskovalne storitve](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| Raziskovanje\*   | [Dodajte ali spremenite raziskovalne storitve](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Optično branje vizitke|  [Optično preberite ali tapnite, da dodate stike v Outlooku za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
-| Pametno iskanje   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| Pametno iskanje\*   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predlagani odgovori | [Kaj so predlagani odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Pretvori v spletno stran   | [Preoblikujte Wordov dokument v Sway spletno stran](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevajalnik   | [Prevajanje besedila v drug jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
+
+> [!NOTE]
+> \*Ko so uporabniki vpisani s službenim ali šolskim računom, je ta povezana izkušnja poljubna in je na voljo pod pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave zasebnosti](https://privacy.microsoft.com/), in veljajo lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste administrator, se lahko ta povezana izkušnja upravlja s kontrolami zasebnosti za povezane izkušnje ali z *dovolite uporabo dodatne poljubne povezane izkušnje v Office-u* določanjem politike.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezane izkušnje, s katerimi prenesete spletno vsebino
 
@@ -80,19 +82,22 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | Učinki rokopisa                 | [Risanje in pisanje s peresom v Officeu](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Vstavi ikone                | [Vstavljanje ikon v Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Vstavi Microsoft Forms      | [Vstavljanje obrazca ali preskusa znanja v PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
-| Vstavi spletne 3D-modele     | [Bodite ustvarjalni s 3D-modeli](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
-| Vstavi spletne slike      | [Vstavi slike](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
-| Vstavi spletni videoposnetek     | [Vstavljanje videoposnetka iz storitve YouTube ali z drugega spletnega mesta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
-| Zanimivi koledarji| [Naročite se na koledar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o najljubših športnih ekipah ali TV-oddajah v Outlooku za iOS in Android. |
-| Predlogi za lokacije | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
+| Vstavi spletne 3D-modele\*     | [Bodite ustvarjalni s 3D-modeli](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
+| Vstavi spletne slike\*      | [Vstavi slike](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
+| Vstavi spletni videoposnetek\*     | [Vstavljanje videoposnetka iz storitve YouTube ali z drugega spletnega mesta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| Zanimivi koledarji\*| [Naročite se na koledar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o najljubših športnih ekipah ali TV-oddajah v Outlooku za iOS in Android. |
+| Predlogi za lokacije\* | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
 | Zemljevidi in podrobnosti dogodka | Izvedite, kje je vaš cilj z [zemljevidi](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) in podrobnostmi dogodka v Outlooku za iOS in Android. |
 | Pomoč za Office                 | Ko izberete **»Pomoč«** > **»Pomoč«** na traku ali uporabite F1 v Officeovem programu   |
 | Iskanje oblik v spletu (Visio) | [Iskanje dodatnih oblik in šablon](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
-| Orodje za hiter začetek za PowerPoint     | [Raziskava teme z orodjem za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
-| Raziskovalec    | [Preprosto raziskovanje naloge v Wordu](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
+| Orodje za hiter začetek za PowerPoint\*     | [Raziskava teme z orodjem za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
+| Raziskovalec\*    | [Preprosto raziskovanje naloge v Wordu](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Pokaži mi    | [Opravite delo hitro s funkcijo »Pokaži mi«](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predloge  | [Prenos brezplačnih, vnaprej vgrajenih predlog](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-| Vrstica za vreme (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+| Vrstica za vreme\* (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+
+> [!NOTE]
+>\*Ko so uporabniki vpisani s službenim ali šolskim računom, je ta povezana izkušnja poljubna in je na voljo pod pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave zasebnosti](https://privacy.microsoft.com/), in veljajo lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste administrator, se lahko ta povezana izkušnja upravlja s kontrolami zasebnosti za povezane izkušnje ali z *dovolite uporabo dodatne poljubne povezane izkušnje v Office-u* določanjem politike.
 
 ## <a name="other-connected-experiences"></a>Druge povezane izkušnje
 
@@ -117,12 +122,12 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | LinkedIn kartica stika |[Povežite račun LinkedIn in Microsoft račun](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
 | Povratne informacije o Officeu |[Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podpora za Office (Stik z nami) |Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku |
-| Dodatki za Office 365 | [Upravljajte uvajanje dodatkov za Office 365 v Skrbniškem središču za Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
+| Dodatki za Office 365\* | [Upravljajte uvajanje dodatkov za Office 365 v Skrbniškem središču za Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Organigram (Visio) |[Ustvarite organigram v Visiu](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Vklopite dodatek Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
-| Outlook UserVoice | [Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
+| Outlook UserVoice\* | [Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Nedavni dokumenti |[Odpiranje datotek v meniju »Datoteka«](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
-| Pomočnik za življenjepis |[Sestavite svoj najboljši življenjepis s pomočjo storitve LinkedIn in Pomočnikom za življenjepis](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
+| Pomočnik za življenjepis\* |[Sestavite svoj najboljši življenjepis s pomočjo storitve LinkedIn in Pomočnikom za življenjepis](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Iskalnik sob (Outlook)|[Kako nadzirati Iskalnik sob v Outlooku](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
 | Varne povezave |[Varne povezave ATP v storitvi Office 365](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Oznake občutljivosti |[Uporabite oznake občutljivosti dokumentov in e-pošte v Officeu](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
@@ -133,6 +138,8 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Zgodovina različic |[Oglejte si prejšnje različice Officeovih datotek](https://support.office.com/article/5c1e076f-a9c9-41b8-8ace-f77b9642e2c2)  |
 | Ko ste bili odsotni |[Bodite obveščeni, ko člani vaše ekipe posodobijo vašo datoteko v skupni rabi](https://support.office.com/article/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
+> [!NOTE]
+>\*Ko so uporabniki vpisani s službenim ali šolskim računom, je ta povezana izkušnja poljubna in je na voljo pod pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave zasebnosti](https://privacy.microsoft.com/), in veljajo lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste administrator, se lahko ta povezana izkušnja upravlja s kontrolami zasebnosti za povezane izkušnje ali z *dovolite uporabo dodatne poljubne povezane izkušnje v Office-u* določanjem politike.
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Izberite, če so te povezane izkušnje na voljo
 
