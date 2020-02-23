@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
-ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
+ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
+ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962861"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42225008"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -56,7 +56,7 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 | [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti. Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
 | [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
-|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft autoupdate (MAU) je tehnologija, ki se uporablja za posodobitev Microsoftovih aplikacij, ustvarjenih za MacOS, kot je Office. MAU bo zaznal potrebo po storitvi, izvedla prenos in namestitev posodobitev programov, vključno z varnostnimi posodobitvami.|
+|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) je tehnologija, ki se uporablja za posodobitev Microsoftovih aplikacij, ustvarjenih za macOS, kot je Office. MAU bo zaznal potrebo po storitvi, izvedla prenos in namestitev posodobitev programov, vključno z varnostnimi posodobitvami.|
 |[Sinhronizacija programa OneNote](#onenote-sync-events)|OneNote za Mac podpira le zvezke, ki so shranjeni v internetu v OneDrive ali SharePoint Online. OneNote za Mac nenehno sinhronizira vse zapiske uporabnikov z OneDrive ali storitvijo SharePoint online. Tako lahko uporabniki odprejo, si ogledajo in urejajo svoje zvezke v vseh svojih napravah, tako da so njihovi zvezki vedno posodobljeni.
  [Konfiguracija storitev](#services-configuration-events)  | Konfiguracija storitev omogoča posodobitve konfiguracijskih nastavitev za Office za omogočanje oziroma onemogočanje odjemalskih funkcij. Storitev se aktivira vsakič, ko se zažene Officeova aplikacija, in zagotavlja podrobnosti o drugih konfiguracijah ter storitvah v Officeu. Storitve konfiguracije prav tako nadzorujejo, katere storitve so opredeljene kot osnovne storitve.  |
 | [Telemetrija](#telemetry-events)  | Storitev telemetrije se uporablja za zbiranje diagnostičnih podatkov iz Officeovih aplikacij. Omogoča zbiranje diagnostičnih podatkov, ki jih ustvarja Office (zahtevanih in izbirnih diagnostičnih podatkov). Storitev je prav tako odgovorna za zbiranje dela diagnostičnih podatkov storitve za zahtevano storitev za Office.  |
@@ -78,6 +78,17 @@ Te dogodke si lahko ogledate s pregledovalnikom diagnostičnih podatkov.
 
 Ti dogodki diagnostičnih podatkov se zberejo, ko Office poskuša pridobiti žeton za preverjanje pristnosti (na tih način ali prek poziva).
 
+### <a name="officeandroidmsaguesttoaad"></a>Office.Android.MSAGuestToAAD
+
+S tem dogodkom lažje razumemo, kako številni uporabniki med dostopanjem do službenega vira, dobivajo pozive za vnos gesla osebnega računa, saj njihov osebni račun lahko predstavlja veljaven gostujoči račun za najemnika službenih računov.
+
+S temi podatki lažje razumemo, kako se morajo številni uporabniki prebiti prek mukotrpnih pozivov za vpis za dodelitev prioritet pri pridobivanju žetona za AAD glede na Microsoftovo izjavo za račun SAML (Security Assertion Markup Language).
+
+Zbrana so sledeča polja:
+
+- **Tag** – ponazarja, da je bil uporabniku med dostopanjem do službenega vira prikazan poziv za vpis v osebni račun.
+
+
 ### <a name="officeidentityfbapromptwin32"></a>Office.Identity.FbaPromptWin32
 
 Dogodki se zberejo, ko Office uporabniku prikaže poziv za vpis s preverjanjem pristnosti z obrazci.
@@ -86,7 +97,7 @@ Poleg tihih pridobitev žetonom se s pozivi za preverjanje pristnosti ugotovi, a
 
 Pozivi za vpis s preverjanjem pristnosti z obrazci se uporabljajo za nekatere scenarije preverjanja pristnosti na mestu uporabe, vendar tega običajno ne želimo, ker bi uporabniki morali uporabljati sodobno preverjanje pristnosti zaradi varnostnih ranljivosti, povezanih s preverjanjem pristnosti z obrazci.
 
-**Zbrana so sledeča polja:**
+Zbrana so sledeča polja:
 
   - **AuthScheme** – uporabljena shema za preverjanje pristnosti
 
@@ -402,7 +413,7 @@ Zbrana so sledeča polja:
 
   - **Microsoft\_ADAL\_ui\_event\_count** – število pozivov, prikazanih uporabniku. Morda so tihi
 
-  - **Microsoft\_ADAL\_user\_cancel** – trditev true/false, ali je bilo preklicano okno uporabniškega vmesnika
+  - **Microsoft\_ADAL\_user\_cancel** – trditev true/false, ali je bilo preklicano okno uporabniškega vmesnika.
 
   - **Microsoft\_ADAL\_x\_ms\_request\_id** – dodatni ID zahteve v glavi HTTP, ki ga ADAL posreduje storitvi
 
@@ -2433,7 +2444,7 @@ Poročila v datoteki Prenesite dejanja, da ugotovite uspešnost operacije, vrsto
 
 - **BytesFromLanPeers –** bajti iz Lan vrstnikov, le za prenose z uporabo optimizacije dostave 
 
-- **CancelledJobs –** število preklicanih zahtev v seji
+- **cancelledJobs –** število preklicanih zahtev v seji
 
 - **Povezano –** ne glede na to, ali je povezano z virom
 
@@ -2693,6 +2704,11 @@ Poročila o izvedenih sprejetih dejanjih, kot je določeno z obrazloženimi poda
 
 - **VersionToInstall –** vrednost niza Officea »16.0. xxxxx. llll«, ki je nameščena
 
+### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+Ta dogodek uporabljamo za pridobivanje standardnih metapodatkov pri vsakem zagonu dodatka zaloge, ki je del upravitelja dosegljivosti storitve za Office, in se uporablja za Officeove informacije o zalogi v teh računalnikih, ki jih je izbral skrbnik za IT. Metapodatki, ki so tukaj zanimivi, je ID seje, ki se uporablja za povezovanje z drugimi podatki, shranjenimi v najemniški storitvi v oblaku.
+
+Ta dogodek ne vsebuje dodatnih polj, kajti pomembni so zgolj metapodatki.
 
 ### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
 
@@ -3042,7 +3058,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
-Preskus, s katerim uporabniku omogočimo samodejno plačevanje za Office neposredno iz aplikacije, ne da bi za to moral zapreti aplikacijo. Ta dogodek ponazarja uspešnost/neuspešnost poskusa skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Preskus, s katerim uporabniku omogočimo samodejno plačevanje za Office neposredno iz aplikacije, ne da bi za to moral zapreti aplikacijo. Ta dogodek ponazarja uspešnost ali neuspešnost poskusa skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -3050,9 +3066,9 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingsearchforsessiontoken"></a>Office.Licensing.SearchForSessionToken
 
-Če je uporabnik izbral način za aktivacijo računalnika v skupni rabi, v računalniku poskušamo poiskati žeton seje, ki uporabniku omogoča uporabo aplikacije. Ta dogodek ponazarja scenarij uspešnosti/neuspešnosti licenciranja skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če je uporabnik izbral način za aktivacijo računalnika v skupni rabi, v računalniku poskušamo poiskati žeton seje, ki uporabniku omogoča uporabo aplikacije. Ta dogodek ponazarja scenarij uspešnosti ali neuspešnosti licenciranja skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
   - **LoadLicenseResult** – predstavlja kodo napake/kodo uspeha, ali smo lahko naložili licence za trenutnega uporabnika
 
@@ -3186,7 +3202,7 @@ Zbrana so sledeča polja:
 
 Ko imajo novi računalniki vnaprej nameščeno različico sistema Office in uporabnik nima upravičene osebe, se prikaže pogovorno okno, v katerem je uporabniku na voljo možnost, da preizkusite, kupite ali vnesete ključ izdelka, tako da lahko uporabnik pridobi licenco in ta dogodek sledi, če je prikazano pogovorno okno. Ta dogodek vam bo pomagal pri zavedanju, ali je bil pogovor v pogovornem oknu uporabniku prikazan, če želite preskusiti, kupiti ali vnesti ključ izdelka, zato nam bo pomagal ugotoviti, ali je uporabnik imel možnost pridobiti licenco.
 
-Zbrana so sledeča polja: 
+Zbrana so naslednja polja: 
 
 - **ActiveView** – pove ID pogovornega okna, ki je prikazan uporabniku
 
@@ -3864,7 +3880,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
 
-Ta dogodek pomeni, da je bil postopek preverjanja posodobitev izbrisan (uporabnik ali sistem). Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+Ta dogodek pomeni, da je bil postopek preverjanja posodobitev preklican (preklical ga je uporabnik ali sistem). Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -8446,7 +8462,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje seznam ID-jev aplikacije, ki jih želite posodobiti.
+- **Payload** – vsebuje seznam ID-jev aplikacije, ki jih želite posodobiti.
     
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -10324,9 +10340,9 @@ Zbrana so sledeča polja
 
 - **NotebookId** – ID zvezka
 
-- **PageSyncUIState** – niz stanja sinhronizacije strani, na primer UpToDate, sinhronizacija, SaveOffline, SyncError itd. 
+- **PageSyncUIState** – niz stanja sinhronizacije strani, na primer UpToDate, Syncing, SaveOffline, SyncError itd. 
 
-- **ServerGosid** – ID vira za novo ustvarjeno stran» Conflict «
+- **ServerGosid** – ID vira za novo ustvarjeno stran spora
 
 - **Vir** – v enum je navedeno, kateri dogodek je sprožil UI, tj. ustvaril novo RedX sliko, napako sinhronizacije v uporabniškem vmesniku za sinhronizacijo, prikazano pogovorno okno napake itd.
 
