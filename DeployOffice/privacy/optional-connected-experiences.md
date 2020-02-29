@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 3cba95a89c0a1f108485565101d10deea5a70a38
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
+ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917721"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "42340849"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -59,7 +59,7 @@ Opomba: z nastavitvijo pravilnika, opisano v nadaljevanju, ni mogoče upravljati
 
 ### <a name="help--contact-support"></a>Pomoč > Stik s podporo
 
-V Outlooku za iOS in Android lahko poročate o težavah in se povežete z našo skupino podpore tako, da izberete **Nastavitve** > **Pomoč in povratne informacije** > **Stik s podporo**. To izkušnjo uporablja storitev, ki jo ponuja HelpShift, za katero veljajo [pogoji storitve](https://www.helpshift.com/legal/terms/) in [pravilnik o zasebnosti](https://www.helpshift.com/legal/privacy/) za HelpShift.
+V Outlooku za iOS in Android lahko poročate o težavah in se povežete z našo skupino podpore tako, da izberete **Nastavitve** > **Pomoč in povratne informacije** > **Stik s podporo**. Ta izkušnja zahteva storitev imenovano PowerLift, ki je v lasti Microsofta in veljata [pogodba o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftova izjava o zasebnosti](https://privacy.microsoft.com/).
 
 ### <a name="help--suggest-a-feature"></a>Pomoč > Predlog za funkcijo
 
