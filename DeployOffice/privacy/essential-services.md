@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
-ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
+ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
+ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42225008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42939778"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -634,7 +634,7 @@ Zbrana so sledeča polja:
 
 Poroča o stanju novega posodobitvenega cevovoda »Zagon s klikom« (»Repoman«), če pa se uspešno prenese, uveljavi posodobitve za Office.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **ApplySucceeded** – ima vrednost true, če je cevovod uspešno uveljavil posodobitev, v nasprotnem primeru pa vrednost false.
   
@@ -699,7 +699,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -775,7 +775,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -851,7 +851,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -927,7 +927,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1003,7 +1003,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1079,7 +1079,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1155,7 +1155,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** –  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**–  katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1231,7 +1231,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1307,7 +1307,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1345,7 +1345,7 @@ Zbrana so sledeča polja:
 
   - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** –  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
 
   - **Data\_15\_Version** – različica za Office 15 
 
@@ -1383,7 +1383,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1421,7 +1421,7 @@ Zbrana so sledeča polja:
 
   - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** –  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
 
   - **Data\_15\_Version** – različica za Office 15 
 
@@ -1459,7 +1459,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** –  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1535,7 +1535,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1573,7 +1573,7 @@ Zbrana so sledeča polja:
 
   - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** –  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
 
   - **Data\_15\_Version** – različica za Office 15 
 
@@ -1611,7 +1611,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1687,7 +1687,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1763,7 +1763,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1839,7 +1839,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** –  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**–  katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1915,7 +1915,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -1991,7 +1991,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2077,7 +2077,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2155,7 +2155,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2239,7 +2239,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** –  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2277,7 +2277,7 @@ Zbrana so sledeča polja:
 
   - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** –  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
 
   - **Data\_15\_Version** – različica za Office 15 
 
@@ -2327,7 +2327,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2365,7 +2365,7 @@ Zbrana so sledeča polja:
 
   - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** –  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
 
   - **Data\_15\_Version** – različica za Office 15 
 
@@ -2403,7 +2403,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove** – katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
   - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
@@ -2515,9 +2515,9 @@ Poroča o rezultatu poskusa pokončne namestitve
 
  - **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
 
- - **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb» thrower «)
+ - **ErrorDetails –** niz, v katerem je opisana lokacija, kjer je prišlo do neobravnavane izjeme (funkcija, datoteka, številka vrstice, dodatni parametri, ki jih je nastavil gumb »thrower«)
 
- - **» ErrorMessage «–** niz, ki je definiran na mestu, kjer je bila zavrnjena Neobravnavana izjema, z opisom narave napake
+ - **ErrorMessage –** niz, ki je definiran na mestu, kjer je bila zavrnjena neobravnavana izjema, z opisom narave napake
 
  - **ErrorType –** niz z opisom kategorije neobravnavane izjeme
 
@@ -2571,7 +2571,7 @@ Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
 - **PlatformToInstall –** niz, ki označuje končno odločitev o tem, ali je treba namestiti x86 vs. x64 Office. Možnosti so: Autorun, Configure, Consumer, download, Help, pakirnice
 
-- **PRID –** vrednost niza, ki predstavlja zahtevani ID izdaje izdelka v scenariju namestitve potrošnika (na primer» O365ProPlusRetail «)
+- **PRID –** vrednost niza, ki predstavlja zahtevani ID izdaje izdelka v scenariju namestitve potrošnika (na primer »O365ProPlusRetail«)
 
 - **PridsToMigrateFromCentennial–** niz Officeovih izdelkov, ki jih želite preseliti iz Store, ki jih želite zagnati s tehnologijo »zagon s klikom«
 
@@ -2706,6 +2706,8 @@ Poročila o izvedenih sprejetih dejanjih, kot je določeno z obrazloženimi poda
 
 ### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
 
+*[Ta dogodek je bil odstranjen iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljal v starejših graditvah.]*
+
 Ta dogodek uporabljamo za pridobivanje standardnih metapodatkov pri vsakem zagonu dodatka zaloge, ki je del upravitelja dosegljivosti storitve za Office, in se uporablja za Officeove informacije o zalogi v teh računalnikih, ki jih je izbral skrbnik za IT. Metapodatki, ki so tukaj zanimivi, je ID seje, ki se uporablja za povezovanje z drugimi podatki, shranjenimi v najemniški storitvi v oblaku.
 
 Ta dogodek ne vsebuje dodatnih polj, kajti pomembni so zgolj metapodatki.
@@ -2726,7 +2728,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
-Ta dogodek se zabeleži vsakič, ko klic v WebService, ki je bil ustvarjen v dodatku upravitelja s tehnologijo »zagon s klikom«, ne uspe.
+Kadar koli klic spletne storitve v okviru dodatkov Office Serviceability Manager ne uspe, je ta izjava zabeležena v dnevnik. Do napak lahko pride zaradi notranjih napak ali nezmožnosti vzpostavitve povezave s spletno storitvijo.
 
 Zbrana so sledeča polja:
 
@@ -2735,6 +2737,8 @@ Zbrana so sledeča polja:
 - **ID korelacije** – naključno ustvarjen GUID, ki je specifičen za trenutni primerek, ki je poslan v WebService za korelacijo klicev med odjemalcem in strežnikom.
 
 - **ErrorInfo** – števila podatkov kode napake, ki jih vrne Office WebService Call API.
+
+- **ErrorMessage** – sporočilo, ki nudi dodatne vpoglede v napako. Vsaka vrsta napake je preslikana v kodiran niz, nekatere vrste napak pa so lahko preslikane v več nizov, odvisno od vrste napake.
 
 - **Funkcija** – funkcija v kodi, iz katere je prišlo do trenutnega klica.
 
@@ -3154,13 +3158,13 @@ Zbrana so sledeča polja:
 - **Uspeh** – pomeni, da smo uspešno pridobivali veljavno Officeovo vezavo (PIN) za napravo.
 
 - **Tag** – pove nam, na kateri stopnji smo nehali iskati vezavo. Možna oznaka:
-  - 0x03113809 med preverjanjem kode PIN napaka ni interneta/storitve.
-   - 0x0311380a Napaka pri preverjanju PIN, poslano s poljem »PinValidationFailure«
-  - 0x0310410f Uspeh, poslano s poljem »uspeh«
-  - 0x0311380d Vnovične napake (težave z internetom, neznane napake)
-  - 0x0311380e Napake, ki se ne dajo ponoviti (ponudba za vezavo je potekla)
-  - 0x0311380f Druge napake (ki jih ni mogoče licencirati)
-  - 0x03104111 ni uspelo razvozlati Officeovega pina, poslanega z poljem» PinValidationResult «.
+  - 0x03113809 – med preverjanjem kode PIN napaka ni interneta/storitve.
+   - 0x0311380a – napaka pri preverjanju PIN, poslano s poljem »PinValidationFailure«
+  - 0x0310410f – uspeh, poslano s poljem »uspeh«
+  - 0x0311380d – vnovične napake (težave z internetom, neznane napake)
+  - 0x0311380e – napake, ki se ne dajo ponoviti (ponudba za vezavo je potekla)
+  - 0x0311380f – druge napake (ki jih ni mogoče licencirati)
+  - 0x03104111 – ni uspelo razvozlati Officeovega pina, poslanega z poljem» PinValidationResult «.
 
 - **WpkBindingFailure** – pove napako, da je koda napake pridobila kodo PIN za Office, ki je povezana z WPK računalnika.
 
@@ -3183,10 +3187,10 @@ Zbrana so sledeča polja:
 - **OExType** – podrobnosti o napaki, ki se prikaže, ko je bil v pogovornem oknu »vpis identitete« opuščen.
 
 - **Tag** – pove nam, s katerim korakom uporabnik zapusti proces prevzema AFO '. Možna oznaka:
-    - 0x0311380b uporabnik je opustil pogovornega okno »prevzem identitete« iz pogovornega okna »redemption«
-    - 0x0311380c ni uspel samodejnega nalaganja identitete po vpisu uporabnika iz pogovornega okna »redemption«
-    - 0x03113810 ni uspel naložiti demografskih informacij kupca (koda države, jezik, valuta, ponudba za preskusno različico in nastavitve marketinga)
-    - 0x03113805 uporabnik je opustil pogovornega okno »prevzem identitete« iz pogovornega okna »redemption«
+    - 0x0311380b – uporabnik je opustil pogovornega okno »prevzem identitete« iz pogovornega okna »redemption«
+    - 0x0311380c – ni uspel samodejnega nalaganja identitete po vpisu uporabnika iz pogovornega okna »redemption«
+    - 0x03113810 – ni uspel naložiti demografskih informacij kupca (koda države, jezik, valuta, ponudba za preskusno različico in nastavitve marketinga)
+    - 0x03113805 – uporabnik je opustil pogovornega okno »prevzem identitete« iz pogovornega okna »redemption«
     - 0x03113806 ni uspel samodejnega nalaganja identitete po vpisu uporabnika iz pogovornega okna »vpis«
     - 0x03113807 ni uspel samodejno naložiti identitete
     - 0x03113811 uporabnik  je zaprl pogovorno okno za vpis/prevzem
@@ -3348,7 +3352,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do napake pri vzpostavljanju povezave s pomočnikom MAU (komponenta, ki izvede namestitev programa).  V tem primeru se prikaže možna korupcija aplikacije MAU. Naprava ne bo mogla namestiti posodobitev.
 
-Zbrana so sledeča polja: 
+Zbrana so sledeča polja:    
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11281,7 +11285,9 @@ Zbrana so sledeča polja:
 
 Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanja upravitelja opravil, neodzivnost aplikacije ipd.) v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Metriko motenega zapiranja aplikacij uporabljamo za merjenje stanja Officeovih odjemalskih izdelkov. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
+
+  - **BootCompleted –** zagon Officea je bil ob trenutku zrušitve dokončan.
 
   - **CrashedProcessAppBuild** – identifikator delovne različice za vplivani proces
 
@@ -11299,6 +11305,8 @@ Zbrana so naslednja polja:
 
   - **CrashedSessionInitTime** – čas, ko se je začel vplivani proces
 
+  - **CrashTime –** ura, ki označuje, da odjemalec ni bil zaustavljen pravilno
+
   - **CrashType** – identifikator razdeljevanja za vrsto zrušitve
 
   - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod
@@ -11306,6 +11314,12 @@ Zbrana so naslednja polja:
   - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake
 
   - **ExceptionCode** – identifikator razdeljevanja za izjemo
+
+  - **HandOff –** ali je uporabnik ustvaril in predal Officeov postopek v novo sejo.
+
+  - **HasEdit –** ali je uporabnik urejal dokument v odjemalcu, ki se je zrušil.
+
+  - **HasOpen –** ali je bil v odjemalcu, ki se je zrušil, odprt dokument.
 
   - **HexCrashTag** – enolični identifikator za kodo zrušitve.
 
@@ -11331,13 +11345,17 @@ Zbrana so naslednja polja:
 
   - **ModuleSize** – velikost modula z napako v bajtih
 
+  - **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
+
   - **PreviousBuild** – prejšnja nameščena delovna različica
+
+  - **SafeMode –** ali je bila seja zagnana v varnem načinu
 
   - **UAEOSEnvironment** – identifikator okolja za operacijski sistem
 
   - **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
 
-  - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije
+  - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 ### <a name="officesystemungracefulapplicationexitdesktopappexit"></a>Office.System.UngracefulApplicationExit.DesktopAppExit
 
