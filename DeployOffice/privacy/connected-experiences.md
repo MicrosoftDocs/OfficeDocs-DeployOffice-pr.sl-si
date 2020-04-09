@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 6dc32a1456402624ab28e0acbe9c3ef85b6add9d
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917631"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166391"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -44,6 +44,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | ----------- | ------------------ |
 | 3D-zemljevidi\*    | [Uvod v 3D-zemljevide](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Samodejno nadomestno besedilo   | [Vse, kar morate vedeti za pisanje učinkovitih nadomestnih besedil](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
+| Podatkovni tipi                  | [Podatkovni tipi v Excelu: Delnice in geografija](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Narekovanje  | [Narekovanje z glasom v Officeu](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Urejevalnik    | [Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Zamisli     | [Zamisli v Excelu](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -77,7 +78,6 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | ------------- | ------------- |
 | Aplikacije koledarja| [Kaj so aplikacije koledarja?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Pisave v oblaku                 | [Pisave v oblaku v Officeu](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Podatkovni tipi                  | [Podatkovni tipi v Excelu: Delnice in geografija](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Pogosta vprašanja |Ko v Outlooku za iOS in Android izberete možnost**Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** ste preusmerjeni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Učinki rokopisa                 | [Risanje in pisanje s peresom v Officeu](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Vstavi ikone                | [Vstavljanje ikon v Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
@@ -109,7 +109,6 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | ------------- | ------------- |
 | @omemba | [Uporabite @omemba v pripombah, da označite osebo za povratne informacije](https://support.office.com/article/644bf689-31a0-4977-a4fb-afe01820c1fd) |
 |Diagram zbiranja zamisli (Visio)|[Ustvarite diagram zbiranja zamisli](https://support.office.com/article/642706c0-7e63-463b-8aa8-a9aa67367989)|
-| Klepet | [Izboljšajte sodelovanje s klepetom v Microsoft Officeu](https://support.office.com/article/1ecc6c7f-0b02-4baa-b9d9-c9d67023bedd)  |
 | Kmalu na voljo (Outlook)  |[Kmalu na voljo](https://support.office.com/article/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Stik s podporo (Outlook) | Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku|
 | Uvoz po meri (Visio)  | [Uvoz podatkov v oblike v risbi](https://support.office.com/article/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |

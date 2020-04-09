@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
-ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
+ms.openlocfilehash: 9cfbae596b686e2be484756b848514d4c36108df
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "42340849"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166301"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -26,7 +26,7 @@ ms.locfileid: "42340849"
 
 > [!NOTE]
 > Če ste skrbnik, preberite naslednja članka, v katerih boste izvedeli več o podeljevanju ali omejevanju možnosti uporabnikov, da uporabijo izbirne povezane izkušnje:
-> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md)
+> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 > - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
@@ -63,7 +63,7 @@ V Outlooku za iOS in Android lahko poročate o težavah in se povežete z našo 
 
 ### <a name="help--suggest-a-feature"></a>Pomoč > Predlog za funkcijo
 
-Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če nam zamisli posredujete prek predloga za funkcijo, veljajo [pogoji storitve](https://outlook.uservoice.com/tos) in [pravilnik o zasebnosti](https://outlook.uservoice.com/tos#privacy-policy) za UserVoice.
+Predlog za funkcijo je izkušnja, ki vam omogoča pošiljanje zamisli glede uporabe Outlooka ali Excela. Vaši predlogi so posredovani neposredno prek storitve UserVoice tretje osebe. Če nam zamisli posredujete prek predloga za funkcijo, veljajo [pogoji storitve](https://outlook.uservoice.com/tos) in [pravilnik o zasebnosti](https://outlook.uservoice.com/tos#privacy-policy) za UserVoice.
 
 ### <a name="insert-online-video"></a>Vstavljanje spletnega videoposnetka
 
