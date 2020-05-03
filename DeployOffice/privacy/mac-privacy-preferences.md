@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom ponuja informacije o načinu uporabe prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac.
 hideEdit: true
-ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: d23d1288adf823888c900b44acd5bc905037cd94
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510229"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992889"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Uporaba prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac
 
@@ -34,16 +34,27 @@ Poleg tega je na voljo nova prednostna nastavitev, povezana s pogovornim oknom *
 Če želite več informacij o diagnostičnih podatkih in povezanih izkušnjah, preberite članek [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md).
 
 > [!NOTE]
-> - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom Windows, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Če želite več informacij o podobnih nastavitvah za Office v računalnikih, v katerih se izvaja Windows, si oglejte [uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za](manage-privacy-controls.md)za podjetja.
 > - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom iOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Nastavljanje prednostnih nastavitev
 
 Nove prednostne nastavitve so združljive z nastavitvami CFPreferences API in jih lahko nastavite z ukazom `defaults` v programu Terminal oziroma jih lahko uveljavite preko konfiguracijskega profila ali strežnika Upravljanje mobilnih naprav (MDM). Ko so prednostne nastavitve uveljavljene, uporabnik vrednosti ne more več spreminjati, vsi kontrolniki v aplikaciji pa so onemogočeni.
 
+> [!NOTE]
+> Uporabite lahko tudi storitev pravilnika za Office Cloud in te nastavitve za 5 pravilnikov:
+> - Konfiguracija ravni diagnostičnih podatkov o programski opremi odjemalca, ki jih Office pošlje Microsoftu
+> - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino
+> - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino
+> - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
+> - Omogočanje uporabe povezanih izkušenj v Officeu
+>
+> Če želite več informacij o uporabi storitve pravilnika Office Cloud, si oglejte [pregled storitve pravilnika Office Cloud ](../overview-office-cloud-policy-service.md).
+
+
 ## <a name="preference-setting-for-diagnostic-data"></a>Prednostna nastavitev za diagnostične podatke
 
-Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka. Če želite več informacij, preberite članek [Diagnostični podatki, poslani Microsoftu iz storitve Office 365 ProPlus](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka. Če želite več informacij, si oglejte [diagnostičnih podatkov, ki so bili poslani iz aplikacij Microsoft 365 za podjetja v Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
 |||
 |:-----|:-----|
@@ -53,13 +64,13 @@ Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje teža
 |**Možne vrednosti**  | `BasicDiagnosticData` *(s tem nastavite raven na možnost »Zahtevana«)* <br/> `FullDiagnosticData` *(s tem nastavite raven na možnost »Izbirna«)* <br/> `ZeroDiagnosticData` *(s tem nastavite raven na možnost »Nobena«)* |
 |**Razpoložljivost** |16.28 in novejše različice |
 
-Če te prednostne nastavitve ne nastavite, Microsoft v primeru uporabnikov z naročnino na Office 16.30, ki so vpisani s službenim ali šolskim računom, oziroma uporabnikov, ki imajo različico sistema Office 365 za Mac ali Office 2019 za količinsko licenciranje, prejema izbirne in zahtevane diagnostične podatke. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
+Če ne nastavite te nastavitve, začnete z novimi nameščenimi različicami 16,30, če ste prejeli le zahtevane diagnostične podatke, če so uporabniki z naročnino na Office 365 (ali Microsoft 365) vpisani s službenim ali šolskim računom ali če imajo uporabniki količinsko licencirano različico sistema Office 2019 za Mac. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
 
 > [!NOTE]
 > - Če namestite različico 16.28 ali 16.29 in ne nastavite te prednostne nastavitve, bodo Microsoftu poslani tako izbirni kot tudi zahtevani diagnostični podatki. Če nato nadgradite na različico 16.30 ali novejšo različico, bodo Microsoftu še vedno poslani tako izbirni kot tudi zahtevani diagnostični podatki, razen če uporabite to prednostno nastavitev za nastavitev druge vrednosti.
 > - Če nastavite to nastavitev, bo veljala tudi za različico 1.00.217856 in novejše različice Teams za računalnike Mac ter različice 16.28 in novejše različice Skype za podjetja za Mac.
 
-V primeru drugih uporabnikov, kot so domači uporabniki z naročnino na Office 365, Microsoft prejema samo zahtevane diagnostične podatke, razen če uporabnik v možnosti **Nastavitve** > **Zasebnost** izbere, da so poslani tudi izbirni diagnostični podatki.
+Če želite drugim uporabnikom, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), poslati le zahtevane diagnostične podatke, razen če se uporabnik odloči poslati tudi izbirne diagnostične podatke tako, da bo **nastavitve** > **zasebnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Prednostna nastavitev za povezane izkušnje, ki analizirajo vašo vsebino
 
@@ -75,9 +86,9 @@ Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Off
 
 Če te prednostne nastavitve ne nastavite, so povezane izkušnje, ki analizirajo vsebino, na voljo za uporabnike. 
 
-Če ima uporabnik naročnino na Office 365 in je vpisan s službenim ali šolskim računom oz. če ima uporabnik različico sistema Office 2019 za Mac za količinsko licenciranje, ne more izklopiti povezanih izkušenj, ki analizirajo vsebino.
+Če ima uporabnik naročnino na Office 365 (ali Microsoft 365) in je vpisan s službenim ali šolskim računom ali če ima uporabnik količinsko licencirano različico sistema Office 2019 za Mac, uporabniki ne morejo izklopiti povezanih izkušenj z analizo vsebine.
 
-Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, lahko v možnosti **Nastavitve** > **Zasebnost** izklopijo povezane izkušnje, ki analizirajo vsebino.
+Če želite drugim uporabnikom, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), lahko uporabniki izklopijo povezano izkušnjo, ki analizira vsebino tako, da se pomaknete v **nastavitve** > **zasebnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-download-online-content"></a>Prednostna nastavitev za povezane izkušnje, s katerimi prenesete spletno vsebino
 
@@ -93,9 +104,9 @@ Povezane izkušnje, s katerimi prenesete spletno vsebino, so izkušnje, ki vam o
 
 Če te prednostne nastavitve ne nastavite, so povezane izkušnje, s katerimi prenesete spletno vsebino, na voljo uporabnikom.
 
-Če ima uporabnik naročnino na Office 365 in je vpisan s službenim ali šolskim računom oziroma če ima uporabnik različico sistema Office 2019 za Mac za količinsko licenciranje, ne more izklopiti povezanih izkušenj, s katerimi prenesete spletno vsebino.
+Če ima uporabnik naročnino na Office 365 (ali Microsoft 365) in je vpisan s službenim ali šolskim računom ali če ima uporabnik količinsko licencirano različico sistema Office 2019 za Mac, uporabniki ne morejo izklopiti povezanih izkušenj, ki prenašajo spletno vsebino.
 
-Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, lahko v možnosti **Nastavitve** > **Zasebnost** izklopijo povezane izkušnje, s katerimi prenesete spletno vsebino.
+Če želite drugim uporabnikom, kot je na primer domači uporabniki z naročnino na Office 365 (ali Microsoft 365), lahko uporabniki izklopijo povezano izkušnjo, s katero prenašate vsebino v spletu, tako da se pomaknete na **nastavitve** > **** zasebnost.
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Prednostna nastavitev za izbirne povezane izkušnje
 
@@ -109,9 +120,9 @@ Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodat
 |**Možne vrednosti**  | `TRUE` *(omogočeno)* <br/> `FALSE` *(onemogočeno)*|
 |**Razpoložljivost** |16.28 in novejše različice |
 
-Če te prednostne nastavitve ne nastavite, so izbirne povezane izkušnje na voljo uporabnikom z naročnino na Office 365, ki so vpisani s službenim ali šolskim računom, oz. uporabnikom, ki imajo različico sistema Office 2019 za Mac za količinsko licenciranje. Če te prednostne nastavitve ne nastavite na `FALSE`, lahko ti uporabniki v možnosti **Nastavitve** > **Zasebnost** izklopijo izbirne povezane izkušnje.
+Če teh nastavitev ne nastavite, bodo uporabniki na voljo z naročnino na Office 365 (ali Microsoft 365), ki so vpisani s službenim ali šolskim računom, ali uporabniki, ki imajo licenco za količinsko licencirano različico sistema Office 2019 za Mac. Če te prednostne nastavitve ne nastavite na `FALSE`, lahko ti uporabniki v možnosti **Nastavitve** > **Zasebnost** izklopijo izbirne povezane izkušnje.
 
-Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, ne morejo izklopiti izbirnih povezanih izkušenj.
+Če želite drugim uporabnikom, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), ne morete izklopiti izbirnih povezanih izkušenj.
 
 ## <a name="preference-setting-for-most-connected-experiences"></a>Prednostna nastavitev za najpogostejše povezane izkušnje
 
@@ -136,9 +147,9 @@ S to prednostno nastavitvijo lahko nadzorujete, ali so najpogostejše povezane i
 
 Tudi če to prednostno nastavitev nastavite na `FALSE`, bo še vedno na voljo omejena funkcionalnost Officea, kot je sinhronizacija nabiralnika v Outlooku, in še naprej bodo delovale skupine ter Skype za podjetja. [Osnovne storitve](essential-services.md), kot je storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea, prav tako ostanejo na voljo.
 
-Če ima uporabnik naročnino na Office 365 in je vpisan s službenim ali šolskim računom oziroma če ima uporabnik različico sistema Office 2019 za Mac za količinsko licenciranje, ne more izklopiti najpogostejših povezanih izkušenj.
+Če ima uporabnik naročnino na Office 365 (ali Microsoft 365) in je vpisan s službenim ali šolskim računom ali če ima uporabnik količinsko licencirano različico sistema Office 2019 za Mac, uporabniki ne morejo izklopiti najbolj povezanih izkušenj.
 
-Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365, lahko v možnosti **Nastavitve** > **Zasebnost** izklopijo najpogostejše povezane izkušnje.
+Če želite drugim uporabnikom, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), lahko uporabniki izklopijo večino povezanih izkušenj tako, da bodo **nastavitve** > **zasebnost**.
 
 ## <a name="preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"></a>Prednostna nastavitev za pogovorno okno »Obvestilo o zahtevanih podatkih« za orodje Microsoft AutoUpdate
 
