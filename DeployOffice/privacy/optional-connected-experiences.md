@@ -13,20 +13,20 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 9cfbae596b686e2be484756b848514d4c36108df
-ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
+ms.openlocfilehash: ecfe38bc6dbedd57ff1eb2ab4851c8e4dddab730
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43166301"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993252"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
-Če imate službeni ali šolski račun, vam je skrbnik organizacije morda omogočil možnost uporabe ene ali več storitev v oblaku (imenujemo jih tudi »izbirne povezane izkušnje«) za uporabo v aplikacijah storitve Office 365 ProPlus. Te storitve v oblaku so izbirne. Sami se odločite, ali jih želite uporabljati. Za storitve veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). V nekaterih primerih lahko veljajo tudi drugi pogoji. V tem članku smo navedli storitve v oblaku, podrobneje razložili njihove pogoje uporabe in opisali, kako jih lahko kadar koli izklopite oz. vklopite.
+Če imate službeni ali šolski račun, vam je skrbnik organizacije morda omogočil možnost uporabe ene ali več storitev v oblaku (imenujemo jih tudi »izbirne povezane izkušnje«) za uporabo v aplikacijah storitve Office 365 ProPlus, kot sta Word ali Excel, ki sta vključena v Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovane Office 365 ProPlus). Te storitve v oblaku so izbirne. Sami se odločite, ali jih želite uporabljati. Za storitve veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). V nekaterih primerih lahko veljajo tudi drugi pogoji. V tem članku smo navedli storitve v oblaku, podrobneje razložili njihove pogoje uporabe in opisali, kako jih lahko kadar koli izklopite oz. vklopite.
 
 > [!NOTE]
 > Če ste skrbnik, preberite naslednja članka, v katerih boste izvedeli več o podeljevanju ali omejevanju možnosti uporabnikov, da uporabijo izbirne povezane izkušnje:
-> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+> - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 > - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 > - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
@@ -39,7 +39,7 @@ Pomembno je, da se zavedate, da te izbirne storitve v oblaku niso zajete v Micro
 
 ## <a name="experiences-that-rely-on-bing"></a>Izkušnje, ki za delovanje uporabljajo Bing
 
-Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je v primerjavi s storitvijo Office 365 ProPlus ločena storitev, ki jo upravlja Microsoft. Izkušnje, ki jo uporabljajo v aplikacijah za Office 365 ProPlus, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) in [pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je ločeno podjetje od Aplikacij ogrodja Microsoft 365 za podjetja in ga upravlja Microsoft neodvisno od Aplikacij ogrodja Microsoft 365 za podjetja. Izkušnje, ki jo ponuja v aplikacijah za Office vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) in [Pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
 
 Izkušnje, ki jih Bing omogoča v Outlooku za iOS in Android, so:
 
@@ -47,11 +47,11 @@ Izkušnje, ki jih Bing omogoča v Outlooku za iOS in Android, so:
 - **Zanimivi koledarji:**   [Naročite se](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) lahko na koledarje o vaših najljubših športnih ekipah ali TV-oddajah.
 
 
- Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 ProPlus, so poslane organizaciji Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
+ Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Katere koli poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 za podjetja, so poslane Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
 
 ## <a name="experiences-that-rely-on-linkedin"></a>Izkušnje, ki za delovanje uporabljajo LinkedIn
 
-[Pomočnik za zemljepis](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) zagotavlja izkušnjo v Wordu, ki za delovanje uporablja LinkedIn. Omogoča vam zamisli za vaš življenjepis. LinkedIn je samostojno podjetje v lasti Microsofta. Če uporabljate pomočnika za življenjepis, poleg [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/) veljata še [uporabniška pogodba za LinkedIn in pravilnik o zasebnosti](https://www.linkedin.com/legal/user-agreement). Poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 ProPlus, so poslane organizaciji LinkedIn. Organizacija LinkedIn jih ne bo povezala z vami. Za uporabo te storitve v oblaku ne potrebujete računa za LinkedIn.
+[Pomočnik za zemljepis](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) zagotavlja izkušnjo v Wordu, ki za delovanje uporablja LinkedIn. Omogoča vam zamisli za vaš življenjepis. LinkedIn je samostojno podjetje v lasti Microsofta. Če uporabljate pomočnika za življenjepis, poleg [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/) veljata še [uporabniška pogodba za LinkedIn in pravilnik o zasebnosti](https://www.linkedin.com/legal/user-agreement). Katere koli poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 za podjetja, so poslane storitvi LinkedIn. Organizacija LinkedIn jih ne bo povezala z vami. Za uporabo te storitve v oblaku ne potrebujete računa za LinkedIn.
 
 Opomba: z nastavitvijo pravilnika, opisano v nadaljevanju, ni mogoče upravljati izkušenj, ki zahtevajo, da račun za LinkedIn povežete z Microsoftovim službenim ali šolskim računom. Če želite upravljati to vrsto izkušenj (kot so podatki o storitvi LinkedIn na [kartici profila](https://support.office.com/article/e80f931f-5fc4-4a59-ba6e-c1e35a85b501) v Outlooku), preberite članek [Povezovanje računa za LinkedIn in Microsoftovega računa](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381).
 
@@ -91,23 +91,23 @@ V [vrstici za vreme](https://support.office.com/article/d11b7532-7c58-489e-8103-
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako ugotovim, ali mi je skrbnik omogočil uporabo izbirnih povezanih izkušenj
 
-Če želite ugotoviti, ali vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office 365 ProPlus, nameščeni v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**. Če vam skrbnik ni podelil nadzora, bo prikazano sporočilo »Skrbnik vaše organizacije upravlja vaše nastavitve zasebnosti in se je odločil, da onemogoči izbirne povezane izkušnje«.
+Če želite ugotoviti, ali vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**. Če vam skrbnik ni podelil nadzora, bo prikazano sporočilo »Skrbnik vaše organizacije upravlja vaše nastavitve zasebnosti in se je odločil, da onemogoči izbirne povezane izkušnje«.
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
 ## <a name="your-privacy-settings"></a>Vaše nastavitve zasebnosti
 
-Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office 365 ProPlus, nameščeni v napravi s sistemom Windows, lahko kadar koli odprete meni **Datoteka** > **Račun** > **Zasebnost računa** in izberete **Upravljanje nastavitev** in konfigurirajte nastavitve. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
+Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**, da jih lahko upravljate, kadar želite. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
 ## <a name="diagnostic-data"></a>Diagnostični podatki
 
-Če uporabljate katero koli od izbirnih storitev v oblaku, opisanih v tem članku, lahko Microsoft zbira diagnostične podatke (kot so podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti uporabljene izkušnje. Ti diagnostični podatki lahko vsebujejo »osebne podatke«, kot so opredeljeni v 4. členu GDPR-ja za EU. Za vse diagnostične podatke, ki jih zbira Microsoft med uporabo aplikacij in storitev za Office 365 ProPlus, so uporabljeni psevdonimi, kot je določeno v razdelku 8.3.3 standarda ISO/IEC 19944:2017.
+Če uporabljate katero koli od izbirnih storitev v oblaku, opisanih v tem članku, lahko Microsoft zbira diagnostične podatke (kot so podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti uporabljene izkušnje. Ti diagnostični podatki lahko vsebujejo »osebne podatke«, kot so opredeljeni v 4. členu GDPR-ja za EU. Za vse diagnostične podatke, ki jih zbira Microsoft med uporabo aplikacij in storitev za Aplikacije ogrodja Office 365 za podjetja, so uporabljeni psevdonimi, kot je določeno v razdelku 8.3.3 standarda ISO/IEC 19944:2017.
 
 
 ## <a name="related-topics"></a>Sorodne teme
 
-- [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Zahtevani podatki storitev za Office](required-service-data.md)
 - [Nastavitve zasebnosti računa](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
