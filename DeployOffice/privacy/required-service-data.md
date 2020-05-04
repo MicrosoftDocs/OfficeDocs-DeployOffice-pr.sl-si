@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office nudijo pregled zahtevanih podatkov storitve, ki so zbrani o povezanih izkušnjah v Officeu.
 hideEdit: true
-ms.openlocfilehash: b4cc25ae1c2a34082bff623ad630db664050effb
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 4b5008d1750de655601dafaa381502e708f9f9d6
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067235"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992776"
 ---
 # <a name="required-service-data-for-office"></a>Zahtevani podatki storitev za Office 
 
 > [!IMPORTANT]
 > Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Office 365 ProPlus in Office 365 Business
-> - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
-> - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
+> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
+> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
 >
 > Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
@@ -64,8 +65,8 @@ Zahtevani podatki storitve so zbrani in poslani Microsoftu tudi za ključne Offi
 
 Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
 
-- [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)

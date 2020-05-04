@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
-ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
+ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42939778"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992853"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
 > [!IMPORTANT]
 > Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Office 365 ProPlus in Office 365 Business
-> - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
-> - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
+> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
+> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
 >
 > Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 
@@ -40,8 +41,8 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 
 Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
 
-- [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
@@ -490,7 +491,7 @@ Zbrana so sledeča polja:
 
   - **Data\_PrereqFailure\_Type** – zahtevana okvara, na katero smo naleteli, npr. operacijski sistem ni podprt
 
-  - **Data\_ProductReleaseId** – izdelek, ki ga nameščamo, npr. Office 365 ProPlus
+  - **Data\_ProductReleaseId** – izdelek, ki ga nameščamo, npr. Aplikacije ogrodja Microsoft 365 za podjetja
 
 ### <a name="officeclicktoruncorruptioncheck"></a>Office.ClickToRun.CorruptionCheck
 
@@ -588,7 +589,7 @@ Zbrana so sledeča polja:
 
   - **Data\_OfficeVersion** – različica nameščenega Officea
 
-  - **Data\_Sku** – inventarna številka, ki je nameščena, npr. Office 365 ProPlus.en-us
+  - **Data\_Sku** – inventarna enota, ki je nameščena, tj. Aplikacije ogrodja Microsoft 365 za podjetja
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM Data\_SusClientID – identifikator za posodobitev Officea
 
@@ -628,7 +629,7 @@ Zbrana so sledeča polja:
 
   - **Data\_PrereqFailure\_Type** – zahtevana okvara, do katere je prišlo
 
-  - **Data\_ProductReleaseId** – izdelek, ki ga nameščamo, npr. Office 365 ProPlus
+  - **Data\_ProductReleaseId** – izdelek, ki ga nameščamo, npr. Aplikacije ogrodja Microsoft 365 za podjetja
 
 ### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
 
@@ -3061,6 +3062,8 @@ Zbrana so sledeča polja:
 - **UserDismissed** – to pove, ali je uporabnik zavrnil pogovorno okno in je bil torej v načinu »Grace« ali »zmanjšanem načinu«, ker se ni odločil kupiti Office ali dobiti preskusne različice.
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
+
+*[Ta dogodek je bil odstranjen iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljal v starejših graditvah.]*
 
 Preskus, s katerim uporabniku omogočimo samodejno plačevanje za Office neposredno iz aplikacije, ne da bi za to moral zapreti aplikacijo. Ta dogodek ponazarja uspešnost ali neuspešnost poskusa skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
@@ -6145,6 +6148,8 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
+- **AppID** – identifikator aplikacije, v katerem je prišlo do napake pri prenosu.
+
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppVersionLong** – različica aplikacije
@@ -6161,6 +6166,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Napaka** – med prenosom je bila zaznana napaka.
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -6169,13 +6176,15 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje ime posodobitve, ki je bila prenesena, in opazite napako.
+- **Nosilnost** – vsebuje ime posodobitve, ki je bila prenesena, in opazite napako. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **ID** seje – identifikator za sejo
+
+- **UpdateID** – identifikator posodobitve, ki jo nalagate.
 
 
 ### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
@@ -6185,6 +6194,8 @@ Uspešen prenos datoteke paketa. Zabeležimo uporabljeno pot posodabljanja. Ta d
 Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppID** – identifikator programa.
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
@@ -6217,6 +6228,8 @@ Zbrana so sledeča polja:
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **ID** seje – identifikator za sejo
+
+- **UpdateID** – identifikator posodobitve, ki ste jo naložili.
 
 
 ### <a name="fba_checkforupdate"></a>fba_checkforupdate
@@ -6325,6 +6338,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Error** – vsebuje OSStatus (koda stanja Apple), ki odseva stanje zagona.
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -6333,7 +6348,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje OSStatus (koda stanja Apple), ki odseva stanje izstrelitve.
+- **Nosilnost** – vsebuje OSStatus (koda stanja Apple), ki odseva stanje izstrelitve. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -6341,6 +6356,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+- **Success** – niz Boolean, ki označuje, ali je bil uspešno izveden proces daemona MAU.
 
 ### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
 
@@ -6637,6 +6653,8 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
+- **AppID** – identifikator programa.
+
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppVersionLong** – različica aplikacije
@@ -6653,6 +6671,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Napaka** – podrobnosti o napaki med zagonom aplikacije po posodobitvi.
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -6661,7 +6681,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime aplikacije, ki jo je mogoče zagnati.
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime aplikacije, ki jo je mogoče zagnati. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
     
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
     
@@ -6760,6 +6780,8 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
+- **AppID** – identifikator programa.
+
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppVersionLong** – različica aplikacije
@@ -6776,6 +6798,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Napaka** – podrobnosti o napaki med prekinitvijo programa.
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -6784,13 +6808,15 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Koristni tovor** – vsebuje identifikator, ki se uporablja za iskanje ID-ja dejavnosti posodobitve in paketa. To lahko vsebuje tudi niz napake, če Microsoft autoupdate določa, da se aplikacija še vedno izvaja, čeprav je bila prejeta prekinitev dogodka.
+- **Koristni tovor** – vsebuje identifikator, ki se uporablja za iskanje ID-ja dejavnosti posodobitve in paketa. To lahko vsebuje tudi niz napake, če Microsoft autoupdate določa, da se aplikacija še vedno izvaja, čeprav je bila prejeta prekinitev dogodka. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **ID** seje – identifikator za sejo
+
+- **AppID** – identifikator posodobitve programa.
 
 
 ### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
@@ -6883,6 +6909,8 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
+- **AppID** – identifikator programa.
+
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppVersionLong** – različica aplikacije
@@ -6899,6 +6927,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Napaka** – podrobnosti o napaki med prenosom posodobitve programa.
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -6907,13 +6937,17 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve.
+- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja in ime posodobitve. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **ID** seje – identifikator za sejo
+
+- **AppID** – identifikator posodobitve programa.
+
+- **UpdateName** – Ime posodobitve aplikacije.
 
 
 ### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
@@ -10551,6 +10585,8 @@ Zbrana so sledeča polja:
 
   - **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
 
+  - **OfficeArchitectureText** – arhitektura Officeovega izdelka kot niz (na primer x86, krak).
+
   - **PreviousBuild** – različica Officea, na katero je bila ta graditev nadgrajena ali s katere je bila povrnjena na prejšnjo različico.
 
   - **State** – stanje, v katerega se je spremenila seja
@@ -11285,7 +11321,9 @@ Zbrana so sledeča polja:
 
 Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanja upravitelja opravil, neodzivnost aplikacije ipd.) v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Metriko motenega zapiranja aplikacij uporabljamo za merjenje stanja Officeovih odjemalskih izdelkov. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
+
+  - **AddinExecution –** zastavica, ki sporoča, ali se je dodatek izvajal in se med nenavadnim izhodom iz aplikacije ni končal.
 
   - **BootCompleted –** zagon Officea je bil ob trenutku zrušitve dokončan.
 
@@ -11344,6 +11382,8 @@ Zbrana so sledeča polja:
   - **ModuleOffset** – odmik v bajtih od osnovnega mesta, kjer je prišlo do napake
 
   - **ModuleSize** – velikost modula z napako v bajtih
+
+  - **OfficeArchitectureText** – arhitektura Officeovega izdelka kot niz (na primer x86, krak).
 
   - **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
 

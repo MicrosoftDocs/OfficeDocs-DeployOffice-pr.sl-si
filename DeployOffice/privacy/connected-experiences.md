@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
-ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
+ms.openlocfilehash: bcf28caae666900deacbd0effe83a2fae383c41d
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43166391"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993027"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
 > [!IMPORTANT]
 > Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Office 365 ProPlus in Office 365 Business
-> - Office 365 Personal, Office 365 Home ali druge različice Officea, ki so del naročnine na Office 365.
-> - Project in Visio, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2.
+> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
+> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
+> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
 >
 > Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 >
@@ -48,7 +49,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Narekovanje  | [Narekovanje z glasom v Officeu](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Urejevalnik    | [Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Zamisli     | [Zamisli v Excelu](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
-| Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
+| Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Napisi in podnapisi v živo |  [Predstavljajte s samodejnimi napisi in podnapisi v realnem času v PowerPointu](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | Grafikon z zemljevidom\*    | [Izdelava grafikona z zemljevidom](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
@@ -119,16 +120,16 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Mapa »Prejeto« v fokusu (Outlook) |[Mapa »Prejeto« v fokusu v Outlooku](https://support.office.com/article/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Upravljanje pravic do informacij |[Upravljanje pravic do informacij v Officeu](https://support.office.com/Article/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kartica stika |[Povežite račun LinkedIn in Microsoft račun](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
+| Dodatki za Office\* | [Upravljajte uvajanje dodatkov v Skrbniškem središču za Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Povratne informacije o Officeu |[Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podpora za Office (Stik z nami) |Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku |
-| Dodatki za Office 365\* | [Upravljajte uvajanje dodatkov za Office 365 v Skrbniškem središču za Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Organigram (Visio) |[Ustvarite organigram v Visiu](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Vklopite dodatek Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | Outlook UserVoice\* | [Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Nedavni dokumenti |[Odpiranje datotek v meniju »Datoteka«](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | Pomočnik za življenjepis\* |[Sestavite svoj najboljši življenjepis s pomočjo storitve LinkedIn in Pomočnikom za življenjepis](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Iskalnik sob (Outlook)|[Kako nadzirati Iskalnik sob v Outlooku](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
-| Varne povezave |[Varne povezave ATP v storitvi Office 365](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
+| Varne povezave |[Varne povezave ATP](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Oznake občutljivosti |[Uporabite oznake občutljivosti dokumentov in e-pošte v Officeu](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Skupna raba  |[Skupna raba dokumenta (Excel)](https://support.office.com//article/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Skupna raba dokumenta (PowerPoint)](https://support.office.com//article/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Skupna raba dokumenta (Word)](https://support.office.com//article/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
 | V skupni rabi z mano |[Oglejte si datoteke, ki so drugi dali v skupno rabo z vami](https://support.office.com/article/e0476dc7-bf2f-4203-b9ad-c809578b03e7)  |
@@ -153,7 +154,7 @@ Izberete lahko, če so določene vrste povezanih izkušenj, kot so povezane izku
 
 Če ste skrbnik svoje organizacije, lahko uporabite nastavitve pravilnika, da določite, če so te povezane izkušnje na voljo vašim uporabnikom. Če ne uporabite teh nastavitev pravilnika, so vse povezane izkušnje na voljo vašim uporabnikom. Če želite več informacij o uporabi teh nastavitvah pravilnika, si oglejte naslednje članke: 
 
-- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus](manage-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
 - [Uporaba prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md).
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
@@ -164,7 +165,7 @@ Tudi če se odločite izklopiti te povezane izkušnje, bo še vedno na voljo ome
 
 ## <a name="related-topics"></a>Sorodne teme
 
-- [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md)
 - [Zahtevani podatki storitev za Office](required-service-data.md)
 - [Osnovne storitve za Office](essential-services.md)
