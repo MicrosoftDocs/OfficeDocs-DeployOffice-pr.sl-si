@@ -1,5 +1,5 @@
 ---
-title: Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
+title: Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Office 365 ProPlus z nastavitvami pravilnika.
+description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus) z uporabo nastavitev pravilnika.
 hideEdit: true
-ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: 6a091ca7e72cd7ce97793ebd0fdcfa2a6fa1a098
+ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42687245"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992989"
 ---
-# <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office365 ProPlus
+# <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja
 
-Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Office 365 ProPlus.
+Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus).
 
-V različici 1904 storitve Office 365 ProPlus smo uvedli nove nastavitve zasebnosti, s katerimi lahko upravljate nastavitve, povezane z naslednjo vsebino:
+V različici 1904 storitve Aplikacije ogrodja Microsoft 365 za podjetja smo uvedli nove nastavitve zasebnosti, s katerimi lahko upravljate nastavitve, povezane z naslednjo vsebino:
 
 - ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu
 
@@ -50,9 +50,9 @@ Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [prav
 
 Če uporabljate orodje za upravljanje pravilnika skupine, vse nastavitve pravilnika najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Zasebnost\\Središče zaupanja.
 
-Te nove nastavitve pravilnika veljajo tudi za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta paketa Project Online Professional ali Visio Online 2. Prav tako veljajo za Office 365 Business.
+Te nove nastavitve pravilnika veljajo tudi za namizne različice Project in Visio, ki so priložene nekaterim naročniškim paketom, kot sta Project Plan 5 ali Visio Plan 2. Nanašajo se tudi na Aplikacije ogrodja Microsoft 365 za poslovanje (prej imenovane Office 365 Business).
 
-Nekatere obstoječe nastavitve pravilnika ne bodo več veljale za Office 365 ProPlus, prav tako je prišlo do nekaterih sprememb uporabniškega vmesnika za nastavitve pravilnika, na katere bodite pozorni, saj jih bodo morda opazili tudi vaši uporabniki in vas povprašali o njih.
+Nekatere obstoječe nastavitve pravilnika ne bodo več veljale za Aplikacije ogrodja Microsoft 365 za podjetja; prav tako je prišlo do nekaterih sprememb uporabniškega vmesnika za nastavitve pravilnika, na katere bodite pozorni, saj jih bodo morda opazili tudi vaši uporabniki in vas povprašali o njih.
 
 Vse nove nastavitve pravilnika pazljivo preizkusite v omejenem, nadzorovanem okolju, v katerem lahko zagotovite želeni učinek konfiguriranih nastavitev. Nato nastavitve pravilnika uveljavite v svoji organizaciji.
 
@@ -72,16 +72,16 @@ Z nastavitvijo pravilnika *Konfiguracija ravni diagnostičnih podatkov o program
 
 Če onemogočite ali ne konfigurirate te nastavitve pravilnika, Microsoft prejme izbirne in zahtevane diagnostične podatke.
 
-Če želite izvedeti več informacij o diagnostičnih podatkih, preberite naslednje članke:
+Če želite izvedeti več informacij o diagnostičnih podatkih, preberite te članke:
 
-- [Pregled kontrolnikov zasebnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
 - [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Nastavitve pravilnika za povezane izkušnje
 
-Office 365 ProPlus vključuje aplikacije za programsko opremo odjemalca in povezane izkušnje, s katerimi lahko ustvarjate, komunicirate ter sodelujete na učinkovitejši način. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive za podjetja, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
+Aplikacije ogrodja Microsoft 365 za podjetja sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovane tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Sodelovanje z drugimi na dokumentu, ki je shranjen v storitvi OneDrive za podjetja, ali prevajanje vsebine Wordovega dokumenta v drug jezik sta primera povezanih izkušenj.
 
 Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na voljo za vaše uporabnike pri delu v Officeovih aplikacijah. Zato smo za vas pripravili štiri nove nastavitve pravilnika:
 
@@ -90,11 +90,11 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
-Če ne konfigurirate teh nastavitev pravilnika, so na voljo vse vrste povezanih izkušenj. Tako bodo vaši uporabniki lahko dostopali do vseh funkcij, ki so na voljo v storitvi Office 365 ProPlus. Vendar se zavedamo, da morda želite izklopiti nekatere ali vse povezane izkušnje zaradi določenih zahtev vaše organizacije.
+Če ne konfigurirate teh nastavitev pravilnika, so na voljo vse vrste povezanih izkušenj. Tako bodo vaši uporabniki lahko dostopali do vseh funkcij, ki so na voljo v storitvi Aplikacije ogrodja Microsoft 365 za podjetja. Vendar se zavedamo, da morda želite izklopiti nekatere ali vse povezane izkušnje zaradi določenih zahtev vaše organizacije.
 
 Če se odločite, da svojim uporabnikom ne boste omogočili določenih vrst povezanih izkušenj, bo trak ali meni za te povezane izkušnje zatemnjen oziroma bodo uporabniki prejeli sporočilo o napaki, ker so poskušali uporabiti te povezane izkušnje. V tem primeru [zahtevani podatki storitve](required-service-data.md) za te povezane izkušnje ne bodo poslani Microsoftu.
 
-Če so vaši uporabniki vpisani v Office s poverilnicami organizacije, ki jih včasih imenujemo tudi službeni ali šolski račun, ne bodo mogli vklapljati teh povezanih izkušenj, ki so del storitve Office 365 ProPlus, oziroma jih izklapljati.
+Če so vaši uporabniki vpisani v Office s poverilnicami organizacije, ki jih včasih imenujemo tudi službeni ali šolski račun, ne bodo mogli vklopiti teh povezanih izkušenj, ki so del storitve Aplikacije ogrodja Microsoft 365 za podjetja, oziroma jih izklopiti.
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Nastavitev pravilnika za povezane izkušnje, s katerimi lahko analizirate vsebino
 
@@ -114,7 +114,7 @@ Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s kater
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Nastavitev pravilnika za izbirne povezane izkušnje
 
-Poleg povezanih izkušenj, omenjenih v tem članku, ki so del storitve Office 365 ProPlus, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije. Na primer funkcije LinkedIn pomočnika za življenjepis v Wordu ali funkcija 3D-zemljevidov v Excelu, ki uporablja Bing. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
+Poleg povezanih izkušenj, omenjenih v tem članku, ki so del storitve Aplikacije ogrodja Microsoft 365 za podjetja, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije. Na primer funkcije LinkedIn pomočnika za življenjepis v Wordu ali funkcija 3D-zemljevidov v Excelu, ki uporablja Bing. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
 Te povezane izkušnje so drugačne, saj niso zajete v komercialno pogodbo organizacije z Microsoftom. Izbirne povezane izkušnje, ki jih neposredno ponuja Microsoft uporabnikom in jih ureja [pogodba o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in ne [pogoji spletnih storitev](https://www.microsoft.com/licensing/product-licensing/products). V nekaterih primerih vsebino ali funkcionalnost tretjih oseb omogočajo te izbirne povezane izkušnje, za katere lahko veljajo tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
@@ -138,7 +138,7 @@ Obstaja pa izjema, na katero morate biti pozorni. Z nastavitvijo pravilnika *Dov
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Nastavitev pravilnika za najpogostejše povezane izkušnje
 
-Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* lahko upravljate, ali bodo za vaše uporabnike na voljo najpogostejše povezane izkušnje v storitvi Office 365 ProPlus. Če onemogočite nastavitev pravilnika, te vrste povezanih izkušenj ne bodo na voljo za vaše uporabnike:
+Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* lahko upravljate, ali bodo za vaše uporabnike na voljo najpogostejše povezane izkušnje v storitvi Aplikacije ogrodja Microsoft 365 za podjetja. Če onemogočite nastavitev pravilnika, te vrste povezanih izkušenj ne bodo na voljo za vaše uporabnike:
 
 - Izkušnje, s katerimi analizirate vsebino
 - Izkušnje, s katerimi prenašate spletno vsebino
@@ -150,13 +150,13 @@ Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* lahko u
 
 ## <a name="existing-policy-settings-that-are-replaced-by-new-policy-settings"></a>Obstoječe nastavitve pravilnika, ki so jih nadomestile nove nastavitve pravilnika
 
-Z različico 1904 dve obstoječi nastavitvi pravilnika ne veljate več za Office 365 ProPlus. Ogledate si ju lahko v nadaljevanju tega članka:
+Od različice 1904 naprej obstajata dve nastavitvi pravilnika, ki se ne uporabljata več za Aplikacije ogrodja Microsoft 365 za podjetja. Ogledate si ju lahko v nadaljevanju tega članka:
 
 - **Pošiljanje osebnih podatkov** – to nastavitev lahko najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Zasebnost\\Središče zaupanja.
 
 - **Možnosti spletne vsebine** – to nastavitev lahko najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Orodja | Možnosti | Splošno | Možnosti storitve...\\Spletna vsebina.
 
-Od različice 1904 naprej konfiguriranje teh dveh obstoječih nastavitev pravilnika nima več vpliva v storitvi Office 365 ProPlus. Nastavitvi ne veljata več, saj so njuno funkcionalnost zamenjale te nove nastavitve pravilnika:
+Od različice 1904 naprej konfiguriranje teh dveh obstoječih nastavitev pravilnika ne vpliva več na storitev Aplikacije ogrodja Microsoft 365 za podjetja. Nastavitvi ne veljata več, saj so njuno funkcionalnost zamenjale te nove nastavitve pravilnika:
 
 - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino
 - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino
@@ -183,7 +183,7 @@ Na splošno velja, da če z eno nastavitvijo pravilnika vklopite določeno povez
 
 ## <a name="privacy-related-changes-to-the-office-ui"></a>Spremembe, povezane z zasebnosti v uporabniškem vmesniku za Office
 
-Vaši uporabniki bodo morda opazili nekatere spremembe uporabniškega vmesnika v storitvi Office 365 ProPlus, povezane z zasebnostjo, in vas povprašali o njih. Te spremembe so neposreden učinek novih kontrolnikov zasebnosti in nastavitev pravilnika, ki so na voljo od različice 1904.
+Vaši uporabniki bodo morda opazili nekatere spremembe uporabniškega vmesnika v storitvi Aplikacije ogrodja Microsoft 365 za podjetja, povezane z zasebnostjo, in vas povprašali o njih. Te spremembe so neposreden učinek novih kontrolnikov zasebnosti in nastavitev pravilnika, ki so na voljo od različice 1904.
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Pogovorno okno o izbirnih povezanih izkušnjah
 
