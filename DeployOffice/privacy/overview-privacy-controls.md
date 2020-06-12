@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus), vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: e22388cb73a539e13f67163bf0b0e949b10be349
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 134f7470354796679c9a8c69fac8dd2559302b72
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663569"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja
 
@@ -37,7 +37,7 @@ V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesni
 > - Te spremembe se nanašajo tudi na:
 >   - Različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
 >   - Različico 1904 ali novejšo za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta Project Plan 5 ali Visio Plan 2.
-> - Kontrolnike zasebnosti smo vključili v različico 1908 ali novejšo polletnega kanala (ciljno usmerjenega) in polletnega kanala.
+> - Ti kontrolniki zasebnosti so vključeni v različico 1908 ali novejšo Polletnega kanala za podjetja (predogled) in Polletnega kanala za podjetja.
 > - Ti kontrolniki za varnost so na voljo za različico 2.30 in poznejše različice iOS za Excel, OneNote, PowerPoint in Word, kot tudi za različico 1.17 in poznejše različice Visio Viewer za iOS.
 > - Ti kontrolniki za varnost so na voljo za različico 16.0.12226.10000 in poznejše različice Androida za Excel, PowerPoint in Word, kot tudi za različico 16.0.12228.20004 in poznejše različice OneNote za Android.
 > - Večino aplikacij Office za splet nov kontrolnik zasebnosti uporabljajo za [izbirne povezane izkušnje](optional-connected-experiences.md).  Te aplikacije so: Excel za splet, OneNote za splet, PowerPoint za splet, Visio za splet in Word za splet. Lahko uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md), da konfigurirate ustrezno [nastavitev pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).

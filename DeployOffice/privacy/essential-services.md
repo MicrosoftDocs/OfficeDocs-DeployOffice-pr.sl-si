@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663189"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -2528,11 +2528,11 @@ Poroča o rezultatu poskusa pokončne namestitve
 
 Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
-- **BitField –** celoštevilska vrednost argumenta» BitField «, ki nam pove, ali je zahteva za eksplicitno namestitev/posodobitev zahtevana (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni)
+- **BitField –** celoštevilska vrednost argumenta BitField, ki nam pove, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
 
-- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala Update/install (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni, neveljaven)
+- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala za posodobitev/namestitev. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled), Polletni kanal za podjetja ali Neveljaven.
 
-- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe.
+- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina, je bil zaznan v argumentih cmd, ki so bili preneseni v exe.
 
 - **C2RClientUICulture –** kultura C2R odjemalca za namestitev
 
@@ -2607,9 +2607,9 @@ Poročila o dejanjih, ki preberejo označeno vnašanje iz vdelanega podpisa exe.
 
 Sporoči parametre, ki se uporabljajo za namestitev Officea
 
-- **BitField –** celoštevilska vrednost argumenta» BitField «, ki nam pove, ali je zahteva za eksplicitno namestitev/posodobitev zahtevana (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni)
+- **BitField –** celoštevilska vrednost argumenta BitField, ki nam pove, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
 
-- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala Update/install (mesečno, Insiders Slow, Insiders Fast, Semi-letni, Semi-letni ciljni, neveljaven)
+- **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala za posodobitev/namestitev. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled), Polletni kanal za podjetja ali Neveljaven.
 
 - **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe. Možnosti so: Autorun, Configure, Consumer, download, Help, pakirnice
 
