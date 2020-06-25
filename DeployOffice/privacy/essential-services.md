@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
+ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "44800404"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -2717,15 +2717,24 @@ Ta dogodek ne vsebuje dodatnih polj, kajti pomembni so zgolj metapodatki.
 
 Ta dogodek se zabeleži, ko se pokličete v WebService, ki je bil ustvarjen z dodatkom upravitelja za uporabnost s tehnologijo »zagon s klikom«, ne glede na to, ali je uspešen ali ne. To je pravzaprav zadnji postopek v Dodatku za spremljanje stanja celotnega postopka.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
+
+- **ActionDetail** – dodatne podrobnosti o tem, kdaj pride do napake.
+   - Če je zahteve HTTP uspešna, bo ActionDetail 0.
+   - Če polje z rezultati ni v redu (tj. ne 0), kar pomeni, da zahteva ni poslana, bo v tem polju zapisana Notranja koda napake, ki je enaka kot polje z rezultatom.
+   - Če je polje rezultat v redu (tj. 0), kar pomeni, da je koda odziva HTTP > = 300, se bo prijavila koda za odziv HTTP (na primer 404).
+
+- **Rezultat** – številske zastavice kode napake, ki jih vrne Office WebService Call API-ji. – na primer 3 pomeni, da je prišlo do težave z inicializacijo glav HTTP.
+
+- **Vnesite** – dodatne informacije vrste. V primeru inventarja te informacije določa vrsto poslanega tovora – na primer polno ali samo Delta sprememb. 
 
 -  **WebCallSource** – vrednost enumeracije (ki je navedena kot celo število), ki označuje dodatek upravitelja za uporabnost, ki je bil vir klica:
    - Zaloga: 0
    - Konfiguracija inventarja: 1
    - Pravilnik o inventarju: 2
    - Stanje omrežnega inventarja: 3
-
-- **Rezultat** – številske zastavice kode napake, ki jih vrne Office WebService Call API-ji.
+   - Upravitelj uporabnosti: 4
+   - Upravljanje: 5
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
@@ -3141,7 +3150,9 @@ Izvirni izdelovalci opreme prodajajo naprave, ki so vključene v Office (celolet
 
 Ta dejavnost telemetrijo sledi napakam pri uspehu in napaki pri iskanju vezave, tako da lahko zagotovimo, da lahko naprave, ki imajo zavezujočo vezavo, uspešno pridobivajo in da so naše storitve zdrave.  Ta dejavnost ne sledi strojem, ki so na voljo, da ne bi imeli nobenih vezi z njimi, ko jih preverimo z našimi storitvami.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
+
+- **DexShouldRetry** – znak, da smo pripravili težavo, ki jo je mogoče odpraviti (Internet ali strežniki niso na voljo)
 
 - **GenuineTicketFailure** – nam pove napako HRESULT, ko poskušate dobiti računalnik s sistemom Windows pristno vstopnico/ključ izdelka (WPK).
 
@@ -3175,15 +3186,29 @@ Zbrana so sledeča polja:
 
 Ko ste uspešno dokončali veljaven Officeov PIN, ki je vezan na računalnik, ki je bil vnaprej povezan s sistemom Office, je uporabnik v pogovornem oknu za vpis ali v pogovorno okno za prevzem.  Ko je koda PIN preplačana, je prikazano pogovorno okno »EULA«.  Kot del naše funkcije modernizacije AFO smo osvežili dve pogovorni okni, da bi posredovali več informacij o Officeovem izdelku, ki je na voljo v računalniku.  Ta telemetrijo je namenjena sledenju, če naša funkcija uspešno zmanjša število uporabnikov, pri čemer prevzame njihov izdelek tako, da spremlja potek in izstopne točke postopka prevzema (ki je bil opuščen).
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
-- **ActionCreateAccount** – uporabnik se je odločil ustvariti račun.
+- **ActionActivate** – znak, da je uporabnik kliknil gumb »Aktiviraj«.
 
-- **ActionSignIn** – uporabnik se je odločil za vpis.
+- **ActionChangeAccount** – znak, da je uporabnik kliknil hiperpovezavo »uporabi drug račun«.
 
-- **DialogRedemption** – prikaz pogovornega okna »AFO Redemption«.
+- **ActionCreateAccount** – znak, da je uporabnik kliknil gumb »Ustvari račun«.
 
-- **DialogSignIn** – prikazuje pogovorno okno za vpis v AFO.
+- **ActionSignIn** – signal, ki ga je uporabnik kliknil z gumbom »vpis«.
+
+- **CurrentView** – vrsto pogovornega okna, ki ga je uporabnik zaprl.
+
+- **DialogEULA** – signal, da smo prikazali pogovorno okno »Sprejmi EULA«. 
+
+- **DialogRedemption** – signal, ki smo ga pokazali v pogovornem oknu »AFO ' Redemption«.
+
+- **DialogSignIn** – signal, da smo prikazali pogovorno okno za vpis v AFO '.
+
+- **EmptyRedemptionDefaults** – sporočilo, da ni bilo mogoče pridobivati privzetih informacij o prevzemu.
+ 
+- **GetRedemptionInfo** – znak, da pridobivamo demografske informacije za prevzem PIN.
+
+- **MalformedCountryCode** – znak, da je koda države, ki jo potrebujete za prevzem PIN-a, popačena.
 
 - **OExDetails** – podrobnosti o napaki, ki se prikaže, ko je bil v pogovornem oknu »vpis identitete« opuščen.
 
@@ -3199,6 +3224,14 @@ Zbrana so sledeča polja:
     - 0x03113811 uporabnik  je zaprl pogovorno okno za vpis/prevzem
     - 0x03113812 uporabnik je zaprl pogovorno okno Sprejmi EULA
     - 0x03113808 uporabnik je sprejel EULA
+    - Uporabnik 0x03113811 je zaprl pogovorno okno
+    - Uporabnik 0x2370e3a0 je zaprl pogovorno okno
+    - 0x2370e3c1 obiščite spletno mesto za prevzem PIN-a
+    - 0x2370e3a1 obiščite spletno mesto za prevzem PIN-a
+    - Pogovorno okno »0x2370e3c0 zaporedje«, ki ga je povzročil uporabnik, ki je bil na tekočem v pogovornem oknu
+    - Uporabnik 0x2370e3a3 je kliknil hiperpovezavo »not Now«, ki preskoči ponudbo za AFO ' za to sejo.
+    - Uporabnik 0x2370e3a2 je kliknil »nikoli mi ne kaži več« hiperpovezave, ki onemogoči ponudbo za AFO '
+
 
 - **UseInAppRedemption** – nam pove, ali imamo uporabniki v aplikaciji za prevzem ali pa jih pošljejo v splet, da bodo lahko izkoristili pogosto kodo PIN (vnaprej izpolnjene).
 
@@ -3231,7 +3264,7 @@ Zbrana so sledeča polja:
 
 - **HasConnectivity** – pove, ali ima uporabnik internetno povezljivost, v primeru, da uporabnik morda ne bo rabil licence milosti za pet dni ali pa je morda v načinu zmanjšane funkcionalnosti.
 
-- **InAppTrialPurchase** – pove, ali je polet omogočen za začetek nakupa SDK nakup v trgovini za zajem PI in nakup preskusne različice znotraj programa
+- **InAppTrialPurchase** – pove, ali je polet omogočen za začetek nakupa SDK nakup v trgovini za zajem PI in nakup preskusne različice znotraj programa *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
 - **IsRS1OrGreater** – pove, ali je različica OS večja od RS1 ali ne, saj bi moral biti nakup v trgovini SDK že uporabljen samo, če je različica OS večja, kot je RS1
 
@@ -3239,15 +3272,15 @@ Zbrana so sledeča polja:
 
 - **OEMSendToWebForTrial** – pove, ali je polet omogočen za pošiljanje uporabnikov v splet, da izkoristi preskusno različico
 
-- **StoreErrorConditions** – pove različne pogoje, v skladu s katerimi bi lahko prišlo do neuspelega nakupa SDK v trgovini
+- **StoreErrorConditions** – pove različne pogoje, v skladu s katerimi je bil nakup SDK shrambe ni uspel *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
-- **StoreErrorHResult** – pove, da je koda napake vrnjena iz paketa za nakup v trgovini SDK
+- **StoreErrorHResult** – pove, da je koda napake vrnjena iz trgovine SDK nakup v trgovini *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
-- **StorePurchaseStatusResult** – pove rezultat klica paketa SDK nakupa v trgovini in če je uporabnik ustvaril nakup ali ne, ki bo pomagal ugotoviti, ali mora uporabnik dobiti licenco za uporabo Officea
+- **StorePurchaseStatusResult** – pove, da je rezultat klica SDK za nakup v trgovini in če je uporabnik ustvaril nakup ali ne, s katerim lahko ugotovite, ali mora uporabnik dobiti licenco za uporabo sistema Office *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno pojavi v starejših različicah.]*
 
 - **Oznaka** – uporablja se za štetje, kjer je bil dogodek poslan iz programa
 
-- **UserSignedInExplicitly** – pove, ali je uporabnik v tem primeru izrecno vpisan, zato bomo za preskusno različico ponovno usmerili uporabnike v splet.
+- **UserSignedInExplicitly** – pove, ali je uporabnik v tem primeru izrecno vpisan v splet – če je bil uporabljen za preskusno različico *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar je morda še vedno prikazan v starejših različicah.]*
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
