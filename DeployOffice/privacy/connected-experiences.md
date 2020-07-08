@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 4ec1ffef4b8bc0e82a7a1ce96061a9c715636bea
-ms.sourcegitcommit: 7adeab733277e6ed3eafddcc1d4df20e2743a752
+ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
+ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "44930431"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45048569"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -37,7 +37,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Povezane izkušnje, ki analizirajo vašo vsebino
 
-Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Kot na primer Oblikovalnik za PowerPoint ali Urejevalnik v Wordu.
+Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer Oblikovalnik za PowerPoint ali Prevajalnik.
 
 V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vsebino, kot tudi povezave do več informacij o njih.
 
@@ -47,7 +47,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Samodejno nadomestno besedilo   | [Vse, kar morate vedeti za pisanje učinkovitih nadomestnih besedil](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Podatkovni tipi                  | [Podatkovni tipi v Excelu: Delnice in geografija](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Narekovanje  | [Narekovanje z glasom v Officeu](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
-| Urejevalnik    | [Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
+|Urejevalnik|[Urejevalnik je vaš pomočnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Zamisli     | [Zamisli v Excelu](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
@@ -60,6 +60,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Objavi v storitvi Microsoft Stream    | [Pretvorite predstavitev v videoposnetek](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Raziskovanje*\*   | [Dodajte ali spremenite raziskovalne storitve](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Optično branje vizitke|  [Optično preberite ali tapnite, da dodate stike v Outlooku za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
+|*Preverjevalnik podobnosti*\* (funkcija Urejevalnika)|[Preverite podobnosti med svojim dokumentom in spletnimi viri](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Smart Lookup*\*   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predlagani odgovori | [Kaj so predlagani odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
