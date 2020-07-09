@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
-ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
+ms.openlocfilehash: 729329eeaa301cbb7bda61c0ec8d08ec9124729f
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45068731"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087817"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -45,7 +45,7 @@ Izkušnje, ki jih Bing omogoča v Outlooku za iOS in Android, so:
 
 - **Predlogi za lokacijo:**   Ko v element koledarja dodate javni kraj z uličnim naslovom, se polje »Lokacija« izpolni s celotnim uličnim naslovom.
 - **Zanimivi koledarji:**   [Naročite se](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) lahko na koledarje o vaših najljubših športnih ekipah ali TV-oddajah.
-
+- **Čas potovanja v naslednjem:** vaš naslednji prihajajoči dogodek bo povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [naslednje](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). V aplikaciji Outlook za Android je za to izkušnjo potrebno, da zemljevidi Bing ponudijo predviden čas potovanja.
 
  Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Katere koli poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 za podjetja, so poslane Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
 
@@ -83,6 +83,10 @@ Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitv
 
 > [!NOTE]
 > Raziskovanje se razlikuje od raziskovalca. V novejših različicah Officea je poleg raziskovanja na voljo še izkušnja raziskovalca. Raziskovalec je novejša storitev, ki jo omogoča Bing, in smo jo opisali v razdelku [izkušnje, ki za delovanje uporabljajo Bing](#experiences-that-rely-on-bing) tega članka.
+
+### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Čas potovanja v nadaljevanju v Outlooku za iOS
+
+V programu Outlook za iOS bo vaš naslednji prihajajoči dogodek povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [navzgor naslednja](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). V tej izkušnji je potrebno storitev Apple v lasti družbe Apple Maps za zagotavljanje predvidenega časa potovanja. V aplikaciji Apple Maps [pogoji uporabe](https://www.apple.com/legal/internet-services/maps/) in Apple [pravilniku o zasebnosti](https://www.apple.com/legal/privacy) velja.
 
 ### <a name="weather-bar-in-outlook"></a>Vrstica za vreme v Outlooku
 

@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom nudi informacije o načinu upravljanja nastavitev zasebnosti v napravah s sistemom iOS.
 hideEdit: true
-ms.openlocfilehash: 40fc1ec1f5b2abc587e1b5224dc7fe0a5a656f33
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6465a5b5e2103070170bdec8cd64b8bc044d46a3
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992122"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087863"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS
 
@@ -33,7 +33,9 @@ Na voljo so nove prednostne nastavitve za Office v napravah s sistemom iOS, s ka
 
 Te prednostne nastavitve se nanašajo na naslednje aplikacije:
 - Različica 2.30 in poznejše različice programov Word za iOS, Excel za iOS in PowerPoint za iOS.
-- Različica 16.30 in novejša različica programa OneNote za iOS.
+- Različica 4.30.0 in novejše različice programa Outlook za iOS
+- Različica 16.30 in novejše različice programa OneNote za iOS.
+- Različica 11.19.11 in novejše različice programa OneDrive za iOS.
 - Različica 1.17 in novejša različica programa Visio Viewer za iOS.
 
 > [!NOTE]
@@ -60,6 +62,8 @@ Ko ga pošljete napravi, bo konfiguracijski slovar shranjen pod `com.apple.manag
 > - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino
 > - Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino
 > - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
+>
+> Nastavitve zasebnosti za Outlook za iOS in OneDrive za iOS lahko konfigurirate le s storitvijo Office politiko oblaka.
 >
 > Če želite več informacij o uporabi storitve pravilnika Office Cloud, si oglejte [pregled storitve pravilnika Office Cloud ](../overview-office-cloud-policy-service.md).
 
