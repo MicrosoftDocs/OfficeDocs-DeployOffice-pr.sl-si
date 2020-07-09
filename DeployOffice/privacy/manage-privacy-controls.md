@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus) z uporabo nastavitev pravilnika.
 hideEdit: true
-ms.openlocfilehash: ca076099be15a5a4cd19ac7c99660bfe26de8eed
-ms.sourcegitcommit: edd1190877db7996206147ad1d691fd8e84f23b1
+ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "44589044"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087225"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja
 
@@ -40,7 +40,7 @@ V nadaljevanju si lahko ogledate pet novih nastavitev zasebnosti:
 - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
-Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [pravilnika za Office v oblaku](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Če uporabljate pravilnik skupine, prenesite najnovejše različice datotek za skrbniške predloge (ADMX/ADML) iz [Microsoftovega centra za prenose](https://www.microsoft.com/download/details.aspx?id=49030).
+Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [pravilnika za Office v oblaku](../overview-office-client-policy-service.md). Če uporabljate pravilnik skupine, prenesite najnovejše različice datotek za skrbniške predloge (ADMX/ADML) iz [Microsoftovega centra za prenose](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
 > - Če želite več informacij o upravljanju kontrolnikov zasebnosti za Office for Mac, preberite [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
@@ -98,7 +98,7 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Nastavitev pravilnika za povezane izkušnje, s katerimi lahko analizirate vsebino
 
-To so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Kot na primer oblikovalnik za PowerPoint ali urejevalnik v Wordu. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
+To so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer Oblikovalnik za PowerPoint ali Prevajalnik. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
 Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te povezane izkušnje na voljo vašim uporabnikom.
 

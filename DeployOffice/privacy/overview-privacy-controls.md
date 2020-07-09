@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus), vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: 134f7470354796679c9a8c69fac8dd2559302b72
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663569"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087717"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja
 
@@ -85,7 +85,7 @@ Aplikacije ogrodja Microsoft 365 za podjetja sestavljajo aplikacije odjemalske p
 
 Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na voljo za vaše uporabnike pri delu v Officeovih aplikacijah. Kot skrbnik organizacije imate na voljo nastavitve pravilnika, s katerimi lahko določite, ali svojim uporabnikom želite omogočiti te vrste povezanih izkušenj:
 
-- **Izkušnje, s katerimi lahko analizirate vsebino** – izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Kot na primer oblikovalnik za PowerPoint ali urejevalnik v Wordu.
+- **Izkušnje, s katerimi lahko analizirate vsebino** – izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer Oblikovalnik za PowerPoint ali Prevajalnik.
 
 - **Izkušnje, s katerimi lahko prenašate spletno vsebino** – izkušnje, ki vam omogočajo, da poiščete in prenesete spletno vsebino, vključno s predlogami, slikami, 3D-modeli, videoposnetki in referenčnim gradivom, s katero izpopolnite svoje dokumente. Denimo Officeove predloge ali orodje za hitri začetek za PowerPoint.
 
