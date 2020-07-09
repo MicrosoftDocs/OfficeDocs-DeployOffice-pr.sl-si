@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: ecfe38bc6dbedd57ff1eb2ab4851c8e4dddab730
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
+ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993252"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45068731"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -39,7 +39,7 @@ Pomembno je, da se zavedate, da te izbirne storitve v oblaku niso zajete v Micro
 
 ## <a name="experiences-that-rely-on-bing"></a>Izkušnje, ki za delovanje uporabljajo Bing
 
-Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je ločeno podjetje od Aplikacij ogrodja Microsoft 365 za podjetja in ga upravlja Microsoft neodvisno od Aplikacij ogrodja Microsoft 365 za podjetja. Izkušnje, ki jo ponuja v aplikacijah za Office vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) in [Pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+Nekatere storitve v oblaku za delovanje uporabljajo Microsoft Bing. Microsoft Bing je ločeno podjetje od Aplikacij ogrodja Microsoft 365 za podjetja in ga upravlja Microsoft neodvisno od Aplikacij ogrodja Microsoft 365 za podjetja. Izkušnje, ki jo ponuja v aplikacijah za Office vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, so: [3D-zemljevidi](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni z zemljevidi](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Vstavljanje spletnih slik](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Vstavljanje spletnih 3D-modelov](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Orodje za hiter začetek za PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Raziskovalec](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f), [Pametno iskanje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) in [preverjevalnik podobnosti](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) (funkcija Urejevalnika).
 
 Izkušnje, ki jih Bing omogoča v Outlooku za iOS in Android, so:
 
