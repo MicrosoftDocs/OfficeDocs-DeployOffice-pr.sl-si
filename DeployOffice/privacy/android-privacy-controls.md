@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom ponuja informacije o tem, kako upravljati nastavitve zasebnosti za Office v napravah s sistemom Android.
 hideEdit: true
-ms.openlocfilehash: 69a8880b03e63be391731f9882bcee17a81a51ab
-ms.sourcegitcommit: e542473cc4fe07a98874c275846f6982a6863e35
+ms.openlocfilehash: 38d68df0d3a12e6858568906a60973bad9d76709
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "39837730"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087899"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android
 
@@ -32,7 +32,9 @@ Za Office v napravah s sistemom Android so na voljo nastavitve pravilnika, ki om
 
 Te nastavitve pravilnika se nanašajo na te aplikacije:
 - Različica 16.0.12228.20260 in novejše različice Worda za Android, Excela za Android in PowerPointa za Android.
+- Različica 4.1.71 in novejše različice Outlooka za Android.
 - Različica 16.0.12228.20004 in novejše različice programa OneNote za Android.
+- Različica 5.47 in novejše različice programa OneDrive za Android.
 
 > [!NOTE]
 >- Te nastavitve pravilnika velja tudi za različico 16.0.12130.20272 in novejše različice javnega predogleda [Officeove mobilne aplikacije](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/Introducing-Office-Your-new-go-to-mobile-app-for-getting-work/ba-p/977172) za Android.
