@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom ponuja informacije o tem, kako upravljati nastavitve zasebnosti za Office v napravah s sistemom Android.
 hideEdit: true
-ms.openlocfilehash: 38d68df0d3a12e6858568906a60973bad9d76709
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: 6086ecd1b2cd55bbf6cb4577879714f1d20a2f93
+ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087899"
+ms.locfileid: "45092134"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android
 
@@ -35,11 +35,7 @@ Te nastavitve pravilnika se nanašajo na te aplikacije:
 - Različica 4.1.71 in novejše različice Outlooka za Android.
 - Različica 16.0.12228.20004 in novejše različice programa OneNote za Android.
 - Različica 5.47 in novejše različice programa OneDrive za Android.
-
-> [!NOTE]
->- Te nastavitve pravilnika velja tudi za različico 16.0.12130.20272 in novejše različice javnega predogleda [Officeove mobilne aplikacije](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/Introducing-Office-Your-new-go-to-mobile-app-for-getting-work/ba-p/977172) za Android.
->- Uporaba javne različice predogleda aplikacije Office Mobile za Android bo zbrala dnevnike za zrušitve, ki lahko v nekaterih primerih vsebujejo vsebino.
->- Če ste zaskrbljeni zaradi zbirke podatkov iz javne predogledne različice Officeove mobilne aplikacije za Android, morate obvestiti uporabnike, da se ne bodo prijavili v aplikacijo s službenim ali šolskim računom.
+- Različica Officeove aplikacije za Android 16.0.12430.20254 in novejša.
 
 ## <a name="policy-settings-available-for-office-on-android-devices"></a>Nastavitve pravilnika, ki so na voljo za Office v napravah s sistemom Android
 

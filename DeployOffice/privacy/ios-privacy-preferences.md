@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom nudi informacije o načinu upravljanja nastavitev zasebnosti v napravah s sistemom iOS.
 hideEdit: true
-ms.openlocfilehash: 6465a5b5e2103070170bdec8cd64b8bc044d46a3
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: ac8b3428734649981f20a82be2f0793c857e09ee
+ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087863"
+ms.locfileid: "45092170"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS
 
@@ -37,6 +37,7 @@ Te prednostne nastavitve se nanašajo na naslednje aplikacije:
 - Različica 16.30 in novejše različice programa OneNote za iOS.
 - Različica 11.19.11 in novejše različice programa OneDrive za iOS.
 - Različica 1.17 in novejša različica programa Visio Viewer za iOS.
+- Različica 2.34 in novejše različice aplikacije Office za iOS.
 
 > [!NOTE]
 > Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom macOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
