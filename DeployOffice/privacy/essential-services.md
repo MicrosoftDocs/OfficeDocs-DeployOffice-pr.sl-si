@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
-ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
+ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
+ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "44800404"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "45117216"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -2851,11 +2851,13 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingfullvalidation"></a>Office.Licensing.FullValidation 
 
-Ti podatki so zbrani pri vsaki seji, ki sporoča stanje licenciranja v računalniku in sporoča napake, ki se prikažejo uporabniku, zaradi katerih, ne morejo uporabljati aplikacijo. Ta dogodek ponazarja, ali je stanje računalnika uporabnika primerno. Za ta dogodek smo vzpostavili zaznavanje anomalije, s katerim ugotovimo, ali regresija povzroča nepravilno delovanje uporabnika. Ta dogodek je pomemben tudi pri diagnosticiranju težav uporabnika in za nadziranje zdravja sistema.
+Ti podatki so zbrani pri vsaki seji, ki sporoča stanje licenciranja v računalniku in sporoča napake, ki se prikažejo uporabniku, zaradi katerih, ne morejo uporabljati aplikacijo. Ta dogodek ponazarja, ali je stanje računalnika uporabnika primerno. Za ta dogodek smo vzpostavili zaznavanje anomalije, s katerim ugotovimo, ali regresija ali mehanizem aktivacije povzroča nepravilno delovanje uporabnika. Ta dogodek je pomemben tudi pri diagnosticiranju težav uporabnika in za nadziranje zdravja sistema.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
   - **Acid** – identifikator GUID, ki predstavlja Officeov izdelek, za katerega je uporabnik prejel licenco 
+  
+  - **ActivationAttributes** – vrsta mehanizma aktivacije, ki ga uporablja uporabnik.
 
   - **IsSessionLicensing** – ali je izbran način za aktivacijo računalnika v skupni rabi 
 
@@ -10459,6 +10461,27 @@ Zbrana so naslednja polja:
 
  - **Data_EventId** – koda, ki označuje nastavitve za diagnostično zbirko podatkov, ki jo je izbral uporabnik.
 
+### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
+
+Dogodek sproži elegantna zaustavitev aplikacije v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Z elegantno zaustavitvijo merimo stanje Officeovih odjemalcev. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
+
+Zbrana so naslednja polja:
+
+- **AppBuild** – identifikator delovne različice za vplivani proces.
+- **AppMajor** – identifikator glavne različice za vplivani proces.
+- **AppMinor** – identifikator manjše različice za vplivani proces.
+- **AppRevision** – identifikator delovne različice za vplivani proces.
+- **BootCompleted** – ali je Officeov postopek dokončal zagon.
+- **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod.
+- **EcsETag** – identifikator preskusa za proces.
+- **HasEdit** – ali je bilo med Officeovim postopkom v teku urejanje dokumenta.
+- **HasOpen** – ali je bil dokument odprt med Officeovim postopkom.
+- **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
+- **OfficeUILang** – jezik Officeovega postopka.
+- **PreviousBuild** – prejšnja nameščena delovna različica.
+- **SafeMode** – ali je bil Officeov postopek v varnem načinu.
+- **SessionId** – enolični identifikator postopka.
+- **SessionInitTime** – čas, ko se je začel vplivani proces.
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
