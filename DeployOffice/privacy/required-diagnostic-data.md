@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: d3acec4d3e2b1758ca991dd9bec0a551e9ebfab7
-ms.sourcegitcommit: 5c82507780e8f46c01c951135419546b7b9dad52
+ms.openlocfilehash: 6e5ea5a865acb893c92af12e68e7815fcf2fee65
+ms.sourcegitcommit: 5a4d3419d5ff4c8008ad3cf894a8f03ec170504b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "44811486"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "45128582"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -1291,6 +1291,36 @@ Zbrana so naslednja polja:
 
 - **WarmBoot** – ugotovi, ali je bil vsebnik že ustvarjen ali ne.
 
+#### <a name="office_appguard_launchfile"></a>Office_AppGuard_LaunchFile
+
+Ta dogodek označuje rezultat zagona datoteke za zagon tehnologije Application Guard. Določili bomo lahko odstotek sej, pri katerih je bila uspešno zagnana Wordova, Excelova ali PowerPointa datoteka in kode napak za neuspele poizkuse.
+
+Zbrana so sledeča polja:
+
+- **AppId** – identificira, katera aplikacija je v postopku zagona.
+
+- **DetachedDuration** – identificira skupni las, ki ga je porabila združena dejavnost. 
+
+- **ErrorCode1** – vrsta kode napake pri nastavitvi vsebnika.  
+
+- **ErrorCode2** – koda napake od izvršitve ustvarjanja. 
+
+- **ErrorCode3** – dodatna koda napake. 
+
+- **FileId** – enolični identifikator (GUID), ki ga je vrnil Windows API po zagonu datoteke.
+
+- **Id** – enolični identifikator (GUID) za zagon in ustvarjanje datoteke. Ta ID je uporabljen za določanje korelacije dogodkov iz Officea in sistema Windows.
+
+- **ResetError** – koda napake, s katero poskuša ponastaviti posodo po spodletelem poskusu.
+
+- **ResetErrorCode1** – vrsta napake pri nastavitvi vsebnika po ukazu »Ponastavi«. 
+
+- **ResetErrorCode2** – koda napake od izvršitve ustvarjanja.
+
+- **ResetErrorCode3** – dodatna koda napake po ponastavitvi ukaza.  
+
+- **ResetErrorType** – vrsta napake: ustvarjanje, PrepFile ali Launch.
+
 
 
 #### <a name="officesecurityactivationfilterclsidactivated"></a>Office.Security.ActivationFilter.CLSIDActivated
@@ -1747,6 +1777,11 @@ Zbrana so sledeča polja:
 - **action** – ponazarja dejanje, ki se je poskušalo izvesti med zapisom dejanja. Nekateri primeri vključujejo prilaganje datoteke in prikaz več možnosti.
 
 - **icon_name** – ponazarja ime ikone, ki je prikazana med zapisom dejanja.
+ 
+- **origin** – sporoča izvor dejanja. Možni vrednosti sta quick_reply in full_screen.
+
+- **toolbar_type** – sporoča vrsto orodne vrstice, predstavljene na strani za sestavljanje. Možni vrednosti sta compose_actions in formatting.
+
 
 #### <a name="conversation_view_action"></a>conversation_view_action
 
@@ -1761,6 +1796,8 @@ Zbrana so sledeča polja:
 - **suggested_reply_char_count** – število znakov v predlaganem odgovoru (če je na voljo), s katerim lažje zaznamo odstopanja in težave, povezane z našimi predlogi.
 
 - **suggested_reply_click_pos** – položaj upodobitve predlaganega odgovora (če je na voljo), s katerim lažje zaznamo težave z določenim predlogom.
+
+- **suggested_reply_type** – označuje vrsto predlaganega odgovora za to dejanje. Možne vrednosti so text, send_avail in create_meeting.
 
 - **use_default_quick_reply_mode** – prikazuje, ali je bil uporabljen privzeti način hitrega odgovora, s katerim lažje zaznamo težave, povezane z izkušnjo hitrih odgovorov v e-pošti.
 
@@ -2508,6 +2545,8 @@ Zbrana so sledeča polja:
 
 - **Data_BootDuration** – čas, zahtevan za zagon aplikacije pri postopku za odpiranje datoteke.
 
+- **Data_ClosePreviouslyOpenedMarkers** – v nekaterih scenarijih odpiranja datoteke je postopek zapiranja prej odprtega dokumenta izveden pred odpiranjem trenutnega dokumenta. To časovno obdobje med nekaterimi postopki, ki se izvedejo v tem primeru, je zajeto v vrednosti niza v obliki zapisa \<functionId>\<functionValue>\<functionId>\<functionValue>...
+
 - **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
@@ -2574,6 +2613,8 @@ Zbrana so sledeča polja:
 
 - **Data_ErrorId_Tag** – oznaka v kodi za pomoč pri iskanju mesta okvare.
 
+- **Data_FileOpenFlowMarkers** – preden se začne postopek odpiranja datoteke, se mora dokončati postopek vnaprejšnje obdelave. Čas, porabljen za vnaprejšnjo obdelavo, je zajet v vrednosti v obliki zapisa \<functionId>\<functionValue>\<functionId>\<functionValue>...
+
 - **Data_InclusiveMeasurements** – vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij. 
 
 - **Data_InitializationReason** – oštevilčenje, ki označuje, način odpiranja datoteke, npr. element uporabniškega vmesnika, odpiranje sprožila aplikacija itd.
@@ -2582,7 +2623,9 @@ Zbrana so sledeča polja:
 
 - **Data_OfficeMobileInitReason** – oštevilčenje, ki označuje vstopno točko pri odpiranju datoteke. 
 
-- **Data_SilhouetteDuration** – trajanje upodabljanja za odpiranje datoteke.
+- **Data_RenderToInSpaceDuration** – trajanje med upodobitvijo in animacijo silhuete/platna.
+
+- **Data_SilhouetteDuration** – Trajanje upodabljanja za odpiranje datoteke.
 
 - **Data_TimeSplitMeasurements** – vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije, časovnim žigom začetka in trajanjem. 
 
@@ -2723,6 +2766,681 @@ Ti podatki so zbrani le, če je končni uporabnik (najverjetneje skrbnik) omogo�
 Zbrana so ta polja:
 
   - **Data.CollectionTime** – Časovni žig, kdaj je bil zabeležen dogodek zrušitve.
+
+#### <a name="office_appdocs_appdocs_operationopenfrommrubypath"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByPath
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden s poti, navedene na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete napak uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke.
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
+#### <a name="office_appdocs_appdocs_operationopenfrommrubyurl"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByUrl
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden z URL-ja, navedenega na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke. 
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
+
+#### <a name="office_appdocs_appdocs_operationopenfrompath"></a>Office_AppDocs_AppDocs_OperationOpenFromPath
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke s poti, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
+#### <a name="office_appdocs_appdocs_operationopenfromprotocolhandler"></a>Office_AppDocs_AppDocs_OperationOpenFromProtocolHandler
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži postopek odpiranja datoteke v drugi aplikaciji, ki uporablja vmesnik programa za obravnavo protokola, uporabljen pa je za razumevanje in določanje prioritete uporabniških izkušenj na podlagi informacij o odpiranju datoteke.
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
+#### <a name="office_appdocs_appdocs_operationopenfromshell"></a>Office_AppDocs_AppDocs_OperationOpenFromShell
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke iz lupine, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
+
+#### <a name="office_appdocs_appdocs_operationopenfromurl"></a>Office_AppDocs_AppDocs_OperationOpenFromUrl
+
+Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke z URL-ja, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
+
+Zbrana so sledeča polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije, ko ni znan preden je bil za postopek priklican konec poročila.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – Stanje CanContinue, preden je priklican program za obravnavo začetka.
+
+- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
+
+- **Data_Doc_ChunkingType** – Oštevilčenje, ki ponazarja vrsto algoritma za razdruževanje datoteke.
+
+- **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
+
+- **Data_Doc_Ext** – Prvi 4 znaki razširitve datoteke.
+
+- **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
+
+- **Data_Doc_FqdnHash** – GUID, ki enolično določa ime gostitelja strežnika.
+
+- **Data_Doc_IdentityTelemetryId** – enostranska zgoščena vrednost identitete uporabnika, uporabljena za odpiranje.
+
+- **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
+
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+
+- **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – Ali je bila datoteka odprta s funkcijo postopnega odpiranja.
+
+- **Data_Doc_IsOcsSupported** – Ali datoteka podpira Officeovo storitev sodelovanja.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Ali je bila datoteka odprta iz predpomnjene kopije brez povezave.
+
+- **Data_Doc_IsPrefetched** – Ali je bila datoteka vnaprej pridobljena, preden se je zagnal postopek odpiranja.
+
+- **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
+
+- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+
+- **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
+
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+
+- **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
+
+- **Data_Doc_ServerProtocol** – Oštevilčenje, ki označuje protokol strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerType** – Oštevilčenje, ki označuje vrsto strežnika za datoteko v oblaku.
+
+- **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
+
+- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+
+- **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
+
+- **Data_Doc_SizeInBytes** – Velikost datoteke v bajtih.
+
+- **Data_Doc_SpecialChars** – Oštevilčenje, ki označuje vrsto posebnega znaka, ki ga ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID, ki enolično določa URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Ali je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS.
+
+- **Data_Doc_WopiServiceId** – Niz, ki označuje, iz katere storitve je datoteka WOPI (Web Application Interface Protocol).
+
+- **Data_DocumentInputCurrency** – Vrsta vnosa dokumenta, ki ga uporablja postopek.
+
+- **Data_DocumentOperation_AppId** – Vrednost oštevilčenja, ki predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka, ki predstavlja mesto, kjer se je postopek končal.
+
+- **Data_DocumentOperation_EndReason** – Vrednost oštevilčenja, ki predstavlja razlog konca.
+
+- **Data_DocumentOperation_IsReinitialized** – Znova inicializira dokument, ki je že odprt.
+
+- **Data_DocumentOperation_ParamsFlags** – Oznake oštevilčenja, uporabljene za začetek postopka.
+
+- **Data_DocumentOperation_TelemetryReason** – Oštevilčenje, ki predstavlja vhodno točko za dogodek odpiranja. Na primer odpiranje iz MRU ali brskanje, aktivacija datoteke itd.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Kontekst ciljne izvedbe je enak kontekstu odpiranja.
+
+- **Data_FileIOInclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
+
+- **Data_FileIOMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
+
+- **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
+
+- **Data_IsPathMissingForLocalFile** – Označuje, če je to lokalna datoteka brez poti.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Označuje, ali je povezava, ki je ni mogoče razpakirati, podprta za odpiranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost oštevilčenja za scenarij pravilnega odpiranja povezav.
+
+- **Data_OpEndEventId** – Oznaka, ki predstavlja, kjer se je postopek končal.
+
+- **Data_RelatedPrevOpTelemetryReason** – Postopek, povezan s prejšnjim postopkom.
+
+- **Data_StopwatchDuration** – Skupno trajanje dogodka.
+
+- **Data_UnpackLinkHint** – Oštevilčenje, ki predstavlja potencialno dejanje uporabnika s povezavo za razpakiranje.
+
+- **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
+
 
 #### <a name="office_apple_activateperpetual"></a>Office_Apple_ActivatePerpetual
 
@@ -4225,6 +4943,99 @@ Zbrana so naslednja polja:
 
 - **Data_FirstRunPanelName** – ime podokna, iz katerega je bila zagnana uporabniška izkušnja
 
+#### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
+
+Dejavnosti beležimo, ko uporabnik zažene aplikacijo za nalaganje kartice osebe in želi odpreti kartico osebe v živo.  S temi podatki določimo, ali je bila kartica naložena pravilno. 
+
+Zbrana so sledeča polja: 
+
+- **Data.accountType** – Ali uporabnik pripada organizaciji oziroma je domač uporabnik
+
+- **Data.appContextId** – Naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
+
+- **Data.AppInfo.Name** – ime uporabljene storitve (kartica profila)
+
+- **Data.AppInfo_Id** – ime gostiteljske aplikacije
+
+- **Data.AppInfo_Version** – različica gostiteljske aplikacije
+
+- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
+
+- **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
+
+- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
+
+- **Data.clientType** – Vrsta naprave, v kateri se izvaja aplikacija
+
+- **Data.contextType** – Iz katere aplikacije je bila kartica zagnana
+
+- **Data.ecsConfigIds** – Identifikatorji različic za funkcije, omogočene na kartici
+
+- **Data.ecsTagId** – ID oznake za funkcije
+
+- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+
+- **Data.eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
+
+- **Data.feature** – Uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+
+- **Data.flights** – Funkcije, omogočene na kartici
+
+- **Data.fromCache** – Ali so bili podatki pridobljeni iz pomnilnika
+
+- **Data.hasFinePointer** – Ali ima naprava vgrajeno podporo za kazalca miške
+
+- **Data.hasHoverEvents** – Ali ima naprava vgrajeno podporo za premikanje kazalca miške nad elemente
+
+- **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
+
+- **Data.offlineResolved** – Ali so bili podatki pridobljeni brez povezave
+
+- **Data.OTelJS.Version**– Različica programa OTel Logger
+
+- **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
+
+- **Data.properties** – Dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru: *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj
+  - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
+  - **ClientTimeStamp** – čas v aplikaciji, ko je bil dogodek zabeležen
+  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj
+
+  - **externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
+
+- **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+
+- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
+
+- **Data.userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja (dvojnik Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja
+
+- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun
+
+- **Data.UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+
+- **Data.userPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun (dvojnik za »Data.UserInfo.Msald«)
+
+- **Data.version** – različica storitve (kartica profila)
+
+- **Data.workloadCulture** – nabor podatkov o kulturi v gostiteljski aplikaciji
+
+- **DeviceInfo_Id** – globalni enolični identifikator naprave za napravo
+
+- **DeviceInfo_Make** – blagovna znamka operacijskega sistema
+
+- **DeviceInfo_Model** – model naprave
+
+- **DeviceInfo_OsName** – ime operacijskega sistema naprave
+
+- **DeviceInfo_OsVersion** – različica operacijskega sistema
+
+- **DeviceInfo_SDKUid** – Enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme
+
 #### <a name="officelivepersonacarduseractionsclosedexpandedpersonacard"></a>Office. LivePersonaCard. UserActions. ClosedExpandedPersonaCard
 
 Prijavljeno, ko uporabnik zapre razširjeno kartico persona. Uporablja se za opazovanje kritičnih anomalij v stopnjah napake pri zaprtju kartice » Live persona«.
@@ -4253,21 +5064,24 @@ Zbrana so naslednja polja:
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
-- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+- **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
 
-- **Data.OTelJS.Version**– različica zapisovalnika OTel
+- **Data.feature** – Uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
 
-- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
+- **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
+
+- **Data.OTelJS.Version**– Različica programa OTel Logger
+
+- **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
+
+- **Data.properties** – Dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru: *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
    - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
    - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
    - **ClientTimeStamp** časa, da se je dogodek zgodil v času časa, ko je bil čas za UNIX
    - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
-   - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
-   - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
-   - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
 
-- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+- **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
 - **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
 
@@ -4291,7 +5105,7 @@ Zbrana so naslednja polja:
 
 - **DeviceInfo_Model** – model naprave
 
-- **DeviceInfo. NetworkCost** – označuje strošek omrežja/vrsto (merjeno, merjeno nad zgornjo mejo ipd.)
+- **DeviceInfo. NetworkCost** – Označuje strošek omrežja/vrsto (merjeno, merjeno nad zgornjo mejo ipd.)
 
 - **DeviceInfo_OsName** – ime operacijskega sistema naprave
 
@@ -4324,22 +5138,26 @@ Zbrana so sledeča polja:
 
 - **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
 
-- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
 
-- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+- **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju.
 
-- **Data.OTelJS.Version**– različica zapisovalnika OTel
+- **Data.feature** – Uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
 
-- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
-  - **ClientTimeStamp** – čas v aplikaciji, ko je bil dogodek zabeležen
+- **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
+
+- **Data.OTelJS.Version**– Različica programa OTel Logger
+
+- **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
+
+- **Data.properties** – Dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru: *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **ClientTimeStamp** – Čas v aplikaciji, ko je bil dogodek zabeležen
   - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj
   - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj
-  - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
-  - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
-  - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
+  - **consumerCorrelationId** – Dvojnik Data.clientCorrelationId zgoraj
 
-- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
+- **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
 - **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
 
@@ -4359,103 +5177,7 @@ Zbrana so sledeča polja:
 
 - **Data_hostAppRing** – prstan za uvedbo kartice osebe
 
-- **Event_ReceivedTime** – čas, ko je bil zabeležen dogodek v storitvi
-
-#### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
-
-Dejavnosti beležimo, ko uporabnik zažene aplikacijo za nalaganje kartice osebe in želi odpreti kartico osebe v živo.  S temi podatki določimo, ali je bila kartica naložena pravilno. 
-
-Zbrana so sledeča polja: 
-
-- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
-
-- **Data.AppInfo.Name** – ime uporabljene storitve (kartica profila)
-
-- **Data.AppInfo_Id** – ime gostiteljske aplikacije
-
-- **Data.AppInfo_Version** – različica gostiteljske aplikacije
-
-- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
-
-- **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
-
-- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
-
-- **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
-
-- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
-
-- **Data.eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
-
-- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
-
-- **Data.OTelJS.Version**– različica zapisovalnika OTel
-
-- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
-
-  - **accountType** – ali uporabnik pripada organizaciji oziroma je domač uporabnik
-
-  - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj
-
-  - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-
-  - **ClientTimeStamp** – čas v aplikaciji, ko je bil dogodek zabeležen
-
-  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj
-
-  - **contextType** – iz katere aplikacije je bila kartica zagnana
-
-  - **ecsConfigIds** – identifikatorji različic za funkcije, omogočene na kartici
-
-  - **ecsTagId** – ID oznake za funkcije
-
-  - **externalAppSessionCorrelationId** – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v isti podseji
-
-  - **flights** – funkcije, omogočene na kartici
-
-  - **fromCache** – ali so bili podatki pridobljeni iz pomnilnika
-
-  - **hasFinePointer** – ali ima naprava vgrajeno podporo za kazalca miške
-
-  - **hasHoverEvents** – ali ima naprava vgrajeno podporo za premikanje kazalca miške nad elemente
-
-  - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
-
-  - **offlineResolved** – ali so bili podatki pridobljeni brez povezave
-
-  - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
-
-- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
-
-- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
-
-- **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
-
-- **Data.userAadObjectId** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja (dvojnik Data.UserInfo.Id)
-
-- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov račun za podjetja
-
-- **Data.UserInfo.Id** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun
-
-- **Data.UserInfo.OMSTenantId** – najemnik, s katerim je povezana uporabnikova naročnina. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
-
-- **Data.userPuid** – globalni enolični identifikator uporabnika za Microsoftov potrošniški račun (dvojnik za »Data.UserInfo.Msald«)
-
-- **Data.version** – različica storitve (kartica profila)
-
-- **Data.workloadCulture** – nabor podatkov o kulturi v gostiteljski aplikaciji
-
-- **DeviceInfo_Id** – globalni enolični identifikator naprave za napravo
-
-- **DeviceInfo_Make** – blagovna znamka operacijskega sistema
-
-- **DeviceInfo_Model** – model naprave
-
-- **DeviceInfo_OsName** – ime operacijskega sistema naprave
-
-- **DeviceInfo_OsVersion** – različica operacijskega sistema
-
-- **DeviceInfo_SDKUid** – enolično prepozna napravo iz vidika telemetrije kompleta za razvoj programske opreme
+- **Event_ReceivedTime** – Čas, ko je bil zabeležen dogodek v storitvi
 
 #### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
 
@@ -4475,45 +5197,43 @@ Zbrana so sledeča polja:
 
 - **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
 
-- **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
+- **Data.clientCorrelationId** – Globalni enolični identifikator za sejo aplikacije
 
-- **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
+- **Data.clientScenario** – se uporablja za prepoznavanje funkcije v aplikaciji, v kateri je bila odprta kartica osebe
 
-- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.clientType** – Vrsta naprave, v kateri se izvaja aplikacija
 
-- **Data.exportName**– človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+
+- **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju.
+
+- **Data.exportName** – Človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
-- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+- **Data.feature** – Uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
 
-- **Data.hostAppRing** – krog, s katerim je bila aplikacija distribuirana
+- **Data.hasPersonalInsightRing** – Vpogledi v Office ali LinkedIn so lahko na voljo za uporabnika
 
-- **Data.OTelJS.Version**– različica programa OTel Logger
+- **Data.hostAppRing** – Krog, s katerim je bila aplikacija distribuirana
 
-- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru:
+- **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
+
+- **Data.OTelJS.Version**– Različica programa OTel Logger
+
+- **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
+
+- **Data.properties** – Dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru: *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
-
   - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-
-  - **clientScenario** – se uporablja za prepoznavanje funkcije v aplikaciji, v kateri je bila odprta kartica osebe
-
   - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
 
-  - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
+- **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
-  - **hasPersonalInsightRing** – vpogledi v Office ali LinkedIn so lahko na voljo za uporabnika
+- **Data.section** – Aktivni razdelek razširjene kartice
 
-  - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
-
-  - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
-
-  - **section** – aktivni razdelek razširjene kartice
-
-- **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
-
-- **Data.tenantAadObjectId** – najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
+- **Data.tenantAadObjectId** – Najemnik, na katerega je vezana naročnina uporabnika. Omogoča, da razvrstimo težave in določimo, ali je težava razširjena ali omejena na določen nabor uporabnikov oz. določenega najemnika
 
 - **Data.type** – vrsta zabeleženega dogodka, npr. Sledenje, Napaka, Dogodek
 
@@ -4554,9 +5274,11 @@ Zbrana so naslednja polja:
 
 - **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
 
-- **Data.AppInfo.Name** – ime storitve v uporabi (kartica profila)
+- **Data.AppInfo.Name** – Ime storitve v uporabi (kartica profila)
 
-- **Data.cardCorrelationId** – globalni enolični identifikator za kartico osebe
+- **Data.bandwidthEstimateMbps** – Učinkovita ocena pasovne širine v Mb/s
+
+- **Data.cardCorrelationId** – Globalni enolični identifikator za kartico osebe
 
 - **Data.cardPersonaCorrelationId** – globalni enolični identifikator za določeno osebo, ki je prikazan na kartici
 
@@ -4570,11 +5292,26 @@ Zbrana so naslednja polja:
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
-- **Data.feature** – uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
+- **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
 
-- **Data.hostAppRing** – krog, s katerim je bila aplikacija distribuirana
+- **Data.feature** – Uporablja se za združevanje različnih dogodkov z enakimi lastnostmi (kartica profila)
 
-- **Data.OTelJS.Version**– različica programa OTel Logger
+- **Data.hostAppRing** – Krog, s katerim je bila aplikacija distribuirana
+
+- **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
+
+- **Data.OTelJS.Version**– Različica programa OTel Logger
+
+- **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
+
+- **Data.properties** – Dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+    - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
+    - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
+    - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
+    - **networkEffectiveType** – Učinkovita vrsta omrežne povezave, npr. »slow-2g online«, ki določi, ali je uporabnik povezan z internetom v času, ko prikazuje kartico osebe
+    - **networkType** – Vrsta omrežne povezljivosti naprave, ki je v uporabi
+    - **roundTripEstimateMs** – Ocenjena učinkovita povratna povezava trenutne povezave v milisekundah
 
 - **Data.region** – geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
@@ -4594,36 +5331,13 @@ Zbrana so naslednja polja:
 
 - **Data.version** – različica storitve (kartica profila)
 
-- **Data.viewType** – določa vrsto prikazane kartice profila
+- **Data.viewType** – Določa vrsto prikazane kartice profila
+
+- **Data.wasOpenedAsCompactCard** – Uporablja se za identifikacijo, ali je bila kartica prvotno odprta kot strnjeni pogled
 
 - **NetworkCost** – Označuje strošek/vrsto omrežja (omejen prenos podatkov, omejeno nad zgornjo mejo itd.)
 
-- **NetworkCountry** – koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
-
-- **Data.properties** – dodatni metapodatki, ki so zbrani za vsak dogodek, kot je prikazano v tem primeru.
-
-    - **bandwidthEstimateMbps** – učinkovita ocena pasovne širine v Mb/s
-
-    - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
-
-    - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-
-    - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
-
-    - **externalAppSessionCorrelationId**  – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju
-
-    - **immersiveProfileCorrelationId** – globalni enolični identifikator za sejo razširjenega pogleda profila
-
-    - **networkEffectiveType** – učinkovita vrsta omrežne povezave, npr. »slow-2g online«, ki določi, ali je uporabnik povezan z internetom v času, ko prikazuje kartico osebe
-
-    - **networkType** – vrsta omrežne povezljivosti naprave, ki je v uporabi
-
-    - **personaCorrelationId** – globalni enolični identifikator enolične osebe v seji
-
-    - **roundTripEstimateMs** – ocenjeno učinkovita povratna povezava trenutne povezave v milisekundah
-
-    - **wasOpenedAsCompactCard** – uporablja se za identifikacijo, ali je bila kartica prvotno odprta kot strnjeni pogled
-
+- **NetworkCountry** – Koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -5698,9 +6412,13 @@ Zbrana so sledeča polja:
 
 - **Data_StopwatchDuration:long** – skupni čas dejavnosti.
 
-- **Data_TypeOfSaveDialog:long** – vnaprej opredeljen nabor vrednosti pogovornega okna (RUN_SAVEAS_DLG,RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG itd.)
+- **Data_TypeOfSaveDialog:long** – Vnaprej opredeljen nabor vrednosti pogovornega okna (RUN_SAVEAS_DLG,RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG itd.)
 
-- **DstDoc** – nova lokacija dokumenta. 
+- **Data_WaitForSaveOrMergeSuccess:bool** – Postopek SaveAs je uspel med čakanjem na shranjevanje ali združevanje v ozadju.
+ 
+- **Data_WaitForSaveOrMergeTimeout:long** – Časovna omejitev postopka SaveAs je potekla med čakanjem na shranjevanje ali združevanje v ozadju.
+
+- **DstDoc** – Nova lokacija dokumenta. 
 
 - **SrcDoc** – izvirna lokacija dokumenta.
 
@@ -6164,7 +6882,7 @@ Zbrana so sledeča polja:
 
 - **Data.crossSessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-- **Data.currentTime** – časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
+- **Data.currentTime** – Časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
 
 - **Data.displayLanguage** – jezik prikaza sistema Office.
 
@@ -7057,7 +7775,9 @@ Zbrana so naslednja polja:
 
 Ta signal se uporablja za pravilno nastavitev in uporabo zvezkov, po tem, ko se je uporabnik vpisal v aplikacijo OneNote za sistem Android, ter zagotovitev uspešnega ustvarjanja novega zapiska.  Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.
 
-Dodatna podatkovna polja se ne zbirajo.
+Zbrana so sledeča polja:
+
+- Nobeno
 
 #### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(prejšnje ime)*, Office.OneNote.Android.MessageBar.MessageBarClicked
 
@@ -7099,7 +7819,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -7133,9 +7853,11 @@ Zbrana so sledeča polja:
 
 - **recent_message_id** – ID zadnjega sporočila v pogovoru.
 
-- **suggested_reply_state** – stanje predlaganih odgovorov za ta pogovor (ni na voljo, na voljo, prikazano, uporabljeno ali zavrženo).
+- **suggested_reply_state** – Stanje predlaganih odgovorov za ta pogovor (ni na voljo, na voljo, prikazano, uporabljeno ali zavrženo).
+
+- **suggested_reply_types** – Označuje vrsto in število predlaganih odgovorov, prikazanih/uporabljenih za ta pogovor. To je slovar. Na primer {text: 2, send_avail: 1}.
   
-- **total_count** – skupno število okvirjev, ki jih prikaže komponenta.
+- **total_count** – Skupno število okvirjev, ki jih prikaže komponenta.
  
 - **view_duration** – čas, ko si je uporabnik ogledoval komponento.
 
@@ -7197,9 +7919,11 @@ Zbrana so sledeča polja:
 
 - **source_inbox** – ponazarja vrsto izvirnega nabiralnika za referenčno sporočilo. 
 
-- **suggested_reply_state** – zajem stanja predlaganega odgovora za to poslano sporočilo, npr. ni na voljo, na voljo, prikazano, uporabljeno, zavrženo.
+- **suggested_reply_state** – Zajem stanja predlaganega odgovora za to poslano sporočilo, npr. ni na voljo, na voljo, prikazano, uporabljeno, zavrženo.
 
-- **suggestions_requested** – označuje, koliko predlogov za pametno sestaviti je bilo zahtevano
+- **suggested_reply_types** – Označuje vrsto in število predlaganih odgovorov, prikazanih/uporabljenih za to poslano e-poštno sporočilo. To je slovar. Na primer {text: 2,  send_avail: 1}.
+
+- **suggestions_requested** – Označuje, koliko predlogov za pametno sestaviti je bilo zahtevano
 
 - **suggestions_results** – Smart sestavite rezultate, tj. sprejeto, zavrnjeno
 
@@ -7420,7 +8144,9 @@ Zbrana so sledeča polja:
 
 - **black_list_reason** – prikaže, ali je na voljo razlog, da prezremo te podatke. Nekateri primeri vključujejo zagon zaradi oddaljenega obvestila in zagon zaradi pridobivanja v ozadju.
 
-- **step0_main** – prikaže čas, zahtevan, da je Outlook prešel na korak »main«, ki ga je določila družba Apple.
+- **step_premain** – Sporoča, koliko časa je Outlook potreboval od trenutka, ko je uporabnik tapnil ikono do »glavnega« koraka step0_main, določenega v tem dokumentu.
+
+- **step0_main** – Prikaže čas, zahtevan, da je Outlook prešel na korak »main«, ki ga je določila družba Apple.
 
 - **step1_appWillFinishLaunching** – prikaže čas, zahtevan, da je Outlook iz koraka »main« prešel na korak »appWillFinishLaunching«, ki ga je določila družba Apple.
 
@@ -7964,7 +8690,17 @@ Zbrana so naslednja polja:
 
 - **TotalTime** – skupni porabljeni čas
 
-- **UsesSharedRuntime** – označuje, ali aplikacija uporablja sharedRuntime ali ne.
+- **UsesSharedRuntime** – Označuje, ali aplikacija uporablja sharedRuntime ali ne.
+
+#### <a name="officeofficemobilefirstrunsetup"></a>Office.OfficeMobile.FirstRunSetup
+
+Ta dogodek signala obveščanja o izvajanju programa bo izzval prvi zagon aplikacije po namestitvi. Pomagal bo identificirati namestitve in samodejne nadgradnje iz starejših različic aplikacije, z njim pa bomo lahko identificirali napake v samodejnih nadgradnjah, vključno z nalaganjem knjižnice in napakami prenosov razširitve/jezikovnega paketa.
+
+Zbrana so sledeča polja:
+
+- **IsFlightAssigned** – Logična vrednost, ki določa, ali je bil uporabnik del kakršne koli vnaprej dodeljene preskusne skupine, ki lahko sproži izpostavljenost določenim izkušnjam.
+
+- **IsFRELoadSuccessful** – Celo število, ki omenja stanje rezultata.
 
 #### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
@@ -8908,7 +9644,7 @@ Ta dogodek ponazarja, da Microsoft Office Word odpira dokument s pomočjo aktiva
 
 Zbrana so sledeča polja:
 
-  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov
+  - **Data\_AddDocTelemRes** – Poroča, ali lahko pravilno dopolnimo druge vrednosti dogodka, povezane s telemetrijo dokumenta. Uporablja se za diagnostiko kakovosti podatkov.
 
   - **Data\_BytesAsynchronous –** število bajtov (stisnjenih), za katerega menimo, da lahko odpremo datoteko brez tega števila, če jih pridobimo, preden uporabnik želi začeti urejati dokument oz. ga morda shraniti
 
@@ -9482,9 +10218,11 @@ Zbrana so sledeča polja:
 
 - **incidentIdentifier** – Enolični ID za poročilo o zrušitvi, da bomo lahko našli ustrezno težavo.
 
-- **isAppKill** – pomaga nam ugotoviti, ali je bila aplikacija prisilno zaustavljena ali zaprta v napravi.
+- **isAppKill** – Pomaga nam ugotoviti, ali je bila aplikacija prisilno zaustavljena ali zaprta v napravi.
 
-- **reportKey** – enoličen ID za namestitev aplikacije iz naprave za namene preiskave.
+- **is_crashloop** – Pomaga nam razumeti, ali gre pri zrušitvi morda za zanko zrušitve.
+
+- **reportKey** – Enoličen ID za namestitev aplikacije iz naprave za namene preiskave.
 
 - **signal** – signal, ki je povzročil zrušitev, in vsebuje podrobnosti za preiskavo te zrušitve.
 
@@ -9645,9 +10383,11 @@ Zbrana so naslednja polja:
 
 - **IsDebug** – označuje sejo za odpravljanje napak
 
-- **IsPreload** – označuje, ali je dodatek vnaprej naložen v ozadju za izboljšanje učinkovitosti delovanja.
+- **IsPreload** – Označuje, ali je dodatek vnaprej naložen v ozadju za izboljšanje učinkovitosti delovanja.
 
-- **NumberOfAddinsActivated** – števec aktiviranih dodatkov
+- **IsWdagContainer** – Označuje, ali se je začel postopek aktivacije dodatka v vsebniku tehnologije Windows Defender Application Guard.
+
+- **NumberOfAddinsActivated** – Števec aktiviranih dodatkov
 
 - **RemoterType** – določa vrsto remoterja (zaupanja vreden, ni vreden zaupanja, Win32webView, zaupanja vreden UDF itd.), ki se uporablja za aktiviranje dodatka
 
@@ -9933,7 +10673,16 @@ Zbrana so sledeča polja:
 
 - **Exception** – nabor klicev za izjemo
 
-- **Event Name** – kategorija dogodka in oznaka dogodka predstavljata ime dogodka
+- **Event Name** – Kategorija dogodka in oznaka dogodka predstavljata ime dogodka
+
+#### <a name="onenotesafebootresetcrashcounteronappsuspend-officeonenoteandroidsafebootresetcrashcounteronappsuspend-officeandroidearlytelemetry-safebootresetcrashcounteronappsuspend"></a>OneNote.SafeBootResetCrashCounterOnAppSuspend, Office.OneNote.Android.SafeBootResetCrashCounterOnAppSuspend, Office.Android.EarlyTelemetry. SafeBootResetCrashCounterOnAppSuspend
+
+Kritični signal je poslan, ko ponastavljamo števec zrušitev za zaustavitev aplikacije, preden je prikazano pogovorno okno za varen zagon. Ta oznaka je zahtevana za spremljanje in diagnosticiranje ustreznosti stanja aplikacije. Pogovorno okno za varen zagon se prikaže takrat, ko se aplikacija večkrat zaporedoma zruši. Uporabnik ima tako možnost, da ponastavi aplikacijo. S to oznako bomo lahko ugotovili, ali pogovorno okno za varen zagon ni bilo prikazano uporabniku, čeprav so bili izpolnjeni pogoji za sproženje. 
+
+Zbrana so sledeča polja:
+
+- Nobeno
+
 
 #### <a name="telemetry_error"></a>telemetry_error
 
@@ -10671,7 +11420,7 @@ Zbira čas, zahtevan za zagon Outlooka. Čas zagona Outlooka je aktivno nadzorov
 
 Zbrana so naslednja polja:
 
-- **MacOLKBootPerfDuration** – skupni čas, porabljen za zagon.
+- **MacOLKBootPerfDuration** – Skupni čas, porabljen za zagon.
 
 - **MacOLKBootPerfID** – identifikator časa, ki je porabljen za zagon.
 
@@ -10722,11 +11471,19 @@ Zbrana so ta polja:
 
 Ta dogodek se sproži ob ustavi seje vaje. V kombinaciji s sistemom Office. PowerPoint. PPT. Android. RehearseView. StartSession bo to prvi pokazatelj morebitnih zrušitev ali napak, ki jih uporabnik srečuje.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
-- **ResumeRehearsingCount** – število uporabnikov, ki ste jih kliknili z navodili za vnovično uporabo
+- **CritiqueSummary** – Povzetek vseh kritik, ki so jih uporabniki videli s svojimi računi.
 
-- **PauseRehearsingCount** – število uporabnikov, ki so večkrat kliknili »pavza« vaje
+- **PauseRehearsingCount** – število uporabnikov, ki so večkrat kliknili »pavza« vaje.
+
+- **RehearsalInitTime** –Čas, potreben za inicializacijo vaje.
+
+- **ResumeRehearsingCount** – število uporabnikov, ki ste jih kliknili z navodili za vnovično uporabo.
+
+- **Sessionid** – To je ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+
+- **SlideshowViewLoadTime** – Čas, potreben za nalaganje diaprojekcije.
 
 
 #### <a name="officepowerpointpptandroidrehearseviewerrors"></a>Office.PowerPoint.PPT.Android.RehearseView.Errors
@@ -10744,9 +11501,13 @@ Zbrana so naslednja polja:
 
 Dogodek, sprožen ob nalaganju strani s povzetkom. Ta dogodek nam pomaga pri zajemu strani s povzetkom. Pove, koliko časa traja, da se stran s povzetkom vaj naloži na odjemalca. Če želite, da je funkcija izvedena, morate obdržati funkcijo. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
-- **SummaryPageLoadTime: int** – čas (v MS) za nalaganje strani s povzetkom. To vključuje čas ustvarjanja tovora 
+- **PageURL:string** – To je URL strani, ki ga lahko uporabimo za preverjanje, ali je bila seja uspešna ali pa je prišlo do napake.
+
+- **Sessionid:string** – To je ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+
+- **SummaryPageLoadTime: int** – Čas (v MS) za nalaganje strani s povzetkom. To vključuje čas ustvarjanja tovora 
 
 
 #### <a name="officepowerpointpptandroidrehearseviewstartsession"></a>Office.PowerPoint.PPT.Android.RehearseView.StartSession
@@ -10755,7 +11516,45 @@ Dogodek se sproži, ko uporabnik klikne začetno sejo. Ta dogodek nam pomaga pri
  
 Zbrana so naslednja polja:
 
- - Nobeno
+ - Brez
+
+#### <a name="officepowerpointrehearsalsessionmetrics"></a>Office.PowerPoint.Rehearsal.SessionMetrics 
+
+Dogodek, ki je sprožen, ko je seja govora ustavljena za inštrukcije za predstavitelja. S tem dogodkom lahko zajamemo nekatere metrične podatke za sejo vaje v inštrukcijah za predstavitelja. Uporabili ga bomo za vzdrževanje visoke kakovosti te funkcije.
+
+Zbrana so sledeča polja:
+
+- **AuthDurationInMs** – To je čas v milisekundah, potreben za preverjanje pristnosti (osvežite žeton za preverjanje pristnosti).
+
+- **AuthError** – To opisuje napako preverjanja pristnosti, do katere je prišlo (če je prišlo do nje).
+
+- **AvgFragmentLatencyInMs** – To je povprečen čas, ki ga sporočila govora potrebujejo za povratno pot v omrežju.
+
+- **ConnectDurationInMs** – To je čas v milisekundah, ki ga seja potrebuje za dokončanje povezave. 
+
+- **FirstAudioDelayInMs** – To je čas v milisekundah, potreben za prejem prve zvočne datoteke.
+
+- **InitMediaCaptureLayerDurationInMs** – To je čas v milisekundah, potreben za inicializacijo plasti predstavnosti/zajema zvoka.
+
+- **LocallyDroppedMessageCount** – To je skupno število sporočil, opuščenih lokalno.
+
+- **OpenFrontDoorConnectionDurationInMs** – To je čas v milisekundah, potreben za odpiranje povezave do storitve FrontDoor.
+
+- **SendAdaptationTextDurationInMs** – To je čas v milisekundah, ki je bil potreben za pošiljanje besedila adaptacije v storitev.
+
+- **ServiceDroppedMessageCount** – To je skupno število sporočil, ki jih je opustila storitev.
+
+- **Sessionid** – To je ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+
+- **SpeechClientResultEventsWithTimestamps** – To je polje kod napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
+
+- **SpeechHResultsWithTimestamps** – To je polje kod napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
+
+- **StartSpeechCaptureDurationInMs** – To je čas v milisekundah, potreben za začetek zajema govora.
+
+- **TotalMessageCount** – To je skupno število zvočnih sporočil, poslanih v storitev.
+
+- **WebSocketConnectDurationInMs** – To je čas v milisekundah, potreben za dokončanje povezave s spletno vtičnico.
 
 
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
@@ -11498,13 +12297,25 @@ Zbrana so sledeča polja:
 
 - **Data_ExceptionType** – izbirno polje z besedilom, ki predstavlja ime izjeme, ki jo poda izvorna koda.
 
-- **Data_MethodName** – besedilo, ki predstavlja ime načina v izvorni kodi, kjer je prišlo do napake.
+- **Data_MethodName** – Besedilo, ki predstavlja ime načina v izvorni kodi, kjer je prišlo do napake.
+
+#### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
+
+Ta dogodek zajame morebitne napake, do katerih je prišlo med dostopom do registra sistema Android. S podatki tega dogodka lahko razumemo napake uporabnika in ustvarimo bolj trpežno funkcijo registra.
+
+Zbrana so sledeča polja:
+
+- **App** – Postopek aplikacije, ki pošilja dogodek.
+
+- **AppVersionLong** – Različica aplikacije.
+
+- **Data_StackTrace** – Sled sklada napake.
 
 #### <a name="officeandroidearlytelemetrysharedlibraryloadersearchandloadlibraryerror"></a>Office.Android.EarlyTelemetry.SharedLibraryLoadersearchAndloadLibraryError 
 
 Ta dogodek beležimo v primeru napak pri nalaganju knjižnic v skupni rabi. Do napak pri nalaganju knjižnic lahko pride zaradi dveh vzrokov 1) nameščeni APK ni združljiv z napravo. 2) Knjižnica, ki jo skušamo naložiti, je morda poškodovana, zaradi napak pri ekstrahiranju, nastalih zaradi premalo prostora na disku ali premalo pomnilnika.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Data_ExceptionMessage** – Sporočilo izjeme, ki ga aktivira Android API Szstem.loadlibrary.
 
