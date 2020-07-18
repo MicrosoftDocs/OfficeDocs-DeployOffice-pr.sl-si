@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 6e5ea5a865acb893c92af12e68e7815fcf2fee65
-ms.sourcegitcommit: 5a4d3419d5ff4c8008ad3cf894a8f03ec170504b
+ms.openlocfilehash: 6638ac773e4b39f17648161421548f445d2194e7
+ms.sourcegitcommit: 0654f421d001168605f936dc54c9ee0a26fca844
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "45128582"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45156057"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -2767,7 +2767,7 @@ Zbrana so ta polja:
 
   - **Data.CollectionTime** – Časovni žig, kdaj je bil zabeležen dogodek zrušitve.
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubypath"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByPath
+#### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden s poti, navedene na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete napak uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke.
 
@@ -2879,7 +2879,7 @@ Zbrana so sledeča polja:
 
 - **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubyurl"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByUrl
+#### <a name="office_docs_appdocs_operationopenfrommrubyurl"></a>Office_Docs_AppDocs_OperationOpenFromMruByUrl
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden z URL-ja, navedenega na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke. 
 
@@ -2992,7 +2992,7 @@ Zbrana so sledeča polja:
 - **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfrompath"></a>Office_AppDocs_AppDocs_OperationOpenFromPath
+#### <a name="office_docs_appdocs_operationopenfrompath"></a>Office_Docs_AppDocs_OperationOpenFromPath
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke s poti, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
 
@@ -3104,7 +3104,7 @@ Zbrana so sledeča polja:
 
 - **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
 
-#### <a name="office_appdocs_appdocs_operationopenfromprotocolhandler"></a>Office_AppDocs_AppDocs_OperationOpenFromProtocolHandler
+#### <a name="office_docs_appdocs_operationopenfromprotocolhandler"></a>Office_Docs_AppDocs_OperationOpenFromProtocolHandler
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži postopek odpiranja datoteke v drugi aplikaciji, ki uporablja vmesnik programa za obravnavo protokola, uporabljen pa je za razumevanje in določanje prioritete uporabniških izkušenj na podlagi informacij o odpiranju datoteke.
 
@@ -3216,7 +3216,7 @@ Zbrana so sledeča polja:
 
 - **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
 
-#### <a name="office_appdocs_appdocs_operationopenfromshell"></a>Office_AppDocs_AppDocs_OperationOpenFromShell
+#### <a name="office_docs_appdocs_operationopenfromshell"></a>Office_Docs_AppDocs_OperationOpenFromShell
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke iz lupine, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
 
@@ -3329,7 +3329,7 @@ Zbrana so sledeča polja:
 - **Data_UnpackLinkPromptResult** – Oštevilčenje, ki predstavlja odgovor na poziv za povezavo za razpakiranje.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfromurl"></a>Office_AppDocs_AppDocs_OperationOpenFromUrl
+#### <a name="office_docs_appdocs_operationopenfromurl"></a>Office_Docs_AppDocs_OperationOpenFromUrl
 
 Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Dogodek zabeleži odpiranje datoteke z URL-ja, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke.
 
@@ -5227,7 +5227,7 @@ Zbrana so sledeča polja:
 
   - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
   - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
+  - **consumerCorrelationId** – Dvojnik Data.clientCorrelationId zgoraj 
 
 - **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
@@ -6882,7 +6882,7 @@ Zbrana so sledeča polja:
 
 - **Data.crossSessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-- **Data.currentTime** – Časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
+- **Data.currentTime** – časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
 
 - **Data.displayLanguage** – jezik prikaza sistema Office.
 
@@ -6999,7 +6999,7 @@ Zbrana so sledeča polja:
 
 - **Data.crossSessionStartTime** – časovni žig UTC, ko se je seja prevajanja začela.
 
-- **Data.currentTime** – časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
+- **Data.currentTime** – Časovni žig UTC, ko je bilo poslano to sporočilo telemetrije.
 
 - **Data.displayLanguage** – jezik prikaza sistema Office.
 
@@ -7819,7 +7819,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -8081,7 +8081,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -8192,7 +8192,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -8246,7 +8246,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -8294,7 +8294,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -9914,7 +9914,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
@@ -9954,7 +9954,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ScenarioId** – ID scenarija, ki ga je določil odjemalec storitve za upravljanje pravic
 
-- **RMS.SDKVersion** – različica odjemalca storitve za upravljanje pravic
+- **RMS.SDKVersion** – Različica odjemalca storitve za upravljanje pravic
 
 - **RMS.ServerType** – vrsta strežnika za upravljanje pravic do storitev 
 
