@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: 0190c29a017b35d945e6a1d540e1560dfab47a4c
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6769c7a0bf254b5a33f92c5410ec517b7d568d8e
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993162"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683200"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
@@ -37,7 +37,7 @@ Diagnostični podatki o uporabljeni programski opremi odjemalca za Office v rač
 
 ***Izbirni diagnostični podatki*** – dodatni podatki, ki omogočajo izboljšave izdelkov ter nudijo izčrpne informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
 
-Če se odločite, da nam boste poslali izbirne diagnostične podatke, nam boste prav tako poslali še zahtevane diagnostične podatke.
+Če se odločite, da nam boste poslali izbirne diagnostične podatke, nam boste prav tako poslali še zahtevane diagnostične podatke. Prav tako lahko pošljete datoteke diagnostičnega dnevnika za Office, ki vsebujejo informacije, zelo podobne izbirnim diagnostičnim podatkom. Če želite več informacij o teh dnevniških datotekah, si oglejte [Pregled datotek diagnostičnega dnevnika za Office](https://support.microsoft.com/office/fba86aac-70dc-4858-ae1f-ec2034346cdf).
 
 Med izbirne diagnostične podatke sodijo podatki, ki jih zberemo o oblikah, ki jih uporabniki vstavijo v Wordove dokumente. Na podlagi pridobljenih podatkov lahko nato ponudimo boljše možnosti. Zbiramo na primer tudi podatke o tem, koliko časa preteče, preden je na zaslonu prikazan PowerPointov diapozitiv. Na podlagi teh podatkov lahko izboljšamo izkušnjo, če deluje počasi.
 

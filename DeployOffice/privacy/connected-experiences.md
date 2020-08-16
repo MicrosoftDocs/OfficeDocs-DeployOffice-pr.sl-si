@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 8910b00d5201e70131eb1eb0e696d9ce048eabad
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: dec86a00fb6037976f29668534d59b4f99fb9093
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087157"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46682948"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -64,6 +64,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | *Smart Lookup*\*   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predlagani odgovori | [Kaj so predlagani odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
+|Prepis |[Prepis vaših posnetkov](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Pretvori v spletno stran   | [Preoblikujte Wordov dokument v Sway spletno stran](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevajalnik   | [Prevajanje besedila v drug jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
