@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
-ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
+ms.openlocfilehash: 1485ef7bdcfdf945ba2c9dd0e751cbe6b84dde5c
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "45117216"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683246"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -10426,6 +10426,140 @@ Ta dogodek se zabeleži ob selitvi lokalnega zvezka na pogon.  Ta primer je spec
 Zbrana so sledeča polja:
  
 - **ErrorMsg** – sporočilo o napaki, ki ustreza napaki.
+
+### <a name="onenotestorageconnectivitychanged"></a>OneNote.Storage.ConnectivityChanged
+
+Dnevnike dogodkov, če ima uporabnik internetno povezljivost ali ne. S tem se lahko poveže druge metrike učinkovitosti delovanja zdravja, tako da prezremo dogodke, do katerih pride, ko uporabnik nima internetne povezljivosti, saj ne pričakujemo, da bo zakasnitev vaše storitve sprejemljiva brez internetne povezljivosti. Na ta način lahko izračunate natančno število sej za naše meritve v različnih rezinah strank (na najemnika, na sektor). Prav tako lahko z njim filtrirate poročila o napakah, saj so na voljo številne napake pri sinhronizaciji, za katere pričakujemo, da bodo prišlo brez povezljivosti z omrežjem, vendar je to naloga.
+
+Če teh podatkov ne prejmemo, ne bomo imeli natančnega nadzora nad delovanjem naših izdelkov ali ugotovili, ali pričakujete, da bo prišlo do napak, ki jih je izkusil uporabnik.
+
+Zbrana so sledeča polja:
+
+- **InternetConnectivityNowAvailable** – če je stanje povezljivosti spremenjeno, tako da je zdaj Internet
+
+### <a name="onenotestoragelegacyinboundlatency"></a>OneNote.Storage.LegacyInboundLatency
+
+Kritični signal, ki se uporablja za spremljanje delovanja dohodnih postopkov sinhronizacije, ki neposredno komunicirajo s SharePointovim paketom, vključno s korelacijo podatkov, ki nam omogočajo nadzor in preiskovanje delovanja prenosa podatkov v našo storitev. Ta signal je namenjen le najslabšem izvajanju prenosa v zadnjih 300 sekundah (število sekund, ki jih je mogoče konfigurirati z Microsoftom, odvisno od zmogljivosti in stanja storitve).
+
+To se uporablja za zagotavljanje stanja storitev tako, da nam omogoči, da si ogledate, kateri najemniki doživljajo nesprejemljivo počasno dohodno podatkov za našo storitev, informacije o podatkih, ki jih prenašajo, ko so doživeli počasno dohodno in kako razširjena je v najemniku, ki je imel težave z zakasnitvijo. Uporablja se tudi za poročanje o stanju storitve in učinkovitosti delovanja v vseh naših strankah, s katerimi lahko izmerite trende v času in opozorite na težave, ki se samodejno uporabljajo za ublažitev strojništva. Če teh podatkov ne bomo imeli, nam prepreči, da bi zagotovili ustrezno učinkovitost prenosa, ko uporabnik sinhronizira spremembe iz SharePointa v svoj računalnik.
+
+Zbrana so sledeča polja: 
+
+- **IsEducationNotebook** – logična vrednost, ki označuje, ali je zvezek izobraževalni zvezek
+
+- **NotebookId** – ID zvezka, v katerem je ta prenos vključen
+
+- **TimeToConfirmSyncedWithServerInMs** – čas v milisekundah, v katerem je bilo izvedeno nalaganje
+
+### <a name="onenotestoragelegacyoutboundlatency"></a>OneNote.Storage.LegacyOutboundLatency
+
+Kritični signal, ki se uporablja za spremljanje delovanja dohodnih postopkov sinhronizacije, ki neposredno komunicirajo s SharePointovim paketom, vključno s korelacijo podatkov, ki nam omogočajo nadzor in preiskovanje delovanja prenosa podatkov v našo storitev. Ta signal je namenjen le najslabšem izvajanju prenosa v zadnjih 300 sekundah (število sekund, ki jih je mogoče konfigurirati z Microsoftom, odvisno od zmogljivosti in stanja storitve).
+
+To se uporablja za zagotavljanje stanja storitev tako, da nam omogoči, da si ogledate, kateri najemniki doživljajo nesprejemljivo počasno dohodno podatkov za našo storitev, informacije o podatkih, ki jih prenašajo, ko so doživeli počasno dohodno in kako razširjena je v najemniku, ki je imel težave z zakasnitvijo. Uporablja se tudi za poročanje o stanju storitve in učinkovitosti delovanja v vseh naših strankah, s katerimi lahko izmerite trende v času in opozorite na težave, ki se samodejno uporabljajo za ublažitev strojništva. Če teh podatkov ne bomo imeli, nam to prepreči, da bi zagotovili ustrezno učinkovitost delovanja, ko bodo uporabniki sinhronizirali spremembe v SharePointu. 
+
+Zbrana so sledeča polja: 
+
+- **IsEducationNotebook** – logična vrednost, ki označuje, ali je zvezek izobraževalni zvezek
+
+- **NotebookId** – ID zvezka, v katerem je ta prenos vključen
+
+- **TimeToConfirmSyncedWithServerInMs** – čas v milisekundah, v katerem je bilo izvedeno nalaganje
+
+### <a name="onenotestoragerealtimefiledataobjectdownload"></a>OneNote.Storage.RealTime.FileDataObjectDownload 
+
+Kritični signal, ki se uporablja za spremljanje učinkovitosti delovanja, ko uporabnik usmeri podatkovna datoteka (tj. vdelana datoteka ali slika), ki je prenesena neposredno iz naše storitve, in ne kot del operacije sinhroniziranja na strani, odseku ali zvezku. Ta signal je namenjen le najslabšem izvajanju prenosa v zadnjih 300 sekundah (število sekund, ki jih je mogoče konfigurirati z Microsoftom, odvisno od zmogljivosti in stanja storitve).
+
+To se uporablja za zagotavljanje stanja storitve in zmogljivosti, tako da si lahko ogledate, kateri najemniki so nesprejemljivo počasna prenos podatkov iz naših storitev, in kako razširjena je v najemniku, ki je težava z zakasnitvijo, ter poroča o našem delu v določenem časovnem obdobju in nam tako omogoči, da merimo trende učinkovitosti delovanja storitve. Če opazite nesprejemljivo zakasnitev za predmet datoteke, bomo te podatke uporabili tudi za to, da bodo lahko sodelovali z drugimi signali iz odjemalca in storitve glede predmeta, ki bodo izboljšali postopek prenosa. Podatke smo razdelili tudi na podlagi razširitve predmeta datoteke, saj imamo različna pričakovanja glede na to, ali je datoteka predstavljena v vrstici z našim platnom (npr. slika) ali pa je datoteka, ki ni v vrstici (kot je besedilni dokument). Če teh podatkov ne prejmemo, nam prepreči nadzor učinkovitosti teh prenosov.
+
+Zbrana so sledeča polja: 
+
+- **FileSizeInBytes** – velikost datoteke, ki jo prenesete v bajtih 
+
+- **IsImage** – logična vrednost, ki določa, ali je datoteka, ki jo prenesete, pripona, ki se ujema z vnaprej določenim seznamom pogostih oblik zapisa slike (.bmp, .emf, gif, .jpe, jpeg, jpg, png), ki je prikazana v vrstici v platnu
+
+- **TimeToDownload** – koliko časa je trajalo, da je FDO uspešno prenesla iz shrambe BLOB v napravo 
+
+### <a name="onenotestoragerealtimewebsocketdownload"></a>OneNote.Storage.RealTime.WebSocketDownload
+
+Kritični signal, ki se uporablja za spremljanje delovanja dohodnih sinhronizacijskih operacij, vključno s korelacijo podatkov, ki nam omogočajo nadzor in preiskovanje delovanja prenosa podatkov iz naših storitev (onenote.com). Ta signal je namenjen le najslabšem izvajanju prenosa v zadnjih 300 sekundah (število sekund, ki jih je mogoče konfigurirati z Microsoftom, odvisno od zmogljivosti in stanja storitve).
+
+To se uporablja za zagotavljanje stanja storitev tako, da nam omogoči, da si ogledate, kateri najemniki doživljajo nesprejemljivo počasno dohodno podatkov za našo storitev, informacije o podatkih, ki jih prenašajo, ko so doživeli počasno dohodno in kako razširjena je v najemniku, ki je imel težave z zakasnitvijo. Uporablja se tudi za poročanje o stanju storitve in učinkovitosti delovanja v vseh naših strankah, s katerimi lahko izmerite trende v času in opozorite na težave, ki se samodejno uporabljajo za ublažitev strojništva. 
+
+Če opazite nesprejemljivo zakasnitev za odsek ali zvezek, bomo te podatke uporabili tudi za to, da bodo lahko sodelovali z drugimi signali v odjemalcu in storitvi v zvezi z istim dokumentom, da bodo prepoznali regresivne zmogljivosti odjemalca, ki nam bodo omogočale Dostavitev bolj zmogljive storitve.
+
+Če teh podatkov ne prejmemo, ne bomo mogli nadzorovati učinkovitosti delovanja tega vidika naših storitev ali pa bo vpliv neželenih sprememb, ki so na voljo, morda zaradi uporabe ali drugih dejavnikov.
+
+Zbrana so sledeča polja:
+
+- **DeviceSessionId** – ID seje naprave
+
+- **IsEducationNotebook** – logična vrednost, ki označuje, ali je zvezek izobraževalni zvezek
+
+- **IsHierarchyResource** – logična vrednost, ki označuje, ali je vir hierarhični vir
+
+- **NotebookId** – ID zvezka, v katerem je ta prenos vključen
+
+- **ResourceId** – ID vira, ki ga nalagamo
+
+- **SectionId** – ID odseka, za katerega je ta prenos vključen
+
+- **ServerSessionId** – ID seje strežnika, ki je ta prenos del programa
+
+- **TimeToConfirmSyncedWithServerInMs** – čas v milisekundah med uporabnikom, ki se premikajo do strani, in sklad replikacije, ki potrjuje, da je stran sinhronizirana s strežnikom.
+
+- **TimeToFirstUpdateInMs** – čas v milisekundah med mehanizmom sinhronizacije, ki se začne z dohodno replikacijo strani, in s tem postopkom replikacije, ki je dosegel sinhronizacijo s stanjem strežnika.
+
+### <a name="onenotestoragerealtimewebsocketupload"></a>OneNote.Storage.RealTime.WebSocketUpload
+
+Kritični signal, ki se uporablja za spremljanje učinkovitosti delovanja odhodne sinhronizacije, vključno s korelacijo podatkov, ki nam omogočajo nadzor in preiskovanje delovanja prenosa podatkov v našo storitev (onenote.com)
+
+To se uporablja za zagotavljanje stanja storitev tako, da nam omogoči, da si ogledate, kateri najemniki doživljajo nesprejemljivo počasno dohodno podatkov za našo storitev, informacije o podatkih, ki jih prenašajo, ko so doživeli počasno dohodno in kako razširjena je v najemniku, ki je imel težave z zakasnitvijo. Uporablja se tudi za poročanje o stanju storitve in učinkovitosti delovanja v vseh naših strankah, s katerimi lahko izmerite trende v času in opozorite na težave, ki se samodejno uporabljajo za ublažitev strojništva. Te podatke bomo uporabili tudi za spremljanje vpliva in učinkovitosti izboljšav, ki jih naredimo našim strankam in storitvam. 
+
+Če opazite nesprejemljivo zakasnitev za odsek ali zvezek, bomo te podatke uporabili tudi za to, da bodo lahko sodelovali z drugimi signali v odjemalcu in storitvi v zvezi z istim dokumentom, da bodo prepoznali regresivne zmogljivosti, ki nam bodo omogočale zagotavljanje bolj zmogljive izkušnje.
+
+Če teh podatkov ne prejmemo, ne bomo mogli nadzorovati učinkovitosti delovanja tega vidika naših storitev ali pa bo vpliv neželenih sprememb, ki so na voljo, morda zaradi uporabe ali drugih dejavnikov.
+
+Zbrana so sledeča polja: 
+
+- **DeviceSessionId** – ID seje naprave
+
+- **IsEducationNotebook** – logična vrednost, ki označuje, ali je zvezek izobraževalni zvezek
+
+- **IsHierarchyResource** – logična vrednost, ki označuje, ali je vir hierarhični vir
+
+- **IsWorstTime** – logična vrednost, ki označuje, ali je čas rednega prenosa, ali najslabšega časa, ki smo ga videli v tem odjemalcu v zadnjih 300 sekundah (število sekund je mogoče konfigurirati z Microsoftom, odvisno od učinkovitosti delovanja in pogoja storitve).
+
+- **NotebookId** – ID zvezka, v katerem je ta prenos vključen
+
+- **RecommendedPutIntervalInMs** – čas, ko je storitev posredovana odjemalcu, kot je priporočeno obdobje »vstavi«
+
+- **ResourceId** – ID vira, ki ga nalagamo
+
+- **SectionId** – ID odseka, za katerega je ta prenos vključen
+
+- **SenderRequestId** – ID pošiljatelja, ki izvaja prenos
+
+- **ServerSessionId** – ID seje strežnika, ki je ta prenos del programa
+
+- **UploadNonSuspendedTimeInMs** – čas v milisekundah, v katerem je bilo izvedeno nalaganje, razen časa, ko je bila aplikacija prekinjena
+
+- **UploadTimeInMs** – čas v milisekundah, v katerem je bilo dejansko izvedeno nalaganje
+
+- **WaitTimeInMs** – čas v milisekundah med zahtevano nalaganje in prenosom, ki se začne
+
+- **WebUrl** – WebUrl prenosa (prijavljeno kot PiiWz)
+
+### <a name="onenotestoragesynchealth"></a>OneNote.Storage.SyncHealth
+
+Kritični signal, s katerim lahko spremljate napake in izjeme, ki so se zgodile znotraj sklada za sinhronizacijo v odjemalcu za OneNote, s katerim lahko nadzorujete in omilimo te nepričakovane pogoje.
+
+To se uporablja za zagotavljanje stanja storitev tako, da si lahko ogledate poročila o napakah odjemalcev, ki so na voljo v realnem času, kar nam omogoča odziv na težave pri sinhronizaciji, ko se pojavijo. Uporablja se tudi za določanje, kako razširjena je težava, in kako huda je navzkrižna referenca z oznako napake z odjemalčevo kodo, da prepoznate izvor napake. Te podatke združimo tudi tako, da dobimo informacije o učinkovitosti delovanja skozi čas ter vpliva in učinkovitosti izboljšav, ki jih naredimo našim strankam in storitvam. Če teh podatkov nimamo, ne bomo mogli proaktivno odgovoriti na pogoje napake v naši sinhronizacijski storitvi, ne da bi se med seboj stopnjevala stranka.
+
+Zbrana so sledeča polja: 
+
+- **Storitev** – storitev sinhronizacije, ki jo je stranka uporabljala, ko je prišlo do napake (podedovana ali sodobna sinhronizacija)
+
+- **Oznaka** – oznaka (prepoznavna vrednost), ki predstavlja napako, ki jo je stranka naletela med postopkom sinhronizacije.
 
 ### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
  
