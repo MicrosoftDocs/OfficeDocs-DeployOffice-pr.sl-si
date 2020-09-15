@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus), vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087717"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440585"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja
+
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus).
 
@@ -31,17 +34,6 @@ Od različice 1904 storitve Aplikacije ogrodja Microsoft 365 za podjetja dalje, 
 - ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesnika in nastavitve pravilnika.
-
-> [!IMPORTANT]
-> - Te spremembe veljajo za Access, Excel, OneNote, Outlook, PowerPoint, Publisher in Word.
-> - Te spremembe se nanašajo tudi na:
->   - Različico 16.28 ali novejšo naslednjih aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
->   - Različico 1904 ali novejšo za namizne različice Projecta in Visia, ki sta vključena v nekatere naročniške pakete, kot sta Project Plan 5 ali Visio Plan 2.
-> - Ti kontrolniki zasebnosti so vključeni v različico 1908 ali novejšo Polletnega kanala za podjetja (predogled) in Polletnega kanala za podjetja.
-> - Ti kontrolniki za varnost so na voljo za različico 2.30 in poznejše različice iOS za Excel, OneNote, PowerPoint in Word, kot tudi za različico 1.17 in poznejše različice Visio Viewer za iOS.
-> - Ti kontrolniki za varnost so na voljo za različico 16.0.12226.10000 in poznejše različice Androida za Excel, PowerPoint in Word, kot tudi za različico 16.0.12228.20004 in poznejše različice OneNote za Android.
-> - Večino aplikacij Office za splet nov kontrolnik zasebnosti uporabljajo za [izbirne povezane izkušnje](optional-connected-experiences.md).  Te aplikacije so: Excel za splet, OneNote za splet, PowerPoint za splet, Visio za splet in Word za splet. Lahko uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md), da konfigurirate ustrezno [nastavitev pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
-> - Nove in izboljšane kontrolnike zasebnosti bomo razširili dodatnim Officeovim odjemalcem, vključno z aplikacijo Teams in našimi mobilnimi aplikacijami. Več informacij o teh spremembah bomo razkrili v prihajajočih se mesecih. Še naprej bomo pozorno prisluhnili vašim povratnim informacijam in poskrbeli za izboljšave za vse odjemalce in storitve za Office 365 (in Microsoft 365).
 
 ## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Diagnostični podatki, ki so bili poslani iz aplikacij Microsoft 365 za podjetja v Microsoft
 
@@ -77,7 +69,7 @@ Ti diagnostični podatki ne vključujejo imen uporabnikov, njihovih e-poštnih n
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
-- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Povezane izkušnje za Aplikacije ogrodja Microsoft 365 za podjetja
 
@@ -113,7 +105,7 @@ To so izbirne povezane izkušnje, ki niso zajete v komercialno pogodbo organizac
 
 Ker te izbirne povezane izkušnje urejajo ločeni pogoji in določila, jih lahko upravljate ločeno od povezanih izkušenj, opredeljenih v tem članku. Kot skrbnik organizacije lahko z nastavitvijo pravilnika določite, ali so te izbirne povezane izkušnje vašim uporabnikom na voljo kot skupina. Če ne konfigurirate te nastavitve pravilnika, so te izbirne povezane izkušnje na voljo vašim uporabnikom.
 
-Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupino tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
+Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupino tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
 Če želite več informacij, preberite te članke:
 
@@ -122,30 +114,19 @@ Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim upo
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za aplikacije Office v spletu.](office-web-privacy-controls.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Zahtevani podatki storitev za povezane izkušnje
 
-Zahtevani podatki storitev so podatki, s katerimi lahko omogočamo povezane izkušnje v oblaku in izboljšamo varnost ter pričakovano delovanje teh izkušenj. Zahtevani podatki storitev vključujejo tri vrste informacij.
+Ko uporabljate povezano izkušnjo, se podatki pošljejo Microsoftu, ki jih obdela in vam zagotovi to povezano izkušnjo. Ti podatki so ključnega pomena, nam omogočajo zagotavljanje teh povezanih izkušenj v oblaku. Tem podatkom pravimo obvezni podatki storitve.
 
-- **Vsebina stranke** predstavlja vsebino, ki jo ustvarite v Officeu, na primer besedilo, ki ste ga vnesli v Wordov dokument.
-- **Funkcijski podatki** vključujejo informacije, ki jih zahteva povezana izkušnja za izvedbo opravila, kot so informacije o konfiguraciji aplikacije.
-- **Diagnostični podatki storitev** so podatki, zahtevani za zagotavljanje varnosti, posodobitev in pričakovanega delovanja storitve. Ker so ti podatki v glavnem povezani s povezano izkušnjo, tvorijo ločeno raven od zahtevanih oziroma izbirnih diagnostičnih podatkov.
-
-V nadaljevanju si oglejte vzorčni primer uporabe oblikovalnika za PowerPoint – povezano izkušnjo, ki jo lahko uporabite pri ustvarjanju diapozitivov za predstavitev. Tako boste bolje spoznali zahtevane podatke storitev. Oblikovalnik za PowerPoint izboljša vaše diapozitive tako, da samodejno ustvari ideje za načrt ideje, med katerimi lahko izbirate. Oblikovalnik med dodajanjem vsebine na diapozitiv deluje v ozadju in poišče ustrezno vsebino za strokovno oblikovano postavitev.
-
-Zahtevani podatki storitev, poslani Microsoftu, da vam omogoči to povezano izkušnjo, lahko vključujejo:
-
-- *Vsebino stranke*, kot so besedilo in slike, ki ste jih dodali v diapozitive.
-- *Funkcijske podatke*, na primer, kateri diapozitiv urejajte in postavitev diapozitiva.
-- *Diagnostične podatke storitev*, kot so dogodki, iz katerih je razvidno, ali je bila idejna zasnova pravilno uporabljena v vašem diapozitivu in ali so bili klici storitve izvedeni pravilno.
-
-Če se odločite, da uporabnikom ne boste omogočili kategorije povezanih izkušenj, ki vključujejo oblikovalnik za PowerPoint, bo ta funkcija izklopljena, mi pa ne bomo prejeli nobenih zahtevanih podatkov storitev.
+Obvezni podatki storitve lahko vključujejo informacije, povezane z delovanjem povezane izkušnje, ki so potrebne za ohranitev varnosti, ažurnosti in pričakovanega delovanja storitve. Če se odločite za uporabo povezane izkušnje, ki analizira vašo vsebino, na primer Prevajanje v Wordu, se besedilo, ki ste ga napisali v dokumentu in izbrali za prevajanje, tudi poslano in obdelano, da se vam zagotovi povezana izkušnja. Obvezni podatki storitve lahko vključujejo informacije, ki jih zahteva povezana izkušnja za izvedbo opravila, kot so informacije o konfiguraciji aplikacije Office.
 
 Če želite več informacij, preberite [Zahtevani podatki storitev za Office](required-service-data.md).
 
 ## <a name="essential-services-for-microsoft-365-apps-for-enterprise"></a>Povezane izkušnje za Aplikacije ogrodja Microsoft 365 za podjetja
 
-Obstaja tudi nabor osnovnih storitev za delovanje storitve Aplikacije ogrodja Microsoft 365 za podjetja, ki jih ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Aplikacij ogrodja Microsoft 365 za podjetja. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika.
+Obstaja tudi nabor osnovnih storitev za delovanje storitve Programi Microsoft 365 za podjetja, ki jih ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Aplikacij ogrodja Microsoft 365 za podjetja. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika.
 
 Če želite več informacij, preberite [Ključne storitve za Office](essential-services.md).
 

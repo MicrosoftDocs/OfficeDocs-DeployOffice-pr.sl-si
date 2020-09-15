@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus) z uporabo nastavitev pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087225"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440253"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja
+
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus).
 
@@ -46,6 +49,7 @@ Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [prav
 > - Če želite več informacij o upravljanju kontrolnikov zasebnosti za Office for Mac, preberite [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
 > - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom iOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md).
 > - Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom Android, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md).
+> - Če želite informacije o kontrolnikih zasebnosti za aplikacije Office v spletu, si oglejte [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za aplikacije Office v spletu](office-web-privacy-controls.md).
 
 
 Če uporabljate orodje za upravljanje pravilnika skupine, vse nastavitve pravilnika najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Office 2016\\Zasebnost\\Središče zaupanja.
@@ -77,7 +81,7 @@ Z nastavitvijo pravilnika *Konfiguracija ravni diagnostičnih podatkov o program
 - [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
-- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Nastavitve pravilnika za povezane izkušnje
 
@@ -120,21 +124,11 @@ Te povezane izkušnje so drugačne, saj niso zajete v komercialno pogodbo organi
 
 Z nastavitvijo pravilnika *Dovoli uporabo dodatnih povezanih izkušenj v Officeu* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te izbirne povezane izkušnje na voljo vašim uporabnikom.
 
-> [!NOTE]
-> Nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušanj v Officeu* lahko uporabite tudi za naslednje aplikacije Office za splet:
-> - Excel za splet
-> - OneNote za splet
-> - PowerPoint za splet
-> - Visio za splet
-> - Word za splet
->
-> Če želite konfigurirati to nastavitev pravilnika za te aplikacije Office za splet, uporabite [Officeovo storitev pravilnika v oblaku](../overview-office-cloud-policy-service.md).
-
-Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
+Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
 Nekatere od teh izbirnih povezanih izkušenj lahko uvrščamo tudi v povezane izkušnje, s katerimi lahko analizirate vsebino ali prenašate spletno vsebino. Vstavljanje spletnih slik je denimo izbirna povezana izkušnja, ki jo omogoča Microsoft Bing, obenem pa je tudi povezana izkušnja, s katero lahko prenašate spletno vsebino. Če torej onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino*, vstavljanje spletnih slik ne bo na voljo vašim uporabnikom. Prav tako ne bo na voljo, tudi če ste omogočili nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*. Če želite več informacij o tem, s katerimi povezanimi izkušnjami je mogoče analizirati vsebino ali prenašati spletno vsebino, preberite [Povezane izkušnje v Officeu](connected-experiences.md).
 
-Obstaja pa izjema, na katero morate biti pozorni. Z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* ni mogoče upravljati izkušenj, ki zahtevajo, da račun za LinkedIn povežete z Microsoftovim službenim ali šolskim računom. Če želite upravljati to vrsto izkušenj, kot so podatki o storitvi LinkedIn na [kartici profila](https://support.office.com/article/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) v Outlooku, si oglejte [Povezovanje računa za LinkedIn in Microsoftovega računa](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381) in [Soglasje za povezave računa za LinkedIn za organizacijo, ki uporablja Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Obstaja pa izjema, na katero morate biti pozorni. Z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* ni mogoče upravljati izkušenj, ki zahtevajo, da račun za LinkedIn povežete z Microsoftovim službenim ali šolskim računom. Če želite nadzorovati te vrste izkušenj (kot so informacije storitve LinkedIn na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) v Outlooku), glejte [LinkedIn v Microsoftovih aplikacijah in storitvah](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) in [Integracija povezav računa LinkedIn v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Nastavitev pravilnika za najpogostejše povezane izkušnje
 
@@ -181,7 +175,7 @@ Kot se verjetno že izvedeli, so na voljo nekatere obstoječe nastavitve praviln
 
 Na splošno velja, da če z eno nastavitvijo pravilnika vklopite določeno povezano izkušnjo, hkrati pa z drugo nastavitvijo pravilnika izklopite to vrsto povezane izkušnje, bo ta določena povezana izkušnja izklopljena za vaše uporabnike.
 
-## <a name="privacy-related-changes-to-the-office-ui"></a>Spremembe, povezane z zasebnosti v uporabniškem vmesniku za Office
+## <a name="privacy-related-changes-to-the-office-ui"></a>Spremembe, povezane z zasebnostjo, v uporabniškem vmesniku za Office
 
 Vaši uporabniki bodo morda opazili nekatere spremembe uporabniškega vmesnika v storitvi Aplikacije ogrodja Microsoft 365 za podjetja, povezane z zasebnostjo, in vas povprašali o njih. Te spremembe so neposreden učinek novih kontrolnikov zasebnosti in nastavitev pravilnika, ki so na voljo od različice 1904.
 
@@ -207,7 +201,7 @@ V nadaljevanju si oglejte elemente, ki smo jih dodali v uporabniški vmesnik za 
 
 - V meniju **Datoteka** > **Račun** je na voljo nova izbira za **Račun zasebnosti** > **Upravljanje nastavitev**. V razdelku **Upravljanje nastavitev** lahko uporabniki izklopijo izbirne povezne izkušnje, če ste jim omogočili to možnost.
 
-- V meniju **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja...** > **Možnosti zasebnosti** je na voljo možnost za omogočanje uporabe orodja [Pregledovalnik diagnostičnih podatkov](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855) v napravi.
+- V meniju **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja...** > **Možnosti zasebnosti** je na voljo možnost za omogočanje uporabe orodja [Pregledovalnik diagnostičnih podatkov](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) v napravi.
 
  
 ## <a name="control-privacy-settings-by-editing-the-registry"></a>Nadzor nastavitev zasebnosti z urejanjem registra

@@ -13,30 +13,23 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 81694daded27994d5026d923acd36302a79acc9f
-ms.sourcegitcommit: 5fc8194df704f79d340d9e8872a03ab2b0ebc62b
+ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "46815337"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440505"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
-> [!IMPORTANT]
-> Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
-> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
-> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
->
-> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
-Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ko določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika, povezane z varnostjo. Te podatke si lahko ogledate s pregledovalnikom diagnostičnih podatkov.
+Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ko določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika, povezane z varnostjo.
 
 Če želite več informacij, preberite članke:
 
 - [Zahtevani podatki storitev za Office](required-service-data.md)
-- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 - [Povezane izkušnje v Officeu](connected-experiences.md)
 
 Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
@@ -46,6 +39,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac](mac-privacy-preferences.md)
 - [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS](ios-privacy-preferences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
+- [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za aplikacije Office v spletu.](office-web-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Seznam osnovnih storitev za Office 
 
@@ -60,7 +54,7 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) je tehnologija, ki se uporablja za posodobitev Microsoftovih aplikacij, ustvarjenih za macOS, kot je Office. MAU bo zaznal potrebo po storitvi, izvedla prenos in namestitev posodobitev programov, vključno z varnostnimi posodobitvami.|
 |[Sinhronizacija programa OneNote](#onenote-sync-events)|OneNote za Mac podpira le zvezke, ki so shranjeni v internetu v OneDrive ali SharePoint Online. OneNote za Mac nenehno sinhronizira vse zapiske uporabnikov z OneDrive ali storitvijo SharePoint online. Tako lahko uporabniki odprejo, si ogledajo in urejajo svoje zvezke v vseh svojih napravah, tako da so njihovi zvezki vedno posodobljeni.
  [Konfiguracija storitev](#services-configuration-events)  | Konfiguracija storitev omogoča posodobitve konfiguracijskih nastavitev za Office za omogočanje oziroma onemogočanje odjemalskih funkcij. Storitev se aktivira vsakič, ko se zažene Officeova aplikacija, in zagotavlja podrobnosti o drugih konfiguracijah ter storitvah v Officeu. Storitve konfiguracije prav tako nadzorujejo, katere storitve so opredeljene kot osnovne storitve.  |
-| [Telemetrija](#telemetry-events)  | Storitev telemetrije se uporablja za zbiranje diagnostičnih podatkov iz Officeovih aplikacij. Omogoča zbiranje diagnostičnih podatkov, ki jih ustvarja Office (zahtevanih in izbirnih diagnostičnih podatkov). Storitev je prav tako odgovorna za zbiranje dela diagnostičnih podatkov storitve za zahtevano storitev za Office.  |
+| [Telemetrija](#telemetry-events)  | Storitev telemetrije se uporablja za zbiranje diagnostičnih podatkov iz Officeovih aplikacij. Omogoča zbiranje diagnostičnih podatkov, ki jih ustvarja Office (zahtevanih in izbirnih diagnostičnih podatkov). Storitev je prav tako odgovorna za zbiranje dela zahtevanih diagnostičnih podatkov za Office.  |
 
 ## <a name="events-and-data-fields-for-essential-services-for-office"></a>Dogodki in podatkovna polja za osnovne storitve za Office
 
@@ -70,9 +64,6 @@ V naslednjih razdelkih boste naleteli na:
 - Opis posameznih dogodkov
 - Seznam podatkovnih polj v posameznih dogodkih
 - Opis posameznih podatkovnih polj
-
-Te dogodke si lahko ogledate s pregledovalnikom diagnostičnih podatkov.
-
 
 
 ## <a name="authentication-events"></a>Dogodki preverjanja pristnosti
@@ -2550,15 +2541,15 @@ Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
 - **InstalledProductVersion –** različica programa za Office C2R, ki je že nameščena v različici» 16.0. xxxxx. llll «
 
-- **IsC2RServiceRunning –** zastavica tipa Boolean, ki označuje, ali je v napravi nameščeno lokalno strojno storitev C2R odjemalca.
+- **IsC2RServiceRunning –** znakovni niz tipa Boolean, ki označuje, ali je v napravi nameščeno lokalno strojno storitev C2R odjemalca.
 
-- **IsElevatedFlagSet –** zastavica tipa Boolean, ki označuje, ali je Bootstrapper že poskusil pridobiti skrbniško zvišanje
+- **IsElevatedFlagSet –** znakovni niz tipa Boolean, ki označuje, ali je Bootstrapper že poskusil pridobiti skrbniško zvišanje
 
-- **IsFireFlyInstalled –** zastavica tipa Boolean, ki označuje, ali je trenutno nameščen odjemalec sistema Office 2013 RTM C2R
+- **IsFireFlyInstalled –** znakovni niz tipa Boolean, ki označuje, ali je trenutno nameščen odjemalec sistema Office 2013 RTM C2R
 
-- **IsFireflyServiceRunning –** zastavica tipa Boolean, ki označuje, ali je storitev lokalnega računalnika odjemalca 2013 RTM C2R in deluje v napravi
+- **IsFireflyServiceRunning –** znakovni niz tipa Boolean, ki označuje, ali je storitev lokalnega računalnika odjemalca 2013 RTM C2R in deluje v napravi
 
-- **IsOfficeInstalled –** logična zastavica, ki označuje, ali je že nameščen sodobni Officeov odjemalec.
+- **IsOfficeInstalled –** znakovni niz tipa Boolean, ki označuje, ali je že nameščen sodobni Officeov odjemalec.
 
 - **OfficeCultures –** seznam Office kultur, ki jih je treba namestiti
 
@@ -3175,7 +3166,7 @@ Zbrana so naslednja polja:
 
 - **Tag** – pove nam, na kateri stopnji smo nehali iskati vezavo. Možna oznaka:
   - 0x03113809 – med preverjanjem kode PIN napaka ni interneta/storitve.
-   - 0x0311380a – napaka pri preverjanju PIN, poslano s poljem »PinValidationFailure«
+  - 0x0311380a – napaka pri preverjanju PIN, poslano s poljem »PinValidationFailure«
   - 0x0310410f – uspeh, poslano s poljem »uspeh«
   - 0x0311380d – vnovične napake (težave z internetom, neznane napake)
   - 0x0311380e – napake, ki se ne dajo ponoviti (ponudba za vezavo je potekla)
@@ -3476,7 +3467,7 @@ Zbrana so ta polja:
 
 - **AppVersionLong** – različica aplikacije
 
-- **Kanal** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -3516,7 +3507,7 @@ Zbrana so ta polja:
 
 - **AppVersionLong** – različica aplikacije
 
-- **Kanal** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -3674,13 +3665,13 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppID** – identifikator programa.
+- **AppID** – identifikator aplikacije.
 
 - **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppVersionLong** – različica aplikacije
 
-- **Kanal** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -4782,7 +4773,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev.  Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4823,7 +4814,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4864,7 +4855,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4905,7 +4896,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je določeno, da je bila posodobitev dokončana, vendar je Microsoft autoupdate našel težavo s posodobljeno aplikacijo in popravilom. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4945,7 +4936,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je prikazano, da je posodobitev že napredovala daemon in uporabnik je kliknil »v redu«, da prekinete prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4986,7 +4977,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je spodletela ena ali več posodobitev trenutnega paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5027,7 +5018,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5068,7 +5059,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5109,7 +5100,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil postopek prenosa posodobitev uspešno vzpostavljen, ko je bil zaustavljen. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -5150,7 +5141,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način samodejnega posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5191,7 +5182,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način ročne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5232,7 +5223,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil, da prekliče ali prezre določeno opozorilno sporočilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5273,7 +5264,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo za opozorilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5315,7 +5306,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo, ki je povezano z uvedbo dejanja namestitve programske opreme. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5356,7 +5347,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je zagnala možnost» prenos za posodobitve v oknu posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5397,7 +5388,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil vnovičen poskus sprožen na listu posodobitev zaradi napake v omrežju. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5438,7 +5429,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da poskusa ni bilo mogoče sprožiti na listu posodobitev zaradi napake omrežja. V tem dogodku je navedeno, da je uporabnik izvoljen za preklic posodobitev, potem ko je opozorilo, da omrežje ne bo na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5479,7 +5470,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem nenadoma izgubljena. Ta dogodek pomeni, da Server ni dosegljiv, ko poskuša prenesti paket posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5520,7 +5511,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki niso na voljo. Ta dogodek pomeni, da Microsoft autoupdate ne najde razpoložljivih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5561,7 +5552,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo o napaki, ki je povzročilo prazen seznam posodobitev. V tem primeru je navedeno, da Microsoft autoupdate prikazuje prazen list z posodobitvami. To se ne bi smelo zgoditi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5643,7 +5634,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik preklical, ko smo prikazali posodobitve na seznamu posodobitev lista. To uporabljamo celo zato, da razložimo razloge za to, da ne moremo posodobiti (tj. uporabnik bo preklical). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5684,7 +5675,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik izdal zahtevo za začasno ustavitev prenosa. To uporabljamo tudi zato, da bi razložili razloge za to, da posodobitve ne bodo dokončane. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5725,7 +5716,7 @@ Zbrana so sledeča polja:
 
 V tem dogodku je navedeno, da je agent za prenose opozoril na končno točko, ki bo preusmerila naslov URL-ja za zahtevo prenosa. To funkcijo uporabljamo tudi zato, da razložimo razloge za napake pri prenosu in diagnosticiranje težav z zastopstvom. Prav tako lahko pomaga pri diagnosticiranju razlogov, zakaj so uporabniki opazili, da bodo namestili starejše gradnje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5766,7 +5757,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5807,7 +5798,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5848,7 +5839,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov, ki jih poskuša pridobiti datoteke zavarovanja, in njihov rezultat (uspeh ali neuspeh). Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Napačno datoteko, ki jo pridobivate, lahko pomeni težavo z ustvarjanjem/zavarovanjem. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5928,7 +5919,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek je prišlo do napake pri prenosu. Datoteka, ki je ni prenesla, je zabeležena. Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5969,7 +5960,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da je bila datoteka uspešno prenesena. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -6010,7 +6001,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu. Datoteka manifesta ali paketa, ki ni uspela prenesti, in podrobnosti o napakah, so zabeležene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6051,7 +6042,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6092,7 +6083,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6133,7 +6124,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da je prišlo do nanašanja datoteke XML in paketa. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6174,7 +6165,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da je prišlo do zahteve za prenos datoteke. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -6215,7 +6206,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6256,7 +6247,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je spodletela varnostna veljavnost naših datotek. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6297,7 +6288,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik poskusil preveriti, ali so na voljo posodobitve, in odkrili smo, da MAU manjka osrednje komponente (Daemon). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6338,7 +6329,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da preverjanje podpisa kode ni uspelo za paket. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6379,7 +6370,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži povzeto seštevanje poskusov/napak, ki so jih prizadele med postopkom prenosa za datoteke manifesta in paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6461,7 +6452,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži posodobitev, ki je na voljo za prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6550,7 +6541,7 @@ Zbrana so ta polja:
 
 V tem dnevniku dogodkov je prišlo do napake pri prenosu datoteke paketa. Zabeležimo pot posodobitve in napako. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6597,7 +6588,7 @@ Zbrana so sledeča polja:
 
 Uspešen prenos datoteke paketa. Zabeležimo uporabljeno pot posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6673,7 +6664,7 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -6717,7 +6708,7 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -6766,7 +6757,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se v ozadju preverjajo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6807,7 +6798,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil postopek za ozadje preskočen zaradi odprtja MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7167,7 +7158,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek se odjavi pri zagonu daemona, medtem ko poskuša zagnati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7455,7 +7446,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se uporabnik odloča v tihih posodobitvah. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7495,7 +7486,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je preverjanje prisilnega posodabljanja preskočeno zaradi odprtih programov. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7536,7 +7527,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do poskusa uporabe prisilne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7577,7 +7568,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je MAU daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7618,7 +7609,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je MAU daemon našel razpoložljive posodobitve, ki so na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7659,7 +7650,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, da je proces Daemona Microsoft autoupdate postal aktiven za preverjanje, ali so na voljo posodobitve, ko ste spali za določeno časovno obdobje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7700,7 +7691,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov, če so bile vse aplikacije zaprte pred namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7741,7 +7732,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek se prijavi v poskus ponovne uvedbe programa po tihi posodobitvi in načinu posodabljanja (klon ali ne). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7786,7 +7777,7 @@ Zbrana so sledeča polja:
 
 Ko namestite posodobitev, se prijavite, ko ste zagnali aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7827,7 +7818,7 @@ Zbrana so sledeča polja:
 
 Ko se začne postopek posodabljanja, se prijavite, da je bila odprta aplikacija za posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7868,7 +7859,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, da je storitev Microsoft Autoupdate prejela dogodek družbe Apple o prekinitvi aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7923,7 +7914,7 @@ Zbrana so ta polja:
 
 - **AppVersionLong** – različica aplikacije
 
-- **Channel** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -7956,7 +7947,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži rezultat preverjanja sooblikovanja, ko uporabite posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7997,7 +7988,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je posodobitev prenesena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8038,7 +8029,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8087,7 +8078,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, da začenjamo prenos nabora posodobitev v ozadju (zabeležimo število posodobitev, ki so bile sočasno prenesene). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8128,7 +8119,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da smo sprožili poskus prenosa popravila neuspele posodobitve. Zabeležimo različico in posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8169,7 +8160,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Naenkrat bi morali le prenesti eno posodobitev za dani program. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8210,7 +8201,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je poskus namestitve posodobitve (različica) spodletel. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8251,7 +8242,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so vse posodobitve v paketu dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8292,7 +8283,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je bil uspešno nameščen posamezen posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8333,7 +8324,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je bil uspešno nameščena posamezna posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8469,7 +8460,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da posodobitev, ki je bila blokirana, ni več blokirana. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8510,7 +8501,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da bo posodobitev v čakalni vrsti za tihi namestitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8551,7 +8542,7 @@ Zbrana so sledeča polja:
 
 Ko je program, ki ima čakajočo posodobitev, končan, se prijavite. To pomeni čas, ko se lahko postopek dejanske namestitve izvede. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8599,7 +8590,7 @@ Zbrana so ta polja:
 
 - **AppVersionLong** – različica aplikacije
 
-- **Channel** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -8631,7 +8622,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je sproženo obvestilo o posodobitvi na voljo. Če želite, da se prikaže sporočilo o posodobitvi, morate zagotoviti, da pride do povratnega toka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8672,7 +8663,7 @@ Zbrana so sledeča polja:
 
 V tem dogodku je navedeno, da je uporabnik kliknil vsebino, ki je na voljo v obvestilu o posodobitvi, in Microsoft autoupdate GUI. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8713,7 +8704,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8754,7 +8745,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8892,7 +8883,7 @@ Zbrana so ta polja:
 
 - **AppVersionLong** – različica aplikacije
 
-- **Channel** – ugodnost za občinstvo
+- **Channel** – ugodnost za občinstva
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -9392,7 +9383,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek označuje začetek dejanskega postopka namestitve za posodobitev aplikacije. Ta dogodek je del posodobitvenega lijaka, ki se uporabi določitev ustreznosti stanja posodobitve.
  
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9480,7 +9471,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek zabeleži rezultat pregleda med aplikacijami, ki jih je treba namestiti, in ali bo poskus namestitve izveden glede na odpiranje aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9521,7 +9512,7 @@ Zbrana so sledeča polja:
 
 Datoteke paketa morate odstraniti po namestitvi. Ta dogodek zabeleži primere, v katerih jih ne moremo odstraniti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9562,7 +9553,7 @@ Zbrana so sledeča polja:
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni mogel pridobiti informacij o paketu za registrirano aplikacijo na dani poti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9603,7 +9594,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži primere, v katerih uporabnik preference vsebuje neveljaven vnos programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9644,7 +9635,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži primere, v katerih ID snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9685,7 +9676,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži primere, v katerih ime snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9777,7 +9768,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži stanje binarne funkcije za sonačrtovanje OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -9818,7 +9809,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži stanje stanja Microsoftovega daemona autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9859,7 +9850,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži stanje stanja Microsoftovega orodja za samodejno posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9900,7 +9891,7 @@ Zbrana so sledeča polja:
 
 V tem dogodku je navedeno, da je Microsoft autoupdate zaznal izdajo programa, ki je blokirana, vendar ni našla ustreznega namestitvenega programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9941,7 +9932,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, da je Microsoft autoupdate zaznal zagon programa za aplikacijo z čakajočo posodobitvijo. Zagnana aplikacija bo prekinjena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9982,7 +9973,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da preverjanje sooblikovanja ni uspelo za posodobitev programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10023,7 +10014,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se je preverjanje sooblikovanja začelo z posodobitvijo aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10064,7 +10055,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo o napaki pri preverjanju, ali je bila posodobitev programa posodobljena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10105,7 +10096,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov ne pride med uporabo tihih posodobitev in ali je bila to klonirana ali navadna namestitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10187,7 +10178,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil odstranjen klon. Odstranitev klona je izpolnjena, če je bil postopek namestitve postopka kloniranja končan ali ko se začne nov proces, v računalniku pa je na voljo starejša klonirana različica. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10228,7 +10219,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so prišlo do napak med postopkom vnovičnega popravka namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10269,7 +10260,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10310,7 +10301,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10352,7 +10343,7 @@ Zbrana so sledeča polja:
 
 V tem dnevniku dogodkov, ki jih vnovičen poskus ne deluje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10393,7 +10384,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži uspešno namestitev posodobitve po vnovičnem poskusu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10434,7 +10425,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, ali je nastavitev možnosti za vnovično odpiranje uporabniškega vmesnika» GUI «uspešna. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10573,7 +10564,7 @@ Zbrana so naslednja polja:
 
 V tem dogodku je navedeno, da je bil ukaz CLI (vmesnik odjemalca) izdan tako, da je uporabljal posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10614,7 +10605,7 @@ Zbrana so sledeča polja:
 
 V tem primeru je navedeno, da je modul vmesnika ukazne vrstice Microsoft Autoupdate prejel dogodek družbe Apple, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10655,7 +10646,7 @@ Zbrana so sledeča polja:
 
 V tem dogodku je navedeno, da je modul vmesnika ukazne vrstice za samodejno posodabljanje sistema Microsoft prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10696,7 +10687,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so bile posodobitve prenesene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10737,7 +10728,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži seznam posodobitev, ki niso bile uporabljene v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10778,7 +10769,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži seznam posodobitev, ki so bile dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10819,7 +10810,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10860,7 +10851,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek prijavi uporabnikov odgovor v pogovorno okno za vpis v tihe posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11227,7 +11218,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11263,7 +11254,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek označuje začetek vsiljene posodobitve, ki jo je iniciral uporabnik. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11383,7 +11374,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo odložil vsiljeno posodobitev. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11504,7 +11495,7 @@ Zbrana so naslednja polja:
 
 Ta dnevnik dogodkov vsakič, ko na podlagi zavarovanja manjka ključ manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11627,7 +11618,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -11671,7 +11662,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -11761,7 +11752,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek označuje začetek postopka posodobitve aplikacije. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11843,7 +11834,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -11889,7 +11880,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -11897,7 +11888,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek sporoča napako, do katere je prišlo med poskusom posodobitve registrirane aplikacije.  Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11939,7 +11930,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek označuje, da se je namestitev posodobitve dokončala in da Microsoft Auto Update (MAU) izvaja postopek čiščenja.  Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11975,7 +11966,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -11983,7 +11974,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek se uporablja za poročanje o začetku postopka namestitve posodobitve. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12019,7 +12010,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12029,7 +12020,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek sporoča stanje namestitvenega opravila. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12115,7 +12106,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek označuje, da v ozadju poteka posodobitev več aplikacij. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12233,7 +12224,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12279,7 +12270,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID** seje – identifikator za sejo
+- **ID seje** – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12328,7 +12319,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov poskuša registrirati aplikacijo in rezultat/razlog. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12369,7 +12360,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil naložen agent za zagon. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12449,7 +12440,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov se je prizadela, ko je dosegel dostop do programa CDN. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12529,7 +12520,7 @@ Zbrana so sledeča polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku ne bi mogli pridobiti datuma iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12610,7 +12601,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek sporoči napako, ki označuje, da ID aplikacije, pridobljen iz spletnega odziva, ni v pričakovani obliki zapisa. Ta dogodek se uporablja za preiskovanje sporočene napake.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12650,7 +12641,7 @@ Zbrana so sledeča polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12691,7 +12682,7 @@ Zbrana so sledeča polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12732,7 +12723,7 @@ Zbrana so sledeča polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. Tukaj se prijavite storitev, ki je obšla zaradi starega datuma posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12816,7 +12807,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov vsakič, ko začnete preverjanje delovanja posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -12857,7 +12848,7 @@ Zbrana so sledeča polja:
 
 S tem dogodkom združite stanje preveri, ali so na primer operacije za preverjanje posodabljanja (lij od iskanja do prenašanja). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12898,7 +12889,7 @@ Zbrana so sledeča polja:
 
 Ko se prikaže potrditveno polje preveri, ali so na voljo posodobitve, se prijavite vsakič, ko se prikaže. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12939,7 +12930,7 @@ Zbrana so sledeča polja:
 
 Ko preverite, ali so na voljo posodobitve, se prijavite vsakič, ko preverimo, ali je prišlo do nobenih posodobitev, ki jih ni bilo mogoče najti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12980,7 +12971,7 @@ Zbrana so sledeča polja:
 
 Ko preverimo, ali so na voljo posodobitve, se prijavite vsakič, ko se posodobitve ne ponudijo zaradi vseh programov, ki so že posodobljeni. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13021,7 +13012,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek sporoči napako med poskusom ugotavljanja, ali je posodobitev veljavna. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.  
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13063,7 +13054,7 @@ Zbrana so naslednja polja:
 
 Ko smo blokirali posodobitev, se prijavite vsakič, ko je prišlo do neizpolnjevanja zahtev za OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13145,7 +13136,7 @@ Zbrana so naslednja polja:
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni uspel naložiti informacij o paketu za ID aplikacije, ki je naveden v preneseni datoteki manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13186,7 +13177,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila za aplikacijo in osnovni načrt najdena posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13227,7 +13218,7 @@ Zbrana so sledeča polja:
 
 Prijavimo aplikacije, ki so nameščene/registrirane/pod nadzorom MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13307,7 +13298,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek sporoči napako med poskusom dodajanja aplikacije v zbirko. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13350,7 +13341,7 @@ Zbrana so naslednja polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi pomanjkanja zavarovanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13391,7 +13382,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi prestaranja različice osnovnega načrta. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13432,7 +13423,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke uporablja. Zabeležimo različico osnovne vrstice in AppId paketa. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13473,7 +13464,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13514,7 +13505,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13555,7 +13546,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko posodobitev zbirke ni na voljo zaradi velikosti zbirke, ki je večja od posameznih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13596,7 +13587,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko je na voljo posodobitev zbirke. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13637,7 +13628,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13678,7 +13669,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so posodobitve našli in čakajoče namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13808,7 +13799,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so bili najdeni tihi kandidati za posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13849,7 +13840,7 @@ Zbrana so sledeča polja:
 
 V tem dnevniku so na voljo interakcije med odjemalčevo kodo in funkcijami vrat, ki nadzorujejo, ali mora odjemalec omogočiti posodobitve za Delta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13890,7 +13881,7 @@ Zbrana so sledeča polja:
 
 Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13931,7 +13922,7 @@ Zbrana so sledeča polja:
 
 Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13972,7 +13963,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek prijavi zahteve MAU Service, odzivni čas in napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14013,7 +14004,7 @@ Zbrana so sledeča polja:
 
 Prijavimo zahteve za preverjanje veljavnosti» Force Update «pravil za uporabo, kar pomeni, da moramo sprejeti uporabnika iz gradnje N za izgradnjo N + 1 zaradi nekaj pomembnejših težav. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14093,7 +14084,7 @@ Zbrana so naslednja polja:
 
 Prijavimo zahteve in odgovore, prejete v storitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14568,7 +14559,7 @@ Zbrana so sledeča polja:
 
 ## <a name="services-configuration-events"></a>Dogodki za konfiguracijo storitev
 
-Konfiguracija storitev ne zbira nepotrebnih dogodkov diagnostičnih podatkov storitve.
+Konfiguracija storitev ne zbira potrebnih dogodkov podatkov storitve.
 
 ## <a name="telemetry-events"></a>Dogodki telemetrije
 
