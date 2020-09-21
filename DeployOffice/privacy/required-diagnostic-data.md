@@ -13,23 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 777c0bdb8651a046022e8078820870b67e99f2f7
-ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
+ms.openlocfilehash: 5772f8b3c105f56833a34f12f7d0e212fc4d55c5
+ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46683282"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47941008"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
-> [!IMPORTANT]
-> Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
-> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
-> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
->
-> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
@@ -42,7 +36,7 @@ Z obveznimi diagnostičnimi podatki prepoznate težave z Officeom, ki so morda p
 Če želite izvedeti več informacij o diagnostičnih podatkih, preberite te članke:
 
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
-- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
 
@@ -237,7 +231,7 @@ Ta kategorija vsebuje ta polja:
 
   - **CV** – Vrednost, ki določa odnos med dejavnostmi in poddejavnostmi. Omogoča, da lahko znova ustvarimo odnos med ugnezdenimi dejavnostmi.
 
-  - **Duration** – Trajanje izvajanja dejavnosti. Omogoča, da določimo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
+  - **Duration** – Trajanje izvajanja dejavnosti. Nam omogoča, da prepoznamo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
 
   - **Result**.**Code** – Koda, ki jo določa aplikacija, za prepoznavanje določenih rezultatov. Omogoča, da določimo podrobnosti napake, kot je koda napake, s katero lahko razvrstimo težave in jih odpravimo.
 
@@ -365,9 +359,9 @@ Ta kategorija vsebuje ta polja:
 
   - **RuleVersion** – Identifikator pravila, ki je ustvarilo podatke (če je te ustvarilo pravilo). Omogoča določitev vira dela podatkov, tako da lahko preverimo veljavnost parametrov dogodkov in jih upravljamo.
 
-  - **SampleRate** – Navedba odstotka uporabnikov, ki pošiljajo ta del podatkov. Opravimo lahko statistično analizo podatkov in pogostih podatkovnih točk, ki ne zahtevajo, da jih pošiljajo vsi uporabniki.
+  - **SampleRate** – navedbo, Kolikšen odstotek uporabnikov pošilja ta del podatkov. Na ta način lahko izvedemo statistične analize podatkov in za zelo pogosta podatkovna mesta ne zahtevajo, da jih pošljejo vsi uporabniki.
 
-  - **SchemaVersion** – Različica sheme, ki je uporabljena za ustvarjanje diagnostičnih podatkov. Zahtevano za upravljanje podatkov, ki jih pošlje odjemalec. Omogoča, da lahko sčasoma spremenimo vrsto podatkov, ki jih pošilja odjemalec.
+  - **SchemaVersion** – Različica sheme, ki je uporabljena za ustvarjanje diagnostičnih podatkov. Zahtevano za upravljanje podatkov, poslanih iz odjemalca. Omogoča, da lahko sčasoma spremenimo vrsto podatkov, ki jih pošilja odjemalec.
 
   - **Sequence** – Števec, ki določa vrstni red ustvarjenih dogodkov v odjemalcu. Omogoča razvrstitev prejetih podatkov tako, da lahko prepoznamo korake, ki so odjemalce morda privedli do določnih težav.
 
@@ -417,7 +411,7 @@ Ta kategorija vsebuje ta polja:
 
   - **SamplingMethod** – Način, uporabljen za določanje pravilnika vzorčenja. Omogoča razumevanje vrste podatkov, ki jih ustvarja seja.
 
-  - **Sequence** – Enolični številski identifikator seje. Omogoča razvrščanje sej za analizo časov pojava težav.
+  - **Sequence** – Enolični številski identifikator seje. Omogoča naročanje sej za analizo težav.
 
   - **Start** – Čas zagona seje postopka. Omogoča določitev časa začetka izvajanja seje.
 
@@ -450,7 +444,7 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve OneNote za Mac, iOS
 
 - **Activity_DetachedDurationInMicroseconds** – čas, ko je dejavnost nedejavna in ne izvaja nobenega dejanskega dela, vendar se čas še vedno sešteva za pridobitev skupnega časa dejavnosti.
 
-- **Activity_DurationInMicroseconds** – trajanje izvajanja dejavnosti. Omogoča, da določimo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
+- **Activity_DurationInMicroseconds** – trajanje izvajanja dejavnosti. Nam omogoča, da prepoznamo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
 
 - **Activity_Expiration** – datum v številski obliki označuje, kdaj bo prišlo do ustavitve pošiljanja tega dogodka iz odjemalcev.
 
@@ -731,9 +725,9 @@ Zbrana so ta polja:
 
 - **abFlights** – »NoNL:NoFlights«, ko pilotne različice funkcij niso nastavljene. V nasprotnem primeru je izbrana možnost »holdoutinfo=unknown«.
 
-- **AppSessionGuid** – Identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz 4 delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100ns.
+- **AppSessionGuid** – Identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz 4 delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100ns
 
-- **appVersionBuild** – Številka različice graditve aplikacije.
+- **appVersionBuild** – številka različice za gradnjo aplikacije
 
 - **appVersionMajor** – Številka glavne različice aplikacije.
 
@@ -784,13 +778,14 @@ Kritični signal, ki se uporablja, da lahko novi uporabniki prvič uspešno zaž
 #### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
 
 Kritični signal, ki se uporablja, da lahko novi uporabniki (Microsoftov račun) prvič uspešno zaženejo in začnejo uporabljati OneNote.
-Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
+
+Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
 Zbrana so sledeča polja:
 
 - **Poskus** – kolikokrat je treba izvesti uporabniško izkušnjo prvega zagona.
 
-- **Napaka A** – predmet napake označuje napako med napako med prvim zagonom, če pride do nje.
+- **Napaka** – A predmet napake OneNote označuje napako med prvim zagonom, če pride do nje.
 
 - **FAllowAddingGuide** – označuje, ali bo OneNote omogočil ustvarjanje zvezka za vodenje ali ne.
 
@@ -810,7 +805,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
 
-Kritični signal, ki se uporablja, da lahko novi poslovni uporabniki(AAD/OrgID) prvič uspešno zaženejo in začnejo uporabljati OneNote.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
+Kritični signal, ki se uporablja, da lahko novi poslovni uporabniki(AAD/OrgID) prvič uspešno zaženejo in začnejo uporabljati OneNote.  Telemetrija, uporabljena za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
 - **Poskus** – kolikokrat je treba izvesti uporabniško izkušnjo prvega zagona.
 
@@ -840,7 +835,7 @@ Zbrana so naslednja polja:
 
 Spremlja prenos paketa za Dynamic Canvas. Obravnavamo ga kot konfiguracijo programske opreme, ker mora biti paket uspešno prenesen, da odjemalec lahko uporablja ustrezno izkušnjo. Še posebej je pomemben pri naročninah za potrošnike, kjer prek platna komuniciramo z uporabnikom, ki mu je potekla licenca. Z njim spremljamo metapodatke paketa dinamične vsebine, prenesene z izdelkom in shranjene v predpomnilnik, ter rezultatov izvedenih postopkov za paket: napake pri prenosu, napake pri razpakiranju, napake pri preverjanju doslednosti, zadetki v predpomnilniku, uporabe paketa, uspešni prenosi.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
   - **Data\_CacheFolderNotCreated** – Logična zastavica, ki označuje, ali je bila mapa predpomnilnika uspešno ustvarjena.
 
@@ -1024,7 +1019,7 @@ Zbrana so ta polja:
 
 #### <a name="officeextensibilitycatalogexchangegetlastupdate"></a>Office.Extensibility.Catalog.ExchangeGetLastUpdate
 
-Podatki o uspešnem oz. neuspešnem pridobivanju posodobljenih podatkov o dodatkih, ki so bili dodeljeni najemniku storitve Office 365. Z njim ustvarjamo metrike ustreznosti stanja, grafikone in analize težav uporabnikov. »ExchangeGetLastUpdate« se vedno začne izvajati ob zagonu kot del kode gostitelja in določa, ali so bile dodelitve dodatkov spremenjene za uporabnika.  V tem primeru je naložen »osf.DLL«, tako da lahko prikličemo »ExchangeGetEntitlements« in pridobimo določene dodelitve (»ExchangeGetManifests« je priklican za pridobivanje morebitnega novega potrebnega manifesta).  Na zahtevo lahko prikličemo tudi »ExchangeGetEntitlements« (in »ExchangeGetManifests«), ko je zagnana gostiteljska aplikacija.  Veliki DLL se ne naloži, če ga ne potrebujemo.  Brez tega dogodka v polju »Required« ni mogoče prepoznati, da uporabniki niso uspešno pridobili njim dodeljenih dodatkov, če je bil prvi klic storitve neuspešen.  To je tudi glavni pokazatelj morebitnih težav s preverjanjem pristnosti med povezovanjem s storitvijo.
+Podatki o uspešnem oz. neuspešnem pridobivanju posodobljenih podatkov o dodatkih, ki so bili dodeljeni najemniku storitve Office 365. Z njim ustvarjamo metrike ustreznosti stanja, grafikone in analize težav uporabnikov. »ExchangeGetLastUpdate« se vedno začne izvajati ob zagonu kot del kode gostitelja in določa, ali so bile dodelitve dodatkov spremenjene za uporabnika. Če je tako, potem Weldgen. Datoteka DLL bo naložena, tako da lahko pokličemo ExchangeGetEntitlements, da dobimo določene dodelitve (in ExchangeGetManifests bodo pozvani, da pridobijo nove manifeste, ki so potrebni).  Na zahtevo lahko prikličemo tudi »ExchangeGetEntitlements« (in »ExchangeGetManifests«), ko je zagnana gostiteljska aplikacija.  Veliki DLL se ne naloži, če ga ne potrebujemo.  Brez tega dogodka v polju »Required« ni mogoče prepoznati, da uporabniki niso uspešno pridobili njim dodeljenih dodatkov, če je bil prvi klic storitve neuspešen.  To je tudi glavni pokazatelj morebitnih težav s preverjanjem pristnosti med povezovanjem s storitvijo.
 
 Zbrana so sledeča polja:
 
@@ -1076,7 +1071,7 @@ Zbrana so sledeča polja:
 
   - **MSDiagnostics** – Vrednost, ki jo vrne Exchange.
 
-  - **MsoHttpResult** – Vrednost popisovalnika, ki jo vrne API za http.
+  - **MsoHttpResult –** je vrnjena vrednost enumeriranega vmesnika http API
 
   - **NeedRefresh** – To je polje z vrednostjo »true« ali »false«, ki označuje, ali so podatki dodatka zastareli in jih je treba posodobiti.
 
@@ -1106,9 +1101,9 @@ Zbrana so ta polja:
 
   - **ManifestsRequested** – Število potrebnih manifestov.
 
-  - **ManifestsReturned** – Število manifestov, ki jih je vrnil strežnik.
+  - **ManifestsReturned** – število manifestov, vrnjenih iz strežnika
 
-  - **ManifestsToRetrieve** – Število manifestov, ki jih je treba pridobiti iz strežnika.
+  - **ManifestsToRetrieve** – število manifestov, ki jih je treba dobiti iz strežnika
 
   - **ReturnedManifestsParsed** – Število manifestov, ki jih je vrnil strežnik in so bili uspešno razčlenjeni.
 
@@ -1300,7 +1295,7 @@ Zbrana so naslednja polja:
 
 #### <a name="office_appguard_launchfile"></a>Office_AppGuard_LaunchFile
 
-Ta dogodek označuje rezultat zagona datoteke za zagon tehnologije Application Guard. Določili bomo lahko odstotek sej, pri katerih je bila uspešno zagnana Wordova, Excelova ali PowerPointa datoteka in kode napak za neuspele poizkuse.
+V tem primeru se prikaže rezultat izvršitve datoteke programa Guard. Določili bomo lahko odstotek sej, pri katerih je bila uspešno zagnana Wordova, Excelova ali PowerPointa datoteka in kode napak za neuspele poizkuse.
 
 Zbrana so sledeča polja:
 
@@ -1856,7 +1851,7 @@ Zbrana so sledeča polja:
 
 #### <a name="drag_and_drop"></a>drag_and_drop
 
-S tem dogodkom lahko zaznamo, ali je bilo dejanje vlečenja in spuščanja uspešno.  Z njim poskrbimo, da izkušnja vlečenja in spuščanja pravilno deluje v vseh aplikacijah, tako kot dogodek vlečenja v Outlook kot tudi dogodek vlečenja, s katerim uporabnik vsebino odvleče iz Outlooka.  S temi podatki lahko poskrbimo, da celotna izkušnja v drugih aplikacijah deluje v skladu s pričakovanji.
+V tem primeru lahko zaznamo, ali je bilo dejanje »povleci in spusti« uspešno ali ne.  Z njim poskrbimo, da izkušnja vlečenja in spuščanja pravilno deluje v vseh aplikacijah, tako kot dogodek vlečenja v Outlook kot tudi dogodek vlečenja, s katerim uporabnik vsebino odvleče iz Outlooka.  S temi podatki lahko poskrbimo, da celotna izkušnja v drugih aplikacijah deluje v skladu s pričakovanji.
 
 Zbrana so sledeča polja: 
 
@@ -2498,7 +2493,7 @@ Zbrana so naslednja polja:
 
 - **time_taken_to_load_link** – čas, zahtevan za dokončanje nalaganja povezave.
 
-- **time_taken_to_tap_attachment** – čas med odpiranjem sporočila in klikom priloge.
+- **time_taken_to_tap_attachment** – čas med odpiranjem sporočila in klikom na Priloge
 
 - **time_taken_to_tap_link** – čas, ki ga je uporabnik porabil za ogled sporočila in klik povezave.
 
@@ -2656,7 +2651,17 @@ Zbrana so sledeča polja:
 
 - **Data_SilhouetteDuration** – Trajanje upodabljanja za odpiranje datoteke.
 
-- **Data_TimeSplitMeasurements** – vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije, časovnim žigom začetka in trajanjem. 
+- **Data_TimeSplitMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije, časovnim žigom začetka in trajanjem. 
+
+#### <a name="officeandroiddocsuipaywallcontrolskuchoosertoggled"></a>Office.Android.DocsUI.PaywallControl.SkuChooserToggled
+
+Telemetrijo uporabe če si želite ogledati, kolikokrat uporabnik preklaplja med različnimi inventarnimi enotami, preden poskusite kupiti nakup. Uporablja se za razumevanje uporabe izbirnika INVENTARja in optimiziranje možnosti nakupa aplikacije v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **EventDate** – časovni žig ponovitve dogodka 
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
 
 #### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
 
@@ -4206,7 +4211,6 @@ Ta dogodek se zbere ob prikazu vira uporabniku. S tem dogodkom se preveri, ali j
 - **hostAppRing** – število uporabnikov, katerim je bila posredovana aplikacija.
 
 - **properties** – vsebuje dodatne lastnosti metapodatkov, ki so zbrani za vsak dogodek. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
-  - **ClientTimeStamp** – časovni žig, ko je odjemalec zabeležil dogodek.
 
 - **publicEventName** – javno ime dogodka.  
 
@@ -5090,6 +5094,57 @@ Zbrana so naslednja polja:
 
 - **Data_FirstRunPanelName** – ime podokna, iz katerega je bila zagnana uporabniška izkušnja
 
+#### <a name="officeiospaywallpaywallpresented"></a>Office.iOS.Paywall.Paywall.Presented
+
+Ta telemetrijo kritične uporabe je zbrana, ko je uporabniku prikazan nadzor paywall, ki se uporablja za razumevanje nakupne izkušnje v aplikaciji za uporabnika in optimiziranje enakega stanja za prihodnje različice.
+
+Zbrana so sledeča polja:
+
+- **Točka vnosa** -string – gumb/tok, iz katerega je bil prikazan paywall. Npr. gumb »premija za nadgradnjo« ali »prvi zagonski tok«.
+
+- **isFRE** -logična vrednost – ali prikazujemo prvo izkušnjo z zagonom ali navadni uporabniški vmesnik?
+
+#### <a name="officeiospaywallpaywallstats"></a>Office.iOS.Paywall.Paywall.Stats
+
+Ta metapodatki na osnovi seje se zberejo, ko je uporabnik uporabniškega vmesnika za paywall prikazan uporabniku, trajanju interakcije in o tem, ali je bil nakup izveden in je uspel ali ni uspel.  Podatki so uporabljeni za razumevanje uporabe in stanja celotne izkušnje z vplačilom ter debug, optimiziranje in odpravljanje težav z nakupno izkušnjo v aplikaciji v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **Točka vnosa** -string – gumb/tok, iz katerega je bil prikazan paywall. Npr. gumb »premijska nadgradnja« ali »prvi zagonski tok«.
+
+- **isFRE** -logična vrednost – ali prikazujemo prvo izkušnjo z zagonom ali navadni uporabniški vmesnik?
+
+- **stanje** nizov – izstop stanja paywall. Kot» zagnano «,» paymentDone «,» provisionFailed «
+
+- **userDuration** – dvojno trajanje v milisekundah, ki jih je uporabnik porabil za paywall
+
+#### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
+
+V tem primeru so zbrane funkcije in aplikacije, ki jih uporabnik razširi iz» Oglejte si več prednosti «, in trajanje porabljenega časa.  Podatki so uporabljeni za razumevanje funkcije» Oglejte si vse prednosti «in še naprej Optimizirajte izkušnjo v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **appsExpanded** -niz, ločen z vejico, seznam storitev/aplikacij, za katere je bila razširjena ugodnost.
+
+- **ID shrambe, ki je na voljo v** nizu, za katerega uporabnik prikazuje več prednosti, ki jih ponuja
+
+- **userDuration** – dvojno trajanje v milisekundah, ki jih je uporabnik porabil za zaslon z ugodnostmi.
+
+#### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
+
+Ta telemetrijo uporabe je zbrana, da si ogledate, kako je uporabnik vstopil v izbirnik INVENTARne številke, koliko časa porabi uporabnik na zaslonu izbirnika INVENTARne številke in zakaj so izstopili izbirnika INVENTARne številke.  Podatki so uporabljeni za razumevanje uporabe izbirnika INVENTARja in optimiziranje nakupa izkušenj v aplikacijah v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **Točka vnosa** -string – gumb/tok, iz katerega je bil prikazan paywall. Npr. gumb »premijska nadgradnja« ali »prvi zagonski tok«.
+
+- **exitReason** -string – izstop zaradi izbirnika INVENTARne številke. Kot» BuyButton «,» CloseButton
+
+- **isFRE** -logična vrednost – ali prikazujemo prvo izkušnjo z zagonom ali navadni uporabniški vmesnik?
+
+- **userDuration** – dvojno trajanje v milisekundah, ki jih je uporabnik porabil za izbirnik INVENTARne številke
+
+
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
 
 Dejavnosti beležimo, ko uporabnik zažene aplikacijo za nalaganje kartice osebe in želi odpreti kartico osebe v živo.  S temi podatki določimo, ali je bila kartica naložena pravilno. 
@@ -5541,7 +5596,7 @@ Zbrana so naslednja polja:
 
 #### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
 
-Dogodek je zbran za Officeovo aplikacijo za Android. Zabeleži, ko pride do dogodka odpiranja, zapiranja ali shranjevanja dokumenta PDF, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o delu z datotekami PDF. S tem dogodkom poskrbimo, da postopki odpiranja, zapiranja ain shranjevanja dokumentov PDF delujejo v skladu s pričakovanji, hkrati pa lahko izboljšujemo učinkovitost dela z datotekami PDF.
+Dogodek je zbran za Officeovo aplikacijo za Android. Zabeleži, ko pride do dogodka odpiranja, zapiranja ali shranjevanja dokumenta .pdf, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o delu z datotekami .pdf. S tem dogodkom poskrbimo, da postopki odpiranja, zapiranja in shranjevanja dokumentov .pdf delujejo v skladu s pričakovanji, hkrati pa lahko izboljšujemo učinkovitost dela z datotekami .pdf.
 
 Zbrana so sledeča polja:
 
@@ -5584,8 +5639,6 @@ Zbrana so sledeča polja:
 Dogodek se zbira za aplikacijo Office za iOS. Zabeleži, ko pride do dogodka odpiranja, zapiranja ali shranjevanja dokumenta .pdf, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o delu z datotekami .pdf. S tem dogodkom poskrbimo, da postopki odpiranja, zapiranja in shranjevanja dokumentov .pdf delujejo v skladu s pričakovanji, hkrati pa lahko izboljšujemo učinkovitost dela z datotekami .pdf. 
 
 - **Data_Doc_FileOpSessionID** – enolični ID za sejo dokumenta 
-
-- **Data_Doc_URLHash** – GUID za URL datoteke 
 
 - **Data_ErrorCode** – napaka, do katere pride zaradi neuspelih postopkov odpiranja datotek/neuspelih prenosov/preklica prenosov 
 
@@ -8139,7 +8192,7 @@ Zbrana so sledeča polja:
 
 #### <a name="settings_action"></a>settings_action
 
-Omogoča nam, da odkrijemo primere morebitnega negativnega učinka na vašo zmožnost konfiguracije nastavitev aplikacije, na primer nastavitve obvestil, vaš primarni e-poštni račun in konfiguriranje vašega e-poštnega podpisa.
+Ta dogodek zbere informacije o konfiguraciji v nastavitvah. Podatki nam omogočajo, da zaznamo primere, kjer je možno negativno vplivanje na sposobnost uporabnikov, Konfigurirajte nastavitve aplikacije, na primer nastavitve obvestil, primarni poštni račun in konfiguracijo e-poštnega podpisa.
 
 Zbrana so sledeča polja: 
 
@@ -8149,49 +8202,44 @@ Zbrana so sledeča polja:
 
 - **auth_type** – vrsta preverjanja pristnosti, ki ga uporablja račun, za razumevanje uporabljene plasti sinhronizacije v zaledju pri diagnosticiranju težav. 
 
-- **auth_type** – ponazarja vrsto preverjanja pristnosti v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto računa.
-
-- **badge_count_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd. 
-
 - **changed_folder** – ponazarja, ali je bila spremenjena mapa, in nam pomaga diagnosticirati težave. 
-
-- **changed_folder** – določa, ali je bilo to dejanje arhivirano, načrtovano oz. je bilo izvedeno drugo dejanje.
 
 - **delete_scope** – ali je bil med brisanjem računa račun izbrisan iz te naprave ali iz vseh naprav v Outlooku.  
 
-- **delete_scope** – spremlja, ali je bilo to dejanje povezano z brisanjem samo v tej napravi ali v vseh napravah (če je to ustrezno). 
-
 - **enabled_state** – ali so pravilno konfigurirane nastavitve za samodejne odgovore, shranjevanje stikov in blokiranje zunanjih slik.  
 
-- **enabled_state** – ali je omogočeno stanje, povezano z dejanjem.
+- **notification_action** – če želite preveriti, ali ste konfigurirali kakšno dejanje obvestila za Triaging e-poštna sporočila, ki nam bodo v pomoč pri zagotavljanju, da ta nastavitev deluje uspešno 
 
-- **in_app_language** – izbrani jezik v aplikaciji, vrsta niza (privzeto, en-US, FA, ru ipd.)  
+- **notification_action_number** – če želite preveriti, ali so dejanja obvestila (dejanje ena ali dejanje dve) pravilno konfigurirana
 
-- **notification_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd.
+- **server_type** – podobno kot dogodek auth_type, nam pove, katero vrsto računa imate, in nam pomaga pri boljšem diagnosticiranju težav.  Primeri: Office365, Gmail, Outlook
 
-- **server_type** – podobno kot dogodek auth_type, nam pove, katero vrsto računa imate, in nam pomaga pri boljšem diagnosticiranju težav. Primeri** – Office365, Gmail, Outlook
-
-- **server_type** – ponazarja vrsto strežnika v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto strežnika.
-
-- **setting_properties** – spremlja lastnosti, povezane z dejanjem nastavitve. 
-
-- **signature_setting** – ponazarja, ali je bila nastavitev uporabljena za vse račune ali samo za posamezni račun.
-
-- **source** – ponazarja vir obvestil nastavitev, če je to ustrezno, ali za nastavitev »Ne motite«.
+- **setting_properties** – sledi lastnosti glede na to, kaj je opisano spodaj: 
+   - **alternate_app_icon_setting** – izbrana ikona nadomestnega programa (svetlo, temno)
+   - **auth_type** – ponazarja vrsto preverjanja pristnosti v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto računa.
+   - **badge_count_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd. 
+   - **changed_folder** – določa, ali je bilo to dejanje arhivirano, načrtovano oz. je bilo izvedeno drugo dejanje.
+   - **delete_scope** – spremlja, ali je bilo to dejanje povezano z brisanjem samo v tej napravi ali v vseh napravah (če je to ustrezno). 
+  - **enabled_state** – ali je omogočeno stanje, povezano z dejanjem.
+  - **in_app_language** – izbrani jezik v aplikaciji, vrsta niza (privzeto, en-US, FA, ru ipd.)
+  - **notification_action_setting** – označuje podrobnosti o nastavitvah dejanja obvestila, ki so povezane s tem dejanjem, če je to mogoče.
+    - **notification_action** – označuje, kaj je uporabnik poskušal narediti, tj. zastavica, Izbriši, Arhiviraj, to nam omogoča, da določimo dejanje sporočila, ki ga je uporabnik želel izvesti v obvestilu, in če je dejanje spodletelo oz. ne. 
+    - **notification_action_number** – označuje, katera številka dejanja (dve od treh dejanj je prilagodljiva), je bila dodeljena dejanje obvestila, tj. akcija ena, dejanje dve. To nam omogoča, da ugotovite, ali je prišlo do težave z določenim dejanjem.
+   - **notification_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd.
+   - **server_type** – ponazarja vrsto strežnika v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto strežnika.
+   - **source** – ponazarja vir obvestil nastavitev, če je to ustrezno, ali za nastavitev »Ne motite«.
+   - **swipe_setting** – ponazarja podrobnosti nastavitev podrsljajev, povezane s tem dejanjem (če so na voljo).
+     - **swipe_action** – ponazarja dejanje, ki ga je poskušal izvesti uporabnik, npr. dodajanje zastavice, brisanje, arhiviranje. Omogoča nam, da ugotovimo, katero dejanje je uporabnik želel izvesti in ali je bilo to opravilo uspešno. 
+     - **swipe_direction** – ponazarja nastavljeno smer za poteze podrsljajev, npr. od leve proti desni ali od desne proti levi. S tem dogodkom lahko ugotovimo, ali je prišlo do težave z določeno smerjo podrsljaja.
+   - **ui_mode_setting**– izbrani način uporabniškega vmesnika (temni, svetli, privzeti način, način nizke napolnjenosti baterije itd.).
+   - **signature_setting** – ponazarja, ali je bila nastavitev uporabljena za vse račune ali samo za posamezni račun.
 
 - **state_changed_to** – preveri, ali je nastavitev za vklop/izklop nabiralnika v fokusu pravilno nastavljena. 
 
 - **swipe_action** – preveri, ali imate za triažo e-poštnih sporočil nastavljena dejanja podrsavanja. S tem dogodkom preverimo, ali ta nastavitev deluje pravilno. 
 
-- **swipe_action** – ponazarja dejanje, ki ga je poskušal izvesti uporabnik, npr. dodajanje zastavice, brisanje, arhiviranje. Omogoča nam, da ugotovimo, katero dejanje je uporabnik želel izvesti in ali je bilo to opravilo uspešno. 
-
 - **swipe_direction** – preveri, ali sta smeri podrsljajev (v levo ali desno) nastavljeni pravilno.
 
-- **swipe_direction** – ponazarja nastavljeno smer za poteze podrsljajev, npr. od leve proti desni ali od desne proti levi. S tem dogodkom lahko ugotovimo, ali je prišlo do težave z določeno smerjo podrsljaja.
-
-- **swipe_setting** – ponazarja podrobnosti nastavitev podrsljajev, povezane s tem dejanjem (če so na voljo).
-
-- **ui_mode_setting**– izbrani način uporabniškega vmesnika (temni, svetli, privzeti način, način nizke napolnjenosti baterije itd.).
 
 #### <a name="sidebar_action"></a>sidebar_action
 
@@ -8908,7 +8956,7 @@ Zbrana so sledeča polja:
 
 - **ANY_DIALOG_SHOWN** – Označuje, ali se med zagonom prikaže pogovorno okno.
 
-- **APP_SUSPEND_DURING_EVENT** – Označuje, ali je bil zagon vnaprej izpraznjen.
+- **APP_SUSPEND_DURING_EVENT** – označuje, ali je bil zagon izvedeno prej
 
 - **APP_THREAD_CREATION_WAIT_TIME_TIME_FOR_APP_THREAD_CREATION** – Čas, zahtevan za ustvarjanje niti aplikacije.
 
@@ -10960,6 +11008,24 @@ Zbrana so sledeča polja:
 
 - **view_duration** – prikaže čas, zahtevan za upodobitev različnih komponent uporabniškega vmesnika koledarja, in nam pomaga zaznati težave z učinkovitostjo delovanja, ki vplivajo na vašo izkušnjo uporabe koledarja.
 
+#### <a name="contact_action"></a>contact_action
+
+Ta dogodek se sproža z različnimi dejanji v zvezi z ogledom, posodabljanjem in brisanjem stikov ter ogledom seznama stikov. Uporablja se, da ugotovite, ali so na voljo regresivne učinkovitosti delovanja s stiki.
+
+Zbrana so sledeča polja: 
+
+- **accounts_with_filters** – število računov s filtri, ki so bili uporabljeni na seznamu stikov
+
+- **dejanje** – dejanje, ki je bilo izvedeno, npr. ogled stika
+ 
+- **duration_initial_view_load** – trajanje z odpiranjem pogleda na prvotno nalaganje seznama stikov
+
+- **duration_show_contacts** – trajanje, da odprete pogled tako, da prikazuje stike na seznamu stikov.
+ 
+- **total_contacts** – število stikov brez filtrov, ki je uporabljeno
+ 
+- **total_filtered_contacts** – število stikov z uporabljenimi filtri
+
 #### <a name="conversation_load_time"></a>conversation_load_time
 
 S tem dogodkom lahko zaznamo in odpravimo težave, ki povzročajo občutno slabšo učinkovitost delovanja pri nalaganju pogovorov prek e-pošte, in tako zagotovimo, da se vaše e-poštna sporočila nalagajo po pričakovanjih.
@@ -11541,6 +11607,16 @@ Zbrana so naslednja polja:
 
 - **TypeId** – GUID za vmesnik, v katerem je ta metoda klicana.
 
+#### <a name="officeiospaywallfailedscreenretrybuttontap"></a>Office.iOS.Paywall.FailedScreen.RetryButtonTap
+
+Ta telemetrijo uporabe je zbrana tako, da se ugotovi, kdaj nakup/omogočanje uporabe/aktivacija ni uspela, uporabnik pa je potrkal gumb »poskusi znova«.  Uporablja se za odpravljanje težav z nakupi scenarijev, ki vodijo do ponovne uporabe in izboljšanje zanesljivosti procesov.
+
+Zbrana so sledeča polja:
+
+- **failureReason** – niz, ki označuje, kaj je bila napaka uporabnika. Kot »provisioningFailed«, »purchaseFailed«, »activationFailed«.
+
+- **ID izdelka, ki je naveden v** -string – shramba aplikacije za izdelek, za katerega uporabnik znova ne poskuša izvesti zahteve
+
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -11663,13 +11739,23 @@ Zbrana so ta polja:
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
 
-Ta dogodek se sproži ob ustavi seje vaje. V kombinaciji s sistemom Office. PowerPoint. PPT. Android. RehearseView. StartSession bo to prvi pokazatelj morebitnih zrušitev ali napak, ki jih uporabnik srečuje.
+Ta dogodek označuje, da je uporabnik ustavil sejo vaje. V kombinaciji s sistemom Office. PowerPoint. PPT. Android. RehearseView. StartSession bo to prvi pokazatelj morebitnih zrušitev ali napak, ki jih uporabnik srečuje.
 
 Zbrana so sledeča polja:
+
+- **ConnectionCreationTime** časa, ki je bil ustvarjen za ustvarjanje povezav storitve.
+
+- **CountDownAlertTime** – čas, za katerega je bila prikazana odštevna opozorila.
+
+- **CountdownInitTime –** času med dokončano obremenitvijo diaprojekcije in odštevanjem.
 
 - **CritiqueSummary** – Povzetek vseh kritik, ki so jih uporabniki videli s svojimi računi.
 
 - **ExitEventCode** – koda za prepoznavanje scenarija, v katerem je uporabnik zapustil sejo vaje, je bil scenarij z napako ali je sejo uspešno zapustil. 
+
+- **FRETime** -čas med delom v oknu FRE se je začel prikazovati, dokler ga uporabnik ne zavrne. 
+
+- **MicrophonePermissionTime** -čas, za katerega je bil prikazan opozorilni klic z mikrofonom, dokler uporabnik ne izbere ene od možnosti.
 
 - **PauseRehearsingCount** – število uporabnikov, ki so večkrat kliknili »pavza« vaje.
 
@@ -11677,7 +11763,7 @@ Zbrana so sledeča polja:
 
 - **ResumeRehearsingCount** – število uporabnikov, ki ste jih kliknili z navodili za vnovično uporabo.
 
-- **Sessionid** – To je ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+- **Sessionid** – to je id seje »Speech frontdoor«. To se uporablja za iskanje v dnevnikih storitev za odpravljanje napak.
 
 - **SlideshowViewLoadTime** – Čas, potreben za nalaganje diaprojekcije.
 
@@ -11730,7 +11816,7 @@ Zbrana so sledeča polja:
 
 - **FirstAudioDelayInMs** – To je čas v milisekundah, potreben za prejem prve zvočne datoteke.
 
-- **InitMediaCaptureLayerDurationInMs** – To je čas v milisekundah, potreben za inicializacijo plasti predstavnosti/zajema zvoka.
+- **InitMediaCaptureLayerDurationInMs** – to je čas, ki ste ga odstranili v milisekundah, da inicializirate plast »Media/Audio Capture«.
 
 - **LocallyDroppedMessageCount** – To je skupno število sporočil, opuščenih lokalno.
 
@@ -12403,6 +12489,25 @@ Zbrana so naslednja polja:
 
 - **UriScheme** – Shema URL-ja.
 
+#### <a name="officeandroidauthaceerrors"></a>Office.Android.AuthACEErrors
+
+Ta dogodek uporablja Microsoftov račun (MSA), da določi, kateri uporabnik se poskuša vpisati v aplikacijo, in med tem, katere telemetrijo v razpravi je treba sprožiti kot del neuspešnega poskusa.  
+
+Ta dogodek vam pomaga pri analizi napake pri vpisu v storitvi MSA, ki pomaga pri razumevanju razlogov za neuspešen potek dela v storitvi MSA.
+
+Zbrana so sledeča polja:
+
+- **ExceptionsName** – označuje izjemne razrede glede na oznake izjem, ki se pojavijo med potekom vpisov v Microsoftov račun.
+
+- **ExceptionsTag** – označuje, katere izjeme za prilive v uniji so prisotne v storitvi v storitvi v storitvi MSA-vpis.
+
+- **IDCRLACEErrorCode** – daje kodo napake, ki se pojavi med vpisom v storitvi MSA. Različne kode napake, navedene na naslovu%SRCROOT%\identity\coreapi\public\IdentityData.h
+
+- **IDCRLAuthenticationStatusErrorCode** – označuje koda napake za neveljavno stanje rezultata preverjanja pristnosti, ki prihaja iz Microsoftovega računa (MSA).
+
+- **IDCRLUserInteractionMissingError** – označuje, ali se je v Microsoftov račun (MSA), na katerega se je priklicala showUI zastavica, priklicana z zastavico, ki je napačno.
+
+
 #### <a name="officeandroidbcserrors"></a>Office.Android.BCS.Errors
 
 Telemetrija napak dvojiških pretvorb za ukaza »Natisni« in »Shrani kot PDF«.  Microsoft s tem dogodkom prepoznava točke napak med pretvorbami BCS v aplikacijah Word, Excel ali PowerPoint.
@@ -12423,7 +12528,7 @@ Zbrana so naslednja polja:
 
 - **PdfConversionHRStatus** – Koda stanja pretvorbe PDF.
 
-- **PdfConversionResult** – Oštevilčenje rezultata pretvorbe datoteke PDF.  Vrednosti: »Success«, »Failed« in »Cancelled«.
+- **PdfConversionResult** – Oštevilčenje rezultata pretvorbe datoteke PDF.  Vrednosti: »uspeh«, »ni uspelo« in »preklicano«
 
 - **PdfFileSize** – Velikost datoteke PDF.
 
@@ -12494,6 +12599,37 @@ Zbrana so sledeča polja:
 - **Data_ExceptionType** – izbirno polje z besedilom, ki predstavlja ime izjeme, ki jo poda izvorna koda.
 
 - **Data_MethodName** – Besedilo, ki predstavlja ime načina v izvorni kodi, kjer je prišlo do napake.
+
+#### <a name="office_android_earlytelemetry_extractionerror"></a>Office_Android_EarlyTelemetry_ExtractionError
+
+Če želite zmanjšati velikost programov sistema Office Android, uporabite stiskanje za vire v končnem paketu. Ko zaženete čas, najprej izvlečemo te vire, preden jih uporabimo. Med izvajanjem izvlečkov je včasih prišlo do nepričakovanih napak, kar povzroča zrušitve programa. 
+
+S tem dogodkom pridobivamo nekatere diagnostične informacije, ki so povezane z ekstrakcijo, na primer ime vira, ki je bil pridobljen, pot, na kateri je izvlečena itd. Ti podatki so zbrani le, kadar pride do napak pri pridobivanju.
+
+Te podatke uporabljamo, da bi razumeli vzrok za težave z ekstrakcijo in izboljšali uporabniško izkušnjo naših aplikacij.
+
+Zbrana so sledeča polja:
+
+- **Data_ArchiveName** – ime vira, ki ga pridobivate.
+
+- **Data_ArchivePath** – pot, kjer je vir začasno predpomnjen.
+
+- **Data_ArchiveSizeKB** – velikost vira, ki ga pridobivate.
+ 
+- **Data_ClassName** – ime datoteke v izvorni kodi, pri kateri je prišlo do napake.
+
+- **Data_ErrorDetail** – besedilo, ki opisuje več podrobnosti o vzroku napake, kot je koda napake ipd.
+
+- **Data_ErrorMessage** – besedilo z opisom vrste napake, ki je bila med ekstrakcijo naletela.
+
+- **Data_ExtractionDestinationPath** – pot, kjer naj bo vir shranjen po ekstrakciji.
+
+- **Data_FreeDiskSpaceMB** – količina prostega prostora na disku, ki je na voljo v napravi, merjeni v Mega bajtih. 
+
+- **Data_ItemToExtract** – ime vira, ki ga pridobivate.
+
+- **Data_MethodName** – ime metode v izvorni kodi, pri kateri je prišlo do napake.
+
 
 #### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
 
