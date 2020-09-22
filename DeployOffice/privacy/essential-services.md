@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
+ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440505"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47941044"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -85,7 +85,7 @@ Zbrana so sledeča polja:
 
 Dogodki se zberejo, ko Office uporabniku prikaže poziv za vpis s preverjanjem pristnosti z obrazci.
 
-Poleg tihih pridobitev žetonom se s pozivi za preverjanje pristnosti ugotovi, ali je za uporabnika aktivirano stanje prekinjenega preverjanja pristnosti. Uporabnik se tako nahaja v stanju odjemalca brez povezave, v najslabšem primeru pa prekinjeno preverjanje pristnosti lahko povzroči pridobivanje licence in onemogoči odjemalca v celoti.
+Poleg tihih pridobitev žetonov se s pozivi za preverjanje pristnosti ugotovi, ali je za uporabnika aktivirano stanje prekinjenega preverjanja pristnosti. Uporabnik se tako nahaja v stanju odjemalca brez povezave, v najslabšem primeru pa prekinjeno preverjanje pristnosti lahko prepreči pridobivanje licence in onemogoči odjemalca v celoti.
 
 Pozivi za vpis s preverjanjem pristnosti z obrazci se uporabljajo za nekatere scenarije preverjanja pristnosti na mestu uporabe, vendar tega običajno ne želimo, ker bi uporabniki morali uporabljati sodobno preverjanje pristnosti zaradi varnostnih ranljivosti, povezanih s preverjanjem pristnosti z obrazci.
 
@@ -141,7 +141,7 @@ Zbrana so sledeča polja:
 
 Dogodki se zberejo, ko Office uporabniku prikaže poziv za vpis prek vmesnika SSPI v sistemu Windows. Poleg tihih pridobitev žetonov se s pozivi za preverjanje pristnosti ugotovi, ali je za uporabnika aktivirano stanje prekinjenega preverjanja pristnosti. Rezultat tega je stanje odjemalca brez povezave. Prekinjeno preverjanje pristnosti lahko prepreči pridobitev licence in onemogoči odjemalca v celoti.
 
-Pozivi vmesnika SSPI v sistemu Windows se uporabljajo za preverjanje pristnosti z Exchangeom (za sinhronizacijo pošte), ko vir za Exchange uporabnika ni bil nastavljen za večkratno preverjanje pristnosti.
+Pozivi vmesnika SSPI v sistemu Windows se uporabljajo za preverjanje pristnosti z Exchangeom (za sinhronizacijo pošte), ko uporabnikov vir za Exchange ni bil nastavljen za večkratno preverjanje pristnosti.
 
 Ti dogodki se skupaj z dogodki imenskega prostora Office.MATS uporabljajo za te namene:
 
@@ -426,6 +426,461 @@ Zbrana so sledeča polja:
   - **Wamapi** – identificira, kateri API WAM se pokliče
 
   - **Wamtelemetrybatch** – se trenutno ne uporablja. V prihodnosti komponenti WAM omogoča odpremo dodatnih informacij glede dogodka za preverjanje pristnosti
+
+
+### <a name="officematsoneauthactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.ActionMicrosoftOfficeWin32
+
+Microsoftov telemetrični sistem za preverjanje pristnosti (MATS) se zbere, ko Office poskuša pridobiti žeton za preverjanje pristnosti (na tih način ali prek poziva). Če pridobitev ni uspešna, so vključeni tudi podatki o napakah. S temi dogodki se naši uporabniki lahko izognejo stanju prekinjenega preverjanja pristnosti tako, da:
+
+1) Ugotovijo, ali odjemalci lahko od storitve uspešno pridobijo žeton za preverjanje pristnosti oziroma je za njih aktivirano stanje prekinjenega preverjanja pristnosti.
+
+2) Ovrednotijo, kdaj je prišlo do sprememb v odjemalcu ali storitvah, ali je prišlo do kritičnih regresij glede izkušnje in zanesljivosti pri preverjanju pristnosti uporabnika.
+
+3) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
+
+4) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav.
+
+Zbrana so sledeča polja:
+
+- **AccountType** – vrsta računa, ki se uporabi za ta dogodek preverjanja pristnosti, na primer za potrošnike ali organizacije.
+
+- **ActionName** – prijazno ime tega dogodka, če je bil na voljo.
+
+- **Actiontype** – določa vrsto knjižnice za preverjanje pristnosti v uporabi.
+
+- **Appaudience** – ali je aplikacija namenjena za notranjo oziroma zunanjo uporabo
+
+- **Appforcedprompt** – ali aplikacija preglasi predpomnilnik in vsili prikaz poziva
+
+- **Appname** – ima aplikacije, ki izvaja preverjanje pristnosti
+
+- **Appver** – različica aplikacije, ki izvaja preverjanje pristnosti
+
+- **Askedforcreds** – ali ja aplikacija uporabnika pozvala za vnos poverilnic za to dejanje
+
+- **Authoutcome** – ali je bil poskus preverjanja pristnosti uspešen, ni bil uspešen oziroma je bil preklican
+
+- **Blockingprompt** – ali je aplikacija prikazala poziv, ki zahteva posredovanje uporabnika
+
+- **Correlationid** – identifikator, ki se uporablja za združevanje informacij o tem posameznem dogodku s podatki storitve
+
+- **Count** – skupno število združenih dejanj, navedenih za ta podatkovni dogodek.
+
+- **Devicenetworkstate** – ali ima naprava vzpostavljeno internetno povezavo.
+
+- **Deviceprofiletelemetryid** – anonimni ID naprave, ki se uporablja za merjenje izkušnje in zanesljivosti preverjanja pristnosti v napravi.
+
+- **Duration** – čas trajanja preverjanja pristnosti
+
+- **duration_max** – najdaljše trajanje združenega dogodka
+
+- **duration_min** – najkrajše trajanje združenega dogodka
+
+- **duration_sun** – skupno trajanje vseh združenih dogodkov
+
+- **endtime** – prikaže, ali se je dogodek preverjanja pristnosti končal
+
+- **error** – koda napake, če preverjanje pristnosti ni bilo uspešno
+
+- **errorDescription** – kratek opis napake
+
+- **errorsource** – ali je do napake prišlo v storitvi, knjižnici za preverjanje pristnosti oziroma aplikaciji
+
+- **eventtype** – ali je ta dogodek sporočil podatkovno točko za preverjanje pristnosti oz. napako kakovosti podatkov. Uporablja se za merjenje kakovosti podatkov.
+
+- **from_cache** – logična vrednost, ali je vir zapisa predpomnilnik jedra WAM oz. vtičnik
+
+- **hasadaltelemetry** – označuje, ali je knjižnica za preverjanje pristnosti imenika Azure Active Directory (ADAL) navedla telemetrijo za ta dogodek.
+
+- **Identityservice** – ali je bil priklican Microsoftov račun storitve (MSA) oziroma storitev Azure Active Directory (AAD) 
+
+- **Interactiveauthcontainer** – katere vrste poziv je bil prikazan
+
+- **Issilent** – ali je bil prikazan poziv oz. je ta dogodek vrste tihega preverjanja pristnosti (v ozadju).
+
+- **Microsoft_ADAL_adal_version** – različica knjižnice za preverjanje pristnosti imenika Azure Active Directory (ADAL)
+
+- **Microsoft_ADAL_api_error_code** – koda napake, ki jo je ustvarila knjižnica za preverjanje pristnosti za ta poskus preverjanja pristnosti
+
+- **Microsoft_ADAL_api_id** – API, ki je bil priklican za ta poskus preverjanja pristnosti
+
+- **Microsoft_ADAL_application_name** – ime aplikacije/postopka, ki uporablja knjižnico ADAL.
+
+- **Microsoft_ADAL_application_version** – različica aplikacije, ki uporablja knjižnico ADAL.
+
+- **Microsoft_ADAL_authority** – URL overovitelja za imenik Azure Active Directory, ki je odgovoren za preverjanje pristnosti uporabnika
+
+- **Microsoft_ADAL_authority_type** – potrošnik/pogodba za storitve Microsoft (MSA) v primerjavi z organizacijskim računom/računom Azure Active Directory (AAD); trenutno vedno AAD
+
+- **Microsoft_ADAL_authority_validation_status** – ponazarja, ali je bilo preverjanje pristnosti v storitvi dokončano
+
+- **Microsoft_ADAL_broker_app** – ponazarja, ali je knjižnica ADAL pri preverjanju pristnosti uporabila posrednika
+
+- **Microsoft_ADAL_broker_app_used** – ponazarja ime posrednika (npr. upravljanje računov v sistemu Windows)
+
+- **Microsoft_ADAL_broker_version** – ponazarja različico morebitnega posrednika
+
+- **Microsoft_ADAL_cache_event_count** – število dogodkov predpomnilnika, ki jih je knjižnica ADAL izvedla med pridobivanjem žetona
+
+- **Microsoft_ADAL_cache_event_count_max** – če se združi ta signal, ponazarja največje dovoljeno število dogodkov predpomnilnika za katere koli združene dogodke
+
+- **Microsoft_ADAL_cache_event_count_min** – če se združi ta signal, ponazarja najmanjše dovoljeno število dogodkov predpomnilnika za katere koli združene dogodke
+
+- **Microsoft_ADAL_cache_event_count_sum** – če se združi ta signal, ponazarja vsoto dogodkov predpomnilnika za vse združene dogodke
+
+- **Microsoft_ADAL_cache_read_count** – kolikokrat je vmesnik API prebral iz predpomnilnika diska. Na voljo, če je bilo zaznano vsaj eno branje
+
+- **Microsoft_ADAL_cache_read_error_count** – kolikokrat branje vmesnika API iz predpomnilnika diska ni uspelo. Na voljo, če je bil zaznan vsaj en neuspešen poskus
+
+- **Microsoft_ADAL_cache_read_last_error** – koda napake za knjižnico ADAL. Na voljo, če je bilo zaznano vsaj eno neuspešno branje
+
+- **Microsoft_ADAL_cache_read_last_system_error** – koda napake sistema.  Na voljo, če je bilo zaznano vsaj eno neuspešno branje
+
+- **Microsoft_ADAL_cache_write_count** – kolikokrat je vmesnik API zapisal v predpomnilnika diska. Na voljo, če je bilo zaznano vsaj eno pisanje
+
+- **Microsoft_ADAL_cache_write_error_count** – kolikokrat pisanje vmesnika API v predpomnilnik diska ni uspelo. Na voljo, če je bil zaznan vsaj en neuspešen poskus
+
+- **Microsoft_ADAL_cache_write_last_error** – koda napake za knjižnico ADAL. Na voljo, če je bila zaznana vsaj ena napaka pisanja
+
+- **Microsoft_ADAL_cache_write_last_system_error** – koda napake sistema. Na voljo, če je bila zaznana vsaj ena napaka pisanja
+
+- **Microsoft_ADAL_client_id** – zgoščeni ID aplikacije imenika Azure Active Directory
+
+- **Microsoft_ADAL_device_id** – ID lokalne naprave, ki ga je ustvarila knjižnica ADAL.
+
+- **Microsoft_ADAL_error_domain** – domena/komponenta, ki je ustvarila kodo napake.
+
+- **Microsoft_ADAL_error_protocol_code koda napake** – koda napake protokola OAuth, ki jo je vrnila storitev, zabeleženo v knjižnici ADAL.
+
+- **Microsoft_ADAL_extended_expires_on_setting** – trditev »true«/»false«, ki ponazarja, ali je žeton presegel svojo življenjsko dobo
+
+- **Microsoft_ADAL_http_event_count** – število zahtev HTTP, ki jih je ustvarila knjižnica ADAL.
+
+- **Microsoft_ADAL_idp** – ponudnik identitete (IDP), ki ga uporablja knjižnica ADAL.
+
+- **Microsoft_ADAL_network_event_count** – število omrežnih klicev, ki jih je izvedla knjižnica ADAL
+
+- **Microsoft_ADAL_http_event_count_max** – če je ta signal združen, ponazarja največje število klicev HTTP, ki jih je izvedla knjižnica ADAL
+
+- **Microsoft_ADAL_http_event_count_min** – če je ta signal združen, ponazarja najmanjše število klicev HTTP, ki jih je izvedla knjižnica ADAL
+
+- **Microsoft_ADAL_http_event_count_sum** – če je ta signal združen, ponazarja vsoto klicev HTTP, ki jih je izvedla knjižnica ADAL
+
+- **Microsoft_ADAL_network_event_count_max** – če je združen ta signal, ponazarja največje dovoljeno število omrežnih klicev, ki jih je izvedla knjižnica ADAL za kateri koli združeni dogodek
+
+- **Microsoft_ADAL_network_event_count_min** – če je združen ta signal, ponazarja najmanjše dovoljeno število omrežnih klicev, ki jih je izvedla knjižnica ADAL za kateri koli združeni dogodek
+
+- **Microsoft_ADAL_network_event_count_sum** – če je združen ta signal, ponazarja vsoto omrežnih klicev, ki jih je izvedla knjižnica ADAL za vse združene dogodke
+
+- **Microsoft_ADAL_is_silent_ui** – trditev »true«/»false«, ki ponazarja, ali je knjižnica ADAL prikazala poziv uporabniškega vmesnika
+
+- **Microsoft_ADAL_is_successfull** – trditev »true«/»false«, ki ponazarja, ali je bil vmesnik API za knjižnico ADAL uspešen (MacOS)
+
+- **Microsoft_ADAL_is_successful** – trditev »true«/»false«, ki ponazarja, ali je bil vmesnik API za knjižnico ADAL uspešen
+
+- **Microsoft_ADAL_logging_pii_enabled** – trditev »true«/»false«, ki ponazarja, ali je omogočen celoten način pisanja dnevnika za knjižnico ADAL. Ti podatki so zapisani v dnevnik samo lokalno in niso posredovani telemetriji
+
+- **Microsoft_ADAL_ntlm** – trditev »true«/»false«, ki ponazarja, ali je knjižnica ADAL uporabila osnovno preverjanje pristnosti (NTLM).
+
+- **Microsoft_ADAL_oauth_error_code** – koda napake za protokol OAuth, ki jo vrne storitev
+
+- **Microsoft_ADAL_prompt_behavior** – parameter omrežja za prijavo, ki je bil posredovan storitvi za določanje, ali je mogoče prikazati uporabniški vmesnik (oziroma storitvi ni bil posredovan noben parameter omrežja)
+
+- **Microsoft_ADAL_request_id** – transakcijski GUID za zahtevo, ki jo knjižnica ADAL posreduje storitvi
+
+- **Microsoft_ADAL_response_code** – koda odziva omrežja iz storitve
+
+- **Microsoft_ADAL_response_time** – ponazarja čas, ki ga je storitev porabila, da se je vrnila v knjižnico ADAL
+
+- **Microsoft_ADAL_response_time_max** – če je združen ta signal, ponazarja najdaljši čas, ki ga je knjižnica ADAL porabila za vrnitev od vmesnika API za kateri koli združeni dogodek
+
+- **Microsoft_ADAL_response_time_min** – če je združen ta signal, ponazarja najkrajši čas, ki ga je storitev porabila za odziv na knjižnico ADAL za kateri koli združeni dogodek
+
+- **Microsoft_ADAL_response_time_sum** – če je združen ta signal, ponazarja vsoto časa, ki ga je knjižnica ADAL porabila za vrnitev od vmesnika API za vse združene dogodke
+
+- **Microsoft_ADAL_rt_age** – starost žetona za osveževanje
+
+- **Microsoft_ADAL_server_error_code** – koda napake, ki jo je vrnil strežnik
+
+- **Microsoft_ADAL_server_sub_error_code** – koda podnapake, ki jo je strežnik vrnil kot pojasnilo, zakaj zahteve ni bilo mogoče dokončati
+
+- **Microsoft_ADAL_spe_info** – trditev »true«/»false«, ki ponazarja, ali je uporabnik uporabil notranji obroč za Secure Production Enterprise (samo za Microsoftove zaposlene)
+
+- **Microsoft_ADAL_spe_ring** – trditev »true«/»false«, ki ponazarja, ali je uporabnik uporabil notranji obroč za Secure Production Enterprise (samo za Microsoftove zaposlene)
+
+- **Microsoft_ADAL_start_time** – čas, ko je bil izveden klic vmesnika API za knjižnico ADAL
+
+- **Microsoft_ADAL_status** – stanje »uspešno«/»ni uspešno« za celoten poziv knjižnice ADAL
+
+- **Microsoft_ADAL_stop_time** – čas, ko je bil vrnjen klic vmesnika API za knjižnico ADAL
+
+- **Microsoft_ADAL_telemetry_pii_enabled** – trditev »true«/»false«, ki ponazarja, ali je omogočen način polne telemetrije za knjižnico ADAL. Ime je napačno, saj se ne oddaja noben PII/EUII
+
+- **Microsoft_ADAL_tenant_id** – GUID, ki identificira najemnika, kateremu pripada preverjeni uporabnik
+
+- **Microsoft_ADAL_token_acquisition_from_context** – opisuje vedenje knjižnice ADAL glede na žetone v kontekstu preverjanja pristnosti
+
+- **Microsoft_ADAL_token_frt_status** – stanje žetona za osveževanje: »preizkušeno«, »ni zahtevano«, »ni bilo mogoče najti« ali »izbrisano«.
+
+- **Microsoft_ADAL_token_mrrt_status** – stanje žetona za osveževanje: »preizkušeno«, »ni zahtevano«, »ni bilo mogoče najti« ali »izbrisano«.
+
+- **Microsoft_ADAL_token_rt_status** – stanje žetona za osveževanje: »preizkušeno«, »ni zahtevano«, »ni bilo mogoče najti« ali »izbrisano«.
+
+- **Microsoft_ADAL_token_type** – žeton za osveževanje (RT) ali žeton za osveževanje z več viri (MRRT)
+
+- **Microsoft_ADAL_ui_event_count** – število pozivov, prikazanih uporabniku. Ti pozivi so lahko tihi
+
+- **Microsoft_ADAL_user_cancel** – trditev »true«/»false«, ali je bilo preklicano okno uporabniškega vmesnika
+
+- **Microsoft_ADAL_x_ms_request_id** – dodatni ID zahteve v glavi omrežja, ki ga knjižnica ADAL posreduje storitvi
+
+- **Microsoft_ADAL_x_client_cpu** – informacije o arhitekturi CPE naprave
+
+- **Microsoft_ADAL_x_client_os** – različica operacijskega sistema naprave.
+
+- **Microsoft_ADAL_x_client_sku** – ime inventarne številke operacijskega sistema naprave.
+
+- **Microsoft_ADAL_x_client_ver** – različica knjižnice ADAL.
+
+- **MSAL_all_error_tags** – vse oznake napak, na katere je med potekom preverjanja pristnosti naletela Microsoftova knjižnica za preverjanje pristnosti (MSAL).
+
+- **MSAL_api_error_code** – če knjižnica MSAL naleti na napako, katere izvor predstavlja operacijski sistem, so tukaj shranjene kode napak platforme.
+
+- **MSAL_api_error_context** – niz z dodatnimi berljivimi podrobnostmi o zadnji napaki, na katero je naletela knjižnica MSAL. 
+
+- **MSAL_api_error_tag** – enolični niz za mesto v kodi, kjer je prišlo do te napake.
+
+- **MSAL_api_name** – ime najvišje ravni vmesnika API za knjižnico MSAL, ki je bila poklicana za zagon tega preverjanja pristnosti.
+
+- **MSAL_api_status_code koda** – koda stanja, ki jo je knjižnica MSAL vrnila za ta rezultat preverjanja pristnosti.
+
+- **MSAL_auth_flow** – koraki, ki jih je knjižnica MSAL izvedla pri tem preverjanju pristnosti (AT, PRT, LRT, FRT, ART, IRT). Ločeni s simbolom »|« za lažje razčlenjevanje.
+
+- **MSAL_auth_flow_last_error** – koda napake, ki smo jo prejeli iz strežnika v predzadnjem elementu pri preverjanju pristnosti (AuthFlow) (npr: če AuthFlow = "PRT|LRT", bi bila napaka PRT prikazana v razdelku AuthFlowLastError).
+
+- **MSAL_authority_type** – ali je bila ta zahteva za uporabnika v storitvi: ADD, združeno ali MSA.
+
+- **MSAL_broker_app_used** – ali je bil za ta potek preverjanje pristnosti uporabljena posredniška aplikacija.
+
+- **MSAL_client_id** – ID odjemalca aplikacije za klicanje
+
+- **MSAL_correlation_id** – enolični GUID tega dogodka, ki se uporablja za pridruževanje dejanjem dnevnikov odjemalcev, strežnikov in aplikacij.
+
+- **MSAL_delete_token** – seznam žetonov, ki so bili izbrisani iz predpomnilnika med tem potekom preverjanja pristnosti.
+
+- **MSAL_http_call_count** – število klicev HTTP, ki jih je knjižnica MSAL izvedla med tem potekom preverjanja pristnosti.
+
+- **MSAL_is_successful** – ali je bil potek preverjanja pristnosti uspešen.
+
+- **MSAL_last_http_response_code** – če je knjižnica MSAL izvedla enega ali več klicev HTTP, je to zadnja prejeta koda odziva na klic HTTP.
+
+- **MSAL_msal_version** – niz različice knjižnice MSAL, oblika zapisa X.X.X + (»OneAuth«, »lokalno« ali »potrjeno razprševanje«).
+
+- **MSAL_read_token** – žetoni, ki so bili prebrani iz predpomnilnika (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = potekli AT je bil prebran, a zavržen]).
+
+- **MSAL_read_token_last_error** – če je knjižnica MSAL zaznala napako pri branju iz predpomnilnika, bomo te informacije shranili tukaj. (npr: napaka pri branju diska, ki se je pojavila v operacijskem sistemu, napaka funkcije Keychain v sistemu MacOS).
+
+- **MSAL_request_duration** – čas od klica vmesnika API za knjižnico MSAL na najvišji ravni do vrnjenega rezultata.
+
+- **MSAL_request_id** – ID zahteve za zadnji klic, ki smo ga izvedli v Microsoftovi storitvi varnega žetona.
+
+- **MSAL_server_error_code** – številska koda napake za specifično Microsoftovo storitev varnega žetona (če smo jo prejeli).
+
+- **MSAL_server_spe_ring** – informacije obroča varne proizvodnje za podjetja za Microsoftovo storitev varnega žetona (če smo jo prejeli).
+
+- **MSAL_server_suberror_code** – niz kode podnapake za specifično Microsoftovo storitev varnega žetona (če smo jo prejeli).
+
+- **MSAL_start_time** – čas izvedene zahteve knjižnice MSAL na najvišji ravni javnega vmesnika API.
+
+- **MSAL_stop_time** – čas, ko je knjižnica MSAL končala obdelavo in vrnila rezultat klicatelju.
+
+- **MSAL_tenant_id** – Microsoftov GUID, ki prepozna najemnika, v katerem je uporabnik.
+
+- **MSAL_ui_event_count** – število pozivov uporabniškega vmesnika, ki jih knjižnica MSAL prikaže na zaslonu.
+
+- **MSAL_wam_telemetry** – vsebuje paket podatkov o telemetriji WAM v nizu JSON, ki bo razčlenjen in pretvorjen v polja tega dokumenta, ki so varni pred WAM.
+
+- **MSAL_was_request_throttled** – vrne vrednost »true«, če je knjižnica MSAL omejila to zahtevo in preprečila, da dostop do omrežja. Če ima ta dogodek vrednost »true«, je najverjetneje prišlo do zanke v aplikaciji za klicanje.
+
+- **MSAL_write_token** – žetoni, ki so bili zapisani v predpomnilnik (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = potekli AT je bil prebran, a zavržen]).
+
+- **MSAL_write_token_last_error** – če je knjižnica MSAL zaznala napako pri pisanju v predpomnilnik, bomo te informacije shranili tukaj. (npr: napaka pri branju diska, ki se je pojavila v operacijskem sistemu, napaka funkcije Keychain v sistemu MacOS).
+
+- **oneauth_api** – vmesnik API za OneAuth, ki je bil priklican za ta poskus preverjanja pristnosti.
+
+- **oneauth_transactionuploadid** – GUID, ki določa posamezen klic do vmesnika API za OneAuth.
+
+- **oneauth_version** – različica kompleta za razvoj programske opreme za OneAuth.
+
+- **Platform** – platforma operacijskega sistema (0: namizni Windows, 1: Android, 2: iOS, 3: MacOS, 4: UWP)
+
+- **Promptreasoncorrelationid** – korelacijski identifikator, ki ga lahko uporabite za iskanje prejšnjega dogodka preverjanja pristnosti. Z njim je mogoče razložiti, zakaj je bil uporabnik pozvan, da preveri pristnost.
+
+- **Resource** – vir, za katerega je bil zahtevan žeton.
+
+- **Scenarioid** – enemu scenariju lahko pripada več dogodkov. Scenarij lahko na primer doda nov račun, vendar lahko v tem scenariju pride do več pozivov. Ta identifikator omogoča korelacijo teh povezanih dogodkov.
+
+- **Scenarioname** – ime scenarija aplikacije, za katerega je bilo zahtevano preverjanje pristnosti, npr. prvi zagon, preverjanje licence itd.
+
+- **Scope** – obseg, za katerega je bil zahtevan žeton.
+
+- **Sdkver** – različica Microsoftove sistemske knjižnice za telemetrične podatke preverjanja pristnosti, ki se uporablja za izdelavo teh podatkov
+
+- **Sessionid** – identifikator za sejo zagona
+
+- **StartTime** – čas, ko se je začelo preverjanje pristnosti.
+
+- **Tenantid** – GUID, ki identificira najemnika, kateremu pripada preverjeni uporabnik (v primerih, ko ne gre za knjižnice ADAL).
+
+- **Uploadid** – enolični GUID za ta dogodek, ki se uporablja se za onemogočanje dvojnikov
+
+- **wamapi** – določa, kateri API za upravljanje spletnih računov sistema Windows (WAM) je bil poklican
+
+- **Wamtelemetrybatch** – trenutno se ne uporablja. V prihodnosti bo ta dogodek komponenti WAM omogočal odpremo dodatnih informacij glede dogodka za preverjanje pristnosti
+
+- **WAM_account_join_on_end** – stanje pridružitve računa ob koncu delovanja WAM.  Morebitne vrednosti: »primary«, »secondary«, » not_joined«
+
+- **WAM_account_join_on_start** – stanje pridružitve računa ob začetku delovanja WAM.  Morebitne vrednosti: »primary«, »secondary«, » not_joined«
+
+- **WAM_api_error_code** – če je vtičnik AAD WAM poslal odgovor, bo to polje na voljo in bo vsebovalo kodo napake
+
+- **WAM_authority** – niz, ki vsebuje URL avtoritete (mora biti uporabljena končna točka login.windows.net)
+
+- **WAM_broker_version** – na voljo, če je bilo uporabljeno upravljanje WAM; gre za niz različice posrednika
+
+- **WAM_cache_event_count** – število dogodkov predpomnilnika WAM za operacijo
+
+- **WAM_client_id** – identifikator za pridružitev podatkov storitve; prepozna odjemalsko aplikacijo.
+
+- **WAM_correlation_id** – identifikator za pridružitev dogodkov s podatki storitve
+
+- **WAM_device_join** – stanje pridružitve naprave; morebitne vrednosti sta »aadj« in »haadj«
+
+- **WAM_network_event_count** – na voljo, če je bil izveden vsaj en omrežni klic; število omrežnih klicev storitve za to delovanje WAM
+
+- **WAM_network_status** – na voljo, če je bil izveden vsaj en omrežni klic; vsebuje kodo napake HTTP, če omrežne zahteve ni bilo mogoče izvesti.
+
+- **WAM_idp** – določa, ali je bil uporabljen potrošniški ali organizacijski vtičnik za preverjanje pristnosti WAM.
+
+- **WAM_is_cached** – določa, ali je bil odgovor, ki ga je posredovalo upravljanje WAM, pridobljen iz predpomnilnika.
+
+- **WAM_oauth_error_code** – vsebuje kodo napake, ki jo vrne storitev kot del protokola za preverjanje pristnosti.
+
+- **WAM_prompt_behavior** – določa, ali je ta poziv vsilila aplikacija, ali je ta zahteva morda preskočila poziv (v primeru, če je možno tiho preverjanje pristnosti).
+
+- **WAM_provider_id** – določa Microsoftovo končno točko za avtoriteto, ki se uporablja v scenariju za preverjanje pristnosti.
+
+- **WAM_redirect_uri** – URI preusmeritve, registriran za aplikacijo v imeniku Azure Active Directory.
+
+- **WAM_resource** – vir, za katerega je bil zahtevan žeton.
+
+- **WAM_server_error_code** – koda napake, ki jo je za upravljanje WAM vrnila storitev.
+
+- **WAM_server_sub_code** – dodatna koda napake, ki se uporablja za nadaljnjo razčlenitev vzrokov za neuspeh, ki jo vrne storitev.
+
+- **WAM_silent_code** – koda napake, na katero naleti notranji tihi poskus upravljanja WAM, preden pozove uporabnika.
+
+- **WAM_silent_mats** – ta dogodek se ne uporablja.
+
+- **WAM_silent_message** – koda napake, povezana z notranjim tihim poskusom upravljanja WAM, preden pozove uporabnika.
+
+- **WAM_silent_status** – stanje uspeha/neuspeha za notranji tihi poskus upravljanja WAM, preden pozove uporabnika.
+
+- **WAM_tenant_id** – identifikator za najemnika, ki pripada uporabniku s preverjeno pristnostjo AAD, če jo vrne storitev
+
+- **WAM_ui_visible** – na voljo, če je bil uporabniku prikazano vsaj eno okno uporabniškega vmesnika; morebitne vrednosti sta »true« ali »false«
+
+- **WAM_x_ms_clitelem** – na voljo, če funkcija vrne glavo »x-MS-clitelem«
+
+
+### <a name="officematsoneauthtransactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.TransactionMicrosoftOfficeWin32
+
+Microsoftov telemetrični sistem za preverjanje pristnosti (MATS) se zbere, ko Office poskuša pridobiti žeton za preverjanje pristnosti (na tih način ali prek poziva). Ta dogodek je nadrejen enemu ali več dogodkom ActionMicrosoftOffice in omogoča združevanje sorodnih dogodkov. S temi dogodki se naši uporabniki lahko izognejo stanju prekinjenega preverjanja pristnosti tako, da:
+
+1) Ugotovijo, ali odjemalci lahko od storitve uspešno pridobijo žeton za preverjanje pristnosti oziroma je za njih aktivirano stanje prekinjenega preverjanja pristnosti.
+
+2) Ovrednotijo, kdaj je prišlo do sprememb v odjemalcu ali storitvah, ali je prišlo do kritičnih regresij glede izkušnje in zanesljivosti pri preverjanju pristnosti uporabnika.
+
+3) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
+
+4) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav.
+
+Zbrana so sledeča polja:
+
+- **Actiontype** – »oneauthtransaction« je edina vrednost.
+
+- **Appaudience** – občinstvo aplikacije (avtomatizacija, predhodna proizvodnja ali proizvodnja)
+
+- **Appname** – ime aplikacije
+
+- **Appver:** – različica aplikacije
+
+- **Authoutcome** – ali je bil poskus preverjanja pristnosti uspešen, ni bil uspešen oziroma je bil preklican
+
+- **Correlationid** – identifikator, ki se uporablja za združevanje informacij o tem posameznem dogodku s podatki storitve
+
+- **Count** – kolikokrat se je pojavila napaka
+
+- **Devicenetworkstate** – stanje omrežne naprave
+
+- **Deviceprofiletelemetryid** – ID za telemetrijo profila naprave (niz, ki ga uporablja MATS za prepoznavanje določene naprave)
+
+- **duration_max** – najkrajši čas v milisekundah za transakcije, zbrane s tem signalom.
+
+- **duration_min** – najdaljši čas v milisekundah za transakcije, zbrane s tem signalom.
+
+- **duration_sum** – vsota trajanja v milisekundah za transakcije, zbrane s tem signalom.
+
+- **Endtime** – čas, ko se je končala transakcija OneAuth.
+
+- **Error** – koda stanja OneAuth.
+
+- **Eventtype** – vrsta dogodka
+
+- **Issilent** – ima vrednost »false«, če je bil prikazan uporabniški vmesnik; ima vrednost »true«, če je šlo za dogodek v ozadju.
+
+- **oneauth_api** – določa javni vmesnik API za priklicano preverjanje OneAuth.
+
+- **oneauth_Domain** – če je klic vmesnika API povzročil napako, je to sistemska domena te napake.
+
+- **oneauth_ErrorCode** – koda napake, ki predstavlja notranje stanje napake za OneAuth. Nadomešča staro polje »oneauth_errortag«.
+
+- **oneauth_errortag** – številski identifikator za vrstico kode, ki je odgovorna za ustvarjanje napake.
+
+- **oneauth_ExecutionFlow** – niz oznak, ki označujejo pot kode, po kateri je bil izveden ta poziv vmesnika API.
+
+- **oneauth_internalerror** – koda napake, ki predstavlja notranje stanje napake za OneAuth.
+
+- **oneauth_ServerErrorCode** – napaka strežnika, ki jo je prejelo preverjanje OneAuth ob zaključku tega klica vmesnika API (če je prišlo do napake).
+
+- **oneauth_SystemErrorCode** – napaka sistema, ki jo je prejelo preverjanje OneAuth ob zaključku tega klica vmesnika API (če je prišlo do napake).
+
+- **oneauth_Tag** – oznaka OneAuth, ki označuje končno mesto v kodi, doseženo ob zaključku tega klica vmesnika API.
+
+- **oneauth_transactionuploadid** – določa naključno ustvarjeni notranji GUID, ki se preslika v določen poziv vmesnika API za OneAuth.
+
+- **oneauth_version** – različica kompleta za razvoj programske opreme za OneAuth.
+
+- **Platform** – platforma operacijskega sistema (0: Win32, 1: Android, 2: iOS, 3: MacOS, 4: WinRT)
+
+- **Scenarioname** – ime scenarija, za katerega je potrebno preverjanje pristnosti in ga določi aplikacija za klicanje.
+
+- **Schemaver** – različica sheme
+
+- **Sdkver** – različica kompleta za razvoj programske opreme za MATS
+
+- **Sessionid** – ID seje
+
+- **severityError** – resnost
+
+- **starttime** – čas, ko se je začela transakcija OneAuth.
+
+- **Timestamp** – časovni žig
+
+- **Type** – vrsta napake
+
+- **Uploaded** – enolični identifikator za ta določen dogodek, ki se uporablja za onemogočanje dvojnikov.
+
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
@@ -2794,6 +3249,101 @@ Zbrana so sledeča polja:
 
 ## <a name="licensing-events"></a>Licenciranje dogodkov
 
+### <a name="officeandroiddocsuipaywallcontrolautoredeempendingpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.AutoRedeemPendingPurchaseResult
+
+Kritična tehnika telemetrije za beleženje rezultata samodejnega poskusa unovčenja čakajočih nakupov uporabnika. Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin.
+
+Zbrana so sledeča polja:
+
+- **EventDate** – časovni žig ponovitve dogodka 
+
+- **Result** – celo število, ki ponazarja rezultat enum operacije. 
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
+
+### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
+
+Kritična telemetrija uporabe, ko je uporabniku prikazan nadzor Paywall. Uporablja se za razumevanje izkušnje nakupa v aplikaciji in optimiziranje možnosti nakupa v aplikacij v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **EventDate** – časovni žig ponovitve dogodka 
+
+- **IsModeFRE** – logična vrednost za označevanje vrste izkušnje, pogovornega okna »Upsell« ali izbirnika inventarne številke
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
+
+### <a name="officeandroiddocsuipaywallcontrolpurchasebuttonclicked"></a>Office.Android.DocsUI.PaywallControl.PurchaseButtonClicked
+
+Kritična telemetrija uporabe za določanje klika gumba za nakup uporabnika. Uporablja se za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
+
+Zbrana so sledeča polja:
+
+- **EventDate** – časovni žig ponovitve dogodka
+
+- **IsDefaultSku** – logična vrednost, ki označuje, ali uporabnik poskuša kupiti inventarno številko, prikazano kot prvo/privzeto
+
+- **ProductID** – niz, ki določa, katero naročnino poskuša kupiti uporabnik kot konfigurirano v trgovini
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
+
+### <a name="officeandroiddocsuipaywallcontrolpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.PurchaseResult
+
+Kritična tehnika telemetrije za beleženje rezultata poskusa nakupa, ki ga je ročno aktiviral uporabnik. Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin.
+
+Zbrana so sledeča polja:
+
+- **EventDate** – časovni žig ponovitve dogodka 
+
+- **IsModeFre** – logična vrednost, ki označuje, ali je bil nakup izveden na zaslonu programa upsell FRE ali izbirnika inventarnih številk
+
+- **Result** – celo število, ki ponazarja rezultat enum operacije.
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
+
+
+### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
+
+Telemetrične podatke o uporabi zbiramo, ker želimo izvedeti, koliko časa se uporabnik zadrži na zaslonu »Prikaži več prednosti«.  Podatki se uporabijo za razumevanje funkcije »Prikaži več prednosti« in dodatno optimiziranje izkušnje v prihodnjih različicah.
+
+Zbrana so sledeča polja:
+
+- **Duration** – dolgo celo število, ki ponazarja, koliko časa v milisekundah se je uporabnik zadržal na zaslonu »Prikaži več prednosti«
+
+- **EventDate** – časovni žig ponovitve dogodka 
+
+- **MostExplored** – celo število, ki označuje indeks elementa z največ preklopi na seznamu aplikacij M365 in njihovih funkcij
+
+- **SessionID** – globalni enolični identifikator (GUID) za povezovanje dogodkov po seji
+
+### <a name="officeandroiddocsuipaywallcontrolskuchooseranalytics"></a>Office.Android.DocsUI.PaywallControl.SkuChooserAnalytics
+
+Telemetrični podatki o uporabi za prikaz, koliko časa se uporabnik zadrži na zaslonu izbirnika inventarnih številk. Telemetrični podatki o uporabi za prikaz, koliko časa se uporabnik zadrži na zaslonu izbirnika inventarnih številk.
+
+Zbrana so sledeča polja:
+
+- **Duration** – dolgo celo število, ki ponazarja, koliko časa v milisekundah se je uporabnik zadržal na zaslonu »Izbirnik inventranih številk«
+
+- **EventDate** – časovni žig ponovitve dogodka
+
+- **SessionID** – GUID za povezovanje dogodkov po seji
+
+
+### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Kritični telemetrični podatki o uporabi se zbirajo za ponazoritev, ko uporabnik tapne gumb za nakup.  Ti podatki se uporabljajo za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
+
+Zbrana so sledeča polja:
+
+- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+
+- **isDefaultSKU** – logična vrednost – če uporabnik kupuje izdelek, ki smo mu ga priporočili, je ta prikazan privzeto.
+
+- **productId** – niz – ID izdelka iz trgovine z aplikacijami za izdelek, za katerega je uporabnik tapnil gumb za nakup.
+
+- **toggleCount** – celo število – prikazuje, kolikokrat je uporabnik preklopil med prikazi različnih izdelkov, preden je tapnil gumb za nakup, v trenutni seji sistema za plačevanje.
+
+
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
 Ti dogodki so zbrani, ko uporabnik prejme licenco in sprejme licenčne pogoje za Microsoftovo programsko opremo za trenutno licenco.
@@ -2834,7 +3384,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-Ti podatki so zbrani, ko se pojavi pogovorno okno poteka, v katerem uporabnik izve, da je potekla njegova licenca. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Te informacije se zberejo, ko prikažemo pogovorno okno za potek, ki uporabnika opozori o poteku veljavnosti licence. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -2923,7 +3473,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-Če zaznamo težave pri aktivacijskem poteku dela, sprožimo čarovnika za licenciranje in posredujemo ta signal. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če zaznamo težave pri aktiviranju, zaženemo čarovnika za licence in pošljemo ta signal, ki ponazarja isto vsebino. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -2955,7 +3505,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingloadidentityticket"></a>Office.Licensing.LoadIdentityTicket
 
-Med postopkom licenciranja naprave aplikacija želi naložiti identiteto uporabnika, da preveri, ali je uporabnik upravičen do Officea. Ta dogodek ponazarja uspešnost/neuspešnost licenciranja skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Med postopkom licenciranja naprave aplikacija želi naložiti identiteto uporabnika, da preveri, ali je uporabnik upravičen do Officea. Ta dogodek sporoča uspešnost ali neuspešnost istega elementa, skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -2991,7 +3541,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingnulvalidationfullvalidation"></a>Office.Licensing.Nul.Validation.FullValidation 
 
-Ti podatki so zbrani ob vsaki seji naprave, ki uporablja sodobno zbirko za licenciranje. Sporočajo stanje licenciranja v računalniku in napake, ki se prikažejo uporabniku, zaradi katerih, ne morejo uporabljati aplikacije. Ta dogodek ponazarja, ali je računalnik, ki ga uporablja uporabnik, v dobrem stanju zbirke za licenciranje. Za ta dogodek smo vzpostavili zaznavanje anomalije, s katerim ugotovimo, ali regresija povzroča nepravilno delovanje uporabnika. Ta dogodek je pomemben tudi pri diagnosticiranju težav uporabnika in za nadziranje zdravja sistema.
+Ti podatki so zbrani ob vsaki seji naprave, ki uporablja sodobno zbirko za licenciranje. Sporočajo stanje licenciranja v računalniku in napake, ki se prikažejo uporabniku, zaradi katerih, ne morejo uporabljati aplikacije. Ta dogodek ponazarja, ali je stanje računalnika uporabnika primerno glede na sodoben sklad licenciranja. Za ta dogodek smo vzpostavili zaznavanje anomalije, s katerim ugotovimo, ali regresija povzroča nepravilno delovanje uporabnika. Ta dogodek je pomemben tudi pri diagnosticiranju težav uporabnika in za nadziranje zdravja sistema.
 
 Zbrana so sledeča polja:
 
@@ -3075,9 +3625,9 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingsearchforsessiontoken"></a>Office.Licensing.SearchForSessionToken
 
-Če je uporabnik izbral način za aktivacijo računalnika v skupni rabi, v računalniku poskušamo poiskati žeton seje, ki uporabniku omogoča uporabo aplikacije. Ta dogodek ponazarja scenarij uspešnosti ali neuspešnosti licenciranja skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če je uporabnik izbral način za aktivacijo računalnika v skupni rabi, v računalniku poskušamo poiskati žeton seje, ki uporabniku omogoča uporabo aplikacije. Ta dogodek sporoča uspešnost ali neuspešnost scenarija, skupaj s kodo napake. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **LoadLicenseResult** – predstavlja kodo napake/kodo uspeha, ali smo lahko naložili licence za trenutnega uporabnika
 
@@ -3139,7 +3689,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingtelemetryflowsearchforbindingresult"></a>Office.Licensing.TelemetryFlow.SearchForBindingResult
 
-Izvirni izdelovalci opreme prodajajo naprave, ki so vključene v Office (celoletne naročnine ali večne).  Te Officeove izdelke plačate, ko stranka kupi svoj računalnik. Naprave, ki so nastavljene z določenim regkey (OOBEMode: OEMTA), so morda povezane z Officeovo vezavo.  Ko zaženemo Office v teh napravah, izvajamo storitvene preverbe, ali je najdena Officeovo vezava, ki ustreza računalniku.
+Izvirni izdelovalci opreme prodajajo naprave, ki so vključene v Office (celoletne naročnine ali večne).  Te Officeove izdelke plačate, ko stranka kupi svoj računalnik. Računalniki, ki so nastavljeni z določenim registrskim ključem (OOBEMode: OEMTA) so morda povezani z Officeovo vezavo.  Ko zaženemo Office v teh napravah, izvajamo storitvene preverbe, ali je najdena Officeovo vezava, ki ustreza računalniku.
 
 Ta dejavnost telemetrijo sledi napakam pri uspehu in napaki pri iskanju vezave, tako da lahko zagotovimo, da lahko naprave, ki imajo zavezujočo vezavo, uspešno pridobivajo in da so naše storitve zdrave.  Ta dejavnost ne sledi strojem, ki so na voljo, da ne bi imeli nobenih vezi z njimi, ko jih preverimo z našimi storitvami.
 
@@ -4114,7 +4664,7 @@ Zbrana so sledeča polja:
     
 ### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
 
-V tem primeru se prikaže potrditveno polje preveri, ali so na voljo posodobitve, ki so bile najdene brez posodobitev, ki jih uporabljamo, če želite zagotoviti, da so posodobitve ponudene pravilno, optimiziranje bremen storitve in določanje, kako pogosti so naši posodobitvi za preverjanje. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+Ta dogodek pomeni, da postopek preverjanja posodobitev ni vrnil nobene nove posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -7689,7 +8239,7 @@ Zbrana so ta polja:
 
 ### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
 
-Ta dnevnik dogodkov, če so bile vse aplikacije zaprte pred namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži, ali so bile pred namestitvijo zaprte vse aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so ta polja:
 
@@ -8022,6 +8572,8 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
+- **ScreenLocked** – ponazarja, ali se je prenos začel na zaklenjenem zaslonu
+
 - **ID** seje – identifikator za sejo
 
 
@@ -8152,6 +8704,8 @@ Zbrana so ta polja:
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ScreenLocked** – ponazarja, ali se je prenos začel na zaklenjenem zaslonu
 
 - **ID** seje – identifikator za sejo
 
@@ -9807,7 +10361,7 @@ Zbrana so ta polja:
 
 ### <a name="installstatus_daemon"></a>installstatus_daemon
 
-Ta dogodek zabeleži stanje stanja Microsoftovega daemona autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek zabeleži stanje Microsoftove strežniške storitve Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so ta polja:
 
@@ -9848,7 +10402,7 @@ Zbrana so ta polja:
 
 ### <a name="installstatus_helper"></a>installstatus_helper
 
-Ta dogodek zabeleži stanje stanja Microsoftovega orodja za samodejno posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek zabeleži stanje Microsoftovega orodja pomoči Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so ta polja:
 
@@ -11218,7 +11772,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
 
 - **AppversionLong** – različica programa
 
@@ -14397,7 +14951,7 @@ Zbrana so sledeča polja
 
 ### <a name="onenoteappprovisioningmovelocalnotebooktoonlinenotebookfailed"></a>OneNote.App.Omogočanje uporabe.MoveLocalNotebookToOnlineNotebookFailed
  
-Ta dogodek se zabeleži ob selitvi lokalnega zvezka na pogon.  Ta primer je specifičen za enotno prijavo uporabnika. Ko se uporabnik prijavi, je njihov lokalni zvezek prenesen v OneDrive shrambo storitve. 
+Ta dogodek se zabeleži ob selitvi lokalnega zvezka na pogon.  Ta primer je specifičen za enotno prijavo uporabnika. Ko se uporabnik prijavi, je njihov lokalni zvezek prenesen v shrambo storitve Onedrive. 
  
 Zbrana so sledeča polja:
  
@@ -14535,7 +15089,7 @@ Zbrana so sledeča polja:
 
 - **Storitev** – storitev sinhronizacije, ki jo je stranka uporabljala, ko je prišlo do napake (podedovana ali sodobna sinhronizacija)
 
-- **Oznaka** – oznaka (prepoznavna vrednost), ki predstavlja napako, ki jo je stranka naletela med postopkom sinhronizacije.
+- **Tag** – oznaka (prepoznavna vrednost), ki predstavlja napako, ki jo je stranka naletela med postopkom sinhronizacije
 
 ### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
  
@@ -14563,13 +15117,60 @@ Konfiguracija storitev ne zbira potrebnih dogodkov podatkov storitve.
 
 ## <a name="telemetry-events"></a>Dogodki telemetrije
 
+### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+
+Microsoft uporabi ta dogodek za pridobivanje stanja funkcije, odstotek uspešnosti ali napak za nakupe uporabnika, zagotovitev ustreznih naložb za izboljšanje izkušnje nakupa uporabnikov v mobilnih platformah.
+
+Zbrana so sledeča polja:
+
+- **OperationTimeInMs** – čas, zahtevan za dokončanje nakupa (v ms)
+
+- **PaywallOperationResult** – uspešno/koda napake/preklical uporabnik (neskončno oštevilčenje/celo število)
+
+- **PaywallOperationType** – vrsta delovanja plačilnega sistema (neskončno oštevilčenje/celo število)
+
+
 ### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
 
 Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek se uporablja za nadzor stanja pretoka telemetrije, ki ste ga dovolili, pri izkušnji prvega zagona. Zbiramo kodo, ki označuje vrsto možnosti zbirke diagnostičnih podatkov, ki jo je izbral uporabnik.
 
 Zbrana so naslednja polja:
 
- - **Data_EventId** – koda, ki označuje nastavitve za diagnostično zbirko podatkov, ki jo je izbral uporabnik.
+- **Data_EventId** – koda, ki označuje nastavitve za diagnostično zbirko podatkov, ki jo je izbral uporabnik.
+
+### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin. Uporablja se za lažje beleženje transakcij in omogočanje uporabe naročnine v bodoče in za notranje usklajevanje.
+
+Zbrana so sledeča polja:
+
+- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+
+- **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje omogočanje uporabe RFS.
+
+- **productId** – niz – ID trgovine z aplikacijami za izdelek, za katerega je bila podana zahteva
+
+- **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
+
+
+### <a name="officeiospaywallstorekitresponse"></a>Office.iOS.Paywall.StoreKit.Response
+
+Podatki so zbrani kot kritična tehnika telemetrije za beleženje rezultata poskusa nakupa, ki ga je ročno aktiviral uporabnik. Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin.
+
+Zbrana so sledeča polja:
+
+- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+
+- **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje trgovina z aplikacijami
+
+- **productId** – niz – velja samo za »MakePurchase«, »PendingPurchase«; ID trgovine z aplikacijami za izdelek, za katerega je bila ustvarjena zahteva.
+
+- **productsCount** – celo število – velja samo za »ProductsFetch«; število izdelkov, ki jih vrne trgovina.
+
+- **requestType** – niz – vrsta zahteve za StoreKit. Npr. »ProductsFetch«, »PendingPurchase«
+
+- **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
+
 
 ### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
 
