@@ -13,23 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: 6769c7a0bf254b5a33f92c5410ec517b7d568d8e
-ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
+ms.openlocfilehash: 2183863e1f7050d7d6ba838b639debf2b53ac9bd
+ms.sourcegitcommit: e1e4c309d62d0708404b7838c96416ce89f1b8b7
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46683200"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48328335"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
-> [!IMPORTANT]
-> Informacije v tem članku veljajo za različico 1904 ali novejšo različico sledeče Officeove odjemalske programske opreme, ki je nameščena v računalniku s sistemom Windows:
-> - Microsoft 365 aplikacije za velika podjetja (prej imenovan Office 365 ProPlus)
-> - Microsoft 365 aplikacije za podjetja (prej imenovan Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family ali druge Officeove različice, ki so del naročnine na Microsoft 365.
-> - Project in Visiove namizne aplikacije, ki so priložene nekaterim naročniškim paketom, kot je Project plan 5 ali Visio (paket 2).
->
-> Informacije veljajo tudi za različico 16.28 ali novejšo od teh aplikacij sistema Office za Mac: Excel, Outlook, OneNote, PowerPoint in Word.
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
@@ -41,12 +35,12 @@ Diagnostični podatki o uporabljeni programski opremi odjemalca za Office v rač
 
 Med izbirne diagnostične podatke sodijo podatki, ki jih zberemo o oblikah, ki jih uporabniki vstavijo v Wordove dokumente. Na podlagi pridobljenih podatkov lahko nato ponudimo boljše možnosti. Zbiramo na primer tudi podatke o tem, koliko časa preteče, preden je na zaslonu prikazan PowerPointov diapozitiv. Na podlagi teh podatkov lahko izboljšamo izkušnjo, če deluje počasi.
 
-Če želite izvedeti več informacij o diagnostičnih podatkih, preberite te članke:
+Več informacij o diagnostičnih podatkih najdete v teh člankih:
 
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
-- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Uporaba pregledovalnika diagnostičnih podatkov z Officeom](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
-Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
+Če ste skrbnik za svojo organizacijo, vas bo morda zanimal tudi za te članke:
 
 - [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
