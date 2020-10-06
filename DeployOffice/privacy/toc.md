@@ -21,3 +21,4 @@
 ### [Zahtevani podatki storitev](required-service-data.md)
 
 ## [Osnovne storitve](essential-services.md)
+## [Priporočila v izdelku](in-product-recommendations.md)
