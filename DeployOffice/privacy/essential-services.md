@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
-ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
+ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
+ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47941044"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "48367474"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -3312,7 +3312,7 @@ Zbrana so sledeča polja:
 
 - **EventDate** – časovni žig ponovitve dogodka 
 
-- **MostExplored** – celo število, ki označuje indeks elementa z največ preklopi na seznamu aplikacij M365 in njihovih funkcij
+- **MostExplored** – celo število, ki označuje indeks elementa z največ preklopi na seznamu aplikacij okolja Microsoft 365 in njihovih funkcij
 
 - **SessionID** – globalni enolični identifikator (GUID) za povezovanje dogodkov po seji
 
@@ -3845,7 +3845,7 @@ Zbrana so sledeča polja:
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Dogodki Microsoft AutoUpdate (MAU)
 
-### <a name="additionalappinfo_invalidpreference"></a>additionalappinfo_invalidpreference
+### <a name="additionalappinfoinvalidpreference"></a>additionalappinfo.invalidpreference
 
 Ta dogodek sporoča, da so izbrane napačne nastavitve za prikaz več informacij glede konca storitve za izdelek. Na osnovi teh informacij svetujemo strankam, da izberejo pravilne nastavitve za prikaz dodatnih informacij.
  
@@ -3881,9 +3881,9 @@ Zbrana so ta polja:
 
 - **Razlog** – podatki o neveljavnem vnosu v nastavitvah
 
-- **SessionId** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="appdelegate_launch"></a>appdelegate_launch
+### <a name="appdelegatelaunch"></a>appdelegate.launch
 
 Ta dogodek pomeni, da je prišlo do poskusa zagona aplikacije. Zabeležimo njegov rezultat (neuspeh ali uspeh). S tem dogodkom ugotovimo primere, v katerih MAU ne bo začela
 
@@ -3924,7 +3924,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="appdelegate_terminate"></a>appdelegate_terminate
+### <a name="appdelegateterminate"></a>appdelegate.terminate
 
 Ta dogodek pomeni, da je prišlo do uporabe ljubkega izhoda. Ta dogodek uporabljamo, da razločimo ljubke izhodne aplikacije iz neusmiljenih.
 
@@ -3965,7 +3965,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="appinstall_connecttoxpc"></a>appinstall_connecttoxpc
+### <a name="appinstallconnecttoxpc"></a>appinstall.connecttoxpc
 
 Ta dogodek pomeni, da je prišlo do napake pri vzpostavljanju povezave s pomočnikom MAU (komponenta, ki izvede namestitev programa).  V tem primeru se prikaže možna korupcija aplikacije MAU. Naprava ne bo mogla namestiti posodobitev.
 
@@ -4005,7 +4005,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="appinstall_logscanned"></a>appinstall_logscanned
+### <a name="appinstalllogscanned"></a>appinstall.logscanned
 
 Ta dogodek se uporablja za ugotavljanje, ali je bila dnevniška datoteka uspešno obdelana. Ta dogodek uporabljamo za zaznavanje in obdelavo morebitnih težav med namestitvijo aplikacije. 
  
@@ -4045,7 +4045,7 @@ Zbrana so ta polja:
 
 - **SessionId** – identifikator za sejo
 
-### <a name="appregistry_config"></a>appregistry_config
+### <a name="appregistryconfig"></a>appregistry.config
 
 Ta dogodek poroča o morebitnih napakah med nalaganjem informacij o registraciji aplikacije. Na osnovi tega poročila svetujemo skrbnikom za IT glede pravilne oblike zapisa za nastavitev registracij odjemalske aplikacije.
  
@@ -4085,7 +4085,7 @@ Zbrana so ta polja:
 
 - **SessionId** – identifikator za sejo
 
-### <a name="appregistry_info"></a>appregistry_info
+### <a name="appregistryinfo"></a>appregistry.info
 
 V tem primeru se prikaže sporočilo, da se je program zagnal. Ta dogodek uporabljamo za seznam programov, za katere lahko MAU nadzoruje posodobitve, število kopij, ki so na voljo, ter njihovo različico in lokacijo namestitve (privzeto ali drugo).
 
@@ -4126,7 +4126,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="appregistry_remove"></a>appregistry_remove
+### <a name="appregistryremove"></a>appregistry.remove
 
 Ta dogodek pomeni, da je prišlo do poskusa odstranitve aplikacije s seznama programov, ki jih upravlja MAU. Ta dogodek uporabljamo, da bi preverili, ali so le MAU – izdane aplikacije upravljane prek MAU (ne bi smelo biti tukaj prikazane aplikacije AppStore).
 
@@ -4167,7 +4167,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="catalog_errorsignature"></a>catalog_errorsignature
+### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
 Ta dogodek pomeni, da je prišlo do napake pri izvajanju preverjanja veljavnosti kode v datoteki s posodobitvijo zavarovanja.  Vsa zavarovanja, ki niso bile podpisane z vpisom kode, je treba upoštevati kot neveljavna.
 
@@ -4207,11 +4207,11 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="cloningtask_begin"></a>cloningtask_begin
+### <a name="cloningtaskbegin"></a>cloningtask.begin
 
-Ta dogodek označuje začetek opravila kloniranja pred posodobitvijo aplikacije. Ta dogodek uporabljamo v povezavi z dogodkom cloningtask_status, da ugotovimo število napak pri kloniranju, da bi ugotovili, ali je treba funkcijo kloniranja zadušiti v drugih kanalih za občinstvo.
+Ta dogodek označuje začetek opravila kloniranja pred posodobitvijo aplikacije. Ta dogodek uporabljamo v povezavi z dogodkom cloningtask.status, da ugotovimo število napak pri kloniranju za določanje, ali je treba funkcijo kloniranja zadušiti v drugih kanalih za občinstvo.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4250,7 +4250,7 @@ Zbrana so ta polja:
 - **UpdateID** – identifikator za posodobitev.
 
 
-### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
+### <a name="cloningtaskhelpertoolconnection"></a>cloningtask.helpertoolconnection
 
 Ta dogodek zabeleži težave z namestitvijo klona (tj. ne bomo se povezali z pomočnikom, da bi uporabili posodobitev, ali pa vzpostavili povezavo, vendar pomočnik ne more uporabiti posodobitve). Če smo zabeležili kartoteko, to pomeni, da ni bilo mogoče namestiti klona in se bo zdaj treba odkupiti posodobitvi na mestu uporabe.
 
@@ -4290,7 +4290,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="cloningtask_status"></a>cloningtask_status
+### <a name="cloningtaskstatus"></a>cloningtask.status
 
 Ta dogodek označuje stanje postopka kloniranja za aplikacijo, ki bo posodobljena. Ta dogodek uporabljamo za določitev stopnje uspešnosti in tudi za vrste napak, zaradi katerih pride do okvar. Ta dogodek se uporablja za ugotavljanje, ali bi morali funkcijo za kloniranje zadušiti v drugih kanalih za občinstvo.
 
@@ -4336,7 +4336,7 @@ Zbrana so naslednja polja:
 
 - **UpdateID** – identifikator za posodobitev.
 
-### <a name="cloningtask_status_finish"></a>cloningtask_status_finish
+### <a name="cloningtaskstatusfinish"></a>cloningtask.status.finish
 
 Ta dogodek poroča o dokončanju opravila »kloniranje«. Ta dogodek je del poročila o posodobitvenem lijaku in se uporablja za določitev stanja posodobitev aplikacije.
  
@@ -4377,7 +4377,7 @@ Zbrana so naslednja polja:
 - **UpdateID** – identifikator posodobitve.
 
 
-### <a name="configuration_channel"></a>configuration_channel
+### <a name="configurationchannel"></a>configuration.channel
 
 Ti zapisi dogodkov poskušajo zamenjati kanale (skupina občinstva) v MAU.  To uporabljamo za beleženje poskusov in rezultatov (uspeh ali neuspeh).
 
@@ -4418,7 +4418,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="configuration_metadata"></a>configuration_metadata
+### <a name="configurationmetadata"></a>configuration.metadata
 
 Ta dogodek se zabeleži vsakič, ko se MAU inicializira. To je MAU bitje srca vrsta dogodka
 
@@ -4458,7 +4458,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo.
 
-### <a name="configuration_systemversion"></a>configuration_systemVersion
+### <a name="configurationsystemversion"></a>configuration.systemVersion
 
 Ta dogodek označuje, da poskus pridobivanja različice sistema ni bil uspešen. Vsbuje tudi informacije o informacijah, ki ji je od sistema uspel zbrati Microsoft Auto Update (MAU). Ta dogodek uporabljamo za ugotavljanje, ali bi moral MAU poskrbeti za napake. Ne spreglejte, da se različica sistema uporablja za ugotavljanje, ali je mogoče posodobitev uporabiti za odjemalsko napravo.
  
@@ -4498,7 +4498,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
+### <a name="controlleralertmanagerreinstallresponse"></a>controller.alertmanager.reinstallresponse
 
 Ta dogodek pomeni, da je MAU padel v neuporabljivo/nepopravljivo stanje in ga je treba znova namestiti. V tem primeru je zahtevano sporočilo o nepopravljivi napaki in posredovanju uporabnika.
 
@@ -4539,7 +4539,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_alertmanager_tmpdiskfull"></a>controller_alertmanager_tmpdiskfull
+### <a name="controlleralertmanagertmpdiskfull"></a>controller.alertmanager.tmpdiskfull
 
 Ta dogodek pomeni, da je bila zaznana pomanjkljiva disketa. Posodobitev ne bo mogoče namestiti zaradi nezadostnega prostora na disku.
 
@@ -4580,7 +4580,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_alertmanager_tmpdiskfullretry"></a>controller_alertmanager_tmpdiskfullretry
+### <a name="controlleralertmanagertmpdiskfullretry"></a>controller.alertmanager.tmpdiskfullretry
 
 Ta dogodek pomeni, da je bil poskus vnovične namestitve posodobitve zagnan, ko je bil zaznan zadosten prostor na disku. Če ne morete namestiti posodobitev zaradi pomanjkljivega prostora na disku, znova ponovimo namestitev.
 
@@ -4621,7 +4621,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
     
 
-### <a name="controller_alertmanager_tmpdiskfullretrycancel"></a>controller_alertmanager_tmpdiskfullretrycancel
+### <a name="controlleralertmanagertmpdiskfullretrycancel"></a>controller.alertmanager.tmpdiskfullretrycancel
 
 Ta dogodek pomeni, da je bila zaznana funkcija preklica za vnovični poskus vnovičnega poizkusa. Ta dogodek uporabljamo, če želite ugotoviti, ali je bil nadomestni mehanizem dovolj za usmerjanje uporabnika skozi postopek posodabljanja, ko je bil zaznan zadosten disk.
 
@@ -4662,7 +4662,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
+### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
 Ta dogodek pomeni, da postopek preverjanja posodobitev ni vrnil nobene nove posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
@@ -4704,7 +4704,7 @@ Zbrana so sledeča polja:
 
     
 
-### <a name="controller_checkwindow_updatecheck"></a>controller_checkwindow_updatecheck
+### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
 Ta dogodek pomeni, da je bila izvedena preverjanje posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
@@ -4745,7 +4745,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
+### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
 Ta dogodek pomeni, da je bil postopek preverjanja posodobitev preklican (preklical ga je uporabnik ali sistem). Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
@@ -4786,7 +4786,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_checkwindow_updatecheckcanceluser"></a>controller_checkwindow_updatecheckcanceluser
+### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
 Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
 
@@ -4827,7 +4827,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_checkwindow_updatesfound"></a>controller_checkwindow_updatesfound
+### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
 Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
@@ -4868,7 +4868,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_checkwindow_uptodate"></a>controller_checkwindow_uptodate
+### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
 Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
@@ -4909,7 +4909,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_applaunchwithpendingupdate"></a>controller_downloadwindow_applaunchwithpendingupdate
+### <a name="controllerdownloadwindowapplaunchwithpendingupdate"></a>controller.downloadwindow.applaunchwithpendingupdate
 
 Ta dogodek pomeni, da se je zagnala aplikacija, ki je v postopku pridobivanja posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno. Če želite odpreti programe, ne morete začeti posodabljati. Programe je treba zapreti pred posodobitvijo.
 
@@ -4950,7 +4950,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_closeapplicationdialog"></a>controller_downloadwindow_closeapplicationdialog
+### <a name="controllerdownloadwindowcloseapplicationdialog"></a>controller.downloadwindow.closeapplicationdialog
 
 Ta dogodek pomeni, da se je zagnala aplikacija, ki je v postopku pridobivanja posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno. Če želite odpreti programe, ne morete začeti posodabljati. Programe je treba zapreti pred posodobitvijo.
 
@@ -4991,7 +4991,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_curtasknull"></a>controller_downloadwindow_curtasknull
+### <a name="controllerdownloadwindowcurtasknull"></a>controller.downloadwindow.curtasknull
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake med poskusom uporabe posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
@@ -5032,7 +5032,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_downloadcancel"></a>controller_downloadwindow_downloadcancel
+### <a name="controllerdownloadwindowdownloadcancel"></a>controller.downloadwindow.downloadcancel
 
 Ta dogodek pomeni, da je uporabnik preklical postopek prenosa.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
@@ -5073,7 +5073,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_downloadfailed"></a>controller_downloadwindow_downloadfailed
+### <a name="controllerdownloadwindowdownloadfailed"></a>controller.downloadwindow.downloadfailed
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene.
 
@@ -5114,7 +5114,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_downloadfailedok"></a>controller_downloadwindow_downloadfailedok
+### <a name="controllerdownloadwindowdownloadfailedok"></a>controller.downloadwindow.downloadfailedok
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve, uporabnik pa je bil obveščen. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in da so prenesene pravilno ter da je v primeru napake sporočilo vročeno uporabniku.
 
@@ -5155,7 +5155,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_downloadpathmissing"></a>controller_downloadwindow_downloadpathmissing
+### <a name="controllerdownloadwindowdownloadpathmissing"></a>controller.downloadwindow.downloadpathmissing
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. Ta dogodek pomeni, da manjka URL za prenos.
 
@@ -5196,7 +5196,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_downloadtasknull"></a>controller_downloadwindow_downloadtasknull
+### <a name="controllerdownloadwindowdownloadtasknull"></a>controller.downloadwindow.downloadtasknull
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. V tem primeru je navedeno, da je bila Microsoft autoupdate pozvana, da začasno ustavi ali nadaljuje prenos, vendar ne najde ustreznega upravitelja prenosov.
 
@@ -5237,7 +5237,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_filesignaturenotverified"></a>controller_downloadwindow_filesignaturenotverified
+### <a name="controllerdownloadwindowfilesignaturenotverified"></a>controller.downloadwindow.filesignaturenotverified
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. V tem dogodku je navedeno, da družba Microsoft autoupdate ni mogla preveriti, ali je Microsoft storitev objavila to posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. 
 
@@ -5278,7 +5278,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_installcomplete"></a>controller_downloadwindow_installcomplete
+### <a name="controllerdownloadwindowinstallcomplete"></a>controller.downloadwindow.installcomplete
 
 Ta dogodek pomeni, da je bila namestitev vseh posodobitev, ki jih ponuja Microsoft autoupdate, dokončana. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo in pravilno prenesene. 
 
@@ -5319,7 +5319,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_networkunavailablealert"></a>controller_downloadwindow_networkunavailablealert
+### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev.  Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5360,7 +5360,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
+### <a name="controllerdownloadwindownetworkunavailablealertok"></a>controller.downloadwindow.networkunavailablealertok
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5401,7 +5401,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
+### <a name="controllerdownloadwindownoconnectionok"></a>controller.downloadwindow.noconnectionok
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5442,7 +5442,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_repairrequired"></a>controller_downloadwindow_repairrequired
+### <a name="controllerdownloadwindowrepairrequired"></a>controller.downloadwindow.repairrequired
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je določeno, da je bila posodobitev dokončana, vendar je Microsoft autoupdate našel težavo s posodobljeno aplikacijo in popravilom. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5482,7 +5482,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="controller_downloadwindow_updateaborted"></a>controller_downloadwindow_updateaborted
+### <a name="controllerdownloadwindowupdateaborted"></a>controller.downloadwindow.updateaborted
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je prikazano, da je posodobitev že napredovala daemon in uporabnik je kliknil »v redu«, da prekinete prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5523,7 +5523,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_updatefailed"></a>controller_downloadwindow_updatefailed
+### <a name="controllerdownloadwindowupdatefailed"></a>controller.downloadwindow.updatefailed
 
 Ta dogodek pomeni, da je spodletela ena ali več posodobitev trenutnega paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5564,7 +5564,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_updatesuccessful"></a>controller_downloadwindow_updatesuccessful
+### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5605,7 +5605,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_userpaused"></a>controller_downloadwindow_userpaused
+### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5646,7 +5646,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_downloadwindow_userresumed"></a>controller_downloadwindow_userresumed
+### <a name="controllerdownloadwindowuserresumed"></a>controller.downloadwindow.userresumed
 
 Ta dogodek pomeni, da je bil postopek prenosa posodobitev uspešno vzpostavljen, ko je bil zaustavljen. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5687,7 +5687,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_mainwindow_setautomaticdownloadinstall"></a>controller_mainwindow_setautomaticdownloadinstall
+### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način samodejnega posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5728,7 +5728,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_mainwindow_setmanualchecking"></a>controller_mainwindow_setmanualchecking
+### <a name="controllermainwindowsetmanualchecking"></a>controller.mainwindow.setmanualchecking
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način ročne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5769,7 +5769,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_templateawindow_cancel"></a>controller_templateawindow_cancel
+### <a name="controllertemplateawindowcancel"></a>controller.templateawindow.cancel
 
 Ta dogodek pomeni, da se je uporabnik odločil, da prekliče ali prezre določeno opozorilno sporočilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5810,7 +5810,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_templateawindow_enroll"></a>controller_templateawindow_enroll
+### <a name="controllertemplateawindowenroll"></a>controller.templateawindow.enroll
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo za opozorilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5852,7 +5852,7 @@ Zbrana so ta polja:
 
 
 
-### <a name="controller_templateawindow_install"></a>controller_templateawindow_install
+### <a name="controllertemplateawindowinstall"></a>controller.templateawindow.install
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo, ki je povezano z uvedbo dejanja namestitve programske opreme. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5893,7 +5893,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_updatewindow_begindownloadingapps"></a>controller_updatewindow_begindownloadingapps
+### <a name="controllerupdatewindowbegindownloadingapps"></a>controller.updatewindow.begindownloadingapps
 
 Ta dogodek pomeni, da se je zagnala možnost» prenos za posodobitve v oknu posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5934,7 +5934,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_updatewindow_networkretry"></a>controller_updatewindow_networkretry
+### <a name="controllerupdatewindownetworkretry"></a>controller.updatewindow.networkretry
 
 Ta dogodek pomeni, da je bil vnovičen poskus sprožen na listu posodobitev zaradi napake v omrežju. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
@@ -5975,7 +5975,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_updatewindow_networkretrycancel"></a>controller_updatewindow_networkretrycancel
+### <a name="controllerupdatewindownetworkretrycancel"></a>controller.updatewindow.networkretrycancel
 
 Ta dogodek pomeni, da poskusa ni bilo mogoče sprožiti na listu posodobitev zaradi napake omrežja. V tem dogodku je navedeno, da je uporabnik izvoljen za preklic posodobitev, potem ko je opozorilo, da omrežje ne bo na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6016,7 +6016,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_updatewindow_networkunavailable"></a>controller_updatewindow_networkunavailable
+### <a name="controllerupdatewindownetworkunavailable"></a>controller.updatewindow.networkunavailable
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem nenadoma izgubljena. Ta dogodek pomeni, da Server ni dosegljiv, ko poskuša prenesti paket posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6057,7 +6057,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_updatewindow_noupdateavailable"></a>controller_updatewindow_noupdateavailable
+### <a name="controllerupdatewindownoupdateavailable"></a>controller.updatewindow.noupdateavailable
 
 Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki niso na voljo. Ta dogodek pomeni, da Microsoft autoupdate ne najde razpoložljivih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6098,7 +6098,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_updatewindow_noupdatestoselect"></a>controller_updatewindow_noupdatestoselect
+### <a name="controllerupdatewindownoupdatestoselect"></a>controller.updatewindow.noupdatestoselect
 
 V tem primeru se prikaže sporočilo o napaki, ki je povzročilo prazen seznam posodobitev. V tem primeru je navedeno, da Microsoft autoupdate prikazuje prazen list z posodobitvami. To se ne bi smelo zgoditi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6139,7 +6139,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="controller_updatewindow_updateavailable"></a>Controller_UpdateWindow_UpdateAvailable
+### <a name="controllerupdatewindowupdateavailable"></a>Controller.UpdateWindow.UpdateAvailable
 
 Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki so bile na voljo. To uporabljamo celo za določanje, ali so na voljo posodobitve, ki si jih lahko uporabnik ogleda, ne glede na to, ali so prikazane pravilne posodobitve ali ali je blokiranje posodobitev delovalo po pričakovanjih. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in za pomoč pri odpravljanju napak.
  
@@ -6180,7 +6180,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="controller_updatewindow_updateavailablecancel"></a>controller_updatewindow_updateavailablecancel
+### <a name="controllerupdatewindowupdateavailablecancel"></a>controller.updatewindow.updateavailablecancel
 
 Ta dogodek pomeni, da je uporabnik preklical, ko smo prikazali posodobitve na seznamu posodobitev lista. To uporabljamo celo zato, da razložimo razloge za to, da ne moremo posodobiti (tj. uporabnik bo preklical). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6221,7 +6221,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadactor_pause"></a>downloadactor_pause
+### <a name="downloadactorpause"></a>downloadactor.pause
 
 Ta dogodek pomeni, da je uporabnik izdal zahtevo za začasno ustavitev prenosa. To uporabljamo tudi zato, da bi razložili razloge za to, da posodobitve ne bodo dokončane. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6262,7 +6262,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadactor_redirect"></a>downloadactor_redirect
+### <a name="downloadactorredirect"></a>downloadactor.redirect
 
 V tem dogodku je navedeno, da je agent za prenose opozoril na končno točko, ki bo preusmerila naslov URL-ja za zahtevo prenosa. To funkcijo uporabljamo tudi zato, da razložimo razloge za napake pri prenosu in diagnosticiranje težav z zastopstvom. Prav tako lahko pomaga pri diagnosticiranju razlogov, zakaj so uporabniki opazili, da bodo namestili starejše gradnje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6303,7 +6303,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="downloadactor_resume"></a>downloadactor_resume
+### <a name="downloadactorresume"></a>downloadactor.resume
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6344,7 +6344,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadactor_resumeerror"></a>downloadactor_resumeerror
+### <a name="downloadactorresumeerror"></a>downloadactor.resumeerror
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6385,7 +6385,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="downloadactor_status"></a>downloadactor_status
+### <a name="downloadactorstatus"></a>downloadactor.status
 
 Ta dnevnik dogodkov, ki jih poskuša pridobiti datoteke zavarovanja, in njihov rezultat (uspeh ali neuspeh). Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Napačno datoteko, ki jo pridobivate, lahko pomeni težavo z ustvarjanjem/zavarovanjem. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6426,7 +6426,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_configuration"></a>downloadmanifest_configuration
+### <a name="downloadmanifestconfiguration"></a>downloadmanifest.configuration
 
 Ta dogodek vključuje sporočilo o napaki v zvezi s konfiguracijo storitve Microsoft Auto Update (MAU) – bodisi z izbiro strežnika po meri v nastavitvah bodisi z definicijami končnih točk v pomočniku za posodobitve v nameščenih komponentah storitve MAU. Ta dogodek uporabljamo za svetovanje skrbnikom za IT pri nastavljanju pravilnih končnih točk strežnika z manifestom.
  
@@ -6465,7 +6465,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
+### <a name="downloadmanifestdownloadcatalogfail"></a>downloadmanifest.downloadcatalogfail
 
 Ta dogodek je prišlo do napake pri prenosu. Datoteka, ki je ni prenesla, je zabeležena. Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6506,7 +6506,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
+### <a name="downloadmanifestdownloadcatalogsuccess"></a>downloadmanifest.downloadcatalogsuccess
 
 V tem primeru se prikaže sporočilo, da je bila datoteka uspešno prenesena. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6547,7 +6547,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_downloadfail"></a>downloadmanifest_downloadfail
+### <a name="downloadmanifestdownloadfail"></a>downloadmanifest.downloadfail
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu. Datoteka manifesta ali paketa, ki ni uspela prenesti, in podrobnosti o napakah, so zabeležene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6588,7 +6588,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_downloadfromurl"></a>downloadmanifest_downloadfromurl
+### <a name="downloadmanifestdownloadfromurl"></a>downloadmanifest.downloadfromurl
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6629,7 +6629,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_downloading"></a>downloadmanifest_downloading
+### <a name="downloadmanifestdownloading"></a>downloadmanifest.downloading
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6670,7 +6670,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_downloadsuccess"></a>downloadmanifest_downloadsuccess
+### <a name="downloadmanifestdownloadsuccess"></a>downloadmanifest.downloadsuccess
 
 V tem primeru se prikaže sporočilo, da je prišlo do nanašanja datoteke XML in paketa. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6711,7 +6711,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="downloadmanifest_downloadurl"></a>downloadmanifest_downloadurl
+### <a name="downloadmanifestdownloadurl"></a>downloadmanifest.downloadurl
 
 V tem primeru se prikaže sporočilo, da je prišlo do zahteve za prenos datoteke. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6752,7 +6752,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_filenameerror"></a>downloadmanifest_filenameerror
+### <a name="downloadmanifestfilenameerror"></a>downloadmanifest.filenameerror
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6790,10 +6790,10 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **SessionId** – identifikator seje.
+- **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
+### <a name="downloadmanifestinvalidhash"></a>downloadmanifest.invalidhash
 
 V tem primeru je spodletela varnostna veljavnost naših datotek. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6834,7 +6834,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_missingdaemon"></a>downloadmanifest_missingdaemon
+### <a name="downloadmanifestmissingdaemon"></a>downloadmanifest.missingdaemon
 
 Ta dogodek pomeni, da je uporabnik poskusil preveriti, ali so na voljo posodobitve, in odkrili smo, da MAU manjka osrednje komponente (Daemon). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6875,7 +6875,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_signatureerror"></a>downloadmanifest_signatureerror
+### <a name="downloadmanifestsignatureerror"></a>downloadmanifest.signatureerror
 
 Ta dogodek pomeni, da preverjanje podpisa kode ni uspelo za paket. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6916,7 +6916,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmanifest_status"></a>downloadmanifest_status
+### <a name="downloadmanifeststatus"></a>downloadmanifest.status
 
 Ta dogodek zabeleži povzeto seštevanje poskusov/napak, ki so jih prizadele med postopkom prenosa za datoteke manifesta in paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6957,7 +6957,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmgr_downloadend"></a>downloadmgr_downloadend
+### <a name="downloadmgrdownloadend"></a>downloadmgr.downloadend
 
 Ta dogodek zabeleži oznako, ki označuje, da je proces prenosa končan sam. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -6998,7 +6998,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="downloadmgr_downloadstart"></a>downloadmgr_downloadstart
+### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
 Ta dogodek zabeleži posodobitev, ki je na voljo za prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7038,7 +7038,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="downloadtask_downloadbegin"></a>downloadtask_downloadbegin
+### <a name="downloadtaskdownloadbegin"></a>downloadtask.downloadbegin
 
 Ta dogodek označi začetek dejavnosti prenosa za posodobitev aplikacije. Ta je del posodobitvenega lijaka in se uporablja za določitev stanja posodobitev aplikacije.
  
@@ -7087,7 +7087,7 @@ Zbrana so ta polja:
 - **UpdateVersion** – različica aplikacije po posodobitvi
 
 
-### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
+### <a name="downloadtaskdownloadfailure"></a>downloadtask.downloadfailure
 
 V tem dnevniku dogodkov je prišlo do napake pri prenosu datoteke paketa. Zabeležimo pot posodobitve in napako. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7134,7 +7134,7 @@ Zbrana so ta polja:
 - **UpdateID** – identifikator posodobitve, ki jo nalagate.
 
 
-### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
+### <a name="downloadtaskdownloadsuccess"></a>downloadtask.downloadsuccess
 
 Uspešen prenos datoteke paketa. Zabeležimo uporabljeno pot posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7178,7 +7178,7 @@ Zbrana so ta polja:
 
 - **UpdateID** – identifikator posodobitve, ki ste jo naložili.
 
-### <a name="downloadtask_updatertypeerror"></a>downloadtask_updatertypeerror
+### <a name="downloadtaskupdatertypeerror"></a>downloadtask.updatertypeerror
 
 Ta dogodek poroča o vrsti napake programa za posodabljanje v preneseni datoteki manifesta. Ta dogodek uporabimo za obveščanje lastnika o datoteki manifesta, da je mogoče popraviti napako.
  
@@ -7222,7 +7222,7 @@ Zbrana so ta polja:
 
 - **UpdateURL** – URL posodobitvenega paketa, ki ga je treba uporabiti
 
-### <a name="downloadtask_urlerror"></a>downloadtask_urlerror
+### <a name="downloadtaskurlerror"></a>downloadtask.urlerror
 
 Ta dogodek poroča o napaki v URL-ju, določenem v preneseni datoteki manifesta. Ta dogodek uporabimo za obveščanje lastnika o datoteki manifesta, da je mogoče popraviti napako.
  
@@ -7264,7 +7264,7 @@ Zbrana so ta polja:
 
 - **UpdateURL** – URL posodobitvenega paketa, ki ga je treba uporabiti
 
-### <a name="fba_changelastupdate"></a>fba_changelastupdate
+### <a name="fbachangelastupdate"></a>fba.changelastupdate
 
 Ta dogodek poroča o tem, kdaj je Microsoft Auto Update (MAU) preveril, ali so na voljo posodobitve. Ta dogodek uporabimo za odpravljanje napak, ko za določeno napravo že dlje časa ni bila na voljo nobena posodobitev.
 
@@ -7303,7 +7303,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_checkforupdate"></a>fba_checkforupdate
+### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
 Ta dogodek pomeni, da se v ozadju preverjajo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7344,7 +7344,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_checkforupdateskip"></a>fba_checkforupdateskip
+### <a name="fbacheckforupdateskip"></a>fba.checkforupdateskip
 
 Ta dogodek pomeni, da je bil postopek za ozadje preskočen zaradi odprtja MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7385,7 +7385,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_forceinstallmsgsent"></a>fba_forceinstallmsgsent
+### <a name="fbaforceinstallmsgsent"></a>fba.forceinstallmsgsent
 
 Ta dogodek označuje, da je v uporabniškem vmesniku zagnana vsiljena posodobitev na silo. Ta dogodek je del lijaka in se uporablja za določitev stanja funkcije vsiljene posodobitve.
 
@@ -7423,7 +7423,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_forceupdatecheck"></a>fba_forceupdatecheck
+### <a name="fbaforceupdatecheck"></a>fba.forceupdatecheck
 
 Ta dogodek označuje, da je preverjanje posodobitev vsiljeno. Ta dogodek uporabimo, da ugotovimo število vsiljenih preverjanj posodobitev, ki se zgodijo zunaj običajnega cikla preverjanja posodobitev.
 
@@ -7463,7 +7463,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_guiappopen"></a>fba_guiappopen
+### <a name="fbaguiappopen"></a>fba.guiappopen
 
 Ta dogodek označuje, da se uporabniški vmesnik zaganja v načinu samodejnega preverjanja, ker je trenutno odprta aplikacija, za katero se uveljavlja posodobitev. Ta dogodek se uporablja za ugotavljanje števila zagonov uporabniškega vmesnika v načinu samodejnega preverjanja za razvoj funkcij v prihodnosti.
 
@@ -7503,7 +7503,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_installpending"></a>fba_installpending
+### <a name="fbainstallpending"></a>fba.installpending
 
 Ta dogodek označuje, da je Microsoft Auto Update (MAU) poslal obvestilo glede posodobitev, ki čakajo. Ta dogodek se uporablja za določitev števila posodobitev, ki se začnejo z uporabniškimi obvestili, in za izboljšanje uporabniške izkušnje z minimizacijo prekinitev za uporabnika v prihodnjih izdajah.
 
@@ -7543,7 +7543,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_launch"></a>fba_launch
+### <a name="fbalaunch"></a>fba.launch
 
 Ta dogodek označuje zagon programa Microsoft Update Assistant z metodo zagona. Ta dogodek se uporablja za zgotavljanje, ali se Microsoft Update Assistant zaganja v nepravilnem kontekstu.
 
@@ -7583,7 +7583,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_launchbyagent"></a>fba_launchbyagent
+### <a name="fbalaunchbyagent"></a>fba.launchbyagent
 
 Ta dogodek označuje, da je Microsoft Update Assistant zagnan prek agenta za zagon. Ta dogodek se uporablja za določitev števila zagonov programa Microsoft Update Assistant v uporabniškem vmesniku za razvoj v prihodnje.
 
@@ -7621,9 +7621,9 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="fba_launchfromprotocol"></a>fba_launchfromprotocol
+### <a name="fbalaunchfromprotocol"></a>fba.launchfromprotocol
 
 Ta dogodek označuje, da je Microsoft Update Assistant zagnan prek protokola URL. Ta dogodek se uporablja za določitev števila zagonov programa Microsoft Update Assistant prek protokola URL za razvoj v prihodnje.
 
@@ -7661,9 +7661,9 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="fba_launchgui"></a>fba_launchgui
+### <a name="fbalaunchgui"></a>fba.launchgui
 
 Ta dogodek označuje, da Microsoft Update Assistant poskuša zagnati grafični uporabniški vmesnik (GUI). Ta dogodek se uporablja za določitev števila zagonov uporabniškega vmesnika, ki se inicira v programu Microsoft Update Assistant, tza pomoč pri razvoju v prihodnje, vključno z minimizacijo prekinitev za uporabnika zaradi pogostih zagonov uporabniškega vmesnika.
 
@@ -7704,7 +7704,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_launchstatus"></a>fba_launchstatus
+### <a name="fbalaunchstatus"></a>fba.launchstatus
 
 Ta dogodek se odjavi pri zagonu daemona, medtem ko poskuša zagnati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -7749,7 +7749,7 @@ Zbrana so ta polja:
 - **Success** – znakovni niz tipa Boolean, ki označuje, ali je bil uspešno izveden proces daemona MAU.
 
 
-### <a name="fba_mausilentupdate"></a>fba_mausilentupdate
+### <a name="fbamausilentupdate"></a>fba.mausilentupdate
 
 Ta dogodek označuje, da Microsoft Update Assistant inicira tihe zagone. Ta dogodek se uporablja za določitev števila posodobitev, ki se uporabijo brez posredovanja uporabnika, da bi pospešili izboljšave uporabniške izkušnje.
 
@@ -7789,7 +7789,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_moreinfofromappnotification"></a>fba_moreinfofromappnotification
+### <a name="fbamoreinfofromappnotification"></a>fba.moreinfofromappnotification
 
 Ta dogodek sporoča informacijo, da je registrirana aplikacija usmerjena preko programa Microsoft Auto Update (MAU). Na primer, sporočila o koncu storitve so potisnjena z obvestilom programa MAU. Ta dogodek uporabimo za določitev števila naprav, kjer je prikazano to določeno obvestilo, da določite uspešnost razširjanja informacij.
 
@@ -7831,7 +7831,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_multipledaemon"></a>fba_multipledaemon
+### <a name="fbamultipledaemon"></a>fba.multipledaemon
 
 Ta dogodek označuje, da je zaznan drug primerek programa Microsoft Update Assistant in da bo trenutni primerek prekinjen. Ta dogodek bomo uporabili za določitev števila naprav, ki poskušajo zagnati več primerkov programa Update Assistant, in za zasnovo rešitve, če bo potrebno.
 
@@ -7871,7 +7871,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_nofifyappclosed"></a>fba_nofifyappclosed
+### <a name="fbanofifyappclosed"></a>fba.nofifyappclosed
 
 Ta dogodek označuje, da Microsoft Update Assistant pošilja obvestila za čakajoče posodobitve, ker ni odprta nobena registrirana aplikacija in se posodobitve lahko nadaljujejo brez prekinitev za uporabnika. Ta dogodek uporabljamo za določitev števila posodobitev, ki jih je mogoče uporabiti, vendar mora v ta namen ukrepati uporabnik. Ta dogodek se uporablja za pospešitev izboljšanja uporabniške izkušnje.
 
@@ -7911,7 +7911,7 @@ Zbrana so sledeča polja:
     
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_nofifyappopen"></a>fba_nofifyappopen
+### <a name="fbanofifyappopen"></a>fba.nofifyappopen
 
 Ta dogodek označuje, da Microsoft Update Assistant pošilja obvestila za čakajoče posodobitve, ker so odprte registrirane aplikacije, za nadaljevanje posodabljanja pa je treba zapreti aplikacije.  Ta dogodek uporabljamo za določitev števila posodobitev, v zvezi s katerimi mora posredovati uporabnik.  Ta dogodek se uporablja za pospešitev izboljšanja uporabniške izkušnje.
 
@@ -7949,9 +7949,9 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="fba_settimerfail"></a>fba_settimerfail  
+### <a name="fbasettimerfail"></a>fba.settimerfail  
 
 Ta dogodek označuje poskus nastavitve časovnika za sprožanje prihodnje posodobitve, če ta ni uspela. Ta dogodek je kritičen in ga uporabljamo za ugotavljanje števila neuspešnih poskusov, da poiščemo rešitev, če je potrebno.
 
@@ -7992,7 +7992,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
+### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
 Ta dogodek pomeni, da se uporabnik odloča v tihih posodobitvah. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8032,7 +8032,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
+### <a name="fbaskipforcedupdate"></a>fba.skipforcedupdate
 
 Ta dogodek pomeni, da je preverjanje prisilnega posodabljanja preskočeno zaradi odprtih programov. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8073,7 +8073,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_startforcedupdate"></a>fba_startforcedupdate
+### <a name="fbastartforcedupdate"></a>fba.startforcedupdate
 
 Ta dogodek pomeni, da je prišlo do poskusa uporabe prisilne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8114,7 +8114,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_terminate"></a>fba_terminate
+### <a name="fbaterminate"></a>fba.terminate
 
 Ta dogodek pomeni, da se je MAU daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8155,7 +8155,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fba_updatefound"></a>fba_updatefound
+### <a name="fbaupdatefound"></a>fba.updatefound
 
 Ta dogodek pomeni, da je MAU daemon našel razpoložljive posodobitve, ki so na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8196,7 +8196,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="fba_updatetimer"></a>fba_updatetimer
+### <a name="fbaupdatetimer"></a>fba.updatetimer
 
 V tem primeru je navedeno, da je proces Daemona Microsoft autoupdate postal aktiven za preverjanje, ali so na voljo posodobitve, ko ste spali za določeno časovno obdobje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8237,7 +8237,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
+### <a name="fbasilentupdateallappsclosed"></a>fbasilentupdate.allappsclosed
 
 Ta dogodek beleži, ali so bile pred namestitvijo zaprte vse aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8278,7 +8278,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_applaunchafterupdate"></a>fbasilentupdate_applaunchafterupdate
+### <a name="fbasilentupdateapplaunchafterupdate"></a>fbasilentupdate.applaunchafterupdate
 
 Ta dogodek se prijavi v poskus ponovne uvedbe programa po tihi posodobitvi in načinu posodabljanja (klon ali ne). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8323,7 +8323,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_applaunchwileinstalling"></a>fbasilentupdate_applaunchwileinstalling
+### <a name="fbasilentupdateapplaunchwileinstalling"></a>fbasilentupdate.applaunchwileinstalling
 
 Ko namestite posodobitev, se prijavite, ko ste zagnali aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8364,7 +8364,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_appneedtoclose"></a>fbasilentupdate_appneedtoclose
+### <a name="fbasilentupdateappneedtoclose"></a>fbasilentupdate.appneedtoclose
 
 Ko se začne postopek posodabljanja, se prijavite, da je bila odprta aplikacija za posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8405,7 +8405,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
+### <a name="fbasilentupdateappterminationeventreceived"></a>fbasilentupdate.appterminationeventreceived
 
 V tem primeru je navedeno, da je storitev Microsoft Autoupdate prejela dogodek družbe Apple o prekinitvi aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8452,7 +8452,7 @@ Zbrana so ta polja:
 - **AppID** – identifikator posodobitve programa.
 
 
-### <a name="fbasilentupdate_clientsession"></a>FBASilentUpdate_ClientSession
+### <a name="fbasilentupdateclientsession"></a>FBASilentUpdate.ClientSession
 
 Ta dogodek se uporablja za izračun metrike stanja kritičnih posodobitev za Microsoft Auto Update (MAU). Ta dogodek nam omogoča, da označimo, katera posodobitvena seja (za prenos ali za namestitev) se trenutno obdeluje v zaledju.
  
@@ -8493,7 +8493,7 @@ Zbrana so ta polja:
 - **SessionId** – identifikator za sejo
 
 
-### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
+### <a name="fbasilentupdatecodesignfailure"></a>fbasilentupdate.codesignfailure
 
 Ta dogodek zabeleži rezultat preverjanja sooblikovanja, ko uporabite posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8531,10 +8531,10 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **SessionId** – identifikator seje.
+- **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
+### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
 Ta dogodek pomeni, da je posodobitev prenesena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8577,7 +8577,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_downloadfailed"></a>fbasilentupdate_downloadfailed
+### <a name="fbasilentupdatedownloadfailed"></a>fbasilentupdate.downloadfailed
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8626,7 +8626,7 @@ Zbrana so ta polja:
 - **UpdateName** – Ime posodobitve aplikacije.
 
 
-### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
+### <a name="fbasilentupdatedownloadinbackground"></a>fbasilentupdate.downloadinbackground
 
 V tem primeru je navedeno, da začenjamo prenos nabora posodobitev v ozadju (zabeležimo število posodobitev, ki so bile sočasno prenesene). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8667,7 +8667,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_downloadingrepairupdate"></a>fbasilentupdate_downloadingrepairupdate
+### <a name="fbasilentupdatedownloadingrepairupdate"></a>fbasilentupdate.downloadingrepairupdate
 
 Ta dogodek pomeni, da smo sprožili poskus prenosa popravila neuspele posodobitve. Zabeležimo različico in posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8710,7 +8710,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_duplicatedownloadattempted"></a>fbasilentupdate_duplicatedownloadattempted
+### <a name="fbasilentupdateduplicatedownloadattempted"></a>fbasilentupdate.duplicatedownloadattempted
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Naenkrat bi morali le prenesti eno posodobitev za dani program. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8751,7 +8751,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_installattemptfailed"></a>fbasilentupdate_installattemptfailed
+### <a name="fbasilentupdateinstallattemptfailed"></a>fbasilentupdate.installattemptfailed
 
 Ta dogodek pomeni, da je poskus namestitve posodobitve (različica) spodletel. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8792,7 +8792,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_installcomplete"></a>fbasilentupdate_installcomplete
+### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
 Ta dogodek pomeni, da so vse posodobitve v paketu dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8833,7 +8833,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_installed"></a>fbasilentupdate_installed
+### <a name="fbasilentupdateinstalled"></a>fbasilentupdate.installed
 
 V tem primeru je bil uspešno nameščen posamezen posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8874,7 +8874,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="fbasilentupdate_installing"></a>fbasilentupdate_installing
+### <a name="fbasilentupdateinstalling"></a>fbasilentupdate.installing
 
 V tem primeru je bil uspešno nameščena posamezna posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -8914,7 +8914,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fbasilentupdate_installstatus"></a>fbasilentupdate_installstatus
+### <a name="fbasilentupdateinstallstatus"></a>fbasilentupdate.installstatus
 
 Ta dogodek sporoči stanje opravila posodobitve aplikacije. Ta dogodek je del posodobitvenega lijaka za aplikacijo in se uporablja za spremljanje stanja posodobitev aplikacije.
 
@@ -8964,7 +8964,7 @@ Zbrana so naslednja polja:
 
 - **UpdatePkg** – ime uporabljenega paketa posodobitve
 
-### <a name="fbasilentupdate_notificationerror"></a>fbasilentupdate_notificationerror
+### <a name="fbasilentupdatenotificationerror"></a>fbasilentupdate.notificationerror
 
 Ta dogodek sporoča napako, do katere je prišlo med poskusom pošiljanja uporabniškega obvestila. Ta dogodek se bo uporabil za odpravljanje vzroka za napako in ukrepanje.
 
@@ -9010,7 +9010,7 @@ Zbrana so sledeča polja:
 
 - **Type** – vrsta obvestila
 
-### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
+### <a name="fbasilentupdatenotificationremoved"></a>fbasilentupdate.notificationremoved
 
 V tem primeru se prikaže sporočilo, da posodobitev, ki je bila blokirana, ni več blokirana. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9051,7 +9051,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_queueinstall"></a>fbasilentupdate_queueinstall
+### <a name="fbasilentupdatequeueinstall"></a>fbasilentupdate.queueinstall
 
 Ta dogodek pomeni, da bo posodobitev v čakalni vrsti za tihi namestitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9092,7 +9092,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_requiredappsclosed"></a>fbasilentupdate_requiredappsclosed
+### <a name="fbasilentupdaterequiredappsclosed"></a>fbasilentupdate.requiredappsclosed
 
 Ko je program, ki ima čakajočo posodobitev, končan, se prijavite. To pomeni čas, ko se lahko postopek dejanske namestitve izvede. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9132,7 +9132,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="fbasilentupdate_timerforapptermination"></a>FBASilentUpdate_TimerForAppTermination
+### <a name="fbasilentupdatetimerforapptermination"></a>FBASilentUpdate.TimerForAppTermination
 
 Ta dogodek se uporablja za izračun metrike stanja kritičnih posodobitev za Microsoft Auto Update (MAU). Ta dogodek nam omogoča, da sledimo dogodku zapiranja odprte aplikacije in času, ko je bila odprta.
  
@@ -9172,7 +9172,7 @@ Zbrana so ta polja:
 
 - **SessionId** – identifikator za sejo
 
-### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
+### <a name="fbasilentupdateupdateavailablenotification"></a>fbasilentupdate.updateavailablenotification
 
 V tem dogodku je navedeno, da je sproženo obvestilo o posodobitvi na voljo. Če želite, da se prikaže sporočilo o posodobitvi, morate zagotoviti, da pride do povratnega toka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9213,7 +9213,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_userclicknotification"></a>fbasilentupdate_userclicknotification
+### <a name="fbasilentupdateuserclicknotification"></a>fbasilentupdate.userclicknotification
 
 V tem dogodku je navedeno, da je uporabnik kliknil vsebino, ki je na voljo v obvestilu o posodobitvi, in Microsoft autoupdate GUI. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9254,7 +9254,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_userselectinstalllater"></a>fbasilentupdate_userselectinstalllater
+### <a name="fbasilentupdateuserselectinstalllater"></a>fbasilentupdate.userselectinstalllater
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9295,7 +9295,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="fbasilentupdate_userselectinstallnow"></a>fbasilentupdate_userselectinstallnow
+### <a name="fbasilentupdateuserselectinstallnow"></a>fbasilentupdate.userselectinstallnow
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -9335,7 +9335,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="gui_dashboardview_appisopendialog_display"></a>gui_dashboardview_appisopendialog_display 
+### <a name="guidashboardviewappisopendialogdisplay"></a>gui.dashboardview.appisopendialog.display 
 
 Ta dogodek označuje, da uporabniški vmesnik prikazuje pogovorno okno za zaprtje odprte aplikacije, da bi se nadaljevala posodobitev aplikacije. Ta dogodek se uporablja za ugotavljanje števila posodobitev z zakasnitvijo, da bi zagotovili prihodnje izboljšave, s katerimi bodo prekinitve uporabnika minimizirane.
 
@@ -9379,7 +9379,7 @@ Zbrana so naslednja polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="gui_dashboardview_appisopendialogbutton_clicked"></a>gui_dashboardview_appisopendialogbutton_clicked
+### <a name="guidashboardviewappisopendialogbuttonclicked"></a>gui.dashboardview.appisopendialogbutton.clicked
 
 Ta dogodek označuje, ali bo posodobitev aplikacije preskočena ali pa se po prikazu odprtega pogovornega okna izvaja drug poskus. Ta dogodek se uporablja za določitev števila posodobitev, ki bodo preskočene in za prihodnje izboljšave, da se kar najbolj zmanjša število prekinitev za uporabnika.
 
@@ -9425,7 +9425,7 @@ Zbrana so naslednja polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="gui_dashboardview_updateinprogressdialog_display"></a>gui_dashboardview_updateinprogressdialog_display
+### <a name="guidashboardviewupdateinprogressdialogdisplay"></a>gui.dashboardview.updateinprogressdialog.display
 
 Ta dogodek v dnevnik zabeleži, ali je bilo uporabnikom prikazano pogovorno okno, ki označuje, da se posodobitev že izvaja.
  
@@ -9463,7 +9463,7 @@ Zbrana so ta polja:
 
 - **SessionId** – identifikator za sejo
 
-### <a name="gui_dashboardview_updatemodebutton_clicked"></a>gui_dashboardview_updatemodebutton_clicked
+### <a name="guidashboardviewupdatemodebuttonclicked"></a>gui.dashboardview.updatemodebutton.clicked
 
 Ta dogodek označuje, da je bil v kontrolniku uporabniškega vmesnika spremenjen način posodobitve. Ta dogodek se uporablja za določitev števila naprav, ki prehajajo z enega načina na drugega in za pomoč pri ugotavljanju, zakaj se stranke zavračajo samodejne posodobitve. 
 
@@ -9501,9 +9501,9 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="gui_feedbackwindow_buttonclicked"></a>gui_feedbackwindow_buttonclicked
+### <a name="guifeedbackwindowbuttonclicked"></a>gui.feedbackwindow.buttonclicked
 
 Ta dogodek sporoča, ali so povratne informacije poslane ali pa preklicane pred pošiljanjem. Ta dogodek se uporablja za pomoč pri ugotavljanju količine povratnih informacij, poslanih za določeno različico izdaje. To je v pomoč pri zgodnji osamitvi morebitnih težav.
 
@@ -9543,7 +9543,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="gui_preferenceview_consentsheet_display"></a>gui_preferenceview_consentsheet_display
+### <a name="guipreferenceviewconsentsheetdisplay"></a>gui.preferenceview.consentsheet.display
 
 Ta dogodek označuje, da je prikazan list s soglasjem za navedeni kanal, če je na voljo. Ta dogodek se uporablja za določitev števila naprav, ki se na novo včlanijo v veljavni kanal za občinstvo (Insider Fast/Insider Slow). Ta dogodek uporabljamo tudi, da zagotovimo, da prikaz pogovornega okna s soglasjem deluje in da so za uporabnike prikazani pogoji uporabe.
  
@@ -9583,7 +9583,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="gui_preferenceview_consentsheet_licenseerror"></a>gui_preferenceview_consentsheet_licenseerror
+### <a name="guipreferenceviewconsentsheetlicenseerror"></a>gui.preferenceview.consentsheet.licenseerror
 
 Ta dogodek sporoča napako, do katere je prišlo med poskusom prikaza pogovornega okna s soglasjem. Ta dogodek je kritičen in se uporablja za odpravo morebitnih napak, do katerih pride zaradi zamenjave izdelka, če to velja.
 
@@ -9625,7 +9625,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="gui_preferenceview_switchchannel"></a>gui_preferenceview_switchchannel
+### <a name="guipreferenceviewswitchchannel"></a>gui.preferenceview.switchchannel
 
 Ta dogodek poroča o prehajanju med kanali, ki jih je izbral uporabnik. Ta dogodek se uporablja za pomoč pri ugotavljanju, zakaj stranke zavrnejo sodelovanje v kanalih za preskuševalce.  
 
@@ -9667,7 +9667,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="gui_updatemanager_applaunchduringupdate"></a>gui_updatemanager_applaunchduringupdate
+### <a name="guiupdatemanagerapplaunchduringupdate"></a>gui.updatemanager.applaunchduringupdate
 
 Ta dogodek sporoča, da je bila aplikacija zagnana, med tem ko se je posodabljala, in da bo Microsoft AutoUpdate prekinil zagnano aplikacijo. Ne pozabite, da zagon aplikacije, ko se ta posodablja, lahko povzroči poškodbe. S tem dogodkom zagotovimo, da zagnana aplikacija ne vpliva na postopek posodobitve, preden je pripravljen na uporabo.
  
@@ -9711,7 +9711,7 @@ Zbrana so naslednja polja:
 
 - **UpdateID** – identifikator posodobitve aplikacije.
 
-### <a name="gui_updatemanager_downloadupdateforapp"></a>gui_updatemanager_downloadupdateforapp
+### <a name="guiupdatemanagerdownloadupdateforapp"></a>gui.updatemanager.downloadupdateforapp
 
 Ta dogodek poroča o stanju dokončanja prenosa za posodobitev. S tem dogodkom zagotovimo ustrezno stanje postopka posodobitve in sledenje oz. obdelavo točke z napako.
 
@@ -9760,7 +9760,7 @@ Zbrana so sledeča polja:
 - **UpdateName** – ime posodobitve.
 
 
-### <a name="gui_updatemanager_error"></a>gui_updatemanager_error
+### <a name="guiupdatemanagererror"></a>gui.updatemanager.error
 
 Ta dogodek je povratno sporočilo o morebitnih napakah, do katerih je prišlo med posodobitvami aplikacije. To lahko označuje napako v zaporedju izvajanja programa Microsoft Auto Update (MAU).  S tem poročilom uporabimo posodobitve za program MAU, da poskrbimo za splošne scenarije z napakami.
 
@@ -9802,7 +9802,7 @@ Zbrana so ta polja:
 
 - **Success** – znakovni niz tipa Boolean, ki označuje, ali je bila aplikacija uspešno zaustavljena.
 
-### <a name="gui_updatemanager_installcleanupforapp"></a>gui_updatemanager_installcleanupforapp
+### <a name="guiupdatemanagerinstallcleanupforapp"></a>gui.updatemanager.installcleanupforapp
 
 Ta dogodek označuje, da so začasne datoteke, ustvarjene med nameščanjem aplikacije, uspešno počiščene. Ta je del posodobitvenega lijaka, ki se uporabi za določitev ustreznosti stanja posodobitve aplikacije.
  
@@ -9847,7 +9847,7 @@ Zbrana so ta polja:
 - **UpdateID** – identifikator posodobitve.
 
 
-### <a name="gui_updatemanager_installsuccessforapp"></a>gui_updatemanager_installsuccessforapp
+### <a name="guiupdatemanagerinstallsuccessforapp"></a>gui.updatemanager.installsuccessforapp
 
 Ta dogodek označuje uspešno posodobitev aplikacije. Ta dogodek je del posodobitvenega lijaka, ki se uporabi za določitev ustreznosti stanja posodobitve.
  
@@ -9891,7 +9891,7 @@ Zbrana so naslednja polja:
 
 - **UpdateID** – identifikator posodobitve.
 
-### <a name="gui_updatemanager_installupdateforapp"></a>gui_updatemanager_installupdateforapp
+### <a name="guiupdatemanagerinstallupdateforapp"></a>gui.updatemanager.installupdateforapp
 
 Ta dogodek označuje začetek dejanskega postopka namestitve za posodobitev aplikacije. Ta dogodek je del posodobitvenega lijaka, ki se uporabi določitev ustreznosti stanja posodobitve.
  
@@ -9933,7 +9933,7 @@ Zbrana so sledeča polja:
 
 - **UpdateID** – identifikator posodobitve.
 
-### <a name="gui_updatemanager_queueinstallforapp"></a>gui_updatemanager_queueinstallforapp
+### <a name="guiupdatemanagerqueueinstallforapp"></a>gui.updatemanager.queueinstallforapp
 
 Ta dogodek označuje začetek dejanskega postopka namestitve za posodobitev aplikacije. Ta dogodek je del posodobitvenega lijaka, ki se uporabi določitev ustreznosti stanja posodobitve.
  
@@ -9975,7 +9975,7 @@ Zbrana so sledeča polja:
 
 - **UpdateID** – identifikator posodobitve.
 
-### <a name="gui_updatemanager_relaunchapp"></a>gui_updatemanager_relaunchapp
+### <a name="guiupdatemanagerrelaunchapp"></a>gui.updatemanager.relaunchapp
 
 Ta dogodek zabeleži v dnevnik, ali so bile aplikacije po posodobitvah uspešno znova zagnane.
  
@@ -10021,7 +10021,7 @@ Zbrana so naslednja polja:
 
 - **UpdateName** – ime posodobitve.
 
-### <a name="installdata_checkrunning"></a>installdata_checkrunning
+### <a name="installdatacheckrunning"></a>installdata.checkrunning
 
 Ta dogodek zabeleži rezultat pregleda med aplikacijami, ki jih je treba namestiti, in ali bo poskus namestitve izveden glede na odpiranje aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10062,7 +10062,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installdata_cleanup"></a>installdata_cleanup
+### <a name="installdatacleanup"></a>installdata.cleanup
 
 Datoteke paketa morate odstraniti po namestitvi. Ta dogodek zabeleži primere, v katerih jih ne moremo odstraniti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10103,7 +10103,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installedapp_invalidbundle"></a>installedapp_invalidbundle
+### <a name="installedappinvalidbundle"></a>installedapp.invalidbundle
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni mogel pridobiti informacij o paketu za registrirano aplikacijo na dani poti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10144,7 +10144,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installedapp_invalidpreference"></a>installedapp_invalidpreference
+### <a name="installedappinvalidpreference"></a>installedapp.invalidpreference
 
 Ta dogodek zabeleži primere, v katerih uporabnik preference vsebuje neveljaven vnos programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10185,7 +10185,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installedapp_nilbundleid"></a>installedapp_nilbundleid
+### <a name="installedappnilbundleid"></a>installedapp.nilbundleid
 
 Ta dogodek zabeleži primere, v katerih ID snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10226,7 +10226,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installedapp_nilbundlename"></a>installedapp_nilbundlename
+### <a name="installedappnilbundlename"></a>installedapp.nilbundlename
 
 Ta dogodek zabeleži primere, v katerih ime snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10267,7 +10267,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installedapp_sendcoreappleevent"></a>installedapp_sendcoreappleevent
+### <a name="installedappsendcoreappleevent"></a>installedapp.sendcoreappleevent
 
 Ta dogodek označuje, da Microsoft Auto Update (MAU) pošilja dogodek Apple v registrirano aplikacijo, da prekine aplikacijo, da bi se lahko nadaljevala čakajoča posodobitev aplikacije. Ta dogodek se trenutno uporablja za pomoč pri prihodnjih izboljšavah, s katerimi bodo kar najbolj zmanjšane prekinitve med posodobitvami aplikacij. 
 
@@ -10318,7 +10318,7 @@ Zbrana so ta polja:
 - **Success** – označuje, ali je zadevna aplikacija sporočila uspešno izvedbo postopka
 
     
-### <a name="installstatus_codesign"></a>installstatus_codesign
+### <a name="installstatuscodesign"></a>installstatus.codesign
 
 Ta dogodek zabeleži stanje binarne funkcije za sonačrtovanje OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10359,7 +10359,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installstatus_daemon"></a>installstatus_daemon
+### <a name="installstatusdaemon"></a>installstatus.daemon
 
 Ta dogodek zabeleži stanje Microsoftove strežniške storitve Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10400,7 +10400,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installstatus_helper"></a>installstatus_helper
+### <a name="installstatushelper"></a>installstatus.helper
 
 Ta dogodek zabeleži stanje Microsoftovega orodja pomoči Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10441,7 +10441,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_applaunched"></a>installupdatestask_applaunched
+### <a name="installupdatestaskapplaunched"></a>installupdatestask.applaunched
 
 V tem dogodku je navedeno, da je Microsoft autoupdate zaznal izdajo programa, ki je blokirana, vendar ni našla ustreznega namestitvenega programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10482,7 +10482,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_applaunchwithpendingupdate"></a>installupdatestask_applaunchwithpendingupdate
+### <a name="installupdatestaskapplaunchwithpendingupdate"></a>installupdatestask.applaunchwithpendingupdate
 
 V tem primeru je navedeno, da je Microsoft autoupdate zaznal zagon programa za aplikacijo z čakajočo posodobitvijo. Zagnana aplikacija bo prekinjena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10523,7 +10523,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_codesignverificationfail"></a>installupdatestask_codesignverificationfail
+### <a name="installupdatestaskcodesignverificationfail"></a>installupdatestask.codesignverificationfail
 
 Ta dogodek pomeni, da preverjanje sooblikovanja ni uspelo za posodobitev programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10564,7 +10564,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_codesignverificationstart"></a>installupdatestask_codesignverificationstart
+### <a name="installupdatestaskcodesignverificationstart"></a>installupdatestask.codesignverificationstart
 
 Ta dogodek pomeni, da se je preverjanje sooblikovanja začelo z posodobitvijo aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10605,7 +10605,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_codesignverificationsuccess"></a>installupdatestask_codesignverificationsuccess
+### <a name="installupdatestaskcodesignverificationsuccess"></a>installupdatestask.codesignverificationsuccess
 
 V tem primeru se prikaže sporočilo o napaki pri preverjanju, ali je bila posodobitev programa posodobljena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10646,7 +10646,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_failsilentinstall"></a>installupdatestask_failsilentinstall
+### <a name="installupdatestaskfailsilentinstall"></a>installupdatestask.failsilentinstall
 
 Ta dnevnik dogodkov ne pride med uporabo tihih posodobitev in ali je bila to klonirana ali navadna namestitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10687,7 +10687,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_multiplerelocatablepackage"></a>installupdatestask_multiplerelocatablepackage
+### <a name="installupdatestaskmultiplerelocatablepackage"></a>installupdatestask.multiplerelocatablepackage
 
 V tem dogodku je navedeno, da je Microsoft autoupdate našel več primerkov vnosa aplikacije za dani paket posodobitev, ki je bil naložen manifestu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in za pomoč pri odpravljanju napak.
  
@@ -10728,7 +10728,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_removeclone"></a>installupdatestask_removeclone
+### <a name="installupdatestaskremoveclone"></a>installupdatestask.removeclone
 
 Ta dogodek pomeni, da je bil odstranjen klon. Odstranitev klona je izpolnjena, če je bil postopek namestitve postopka kloniranja končan ali ko se začne nov proces, v računalniku pa je na voljo starejša klonirana različica. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10769,7 +10769,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_retryfail"></a>installupdatestask_retryfail
+### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
 Ta dogodek pomeni, da so prišlo do napak med postopkom vnovičnega popravka namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10810,7 +10810,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10851,7 +10851,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10893,7 +10893,7 @@ Zbrana so ta polja:
 
     
 
-### <a name="installupdatestask_retryresponse"></a>installupdatestask_retryresponse
+### <a name="installupdatestaskretryresponse"></a>installupdatestask.retryresponse
 
 V tem dnevniku dogodkov, ki jih vnovičen poskus ne deluje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10934,7 +10934,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
+### <a name="installupdatestaskretrysuccess"></a>installupdatestask.retrysuccess
 
 Ta dogodek zabeleži uspešno namestitev posodobitve po vnovičnem poskusu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -10975,7 +10975,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_setreopengui"></a>installupdatestask_setreopengui
+### <a name="installupdatestasksetreopengui"></a>installupdatestask.setreopengui
 
 V tem primeru je navedeno, ali je nastavitev možnosti za vnovično odpiranje uporabniškega vmesnika» GUI «uspešna. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11016,7 +11016,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="installupdatestask_updatestatus"></a>installupdatestask_updatestatus
+### <a name="installupdatestaskupdatestatus"></a>installupdatestask.updatestatus
 
 Ta dogodek sporoča stanje namestitvenega opravila. Ta dogodek je del poročila o posodobitvenem lijaku in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
@@ -11070,8 +11070,58 @@ Zbrana so sledeča polja:
 
 - **UpdatePkg** – ime uporabljenega paketa posodobitve
 
+### <a name="lifecycleperiodiccheck"></a>Lifecycle.periodiccheck
 
-### <a name="msupdate_cli_eventhandler"></a>msupdate_cli_eventhandler
+Ta dogodek redno poroča o stanju postopka »MicrosoftAutoUpdate«. Poroča o vrsti preostalih opravil, katerih dokončanje čaka postopek za pomočnika za posodobitev, v primeru uporabniškega vmesnika pa poroča o tem, ali bo postopek prekinjen zaradi nedejavnosti uporabnika.  Ta dogodek se uporablja za določanje, zakaj pomočnik za posodobitev ne more dokončati posodobitev, ter ali bo uporabniški vmesnik prekinjen zaradi nedejavnosti uporabnika.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost občinstva
+
+- **dataCollectionDialog** – logična vrednost, ki označuje, ali postopek čaka na odziv uporabnika v pogovornem oknu za zbiranje podatkov
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave.
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **forcedUpdateDialog** – logična vrednost, ki označuje, ali postopek čaka na odziv uporabnika v pogovornem oknu za vsiljeno posodobitev
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **isBusy** – logična vrednost, ki označuje, ali je postopek zaseden z aktivno posodobitvijo
+
+- **isInactive** – logična vrednost, ki označuje, ali postopek čaka na dejanje uporabnika daljše časovno obdobje
+
+- **isWaiting** – logična vrednost, ki označuje, ali postopek čaka na odziv uporabnika na obvestilo
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+- **SessionLength** – dolžina seje trenutnega postopka v sekundah
+
+
+### <a name="msupdateclieventhandler"></a>msupdate.cli.eventhandler
 
 Ta dogodek se uporablja za izračun uporabe različnih tipov programskega vmesnika API ukazne vrstice programa Microsoft Auto Update (MAU).
 
@@ -11114,7 +11164,7 @@ Zbrana so naslednja polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
+### <a name="msupdateclieventhandlerapplyupdatesappids"></a>msupdate.cli.eventhandler.applyupdates.appids
 
 V tem dogodku je navedeno, da je bil ukaz CLI (vmesnik odjemalca) izdan tako, da je uporabljal posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11155,7 +11205,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
+### <a name="msupdateclieventhandlerconfig"></a>msupdate.cli.eventhandler.config
 
 V tem primeru je navedeno, da je modul vmesnika ukazne vrstice Microsoft Autoupdate prejel dogodek družbe Apple, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11196,7 +11246,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
+### <a name="msupdateclieventhandlerupdates"></a>msupdate.cli.eventhandler.updates
 
 V tem dogodku je navedeno, da je modul vmesnika ukazne vrstice za samodejno posodabljanje sistema Microsoft prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11237,7 +11287,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="msupdate_monitor_progress_downloaded"></a>msupdate_monitor_progress_downloaded
+### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
 Ta dogodek pomeni, da so bile posodobitve prenesene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11278,7 +11328,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="msupdate_monitor_progress_failure"></a>msupdate_monitor_progress_failure
+### <a name="msupdatemonitorprogressfailure"></a>msupdate.monitor.progress.failure
 
 Ta dogodek zabeleži seznam posodobitev, ki niso bile uporabljene v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11319,7 +11369,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="msupdate_monitor_progress_finished"></a>msupdate_monitor_progress_finished
+### <a name="msupdatemonitorprogressfinished"></a>msupdate.monitor.progress.finished
 
 Ta dogodek zabeleži seznam posodobitev, ki so bile dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11360,7 +11410,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="msupdate_monitor_progress_queued"></a>msupdate_monitor_progress_queued
+### <a name="msupdatemonitorprogressqueued"></a>msupdate.monitor.progress.queued
 
 Ta dogodek zabeleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -11442,7 +11492,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="sauforcedupdate_autodismiss"></a>sauforcedupdate_autodismiss
+### <a name="sauforcedupdateautodismiss"></a>sauforcedupdate.autodismiss
 
 Ta dogodek označuje, da je bilo prikazano pogovorno okno vsiljene posodobitve opuščeno zaradi nedejavnosti uporabnika. Ta dogodek se uporablja za določitev števila vsiljenih posodobitev, ne da bi uporabniki posredovali kakršen koli vnos v prikazano obvestilo. Ta dogodek se uporablja za izboljšanje uporabniškega vmesnika, da bi kar najbolj zmanjšali prekinitve.
 
@@ -11480,9 +11530,9 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **SessionId** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_close"></a>sauforcedupdate_close
+### <a name="sauforcedupdateclose"></a>sauforcedupdate.close
 
 Ta dogodek označuje, da bo uporabnik zaprl okno vsiljene posodobitve. Ta dogodek se uporablja za določitev števila vsiljenih posodobitev, ki so odložene zaradi uporabniškega dejanja. Ta dogodek se uporablja za izboljšanje uporabniškega vmesnika, da bi kar najbolj zmanjšali prekinitve. 
 
@@ -11522,7 +11572,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_completeautodismiss"></a>sauforcedupdate_completeautodismiss
+### <a name="sauforcedupdatecompleteautodismiss"></a>sauforcedupdate.completeautodismiss
 
 Ta dogodek označuje, da se prikazano pogovorno okno vsiljene posodobitve iz funkcije z določenim rokom opušča zaradi nedejavnosti uporabnika. Ta dogodek se uporablja za določitev števila vsiljenih posodobitev, ne da bi uporabniki posredovali kakršen koli vnos v prikazano obvestilo. Ta dogodek se uporablja za izboljšanje uporabniškega vmesnika, da bi kar najbolj zmanjšali prekinitve za funkcijo z določenim rokom.
 
@@ -11562,7 +11612,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_completeclose"></a>sauforcedupdate_completeclose
+### <a name="sauforcedupdatecompleteclose"></a>sauforcedupdate.completeclose
 
 Ta dogodek označuje uspešno dokončanje vsiljene posodobitve. Ta dogodek se uporablja za pomoč pri določitvi ustreznosti stanja funkcije vsiljene posodobitve. 
 
@@ -11602,7 +11652,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_display"></a>sauforcedupdate_display
+### <a name="sauforcedupdatedisplay"></a>sauforcedupdate.display
 
 Ta dogodek označuje, da je prikazano pogovorno okno vsiljene posodobitve.  Ta dogodek je del poročila o vsiljenem posodobitvenem lijaku in se uporablja za določitev ustreznosti stanja posodobitve aplikacije.
 
@@ -11642,7 +11692,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_displayfinalhour"></a>sauforcedupdate_displayfinalhour
+### <a name="sauforcedupdatedisplayfinalhour"></a>sauforcedupdate.displayfinalhour
 
 Ta dogodek označuje, da je prikazano pogovorno okno zadnje ure za vsiljeno posodobitev. Ta dogodek je del poročila o vsiljenem posodobitvenem lijaku in ga uporabljamo za določitev ustreznosti stanja vsiljene funkcije posodobitve.
 
@@ -11682,7 +11732,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_done"></a>sauforcedupdate_done
+### <a name="sauforcedupdatedone"></a>sauforcedupdate.done
 
 Ta dogodek označuje, da je vsiljena posodobitev uspešno dokončana. Ta dogodek je del poročila o vsiljenem posodobitvenem lijaku in se uporablja za določitev ustreznosti stanja vsiljene funkcije posodobitve. 
 
@@ -11722,7 +11772,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_enabled"></a>sauforcedupdate_enabled
+### <a name="sauforcedupdateenabled"></a>sauforcedupdate.enabled
 
 Ta dogodek se sproži, ko Microsoft Auto Update (MAU) določi, da je vsiljena posodobitev veljavna.  Ta dogodek se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
@@ -11764,7 +11814,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_forcedupdatedismiss"></a>sauforcedupdate_forcedupdatedismiss
+### <a name="sauforcedupdateforcedupdatedismiss"></a>sauforcedupdate.forcedupdatedismiss
 
 Ta dogodek označuje, da je se prikazano pogovorno okno z zadnjo uro vsiljene posodobitve opušča zaradi nedejavnosti uporabnika. Ta dogodek se uporablja za določitev števila vsiljenih posodobitev, ne da bi uporabniki posredovali kakršen koli vnos v prikazano obvestilo. Ta dogodek se uporablja za izboljšanje uporabniškega vmesnika, da bi kar najbolj zmanjšali prekinitve. 
 
@@ -11804,7 +11854,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_forcequitandupdatenow"></a>sauforcedupdate_forcequitandupdatenow
+### <a name="sauforcedupdateforcequitandupdatenow"></a>sauforcedupdate.forcequitandupdatenow
 
 Ta dogodek označuje začetek vsiljene posodobitve, ki jo je iniciral uporabnik. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
@@ -11844,7 +11894,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo 
 
-### <a name="sauforcedupdate_forceterminate"></a>sauforcedupdate_forceterminate
+### <a name="sauforcedupdateforceterminate"></a>sauforcedupdate.forceterminate
 
 Ta dogodek označuje začetek vsiljene posodobitve, pri čemer se aplikacijo na silo zaustavi.  Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve.
 
@@ -11884,7 +11934,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_quitandupdatenow"></a>sauforcedupdate_quitandupdatenow
+### <a name="sauforcedupdatequitandupdatenow"></a>sauforcedupdate.quitandupdatenow
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo zaprl aplikacijo in uporabil posodobitev. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
@@ -11924,7 +11974,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_snooze"></a>sauforcedupdate_snooze
+### <a name="sauforcedupdatesnooze"></a>sauforcedupdate.snooze
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo odložil vsiljeno posodobitev. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
@@ -11964,7 +12014,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_terminate"></a>sauforcedupdate_terminate
+### <a name="sauforcedupdateterminate"></a>sauforcedupdate.terminate
 
 Ta dogodek označuje začetek vsiljene posodobitve, pri čemer se aplikacijo zaustavlja. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve.
 
@@ -12004,7 +12054,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="sauforcedupdate_updatenow"></a>sauforcedupdate_updatenow
+### <a name="sauforcedupdateupdatenow"></a>sauforcedupdate.updatenow
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo aplikacijo posodobil v tem trenutku.  Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve.
 
@@ -12086,7 +12136,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="update_applaunchdetected"></a>update_applaunchdetected
+### <a name="updateapplaunchdetected"></a>update.applaunchdetected
 
 Ta dogodek označuje, da je bila aplikacija zagnana med izvajanjem posodobitve Ta dogodek se uporablja za določitev števila aplikacij, ki so zagnane med posodabljanjem in za izboljšanje uporabniške izkušnje v prihodnjih izdajah.
 
@@ -12130,7 +12180,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_appterminationreceived"></a>update_appterminationreceived
+### <a name="updateappterminationreceived"></a>update.appterminationreceived
 
 Ta dogodek označuje, da je aplikacija z blokirano posodobitvijo zaustavljena in ali lahko Microsoft Auto Update (MAU) nadaljuje s posodobitvijo. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
@@ -12176,7 +12226,7 @@ Zbrana so naslednja polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_blockedappclosed"></a>update_blockedappclosed
+### <a name="updateblockedappclosed"></a>update.blockedappclosed
 
 Ta dogodek označuje, da je Microsoft Auto Update (MAU) zaznal, da je aplikacija z blokirano posodobitvijo zaprta in da lahko nadaljuje s posodobitvijo. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12220,7 +12270,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_blockedinstallskip"></a>update_blockedinstallskip
+### <a name="updateblockedinstallskip"></a>update.blockedinstallskip
 
 Ta dogodek zabeleži v dnevnik napako, do katere je prišlo pri poskusu, da bi se posodobitev aplikacije preskočila. Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak.  
 
@@ -12262,7 +12312,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_clientsession"></a>update_clientsession
+### <a name="updateclientsession"></a>update.clientsession
 
 Ta dogodek je sporočen, ko se spremeni stanje odjemalske naprave, zaradi česar Microsoft Update Assistant začasno ustavi ali nadaljuje postopek posodobitve. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12302,7 +12352,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_download_begin"></a>update_download_begin 
+### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Ta dogodek označuje začetek postopka posodobitve aplikacije. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12348,7 +12398,7 @@ Zbrana so sledeča polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="update_download_finish"></a>update_download_finish
+### <a name="updatedownloadfinish"></a>update.download.finish
 
 Ta dogodek označuje dokončanje posodobitvene faze za posodobitev aplikacije. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.  
 
@@ -12394,7 +12444,7 @@ Zbrana so sledeča polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="update_downloadresume"></a>update_downloadresume
+### <a name="updatedownloadresume"></a>update.downloadresume
 
 Ta dogodek sporoča napako, do katere je prišlo med poskusom nadaljevanja začasno ustavljenega opravila prenosa. Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak. 
 
@@ -12438,7 +12488,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_error"></a>update_error
+### <a name="updateerror"></a>update.error
 
 Ta dogodek sporoča napako, do katere je prišlo med poskusom posodobitve registrirane aplikacije.  Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak. 
 
@@ -12480,7 +12530,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_installcleanupforapp"></a>update_installcleanupforapp
+### <a name="updateinstallcleanupforapp"></a>update.installcleanupforapp
 
 Ta dogodek označuje, da se je namestitev posodobitve dokončala in da Microsoft Auto Update (MAU) izvaja postopek čiščenja.  Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
@@ -12524,7 +12574,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_installupdateforapp"></a>update_installupdateforapp
+### <a name="updateinstallupdateforapp"></a>update.installupdateforapp
 
 Ta dogodek se uporablja za poročanje o začetku postopka namestitve posodobitve. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12570,7 +12620,7 @@ Zbrana so sledeča polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="update_installupdateforapp_success"></a>update_installupdateforapp_success
+### <a name="updateinstallupdateforappsuccess"></a>update.installupdateforapp.success
 
 Ta dogodek sporoča stanje namestitvenega opravila. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12616,7 +12666,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_installvariance"></a>Update_InstallVariance
+### <a name="updateinstallvariance"></a>Update.InstallVariance
 
 Ta dogodek se uporablja za izračun metrike ustreznosti stanja kritične posodobitve za MAU. Ta dogodek nam omogoča, da določimo metriko uspeha za funkcijo prednostne namestitve in preverimo integriteto funkcije.
  
@@ -12656,7 +12706,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_multipleappupdates"></a>update_multipleappupdates 
+### <a name="updatemultipleappupdates"></a>update.multipleappupdates 
 
 Ta dogodek označuje, da v ozadju poteka posodobitev več aplikacij. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
@@ -12696,7 +12746,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_previousidnil"></a>update_previousidnil
+### <a name="updatepreviousidnil"></a>update.previousidnil
 
 Ta dogodek označuje, da se prenaša paket posodobitev za popravilo, vendar ni na voljo nobenih informacij o predhodnem prenosu. Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak. 
 
@@ -12738,7 +12788,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="update_queueinstallforapp"></a>update_queueinstallforapp 
+### <a name="updatequeueinstallforapp"></a>update.queueinstallforapp 
 
 Ta dogodek označuje, da je preneseni posodobitveni paket vstavljen v vrsto za namestitev.  Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije.
 
@@ -12784,7 +12834,7 @@ Zbrana so sledeča polja:
 
 - **UpdateName** – ime posodobitve, kot je prikazano v preneseni datoteki manifesta
 
-### <a name="update_relaunchafterupdate"></a>update_relaunchafterupdate 
+### <a name="updaterelaunchafterupdate"></a>update.relaunchafterupdate 
 
 Ta dogodek označuje, da je posodobitev aplikacije dokončana in da se znova zaganja. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
 
@@ -12828,7 +12878,7 @@ Zbrana so sledeča polja:
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
-### <a name="update_timerforapptermination"></a>update_timerforapptermination 
+### <a name="updatetimerforapptermination"></a>update.timerforapptermination 
 
 Ta dogodek označuje začetek/konec časovnika za preverjanje stanja aplikacije. Ta dogodek je sporočen v paru in se uporablja za določanje, da so vsi predmeti časovnika odstranjeni, ko se posodobitev aplikacije nadaljuje.
 
@@ -12869,7 +12919,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatecore_appregistration"></a>updatecore_appregistration
+### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
 Ta dnevnik dogodkov poskuša registrirati aplikacijo in rezultat/razlog. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -12910,7 +12960,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatecore_loadinglaunchagent"></a>updatecore_loadinglaunchagent
+### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
 Ta dogodek pomeni, da je bil naložen agent za zagon. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -12950,7 +13000,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatecore_runnstaskcommand"></a>updatecore_runnstaskcommand
+### <a name="updatecorerunnstaskcommand"></a>updatecore.runnstaskcommand
 
 Ta dogodek sporoči napako med poskusom zagona opravila. Ta dogodek je kritičen in se uporablja za preiskavo sporočenih napak.  
 
@@ -12990,7 +13040,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
+### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
 Ta dnevnik dogodkov se je prizadela, ko je dosegel dostop do programa CDN. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13030,7 +13080,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatecore_server_nullurl"></a>updatecore_server_nullurl
+### <a name="updatecoreservernullurl"></a>updatecore.server.nullurl
 
 Ta dogodek sporoči napako, ki označuje, da določenega strežnika ni bilo mogoče doseči. Ta dogodek se uporablja za določitev stopnje neuspešnih posodobitev zaradi težav z omrežjem. 
 
@@ -13070,7 +13120,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
+### <a name="updatefilterhelpercannotretrievebuilddate"></a>updatefilterhelper.cannotretrievebuilddate
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku ne bi mogli pridobiti datuma iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13111,7 +13161,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefilterhelper_invalidappid"></a>updatefilterhelper_invalidappid
+### <a name="updatefilterhelperinvalidappid"></a>updatefilterhelper.invalidappid
 
 Ta dogodek sporoči napako, ki označuje, da ni bilo mogoče najti nobenih ujemajočih se datotek manifesta z ID-jem aplikacije, pridobljenim iz spletnega odziva. Ta dogodek se uporablja za preiskovanje sporočene napake.
 
@@ -13151,7 +13201,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefilterhelper_invalidappidfromwebservices"></a>updatefilterhelper_invalidappidfromwebservices
+### <a name="updatefilterhelperinvalidappidfromwebservices"></a>updatefilterhelper.invalidappidfromwebservices
 
 Ta dogodek sporoči napako, ki označuje, da ID aplikacije, pridobljen iz spletnega odziva, ni v pričakovani obliki zapisa. Ta dogodek se uporablja za preiskovanje sporočene napake.
 
@@ -13191,7 +13241,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
+### <a name="updatefilterhelperinvalidresponsefromupdatefiltering"></a>updatefilterhelper.invalidresponsefromupdatefiltering
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13232,7 +13282,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefilterhelper_missingbuilddate"></a>updatefilterhelper_missingbuilddate
+### <a name="updatefilterhelpermissingbuilddate"></a>updatefilterhelper.missingbuilddate
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13273,7 +13323,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefilterhelper_updatebypassedoldage"></a>updatefilterhelper_updatebypassedoldage
+### <a name="updatefilterhelperupdatebypassedoldage"></a>updatefilterhelper.updatebypassedoldage
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. Tukaj se prijavite storitev, ki je obšla zaradi starega datuma posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13314,7 +13364,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_check_error"></a>updatefinder_check_error
+### <a name="updatefindercheckerror"></a>updatefinder.check.error
 
 Ta dogodek sporoči napako, do katere je prišlo med preverjanjem posodobitev. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake. 
 
@@ -13357,7 +13407,7 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
  
-### <a name="updatefinder_check_start"></a>updatefinder_check_start
+### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
 Ta dnevnik dogodkov vsakič, ko začnete preverjanje delovanja posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13398,7 +13448,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_check_status"></a>updatefinder_check_status
+### <a name="updatefindercheckstatus"></a>updatefinder.check.status
 
 S tem dogodkom združite stanje preveri, ali so na primer operacije za preverjanje posodabljanja (lij od iskanja do prenašanja). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13439,7 +13489,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_check_updatefound"></a>updatefinder_check_updatefound
+### <a name="updatefindercheckupdatefound"></a>updatefinder.check.updatefound
 
 Ko se prikaže potrditveno polje preveri, ali so na voljo posodobitve, se prijavite vsakič, ko se prikaže. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13480,7 +13530,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_check_updatenotfound"></a>updatefinder_check_updatenotfound
+### <a name="updatefindercheckupdatenotfound"></a>updatefinder.check.updatenotfound
 
 Ko preverite, ali so na voljo posodobitve, se prijavite vsakič, ko preverimo, ali je prišlo do nobenih posodobitev, ki jih ni bilo mogoče najti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13521,7 +13571,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_check_uptodate"></a>updatefinder_check_uptodate
+### <a name="updatefindercheckuptodate"></a>updatefinder.check.uptodate
 
 Ko preverimo, ali so na voljo posodobitve, se prijavite vsakič, ko se posodobitve ne ponudijo zaradi vseh programov, ki so že posodobljeni. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13562,7 +13612,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_offerupdates_invalidappid"></a>updatefinder_offerupdates_invalidappid
+### <a name="updatefinderofferupdatesinvalidappid"></a>updatefinder.offerupdates.invalidappid
 
 Ta dogodek sporoči napako med poskusom ugotavljanja, ali je posodobitev veljavna. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.  
 
@@ -13604,7 +13654,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
+### <a name="updatefinderofferupdatesminoscheckfail"></a>updatefinder.offerupdates.minoscheckfail
 
 Ko smo blokirali posodobitev, se prijavite vsakič, ko je prišlo do neizpolnjevanja zahtev za OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13644,7 +13694,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefinder_offerupdates_missingtrigger"></a>updatefinder_offerupdates_missingtrigger
+### <a name="updatefinderofferupdatesmissingtrigger"></a>updatefinder.offerupdates.missingtrigger
 
 Ta dogodek sporoči napako med poskusom ocene sprožilcev v prenesenem manifestu za posodobitev aplikacije. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.  
 
@@ -13686,7 +13736,7 @@ Zbrana so naslednja polja:
 
 - **Triggers** – slovar sprožilcev, najdenih v manifestu
 
-### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
+### <a name="updatefinderofferupdatesnullbundleforappid"></a>updatefinder.offerupdates.nullbundleforappid
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni uspel naložiti informacij o paketu za ID aplikacije, ki je naveden v preneseni datoteki manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13727,7 +13777,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_offerupdates_updaterulematched"></a>updatefinder_offerupdates_updaterulematched
+### <a name="updatefinderofferupdatesupdaterulematched"></a>updatefinder.offerupdates.updaterulematched
 
 Ta dogodek pomeni, da je bila za aplikacijo in osnovni načrt najdena posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13768,7 +13818,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="updatefinder_registeredapps"></a>updatefinder_registeredapps
+### <a name="updatefinderregisteredapps"></a>updatefinder.registeredapps
 
 Prijavimo aplikacije, ki so nameščene/registrirane/pod nadzorom MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13808,7 +13858,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatefinder_suite_invalidsuiteversion"></a>updatefinder_suite_invalidsuiteversion
+### <a name="updatefindersuiteinvalidsuiteversion"></a>updatefinder.suite.invalidsuiteversion
 
 Ta dogodek sporoči napako v zvezi z različico zbirke med poskusom ugotavljanja, ali je posodobitev veljavna. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.
 
@@ -13848,7 +13898,7 @@ Zbrana so sledeča polja:
 
 - **Suite** – ime zbirke, ki se upošteva
 
-### <a name="updatefinder_suite_keyvaluemissing"></a>updatefinder_suite_keyvaluemissing
+### <a name="updatefindersuitekeyvaluemissing"></a>updatefinder.suite.keyvaluemissing
 
 Ta dogodek sporoči napako med poskusom dodajanja aplikacije v zbirko. Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.
 
@@ -13891,7 +13941,7 @@ Zbrana so sledeča polja:
 - **Suite** – dodati bo treba ime zbirke
 
     
-### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
+### <a name="updatefindersuitemissingcollateral"></a>updatefinder.suite.missingcollateral
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi pomanjkanja zavarovanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13932,7 +13982,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_suite_staleversion"></a>updatefinder_suite_staleversion
+### <a name="updatefindersuitestaleversion"></a>updatefinder.suite.staleversion
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi prestaranja različice osnovnega načrta. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -13973,7 +14023,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_suite_updateapplicable"></a>updatefinder_suite_updateapplicable
+### <a name="updatefindersuiteupdateapplicable"></a>updatefinder.suite.updateapplicable
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke uporablja. Zabeležimo različico osnovne vrstice in AppId paketa. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14014,7 +14064,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_suite_updatenotapplicabledefaultpath"></a>updatefinder_suite_updatenotapplicabledefaultpath
+### <a name="updatefindersuiteupdatenotapplicabledefaultpath"></a>updatefinder.suite.updatenotapplicabledefaultpath
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14055,7 +14105,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="updatefinder_suite_updatenotapplicableversion"></a>updatefinder_suite_updatenotapplicableversion
+### <a name="updatefindersuiteupdatenotapplicableversion"></a>updatefinder.suite.updatenotapplicableversion
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14096,7 +14146,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_suite_updatenotoffered"></a>updatefinder_suite_updatenotoffered
+### <a name="updatefindersuiteupdatenotoffered"></a>updatefinder.suite.updatenotoffered
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko posodobitev zbirke ni na voljo zaradi velikosti zbirke, ki je večja od posameznih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14137,7 +14187,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatefinder_suite_updateoffered"></a>updatefinder_suite_updateoffered
+### <a name="updatefindersuiteupdateoffered"></a>updatefinder.suite.updateoffered
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko je na voljo posodobitev zbirke. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14178,7 +14228,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+### <a name="updatemanagercheckupdate"></a>updatemanager.checkupdate
 
 Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14219,7 +14269,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="updatemanager_updatespending"></a>updatemanager_updatespending
+### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
 Ta dogodek pomeni, da so posodobitve našli in čakajoče namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14259,7 +14309,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="updatestatus_codesign"></a>UpdateStatus_Codesign
+### <a name="updatestatuscodesign"></a>UpdateStatus.Codesign
 
 Ta dogodek sporoči stanje iz postopka preverjanja podpisa kode, ki ga Microsoft Update Assistant zažene po namestitvi posodobitev za odjemalske aplikacije. Ta dogodek uporabimo, da zagotovimo pridobivanje veljavnih paketov, s katerimi bodo nameščene aplikacije posodobljene na najnovejšo različico.
 
@@ -14309,7 +14359,7 @@ Zbrana so naslednja polja:
 
 - **UpdatePkg** – ime uporabljenega paketa posodobitve
 
-### <a name="urlutilities_getmauinfo"></a>urlutilities_getmauinfo
+### <a name="urlutilitiesgetmauinfo"></a>urlutilities.getmauinfo
 
 Ta dogodek sporoči napako, do katere je prišlo med dostopanjem do kompleta aplikacij programa Microsoft Auto Update (MAU). Ta dogodek je kritičen in se uporablja za preiskavo sporočene napake.
 
@@ -14349,7 +14399,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
    
-### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
+### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
 Ta dogodek pomeni, da so bili najdeni tihi kandidati za posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14390,7 +14440,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="webservices_deltaupdater"></a>webservices_deltaupdater
+### <a name="webservicesdeltaupdater"></a>webservices.deltaupdater
 
 V tem dnevniku so na voljo interakcije med odjemalčevo kodo in funkcijami vrat, ki nadzorujejo, ali mora odjemalec omogočiti posodobitve za Delta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14431,7 +14481,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14472,7 +14522,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14513,7 +14563,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
-### <a name="webservices_serviceresponse"></a>webservices_serviceresponse
+### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
 Ta dogodek prijavi zahteve MAU Service, odzivni čas in napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14554,7 +14604,7 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
     
-### <a name="webservices_silentupdate"></a>webservices_silentupdate
+### <a name="webservicessilentupdate"></a>webservices.silentupdate
 
 Prijavimo zahteve za preverjanje veljavnosti» Force Update «pravil za uporabo, kar pomeni, da moramo sprejeti uporabnika iz gradnje N za izgradnjo N + 1 zaradi nekaj pomembnejših težav. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14594,7 +14644,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="webservices_updatefiltering"></a>webservices_updatefiltering
+### <a name="webservicesupdatefiltering"></a>webservices.updatefiltering
 
 Ta dogodek označuje filtriranje, ki je bilo izvedeno za seznam veljavnih posodobitev prek spletnih storitev. Ta dogodek uporabljamo, da zagotovimo pravilno delovanje blokiranja aplikacij, če je treba posodobitev blokirati.
 
@@ -14634,7 +14684,7 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="webservices_webcontent"></a>webservices_webcontent
+### <a name="webserviceswebcontent"></a>webservices.webcontent
 
 Prijavimo zahteve in odgovore, prejete v storitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
@@ -14674,7 +14724,7 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-### <a name="webservices_whatsnew"></a>webservices_whatsnew
+### <a name="webserviceswhatsnew"></a>webservices.whatsnew
 
 Ta dogodek se sproži, ko Microsoft Auto Update (MAU) za ragistrirane aplikacije v spletnih storitvah izvede poizvedbe v funkciji »novosti«. Ta dogodek uporabljamo za določitev ustreznosti stanja funkcije »Novosti«. 
 
@@ -15129,8 +15179,26 @@ Zbrana so sledeča polja:
 
 - **PaywallOperationType** – vrsta delovanja plačilnega sistema (neskončno oštevilčenje/celo število)
 
+### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
 
-### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+Metapodatki, ki temeljijo na seji, ko je uporabniški vmesnik za Paywall prikazan uporabniku. Microsoft uporablja to funkcijo za pridobivanje dejavnosti uporabnikov ter razumevanje uporabnikove naprave in različice OS za lažje sprejemanje odločitev glede naložbe za izboljšanje izkušnje na teh področjih.
+
+Zbrana so naslednja polja:
+
+- **App Version** – koda različice aplikacije, ki jo uporablja
+
+- **ClientId** – anonimni enolični identifikator naprave, ki niso osebno določljivi podatki (UUID/niz)
+
+- **Entry Point** – enolični identifikator za kontekstne ali konstantne vstopne točke aplikacije, ki jih uporablja
+
+- **isTablet** – ali naprava prikazuje uporabniško izkušnjo tabličnega računalnika
+
+- **OSVersion** – različica naprave z operacijskim sistemom Android
+
+- **SessionId** – UUID: enolični identifikator seje Paywall
+
+
+### <a name="officefirstrunappletelemetryoptin"></a>Office.FirstRun.Apple.TelemetryOptIn
 
 Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek se uporablja za nadzor stanja pretoka telemetrije, ki ste ga dovolili, pri izkušnji prvega zagona. Zbiramo kodo, ki označuje vrsto možnosti zbirke diagnostičnih podatkov, ki jo je izbral uporabnik.
 
