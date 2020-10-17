@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
-ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
+ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48367474"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491558"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -293,6 +293,12 @@ Zbrana so sledeča polja:
 
   - **Duration** – čas trajanja preverjanja pristnosti
 
+  - **Duration_Max** – Največje trajanje katerega koli združenega dogodka, če je ta signal združen.
+
+  - **Duration_Min** – Najmanjše trajanje katerega koli združenega dogodka, če je ta signal združen.
+
+  - **Duration_Sum** – Vsota trajanje vseh združenih dogodkov, če je ta signal združen.
+
   - **Endtime** – ali se je dogodek preverjanja pristnosti končal
 
   - **Error** – koda napake, če preverjanje pristnosti ni bilo uspešno
@@ -407,11 +413,19 @@ Zbrana so sledeča polja:
 
   - **Microsoft\_ADAL\_user\_cancel** – trditev true/false, ali je bilo preklicano okno uporabniškega vmesnika.
 
+  - **Microsoft_ADAL_was_request_throttled** – Vrednost »true«/»false«, ki označuje, ali ADAL omejil ta dogodek zaradi preveč zahtev.
+ 
   - **Microsoft\_ADAL\_x\_ms\_request\_id** – dodatni ID zahteve v glavi HTTP, ki ga ADAL posreduje storitvi
 
   - **Platform** – Win32/WinRT/Android/iOS/Mac
 
+  - **Promptreasoncorrelationid** – Za pozive je to ID korelacije drugega dogodka, ki pojasnjuje razlog za morebitni prikaz poziva za preverjanje pristnosti za uporabnika.
+
+  - **Resource** – Vir, za katerega uporabnik zahteva žeton, kot je Exchange ali SharePoint.
+
   - **Scenarioid** – GUID. Enemu scenariju lahko pripada več dogodkov. Scenarij lahko na primer doda nov račun, vendar lahko v tem scenariju pride do več pozivov. Ta ID omogoča korelacijo
+
+  - **Scenarioname** – Ime scenarija, kateremu pripada ta dogodek preverjanja pristnosti.
 
   - **Sessionid** – GUID za prepoznavanje seje zagona
 

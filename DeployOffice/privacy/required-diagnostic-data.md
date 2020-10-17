@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: f200e22e639f2c89315c2f7fa2e9eab0367f86b1
-ms.sourcegitcommit: 1b12952b55f071b87026b49d372158209ed2e322
+ms.openlocfilehash: 7d9b2918983933ba4601ebce2b3930409001688d
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48368653"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491522"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -356,6 +356,8 @@ Ta kategorija vsebuje ta polja:
   - **Flags** – Informacije, s katerimi lahko spremenimo način odzivanja določenega dogodka. Omogoča, da lahko upravljamo način obravnavanja določenega dogodka za namene prenašanja podatkov Microsoftu.
 
   - **Id** – Enolični identifikator dogodka. Omogoča enolično identificiranje prejetih dogodkov.
+
+  - **Level** – Označuje vrsto dogodka.
 
   - **Name** – Ime dogodka. Omogoča določitev dogodka, ki ga je poslal odjemalec.
 
@@ -8675,7 +8677,7 @@ Zbrana so naslednja polja:
 
 Zapiše informacije o nepričakovanih zaustavitvah v Officeu. Tako lahko prepoznamo zrušitve ali neodzivanja izdelka in ustrezno ukrepamo.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **Data\_AirspaceInitTime:integer –** Čas, zahtevan za inicializacijo Officeove komponente Airspace.
 
