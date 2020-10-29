@@ -13,29 +13,25 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom ponuja informacije o tem, kako upravljati nastavitve zasebnosti za Office v napravah s sistemom Android.
 hideEdit: true
-ms.openlocfilehash: 6086ecd1b2cd55bbf6cb4577879714f1d20a2f93
-ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
+ms.openlocfilehash: 2c1ecab42f31c85616faca42a5cb01b183a36087
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092134"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794457"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android
 
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
+
 Za Office v napravah s sistemom Android so na voljo nastavitve pravilnika, ki omogočajo nadzor nad nastavitvami, ki so povezane z naslednjim:
 
-- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
+- ***Diagnostični podatki** _ o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
 
-- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 Če želite več informacij o diagnostičnih podatkih in povezanih izkušnjah, preberite članek [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md).
-
-Te nastavitve pravilnika se nanašajo na te aplikacije:
-- Različica 16.0.12228.20260 in novejše različice Worda za Android, Excela za Android in PowerPointa za Android.
-- Različica 4.1.71 in novejše različice Outlooka za Android.
-- Različica 16.0.12228.20004 in novejše različice programa OneNote za Android.
-- Različica 5.47 in novejše različice programa OneDrive za Android.
-- Različica Officeove aplikacije za Android 16.0.12430.20254 in novejša.
 
 ## <a name="policy-settings-available-for-office-on-android-devices"></a>Nastavitve pravilnika, ki so na voljo za Office v napravah s sistemom Android
 
@@ -43,7 +39,7 @@ V spodnji tabeli so navedene nastavitve pravilnika, ki so na voljo za Office v n
 
 > [!NOTE]
 >- Dodatne informacije, ki so na voljo, so nastavitve pravilnika za Office v napravah, v katerih se izvaja sistem Windows. Vendar pa se iste informacije uporabljajo za Office v napravah s sistemom Android, ker so enake kot nastavitve pravilnika.
->- *Dovoli uporabo povezanih izkušenj v sistemu Office* nastavitev pravilnika, ki je na voljo za Office v napravah, v katerih se izvaja Windows, ne velja za Office v napravah s sistemom Android. 
+>- Dovoli uporabo povezanih izkušenj v sistemu Office* nastavitev pravilnika, ki je na voljo za Office v napravah, v katerih se izvaja Windows, ne velja za Office v napravah s sistemom Android. 
 
 
 |Ime nastavitve pravilnika  |Dodatne informacije |

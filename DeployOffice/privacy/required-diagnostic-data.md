@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 7d9b2918983933ba4601ebce2b3930409001688d
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 8fd62619d8aff4b5dcb10d7a4c73710282e2cdd8
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491522"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794709"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -27,9 +27,9 @@ ms.locfileid: "48491522"
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
-Diagnostični podatki o uporabljeni programski opremi odjemalca za Office v računalnikih z nameščenim sistemom Windows so bili zbrani in poslani Microsoftu. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
+Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
 
-***Obvezni diagnostični podatki*** vključujejo najmanjšo nujno količino podatkov, potrebnih za zagotavljanje varnosti, posodobitev in pričakovanega delovanja Officea v napravi, v kateri je sistem nameščen.
+***Obvezni diagnostični podatki** _ vključujejo najmanjšo nujno količino podatkov, potrebnih za zagotavljanje varnosti, posodobitev in pričakovanega delovanja Officea v napravi, v kateri je sistem nameščen.
 
 Z obveznimi diagnostičnimi podatki prepoznate težave z Officeom, ki so morda povezane z napravo ali konfiguracijo programske opreme. Z njimi lahko na primer prepoznate pogoste zrušitve novo uvedenih Officeovih funkcij v določeni različici operacijskega sistema oz. onemogočene Officeove funkcije. Z obveznimi diagnostičnimi podatki lahko hitreje zaznamo, diagnosticiramo in odpravimo te težave ter tako zmanjšamo njihov vpliv na uporabnike ali organizacije.
 
@@ -57,7 +57,7 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 - Seznam podatkovnih polj v posameznih dogodkih
 - Opis posameznih podatkovnih polj
 
-| **Kategorija**       | **Podatkovni podtip**| **Opis**    |
+| _ *Kategorija**       | **Podatkovni podtip**| **Opis**    |
 | ---------- | ------------- | ---- |
 | **Nastavitev programske opreme in inventar** | [Nastavitev Officea in inventar](#office-setup-and-inventory-subtype)   | Nameščeni izdelek, različica in stanje namestitve.  |
 | | [Konfiguracija dodatka za Office](#office-add-in-configuration-subtype)  | Dodatki programske opreme in nastavitve.     |
@@ -74,11 +74,11 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 
 > [!NOTE]
 > - Kategorije so prikazane v Pregledovalniku diagnostičnih podatkov, medtem ko podatkovni tipi niso prikazani.
-> - Podatkovno polje, označeno *Zastarelo*, je bilo oz. bo v kratkem odstranjeno iz obveznih diagnostičnih podatkov. Nekatera od teh podatkovnih polj so podvojena zaradi posodobitve diagnostičnih podatkov in so uporabljena za zagotavljanje nemotenega delovanja storitve ter ustvarjanje poročil o nadzoru dinamičnih diagnostičnih podatkov.
+> - Podatkovno polje, označeno *Zastarelo* , je bilo oz. bo v kratkem odstranjeno iz obveznih diagnostičnih podatkov. Nekatera od teh podatkovnih polj so podvojena zaradi posodobitve diagnostičnih podatkov in so uporabljena za zagotavljanje nemotenega delovanja storitve ter ustvarjanje poročil o nadzoru dinamičnih diagnostičnih podatkov.
 
 ## <a name="categories-and-data-fields-that-are-common-for-all-events"></a>Skupne kategorije in podatkovna polja za vse dogodke
 
-Nekatere informacije o dogodkih so skupne za vse dogodke, ne glede na kategorije ali podatkovne podtipe. Te skupne informacije, ki jih včasih imenujemo *podatkovne pogodbe*, so organizirane v kategorije. Posamezne kategorije vključujejo polja, ta polja pa vsebujejo metapodatke in lastnosti posameznih dogodkov. Te informacije si lahko ogledate s Pregledovalnikom diagnostičnih podatkov.
+Nekatere informacije o dogodkih so skupne za vse dogodke, ne glede na kategorije ali podatkovne podtipe. Te skupne informacije, ki jih včasih imenujemo *podatkovne pogodbe* , so organizirane v kategorije. Posamezne kategorije vključujejo polja, ta polja pa vsebujejo metapodatke in lastnosti posameznih dogodkov. Te informacije si lahko ogledate s Pregledovalnikom diagnostičnih podatkov.
 
 Kategorije zbranih informacij o dogodkih lahko razdelite v dve skupini:
 
@@ -241,11 +241,11 @@ Ta kategorija vsebuje ta polja:
 
   - **Duration** – Trajanje izvajanja dejavnosti. Nam omogoča, da prepoznamo težave z učinkovitostjo delovanja, ki negativno vplivajo na uporabniško izkušnjo.
 
-  - **Result**.**Code** – Koda, ki jo določa aplikacija, za prepoznavanje določenih rezultatov. Omogoča, da določimo podrobnosti napake, kot je koda napake, s katero lahko razvrstimo težave in jih odpravimo.
+  - **Result** . **Code** – Koda, ki jo določa aplikacija, za prepoznavanje določenih rezultatov. Omogoča, da določimo podrobnosti napake, kot je koda napake, s katero lahko razvrstimo težave in jih odpravimo.
 
   - **Result.Tag** – Oznaka za celo število, ki določa lokacijo v kodi, kjer je bil ustvarjen rezultat. Omogoča, da natančno določimo lokacijo v kodi, kjer je bil ustvarjen rezultat, ter tako razvrstimo napake.
 
-  - **Result**.**Type** – Vrsta kode rezultata. Določa vrsto poslane kode rezultata, tako da lahko ustrezno obravnavamo vrednost.
+  - **Result** . **Type** – Vrsta kode rezultata. Določa vrsto poslane kode rezultata, tako da lahko ustrezno obravnavamo vrednost.
 
   - **Success** – Zastavica, ki označuje, ali je bila dejavnost uspešna oz. neuspešna. Omogoča, da določimo, ali so bila uporabnikova dejanja v izdelku uspešno oz. neuspešno izvedena. Prepoznamo lahko težave, ki vplivajo na uporabnika.
 
@@ -377,7 +377,7 @@ Ta kategorija vsebuje ta polja:
 
   - **Source** – Izvorni cevovod, uporabljen za prenos podatkov. Zahtevano za spremljanje posameznih cevovodov za prenašanje za zagotavljanje ustreznosti stanja sistema in lažje prepoznavanje težav s cevovodom za prenašanje. Omogoča spremljanje posameznih cevovodov za prenašanje za zagotavljanje njihove skladnosti s predpisi.
 
-  - **Time** – Čas, ko je bil dogodek ustvarjen v odjemalcu. Omogoča, da lahko sinhroniziramo in preverimo veljavnost vrstnega reda dogodkov, ustvarjenih v odjemalcu, ter izdelamo metriko učinkovitosti delovanja za navodila za uporabnike. 
+  - **Time** – Čas, ko je bil dogodek ustvarjen v odjemalcu. Omogoča, da lahko sinhroniziramo in preverimo veljavnost vrstnega reda dogodkov, ustvarjenih v odjemalcu, ter izdelamo metriko učinkovitosti delovanja za navodila za uporabnike. 
 
 #### <a name="host"></a>Gostitelj
 
@@ -654,11 +654,11 @@ Poleg tega so naslednja polja skupna za vse dogodke storitve Outlook za Android.
 
 - **process_bitness** – bitnost procesa (32- ali 64-bitni) za aplikacijo, da bomo lahko zaznali težave določene bitnosti naprave
 
-- **webview_kernel_version**: Različica spletnega ogleda Chromium jedra v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
+- **webview_kernel_version** : Različica spletnega ogleda Chromium jedra v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
 
-- **webview_package_name**: Ime paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezano z različico spletnega pogleda.
+- **webview_package_name** : Ime paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezano z različico spletnega pogleda.
 
-- **webview_package_version**: Različica paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
+- **webview_package_version** : Različica paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
 
 
 ## <a name="software-setup-and-inventory-data-events"></a>Dogodki podatkov inventarja in nastavitve programske opreme
@@ -897,9 +897,9 @@ Pridobiva inventarne številke za Visio, ne glede na to, ali gre za različico S
 
 Zbrana so ta polja:
 
-  - **Data\_VisioSKU**:**integer** – 0 za inventarno številko za različico Standard in 1 za inventarno številko za različico Professional.
+  - **Data\_VisioSKU** : **integer** – 0 za inventarno številko za različico Standard in 1 za inventarno številko za različico Professional.
 
-#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(prejšnje ime)*, Office.OneNote.Android.App.OneNoteLaunchedNonActivated
+#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(prejšnje ime)* , Office.OneNote.Android.App.OneNoteLaunchedNonActivated
 
 Zabeleži informacije o stanju aktivacije aplikacije.  Podatke nadzorujemo, saj želimo prepoznati pogoste težave pri aktivaciji. Z analiziranjem teh podatkov odkrijemo tudi področja, ki jih moramo izboljšati.
 
@@ -907,7 +907,7 @@ Zbrana so naslednja polja:
 
 - **INSTALL_LOCATION** – Označuje, ali je aplikacija vnaprej nameščena ali prenesena iz trgovine.
 
-#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(prejšnje ime)*, Office.OneNote.Android.ResetStatus
+#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(prejšnje ime)* , Office.OneNote.Android.ResetStatus
 
 Signal, ki se uporablja za beleženje težav, na katere uporabnik lahko naleti, ko poskuša ponastaviti aplikacijo.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri ponastavitvi. 
 
@@ -921,7 +921,7 @@ Zbrana so naslednja polja:
 
 - **Pass** – Označuje, ali je bila ponastavitev uspešna.
 
-#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(prejšnje ime)*, Office.OneNote.Android.SignIn.SignInCompleted
+#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(prejšnje ime)* , Office.OneNote.Android.SignIn.SignInCompleted
 
 Kritični signal, ki določa uspešnost vpisa. Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.
 
@@ -941,7 +941,7 @@ Zbrana so naslednja polja:
 
 - **SignInMode** – Vpis ali prijava oz. pospešeni samodejni vpis ali prijava.
 
-#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(prejšnje ime)*, Office.OneNote.Android.SignIn.SignInStarted
+#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(prejšnje ime)* , Office.OneNote.Android.SignIn.SignInStarted
 
 Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili.
 
@@ -1029,7 +1029,7 @@ Zbrana so ta polja:
 
 #### <a name="officeextensibilitycatalogexchangegetlastupdate"></a>Office.Extensibility.Catalog.ExchangeGetLastUpdate
 
-Podatki o uspešnem oz. neuspešnem pridobivanju posodobljenih podatkov o dodatkih, ki so bili dodeljeni najemniku storitve Office 365. Z njim ustvarjamo metrike ustreznosti stanja, grafikone in analize težav uporabnikov. »ExchangeGetLastUpdate« se vedno začne izvajati ob zagonu kot del kode gostitelja in določa, ali so bile dodelitve dodatkov spremenjene za uporabnika. Če je tako, potem Weldgen. Datoteka DLL bo naložena, tako da lahko pokličemo ExchangeGetEntitlements, da dobimo določene dodelitve (in ExchangeGetManifests bodo pozvani, da pridobijo nove manifeste, ki so potrebni).  Na zahtevo lahko prikličemo tudi »ExchangeGetEntitlements« (in »ExchangeGetManifests«), ko je zagnana gostiteljska aplikacija.  Veliki DLL se ne naloži, če ga ne potrebujemo.  Brez tega dogodka v polju »Required« ni mogoče prepoznati, da uporabniki niso uspešno pridobili njim dodeljenih dodatkov, če je bil prvi klic storitve neuspešen.  To je tudi glavni pokazatelj morebitnih težav s preverjanjem pristnosti med povezovanjem s storitvijo.
+Podatki o uspešnem oz. neuspešnem pridobivanju posodobljenih podatkov o dodatkih, ki so bili dodeljeni najemniku storitve Office 365. Z njim ustvarjamo metrike ustreznosti stanja, grafikone in analize težav uporabnikov. »ExchangeGetLastUpdate« se vedno začne izvajati ob zagonu kot del kode gostitelja in določa, ali so bile dodelitve dodatkov spremenjene za uporabnika.  Če je tako, potem Weldgen. Datoteka DLL bo naložena, tako da lahko pokličemo ExchangeGetEntitlements, da dobimo določene dodelitve (in ExchangeGetManifests bodo pozvani, da pridobijo nove manifeste, ki so potrebni).   Na zahtevo lahko prikličemo tudi »ExchangeGetEntitlements« (in »ExchangeGetManifests«), ko je zagnana gostiteljska aplikacija.   Veliki DLL se ne naloži, če ga ne potrebujemo.   Brez tega dogodka v polju »Required« ni mogoče prepoznati, da uporabniki niso uspešno pridobili njim dodeljenih dodatkov, če je bil prvi klic storitve neuspešen.   To je tudi glavni pokazatelj morebitnih težav s preverjanjem pristnosti med povezovanjem s storitvijo.
 
 Zbrana so sledeča polja:
 
@@ -1265,13 +1265,13 @@ Zbrana so ta polja:
 
   - **Data\_DocumentSessionLogID:string** – Identifikator seje dokumenta.
 
-  - **Data\_IsEnabled**:**bool** – Vrednost »true«, če je rešitev omogočena.
+  - **Data\_IsEnabled** : **bool** – Vrednost »true«, če je rešitev omogočena.
 
   - **Data\_TemplateID:string** – GUID predloge, kamor je bila naložena rešitev. Označeno z 0 za rešitev po meri.
 
-  - **Data\_AddOnID**:**string** – GUID za določanje naloženega dodatka.
+  - **Data\_AddOnID** : **string** – GUID za določanje naloženega dodatka.
 
-  - **Data\_Error**:**integer** – ID napake.
+  - **Data\_Error** : **integer** – ID napake.
 
 ### <a name="security-subtype"></a>*Podtip varnosti*
 
@@ -2019,7 +2019,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
 
-- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+- **RMS.ConnectionInfo.IntranetUrl** – URL intraneta podatkov povezave
 
 - **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
 
@@ -2081,7 +2081,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
 
-- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+- **RMS.ConnectionInfo.IntranetUrl** – URL intraneta podatkov povezave
 
 - **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
 
@@ -2239,7 +2239,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta podatkov povezave
 
-- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta podatkov povezave
+- **RMS.ConnectionInfo.IntranetUrl** – URL intraneta podatkov povezave
 
 - **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
 
@@ -2797,9 +2797,9 @@ Zbrana so naslednja polja:
 
 #### <a name="officeappcompatappcompatagentscanandupload"></a>Office.AppCompat.AppCompat.AgentScanAndUpload
 
-Podatki so zbrani le, če je uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira informacije o tem, kdaj se izvaja posrednik za telemetrijo sistema Office.  Ti podatki so zbrani le, če je nadzorna plošča za telemetrijo sistema Office omogočena in uporabljena za določanje ustreznosti stanja posrednika za telemetrijo sistema Office.
+Podatki so zbrani le, če je uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira informacije o tem, kdaj se izvaja posrednik za telemetrijo sistema Office.    Ti podatki so zbrani le, če je nadzorna plošča za telemetrijo sistema Office omogočena in uporabljena za določanje ustreznosti stanja posrednika za telemetrijo sistema Office.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
   - **Data.AgentExit** – Časovni žig, ko se je posrednik za telemetrijo uspešno zaprl.
 
@@ -2809,9 +2809,9 @@ Zbrana so ta polja:
 
 #### <a name="officeappcompatappcompattelemetrydashboardresiliencycrashlog"></a>Office.AppCompat.AppCompat.TelemetryDashboardResiliencyCrashLog
 
-Ti podatki so zbrani le, če je končni uporabnik (najverjetneje skrbnik) omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira pojavitve dodatkov za Office in zrušitve dokumentov. Ti podatki so zbrani le, če je končni uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Z njimi določimo morebitno povečano pojavitev dodatkov ali zrušitev dokumentov.
+Ti podatki so zbrani le, če je končni uporabnik (najverjetneje skrbnik) omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira pojavitve dodatkov za Office in zrušitve dokumentov.  Ti podatki so zbrani le, če je končni uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Z njimi določimo morebitno povečano pojavitev dodatkov ali zrušitev dokumentov.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
   - **Data.CollectionTime** – Časovni žig, kdaj je bil zabeležen dogodek zrušitve.
 
@@ -2911,7 +2911,7 @@ Zbrana so sledeča polja:
 
 - **Data_InitializationReason** – Predstavitev oštevilčenja, ki določenega razloga za operacijo. Npr. – Odprite z URL-jem ali lokalno potjo do datoteke, ustvarite z izbiralnikom datotek, kopirajte pot do datoteke, izvozite v URL ipd.
 
-- **Data_IsDisambiguateCsiNetworkConnectivityErrorEnabled**.
+- **Data_IsDisambiguateCsiNetworkConnectivityErrorEnabled** .
 
 - **Data_IsNameMissingInUrl** – Označuje, če ime ni bilo razčlenjeno iz URL-ja.
 
@@ -4198,7 +4198,7 @@ Ta dogodek se zbere ob prikazu vira uporabniku. S tem dogodkom se preveri, ali j
 
 - **clientCorrelationId** – globalni enolični identifikator za sejo aplikacije.
 
-- **clientScenario**-scenarija za različne variante vira.
+- **clientScenario** -scenarija za različne variante vira.
 
 - **ClientTimeStamp** – časovni žig, ko je odjemalec zabeležil dogodek.
 
@@ -4399,7 +4399,7 @@ Zbrana so ta polja:
 
   - **Data.Doc.AssistedReadingReasons** – To polje je nastavljeno, če je za dokument izbrana elektronska zaščita podatkov.
 
-  - **Data.Doc.AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data.Doc.AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data.Doc.ChunkingType** – Enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -4659,7 +4659,7 @@ Zbrana so ta polja:
 
   - **Data.Doc.AssistedReadingReasons** – To polje je nastavljeno, če je za dokument izbrana elektronska zaščita podatkov.
 
-  - **Data.Doc.AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data.Doc.AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data.Doc.ChunkingType** – Enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -5207,7 +5207,7 @@ Zbrana so sledeča polja:
 
 - **Data.offlineResolved** – Ali so bili podatki pridobljeni brez povezave
 
-- **Data.OTelJS.Version**– Različica programa OTel Logger
+- **Data.OTelJS.Version** – Različica programa OTel Logger
 
 - **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
 
@@ -5286,7 +5286,7 @@ Zbrana so naslednja polja:
 
 - **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
 
-- **Data.OTelJS.Version**– Različica programa OTel Logger
+- **Data.OTelJS.Version** – Različica programa OTel Logger
 
 - **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
 
@@ -5362,7 +5362,7 @@ Zbrana so sledeča polja:
 
 - **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
 
-- **Data.OTelJS.Version**– Različica programa OTel Logger
+- **Data.OTelJS.Version** – Različica programa OTel Logger
 
 - **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
 
@@ -5435,7 +5435,7 @@ Zbrana so sledeča polja:
 
 - **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
 
-- **Data.OTelJS.Version**– Različica programa OTel Logger
+- **Data.OTelJS.Version** – Različica programa OTel Logger
 
 - **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
 
@@ -5504,7 +5504,7 @@ Zbrana so naslednja polja:
 
 - **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
 
-- **Data.exportName**– človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+- **Data.exportName** – človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
@@ -5518,7 +5518,7 @@ Zbrana so naslednja polja:
 
 - **Data.immersiveProfileCorrelationId** – Globalni enolični identifikator za sejo razširjenega pogleda profila
 
-- **Data.OTelJS.Version**– Različica programa OTel Logger
+- **Data.OTelJS.Version** – Različica programa OTel Logger
 
 - **Data.personaCorrelationId** – Globalni enolični identifikator enolične osebe v seji
 
@@ -5624,7 +5624,7 @@ Zbrana so sledeča polja:
 
 - **Data_FileGUID** – globalni identifikator za datoteko, ki je ustvarjena slučajno
 
-- **Data_FileLocation**– lokacija datoteke, na primer: lokalno, ODSP, iCloud, itd.
+- **Data_FileLocation** – lokacija datoteke, na primer: lokalno, ODSP, iCloud, itd.
 
 - **Data_FileOpenEntryPoint** – vhodna točka za odpiranje datoteke
 
@@ -5662,7 +5662,7 @@ Dogodek se zbira za aplikacijo Office za iOS. Zabeleži, ko pride do dogodka odp
 
 - **Data_FileGUID** – globalni identifikator za datoteko, ki je ustvarjena slučajno
 
-- **Data_FileLocation**– lokacija datoteke (lokalno, ODSP, iCloud, itd.) 
+- **Data_FileLocation** – lokacija datoteke (lokalno, ODSP, iCloud, itd.) 
 
 - **Data_FileOpenEntryPoint** – vhodna točka za odpiranje datoteke 
 
@@ -6148,7 +6148,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
@@ -6194,7 +6194,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -6254,11 +6254,11 @@ Zbrana so ta polja:
 
 #### <a name="officepowerpointdocoperationnewdocument"></a>Office.PowerPoint.DocOperation.NewDocument
 
-Dogodek je zbran, ko PowerPoint ustvari novo predstavitev. Vključuje metrike uspešnosti, neuspešnosti in učinkovitosti delovanja.
+Dogodek je zbran, ko PowerPoint ustvari novo predstavitev.  Vključuje metrike uspešnosti, neuspešnosti in učinkovitosti delovanja.
 
 Te informacije uporabljamo za zagotavljanje uspešnega ustvarjanja datotek brez kakršnega koli zmanjšanja učinkovitosti delovanja.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
   - **NewDocumentType** – Ali je nov dokument ustvarjen iz predloge oz. povsem na novo?
 
@@ -6284,7 +6284,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
@@ -6330,7 +6330,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -6408,7 +6408,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
@@ -6454,7 +6454,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -6552,7 +6552,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_DstDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_DstDoc_AsyncOpenKind:long –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
@@ -6638,7 +6638,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_SrcDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_SrcDoc_AsyncOpenKind:long –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu 
 
@@ -6739,7 +6739,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu.
 
@@ -6817,7 +6817,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_DstDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_DstDoc_AsyncOpenKind:long –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_DstDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
@@ -6901,7 +6901,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons:long** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_SrcDoc_AsyncOpenKind:long – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_SrcDoc_AsyncOpenKind:long –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_SrcDoc_ChunkingType:long** – način shranjevanja dokumenta v SharePointu
 
@@ -7400,13 +7400,13 @@ Zbrana so sledeča polja:
 
   - **Data\_ConnectorsBasedOnSequence:bool** – ima vrednost true, če je bil osveženi diagram prvotno ustvarjen s povezovalnikom na osnovi zaporedja
 
-  - **Data\_DialogError**:**string** – napaka med osveževanjem pametnega diagrama
+  - **Data\_DialogError** : **string** – napaka med osveževanjem pametnega diagrama
 
   - **Data\_FileError:string** – niz napake, če povezana Excelova datoteka ni veljavna
 
-  - **Data\_OverwriteSelected**:**bool** – ima vrednost true, če je uporabnik med osveževanjem izbral možnost za prepisovanje diagrama
+  - **Data\_OverwriteSelected** : **bool** – ima vrednost true, če je uporabnik med osveževanjem izbral možnost za prepisovanje diagrama
 
-  - **Data\_WarningShown**:**bool** – ima vrednost true, če je uporabnik med postopkom osveževanja podatkov prejel opozorilo
+  - **Data\_WarningShown** : **bool** – ima vrednost true, če je uporabnik med postopkom osveževanja podatkov prejel opozorilo
 
 #### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
 
@@ -7589,7 +7589,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -7685,7 +7685,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -7806,7 +7806,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -7870,7 +7870,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil ciljni dokument odprt v načinu vodenega branja.
 
-- **Data_DstDoc_AsyncOpenKind – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_DstDoc_AsyncOpenKind –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
     
 - **Data_DstDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -7958,7 +7958,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_SrcDoc_AsyncOpenKind – ** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_SrcDoc_AsyncOpenKind –** označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_SrcDoc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -8002,7 +8002,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_ServerDocId** – nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav.
 
-- **Data_SrcDoc_ServerProtocol**– različica protokola za komunikacijo s storitvijo.
+- **Data_SrcDoc_ServerProtocol** – različica protokola za komunikacijo s storitvijo.
 
 - **Data_SrcDoc_ServerType** – vrsta strežnika, ki zagotavlja storitev (SharePoint, OneDrive, WOPI itd.).
 
@@ -8061,7 +8061,7 @@ Zbrana so naslednja polja:
 
 - Nobeno
 
-#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(prejšnje ime)*, Office.OneNote.Android.Canvas.PageOpened
+#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(prejšnje ime)* , Office.OneNote.Android.Canvas.PageOpened
 
 Signal za beleženje časa odpiranja strani.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri odpiranju strani v OneNotu.
 
@@ -8071,7 +8071,7 @@ Zbrana so naslednja polja:
 
 - **TIME_TAKEN_IN_MS** – Čas, zahtevan za odpiranje strani.
 
-#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(prejšnje ime)*, Office.OneNote.Android.Capture.NewNote.NewNoteTaken
+#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(prejšnje ime)* , Office.OneNote.Android.Capture.NewNote.NewNoteTaken
 
 Ta signal se uporablja za pravilno nastavitev in uporabo zvezkov, po tem, ko se je uporabnik vpisal v aplikacijo OneNote za sistem Android, ter zagotovitev uspešnega ustvarjanja novega zapiska.  Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.
 
@@ -8079,7 +8079,7 @@ Zbrana so sledeča polja:
 
 - Nobeno
 
-#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(prejšnje ime)*, Office.OneNote.Android.MessageBar.MessageBarClicked
+#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(prejšnje ime)* , Office.OneNote.Android.MessageBar.MessageBarClicked
 
 Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili.
 
@@ -8284,7 +8284,7 @@ Zbrana so sledeča polja:
    - **swipe_setting** – ponazarja podrobnosti nastavitev podrsljajev, povezane s tem dejanjem (če so na voljo).
      - **swipe_action** – ponazarja dejanje, ki ga je poskušal izvesti uporabnik, npr. dodajanje zastavice, brisanje, arhiviranje. Omogoča nam, da ugotovimo, katero dejanje je uporabnik želel izvesti in ali je bilo to opravilo uspešno. 
      - **swipe_direction** – ponazarja nastavljeno smer za poteze podrsljajev, npr. od leve proti desni ali od desne proti levi. S tem dogodkom lahko ugotovimo, ali je prišlo do težave z določeno smerjo podrsljaja.
-   - **ui_mode_setting**– izbrani način uporabniškega vmesnika (temni, svetli, privzeti način, način nizke napolnjenosti baterije itd.).
+   - **ui_mode_setting** – izbrani način uporabniškega vmesnika (temni, svetli, privzeti način, način nizke napolnjenosti baterije itd.).
    - **signature_setting** – ponazarja, ali je bila nastavitev uporabljena za vse račune ali samo za posamezni račun.
 
 - **state_changed_to** – preveri, ali je nastavitev za vklop/izklop nabiralnika v fokusu pravilno nastavljena. 
@@ -8644,13 +8644,13 @@ V tem primeru določite število računov MSA in ADAL v nastavitvah registra in 
 
 Zbrana so naslednja polja:
 
-- **RegistryADALCount**– označuje število ADAL računov v registru.
+- **RegistryADALCount** – označuje število ADAL računov v registru.
 
-- **RegistryLiveIdCount**– označuje število računov MSA v registru.
+- **RegistryLiveIdCount** – označuje število računov MSA v registru.
 
-- **SharedPrefADALCount**– označuje število ADAL računov v možnostih v skupni rabi.
+- **SharedPrefADALCount** – označuje število ADAL računov v možnostih v skupni rabi.
 
-- **SharedPrefLiveIdCount**– označuje število računov MSA v možnostih v skupni rabi.
+- **SharedPrefLiveIdCount** – označuje število računov MSA v možnostih v skupni rabi.
 
 
 #### <a name="officeandroidandroidoffice16bootlatency"></a>Office.Android.AndroidOffice16BootLatency
@@ -8685,13 +8685,13 @@ Zbrana so sledeča polja:
 
   - **Data\_APIInitTime:integer –** čas, zahtevan za inicializacijo modula Visio API
 
-  - **Data\_AppSizeHeight –** višina okna za dodatek**-**
+  - **Data\_AppSizeHeight –** višina okna za dodatek **-**
 
-  - **Data\_AppSizeWidth –** širina okna za dodatek**-**
+  - **Data\_AppSizeWidth –** širina okna za dodatek **-**
 
   - **Data\_AppURL –** URL dodatka; zapiše polni URL za dodatke iz trgovine in domeno URL-ja za dogodke, ki jih niste pridobili iz trgovine
 
-  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_AuthorsCount:integer –** število avtorjev, ki so uredili dokument v tej seji
 
@@ -8721,19 +8721,19 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_FqdnHash:string –** razpršitev mesta shrambe dokumenta
 
-  - **Data\_Doc\_IsIncrementalOpen:bool-**: ali je bil dokument odprt postopoma (nova funkcija, ki dokument odpre, brez da prenese celoten dokument)
+  - **Data\_Doc\_IsIncrementalOpen:bool-** : ali je bil dokument odprt postopoma (nova funkcija, ki dokument odpre, brez da prenese celoten dokument)
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** ali je bil dokument odprt iz lokalnega predpomnilnika?
 
   - **Data\_Doc\_IsSyncBacked:bool –** ima vrednost true, če gre za dokument strežnika, ki je na voljo lokalno in je sinhroniziran s strežnikom (npr. prek storitve OneDrive ali odjemalskih aplikacij ODB)
 
-  - **Data\_Doc\_Location:long-**: nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.)
+  - **Data\_Doc\_Location:long-** : nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.)
 
   - **Data\_Doc\_LocationDetails:long –** nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive)
 
   - **Data\_Doc\_ResourceIdHash:string –** razpršitev identifikatorja vira za dokumente, shranjene v oblaku
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -8743,7 +8743,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_SpecialChars:long –** dolga bitna maska, ki ponazarja posebne znake v URL-ju ali poti dokumenta
 
-  - **Data\_Doc\_SyncBackedType –** indikator vrste dokumenta (lokalno ali storitev) 
+  - **Data\_Doc\_SyncBackedType** – Indikator vrste dokumenta (lokalno ali storitev). 
 
   - **Data\_Doc\_UrlHash:string –** razpršitev polnega URL-ja za dokumente, shranjene v oblaku
 
@@ -8751,7 +8751,7 @@ Zbrana so sledeča polja:
 
   - **Data\_DurationToCompleteInMilliseconds:double –** čas, zahtevan za dokončanje shranjevanja, v milisekundah
 
-  - **Data\_ErrorCode:int -**: 0 za uspešno, celo število za neuspešno shranjevanje
+  - **Data\_ErrorCode:int -** : 0 za uspešno, celo število za neuspešno shranjevanje
 
   - **Data\_FailureReason:integer –** razlog za neuspešno asinhrono shranjevanje
 
@@ -9012,7 +9012,7 @@ Zbrana so sledeča polja:
 
 - **IsFRELoadSuccessful** – Celo število, ki omenja stanje rezultata.
 
-#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)* , Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
 Kritični signal, ki se uporablja, da lahko novi uporabniki (Microsoftov račun) prvič uspešno zaženejo in začnejo uporabljati OneNote.  Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.  Če uporabniki prvič ne morejo zagnati aplikacije, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
@@ -9102,7 +9102,7 @@ Zbrana so sledeča polja:
 
 - **SNAPSHOT_PUBLISH_TO_RENDERING_END_PUBLISH_TO_RENDERING_END** – Čas, zahtevan za dokončanje upodabljanja vsebine.
 
-- **SPLASH_ACTIVITY_SESSION_ACTIVITY_SESSION**, – Čas, zahteva za prikaz pozdravnega zaslona.
+- **SPLASH_ACTIVITY_SESSION_ACTIVITY_SESSION** , – Čas, zahteva za prikaz pozdravnega zaslona.
 
 - **SPLASH_TO_ROOT_TRANSITION_TO_ROOT_TRANSITION** – Čas, zahtevan za prehod iz korenske plasti. 
 
@@ -9114,13 +9114,13 @@ Zbrana so sledeča polja:
  
 - **USER_INTERACTED_DURING_EVENT** – Označuje, ali je prišlo do uporabnikove interakcije med zagonom.
 
-#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground-officeandroidearlytelemetryonenoteappforeground"></a>OneNote. app. OneNoteAppForeground *(prejšnje ime)*, Office. OneNote. Android. app. OneNoteAppForeground, Office. Android. EarlyTelemetry. OneNoteAppForeground
+#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground-officeandroidearlytelemetryonenoteappforeground"></a>OneNote. app. OneNoteAppForeground *(prejšnje ime)* , Office. OneNote. Android. app. OneNoteAppForeground, Office. Android. EarlyTelemetry. OneNoteAppForeground
 
 S tem signalom določimo, da se aplikacija OneNote izvaja v ospredju.  Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. 
 
 Zbrana so naslednja polja: Brez.
 
-#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch-officeonenoteandroidapplaunch"></a>OneNote. AppLaunch *(prejšnje ime)*, Office. Android. EarlyTelemetry. AppLaunch, Office. OneNote. Android. AppLaunch
+#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch-officeonenoteandroidapplaunch"></a>OneNote. AppLaunch *(prejšnje ime)* , Office. Android. EarlyTelemetry. AppLaunch, Office. OneNote. Android. AppLaunch
 
 Kritični signal, ki se uporablja, da uporabnikom storitve OneNote zagotovi uspešen zagon aplikacije.  Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in ustreznosti stanja storitve. 
 
@@ -9225,7 +9225,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data_Doc_AsyncOpenKind:long – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind:long –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_Doc\_ChunkingType:long** – Način shranjevanja dokumenta v SharePointu.
 
@@ -9271,7 +9271,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
@@ -9591,7 +9591,7 @@ Zbrana so sledeča polja:
 
   - **Data\_FileLoaded –** ima vrednost false, če ste datoteko odprli iz zunanjega oz. novega praznega projekta
 
-  - **Data\_IsEntOfflineWithProfile out-space ** ali je uporabnikom bila dodeljena profesionalna inventarna številka in nimajo vzpostavljene povezave s strežnikom
+  - **Data\_IsEntOfflineWithProfile out-space** ali je uporabnikom bila dodeljena profesionalna inventarna številka in nimajo vzpostavljene povezave s strežnikom
 
   - **Data\_IsEntOnline –** ali je Projectova seja povezana s Projectovim strežnikom s funkcijami podjetja
 
@@ -9720,7 +9720,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -9845,7 +9845,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -9968,7 +9968,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_AssistedReadingReasons** – Nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-  - **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+  - **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
   - **Data\_Doc\_ChunkingType** – Enote, ki se uporabljajo za postopno odpiranje dokumenta.
 
@@ -10010,7 +10010,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_ResourceIdHash –** anonimni identifikator dokumenta za diagnosticiranje težav
 
-  - **Data_Doc_RtcType – **  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId –** nespremenljivi anonimni identifikator dokumenta za diagnosticiranje težav
 
@@ -10093,7 +10093,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
-- **Data_Doc_AsyncOpenKind – ** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
+- **Data_Doc_AsyncOpenKind –** Označuje, ali se je odprla predpomnjena različica dokumenta v oblaku in katera logika asinhronega osveževanja je bila uporabljena.
 
 - **Data_Doc_ChunkingType** – enote, uporabljene za postopno odpiranje dokumenta.
 
@@ -10281,7 +10281,7 @@ Omogoča nam, da odkrijemo uporabnikovo orodje za pomoč uporabnikom s posebnimi
 
 Zbrana so sledeča polja:
 
-  - **Data\_Data\_Jaws –** ponazarja, ali se je med sejo uporabljal bralnik Jaws**Data\_Data\_Magic –** ponazarja, ali se je med sejo uporabljalo orodje Magic
+  - **Data\_Data\_Jaws –** ponazarja, ali se je med sejo uporabljal bralnik Jaws **Data\_Data\_Magic –** ponazarja, ali se je med sejo uporabljalo orodje Magic
 
   - **Data\_Data\_Magnify –** ponazarja, ali se je med sejo uporabljajo orodje povečave
 
@@ -10489,7 +10489,7 @@ Zbrana so sledeča polja:
 
 - **com.** – konfiguracijske vrednosti proizvajalca, ki jih posreduje okolje Android (npr. com.google.android.feature.FASTPASS_BUILD, com.amazon.feature.PRELOAD, com.samsung.android.bio.face).
 
-- **crash_report_sdk**-SDK za pošiljanje dnevnikov zrušitve. Hokejski ali AppCenter
+- **crash_report_sdk** -SDK za pošiljanje dnevnikov zrušitve. Hokejski ali AppCenter
 
 - **crash_type** – crash_type bo vsebovala Javo kot vrste, ki niso usodne.
 
@@ -10707,7 +10707,7 @@ Zbrana so naslednja polja:
 
 - **StoreType** – izvor aplikacije
 
-- **Oznaka**– določa, kje točno je prišlo do napake kode, in sicer z enolično oznako, ki je povezana s kodo.
+- **Oznaka** – določa, kje točno je prišlo do napake kode, in sicer z enolično oznako, ki je povezana s kodo.
 
 - **UsesSharedRuntime** – označuje, ali aplikacija uporablja sharedRuntime.
 
@@ -10777,7 +10777,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officepowerpointsession"></a>Office.PowerPoint.Session
 
-Zbiranje uporab funkcije v posameznih PowerPointovih sejah. Ti podatki se uporabljajo za izračun razmerja neprimernih izhodov iz PowerPointa med uporabo funkcije. Razmerje neprimernih izhodov iz PowerPointa predstavlja poglavitni signal za zagotovitev, da PowerPoint ne deluje po pričakovanjih.
+Zbiranje uporab funkcije v posameznih PowerPointovih sejah.  Ti podatki se uporabljajo za izračun razmerja neprimernih izhodov iz PowerPointa med uporabo funkcije. Razmerje neprimernih izhodov iz PowerPointa predstavlja poglavitni signal za zagotovitev, da PowerPoint ne deluje po pričakovanjih.
 
 Zbrana so sledeča polja:
 
@@ -11220,7 +11220,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ConnectionInfo.ExtranetUrl** – URL ekstraneta v  podatkih o povezavi
 
-- **RMS.ConnectionInfo.IntranetUrl**– URL intraneta v podatkih o povezavi
+- **RMS.ConnectionInfo.IntranetUrl** – URL intraneta v podatkih o povezavi
 
 - **RMS.ConnectionMode** – način povezave med odjemalcem in strežnikom storitev za upravljanje pravic: z vzpostavljeno povezavo ali brez povezave
 
@@ -11442,7 +11442,7 @@ Zbrana so naslednja polja:
 
 - **LoadMinLibsTimeInMs** – Čas nalaganja za najmanjši nabor knjižnic.
 
-- **MruListingTimeInMs**– Čas, zahtevan za nalaganje MRU-ja.
+- **MruListingTimeInMs** – Čas, zahtevan za nalaganje MRU-ja.
 
 - **NativeLibrariesLoadTime** – Čas, zahtevan za nalaganje knjižnic CPP.
 
@@ -11712,17 +11712,17 @@ Kritični signal se uporablja za pravilno nastavitev in uporabo zvezkov, po tem,
 
 Zbrana so naslednja polja:
 
-- **AppSuspendedDuringEvent**: vrne logično vrednost, ki označuje, ali je bila aplikacija prekinjena med omogočanje uporabe
+- **AppSuspendedDuringEvent** : vrne logično vrednost, ki označuje, ali je bila aplikacija prekinjena med omogočanje uporabe
 
 - **ErrorCode** – vrne kodo napake, ki je odgovorna za neuspela omogočanje uporabe 
 
-- **NetworkConnection**: vrsta omrežne povezljivosti naprave, ki je v uporabi
+- **NetworkConnection** : vrsta omrežne povezljivosti naprave, ki je v uporabi
 
 - **NetworkDataExchange** – zabeleži število bajtov, izmenjanih med omogočanjem uporabe.
 
-- **ServerType**: vrne vrsto strežnika, ki ponuja storitev.
+- **ServerType** : vrne vrsto strežnika, ki ponuja storitev.
 
-- **TimeTakenInMilliSeconds**: vrne čas, ki ga je treba izvesti za dokončanje uporabe v milisekundah
+- **TimeTakenInMilliSeconds** : vrne čas, ki ga je treba izvesti za dokončanje uporabe v milisekundah
 
 
 #### <a name="officeonenotesystembootdialogssafebootdialogpending"></a>Office.OneNote.System.BootDialogs.SafeBootDialogPending 
@@ -12100,7 +12100,7 @@ Zbrana so ta polja:
 - **DIALOG_ACTION** – kateri gumb »pogovornega okna« je uporabnik kliknil – gumb » pozitivna« ali »negativni gumb«
 
 
-#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(prejšnje ime)*, Office.OneNote.Android.Sync.ProvisioningCompleted
+#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(prejšnje ime)* , Office.OneNote.Android.Sync.ProvisioningCompleted
 
 Kritični signal se uporablja za pravilno nastavitev in uporabo zvezkov, po tem, ko se je uporabnik vpisal v aplikacijo OneNote za sistem Android, za omogočanje dostopa do zvezkov. Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.
 
@@ -12116,7 +12116,7 @@ Zbrana so sledeča polja:
 
 - **TimeTakenInMilliSeconds** – vrne čas, zahtevan za dokončanje omogočanja uporabe, v milisekundah.
 
-#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(prejšnje ime)*, Office.OneNote.Android.Sync.ProvisioningStarted
+#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(prejšnje ime)* , Office.OneNote.Android.Sync.ProvisioningStarted
 
 Kritični signal se uporablja za pravilno nastavitev in uporabo zvezkov, po tem, ko se je uporabnik vpisal v aplikacijo OneNote za sistem Android, za omogočanje dostopa do zvezkov.  Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve.
 
@@ -12414,7 +12414,7 @@ Zbrana so naslednja polja:
 
 - **PPTHresult** – Hresult v PPT-ju.
 
-- **PPTIsExpectedError**– Razvrstitev napake PPT za pričakovano/nepričakovano napako pri odpiranju datoteke. 
+- **PPTIsExpectedError** – Razvrstitev napake PPT za pričakovano/nepričakovano napako pri odpiranju datoteke. 
 
 - **PPTTag** – Oznaka napake v PPT-ju.
 
@@ -12496,7 +12496,7 @@ Zbrana so naslednja polja:
 
 - **AppBootingOccured** – Logična vrednost za preverjanje, ali je zagon aplikacije končan.
 
-- **ApplicationBootTime**– Čas, zahtevan za določeno stopnjo zagona aplikacije.
+- **ApplicationBootTime** – Čas, zahtevan za določeno stopnjo zagona aplikacije.
 
 - **AppSuspendedDuringBoot** – Logična vrednost za preverjanje, ali je bila aplikacija prekinjena med zagonom.
 
@@ -12516,7 +12516,7 @@ Zbrana so naslednja polja:
 
 - **InitalizationReason** – Vstopna točka za odpiranje datoteke.
 
-- **InitialBootPhaseTime**– Čas, zahtevan za določeno stopnjo zagona aplikacije.
+- **InitialBootPhaseTime** – Čas, zahtevan za določeno stopnjo zagona aplikacije.
 
 - **IsThisFirstLaunch** – Logična vrednost, ki označuje, ali je to prvi zagon aplikacije.
 
@@ -12530,7 +12530,7 @@ Zbrana so naslednja polja:
 
 - **PPTRenderPhase** – Čas, povezan z določeno stopnjo pri upodabljanju PPT.
 
-- **PreAppInitTimeInMs**– Čas, zahtevan za določeno stopnjo zagona aplikacije.
+- **PreAppInitTimeInMs** – Čas, zahtevan za določeno stopnjo zagona aplikacije.
 
 - **ProviderApp** – Ime paketa aplikacije, v kateri se je odprla datoteka.
 
@@ -13447,11 +13447,11 @@ Zbrana so sledeča polja (velja samo za naprave s sistemom Android):
 
 - **talkback** – prikaže, ali je uporabnik v svoji napravi vklopil nastavitev povratnega govora. S tem dogodkom lahko zaznamo težave, povezane s to nastavitvijo.
 
-- **webview_kernel_version**: Različica spletnega ogleda Chromium jedra v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
+- **webview_kernel_version** : Različica spletnega ogleda Chromium jedra v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
 
-- **webview_package_name**: Ime paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezano z različico spletnega pogleda.
+- **webview_package_name** : Ime paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezano z različico spletnega pogleda.
 
-- **webview_package_version**: Različica paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
+- **webview_package_version** : Različica paketa spletnega ogleda v napravi, ki nam pomaga odkriti težave z združljivostjo, povezane z različico spletnega pogleda.
 
 #### <a name="lowstoragewarning"></a>low.storage.warning
 

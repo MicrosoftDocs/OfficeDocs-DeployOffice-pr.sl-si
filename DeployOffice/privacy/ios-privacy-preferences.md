@@ -14,30 +14,25 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom nudi informacije o načinu upravljanja nastavitev zasebnosti v napravah s sistemom iOS.
 hideEdit: true
-ms.openlocfilehash: ac8b3428734649981f20a82be2f0793c857e09ee
-ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
+ms.openlocfilehash: ed24ac934625bba61eac25e764a892d48365c005
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092170"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794673"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS
 
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
+
 Na voljo so nove prednostne nastavitve za Office v napravah s sistemom iOS, s katerimi lahko nadzorujete nastavitve, povezane z naslednjo vsebino:
 
-- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
+- ***Diagnostični podatki** _ o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
 
-- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 Če želite več informacij o diagnostičnih podatkih in povezanih izkušnjah, preberite članek [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md).
-
-Te prednostne nastavitve se nanašajo na naslednje aplikacije:
-- Različica 2.30 in poznejše različice programov Word za iOS, Excel za iOS in PowerPoint za iOS.
-- Različica 4.30.0 in novejše različice programa Outlook za iOS
-- Različica 16.30 in novejše različice programa OneNote za iOS.
-- Različica 11.19.11 in novejše različice programa OneDrive za iOS.
-- Različica 1.17 in novejša različica programa Visio Viewer za iOS.
-- Različica 2.34 in novejše različice aplikacije Office za iOS.
 
 > [!NOTE]
 > Če želite več informacij o podobnih nastavitvah za Office v računalnikih s sistemom macOS, preberite članek [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md)
@@ -74,7 +69,7 @@ Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje teža
 
 |||
 |:-----|:-----|
-|**Ključ**  | `DiagnosticDataTypePreference`  |
+|_ *Ključ**  | `DiagnosticDataTypePreference`  |
 |**Vrsta podatkov**  | Niz |
 |**Možne vrednosti**  | `BasicDiagnosticData` *(s tem nastavite raven na možnost »Zahtevana«)* <br/> `FullDiagnosticData` *(s tem nastavite raven na možnost »Izbirna«)* <br/> `ZeroDiagnosticData` *(s tem nastavite raven na možnost »Nobena«)* |
 

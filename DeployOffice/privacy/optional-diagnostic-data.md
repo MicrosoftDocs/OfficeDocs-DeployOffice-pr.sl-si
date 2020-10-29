@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: 2183863e1f7050d7d6ba838b639debf2b53ac9bd
-ms.sourcegitcommit: e1e4c309d62d0708404b7838c96416ce89f1b8b7
+ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48328335"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794817"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
@@ -27,9 +27,9 @@ ms.locfileid: "48328335"
 
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
-Diagnostični podatki o uporabljeni programski opremi odjemalca za Office v računalnikih z nameščenim sistemom Windows so bili zbrani in poslani Microsoftu. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
+Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
 
-***Izbirni diagnostični podatki*** – dodatni podatki, ki omogočajo izboljšave izdelkov ter nudijo izčrpne informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
+***Izbirni diagnostični podatki** – dodatni podatki, ki omogočajo izboljšave izdelkov ter nudijo izčrpne informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
 
 Če se odločite, da nam boste poslali izbirne diagnostične podatke, nam boste prav tako poslali še zahtevane diagnostične podatke. Prav tako lahko pošljete datoteke diagnostičnega dnevnika za Office, ki vsebujejo informacije, zelo podobne izbirnim diagnostičnim podatkom. Če želite več informacij o teh dnevniških datotekah, si oglejte [Pregled datotek diagnostičnega dnevnika za Office](https://support.microsoft.com/office/fba86aac-70dc-4858-ae1f-ec2034346cdf).
 
@@ -71,7 +71,7 @@ V to kategorijo sodijo dogodki, ki lahko vključujejo ta področja:
 
 V tej tabeli so primeri dogodkov v tej kategoriji ter opis teh dogodkov.
 
-| **Ime dogodka**   | **Opis dogodka**  |
+| _ *Ime dogodka**   | **Opis dogodka**  |
 | ---- | ---- |
 | Office.Extensibility.AppCommands.GetRibbonUpdatesForUserId | Ta dogodek označuje, ali Word uspešno posodobi trak v Wordovem uporabniškem vmesniku, ko uporabnik spremeni svojo identiteto. S tem dogodkom zaznamo napačne nastavitve in druge težave, ki lahko vplivajo na Officeov uporabniški vmesnik. |
 | Office.Extensibility.AppCommands.AppCmdInstall   | V tem dogodku so informacije o Officeovem dodatku, ki ga je uporabnik namestil, vključno z ID-jem aplikacije, graditvijo in različico operacijskega sistema, uspehom namestitve ter trajanjem namestitve.  |

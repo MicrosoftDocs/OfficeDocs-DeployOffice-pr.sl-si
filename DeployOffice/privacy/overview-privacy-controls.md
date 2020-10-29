@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus), vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440585"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794775"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja
 
@@ -30,8 +30,8 @@ ms.locfileid: "47440585"
 Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus).
 
 Od različice 1904 storitve Aplikacije ogrodja Microsoft 365 za podjetja dalje, boste lahko uporabljali nove, posodobljene in izboljšanje kontrolnike zasebnosti za ta področja:
-- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office v računalnikih z nameščenim sistemom Windows v vaši organizaciji, ki jih je sistem zbral in poslal Microsoftu.
-- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- ***Diagnostični podatki** – zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika v vaši organizaciji.
+- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesnika in nastavitve pravilnika.
 
@@ -39,11 +39,11 @@ V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesni
 
 Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
-Diagnostični podatki o uporabljeni programski opremi odjemalca za Office v računalnikih z nameščenim sistemom Windows v vaši organizaciji so bili zbrani in poslani Microsoftu.
+Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika v vaši organizaciji.
 
 Izbirate lahko med tremi ravnmi diagnostičnih podatkov programske opreme odjemalca za Aplikacije ogrodja Microsoft 365 za podjetja:
 
-- **Zahtevano** – najnižja raven podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
+- *Zahtevano* * – najnižja raven podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
 
 - **Izbirno** – dodatni podatki, ki zagotavljajo izboljšave izdelkov in omogočajo razširjene informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
 
@@ -61,7 +61,7 @@ Ti diagnostični podatki ne vključujejo imen uporabnikov, njihovih e-poštnih n
 
 Če si želite ogledati, katere vrste diagnostičnih podatkov so poslane Microsoftu, uporabite brezplačen pregledovalnik diagnostičnih podatkov, ki ga lahko prenesete in namestite iz Trgovine Microsoft.
 
-Če želite več informacij, preberite te članke:
+Več informacij je na voljo v teh člankih:
 
 - [Zahtevani diagnostični podatki za Office](required-diagnostic-data.md)
 - [Izbirni diagnostični podatki za Office](optional-diagnostic-data.md)
@@ -89,7 +89,7 @@ Na voljo je tudi nastavitev pravilnika, s katero lahko izklopite te povezane izk
 
 Če so vaši uporabniki vpisani v Office s poverilnicami organizacije, ki jih včasih imenujemo tudi službeni ali šolski račun, ne bodo mogli vklapljati teh povezanih izkušenj oziroma jih izklapljati.
 
-Če želite več informacij, preberite te članke:
+Več informacij je na voljo v teh člankih:
 
 - [Povezane izkušnje v Officeu](connected-experiences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
@@ -107,7 +107,7 @@ Ker te izbirne povezane izkušnje urejajo ločeni pogoji in določila, jih lahko
 
 Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupino tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
-Če želite več informacij, preberite te članke:
+Več informacij je na voljo v teh člankih:
 
 - [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
@@ -130,6 +130,6 @@ Obstaja tudi nabor osnovnih storitev za delovanje storitve Programi Microsoft 36
 
 Če želite več informacij, preberite [Ključne storitve za Office](essential-services.md).
 
-## <a name="related-topics"></a>Sorodne teme
+## <a name="related-articles"></a>Sorodni članki
 - [Zasebnost pri Microsoftu](https://privacy.microsoft.com/)
 - [Zasebnost v sistemu Windows](https://docs.microsoft.com/windows/privacy/)

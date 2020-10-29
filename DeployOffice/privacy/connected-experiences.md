@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 2ffbac14694578fc1f5964cef2c92eea6d6a2172
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491594"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794763"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -71,7 +71,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 <sup>1</sup> osnovna funkcionalnost urejevalnika je še vedno na voljo, tudi če nimate vzpostavljene povezave z internetom. Ta ista osnovna funkcionalnost je še vedno na voljo, če se odločite, da boste onemogočili uporabo povezanih izkušenj z analizo vsebine. V obeh primerih se podatki o uporabi urejevalnika ne pošljejo Microsoftu.
 
 > [!NOTE]
-> \*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
+> \*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* .
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezane izkušnje, s katerimi prenesete spletno vsebino
 
@@ -83,7 +83,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | ------------- | ------------- |
 | Aplikacije koledarja| [Kaj so aplikacije koledarja?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Pisave v oblaku                 | [Pisave v oblaku v Officeu](https://support.microsoft.com/office/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Pogosta vprašanja |Ko v Outlooku za iOS in Android izberete možnost**Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** ste preusmerjeni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
+| Pogosta vprašanja |Ko v Outlooku za iOS in Android izberete možnost **Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** ste preusmerjeni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Učinki rokopisa                 | [Risanje in pisanje s peresom v Officeu](https://support.microsoft.com/office/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Vstavi ikone                | [Vstavljanje ikon v Microsoft Office](https://support.microsoft.com/office/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Vstavi Microsoft Forms      | [Vstavljanje obrazca ali preskusa znanja v PowerPoint](https://support.microsoft.com/office/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
@@ -103,7 +103,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | *Vrstica za vreme*\* (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
+>\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* .
 
 ## <a name="other-connected-experiences"></a>Druge povezane izkušnje
 
@@ -125,7 +125,7 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Mapa »Prejeto« v fokusu (Outlook) |[Mapa »Prejeto« v fokusu v Outlooku](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Upravljanje pravic do informacij |[Odprite datoteko z omejenimi dovoljenji](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kartica stika |[LinkedIn v Microsoftovih aplikacijah in storitvah](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Dodatki za Office*\* | [Uvedite dodatke v skrbniškem središču](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
+| *Dodatki za Office*\* | [Ogled, upravljanje in nameščanje dodatkov v Officeovih programih](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(za uporabnike)* <br/> [Uvedite dodatke v skrbniškem središču](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(za skrbnike)* |
 | Povratne informacije o Officeu |[Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podpora za Office (Stik z nami) |Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku |
 | Organigram (Visio) |[Ustvarite organigram v Visiu](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -146,18 +146,18 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Ko ste bili odsotni |[Bodite obveščeni, ko člani vaše ekipe posodobijo vašo datoteko v skupni rabi](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
+>\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* .
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Izberite, če so te povezane izkušnje na voljo
 
 Izberete lahko, če so določene vrste povezanih izkušenj, kot so povezane izkušnje, s katerimi prenesete spletno vsebino, na voljo. Kako se odločite je odvisno od tega, če ste vpisani v Office z Microsoftovim računom, kot je osebni e-poštni naslov outlook.com, ali s službenim ali šolskim računom.
 
-Če ste vpisani z Microsoftovim računom, odprite Officeov program, kot je Word, in pojdite na **»Datoteka«** > **»Račun«** > **»Zasebnost računa«** > **»Upravljanje nastavitev«**. V razdelku **»Povezane izkušnje«** lahko izberete, če so določene vrste povezanih izkušenj, kot so izkušnje, ki analizirajo vašo vsebino, na voljo. Če ne obiščete razdelka **»Upravljanje nastavitev«**, bodo za vas na voljo vse povezane izkušnje.
+Če ste vpisani z Microsoftovim računom, odprite Officeov program, kot je Word, in pojdite na **»Datoteka«** > **»Račun«** > **»Zasebnost računa«** > **»Upravljanje nastavitev«** . V razdelku **»Povezane izkušnje«** lahko izberete, če so določene vrste povezanih izkušenj, kot so izkušnje, ki analizirajo vašo vsebino, na voljo. Če ne obiščete razdelka **»Upravljanje nastavitev«** , bodo za vas na voljo vse povezane izkušnje.
 
-Če ste vpisani s službenim ali šolskim računom, bo skrbnik vaše organizacije določil, katere izmed teh povezanih izkušenj bodo na voljo za vas. Če obiščete **»Datoteka«** > **»Račun«** > **»Zasebnost računa«** > **»Upravljanje nastavitev«**, ne boste videli izbir teh povezanih izkušenj.
+Če ste vpisani s službenim ali šolskim računom, bo skrbnik vaše organizacije določil, katere izmed teh povezanih izkušenj bodo na voljo za vas. Če obiščete **»Datoteka«** > **»Račun«** > **»Zasebnost računa«** > **»Upravljanje nastavitev«** , ne boste videli izbir teh povezanih izkušenj.
 
 > [!NOTE]
-> - Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
+> - Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)** . Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 > - Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
 Če ste skrbnik svoje organizacije, lahko uporabite nastavitve pravilnika, da določite, če so te povezane izkušnje na voljo vašim uporabnikom. Če ne uporabite teh nastavitev pravilnika, so vse povezane izkušnje na voljo vašim uporabnikom. Če želite več informacij o uporabi teh nastavitvah pravilnika, si oglejte naslednje članke: 
