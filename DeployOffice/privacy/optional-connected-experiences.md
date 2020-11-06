@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: c7593aed7e4bc6037bca6b84181c0434b2e27e30
-ms.sourcegitcommit: 288d54b2e6b463f67358f701ef0dd5424237f811
+ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48322386"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931452"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -101,17 +101,23 @@ V [vrstici za vreme](https://support.microsoft.com/office/d11b7532-7c58-489e-810
 
 Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
+> [!NOTE]
+> Če vam je skrbnik za organizacijo zagotovil različico izdelka Office 2019, Project 2019 ali Visio 2019 s količinskimi licencami, odprite razdelek **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja** > **Možnosti zasebnosti**. Prikazano mora biti potrditveno polje za možnost **Vklopi izbirne povezane izkušnje**. Če to potrditveno polje ni prikazano v izdelku Project 2019 ali Visio 2019, izberite **Nastavitve zasebnosti ...** v pogovornem oknu tega **Središča zaupanja**. Prikazati se mora pogovorno okno **Nastavitve zasebnosti** s potrditvenim poljem za možnost **Omogoči izbirne povezane izkušnje**.
+
 ## <a name="your-privacy-settings"></a>Vaše nastavitve zasebnosti
 
-Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**, da jih lahko upravljate, kadar želite. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
+Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev** , da jih lahko upravljate, kadar želite. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. S tem dejanjem odprete pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
 Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
+> [!NOTE]
+> Če vam je skrbnik za organizacijo zagotovil različico izdelka Office 2019, Project 2019 ali Visio 2019 s količinskimi licencami, odprite razdelek **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja** > **Možnosti zasebnosti**. Prikazano mora biti potrditveno polje za možnost **Vklopi izbirne povezane izkušnje**. Če to potrditveno polje ni prikazano v izdelku Project 2019 ali Visio 2019, izberite **Nastavitve zasebnosti ...** v pogovornem oknu tega **Središča zaupanja**. Prikazati se mora pogovorno okno **Nastavitve zasebnosti** s potrditvenim poljem za možnost **Omogoči izbirne povezane izkušnje**.
+
 ## <a name="required-service-data"></a>Zahtevani podatki storitve
 
-Če uporabljate katero koli od izbirnih storitev v oblaku, ki so opisane v tem članku, lahko Microsoft zbere [zahtevane podatke o storitvi](required-service-data.md) (na primer podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti delovanja, ko ste jo uporabili. Zahtevani podatki storitve lahko vsebujejo »osebni podatki«, kot je določeno v členu 4 Evropskega podjetja uredbe GDPR.  Vsi zahtevani podatki storitve, ki jih Microsoft zbira med uporabo katerega koli programa Microsoft 365 aplikacije za aplikacije in storitve za podjetja, so pod psevdonimi, kot je določeno v standardu ISO/IEC 19944:2017 (oddelek 8.3.3).
+Če uporabljate katero koli od izbirnih storitev v oblaku, ki so opisane v tem članku, lahko Microsoft zbere [zahtevane podatke o storitvi](required-service-data.md) (na primer podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti delovanja, ko ste jo uporabili. Zahtevani podatki storitve lahko vsebujejo »osebni podatki«, kot je določeno v členu 4 Evropskega podjetja uredbe GDPR.   Vsi zahtevani podatki storitve, ki jih Microsoft zbira med uporabo katerega koli programa Microsoft 365 aplikacije za aplikacije in storitve za podjetja, so pod psevdonimi, kot je določeno v standardu ISO/IEC 19944:2017 (oddelek 8.3.3).
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Skrbniki nadzora za izbirne povezane izkušnje 
 
@@ -123,6 +129,6 @@ Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.mic
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom Android](android-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za aplikacije Office v spletu.](office-web-privacy-controls.md)
 
-Večina poljubnih povezanih izkušenj se lahko upravlja preko kontrolnikov zasebnosti za povezane izkušnje. Na primer, vstavljanje spletnih slik se lahko upravlja tudi preko *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino*nastavitve politike.
+Večina poljubnih povezanih izkušenj se lahko upravlja preko kontrolnikov zasebnosti za povezane izkušnje. Na primer, vstavljanje spletnih slik se lahko upravlja tudi preko *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino* nastavitve politike.
 
 Če želite več informacij, si oglejte [pregled kontrolnikov za zasebnost za Programe Microsoft 365 za podjetja](overview-privacy-controls.md).

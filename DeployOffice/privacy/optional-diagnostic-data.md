@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbniki za Office dobijo informacije o izbirnih diagnostičnih podatkih v Officeu, vključno z nekaterimi primeri dogodkov.
 hideEdit: true
-ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 7dc10c50baed0306e3e7fc6dd70e0d798a72d0bc
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794817"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931270"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Izbirni diagnostični podatki za Office
 
@@ -28,6 +28,9 @@ ms.locfileid: "48794817"
 Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in odpravljanje težav v Officeu, poleg tega pa tudi za izboljšanje izdelka. Ti podatki ne vključujejo uporabniškega imena ali e-poštnega naslova, vsebine datotek uporabnika ali informacij o aplikacijah, ki niso del Officea.
 
 Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
+
+> [!NOTE]
+> Če uporabljate različico sistema Office 2019 ali Office 2016, ki vam ali vašemu skrbniku ne omogoča možnosti izbire pošiljanja izbirnih ali obveznih diagnostičnih podatkov, so poslani le obvezni diagnostični podatki. Če na primer uporabljate Office Professional Plus 2019 ali Office Standard 2016, kjer ni na voljo ta možnost izbire, so poslani le obvezni diagnostični podatki. Office 2013 ne pošilja obveznih ali izbirnih diagnostičnih podatkov. Več informacij o tem, v katerih različicah Officea je na voljo ta možnost izbite preberite v razdelku [Kontrolniki zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 ***Izbirni diagnostični podatki** – dodatni podatki, ki omogočajo izboljšave izdelkov ter nudijo izčrpne informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
 
