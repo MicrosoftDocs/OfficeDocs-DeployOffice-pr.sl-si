@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: e8b54e50ca8fc080cf09b26d83f4b7f28bc81290
-ms.sourcegitcommit: 521da3465e94ca9d29f3c6f49b78dd5f952d9cc6
+ms.openlocfilehash: 97d334551743566bde549da4b3b4a2476255d248
+ms.sourcegitcommit: 1c635a2906afb601e7c92b3f48dde3d271d06105
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "49088136"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49367377"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -1554,7 +1554,7 @@ Ta dogodek je zbiramo zato, da konfiguracija računa deluje uspešno, in ga upor
 
 Zbrana so sledeča polja: 
 
-- **account_creation_source** – izbirna lastnost, uporabljena za iskanje in diagnosticiranje morebitnih težav, do katerih pride med ustvarjanjem računa, ko je dodana vrsta dejanja.  Ima lahko vrednosti, kot so enotna prijava (SS0), create_new_account, manual, itd.
+- **account_creation_source** – izbirna lastnost, uporabljena za iskanje in diagnosticiranje morebitnih težav, do katerih pride med ustvarjanjem računa, ko je dodana vrsta dejanja.  Ima lahko vrednosti, kot so enotna prijava (SSO), create_new_account, manual, itd.
 
 - **action** – vrsta dejanja, izvedena v računu, kot je na primer dodajanje, odstranjevanje ali ponastavljanje
 
@@ -12265,7 +12265,7 @@ Zbrana so sledeča polja:
 
   - **Data\_FileType: string –** pripona datoteke za odprti diagram
 
-  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko denimo šablono
+  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko npr. šablona
 
   - **Data\_IsIRM: bool –** ima vrednost true, če ima datoteka zaščito za upravljanje pravic do informacij
 
