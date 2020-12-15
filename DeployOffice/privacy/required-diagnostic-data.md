@@ -2803,7 +2803,7 @@ Zbrana so naslednja polja:
 
 Podatki so zbrani le, če je uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira informacije o tem, kdaj se izvaja posrednik za telemetrijo sistema Office.    Ti podatki so zbrani le, če je nadzorna plošča za telemetrijo sistema Office omogočena in uporabljena za določanje ustreznosti stanja posrednika za telemetrijo sistema Office.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
   - **Data.AgentExit** – Časovni žig, ko se je posrednik za telemetrijo uspešno zaprl.
 
@@ -2815,7 +2815,7 @@ Zbrana so sledeča polja:
 
 Ti podatki so zbrani le, če je končni uporabnik (najverjetneje skrbnik) omogočil nadzorno ploščo za telemetrijo sistema Office. Zbira pojavitve dodatkov za Office in zrušitve dokumentov.  Ti podatki so zbrani le, če je končni uporabnik omogočil nadzorno ploščo za telemetrijo sistema Office. Z njimi določimo morebitno povečano pojavitev dodatkov ali zrušitev dokumentov.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
   - **Data.CollectionTime** – Časovni žig, kdaj je bil zabeležen dogodek zrušitve.
 
@@ -5356,7 +5356,7 @@ Zbrana so sledeča polja:
 
 - **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
 
-- **Data.clientType** – vrsta naprave, v kateri se izvaja aplikacija
+- **Data.clientType** – Vrsta naprave, v kateri se izvaja aplikacija
 
 - **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
 
@@ -5375,7 +5375,7 @@ Zbrana so sledeča polja:
   - **ClientTimeStamp** – Čas v aplikaciji, ko je bil dogodek zabeležen
   - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj
   - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-  - **consumerCorrelationId** – Dvojnik Data.clientCorrelationId zgoraj
+  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj
 
 - **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
@@ -5447,7 +5447,7 @@ Zbrana so sledeča polja:
 
   - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
   - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
-  - **consumerCorrelationId** – Dvojnik Data.clientCorrelationId zgoraj 
+  - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
 
 - **Data.region** – Geografsko območje zaledne storitve Kartica profila stika, s katerim je povezan uporabnik
 
@@ -6170,7 +6170,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
 
-  - **Data\_Doc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+  - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
   - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
 
@@ -6262,7 +6262,7 @@ Dogodek je zbran, ko PowerPoint ustvari novo predstavitev.  Vključuje metrike 
 
 Te informacije uporabljamo za zagotavljanje uspešnega ustvarjanja datotek brez kakršnega koli zmanjšanja učinkovitosti delovanja.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
   - **NewDocumentType** – Ali je nov dokument ustvarjen iz predloge oz. povsem na novo?
 
@@ -6306,7 +6306,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
 
-  - **Data\_Doc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+  - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
   - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
 
@@ -6430,7 +6430,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string** – Enolični GUID uporabnika.
 
-  - **Data\_Doc\_IdentityUniqueId:string** – Enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi.
+  - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
   - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
 
@@ -8871,7 +8871,7 @@ Zbrana so naslednja polja:
 
 Zapiše informacije o nepričakovanih zaustavitvah v Officeu. Tako lahko prepoznamo zrušitve ali neodzivanja izdelka in ustrezno ukrepamo.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
   - **Data\_AirspaceInitTime:integer –** Čas, zahtevan za inicializacijo Officeove komponente Airspace.
 
@@ -11241,7 +11241,7 @@ Zbrana so sledeča polja:
 
 S tem dogodkom lahko zaznamo in odpravimo težave, ki povzročajo občutno slabšo učinkovitost delovanja na naše komponente uporabniškega vmesnika koledarja, zaradi katerih lahko pride do težav med pomikanjem.
 
-Zbrana so ta polja: 
+Zbrana so sledeča polja: 
 
 - **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
 
@@ -12265,7 +12265,7 @@ Zbrana so sledeča polja:
 
   - **Data\_FileType: string –** pripona datoteke za odprti diagram
 
-  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko npr. šablona
+  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko denimo šablono
 
   - **Data\_IsIRM: bool –** ima vrednost true, če ima datoteka zaščito za upravljanje pravic do informacij
 
