@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
+ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491558"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "49685845"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -27,12 +27,12 @@ ms.locfileid: "48491558"
 
 Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje, zasnovne tako, da vam omogočajo bolj učinkovito ustvarjanje, komuniciranje in sodelovanje. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ko določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Na primer storitev licenciranja, s katero potrdite, da imate ustrezno licenco za uporabo Officea. Zahtevani podatki o teh storitvah so zbrani in poslani Microsoftu, ne glede na to, ali imate konfigurirane druge nastavitve pravilnika, povezane z varnostjo.
 
-Če želite več informacij, preberite članke:
+Več informacij je na voljo v teh člankih:
 
 - [Zahtevani podatki storitev za Office](required-service-data.md)
 - [Povezane izkušnje v Officeu](connected-experiences.md)
 
-Če ste skrbnik v svoji organizaciji, vas bo morda zanimalo to:
+Če ste skrbnik za svojo organizacijo, vas bo morda zanimal tudi za te članke:
 
 - [Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja](overview-privacy-controls.md)
 - [Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja](manage-privacy-controls.md)
@@ -47,8 +47,8 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 
 | **Storitev**  | **Opis**  |
 | ------ | ---- |
-| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki je na voljo v različnih platformah, s katero lahko preverite veljavnost identitete uporabnika v Officeu.  S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
-| [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti. Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
+| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki je na voljo v različnih platformah, s katero lahko preverite veljavnost identitete uporabnika v Officeu.   S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
+| [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti.  Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
 | [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) je tehnologija, ki se uporablja za posodobitev Microsoftovih aplikacij, ustvarjenih za macOS, kot je Office. MAU bo zaznal potrebo po storitvi, izvedla prenos in namestitev posodobitev programov, vključno z varnostnimi posodobitvami.|
@@ -359,7 +359,7 @@ Zbrana so sledeča polja:
 
   - **Microsoft\_ADAL\_extended\_expires\_on\_setting** – trditev true/false, ki ponazarja, ali je žeton presegel svojo življenjsko dobo
 
-  - **Microsoft\_ADAL\_http\_event\_coun**t – število klicev HTTP, ki jih izvede ADAL
+  - **Microsoft\_ADAL\_http\_event\_coun** t – število klicev HTTP, ki jih izvede ADAL
 
   - **Microsoft\_ADAL\_http\_event\_count\_max** – če je združen ta signal, ponazarja največje dovoljeno število klicev HTTP, ki jih izvede ADAL za kateri koli združeni dogodek.
 
@@ -1118,75 +1118,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigurelight"></a>Office.ClickToRun.Scenario.InstallTaskConfigurelight
 
@@ -1194,75 +1194,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko se namestitveni progra
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskfinalintegrate"></a>Office.ClickToRun.Scenario.InstallTaskFinalintegrate
 
@@ -1270,151 +1270,151 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
   - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID**– enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskfonts"></a>Office.ClickToRun.Scenario.InstallTaskFonts
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office namešča pisave. Uporabljajo se za merjenje uspešnosti/neuspešnosti namestitev Officea.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office namešča pisave. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
   - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskinitupdates"></a>Office.ClickToRun.Scenario.InstallTaskInitupdates
 
@@ -1422,75 +1422,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
   - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskintegrateinstall"></a>Office.ClickToRun.Scenario.InstallTaskIntegrateinstall
 
@@ -1498,75 +1498,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
   - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltasklastrun"></a>Office.ClickToRun.Scenario.InstallTaskLastrun
 
@@ -1574,75 +1574,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
   - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**–  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
   - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskmigrate"></a>Office.ClickToRun.Scenario.InstallTaskMigrate
 
@@ -1650,75 +1650,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
   - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
   - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** –  identifikator za posodobitev Officea v računalniku
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskpublishrsod"></a>Office.ClickToRun.Scenario.InstallTaskPublishrsod
 
@@ -1726,75 +1726,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
   - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskremoveinstallation"></a>Office.ClickToRun.Scenario.InstallTaskRemoveinstallation
 
@@ -1802,75 +1802,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskstream"></a>Office.ClickToRun.Scenario.InstallTaskStream
 
@@ -1878,75 +1878,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** –  identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioinstalltaskuninstallcentennial"></a>Office.ClickToRun.Scenario.InstallTaskUninstallcentennial
 
@@ -1954,75 +1954,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program z
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenariorepairtaskfinalintegrate"></a>Office.ClickToRun.Scenario.RepairTaskFinalintegrate
 
@@ -2030,75 +2030,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravilo
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenariorepairtaskfullrepair"></a>Office.ClickToRun.Scenario.RepairTaskFullrepair
 
@@ -2106,75 +2106,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenariorepairtaskintegraterepair"></a>Office.ClickToRun.Scenario.RepairTaskIntegraterepair
 
@@ -2182,75 +2182,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenariorepairtaskremoveinstallation"></a>Office.ClickToRun.Scenario.RepairTaskRemoveinstallation
 
@@ -2258,75 +2258,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**–  katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskintegrateupdate"></a>Office.ClickToRun.Scenario.UpdateTaskIntegrateupdate 
 
@@ -2334,75 +2334,75 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskpublishrsod"></a>Office.ClickToRun.Scenario.UpdateTaskPublishrsod
 
@@ -2410,75 +2410,75 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdateapply"></a>Office.ClickToRun.Scenario.UpdateTaskUpdateapply
 
@@ -2486,25 +2486,25 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_AvailableVersion to** – katera različica Officea je na voljo za posodobitev
 
@@ -2514,57 +2514,57 @@ Zbrana so sledeča polja:
 
   - **Data\_CorruptionChecksOnly** – ali iščemo samo poškodbe brez posodobitev
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
   - **Data\_HardlinkingException** – izjema, na katero smo naleteli med ustvarjanjem povezav
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
   - **Podatki\_PackageOperationSuccessful** – vrednost »True«, če smo uspešno dokončali opravilo v Officeovem paketu
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** –  identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
   - **Data\_WorkstationLockState** – vrednost »True«, če menimo, da je računalnik zaklenjen
 
@@ -2574,75 +2574,75 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
   - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedetection"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedetection
 
@@ -2650,25 +2650,25 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_AvailableVersion** – katera različica Officea je na voljo za posodobitev
 
@@ -2678,55 +2678,55 @@ Zbrana so sledeča polja:
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
   - **Data\_PackageUpdateAvailable** – vrednost »True«, če je na voljo nova različica Officea
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
   - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** –  identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedownload"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedownload
 
@@ -2734,25 +2734,25 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_AvailableVersion** – katera različica Officea je na voljo za posodobitev
 
@@ -2762,59 +2762,59 @@ Zbrana so sledeča polja:
 
   - **Data\_CorruptionChecksOnly** – ali iščemo samo poškodbe brez posodobitev
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
   - **Data\_ErrorSource** – mesto napake
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
   - **Data\_FoundCorruptFiles** – vrednost »True«, če smo odkrili poškodovane datoteke
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
   - **Podatki\_PackageOperationSuccessful** – vrednost »True«, če smo uspešno dokončali opravilo v Officeovem paketu
 
   - **Data\_PipelineExitCode** – koda izhoda, ki smo jo prejeli od cevovoda
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatefinalize"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatefinalize
 
@@ -2822,75 +2822,75 @@ Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec s tehnologij
 
 Zbrana so sledeča polja:
 
-  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
+  - **Data\_15\_SourceType** – mesto vira za Office 15, npr. CDN ali lokalno 
 
-  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
+  - **Data\_15\_UpdatesEnabled** – ali so omogočene posodobitve za Office 15 
 
-  - **Data\_15\_UpdateVersion –**  različica, na katero bo posodobljen Office 15 
+  - **Data\_15\_UpdateVersion** – različica, na katero bo posodobljen Office 15 
 
-  - **Data\_15\_Version** – različica za Office 15 
+  - **Data\_15\_Version** – različica za Office 15 
 
-  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
+  - **Data\_16\_SourceType** – mesto vira za Office 16, npr. CDN ali lokalno 
 
-  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
+  - **Data\_16\_UpdatesEnabled** – ali so omogočene posodobitve za Office 16 
 
-  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
+  - **Data\_16\_UpdateVersion** – različica, na katero bo posodobljen Office 16 
 
-  - **Data\_16\_Version** – različica za Office 16 
+  - **Data\_16\_Version** – različica za Office 16 
 
-  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
+  - **Data\_AddingFixedProducts** – izdelki, ki jih bomo dodali 
 
-  - **Data\_AddingProducts** – katere izdelke naj dodamo 
+  - **Data\_AddingProducts** – katere izdelke naj dodamo 
 
   - **Data\_CompletionState** – ali smo dokončali opravilo
 
-  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ErrorCode** – koda napake, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
+  - **Data\_ErrorDetails** – dodatne podrobnosti napake 
 
-  - **Data\_ErrorMessage** – sporočilo napake 
+  - **Data\_ErrorMessage** – sporočilo napake 
 
-  - **Data\_ErrorSource** – mesto napake 
+  - **Data\_ErrorSource** – mesto napake 
 
-  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
+  - **Data\_ExceptionType** – izjema, zaradi katere ni bilo mogoče dokončati opravila 
 
-  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorable** – ali je kodo napake, zaradi katere ni bilo mogoče dokončati opravila, mogoče prezreti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth** – ali menimo, da je kodo napake mogoče prezreti 
 
-  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
+  - **Data\_NewestPackageVersion** – najnovejša različica Officea v računalniku 
 
-  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
+  - **Data\_OldestPackageVersion** – najstarejša različica Officea v računalniku 
 
-  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
+  - **Data\_ProductsToAdd** – katere Officeove izdelke bomo dodali 
 
-  - **Data\_ProductsToRemove**– katere Officeove izdelke bomo odstranili 
+  - **Data\_ProductsToRemove –** katere Officeove izdelke bomo odstranili 
 
-  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingFixedProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
+  - **Data\_RemovingProducts** – izdelki, ki jih bomo odstranili 
 
-  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
+  - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
 
-  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
+  - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
-  - **Data\_SourceType** – mesto vira, npr. CDN 
+  - **Data\_SourceType** – mesto vira, npr. CDN 
 
-  - **Data\_SqmMachineID** –  enolični ID računalnika, ki ga uporablja Windows SQM 
+  - **Data\_SqmMachineID** – enolični ID računalnika, ki ga uporablja Windows SQM 
 
-  - **Data\_SusClientID** –  identifikator za posodobitev Officea v računalniku 
+  - **Data\_SusClientID** – identifikator za posodobitev Officea v računalniku 
 
-  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
+  - **Data\_TaskState** – v katerem stanju je opravilo, npr. izvajanje ali preklic 
 
-  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
+  - **Data\_TotalClientCabSize** – velikost kabine odjemalca 
 
-  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
+  - **Data\_TriggeringUI** – kaj je sprožilo uporabniški vmesnik 
 
-  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
+  - **Data\_UpdatesEnabled** – ali so omogočene posodobitve za Office 
 
-  - **Data\_Version** – različica Officea 
+  - **Data\_Version** – različica Officea 
 
 ### <a name="officeclicktoruntransport"></a>Office.ClickToRun.Transport
 
@@ -2943,13 +2943,13 @@ Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo za
 
 Zbrana so sledeča polja:
 
-  - **Data\_IsForeGroundStreaming** – ali pretočno predvajamo v ospredje oziroma ozadje
+  - **Data\_IsForeGroundStreaming**– ali pretočno predvajamo v ospredje oziroma ozadje
 
   - **Data\_IsInstallMode** – ima vrednost 1, če nameščamo in prenašamo datoteke, oziroma vrednost 0, če jih ne
 
   - **Data\_SourceProtocol** – ali prenašamo iz podatkovnega omrežja vsebine, CDN-ja, računalnika, ki predstavlja mesto namestitve, lokalno ali iz vira v lokalnem območnem omrežju
 
-  - **Data\_Status** – uspeh ali neuspeh 
+  - **Data\_Status** – uspeh ali neuspeh 
 
 ### <a name="officeclicktorunupdatestatus"></a>Office.ClickToRun.UpdateStatus
 
@@ -2992,7 +2992,7 @@ Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
 - **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala za posodobitev/namestitev. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled), Polletni kanal za podjetja ali Neveljaven.
 
-- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina, je bil zaznan v argumentih cmd, ki so bili preneseni v exe.
+- **CMDMode –** prijazen niz, ki ustreza celotnemu načinu zamenjave načina je bil zaznan v argumentih cmd, ki so bili preneseni v exe.
 
 - **C2RClientUICulture –** kultura C2R odjemalca za namestitev
 
@@ -3233,7 +3233,7 @@ Zbrana so sledeča polja:
 
 Zbere seznam konfiguracij, ki jih odjemalec prejeme od storitve ECS
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **ECSConfigs** – seznam konfiguracij za ECS (vrednosti so med seboj ločene z vejico)
 
@@ -3343,6 +3343,97 @@ Zbrana so sledeča polja:
 - **SessionID** – GUID za povezovanje dogodkov po seji
 
 
+### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+
+Ta telemetrija izdelka je zbrana za namen sledenja in beleženja stanja internih transakcij in informacij o usklajevanju za izboljšanje zanesljivosti in učinkovitosti delovanja. Microsoft te podatke uporablja za analizo in izboljšanje zanesljivosti ter učinkovitosti obdelovanja internih transakcij ni mehanizmov usklajevanja.
+
+Zbrana so sledeča polja:
+
+- **MicrosoftPurchaseOrderId** – ID Microsoftovega naročila, ki ga je za namen slednja poslala storitev Retail Federation Service (RFS).
+
+- **ResponseCode** – koda odgovora HTTP (int)
+
+- **StatusCode** – koda stanja odgovora RFS (RFS defined Enum int- finite)
+
+
+### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
+
+Ta dogodek zajame podatke, ki sodelujejo pri nadzoru stanja komponent Dime. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa Dime, da je zagotovljeno delovanje v skladu s pričakovanji. 
+
+Zbrana so sledeča polja:
+
+- **Data_ActivityErrorDescription** – opis napake dejavnosti
+
+- **Data_ActivityErrorMessage** – sporočilo o napaki dejavnosti 
+
+- **Data_CampaignId** – ID kampanje za pripisovanje
+
+- **Data_ContentId** – na podlagi ID-ja izkušnje; preslikano v ID toka in ID vsebine
+
+- **Data_CorrelationVector** – vektor korelacije za korelacijo storitve Dime s partnerji, ki uporabljajo vektor korelacije
+
+- **Data_CustomerImpacted** – uporabljeno za odpravljanje težav, če težava vpliva na stranko pri nalaganju toka
+
+- **Data_DimeActivityDuration** – čas trajanja 
+
+- **Data_DimeActivityMetadata** – metapodatki dejavnosti
+
+- **Data_DimeActivityName** – ime dejavnosti za nadzor ustreznosti stanja
+
+- **Data_DimeActivityResult** – rezultat dejavnosti, uspelo/napaka/pričakovana napaka
+
+- **Data_DimeVersion** – različica graditve
+
+- **Data_DurationLevel** – resnost – 0/1/2
+
+- **Data_EcsConfigIds** – ID-ji za eksperimente
+
+- **Data_EcsCountry** – zaznana država
+
+- **Data_EcsETag** – informacije o pilotni različici
+
+- **Data_Environment** – proizvodno/predproizvodno okolje Dime
+
+- **Data_ExperienceId** – izkušnja za nalaganje 
+
+- **Data_FlowId** – na podlagi ID-ja izkušnje; preslikano v ID toka in ID vsebine
+
+- **Data_Language** – kultura
+
+- **Data_Market** – zaznan trg
+
+- **Data_OTelJS_Version** – različica telemetrije Officea
+
+- **Data_PageSessionId** – ID seje strani
+
+- **Data_PartnerId** – aplikacija klicatelja
+
+- **Data_QosLevel** – resnost 0/1/2
+
+- **Data_SDX_AssetId** – ID vira vsebine gostovanja storitve Service Delivered Experience (SDX)
+
+- **Data_SDX_BrowserToken** – žeton brskalnika
+
+- **Data_SDX_HostJsVersion** – različica knjižnice JavaScript
+
+- **Data_SDX_Id** – ID storitve Service Delivered Experience
+
+- **Data_SDX_InstanceId** – ID primerka storitve SDX
+
+- **Data_SDX_MarketplaceType** – vrsta storitve SDX Marketplace
+
+- **Data_SDX_OfficeJsVersion** – različica sistema Office JS
+
+- **Data_SDX_SessionId** – ID seje storitve SDX
+
+- **Data_SDX_Version** – različica storitve SDX
+
+- **CollectionTime** – časovni žig dogodka
+
+- **Data_TsgId** –ID vodnika za odpravljanje težav za posamezno dejavnost
+
+- **Data_UserAgent** – oznake glave
+
 ### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
 
 Kritični telemetrični podatki o uporabi se zbirajo za ponazoritev, ko uporabnik tapne gumb za nakup.  Ti podatki se uporabljajo za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
@@ -3388,6 +3479,47 @@ Zbrana so sledeča polja:
 
 Ta dogodek ne zbere nobenega polja.
 
+### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
+ 
+Ta dogodek je uporabljen kot signal, da uporabnik ali aplikacija zapira izkušnjo nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+ 
+Zbrana so sledeča polja:
+ 
+- **Data_ClosedDialog** – zastavica, ki označuje, da je uporabnik zaprl pogovorno okno
+
+### <a name="officelicensingdialogswebviewdialoghandleerrornotification"></a>Office.Licensing.Dialogs.WebViewDialog.HandleErrorNotification
+ 
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da je prišlo do poskusa nalaganja izkušnje nakupa v aplikaciji, vendar je prišlo do napake, zaradi katere pogovorno okno ni prikazano. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+ 
+Zbrana so sledeča polja:
+  
+- **Data_MoeErrorCode** – koda napake, prikazana v ogrodju spletnega pogovornega okna
+
+### <a name="officelicensingdialogswebviewdialogpreload"></a>Office.Licensing.Dialogs.WebViewDialog.Preload
+ 
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da v ozadju poteka postopek nalaganja izkušnje nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+ 
+Zbrana so sledeča polja:
+
+ - Nobeno
+
+### <a name="officelicensingdialogswebviewdialogshow"></a>Office.Licensing.Dialogs.WebViewDialog.Show
+ 
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da je uporabniku prikazana izkušnja nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji.  
+
+Zbrana so sledeča polja:
+
+ - Nobeno
+
+### <a name="officelicensingdialogswebviewdialogtimeout"></a>Office.Licensing.Dialogs.WebViewDialog.Timeout
+
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da je bil izveden poskus nalaganja izkušnje nakupa v aplikaciji, vendar je časovna omejitev potekla. Podatki so uporabljeni za nadzorovanje in opozarjanje glede ustreznosti stanja toka nakupa v aplikaciji, ki zagotavlja, da deluje v skladu s pričakovanji. 
+
+Zbrana so sledeča polja:
+
+ - Nobeno
+
+
 ### <a name="officelicensingenforcesigninqualified"></a>Office.Licensing.EnforceSignInQualified 
 
 To je signal, ki nam pove, ali je bil poskus, ki smo ga izvedli za vsilitev vpisa uporabnika v sklopu licenciranja, uspešen. To je ključnega pomena pri zaznavanju uspeha ali neuspeha poskusa, ki uporabnike prisili, da se prijavijo, kar predstavlja obvezen korak pri sodobnem licenciranju. Če se uporabniki ne uspejo vpisati, ne bodo mogli več uporabljati aplikacije.
@@ -3408,7 +3540,7 @@ Zbrana so sledeča polja:
 
 Ti podatki so zbrani pri vsaki seji, ki sporoča stanje licenciranja v računalniku in sporoča napake, ki se prikažejo uporabniku, zaradi katerih, ne morejo uporabljati aplikacijo. Ta dogodek ponazarja, ali je stanje računalnika uporabnika primerno. Za ta dogodek smo vzpostavili zaznavanje anomalije, s katerim ugotovimo, ali regresija ali mehanizem aktivacije povzroča nepravilno delovanje uporabnika. Ta dogodek je pomemben tudi pri diagnosticiranju težav uporabnika in za nadziranje zdravja sistema.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **Acid** – identifikator GUID, ki predstavlja Officeov izdelek, za katerega je uporabnik prejel licenco 
   
@@ -3707,7 +3839,7 @@ Izvirni izdelovalci opreme prodajajo naprave, ki so vključene v Office (celolet
 
 Ta dejavnost telemetrijo sledi napakam pri uspehu in napaki pri iskanju vezave, tako da lahko zagotovimo, da lahko naprave, ki imajo zavezujočo vezavo, uspešno pridobivajo in da so naše storitve zdrave.  Ta dejavnost ne sledi strojem, ki so na voljo, da ne bi imeli nobenih vezi z njimi, ko jih preverimo z našimi storitvami.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **DexShouldRetry** – znak, da smo pripravili težavo, ki jo je mogoče odpraviti (Internet ali strežniki niso na voljo)
 
@@ -3946,7 +4078,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -3987,7 +4119,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4107,7 +4239,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4189,7 +4321,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4272,7 +4404,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4388,6 +4520,8 @@ Zbrana so naslednja polja:
 
 - **ID** seje – identifikator za sejo
 
+- **Success** – označuje, ali je opravilo kloniranja uspelo
+
 - **UpdateID** – identifikator posodobitve.
 
 
@@ -4399,7 +4533,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4440,7 +4574,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4480,7 +4614,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -4845,7 +4979,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -4886,7 +5020,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5009,7 +5143,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake med poskusom uporabe posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5050,7 +5184,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek pomeni, da je uporabnik preklical postopek prenosa.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5337,7 +5471,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev.  Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5378,7 +5512,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5419,7 +5553,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev. Prav tako lahko opazite, da je bil uporabnik obveščen o tej napaki. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5460,7 +5594,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je določeno, da je bila posodobitev dokončana, vendar je Microsoft autoupdate našel težavo s posodobljeno aplikacijo in popravilom. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5500,7 +5634,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo, da postopek posodabljanja ni uspel. Prav tako je prikazano, da je posodobitev že napredovala daemon in uporabnik je kliknil »v redu«, da prekinete prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5541,7 +5675,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je spodletela ena ali več posodobitev trenutnega paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5582,7 +5716,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5623,7 +5757,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5664,7 +5798,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bil postopek prenosa posodobitev uspešno vzpostavljen, ko je bil zaustavljen. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -5701,11 +5835,52 @@ Zbrana so ta polja:
 - **ID** seje – identifikator za sejo
 
 
+### <a name="controllermainwindowsetautomaticchecking"></a>controller.mainwindow.setautomaticchecking
+
+Ta dogodek pomeni, da je bila naprava včlanjena v način samodejnega posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+
+Zbrana so sledeča polja:
+
+ - **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **SessionId** – identifikator za sejo
+
+
 ### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način samodejnega posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5746,7 +5921,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bila naprava včlanjena v način ročne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5787,7 +5962,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil, da prekliče ali prezre določeno opozorilno sporočilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5828,7 +6003,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo za opozorilo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5870,7 +6045,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil upoštevati določeno priporočilo, ki je povezano z uvedbo dejanja namestitve programske opreme. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5911,7 +6086,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je zagnala možnost» prenos za posodobitve v oknu posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5952,7 +6127,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bil vnovičen poskus sprožen na listu posodobitev zaradi napake v omrežju. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -5993,7 +6168,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da poskusa ni bilo mogoče sprožiti na listu posodobitev zaradi napake omrežja. V tem dogodku je navedeno, da je uporabnik izvoljen za preklic posodobitev, potem ko je opozorilo, da omrežje ne bo na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6034,7 +6209,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bila povezljivost z omrežjem nenadoma izgubljena. Ta dogodek pomeni, da Server ni dosegljiv, ko poskuša prenesti paket posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6075,7 +6250,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do iskanja po posodobitvah, ki so privedle do posodobitev, ki niso na voljo. Ta dogodek pomeni, da Microsoft autoupdate ne najde razpoložljivih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6116,7 +6291,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo o napaki, ki je povzročilo prazen seznam posodobitev. V tem primeru je navedeno, da Microsoft autoupdate prikazuje prazen list z posodobitvami. To se ne bi smelo zgoditi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6198,7 +6373,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je uporabnik preklical, ko smo prikazali posodobitve na seznamu posodobitev lista. To uporabljamo celo zato, da razložimo razloge za to, da ne moremo posodobiti (tj. uporabnik bo preklical). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6239,7 +6414,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je uporabnik izdal zahtevo za začasno ustavitev prenosa. To uporabljamo tudi zato, da bi razložili razloge za to, da posodobitve ne bodo dokončane. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6280,7 +6455,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je agent za prenose opozoril na končno točko, ki bo preusmerila naslov URL-ja za zahtevo prenosa. To funkcijo uporabljamo tudi zato, da razložimo razloge za napake pri prenosu in diagnosticiranje težav z zastopstvom. Prav tako lahko pomaga pri diagnosticiranju razlogov, zakaj so uporabniki opazili, da bodo namestili starejše gradnje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6321,7 +6496,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6362,7 +6537,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da uporabnik izda zahtevo za nadaljevanje začasnega prenosa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6403,7 +6578,7 @@ Zbrana so ta polja:
 
 Ta dnevnik dogodkov, ki jih poskuša pridobiti datoteke zavarovanja, in njihov rezultat (uspeh ali neuspeh). Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Napačno datoteko, ki jo pridobivate, lahko pomeni težavo z ustvarjanjem/zavarovanjem. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6448,7 +6623,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -6483,7 +6658,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek je prišlo do napake pri prenosu. Datoteka, ki je ni prenesla, je zabeležena. Zanima nas, ali so zavarovane osebe in paketi, ki jih pridobivate. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6524,7 +6699,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo, da je bila datoteka uspešno prenesena. Če ne želite prenesti manifesta, lahko pokažete na to, da je prišlo do napake pri ustvarjanju nezmožnosti ustvarjanja zavarovanj, napake konfiguracije CDN, napaka konfiguracije odjemalca, omrežna napaka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -6565,7 +6740,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu. Datoteka manifesta ali paketa, ki ni uspela prenesti, in podrobnosti o napakah, so zabeležene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6606,7 +6781,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6647,7 +6822,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je zagnal prenos datoteke kataloga. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6688,7 +6863,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo, da je prišlo do nanašanja datoteke XML in paketa. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6729,7 +6904,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo, da je prišlo do zahteve za prenos datoteke. Zabeležimo URL, iz katerega je prenesena datoteka kataloga. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -6770,7 +6945,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6811,7 +6986,7 @@ Zbrana so ta polja:
 
 V tem primeru je spodletela varnostna veljavnost naših datotek. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6852,7 +7027,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je uporabnik poskusil preveriti, ali so na voljo posodobitve, in odkrili smo, da MAU manjka osrednje komponente (Daemon). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6893,7 +7068,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da preverjanje podpisa kode ni uspelo za paket. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6934,7 +7109,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži povzeto seštevanje poskusov/napak, ki so jih prizadele med postopkom prenosa za datoteke manifesta in paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -6975,7 +7150,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži oznako, ki označuje, da je proces prenosa končan sam. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7016,7 +7191,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži posodobitev, ki je na voljo za prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7105,7 +7280,7 @@ Zbrana so ta polja:
 
 V tem dnevniku dogodkov je prišlo do napake pri prenosu datoteke paketa. Zabeležimo pot posodobitve in napako. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7152,7 +7327,7 @@ Zbrana so ta polja:
 
 Uspešen prenos datoteke paketa. Zabeležimo uporabljeno pot posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7228,7 +7403,7 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -7244,7 +7419,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7272,7 +7447,7 @@ Zbrana so ta polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -7286,7 +7461,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7321,7 +7496,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se v ozadju preverjajo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7362,7 +7537,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bil postopek za ozadje preskočen zaradi odprtja MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7407,7 +7582,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7445,7 +7620,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7485,7 +7660,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7525,7 +7700,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7565,7 +7740,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7605,7 +7780,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7645,7 +7820,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7685,7 +7860,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7722,7 +7897,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek se odjavi pri zagonu daemona, medtem ko poskuša zagnati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -7771,7 +7946,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7813,7 +7988,7 @@ Zbrana so ta polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7853,7 +8028,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -7893,7 +8068,7 @@ Zbrana so sledeča polja:
     
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
     
 - **AppversionLong** – različica programa
     
@@ -7933,7 +8108,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
     
 - **AppversionLong** – različica programa
     
@@ -7973,7 +8148,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -8010,7 +8185,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da se uporabnik odloča v tihih posodobitvah. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8050,7 +8225,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je preverjanje prisilnega posodabljanja preskočeno zaradi odprtih programov. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8091,7 +8266,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do poskusa uporabe prisilne posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8132,7 +8307,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je MAU daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8173,7 +8348,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je MAU daemon našel razpoložljive posodobitve, ki so na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8214,7 +8389,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, da je proces Daemona Microsoft autoupdate postal aktiven za preverjanje, ali so na voljo posodobitve, ko ste spali za določeno časovno obdobje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8255,7 +8430,7 @@ Zbrana so ta polja:
 
 Ta dogodek beleži, ali so bile pred namestitvijo zaprte vse aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8296,7 +8471,7 @@ Zbrana so ta polja:
 
 Ta dogodek se prijavi v poskus ponovne uvedbe programa po tihi posodobitvi in načinu posodabljanja (klon ali ne). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8341,7 +8516,7 @@ Zbrana so ta polja:
 
 Ko namestite posodobitev, se prijavite, ko ste zagnali aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8382,7 +8557,7 @@ Zbrana so ta polja:
 
 Ko se začne postopek posodabljanja, se prijavite, da je bila odprta aplikacija za posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8423,7 +8598,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, da je storitev Microsoft Autoupdate prejela dogodek družbe Apple o prekinitvi aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8511,7 +8686,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži rezultat preverjanja sooblikovanja, ko uporabite posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8552,7 +8727,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je posodobitev prenesena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8595,7 +8770,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do napake pri prenosu posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8644,7 +8819,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, da začenjamo prenos nabora posodobitev v ozadju (zabeležimo število posodobitev, ki so bile sočasno prenesene). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8685,7 +8860,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da smo sprožili poskus prenosa popravila neuspele posodobitve. Zabeležimo različico in posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8728,7 +8903,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je prišlo do nepričakovane napake. Naenkrat bi morali le prenesti eno posodobitev za dani program. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8769,7 +8944,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je poskus namestitve posodobitve (različica) spodletel. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8810,7 +8985,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so vse posodobitve v paketu dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8851,7 +9026,7 @@ Zbrana so ta polja:
 
 V tem primeru je bil uspešno nameščen posamezen posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8892,7 +9067,7 @@ Zbrana so ta polja:
 
 V tem primeru je bil uspešno nameščena posamezna posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8986,7 +9161,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
  
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9028,7 +9203,7 @@ Zbrana so sledeča polja:
 
 V tem primeru se prikaže sporočilo, da posodobitev, ki je bila blokirana, ni več blokirana. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9069,7 +9244,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da bo posodobitev v čakalni vrsti za tihi namestitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9110,7 +9285,7 @@ Zbrana so ta polja:
 
 Ko je program, ki ima čakajočo posodobitev, končan, se prijavite. To pomeni čas, ko se lahko postopek dejanske namestitve izvede. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9190,7 +9365,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je sproženo obvestilo o posodobitvi na voljo. Če želite, da se prikaže sporočilo o posodobitvi, morate zagotoviti, da pride do povratnega toka. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9231,7 +9406,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je uporabnik kliknil vsebino, ki je na voljo v obvestilu o posodobitvi, in Microsoft autoupdate GUI. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9272,7 +9447,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9313,7 +9488,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je uporabnik odločil namestiti pozneje po tem, ko je bila prikazana posodobitev razpoložljivega obvestila. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -9387,7 +9562,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -9433,7 +9608,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -9485,7 +9660,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
  
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9525,7 +9700,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9565,7 +9740,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9605,7 +9780,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -9647,7 +9822,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -10039,7 +10214,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek zabeleži rezultat pregleda med aplikacijami, ki jih je treba namestiti, in ali bo poskus namestitve izveden glede na odpiranje aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10080,7 +10255,7 @@ Zbrana so ta polja:
 
 Datoteke paketa morate odstraniti po namestitvi. Ta dogodek zabeleži primere, v katerih jih ne moremo odstraniti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10121,7 +10296,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni mogel pridobiti informacij o paketu za registrirano aplikacijo na dani poti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10162,7 +10337,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži primere, v katerih uporabnik preference vsebuje neveljaven vnos programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10203,7 +10378,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži primere, v katerih ID snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10244,11 +10419,11 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži primere, v katerih ime snopa manjka za aplikacijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -10336,7 +10511,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži stanje binarne funkcije za sonačrtovanje OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -10377,7 +10552,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži stanje Microsoftove strežniške storitve Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10418,7 +10593,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži stanje Microsoftovega orodja pomoči Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10459,7 +10634,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je Microsoft autoupdate zaznal izdajo programa, ki je blokirana, vendar ni našla ustreznega namestitvenega programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10500,7 +10675,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, da je Microsoft autoupdate zaznal zagon programa za aplikacijo z čakajočo posodobitvijo. Zagnana aplikacija bo prekinjena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10541,7 +10716,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da preverjanje sooblikovanja ni uspelo za posodobitev programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10582,7 +10757,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da se je preverjanje sooblikovanja začelo z posodobitvijo aplikacije. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10623,7 +10798,7 @@ Zbrana so ta polja:
 
 V tem primeru se prikaže sporočilo o napaki pri preverjanju, ali je bila posodobitev programa posodobljena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10664,7 +10839,7 @@ Zbrana so ta polja:
 
 Ta dnevnik dogodkov ne pride med uporabo tihih posodobitev in ali je bila to klonirana ali navadna namestitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10746,7 +10921,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da je bil odstranjen klon. Odstranitev klona je izpolnjena, če je bil postopek namestitve postopka kloniranja končan ali ko se začne nov proces, v računalniku pa je na voljo starejša klonirana različica. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10787,7 +10962,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so prišlo do napak med postopkom vnovičnega popravka namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10823,53 +10998,12 @@ Zbrana so ta polja:
 
 - **ID** seje – identifikator za sejo
 
-
+   
 ### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
-
-- **Aplikacija** – postopek prijave, ki pošilja dogodek
-
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
-
-- **AppVersionLong** – različica aplikacije
-
-- **Channel** – ugodnost občinstva
-
-- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
-
-- **DeviceID** – identifikator naprave
-
-- **DeviceInfo_Model** – model strojne opreme naprave.
-
-- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
-
-- **DeviceInfo_OsBuild** – različica operacijskega sistema
-
-- **Event_ReceivedTime** – ura prejemanja telemetrijo
-
-- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
-
-- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
-
-- **HowTocheck** – ugodnost za preverjanje posodobitev
-
-- **Nosilnost** – vsebuje identifikator, ki se uporablja za spremljanje dejavnosti posodabljanja, ime posodobitve in podrobnosti o sporočeni napaki strežnika proxy.
-
-- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
-
-- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
-
-- **ID** seje – identifikator za sejo
-
-    
-### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
-
-Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
- 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10911,7 +11045,7 @@ Zbrana so ta polja:
 
 V tem dnevniku dogodkov, ki jih vnovičen poskus ne deluje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10952,7 +11086,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži uspešno namestitev posodobitve po vnovičnem poskusu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -10993,7 +11127,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, ali je nastavitev možnosti za vnovično odpiranje uporabniškega vmesnika» GUI «uspešna. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11084,6 +11218,94 @@ Zbrana so sledeča polja:
 
 - **UpdatePkg** – ime uporabljenega paketa posodobitve
 
+### <a name="lifecyclecomplimentproclaunch"></a>Lifecycle.complimentproclaunch
+
+Ta dogodek označuje poskus zagona storitve Microsoft Update Assistant v storitvi Microsoft AutoUpdate ali iz storitve Microsoft AutoUpdate v storitvi Microsoft Update Assistant. Ta dogodek je uporabljen za določanje in zagotavljanje ustreznosti stanja storitve Microsoft AutoUpdate in Microsoft Update Assistant.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Error** – vsaka napaka, prijavljena med poskusom zagona
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **Reason** – razlog za poizkus zagona postopka pohvale
+
+- **ID** seje – identifikator za sejo
+
+- **Success** –  označuje, ali je bila posodobitev aplikacije uspešna
+
+### <a name="lifecyclelaunch"></a>Lifecycle.launch
+
+Ta dogodek označuje začetek storitve Microsoft AutoUpdate ali storitve Microsoft Update Assistant. Ta dogodek je uporabljen tudi za poročanje o morebitnih težavah, do katerih je prišlo med postopkom zagona, hkrati pa je uporabljen tudi način poročanja v primeru storitve Microsoft Update Assistant.
+
+*[Ta dogodek nadomesti dogodke fba.launch in appdelegate.launch.]*
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Error** – morebitna napaka, do katere pride med zagonom
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **LaunchedBy** – način, uporabljen za zagon storitve Microsoft Update Assistant, če velja
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
 ### <a name="lifecycleperiodiccheck"></a>Lifecycle.periodiccheck
 
 Ta dogodek redno poroča o stanju postopka »MicrosoftAutoUpdate«. Poroča o vrsti preostalih opravil, katerih dokončanje čaka postopek za pomočnika za posodobitev, v primeru uporabniškega vmesnika pa poroča o tem, ali bo postopek prekinjen zaradi nedejavnosti uporabnika.  Ta dogodek se uporablja za določanje, zakaj pomočnik za posodobitev ne more dokončati posodobitev, ter ali bo uporabniški vmesnik prekinjen zaradi nedejavnosti uporabnika.
@@ -11135,6 +11357,50 @@ Zbrana so sledeča polja:
 - **SessionLength** – dolžina seje trenutnega postopka v sekundah
 
 
+### <a name="lifecycleterminate"></a>Lifecycle.terminate
+
+Ta dogodek označuje ukinitev storitve Microsoft AutoUpdate ali storitve Microsoft Update Assistant. Ta dogodek je uporabljen za določanje ustreznosti stanja storitve Microsoft AutoUpdate in Microsoft Update Assistant.
+
+*[Ta dogodek nadomesti dogodke fba.terminate in appdelegate.terminate.]*
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je zgodil dogodek iz dnevnika 
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+- **SessionLength** – dolžina trenutne seje postopka v sekundah
+
+
+
 ### <a name="msupdateclieventhandler"></a>msupdate.cli.eventhandler
 
 Ta dogodek se uporablja za izračun uporabe različnih tipov programskega vmesnika API ukazne vrstice programa Microsoft Auto Update (MAU).
@@ -11182,7 +11448,7 @@ Zbrana so naslednja polja:
 
 V tem dogodku je navedeno, da je bil ukaz CLI (vmesnik odjemalca) izdan tako, da je uporabljal posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11223,7 +11489,7 @@ Zbrana so ta polja:
 
 V tem primeru je navedeno, da je modul vmesnika ukazne vrstice Microsoft Autoupdate prejel dogodek družbe Apple, ki ga je treba konfigurirati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11264,7 +11530,7 @@ Zbrana so ta polja:
 
 V tem dogodku je navedeno, da je modul vmesnika ukazne vrstice za samodejno posodabljanje sistema Microsoft prejel dogodek Apple za seznam posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11305,7 +11571,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so bile posodobitve prenesene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11346,7 +11612,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži seznam posodobitev, ki niso bile uporabljene v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11387,7 +11653,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži seznam posodobitev, ki so bile dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11428,7 +11694,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11469,7 +11735,7 @@ Zbrana so ta polja:
 
 Ta dogodek prijavi uporabnikov odgovor v pogovorno okno za vpis v tihe posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -11514,7 +11780,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11554,7 +11820,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11594,7 +11860,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11634,7 +11900,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11674,7 +11940,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11714,7 +11980,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11754,7 +12020,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11794,7 +12060,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11836,7 +12102,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11872,11 +12138,11 @@ Zbrana so naslednja polja:
 
 Ta dogodek označuje začetek vsiljene posodobitve, ki jo je iniciral uporabnik. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11956,7 +12222,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -11992,11 +12258,11 @@ Zbrana so sledeča polja:
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo odložil vsiljeno posodobitev. Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12036,7 +12302,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12072,11 +12338,11 @@ Zbrana so naslednja polja:
 
 Ta dogodek označuje, da se je uporabnik odločil, da bo aplikacijo posodobil v tem trenutku.  Ta dogodek je del lijaka in se uporablja za določitev ustreznosti stanja funkcije vsiljene posodobitve.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12113,7 +12379,7 @@ Zbrana so naslednja polja:
 
 Ta dnevnik dogodkov vsakič, ko na podlagi zavarovanja manjka ključ manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12236,7 +12502,7 @@ Zbrana so naslednja polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12280,7 +12546,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12334,7 +12600,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12452,7 +12718,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12498,7 +12764,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12510,7 +12776,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12584,7 +12850,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12628,7 +12894,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12688,7 +12954,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12728,7 +12994,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12842,7 +13108,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12888,7 +13154,7 @@ Zbrana so sledeča polja:
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
-- **ID seje** – identifikator za sejo
+- **ID** seje – identifikator za sejo
 
 - **PreviousUpdateID** – identifikator za posodobitev aplikacije
 
@@ -12900,7 +13166,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -12937,7 +13203,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov poskuša registrirati aplikacijo in rezultat/razlog. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -12978,7 +13244,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bil naložen agent za zagon. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13022,7 +13288,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13058,7 +13324,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov se je prizadela, ko je dosegel dostop do programa CDN. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13102,7 +13368,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13138,7 +13404,7 @@ Zbrana so sledeča polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku ne bi mogli pridobiti datuma iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13179,11 +13445,11 @@ Zbrana so ta polja:
 
 Ta dogodek sporoči napako, ki označuje, da ni bilo mogoče najti nobenih ujemajočih se datotek manifesta z ID-jem aplikacije, pridobljenim iz spletnega odziva. Ta dogodek se uporablja za preiskovanje sporočene napake.
 
-Zbrana so naslednja polja: 
+Zbrana so sledeča polja: 
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13219,11 +13485,11 @@ Zbrana so naslednja polja:
 
 Ta dogodek sporoči napako, ki označuje, da ID aplikacije, pridobljen iz spletnega odziva, ni v pričakovani obliki zapisa. Ta dogodek se uporablja za preiskovanje sporočene napake.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13259,7 +13525,7 @@ Zbrana so naslednja polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13300,7 +13566,7 @@ Zbrana so ta polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. V tem dnevniku manjkajo datumi iz metapodatkov programa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13341,7 +13607,7 @@ Zbrana so ta polja:
 
 Posodobitve lahko filtrirate s storitvijo MAU le takrat, ko ponujena posodobitev ni starejša od določenega števila dni. Tukaj se prijavite storitev, ki je obšla zaradi starega datuma posodabljanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13386,7 +13652,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13425,7 +13691,7 @@ Zbrana so sledeča polja:
 
 Ta dnevnik dogodkov vsakič, ko začnete preverjanje delovanja posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
     
@@ -13466,7 +13732,7 @@ Zbrana so ta polja:
 
 S tem dogodkom združite stanje preveri, ali so na primer operacije za preverjanje posodabljanja (lij od iskanja do prenašanja). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13507,7 +13773,7 @@ Zbrana so ta polja:
 
 Ko se prikaže potrditveno polje preveri, ali so na voljo posodobitve, se prijavite vsakič, ko se prikaže. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13548,7 +13814,7 @@ Zbrana so ta polja:
 
 Ko preverite, ali so na voljo posodobitve, se prijavite vsakič, ko preverimo, ali je prišlo do nobenih posodobitev, ki jih ni bilo mogoče najti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13589,7 +13855,7 @@ Zbrana so ta polja:
 
 Ko preverimo, ali so na voljo posodobitve, se prijavite vsakič, ko se posodobitve ne ponudijo zaradi vseh programov, ki so že posodobljeni. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13634,7 +13900,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13672,7 +13938,7 @@ Zbrana so sledeča polja:
 
 Ko smo blokirali posodobitev, se prijavite vsakič, ko je prišlo do neizpolnjevanja zahtev za OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13716,7 +13982,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13754,7 +14020,7 @@ Zbrana so naslednja polja:
 
 V tem dogodku je navedeno, da Microsoft autoupdate ni uspel naložiti informacij o paketu za ID aplikacije, ki je naveden v preneseni datoteki manifesta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13795,7 +14061,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da je bila za aplikacijo in osnovni načrt najdena posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13836,7 +14102,7 @@ Zbrana so ta polja:
 
 Prijavimo aplikacije, ki so nameščene/registrirane/pod nadzorom MAU. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -13880,7 +14146,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -13959,7 +14225,7 @@ Zbrana so sledeča polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi pomanjkanja zavarovanja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14000,7 +14266,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke ne uporablja zaradi prestaranja različice osnovnega načrta. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14041,7 +14307,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko se posodobitev zbirke uporablja. Zabeležimo različico osnovne vrstice in AppId paketa. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14082,7 +14348,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Zabeležimo različico osnovne vrstice in AppId paketa. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14123,7 +14389,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – prijavite se vsakič, ko posodobitev zbirke ni na voljo, ker niso vse aplikacije zbirke, ki so nameščene pod privzeto potjo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14164,7 +14430,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko posodobitev zbirke ni na voljo zaradi velikosti zbirke, ki je večja od posameznih posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14205,7 +14471,7 @@ Zbrana so ta polja:
 
 Posodobitev zbirke – dnevnik se zabeleži vsakič, ko je na voljo posodobitev zbirke. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14246,7 +14512,7 @@ Zbrana so ta polja:
 
 Ta dogodek zabeleži število posodobitev, ki jih je odkrila Microsoftova autoupdate, medtem ko preverjate, ali so na voljo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14287,7 +14553,7 @@ Zbrana so ta polja:
 
 Ta dogodek pomeni, da so posodobitve našli in čakajoče namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14381,7 +14647,7 @@ Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -14417,7 +14683,7 @@ Zbrana so sledeča polja:
 
 Ta dogodek pomeni, da so bili najdeni tihi kandidati za posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14458,7 +14724,7 @@ Zbrana so ta polja:
 
 V tem dnevniku so na voljo interakcije med odjemalčevo kodo in funkcijami vrat, ki nadzorujejo, ali mora odjemalec omogočiti posodobitve za Delta. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14499,48 +14765,7 @@ Zbrana so ta polja:
 
 Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
-
-- **Aplikacija** – postopek prijave, ki pošilja dogodek
-
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
-
-- **AppVersionLong** – različica aplikacije
-
-- **Channel** – ugodnost občinstva
-
-- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
-
-- **DeviceID** – identifikator naprave
-
-- **DeviceInfo_Model** – model strojne opreme naprave.
-
-- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
-
-- **DeviceInfo_OsBuild** – različica operacijskega sistema
-
-- **Event_ReceivedTime** – ura prejemanja telemetrijo
-
-- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
-
-- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
-
-- **HowTocheck** – ugodnost za preverjanje posodobitev
-
-- **Nosilnost** – vsebuje podrobnosti o dejanjih, ki jih je treba potiskati iz spletnih storitev.
-
-- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
-
-- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
-
-- **ID** seje – identifikator za sejo
-
-
-### <a name="webservicesserviceaction"></a>webservices.serviceaction
-
-Zabeležimo morebitne napake, ki so posledica nepričakovanega odgovora na WebService. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
- 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14581,7 +14806,7 @@ Zbrana so ta polja:
 
 Ta dogodek prijavi zahteve MAU Service, odzivni čas in napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14622,7 +14847,7 @@ Zbrana so ta polja:
 
 Prijavimo zahteve za preverjanje veljavnosti» Force Update «pravil za uporabo, kar pomeni, da moramo sprejeti uporabnika iz gradnje N za izgradnjo N + 1 zaradi nekaj pomembnejših težav. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -14666,7 +14891,7 @@ Zbrana so naslednja polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
-- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
 
 - **AppversionLong** – različica programa
 
@@ -14702,7 +14927,7 @@ Zbrana so naslednja polja:
 
 Prijavimo zahteve in odgovore, prejete v storitvi. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -15253,6 +15478,46 @@ Zbrana so sledeča polja:
 
 - **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
 
+### <a name="officeonenotegetsharepointidsfordocument"></a>Office.OneNote.GetSharePointIdsForDocument
+
+Zbrani podatki beležijo neuspeh in uspeh pridobivanja ID-jev storitve SharePoint (SPO) za URL dokumenta. Uspeh in neuspeh (vključno z razlogom za neuspeh) klica je zabeležen za vse platforme. Ta oznaka je zahtevana za spremljanje in diagnosticiranje ustreznosti stanja klica, izvedenega za pridobivanje ID-jev. ID-ji so potrebni zato, da so podatki OneNotove strani (ki pripadajo zvezkom, shranjenim v SharePointu) prikazani v viru. 
+
+Zbrana so sledeča polja:
+
+- **ErrorCode** – interna vrednost napake
+
+- **ErrorMessage** – niz, ki opisuje napako
+
+- **FailureType** – niz, ki določa vrsto napake
+
+- **HttpStatusCode** – koda napake HTTP za omrežni klic
+
+- **InnerErrorCode** – interna koda
+
+- **InnerErrorMesage** – sporočilo za napako
+
+- **IsSuccess** – logična vrednost za signal je uspela
+
+### <a name="officeonenotegetsharepointidsfordocumentw32old"></a>Office.OneNote.GetSharePointIdsForDocumentW32Old
+
+Telemetrija beleži scenarije napak in uspeha pridobivanja SharePointovih (SPO) ID-jev za URL dokumenta. Zabeležen je uspeh in neuspeh (vključno z razlogom za neuspeh) klica. To je zabeleženo le pri stari platformi win32. Ta oznaka je zahtevana za spremljanje in diagnosticiranje ustreznosti stanja klica, izvedenega za pridobivanje ID-jev. ID-ji so potrebni zato, da so podatki OneNotove strani (ki pripadajo zvezkom, shranjenim v SharePointu) prikazani v viru. 
+
+Zbrana so sledeča polja:
+
+- **ErrorCode** – interna vrednost napake
+
+- **ErrorMessage** – niz, ki opisuje napako
+
+- **FailureType** – niz, ki določa vrsto napake
+
+- **HttpStatusCode** – koda napake HTTP za omrežni klic
+
+- **InnerErrorCode** – interna koda
+
+- **InnerErrorMesage** – sporočilo za napako
+
+- **IsSuccess** – logična vrednost za signal je uspela
+
 
 ### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
 
@@ -15322,7 +15587,7 @@ Zbrana so sledeča polja:
 
   - **IsCeip** – ali je bila namestitev Officea vključena v ukinjeni program za izboljšanje uporabniške izkušnje
 
-  - **IsDebug** – ali je to graditev Officea za odpravljanje napak
+  - **IsDebug** – ali je to gradnja Officea za odpravljanje napak
 
   - **IsImmersive** – ali Officeova aplikacija predstavlja univerzalno ali potopno aplikacijo sistema Windows
 
@@ -15640,7 +15905,7 @@ Zbrana so sledeča polja:
 
   - **ComputerSystemProductUuidHash** – enosmerna zgostitev UUID-ja matične plošče
 
-  - **DeviceClass** – identifikator za vrsto naprave, v kateri se izvaja Office.
+  - **DeviceClass** – identifikator za vrsto naprave, v kateri se izvaja Office
 
   - **DeviceMake** – identifikator za vrsto sistema strojne opreme za napravo, v kateri se izvaja Office
 
@@ -16022,7 +16287,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officesystemsystemhealthungracefulappexitdesktop"></a>Office.System.SystemHealthUngracefulAppExitDesktop
 
-Dogodek se uporablja za metrike zrušitev.
+Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanja upravitelja opravil, neodzivnost aplikacije ipd.) v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Metriko motenega zapiranja aplikacij uporabljamo za merjenje stanja Officeovih odjemalskih izdelkov. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
 
 Zbrana so sledeča polja:
 
@@ -16030,83 +16295,103 @@ Zbrana so sledeča polja:
 
   - **AffectedProcessAppBuild** – delovna revizija identifikatorja za vplivani proces
 
+  - **AffectedProcessAppMajorVer** – identifikator glavne različice za vplivani proces
+
   - **AffectedProcessAppMinorVer** – identifikator manjše različice za vplivani proces
 
-  - **AffectedProcessAppName** – ime vplivanega procesa
+  - **AffectedProcessAppName** – ime vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessExeBuildVersion** – številka delovne različice vplivanega procesa
+  - **AffectedProcessExeBuildVersion** – številka delovne različice vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessExeMajorVersion** – številka glavne različice vplivanega procesa
+  - **AffectedProcessExeMajorVersion** – številka glavne različice vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessExeMinorVersion** – številka manjše različice vplivanega procesa
+  - **AffectedProcessExeMinorVersion** – številka manjše različice vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessExeRevisionVersion** – številka revizije delovne različice vplivanega procesa
+  - **AffectedProcessExeRevisionVersion** – številka revizije delovne različice vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessIsDebug** – ali je vplivani proces podrejeni element za odpravljanje napak
+  - **AffectedProcessIsDebug** – ali je vplivani proces podrejeni element za odpravljanje napak *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessIsLabMachine** – ali je vplivani proces v Microsfotovem laboratoriju
+  - **AffectedProcessIsLabMachine** – ali je vplivani proces v Microsfotovem laboratoriju *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessOsEnvironment** – identifikator operacijskega sistema za vplivani proces
+  - **AffectedProcessOsEnvironment** – identifikator operacijskega sistema za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AppName** – ime vplivane aplikacije
+  - **AppName** – ime vplivane aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedAssignedFlights** – leti, povezani s procesom zrušitve
+  - **CrashedAssignedFlights** – leti, povezani s procesom zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedConfigIds** – konfiguracija, dodeljena procesu zrušitve
+  - **CrashedConfigIds** – konfiguracija, dodeljena procesu zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **CrashedEcsETag** – identifikator preskusa za proces zrušitve
 
-  - **CrashedImpressionId** – identifikator vtisa za proces zrušitve
+  - **CrashedImpressionId** – identifikator vtisa za proces zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedProcessSessionID** – enolični identifikator procesa zrušitve
+  - **CrashedModuleName** – ime modula z napako
 
-  - **CrashedProcessSessionInitTime** – čas, ko se je začel vplivani proces
+  - **CrashedProcessSessionID** – enolični identifikator procesa zrušitve 
+
+  - **CrashedProcessSessionInitTime** – čas, ko se je začel vplivani proces 
+
+  - **CrashedSessionInitTime** – čas, ko se je začel vplivani proces
+
+  - **HexCrashTag** – enolični identifikator za kodo zrušitve.
 
   - **CrashType** – identifikator razdeljevanja za vrsto zrušitve
 
-  - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod
+  - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ErrorString** – opis napake
+  - **ErrorString** – opis napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake
+  - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **ExceptionCode** – identifikator razdeljevanja za izjemo
 
-  - **FaultAppName** – ime aplikacije z napako
+  - **FaultAppName** – ime aplikacije z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
 
-  - **InstallType** – identifikator za način namestitve Officea
+  - **InstallType** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **InstallTypeName** – identifikator za način namestitve Officea
+  - **InstallTypeName** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju
+  - **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **IsMsftInternal** – ali je uporabnik sistema Windows, ki izvaja Office, Microsoftov zaposleni
+  - **IsMsftInternal** – ali je uporabnik sistema Windows, ki izvaja Office, Microsoftov zaposleni *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleBaseAddress** – osnovni naslov modula z napako
+  - **ModuleBaseAddress** – osnovni naslov modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleBuildVersion** – številka delovne različice za modul z napako
+  - **ModuleBuildVersion** – številka delovne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleMajorVersion** – številka glavne različice za modul z napako
+  - **ModuleMajorVersion** – številka glavne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleMinorVersion** – številka manjše različice za modul z napako
+  - **ModuleMinorVersion** – številka manjše različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleName** – ime modula z napako
+  - **ModuleName** – ime modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleOffset** – odmik v bajtih od osnovnega mesta, kjer je prišlo do napake
+  - **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake
 
-  - **ModuleRevisionVersion** – številka različice za revizijo gradnje modula z napako
+  - **ModuleRevisionVersion** – številka različice za revizijo gradnje modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleSize** – velikost modula z napako v bajtih
+  - **ModuleSize** – velikost modula z napako v bajtih *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **ModuleVersion** – različica nedelujočega modula, odgovornega za zrušitev.
+
+  - **OfficeArchitectureText** – arhitektura namestitve: x64, x86 itd.
+
+  - **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
 
   - **OSEnvironment** – identifikator za okolje, v katerem se izvaja Office
 
   - **PreviousBuild** – prejšnja nameščena delovna različica
 
-  - **UAETypeName** – identifikator razdeljevanja za način nenavadnega izhoda iz aplikacije
+  - **ProcessorArchitecture** – arhitektura procesorja za okolje: x64, x86 itd.
 
-  - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije
+  - **SessionFlags** – določa pogoje seje, na primer: datoteka je bila odprta, datoteka je bila urejena, dokument v oblaku je bil odprt, zaporedje zagona je bilo dokončano itd. 
+
+  - **UAETypeName** – identifikator razdeljevanja za način nenavadnega izhoda iz aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
+
+  - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 ### <a name="officesystemsystemhealthungracefulappexitimmersive"></a>Office.System.SystemHealthUngracefulAppExitImmersive
 
@@ -16170,81 +16455,112 @@ Zbrana so sledeča polja:
 
 Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanja upravitelja opravil, neodzivnost aplikacije ipd.) v primeru Officeovih odjemalskih aplikacij, kot so med drugim Word, Excel, PowerPoint in Outlook. Metriko motenega zapiranja aplikacij uporabljamo za merjenje stanja Officeovih odjemalskih izdelkov. Gre za ključni poslovni signal, ki ga Officeovi inženirji uporabljajo za zagotavljanje stabilnosti izdelka.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
-  - **AddinExecution –** zastavica, ki sporoča, ali se je dodatek izvajal in se med nenavadnim izhodom iz aplikacije ni končal.
+  - **AddinExecution –** zastavica, ki sporoča, ali se je dodatek izvajal in se med nenavadnim izhodom iz aplikacije ni končal. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **BootCompleted –** zagon Officea je bil ob trenutku zrušitve dokončan.
+  - **AppUsedVirtualMemory** – virtualni pomnilnik, ki ga uporablja Officeova aplikacija
 
-  - **CrashedProcessAppBuild** – identifikator delovne različice za vplivani proces
+  - **BootCompleted –** zagon Officea je bil ob trenutku zrušitve dokončan. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedAppMajor** – identifikator glavne različice za vplivani proces
+  - **BucketId** – identifikator vedra Watson za zrušitev
+ 
+  - **CabGuid** – identifikator globalnega enoličnega identifikatorja (GUID) za storitev Watson.
 
-  - **CrashedAppMinor** – identifikator manjše različice za vplivani proces
+  - **CrashedProcessAppBuild** – identifikator delovne različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedAppRevision** – identifikator delovne različice za vplivani proces
+  - **CrashedAppMajor** – identifikator glavne različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+ 
+  - **CrashedAppMinor** – identifikator manjše različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **CrashedAppVersion** – identifikator različice aplikacije za postopek, ki se je zrušil.
 
   - **CrashedEcsETag** – identifikator preskusa za proces zrušitve.
 
   - **CrashedModuleName** – ime modula z napako
 
-  - **CrashedSessionID** – enolični identifikator procesa zrušitve
+  - **CrashedProcessSessionID** – enolični identifikator procesa zrušitve
+
+  - **CrashedProcessSessionInitTime** – čas, ko se je začel vplivani proces
 
   - **CrashedSessionInitTime** – čas, ko se je začel vplivani proces
 
-  - **CrashTime –** ura, ki označuje, da odjemalec ni bil zaustavljen pravilno
+  - **HexCrashTag** – enolični identifikator za kodo zrušitve.
+
+  - **CrashTime –** ura, ki označuje, da odjemalec ni bil zaustavljen pravilno *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **CrashType** – identifikator razdeljevanja za vrsto zrušitve
 
-  - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod
+  - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake
+  - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **ExceptionCode** – identifikator razdeljevanja za izjemo
 
-  - **HandOff –** ali je uporabnik ustvaril in predal Officeov postopek v novo sejo.
+  - **ExceptionInfo** – sistemske informacije za izjemo.
 
-  - **HasEdit –** ali je uporabnik urejal dokument v odjemalcu, ki se je zrušil.
+  - **HandOff** – ali je uporabnik ustvaril in predal Officeov postopek v novo sejo. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HasOpen –** ali je bil v odjemalcu, ki se je zrušil, odprt dokument.
+  - **HangTypeCode** – predstavlja razred obešenja, če se je postopek obesil med izvedbo.
 
-  - **HexCrashTag** – enolični identifikator za kodo zrušitve.
+  - **HasEdit** – ali je uporabnik urejal dokument v odjemalcu, ki se je zrušil. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexExceptionAddress** – mesto v programu, kjer je prišlo do napake, v šestnajstiški obliki
+  - **HasOpen** – ali je bil v odjemalcu, ki se je zrušil, odprt dokument. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexExceptionCode** – identifikator razdeljevanja za izjemo v šestnajstiški obliki
+  - **HexCrashTag** – enolični identifikator za kodo zrušitve. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexModuleBaseAddress** – osnovni naslov modula z napako v šestnajstiški obliki
+  - **HexExceptionAddress** – mesto v programu, kjer je prišlo do napake, v šestnajstiški obliki *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake
+  - **HexExceptionCode** – identifikator razdeljevanja za izjemo v šestnajstiški obliki *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexModuleSize** – velikost modula z napako v bajtih v šestnajstiški obliki
+  - **HexModuleBaseAddress** – osnovni naslov modula z napako v šestnajstiški obliki *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexVerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije v šestnajstiški obliki
+  - **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **HexModuleSize** – velikost modula z napako v bajtih v šestnajstiški obliki *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **HexVerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije v šestnajstiški obliki *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
 
-  - **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju
+  - **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleBaseAddress** – osnovni naslov modula z napako
+  - **ModuleBaseAddress** – osnovni naslov modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleOffset** – odmik v bajtih od osnovnega mesta, kjer je prišlo do napake
+  - **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake
 
-  - **ModuleSize** – velikost modula z napako v bajtih
+  - **ModuleSize** – velikost modula z napako v bajtih *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **ModuleStamp** – žig neuspelega modula.
+
+  - **ModuleVersion** – različica nedelujočega modula, odgovornega za zrušitev.
 
   - **OfficeArchitectureText** – arhitektura Officeovega izdelka kot niz (na primer x86, krak).
 
-  - **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
+  - **OfficeUILang** – jezik uporabniškega vmesnika v Officeovi graditvi
 
   - **PreviousBuild** – prejšnja nameščena delovna različica
 
-  - **SafeMode –** ali je bila seja zagnana v varnem načinu
+  - **ProcessorArchitecture** – arhitektura procesorja za okolje: x64, x86 itd.
 
-  - **UAEOSEnvironment** – identifikator okolja za operacijski sistem
+  - **SafeMode** – ali je bila seja zagnana v varnem načinu *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **SessionFlags** – določa pogoje seje, na primer: datoteka je bila odprta, datoteka je bila urejena, dokument v oblaku je bil odprt, zaporedje zagona je bilo dokončano itd. 
+
+  - **StackHash** – podaja ID zgoščene vrednosti za sklad neuspeha v Officeu.
+
+  - **SystemAvailableMemory** – razpoložljiv pomnilnik v operacijskem sistemu
+
+  - **UAEOSEnvironment** – identifikator okolja za operacijski sistem *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
 
   - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **WatsonReportId** – identifikator poročila, poslanega v storitev Windows Watson.
+
+  - **WerEventCreatedTime** – časovni žig za dogodek poročanja sistema Windows o napakah.
+
 
 ### <a name="officesystemungracefulapplicationexitdesktopappexit"></a>Office.System.UngracefulApplicationExit.DesktopAppExit
 
@@ -16492,7 +16808,7 @@ Zbrana so sledeča polja:
 
   - **IsRuleEvent** – trditev true/false, ali je dogodek uvedlo pravilo telemetrije
 
-### <a name="officetelemetryinvalideventcontractname"></a>Office.Telemetry.InvalidEventContractName 
+### <a name="officetelemetryinvalideventcontractname"></a>Office.Telemetry.InvalidEventContractName 
 
 Poroča neveljavne uvedbe ali implementacije telemetrije.
 
@@ -16644,7 +16960,7 @@ Zbrana so sledeča polja:
 
 Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
   - **ThrottlingTimestamp** – čas, ko je bila omejena telemetrija
 
