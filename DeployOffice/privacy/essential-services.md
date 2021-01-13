@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
-ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
+ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
+ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "49685845"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49799151"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -117,7 +117,7 @@ Zbrana so sledeča polja:
 
 Dogodki se zberejo, ko se uporabnik izpiše iz Officea.
 
-Če veste, da se je uporabnik izpisal, lahko pričakovano razvrstite druge dogodke, na primer pozive, da bodo ti dogodki lahko pravilno izračunani v metriki zanesljivosti/pripravljenosti na odpremo. Prav tako se lahko izognete opozorilom oziroma razveljavljanju gradenj ob lažni predpostavki, da je uporabnik deležen nepričakovanih pozivov za vpis.
+Če veste, da se je uporabnik izpisal, lahko razvrstite druge dogodke, na primer pozive, tako da so ti dogodki lahko pravilno izračunani v metriki zanesljivosti/pripravljenosti na odpremo. Prav tako lahko preprečite opozorila oziroma povrnitve na prejšnje graditve ob lažni predpostavki, da je uporabnik prejel nepričakovane pozive k vpisu.
 
 Zbrana so sledeča polja:
 
@@ -151,7 +151,7 @@ Ti dogodki se skupaj z dogodki imenskega prostora Office.MATS uporabljajo za te 
 
 3\) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
 
-4\) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav blokiranja uporabnikov.
+4\) Ti signali zaženejo različne nadzornike pripravljenosti na odpremo in stanja, ki sprožijo opozorila, tako da se inženirji lahko hitro odzovejo ter skrajšajo čas odpravljanja kritičnih težav blokiranja uporabnikov.
 
 Zbrana so sledeča polja:
 
@@ -207,7 +207,7 @@ Ti dogodki se skupaj z dogodki imenskega prostora Office.MATS uporabljajo za te 
 
 3\) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
 
-4\) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav blokiranja uporabnikov.
+4\) Ti signali zaženejo različne nadzornike pripravljenosti na odpremo in stanja, ki sprožijo opozorila, tako da se inženirji lahko hitro odzovejo ter skrajšajo čas odpravljanja kritičnih težav blokiranja uporabnikov.
 
 Zbrana so sledeča polja:
 
@@ -261,7 +261,7 @@ Microsoftov telemetrični sistem za preverjanje pristnosti (MATS) se zbere, ko O
 
 3\) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
 
-4\) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav.
+4\) Ti signali zaženejo različne nadzornike pripravljenosti na odpremo in stanja, ki sprožijo opozorila, tako da se inženirji lahko hitro odzovejo ter skrajšajo čas odpravljanja kritičnih težav.
 
 Zbrana so sledeča polja:
 
@@ -327,7 +327,7 @@ Zbrana so sledeča polja:
 
   - **Microsoft\_ADAL\_broker\_app** – ponazarja, ali je ADAL pri preverjanju pristnosti uporabil posrednika
 
-  - **Microsoft\_ADAL\_broker\_app\_used** – ponazarja ime posrednika (npr. upravljanje računov v sistemu Windows)
+  - **Microsoft\_ADAL\_broker\_app\_used** – navaja ime posrednika (npr. upravljanje računov v sistemu Windows)
 
   - **Microsoft\_ADAL\_broker\_version** – ponazarja različico morebitnega posrednika
 
@@ -423,7 +423,7 @@ Zbrana so sledeča polja:
 
   - **Resource** – Vir, za katerega uporabnik zahteva žeton, kot je Exchange ali SharePoint.
 
-  - **Scenarioid** – GUID. Enemu scenariju lahko pripada več dogodkov. Scenarij lahko na primer doda nov račun, vendar lahko v tem scenariju pride do več pozivov. Ta ID omogoča korelacijo
+  - **Scenarioid** – GUID. En scenarij lahko vključuje več dogodkov. V scenariju je lahko na primer dodan nov račun, vendar se v tem scenariju sproži več pozivov. Ta ID omogoča korelacijo
 
   - **Scenarioname** – Ime scenarija, kateremu pripada ta dogodek preverjanja pristnosti.
 
@@ -452,7 +452,7 @@ Microsoftov telemetrični sistem za preverjanje pristnosti (MATS) se zbere, ko O
 
 3) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
 
-4) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav.
+4) Ti signali zaženejo različne nadzornike pripravljenosti na odpremo in stanja, ki sprožijo opozorila, tako da se inženirji lahko hitro odzovejo ter skrajšajo čas odpravljanja kritičnih težav.
 
 Zbrana so sledeča polja:
 
@@ -530,7 +530,7 @@ Zbrana so sledeča polja:
 
 - **Microsoft_ADAL_broker_app** – ponazarja, ali je knjižnica ADAL pri preverjanju pristnosti uporabila posrednika
 
-- **Microsoft_ADAL_broker_app_used** – ponazarja ime posrednika (npr. upravljanje računov v sistemu Windows)
+- **Microsoft_ADAL_broker_app_used** – navaja ime posrednika (npr. upravljanje računov v sistemu Windows)
 
 - **Microsoft_ADAL_broker_version** – ponazarja različico morebitnega posrednika
 
@@ -588,7 +588,7 @@ Zbrana so sledeča polja:
 
 - **Microsoft_ADAL_is_silent_ui** – trditev »true«/»false«, ki ponazarja, ali je knjižnica ADAL prikazala poziv uporabniškega vmesnika
 
-- **Microsoft_ADAL_is_successfull** – trditev »true«/»false«, ki ponazarja, ali je bil vmesnik API za knjižnico ADAL uspešen (MacOS)
+- **Microsoft_ADAL_is_successfull** – trditev »true«/»false«, ki ponazarja, ali je bil vmesnik API za knjižnico ADAL uspešen (macOS)
 
 - **Microsoft_ADAL_is_successful** – trditev »true«/»false«, ki ponazarja, ali je bil vmesnik API za knjižnico ADAL uspešen
 
@@ -670,7 +670,7 @@ Zbrana so sledeča polja:
 
 - **MSAL_auth_flow** – koraki, ki jih je knjižnica MSAL izvedla pri tem preverjanju pristnosti (AT, PRT, LRT, FRT, ART, IRT). Ločeni s simbolom »|« za lažje razčlenjevanje.
 
-- **MSAL_auth_flow_last_error** – koda napake, ki smo jo prejeli iz strežnika v predzadnjem elementu pri preverjanju pristnosti (AuthFlow) (npr: če AuthFlow = "PRT|LRT", bi bila napaka PRT prikazana v razdelku AuthFlowLastError).
+- **MSAL_auth_flow_last_error** – koda napake, prejeta iz strežnika v predzadnjem elementu pri preverjanju pristnosti. (npr: če AuthFlow = "PRT|LRT", bi bila napaka PRT prikazana v razdelku AuthFlowLastError).
 
 - **MSAL_authority_type** – ali je bila ta zahteva za uporabnika v storitvi: ADD, združeno ali MSA.
 
@@ -692,7 +692,7 @@ Zbrana so sledeča polja:
 
 - **MSAL_read_token** – žetoni, ki so bili prebrani iz predpomnilnika (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = potekli AT je bil prebran, a zavržen]).
 
-- **MSAL_read_token_last_error** – če je knjižnica MSAL zaznala napako pri branju iz predpomnilnika, bomo te informacije shranili tukaj. (npr: napaka pri branju diska, ki se je pojavila v operacijskem sistemu, napaka funkcije Keychain v sistemu MacOS).
+- **MSAL_read_token_last_error** – če je knjižnica MSAL zaznala napako pri branju iz predpomnilnika, bomo te informacije shranili tukaj. (npr: napaka pri branju diska v operacijskem sistemu, napaka funkcije Keychain v sistemu macOS).
 
 - **MSAL_request_duration** – čas od klica vmesnika API za knjižnico MSAL na najvišji ravni do vrnjenega rezultata.
 
@@ -718,7 +718,7 @@ Zbrana so sledeča polja:
 
 - **MSAL_write_token** – žetoni, ki so bili zapisani v predpomnilnik (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = potekli AT je bil prebran, a zavržen]).
 
-- **MSAL_write_token_last_error** – če je knjižnica MSAL zaznala napako pri pisanju v predpomnilnik, bomo te informacije shranili tukaj. (npr: napaka pri branju diska, ki se je pojavila v operacijskem sistemu, napaka funkcije Keychain v sistemu MacOS).
+- **MSAL_write_token_last_error** – če je knjižnica MSAL zaznala napako pri pisanju v predpomnilnik, bomo te informacije shranili tukaj. (npr: napaka pri branju diska v operacijskem sistemu, napaka funkcije Keychain v sistemu macOS).
 
 - **oneauth_api** – vmesnik API za OneAuth, ki je bil priklican za ta poskus preverjanja pristnosti.
 
@@ -726,15 +726,15 @@ Zbrana so sledeča polja:
 
 - **oneauth_version** – različica kompleta za razvoj programske opreme za OneAuth.
 
-- **Platform** – platforma operacijskega sistema (0: namizni Windows, 1: Android, 2: iOS, 3: MacOS, 4: UWP)
+- **Platform** – platforma operacijskega sistema (0: namizni Windows, 1: Android, 2: iOS, 3: macOS, 4: UWP)
 
 - **Promptreasoncorrelationid** – korelacijski identifikator, ki ga lahko uporabite za iskanje prejšnjega dogodka preverjanja pristnosti. Z njim je mogoče razložiti, zakaj je bil uporabnik pozvan, da preveri pristnost.
 
 - **Resource** – vir, za katerega je bil zahtevan žeton.
 
-- **Scenarioid** – enemu scenariju lahko pripada več dogodkov. Scenarij lahko na primer doda nov račun, vendar lahko v tem scenariju pride do več pozivov. Ta identifikator omogoča korelacijo teh povezanih dogodkov.
+- **Scenarioid** – en scenarij lahko vključuje več dogodkov. V scenariju je lahko na primer dodan nov račun, vendar se v tem scenariju sproži več pozivov. Ta identifikator omogoča korelacijo teh povezanih dogodkov.
 
-- **Scenarioname** – ime scenarija aplikacije, za katerega je bilo zahtevano preverjanje pristnosti, npr. prvi zagon, preverjanje licence itd.
+- **Scenarioname** – ime scenarija aplikacije, za katerega je bilo zahtevano preverjanje pristnosti, na primer prvi zagon, preverjanje licence itd.
 
 - **Scope** – obseg, za katerega je bil zahtevan žeton.
 
@@ -817,7 +817,7 @@ Microsoftov telemetrični sistem za preverjanje pristnosti (MATS) se zbere, ko O
 
 3) Ko se pojavijo napake, ti signali iz odgovorne komponente (koda odjemalca za Office, knjižnice za preverjanje pristnosti ali storitve avtoritete) oddajo pomembne kode napak, ki se jih lahko uporabi za triažo, diagnosticiranje ali odpravljanje napak.
 
-4) Ti signali ponazarjajo različne pripravljenosti na odpremo in nadzirajo stanja, zaradi katerih se aktivirajo opozorila. Na ta način naši inženirji lahko hitro ukrepajo in skrajšajo čas za odpravljanje kritičnih težav.
+4) Ti signali zaženejo različne nadzornike pripravljenosti na odpremo in stanja, ki sprožijo opozorila, tako da se inženirji lahko hitro odzovejo ter skrajšajo čas odpravljanja kritičnih težav.
 
 Zbrana so sledeča polja:
 
@@ -875,7 +875,7 @@ Zbrana so sledeča polja:
 
 - **oneauth_version** – različica kompleta za razvoj programske opreme za OneAuth.
 
-- **Platform** – platforma operacijskega sistema (0: Win32, 1: Android, 2: iOS, 3: MacOS, 4: WinRT)
+- **Platform** – platforma operacijskega sistema (0: Win32, 1: Android, 2: iOS, 3: macOS, 4: WinRT)
 
 - **Scenarioname** – ime scenarija, za katerega je potrebno preverjanje pristnosti in ga določi aplikacija za klicanje.
 
@@ -2988,7 +2988,7 @@ Poroča o rezultatu poskusa pokončne namestitve
 
 Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
-- **BitField –** celoštevilska vrednost argumenta BitField, ki nam pove, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
+- **BitField –** celoštevilska vrednost argumenta BitField, ki označuje, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
 
 - **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala za posodobitev/namestitev. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled), Polletni kanal za podjetja ali Neveljaven.
 
@@ -3067,7 +3067,7 @@ Poročila o dejanjih, ki preberejo označeno vnašanje iz vdelanega podpisa exe.
 
 Sporoči parametre, ki se uporabljajo za namestitev Officea
 
-- **BitField –** celoštevilska vrednost argumenta BitField, ki nam pove, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
+- **BitField –** celoštevilska vrednost argumenta BitField, ki označuje, ali je zahtevana izrecna namestitev/posodobitev kanala. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled) ali Polletni kanal za podjetja.
 
 - **ChannelID –** celo število, ki predstavlja vrednost enum izbranega kanala za posodobitev/namestitev. Na primer kanal beta, Trenutni kanal (predogled), trenutni kanal, Mesečni kanal za podjetja, Polletni kanal za podjetja (predogled), Polletni kanal za podjetja ali Neveljaven.
 
@@ -3315,6 +3315,20 @@ Zbrana so sledeča polja:
 
 - **SessionID** – GUID za povezovanje dogodkov po seji
 
+### <a name="officeandroiddocsuipaywallcontrolpurchasetokenredemptionresponse"></a>Office.Android.DocsUI.PaywallControl.PurchaseTokenRedemptionResponse
+
+*[Ta dogodek je bil prej imenovan Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse.]*
+
+Ta telemetrija izdelka je zbrana za namen sledenja in beleženja stanja internih transakcij in informacij o usklajevanju za izboljšanje zanesljivosti in učinkovitosti delovanja. Microsoft te podatke uporablja za analizo in izboljšanje zanesljivosti ter učinkovitosti obdelovanja internih transakcij ni mehanizmov usklajevanja.
+
+Zbrana so sledeča polja:
+
+- **MicrosoftPurchaseOrderId** – ID Microsoftovega naročila, ki ga je za namen slednja poslala storitev Retail Federation Service (RFS).
+
+- **ResponseCode** – koda odgovora HTTP (int)
+
+- **StatusCode** – koda stanja odgovora RFS (RFS defined Enum int- finite)
+
 
 ### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
 
@@ -3343,22 +3357,26 @@ Zbrana so sledeča polja:
 - **SessionID** – GUID za povezovanje dogodkov po seji
 
 
-### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+### <a name="officeandroiddocsuiviewsdimeerror"></a>Office.Android.DocsUI.Views.DimeError
 
-Ta telemetrija izdelka je zbrana za namen sledenja in beleženja stanja internih transakcij in informacij o usklajevanju za izboljšanje zanesljivosti in učinkovitosti delovanja. Microsoft te podatke uporablja za analizo in izboljšanje zanesljivosti ter učinkovitosti obdelovanja internih transakcij ni mehanizmov usklajevanja.
+Ta dogodek je zbran za aplikacijo Office za Android (na voljo v napravi Huawei in v trgovinah China Store). Ta dogodek označuje, da poskus nakupa naročnine na Microsoft 365 pri ponudniku Dime (spletni URL, naložen pri spletnem pogledu odjemalca) ni uspel. Zajeti so le scenariji napake. Ti podatki dogodka so samo podatki napake ter so uporabljeni za zagotavljanje ustreznosti stanja toka nakupa pri ponudniku Dime v odjemalcu.
 
-Zbrana so sledeča polja:
+Zbrana so ta polja:
 
-- **MicrosoftPurchaseOrderId** – ID Microsoftovega naročila, ki ga je za namen slednja poslala storitev Retail Federation Service (RFS).
+- **CorrelationID** – ID, ki enolično označuje sejo nakupa Dime.
 
-- **ResponseCode** – koda odgovora HTTP (int)
-
-- **StatusCode** – koda stanja odgovora RFS (RFS defined Enum int- finite)
+- **ErrorReason** – Označuje razlog za nastalo napako.
+  - 0 – Neznana napaka
+  - 1 – Internet ni na voljo
+  - 2 – Preverjanje globalnega enoličnega identifikatorja (UUID) ni uspelo
+  - 3 – Globalni enolični identifikator (UUID) ima vrednost »null« ali pa je prazen
+  - 4 – Napaka vstavljanja jezika JavaScript, ko aplikacija Office za Android ne more posredovati žetona za preverjanje pristnosti ponudniku Dime
+  - 5 – Osnovni spletni URL, naložen v odjemalcu, ni veljaven
 
 
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
-Ta dogodek zajame podatke, ki sodelujejo pri nadzoru stanja komponent Dime. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa Dime, da je zagotovljeno delovanje v skladu s pričakovanji. 
+Ta dogodek zajame podatke, ki sodelujejo pri nadzoru stanja komponent Dime. To velja na primer za tok nakupa v aplikaciji, kjer se uporabnik odloči za nakup naročnine na Microsoft 365 v aplikaciji Office za Android ali v napravi, v kateri se izvaja sistem Windows.
 
 Zbrana so sledeča polja:
 
@@ -3410,23 +3428,23 @@ Zbrana so sledeča polja:
 
 - **Data_QosLevel** – resnost 0/1/2
 
-- **Data_SDX_AssetId** – ID vira vsebine gostovanja storitve Service Delivered Experience (SDX)
+- **Data_SDX_AssetId** – ID vira vsebine gostovanja storitve Service Delivered Experience (SDX) za Win32
 
-- **Data_SDX_BrowserToken** – žeton brskalnika
+- **Data_SDX_BrowserToken** – žeton brskalnika za Win32
 
-- **Data_SDX_HostJsVersion** – različica knjižnice JavaScript
+- **Data_SDX_HostJsVersion** – različica knjižnice JavaScript za Win32
 
-- **Data_SDX_Id** – ID storitve Service Delivered Experience
+- **Data_SDX_Id** – ID storitve Service Delivered Experience za Win32
 
-- **Data_SDX_InstanceId** – ID primerka storitve SDX
+- **Data_SDX_InstanceId** – ID primerka storitve SDX za Win32
 
-- **Data_SDX_MarketplaceType** – vrsta storitve SDX Marketplace
+- **Data_SDX_MarketplaceType** – vrsta storitve SDX Marketplace za Win32
 
-- **Data_SDX_OfficeJsVersion** – različica sistema Office JS
+- **Data_SDX_OfficeJsVersion** – različica sistema Office JS za Win32
 
-- **Data_SDX_SessionId** – ID seje storitve SDX
+- **Data_SDX_SessionId** – ID seje storitve SDX za Win32
 
-- **Data_SDX_Version** – različica storitve SDX
+- **Data_SDX_Version** – različica storitve SDX za Win32
 
 - **CollectionTime** – časovni žig dogodka
 
@@ -3565,7 +3583,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
-Za vsako sejo preverimo, ali je minilo 72 ur od zadnje obnovitve licence, in poskušamo podaljšati potek trenutne licence. S pomočjo tega dogodka lahko ugotovimo, ali je bil klic uspešen ali neuspešen, da lahko podaljšamo potek licence in omogočimo funkcionalnost Officea, ki ga je namestil uporabnik. Pri diagnosticiranju težav, povezanih z naročnino, in težav storitev je ta dogodek ključen za uporabnika in pri zaznavanju regresij za že aktitivrane uporabnike naročnine.
+Za vsako sejo preverimo, ali je minilo 72 ur od zadnje obnovitve licence, in poskušamo podaljšati potek trenutne licence. S pomočjo tega dogodka lahko ugotovimo, ali je bil klic uspešen ali neuspešen, da lahko podaljšamo potek licence in omogočimo funkcionalnost Officea, ki ga je namestil uporabnik. Pri diagnosticiranju težav, povezanih z naročnino, in težav storitev je ta dogodek ključen za uporabnika ter za zaznavanje regresij za uporabnike z že aktiviranimi naročninami.
 
 Zbrana so sledeča polja:
 
@@ -4398,7 +4416,7 @@ Zbrana so sledeča polja:
 
 ### <a name="cloningtaskhelpertoolconnection"></a>cloningtask.helpertoolconnection
 
-Ta dogodek zabeleži težave z namestitvijo klona (tj. ne bomo se povezali z pomočnikom, da bi uporabili posodobitev, ali pa vzpostavili povezavo, vendar pomočnik ne more uporabiti posodobitve). Če smo zabeležili kartoteko, to pomeni, da ni bilo mogoče namestiti klona in se bo zdaj treba odkupiti posodobitvi na mestu uporabe.
+Ta dogodek zabeleži težave z namestitvijo klona (tj. ne bomo se povezali z pomočnikom, da bi uporabili posodobitev, ali pa vzpostavili povezavo, vendar pomočnik ne more uporabiti posodobitve). Če prejmemo zapis napake, to pomeni, da klona ni bilo mogoče namestiti in bo povrnjena prejšnja različica posodobitve na mestu uporabe.
 
 Zbrana so sledeča polja:
 
@@ -15304,7 +15322,7 @@ Kritični signal, ki se uporablja za spremljanje delovanja dohodnih sinhronizaci
 
 To se uporablja za zagotavljanje stanja storitev tako, da nam omogoči, da si ogledate, kateri najemniki doživljajo nesprejemljivo počasno dohodno podatkov za našo storitev, informacije o podatkih, ki jih prenašajo, ko so doživeli počasno dohodno in kako razširjena je v najemniku, ki je imel težave z zakasnitvijo. Uporablja se tudi za poročanje o stanju storitve in učinkovitosti delovanja v vseh naših strankah, s katerimi lahko izmerite trende v času in opozorite na težave, ki se samodejno uporabljajo za ublažitev strojništva. 
 
-Če opazite nesprejemljivo zakasnitev za odsek ali zvezek, bomo te podatke uporabili tudi za to, da bodo lahko sodelovali z drugimi signali v odjemalcu in storitvi v zvezi z istim dokumentom, da bodo prepoznali regresivne zmogljivosti odjemalca, ki nam bodo omogočale Dostavitev bolj zmogljive storitve.
+Če opazite nesprejemljivo zakasnitev za odsek ali zvezek, bodo ti podatki uporabljeni tudi za korelacijo z drugimi signali v odjemalcu in storitvi za isti dokument za prepoznavanje regresije učinkovitosti odjemalca za namene izboljšanja učinkovitosti delovanja storitve.
 
 Če teh podatkov ne prejmemo, ne bomo mogli nadzorovati učinkovitosti delovanja tega vidika naših storitev ali pa bo vpliv neželenih sprememb, ki so na voljo, morda zaradi uporabe ali drugih dejavnikov.
 
@@ -15372,7 +15390,7 @@ Zbrana so sledeča polja:
 
 Kritični signal, s katerim lahko spremljate napake in izjeme, ki so se zgodile znotraj sklada za sinhronizacijo v odjemalcu za OneNote, s katerim lahko nadzorujete in omilimo te nepričakovane pogoje.
 
-To se uporablja za zagotavljanje stanja storitev tako, da si lahko ogledate poročila o napakah odjemalcev, ki so na voljo v realnem času, kar nam omogoča odziv na težave pri sinhronizaciji, ko se pojavijo. Uporablja se tudi za določanje, kako razširjena je težava, in kako huda je navzkrižna referenca z oznako napake z odjemalčevo kodo, da prepoznate izvor napake. Te podatke združimo tudi tako, da dobimo informacije o učinkovitosti delovanja skozi čas ter vpliva in učinkovitosti izboljšav, ki jih naredimo našim strankam in storitvam. Če teh podatkov nimamo, ne bomo mogli proaktivno odgovoriti na pogoje napake v naši sinhronizacijski storitvi, ne da bi se med seboj stopnjevala stranka.
+Ta funkcija je uporabljena za zagotavljanje ustreznega stanja tako, da omogoča ogled poročil o napakah odjemalcev skoraj v realnem času ter odzivanje na težave pri sinhronizaciji, ko se pojavijo. Uporablja se tudi za določanje, kako razširjena je težava, in kako huda je navzkrižna referenca z oznako napake z odjemalčevo kodo, da prepoznate izvor napake. Te podatke združimo tudi tako, da dobimo informacije o učinkovitosti delovanja skozi čas ter vpliva in učinkovitosti izboljšav, ki jih naredimo našim strankam in storitvam. Če teh podatkov nimamo, ne bomo mogli proaktivno odgovoriti na pogoje napake v naši sinhronizacijski storitvi, ne da bi se med seboj stopnjevala stranka.
 
 Zbrana so sledeča polja: 
 
@@ -15394,7 +15412,7 @@ Zbrana so sledeča polja:
  
 Ta dogodek se zabeleži pri sinhronizaciji hitrih zapiskov za uporabnika med prvo izkušnjo, ki jo izvaja v napravi.  To je specifično za scenarij prvega zagona.
  
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
  
 - **NetworkConnection** – prijavi vrsto povezave, ki jo trenutno uporablja naprava, npr. Wi-Fi, brez povezave, 3G
 
@@ -15406,7 +15424,9 @@ Konfiguracija storitev ne zbira potrebnih dogodkov podatkov storitve.
 
 ## <a name="telemetry-events"></a>Dogodki telemetrije
 
-### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
+
+*[Ta dogodek je bil prej imenovan Office.Android.DocsUI.Views.PaywallOperationMetrics.]*
 
 Microsoft uporabi ta dogodek za pridobivanje stanja funkcije, odstotek uspešnosti ali napak za nakupe uporabnika, zagotovitev ustreznih naložb za izboljšanje izkušnje nakupa uporabnikov v mobilnih platformah.
 
@@ -15418,7 +15438,9 @@ Zbrana so sledeča polja:
 
 - **PaywallOperationType** – vrsta delovanja plačilnega sistema (neskončno oštevilčenje/celo število)
 
-### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
+### <a name="officeandroiddocsuipaywallcontrolpaywallsessiondata"></a>Office.Android.DocsUI.PaywallControl.PaywallSessionData
+
+*[Ta dogodek je bil prej imenovan Office.Android.DocsUI.Views.PaywallSessionData.]*
 
 Metapodatki, ki temeljijo na seji, ko je uporabniški vmesnik za Paywall prikazan uporabniku. Microsoft uporablja to funkcijo za pridobivanje dejavnosti uporabnikov ter razumevanje uporabnikove naprave in različice OS za lažje sprejemanje odločitev glede naložbe za izboljšanje izkušnje na teh področjih.
 
@@ -16732,7 +16754,7 @@ Zbrana so sledeča polja:
 
   - **RejectedConfigs** – število zavrnjenih konfiguracij
 
-  - **RejectedConfigsList** – seznam zavrnjenih konfiguracij (vrednosti so med seboj ločene z vejico)
+  - **RejectedConfigsList** – seznam zavrnjenih konfiguracij (vrednosti so med seboj ločene z vejico).
 
 ### <a name="officetelemetrydynamicconfigparsejsonconfig"></a>Office.Telemetry.DynamicConfig.ParseJsonConfig
 
@@ -16899,8 +16921,6 @@ Zbrana so sledeča polja:
   - **ErrorRuleVersion** – različica pravila telemetrije, ki je povzročila napako
 
   - **WarningInfo** – informativna številka diagnostičnega opozorila
-
-<!-- end list -->
 
   - **QueueFlushCount** – število praznjenj v čakalni vrsti
 
