@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 1c63598ee9a9744128ef30916d1457d4a02c9092
-ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
+ms.openlocfilehash: b7993abbca401d65cc99ed9fdd7960bae03e89a3
+ms.sourcegitcommit: c891622923aecf9afd3ba61e008501cb0c374b73
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "49685881"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49841732"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -67,7 +67,7 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 | | [Konfiguracija za dostopnost sistema Office](#office-accessibility-configuration-subtype)  | Officeove funkcije dostopnosti       |
 | | [Zasebnost](#privacy-subtype)| Nastavitve zasebnosti za Office|
 | **Učinkovitost delovanja izdelka in storitve**       | [Nepričakovano zapiranje aplikacije (zrušitev)](#unexpected-application-exit-crash-subtype)  | Nepričakovana zapiranja aplikacije in stanje aplikacije, ko pride do tega.    |
-|  | [Učinkovitost delovanja funkcije aplikacije](#application-feature-performance-subtype)  | Slab odzivni čas ali slaba učinkovitost delovanja za scenarije, kot sta zagon aplikacije ali odpiranje datoteke. |
+|  | [Učinkovitost delovanja funkcije aplikacije](#application-feature-performance-subtype)  | Slab odzivni čas ali slaba učinkovitost delovanja za scenarije, kot sta zagon aplikacije oz. odpiranje datoteke. |
 |  | [Napaka dejavnosti aplikacije](#application-activity-error-subtype)   | Napake delovanja funkcij ali uporabniške izkušnje.  |
 | **Povezljivost in konfiguracija naprave** | [Povezljivost in konfiguracija naprave](#device-connectivity-and-configuration-subtype) | Stanje omrežne povezave in nastavitve naprave, kot je pomnilnik. |
 
@@ -192,6 +192,10 @@ Ta kategorija vsebuje ta polja:
   - **EcsETag** – Indikator sistema pilotnih različic, ki predstavlja pilotne različice, poslane v računalnik. Omogoča, da določimo, katere pilotne različice morda vplivajo na določeno sejo.
 
   - **Flags** – Zastavice za sledenje bitne maske celotne seje, trenutno osredotočene predvsem na možnosti vzorčenja in diagnostičnih podatkov. Omogoča nadziranje načina delovanja določene seje v primerjavi z diagnostičnimi podatki, ki jih ustvari seja.
+
+  - **HostAppName** – prepozna ime gostiteljske aplikacije, ki zažene podaplikacijo. Aplikacije, kot je Office Mobile (Android), lahko zaženejo Wordove, Excelove in PowerPointove podaplikacije. Takšne podaplikacije gostujejo v aplikaciji OfficeMobile
+
+  - **HostSessionId** – enolično določa sejo gostiteljske aplikacije za podaplikacijo
 
   - **Id** – Enolično identificira določeno podatkovno sejo. Omogoča, da določimo vpliv težav tako, da ocenimo število prizadetih sej in prepoznamo morebitne skupne značilnosti teh sej.
 
@@ -331,7 +335,7 @@ Ta kategorija vsebuje ta polja:
 
   - **ScreenDPI** – Vrednost DPI zaslona. Omogoča razvrstitev podatkov glede na osrednjo napravo.
 
-  - **SusClientId** – ID za Windows Update za napravo, v kateri se izvaja Office.
+  - **SusClientId** – ID za storitev Windows Update za napravo, v kateri se izvaja Office.
 
   - **SystemVolumeFreeSpaceMB** – Količina nezasedenega prostora v sistemskem nosilcu. Omogoča razvrstitev podatkov glede na osrednjo napravo.
 
@@ -359,7 +363,7 @@ Ta kategorija vsebuje ta polja:
 
   - **Level** – Označuje vrsto dogodka.
 
-  - **Name** – Ime dogodka. Omogoča določitev dogodka, ki ga je poslal odjemalec.
+  - **Name** – Ime dogodka. Omogoča nam, da določimo dogodek, ki ga je poslal odjemalec.
 
   - **Rule** – Identifikator pravila, ki je ustvarilo podatke (če je te ustvarilo pravilo). Omogoča določitev vira dela podatkov, tako da lahko preverimo veljavnost parametrov dogodkov in jih upravljamo.
 
@@ -458,9 +462,9 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve OneNote za Mac, iOS
 
 - **Activity_Expiration** – datum v številski obliki označuje, kdaj bo prišlo do ustavitve pošiljanja tega dogodka iz odjemalcev.
 
-- **Activity_FailCount** – število, ki pokaže, kolikokrat je bila ta dejavnost neuspešna.
+- **Activity_FailCount** – število, ki pokaže, kolikokrat je bila ta dejavnost neuspešna
 
-- **Activity_Name** – kratko ime dogodka. Omogoča določitev dogodka, ki ga je poslal odjemalec.
+- **Activity_Name** – kratko ime dogodka. Omogoča nam, da določimo dogodek, ki ga je poslal odjemalec.
 
 - **Activity_Namespace** – imenski prostor dogodka. Omogoča združevanje dogodkov v skupine.
 
@@ -570,9 +574,9 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve Outlook za iOS in A
 
 - **DeviceInfo.Id** – enoličen identifikator naprave, da bomo lahko zaznali težave določene naprave
 
-- **DeviceInfo.Make** – znamka naprave (tj. Apple, Samsung, itd.), da bomo lahko zaznali težave določene znamke
+- **DeviceInfo.Make** – znamka naprave (na primer Apple, Samsung, itd.), da bomo lahko zaznali težave določene znamke
 
-- **DeviceInfo.Model** – model naprave (tj. iPhone 6s), da bomo lahko zaznali težave določenega modela
+- **DeviceInfo.Model** – model naprave (na primer iPhone 6s), da bomo lahko zaznali težave določenega modela
 
 - **DeviceInfo.NetworkType** – trenutno omrežje naprave v uporabi (Wi-Fi, mobilno omrežje itd.), da bomo lahko zaznali težave določenega omrežja naprave
 
@@ -584,7 +588,7 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve Outlook za iOS in A
 
 - **DeviceInfo.SDKUid** – enolični identifikator naprave (podobno kot DeviceInfo.Id)
 
-- **EventInfo.InitId** – ID, ki so uporablja kot del razvrščanja dogodkov prek našega prodajnega lijaka za telemetrijo, da bomo lahko zaznali korenski vzrok težave prodajnega lijaka
+- **EventInfo.InitId** – ID, ki se uporablja za razvrščanje dogodkov prek našega prodajnega lijaka za telemetrijo, da bomo lahko zaznali korenski vzrok težave prodajnega lijaka
 
 - **EventInfo.SdkVersion** – različica kompleta za razvoj programske opreme, ki jo uporabljamo za pošiljanje telemetrije, da bomo lahko zaznali korenski vzrok težave prodajnega lijaka
 
@@ -625,7 +629,7 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve Outlook za iOS in A
 
 Poleg tega so naslednja polja skupna za vse dogodke storitve Outlook za iOS.
 
-- **DeviceInfo.NetworkProvider** – ponudnik omrežja naprave (tj. Verizon)
+- **DeviceInfo.NetworkProvider** – ponudnik omrežja naprave (na primer Verizon)
 
 - **gcc_restrictions_enabled** – nam pove, če so bile v aplikaciji uporabljene omejitve GCC, tako da lahko zagotovimo, da naše stranke GCC varno uporabljajo našo aplikacijo
  
@@ -680,7 +684,7 @@ Zbrana so naslednja polja:
 
 - **account_type** – vrsto računa, ki ste ga dodali s storitvijo SSO.
 
-- **action_origin** – od koder je bil ustvarjen ta dogodek. (npr. vrednosti: sso_drawer, sso_add_account, sso_add_account_prompt, sso_settings, sso_oobe).
+- **action_origin** – od koder je bil ustvarjen ta dogodek. (Na primer vrednosti: sso_drawer, sso_add_account, sso_add_account_prompt, sso_settings, sso_oobe).
 
 - **ponudnik** – identifikator paketa software Provider za enotno prijavo.
 
@@ -730,7 +734,7 @@ Zbrana so naslednja polja.
 
 Spremlja, ali je prikazano pogovorno okno »Glasovnica za FileFormat« – dogodek je poslan ob prvem/drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.  Označuje, ali je pogovorno okno z izbirami oblike zapisa datoteke prikazano ob prvem ali drugem zagonu aplikacije Word, Excel ali PowerPoint v sistemu Win32.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **FileFormatBallotSelectedOption** – določa možnost oblike zapisa datoteke (OOXML/ODF), ki jo je uporabnik izbral v pogovornem oknu glasovnice oblike zapisa datoteke.
 
@@ -745,7 +749,7 @@ Zbrana so ta polja:
 
 - **abFlights** – »NoNL:NoFlights«, ko pilotne različice funkcij niso nastavljene. V nasprotnem primeru je izbrana možnost »holdoutinfo=unknown«.
 
-- **AppSessionGuid** – Identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz 4 delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100ns
+- **AppSessionGuid** – Identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz štirih delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100 ns
 
 - **appVersionBuild** – številka različice za gradnjo aplikacije
 
@@ -833,7 +837,7 @@ Zbrana so naslednja polja:
 
 *[Ta dogodek je bil prej imenovan OneNote.SignIn.SignInStarted.]*
 
-Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili.
+Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili
 
 Zbrana so naslednja polja: 
 
@@ -918,7 +922,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
-Spremlja prenos paketa za Dynamic Canvas. Obravnavamo ga kot konfiguracijo programske opreme, ker mora biti paket uspešno prenesen, da odjemalec lahko uporablja ustrezno izkušnjo. Še posebej je pomemben pri naročninah za potrošnike, kjer prek platna komuniciramo z uporabnikom, ki mu je potekla licenca. Z njim spremljamo metapodatke paketa dinamične vsebine, prenesene z izdelkom in shranjene v predpomnilnik, ter rezultatov izvedenih postopkov za paket: napake pri prenosu, napake pri razpakiranju, napake pri preverjanju doslednosti, zadetki v predpomnilniku, uporabe paketa, uspešni prenosi.
+Spremlja prenos paketa za Dynamic Canvas. Obravnavamo ga kot konfiguracijo programske opreme, ker mora biti paket uspešno prenesen, da odjemalec lahko uporablja ustrezno izkušnjo. Še posebej je pomemben pri naročninah za potrošnike, kjer prek platna komuniciramo z uporabnikom, ki mu je potekla licenca. S tem dogodkom spremljamo metapodatke paketa dinamične vsebine, prenesene z izdelkom in shranjene v predpomnilnik, ter rezultate izvedenih postopkov za paket: napake pri prenosu, napake pri razpakiranju, napake pri preverjanju doslednosti, zadetki v predpomnilniku, uporabe paketa, viri prenosov.
 
 Zbrana so sledeča polja:
 
@@ -938,7 +942,7 @@ Zbrana so sledeča polja:
 
   - **Data\_GetFileStreamFromPackageSuccess** – Uspešni poskusi branja paketa.
 
-  - **Data\_GetFileStreamSuccess** – Ni zaznanih težav z diskom ali konfiguracijo, ki bi preprečevale branje toka datoteke.
+  - **Data\_GetFileStreamSuccess** – ni zaznanih težav z diskom ali konfiguracijo, ki bi preprečevale branje toka datoteke
 
   - **Data\_GetRelativePathsFailed** – Relativna pot ne pripelje do dostopnega mesta.
 
@@ -1016,7 +1020,7 @@ Zbrana so naslednja polja:
 
 - **AppVersion** – različica aplikacije.
 
-- **SolutionId** – ID rešitve.
+- **SolutionId** – ID rešitve
 
 - **StoreType** – označuje izvor aplikacije.
 
@@ -1251,21 +1255,42 @@ Zbrana so naslednja polja:
 - **Stanje** – stanje namestitve dodatka.
 
 
-#### <a name="officeprogrammabilityadd-insinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
+#### <a name="officeprogrammabilityaddinsinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
 
-Dogodek, ki je ustvarjen pri nalaganju dodatka COM v napravi s paketom Enterprise. 
+Dogodek, ki je ustvarjen pri nalaganju dodatka COM v napravi s paketom Enterprise. Uporablja se za določanje težav pri uvedbah, učinkovitosti delovanja in zanesljivosti z Officeovimi dodatki. 
 
 Zbrana so naslednja polja:
 
-  - **Rezultat dejavnosti** – stanje uspešnosti povezave.
+  - **Acitivity Result** – stanje uspešne povezave *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
-  - **Add-inconnectFlag** – vedenje trenutnega nalaganja.
+  - **AddinConnectFlag** – predstavlja vedenje nalaganja 
 
-  - **Add-inId** – ID razreda dodatka.
+  - **AddinDescriptionV2** – opis dodatka
 
-  - **Add-inTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL.
+  - **AddinFileNameV2** – ime datoteke dodatka, brez poti datoteke
+
+  - **AddinFriendlyNameV2** – prijazno ime dodatka
+
+  - **Add-inId** – ID razreda dodatka *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+  - **AddinIdV2** – ID razreda dodatka
+
+  - **AddinProgIdV2** – ID programa dodatka
+
+ - **AddinProviderV2** – ponudnik dodatka
+
+  - **Add-inTimeDateStamp** – časovni žig dodatka iz metapodatkov DLL *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
+
+  - **AddinTimeDateStampV2** – časovni žig dodatka iz metapodatkov DLL.
+
+  - **AddinVersionV2** – različica dodatka
 
   - **IsBootInProgress** – ali je Officeov program v postopku zagona.
+ 
+  - **LoadDuration** – čas, potreben za nalaganje dodatka
+  
+  - **LoadResult** – stanje uspeha nalaganja
+
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -1289,7 +1314,7 @@ Zbrana so ta polja:
 
   - **Data\_AddOnID**:**string** – GUID za določanje naloženega dodatka.
 
-  - **Data\_Error**:**integer** – ID napake.
+  - **Data\_Error**:**integer** – ID napake
 
 ### <a name="security-subtype"></a>*Podtip varnosti*
 
@@ -1355,7 +1380,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officesecurityactivationfilterclsidactivated"></a>Office.Security.ActivationFilter.CLSIDActivated
 
-Spremlja, kdaj je določeni identifikator CLSID (Flash, Silverlight itd.) aktiviran v Officeu. Z njim spremljamo vpliv blokiranja kontrolnikov za Flash, Silverlight in Shockwave na končne uporabnike.
+Spremlja, kdaj je določeni identifikator CLSID (Flash, Silverlight itd.) aktiviran v Officeu. S tem dogodkom spremljamo vpliv blokiranja kontrolnikov za Flash, Silverlight in Shockwave na končne uporabnike.
 
 Zbrana so ta polja:
 
@@ -1497,7 +1522,7 @@ Zbrana so ta polja:
 
 #### <a name="officesecurityocxufiprompt"></a>Office.Security.OCX.UFIPrompt
 
-Spremlja, kdaj je varnostni poziv prikazan uporabniku ob nalaganju kontrolnika ActiveX, ki je označen kot nevaren za inicializacijo. Z njim ocenimo razširjenost kontrolnikov UFI ActiveX v Officeovih dokumentih za zagotavljanje ukrepov za zmanjševanje tveganja (npr. kontrolniki »killbit«) kot odziv na varnostne dogodke.
+Spremlja, kdaj je varnostni poziv prikazan uporabniku ob nalaganju kontrolnika ActiveX, ki je označen kot nevaren za inicializacijo. Z njim ocenimo razširjenost kontrolnikov UFI ActiveX v Officeovih dokumentih za zagotavljanje ukrepov za zmanjševanje tveganja (na primer kontrolniki »killbit«) kot odziv na varnostne dogodke.
 
 Zbrana so ta polja:
 
@@ -1538,7 +1563,7 @@ Zbrana so sledeča polja:
 
 - **account_calendar_count** – število koledarjev v računu
  
-- **action** – vrsta izvedenega dejanja, npr. create_account, delete_account.
+- **action** – vrsta izvedenega dejanja, na primer create_account, delete_account.
  
 - **duration_seconds** – trajanje dejanja
  
@@ -1552,7 +1577,7 @@ Zbrana so sledeča polja:
  
 - **number_of_accounts** – skupno število računov, v katerih je bilo izvedeno dejanje
  
-- **result** – rezultat dejanja, npr. »uspelo« ali »ni uspelo«.
+- **result** – rezultat dejanja, na primer »uspelo« ali »ni uspelo«.
    
 - **server_type** – vrsta strežnika za račun, podobno polju account_type
  
@@ -1752,9 +1777,9 @@ Naslednja polja so zbrana v operacijskih sistemih iOS in Android:
 
 - **account_switcher_action_type** – ta vrsta dejanja spremlja, ali je uporabnik uporabil preklopnik med računi v načinu preprostega odkrivanja ali je preklopil na drug račun.
 
-- **action_type** – vrsta dejanja, ki je bila izvedena v funkciji iskanja. Določa, ali je bila zagnana funkcija iskanja, se ponavlja oziroma je bila končana ter prepozna, katera dejanja so bila izvedena med iskanjem, npr. ali je bil uporabljen mikrofon. Ta dogodek nam omogoča, da zagotavljamo natančna in pomenljiva iskanja. 
+- **action_type** – vrsta dejanja, ki je bila izvedena v funkciji iskanja. Določa, ali je bila zagnana funkcija iskanja, se ponavlja oziroma je bila končana ter prepozna, katera dejanja so bila izvedena med iskanjem, na primer ali je bil uporabljen mikrofon. Ta dogodek nam omogoča, da zagotavljamo natančna in pomenljiva iskanja. 
 
-- **conversation_id** – enolični ID za posamezno sejo iskanja (npr. vsakič, ko uporabnik vnese element v iskalno polje)
+- **conversation_id** – enolični ID za posamezno sejo iskanja (na primer vsakič, ko uporabnik vnese element v iskalno polje)
 
 - **entrance_type** – določa način, kako je uporabnik zagnal poizvedbo iskanja na zavihku za iskanje, iz ničelne poizvedbe, naslova iskanja ali rezultata iskanja. 
 
@@ -1770,25 +1795,25 @@ Naslednja polja so zbrana v operacijskih sistemih iOS in Android:
 
 - **re_enter_search_tab** – logična vrednost, ki ponazarja, ali je uporabnik pred izbiro rezultata preklopil na drug zavihek.
 
-- **result_selected_type** – kakšno vrsto prikazanih podatkov uporablja uporabnik. Npr. ali so prikazani vsi stiki, pogovori, dogodki itd. 
+- **result_selected_type** – kakšno vrsto prikazanih podatkov uporablja uporabnik. Na primer, ali so prikazani vsi stiki, pogovori, dogodki itd. 
 
 - **search_conversation_result_data** – vsebuje podatke o pogovoru, izbranem med rezultati iskanja, vključno z vrsto računa (hx, ac itd.), ali je sporočilo shranjeno v storitvi v oblaku in ali je zamik strani prikazan na isti strani kot prvo sporočilo. 
 
-- **search_origin** – vir iskanja, npr. glasovni pomočnik, Cortana, vnos s tipkovnico itd. 
+- **search_origin** – vir iskanja, na primer glasovni pomočnik, Cortana, vnos s tipkovnico itd. 
 
 - **search_scope** – niz, ki prikazuje vrsto računa, izbrano za iskanje (npr. Exchange, Gmail itd.), ali če je bila izbrana možnost iskanja v vseh računih. 
 
-- **search_suggestion_type** – prikazuje element za predlogom za iskanje, npr. ali gre za popravek črkovanja? Ali temelji na zgodovini? Funkcija samodokončanja?
+- **search_suggestion_type** – prikazuje element za predlogom za iskanje, na primer, ali gre za popravek črkovanja? Ali temelji na zgodovini? Funkcija samodokončanja?
 
-- **search_request_reason** – prikazuje vzrok, zakaj je bila iz aplikacije poslana zahteva za iskanje, ter ponazarja komponento oz. dejanje uporabnika, priklicano s funkcijo iskanja.
+- **search_request_reason** – prikazuje vzrok, zakaj je bila iz aplikacije poslana zahteva za iskanje, in ponazarja komponento oz. dejanje uporabnika, priklicano s funkcijo iskanja.
 
 - **search_result_filter_type** – prikazuje vrsto filtra, ki je bila uporabljena za funkcijo iskanja, ter prikazuje vso vsebino ali samo priloge.
 
 Naslednja polja so zbrana v iOS aplikacijah Outlook Mobile: 
 
-- **action** – vrsta dejanja, ki je bila izvedena v funkciji iskanja. Določa, ali je bila zagnana funkcija iskanja, se ponavlja oziroma je bila končana ter prepozna, katera dejanja so bila izvedena med iskanjem, npr. ali je bil uporabljen mikrofon. Ta dogodek nam omogoča, da zagotavljamo natančna in pomenljiva iskanja.
+- **action** – vrsta dejanja, ki je bila izvedena v funkciji iskanja. Določa, ali je bila zagnana funkcija iskanja, se ponavlja oziroma je bila končana ter prepozna, katera dejanja so bila izvedena med iskanjem, na primer ali je bil uporabljen mikrofon. Ta dogodek nam omogoča, da zagotavljamo natančna in pomenljiva iskanja.
 
-- **answer_result_selected_count** – število uspešnih iskanj; ali je uporabnik našel iskano osebo? Ali je bilo ustvarjeno e-poštno sporočilo? Ali je bilo sporočilo dodane med zaznamke? 
+- **answer_result_selected_count** – število uspešnih iskanj; na primer, ali je uporabnik našel iskano osebo? Ali je bilo ustvarjeno e-poštno sporočilo? Ali je bilo sporočilo dodane med zaznamke? 
 
 - **contact_result_in_full_list_selected_count** – število, ko je uporabnik v pogledu polnega seznama izbral možnost »Prikaži vse stike« med sejo kombiniranega iskanja.
 
@@ -1804,7 +1829,7 @@ Naslednja polja so zbrana v iOS aplikacijah Outlook Mobile:
 
 - **search_session_ended_type** – prikazuje mesto, kjer se je iskanje zaključilo, ker je bila poizvedba preklicana ali posodobljena.
 
-- **search_suggestion_type** – prikazuje element za predlogom za iskanje, npr. ali gre za popravek črkovanja? Ali temelji na zgodovini? Funkcija samodokončanja?
+- **search_suggestion_type** – prikazuje element za predlogom za iskanje, na primer, ali gre za popravek črkovanja? Ali temelji na zgodovini? Funkcija samodokončanja?
 
 - **see_all_contacts_selected_count** – kolikokrat je bila med sejo kombiniranega iskanja izbrana možnost »Prikaži vse stike«.
 
@@ -1867,19 +1892,19 @@ Se uporablja za nadzor morebitnega negativnega učinka na vašo zmožnost ustvar
 
 Zbrana so sledeča polja: 
 
-- **action** – vrsta dejanja, npr. shrani ali zavrzi.
+- **action** – vrsta dejanja, na primer »shrani« ali »zavrzi«.
  
 - **draft_message_id** – ID sporočila osnutka.
 
 - **is_groups** – ali je bil osnutek poslan skupinski mapi ali iz nje.
  
-- **origin** – vir osnutka, npr. podrobnosti sporočila, ustvari.
+- **origin** – vir osnutka, na primer »podrobnosti sporočila«, »sestavi«.
 
 - **smart_compose_model_version** – spremlja, katero različico modela Smart sestavite uporabljamo
 
 - **suggestions_requested** – označuje, koliko predlogov za pametno sestaviti je bilo zahtevano
 
-- **suggestions_results** – Smart sestavite rezultate predlogov, tj. sprejete, zavrnjene
+- **suggestions_results** – rezultat pametnega sestavljanja predloga, ki je bil sprejet oz. zavrnjen
 
 - **suggestions_returned** – označuje, koliko pametnih predlogov za sestavljanje je vrnjenih iz strežnika
 
@@ -1895,7 +1920,7 @@ Zbrana so sledeča polja:
 
 - **action** – dejanje bo bodisi vlečenje bodisi spuščanje
 
-- **location** – v primeru dejanja vleka bomo s tem izvedeli, s katerega mesta je uporabnik začel vlečenje.  V primeru dejanja spuščanja bomo s tem izvedeli, kjer je uporabnik izpustil datoteko, ki jo je vlekel. 
+- **location** – v primeru dejanja vleka bomo s tem izvedeli, s katerega mesta je uporabnik začel vlečenje.  V primeru odložitve bomo izvedeli, kje je uporabnik odložil datoteko, ki jo je vlekel. 
 
 - **vir** – če gre za dejanje spuščanja, nam to sporočite, na kateri lokaciji je uporabnik zagnal funkcijo» povleci «. Tako boste lažje odkrivali težave z določenim virom, kot je OneDrive ali datoteke, na določeno mesto za spuščanje, kot je na primer nova e-poštna sporočila.
 
@@ -1905,7 +1930,7 @@ Se uporablja za nadzor morebitnega negativnega učinka na vašo zmožnost dostop
 
 Zbrana so sledeča polja:
 
-- **add_calendar_option** – ponazarja vrsto koledarja, ki je bil dodan iz predala, npr. koledar zanimivosti, koledar pošte, koledar v skupni rabi, s katerim lahko lažje zaznamo težave, povezane z določenimi vrstami koledarjev.
+- **add_calendar_option** – ponazarja vrsto koledarja, ki je bil dodan iz predala, tj. koledar zanimivosti, koledar pošte, koledar v skupni rabi, s katerim lahko lažje zaznamo težave, povezane z določenimi vrstami koledarjev.
 
 - **calendar_accounts_count** – ponazarja število računov koledarja, s katerim lahko zaznamo težave, povezane s številom računov, katerih lastnih ste.
 
@@ -1915,19 +1940,19 @@ Zbrana so sledeča polja:
 
 - **from_favorites** – ponazarja, ali je bilo dejanje izvedeno iz priljubljenih, in nam pomaga zaznati težave, povezane s priljubljenimi.
 
-- **group_calendar_count** – ponazarja število koledarjev za račun, s katerim lahko zaznamo težave, povezane s koledarji skupine.
+- **group_calendar_count** – ponazarja število koledarjev za račun, s katerim lahko zaznamo težave, povezane s koledarji skupine
 
 - **inbox_unread_count** – ponazarja število neprebranih sporočil v nabiralniku, s katerim lahko zaznamo težave pri prikazu števila neprebranih sporočil v mapi »Prejeto«.
 
-- **interesting_calendar_accounts_count** – ponazarja število računov, ki so primerni za zanimive koledarje v napravi, s katerim lahko zaznamo težave, povezane z zanimivimi koledarji.
+- **interesting_calendar_accounts_count** – ponazarja število računov, ki so primerni za zanimive koledarje v napravi, s katerim lahko zaznamo težave, povezane z zanimivimi koledarji
 
-- **is_group_calendar** – ponazarja, ali gre za koledar skupine, in nam pomaga zaznati težave, povezane s koledarji skupine.
+- **is_group_calendar** – ponazarja, ali gre za koledar skupine, in nam pomaga zaznati težave, povezane s koledarji skupine
 
-- **mail_folder_type** – ponazarja vrsto mape za pošto, npr. prejeto, osnutki itd., in nam pomaga zaznati težave, povezane z vrstami map.
+- **mail_folder_type** – ponazarja vrsto mape za pošto, tj. »Prejeto«, »Osnutki« itd., in nam pomaga zaznati težave, povezane z vrstami map.
 
 - **mail_accounts_count** – ponazarja število računov pošte, s katerim lahko zaznamo težave, povezane računi pošte.
 
-- **selected_group_calendar_count** – ponazarja število koledarjev skupine, ki so izbrani in aktivni v uporabniškem vmesniku.
+- **selected_group_calendar_count** – ponazarja število koledarjev skupine, ki so izbrani in aktivni v uporabniškem vmesniku
 
 - **visibility_toggle** – ponazarja, ali je uporabnik vklopil/izklopil dani koledar, in nam pomaga zaznati težave, povezne s prikazovanjem oz. skrivanjem koledarjev.
 
@@ -1937,7 +1962,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije
 
@@ -1967,7 +1992,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -1999,7 +2024,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2031,7 +2056,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2093,7 +2118,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2157,7 +2182,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2211,7 +2236,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2249,7 +2274,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2319,7 +2344,7 @@ Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje teža
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2389,7 +2414,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -2453,17 +2478,17 @@ Zbrana so naslednja polja:
 
 Uporablja se za nadzor morebitnega negativnega učinka na vašo zmožnost izvajanja kritičnih dejanj pošte (npr. izvajanje na pošte v nitnem načinu, zagotavljanje delovanje triažnih dejanj za pošto) in zagotavljanje, da naša poštna aplikacija ustrezno deluje.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
-- **račun** – račun, ki je izvajal dejanje *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
+- **account** – račun, ki je izvedel dejanje *[To polje je bilo odstranjeno iz trenutnih različic Officea, vendar se lahko še vedno prikaže v starejših graditvah.]*
 
-- **action** – spremlja vrsto izvedenega dejanja, npr. arhiviranje, brisanje, označevanje kot prebrano itd. 
+- **action** – spremlja vrsto izvedenega dejanja, tj. »arhiviranje«, »brisanje«, »označevanje kot prebrano« itd. 
 
 - **attachment_content_type** – vrsta vsebine prenesene priloge. 
 
 - **attachment_content_type_with_count** – spremlja število prilog v e-pošti.
 
-- **attachment_download_result** – rezultat (npr. usešno/neuspešno) za dejanje prenosa priloge.
+- **attachment_download_result** – rezultat (tj. usešno/neuspešno) za dejanje prenosa priloge
 
 - **attachment_download_time** – čas dejanja prenosa priloge.
 
@@ -2475,7 +2500,7 @@ Zbrana so naslednja polja:
 
 - **domain** – domena dokumenta, ki ga želite odpreti.
 
-- **duration** – spremlja, kako dolgo je trajalo dejanje kot niz v človeku berljivi obliki v angleščini (npr. 1 s, 4 ure).
+- **duration** – spremlja, kako dolgo je trajalo dejanje kot niz v človeku berljivi obliki v angleščini (na primer 1 s, 4 ure).
 
 - **error** – sporočilo o napaki, povezani z dejanjem. 
 
@@ -2489,7 +2514,7 @@ Zbrana so naslednja polja:
 
 - **is_rule** – ponazarja, ali je izvedeno dejanje pošte ponastavilo klasifikacijo v fokusu/drugo klasifikacijo.
 
-- **is_threaded_mode** – ponazarja, ali je bilo sporočilo v nitnem načinu, npr. način združevanja sporočil.
+- **is_threaded_mode** – ponazarja, ali je bilo sporočilo v nitnem načinu, tj. načinu združevanja sporočil
 
 - **is_unread** – ponazarja, ali je sporočilo, za katero se je izvedlo dejanje, neprebrano.
 
@@ -2501,9 +2526,9 @@ Zbrana so naslednja polja:
 
 - **number_selected** – število elementov, ki jih je izbral uporabnik na seznamu sporočil in je ukrepal v več načinih izbora.
 
-- **origin** – vir dejanja, npr. podrsanje po celici, ničelna poizvedba, globoka povezava, e-poštni pogled, e-poštni seznam itd.
+- **origin** – vir dejanja, tj. podrsanje po celici, ničelna poizvedba, globoka povezava, e-poštni pogled, e-poštni seznam itd.
 
-- **origin_view** – izvorni pogled dejanja, npr. pogovor, sporočilo itd.
+- **origin_view** – izvorni pogled dejanja, na primer pogovor, sporočilo itd.
 
 - **reported_to_msft** – ko je bila e-pošta posredovana v mapo z neželeno vsebino (neželena pošta) ali v koš (lažno predstavljanje), lahko uporabnik izbere, ali želi dejanje prijaviti Microsoftu.
 
@@ -2511,19 +2536,19 @@ Zbrana so naslednja polja:
 
 - **right_swipe_setting** – ponazarja dejanje, ki ga izvedete z desnim podrsljajem. 
 
-- **shortcut** – ponazarja, ali je bila uporabljena bližnjica in katera bližnjica je bila uporabljena za načrtovanje sporočila, npr. pozneje, jutri, izberite čas itd.
+- **shortcut** – ponazarja, ali je bila uporabljena bližnjica in katera bližnjica je bila uporabljena za načrtovanje sporočila, tj. pozneje, jutri, izberite čas itd.
 
-- **size** – velikost povezave ali priloge, povezane s tem dejanjem.
+- **size** – velikost povezave ali priloge, povezane s tem dejanjem
 
-- **source_folder** – spremlja vrsto izvorne mape, ko dejanje ponazarja na premik iz ene v drugo mapo, npr. v mapo »Prejeto«, koš itd. 
+- **source_folder** – spremlja vrsto izvorne mape, ko dejanje ponazarja na premik iz ene v drugo mapo, tj. v mapo »Prejeto«, koš itd. 
 
-- **source_inbox** – ponazarja, v kateri nabiralnik bo poslana pošta (tj. s fokusom, drugo itd.) – stanje dejanja, npr. uspešno ali mesto neuspeha.
+- **source_inbox** – ponazarja, v kateri nabiralnik bo poslana pošta (to je s fokusom, drugo itd.) – stanje dejanja, to je »uspešno« ali mesto neuspeha
 
-- **state** – stanje dejanja, npr. uspeh ali mesto napake
+- **state** – stanje dejanja, na primer uspeh ali mesto napake
 
-- **target_folder** – ponazarja vrsto ciljne mape pri premikanju e-poštnih sporočil iz ene mape v drugo.
+- **target_folder** – ponazarja vrsto ciljne mape pri premikanju e-poštnih sporočil iz ene mape v drugo
 
-- **thread_id** – ID niza za pogovor, ciljan za dejanje, ali seznam, ločen z vejicami, če je bilo izvedenih več dejanj.
+- **thread_id** – ID niza za pogovor, ciljan za dejanje, ali seznam, ločen z vejicami, če je bilo izvedenih več dejanj
 
 - **time_taken_to_fetch_access_token** – čas, zahtevan za pridobivanje sistemskega žetona za dostop in uporabo za odpiranje povezave.
 
@@ -2539,7 +2564,7 @@ Zbrana so naslednja polja:
 
 - **time_taken_to_tap_link** – čas, ki ga je uporabnik porabil za ogled sporočila in klik povezave.
 
-- **txp** – ponazarja, ali je na voljo vrsta txp za element, povezan s pošto, za katero je bilo izvedeno dejanje, npr. rezervacija dogodka, rezervacija leta itd. 
+- **txp** – ponazarja, ali je na voljo vrsta txp za element, povezan s pošto, za katero je bilo izvedeno dejanje, denimo rezervacija dogodka, rezervacija leta itd. 
 
 - **type** – vrsta dokumenta, ki je bila odprta prek povezave.
 
@@ -2549,9 +2574,9 @@ Uporablja se za nadzor morebitnega negativnega učinka na vašo zmožnost sestav
 
 Zbrana so sledeča polja: 
 
-- **draft_message_id** – ID osnutka za pogovor, ki ga želite ustvariti kot osnutek, s katerim lahko zaznamo težave, povezane z osnutki e-poštnih sporočil.
+- **draft_message_id** – ID osnutka za pogovor, ki ga želite ustvariti kot osnutek, s katerim lahko zaznamo težave, povezane z osnutki e-poštnih sporočil
 
-- **message_id** – ID sporočila za pogovor, na katerega ste odgovorili ali vam je bil posredovan, s katerim lahko zaznamo težave, povezane z določenim sporočilom.
+- **message_id** – ID sporočila za pogovor, na katerega ste odgovorili ali vam je bil posredovan, s katerim lahko zaznamo težave, povezane z določenim sporočilom
 
 - **origin** – prikazuje vir sporočila, na primer možnost »Odgovori vsem«, »Sestavi novo sporočilo« ali »Hitri odgovor«. Pomaga nam pri zaznavanju težav, povezanih z določeno vrsto vira odgovora.
 
@@ -2565,7 +2590,7 @@ Zbrana so sledeča polja:
 
 - **source_inbox** – ponazarja izvorni nabiralnik, na primer ali je bil v fokusu ali je šlo za drug nabiralnik.
 
-- **thread_id** – ID niti za pogovor, na katerega ste odgovorili ali vam je bil posredovan, s katerim lahko zaznamo težave, povezane z določeno nitjo.
+- **thread_id** – ID niti za pogovor, na katerega ste odgovorili ali vam je bil posredovan in nam pomaga zaznati težave, povezane z določeno nitjo
 
 #### <a name="meetingcalltoaction"></a>meeting.call.to.action
 
@@ -2577,11 +2602,11 @@ Zbrana so sledeča polja:
 
 - **meeting_id** – ID srečanja, s pomočjo katerega lahko spremljamo težave za čas trajanja srečanja in zaznamo težave z določenimi srečanji.
 
-- **meeting_provider** – ponazarja ponudnika spletnega srečanja, npr. Teams, Skype za podjetja, in nam pomaga pri zaznavanju težav z določenimi ponudniki spletnih srečanj.
+- **meeting_provider** – ponazarja ponudnika spletnega srečanja, na primer Teams, Skype za podjetja, in nam pomaga pri zaznavanju težav z določenimi ponudniki spletnih srečanj
 
-- **notify_type** – ponazarja vrsto odgovora za druge vrste računov in nam pomaga pri zaznavanju težav z različnimi vrstami računov.
+- **notify_type** – ponazarja vrsto odgovora za druge vrste računov in nam pomaga pri zaznavanju težav z različnimi vrstami računov
 
-- **recurrence** – ponazarja pogostost srečanja, npr. enkratno srečanje ali niz srečanj, in nam pomaga pri zaznavanju težav pri nizih ponavljajočih se srečanj.
+- **recurrence** – ponazarja pogostost srečanja, denimo enkratno srečanje ali niz srečanj, in nam pomaga pri zaznavanju težav pri nizih ponavljajočih se srečanj
 
 - **response** – ponazarja vrsto odziva, kot je sprejem ali zavrnitev, v določenih vrstah računa in nam pomaga pri zaznavanju težav pri odzivanju na dogodke.
 
@@ -2593,7 +2618,7 @@ Zbrana so sledeča polja:
 
 - **txp** – ponazarja vrsto, iz katere je bilo srečanje ustvarjeno, od rezervacij leta do dostavo, in nam pomaga pri zaznavanju težav s to vrsto srečanja.
 
-- **with_message_enabled** – ponazarja, ali se uporabnik lahko odzove s sporočilom, in nam pomaga pri zaznavanju težav z odzivi na povabila na srečanja.
+- **with_message_enabled** – ponazarja, ali se uporabnik lahko odzove s sporočilom, in nam pomaga pri zaznavanju težav z odzivi na povabila na srečanja
 
 #### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
 
@@ -2613,7 +2638,7 @@ Zbrana so sledeča polja:
 
 - **Data_ClosePreviouslyOpenedMarkers** – v nekaterih scenarijih odpiranja datoteke je postopek zapiranja prej odprtega dokumenta izveden pred odpiranjem trenutnega dokumenta. To časovno obdobje med nekaterimi postopki, ki se izvedejo v tem primeru, je zajeto v vrednosti niza v obliki zapisa \<functionId>\<functionValue>\<functionId>\<functionValue>...
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -2631,7 +2656,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -2645,13 +2670,13 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, na primer lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
-- **Data_Doc_RtcType** – oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
+- **Data_Doc_RtcType** – Oštevilčenje, ki označuje vrsto kanala v realnem času (RTC), ki ga uporablja datoteka.
 
 - **Data_Doc_ServerDocId** – GUID, ki enolično določa ID dokumenta strežnika.
 
@@ -2661,7 +2686,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -2685,7 +2710,7 @@ Zbrana so sledeča polja:
 
 - **Data_InclusiveMeasurements** – vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij. 
 
-- **Data_InitializationReason** – oštevilčenje, ki označuje, način odpiranja datoteke, npr. element uporabniškega vmesnika, odpiranje sprožila aplikacija itd.
+- **Data_InitializationReason** – oštevilčenje, ki označuje, način odpiranja datoteke, na primer element uporabniškega vmesnika, odpiranje sprožila aplikacija itd.
 
 - **Data_Measurements** – vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki ne vključuje trajanje klicev podfunkcij.
 
@@ -2697,6 +2722,21 @@ Zbrana so sledeča polja:
 
 - **Data_TimeSplitMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije, časovnim žigom začetka in trajanjem. 
 
+#### <a name="officeandroiddocsuipaywallcontrolpresigninfre"></a>Office.Android.DocsUI.PaywallControl.PreSignInFRE
+
+*[Ta dogodek se je prej imenoval Office.DocsUI.PaywallControl.PreSignInFRE.]*
+ 
+Te je telemetrija kritične uporabe za povečanje prodaje v uporabniški izkušnji prvega zagona za nepodpisane uporabnike. Ta dogodek zajema metriko vpisa ob prvem zagonu. Podatki so uporabljeni za določanje vpogledov predhodnega vpisa in razumevanje uporabnikovega morebitnega nadaljevanja naslednje faze uporabniškega postopka.
+ 
+Zbrana so ta polja: 
+
+- **EventDate** – časovni žig ponovitve dogodka  
+
+- **FunnelPoint** – Popisovalnik, ki označuje mesto uporabnika v tem lijaku preskusa. Popisovalnik sporoči, ali so uporabniku prikazana obravnave in usmerjanja ali ne.
+
+- **SessionID** – globalni enolični identifikator za povezovanje dogodkov po seji
+
+
 #### <a name="officeandroiddocsuipaywallcontrolskuchoosertoggled"></a>Office.Android.DocsUI.PaywallControl.SkuChooserToggled
 
 Telemetrijo uporabe če si želite ogledati, kolikokrat uporabnik preklaplja med različnimi inventarnimi enotami, preden poskusite kupiti nakup. Uporablja se za razumevanje uporabe izbirnika INVENTARja in optimiziranje možnosti nakupa aplikacije v prihodnjih različicah.
@@ -2706,6 +2746,20 @@ Zbrana so sledeča polja:
 - **EventDate** – časovni žig ponovitve dogodka 
 
 - **SessionID** – GUID za povezovanje dogodkov po seji
+
+
+#### <a name="officeandroiddocsuipaywallcontroluserimageclicked"></a>Office.Android.DocsUI.PaywallControl.UserImageClicked 
+
+*[Ta dogodek se je prej imenoval Office.DocsUI.PaywallControl.UserImageClicked.]*
+ 
+Ta dogodek meri telemetrijo, da določi, ali uporabniki poskušajo dokončati dejanje s klikanjem avatarja uporabnika. Ti podatki so uporabljeni za merjenje števila uporabnikov, ki uporabljajo ikono avatarja za ocenjevanje potrebe po nadaljnji izkušnji ob tapu.
+ 
+Zbrana so ta polja: 
+
+- **EventDate** – časovni žig ponovitve dogodka  
+
+- **SessionID** – globalni enolični identifikator za povezovanje dogodkov po seji 
+
 
 #### <a name="officeandroidearlytelemetryexpansionfilesavailability"></a>Office.Android.EarlyTelemetry.ExpansionFilesAvailability
 
@@ -2740,7 +2794,7 @@ Zbrana so sledeča polja:
 
 Kritični signal, ki se uporablja za nadzor zmogljivosti, kjer si uporabniki Samolepljivih listkov lahko ogledujejo zapiske v aplikaciji. Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če si uporabniki ne morejo ogledati svojih zapiskov, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **HasImages** – zastavica, ki označuje, so v ogledanem zapisku shranjene slike.
 
@@ -2885,7 +2939,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -2893,7 +2947,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_EdpState** – Oštevilčenje, ki ponazarja stanje zaščite poslovnih podatkov datoteke.
 
-- **Data_Doc_Ext** – Prvi 4 znaki datotečne pripone.
+- **Data_Doc_Ext** – prvi štirje znaki datotečne pripone.
 
 - **Data_Doc_Fqdn** – Ime gostitelja strežnika datoteke.
 
@@ -2903,7 +2957,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -2917,9 +2971,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -2933,7 +2987,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3115,7 +3169,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3133,7 +3187,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3147,9 +3201,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3163,7 +3217,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3227,7 +3281,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3245,7 +3299,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3259,9 +3313,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3275,7 +3329,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3340,7 +3394,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3358,7 +3412,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3372,9 +3426,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3388,7 +3442,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3452,7 +3506,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3470,7 +3524,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3484,9 +3538,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3500,7 +3554,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3564,7 +3618,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3582,7 +3636,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3596,9 +3650,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3612,7 +3666,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3677,7 +3731,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3695,7 +3749,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3709,9 +3763,9 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3725,7 +3779,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3883,9 +3937,9 @@ Zbrana so naslednja polja:
 
 - **Data_ClosePreviouslyOpenedMarkers** – vrednost niza, ki beleži čas med klici funkcij, v obliki zapisa z ID-jem in trajanjem.
 
-- **Data_DetachedDuration** – Trajanje, zahtevano za odpenjanje postopka dogodka. 
+- **Data_DetachedDuration** – trajanje, zahtevano za odpenjanje postopka dogodka. 
 
-- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, npr. samo za branje, branje in pisanje.
+- **Data_Doc_AccessMode** – Oštevilčenje, ki ponazarja način za dostop datoteke, na primer samo za branje, branje in pisanje.
 
 - **Data_Doc_AsyncOpenKind** – Oštevilčenje, ki ponazarja vrsto asinhronega poteka, ki se uporablja za odpiranje datoteke.
 
@@ -3903,7 +3957,7 @@ Zbrana so naslednja polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, npr. ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -3917,9 +3971,9 @@ Zbrana so naslednja polja:
 
 - **Data_Doc_IsSyncBacked** – Ali je na voljo lokalna različica datoteke, ki je sinhronizirana s strežnikom.
 
-- **Data_Doc_Location** – Oštevilčenje, ki označuje mesto datoteke, npr. lokalno ali v oblaku.
+- **Data_Doc_Location** – oštevilčenje, ki označuje mesto datoteke, na primer lokalno ali v oblaku.
 
-- **Data_Doc_ReadOnlyReasons** – Oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
+- **Data_Doc_ReadOnlyReasons** – oštevilčenje, ki označuje razlog datoteke, ki je samo za branje.
 
 - **Data_Doc_ResourceIdHash** – GUID, ki enolično določa ID vira strežnika datoteke.
 
@@ -3933,7 +3987,7 @@ Zbrana so naslednja polja:
 
 - **Data_Doc_ServerVersion** – Oštevilčenje, ki označuje različico strežnika za datoteko v oblaku.
 
-- **Data_Doc_SessionId** – Celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
+- **Data_Doc_SessionId** – celo število, ki se poveča za 1 za vsak postopek odpiranja datoteke v seji.
 
 - **Data_Doc_SharePointServiceContext** – Niz, ki se uporablja za korelacijo odjemalskih in strežniških dnevnikov, po navadi je to neke vrste ID.
 
@@ -3951,7 +4005,7 @@ Zbrana so naslednja polja:
 
 - **Data_InclusiveMeasurements** – Vrednost niza, ki beleži čas, zahtevan za klice funkcij, v obliki zapisa z oznako funkcije ter trajanjem, ki vključuje trajanje klicev podfunkcij.
 
-- **Data_InitializationReason** – Oštevilčenje, ki označuje način odpiranja datoteke, npr. iz katerega elementa uporabniškega vmesnika oz. odpiranje sprožila aplikacija.
+- **Data_InitializationReason** – oštevilčenje, ki označuje način odpiranja datoteke, na primer iz katerega elementa uporabniškega vmesnika oz. odpiranje sprožila aplikacija.
 
 - **Data_IsDocumentAlreadyOpen** – ne glede na to, ali je datoteka že odprta.
 
@@ -3977,7 +4031,7 @@ Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. 
 
 Zbrana so sledeča polja:
 
-- **Data_IsCandidateDropboxFile** – to je logična vrednost, ki je zabeležena, če na podlagi pregleda poti datoteke menimo, da je morda iz mape, ki jo sinhronizira storitev DropBox.
+- **Data_IsCandidateDropboxFile** – to je logična vrednost, ki je zabeležena, če na podlagi pregleda poti datoteke menimo, da je morda iz mape, ki jo sinhronizira Drop Box.
 
 - **Data_IsSignedIn** – označuje, ali je uporabnik pri shranjevanju datoteke vpisan.
 
@@ -4004,30 +4058,6 @@ Zbrana so sledeča polja:
 - **Data_SaveLocation** – abstraktna kategorizacija mesta datoteke, na primer »SharePoint«, »OneDrive«, »Lokalno«, »WOPI« itn., ne pa dejansko mesto datoteke.
 
 - **Data_SaveOperationType** – številska vrednost, ki jo določa skupina vrednosti NSSaveOperationType družbe Apple.
-
-
-#### <a name="officedocsuipaywallcontrolpresigninfre"></a>Office.DocsUI.PaywallControl.PreSignInFRE
- 
-Te je telemetrija kritične uporabe za povečanje prodaje v uporabniški izkušnji prvega zagona za nepodpisane uporabnike. Ta dogodek zajema metriko vpisa ob prvem zagonu. Podatki so uporabljeni za določanje vpogledov predhodnega vpisa in razumevanje uporabnikovega morebitnega nadaljevanja naslednje faze uporabniškega postopka.
- 
-Zbrana so ta polja: 
-
-- **EventDate** – časovni žig ponovitve dogodka  
-
-- **FunnelPoint** – Popisovalnik, ki označuje mesto uporabnika v tem lijaku preskusa. Popisovalnik sporoči, ali so uporabniku prikazana obravnave in usmerjanja ali ne.
-
-- **SessionID** – globalni enolični identifikator za povezovanje dogodkov po seji
-
-
-#### <a name="officedocsuipaywallcontroluserimageclicked"></a>Office.DocsUI.PaywallControl.UserImageClicked 
- 
-Ta dogodek meri telemetrijo, da določi, ali uporabniki poskušajo dokončati dejanje s klikanjem avatarja uporabnika. Ti podatki so uporabljeni za merjenje števila uporabnikov, ki uporabljajo ikono avatarja za ocenjevanje potrebe po nadaljnji izkušnji ob tapu.
- 
-Zbrana so ta polja: 
-
-- **EventDate** – časovni žig ponovitve dogodka  
-
-- **SessionID** – globalni enolični identifikator za povezovanje dogodkov po seji 
 
 
 #### <a name="officedocsuisharinguicloudupsellshown"></a>Office.DocsUI.SharingUI.CloudUpsellShown 
@@ -4166,7 +4196,7 @@ Podatki o obdelavi posameznih upravičenosti za najemnika in skrbnika storitve O
 
 Uporabljamo ga za grafikone (zahteva ga upravljanje skupin) za določanje uspešnosti strank in analiziranje težav strank.
 
-Zbrana so ta polja:
+Zbrana so naslednja polja:
 
   - **AppVersion** – Različica gostiteljske aplikacije dodatka.
 
@@ -4244,7 +4274,7 @@ Ta dogodek se zbere ob inicializaciji vira. Ta dogodek se uporablja za označeva
 
 - **publicEventName** – javno ime dogodka.  
 
-- **regija** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
+- **region** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
 
 - **tenantAadObjectId** – globalni enolični identifikator uporabnika za poslovnega najemnika.
 
@@ -4312,7 +4342,7 @@ Ta dogodek se zbere ob prikazu vira uporabniku. S tem dogodkom se preveri, ali j
 
 - **publicEventName** – javno ime dogodka.  
 
-- **regija** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
+- **region** – geografsko območje storitve vira, s katerim je povezan uporabnik. 
 
 - **renderTime** – metrika za diagnosticiranje učinkovitosti delovanja pri upodabljanju vira.
 
@@ -4351,11 +4381,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyfloodgateclienttriggermet"></a>Office.Feedback.Survey.FloodgateClient.TriggerMet
 
-Sledi, ko naprava izpolnjuje pogoje za prikaz ankete. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+Sledi, ko naprava izpolnjuje pogoje za prikaz ankete. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da signal, ki se uporablja za analizo težav strank in zdravje, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4365,7 +4395,7 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyfloodgateclientuserselected"></a>Office.Feedback.Survey.FloodgateClient.UserSelected
 
@@ -4379,11 +4409,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyuiandroid"></a>Office.Feedback.Survey.UI.Android
 
-V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da signal, ki se uporablja za analizo težav strank in zdravje, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4393,11 +4423,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyuiios"></a>Office.Feedback.Survey.UI.IOS
 
-V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da signal, ki se uporablja za analizo težav strank in zdravje, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4407,11 +4437,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyuimac"></a>Office.Feedback.Survey.UI.Mac
 
-V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+V napravi s sistemom Android sledi, ko se uporabnik v napravi sporazumeva z uporabniškim pozivnikom» Anketa «in uporabniškega vmesnika za anketo. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da signal, ki se uporablja za analizo težav strank in zdravje, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4421,11 +4451,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyuiwin32"></a>Office.Feedback.Survey.UI.Win32
 
-V napravi s sistemom Win32 sledi, ko se uporabnik v napravi sporazumeva s pozivnikom »Anketa« in z uporabniškim vmesnikom »Anketa«. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+V napravi s sistemom Win32 sledi, ko se uporabnik v napravi sporazumeva s pozivnikom »Anketa« in z uporabniškim vmesnikom »Anketa«. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da signal, ki se uporablja za analizo težav strank in zdravje, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4435,11 +4465,11 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefeedbacksurveyuiwin32toast"></a>Office.Feedback.Survey.UI.Win32.Toast
 
-Sledi, ko je prikazan pozivnik ankete. Uporablja se za oceno stanja popravka postopka ankete ter za zagotavljanje, da se signal uporablja za analizo težav strank in za zdravje deluje pravilno.
+Sledi, ko je prikazan pozivnik ankete. Uporablja se za oceno stanja popravka postopka ankete ter za zagotavljanje, da signal, ki se uporablja za analizo težav in zdravje strank, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4449,7 +4479,7 @@ Zbrana so naslednja polja:
 
 - **SurveyId** – edinstven primerek kampanje
 
-- **UniqueId** – ID za identifikacijo posameznega dela telemetrijo
+- **UniqueId** – ID za identifikacijo posameznega dela telemetrije
 
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
@@ -4713,7 +4743,7 @@ Zbrana so ta polja:
 
   - **Data.BaseDownloadTriggered** – Diagnostika sledenja spremembam, vključno s podatki, da je bila zahtevana osnovna različica dokumenta.
 
-  - **Data.BlockAutoUploadReasons** – Kode vzroka za blokirano stanje nalaganja (npr. samodejno shranjevanje je vklopljeno, dokument je v stanju prehoda).
+  - **Data.BlockAutoUploadReasons** – kode vzroka za blokirano stanje nalaganja (na primer samodejno shranjevanje je vklopljeno, dokument je v stanju prehoda)
 
   - **Data.BlockUploadDueToFailedSaveAsOverExisting** – Nalaganje je blokirano, saj bi bil vnovičen poskus neuspešen.
 
@@ -5192,6 +5222,127 @@ Zbrana so naslednja polja:
 
 - **Data_FirstRunPanelName** – ime podokna, iz katerega je bila zagnana uporabniška izkušnja
 
+#### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
+
+Ta dogodek se zbere, ko uporabnik obreže sliko in tapne gumb »Potrdi« pri končni izbiri slike, ki se bo uporabila za optično prepoznavanje znakov.     
+Gre za zapis, ki ga zahteva uporabnik, za storitev, saj v storitvi ni voljo opravilo preslikave od uporabnika v storitev. Polje UserId je zahtevano za izpolnjevanje zahtev Splošne uredbe o varstvu podatkov, saj storitev ni neposredno izpostavljena uporabnikom, temveč prek odjemalcev, in za določanje skupnega števila oseb, ki uporablja storitev. Storitvi pomaga spremljati število uporabnikov, ki uporabljajo izdelek, in prepoznavati spremembe trendov, poiskati pomoč in odpraviti težave z izdelkom.
+
+Zbrana so naslednja polja:
+
+- **CallType** – niz za prepoznavanje, ali je bil klic API sinhron oz. nesinhron.
+
+- **CloudConnectorRequestId** – niz, ki se uporablja za prepoznavanje zahteve storitve, ki je bila izvedena za namen pretvorbe slik prek storitve. 
+
+- **CloudConnectorTarget** – niz, ki potrjuje, katero vrsto pretvorbe bo izvedla storitev na slikah, na primer pretvorba v PDF, Docx, besedilo itd.
+
+- **CustomerId** – niz, ki se uporablja za prepoznavanje uporabnika, ki je lastnik obdelanih slik.
+
+- **CustomerType** – niz, ki se uporablja za prepoznavanje uporabnika kot uporabnika podjetja ali posameznega uporabnika. To razlikovanje vpliva na število slik (kvota), ki jih odjemalec lahko pretvori hkrati. 
+
+- **RelationId** – niz, ki določa povezavo med aplikacijo Lens in storitvijo, ki se uporablja za obdelavo datotek.
+
+
+#### <a name="officelenslenssdkcloudconnectoruploaderror"></a>Office.Lens.LensSdk.CloudConnectorUploadError
+
+Ko v oknu »Slika v tabelo« uporabnik tapne »Daj v skupno rabo«, »Kopiraj« ali »Odpri«, so popravki v tabeli, ki jih je opravil uporabnik, dani v skupno rabo s storitvijo za namene izboljšanja optičnega prepoznavanja znakov. Ta dogodek se zbere pri odzivu na napako te storitve in vsebuje pomembne identifikatorje za odpravljanje različnih težav v storitvi. 
+
+Zbrana so naslednja polja:
+
+- **CloudConnectorRequestId** – identifikator niza za povezovanje posla storitve trenutne zahteve storitve, za katero so bili v skupno rabo dani podatki o izboljšavah.
+
+- **CorrelationId** – niz, ki vsebuje identifikatorja trenutnega primerka za posel storitve.
+
+- **Reason** – niz, ki vsebuje kodo napake in opis napake.
+
+- **TargetType** – niz, ki prepozna končno točko v storitvi.
+
+- **TaskType** – niz, ki prepozna namen klica storitve.
+
+
+#### <a name="officelenslenssdkcloudconnectoruploadsuccess"></a>Office.Lens.LensSdk.CloudConnectorUploadSuccess
+
+Ko v oknu »Slika v tabelo« uporabnik tapne »Daj v skupno rabo«, »Kopiraj« ali »Odpri«, so popravki v tabeli, ki jih je opravil uporabnik, dani v skupno rabo s storitvijo za namene izboljšanja optičnega prepoznavanja znakov. Ta dogodek se zbere pri uspešnem odzivu te storitve in vsebuje pomembne identifikatorje za odpravljanje težav v procesu. Prav tako pomaga analizirati uporabo lijaka za izboljšanje storitve.
+
+Zbrana so naslednja polja:
+
+- **CloudConnectorRequestId** – identifikator niza za povezovanje posla storitve trenutne zahteve storitve, za katero so bili v skupno rabo dani podatki o izboljšavah.
+
+- **CorrelationId** – niz, ki vsebuje identifikatorja trenutnega primerka za posel storitve.
+
+- **TargetType** – niz, ki prepozna končno točko v storitvi.
+
+- **TaskType** – niz, ki prepozna namen klica storitve.
+
+
+#### <a name="officelenslenssdkpermission"></a>Office.Lens.LensSdk.Permission
+
+Dovoljenja so občutljiva funkcija, saj brez jih uporabnik ne more preizkusiti funkcij aplikacije Lens. Dovoljenja spremljamo z namenom razumevanja uporabniških navad pri omogočanju/preklicu dovoljenj. Te dogodke zberemo, ko uporabnik prikaže poljubno pogovorno okno dovoljenja v naši aplikaciji. Izboljšave funkcij za pomoč uporabnikom pri razumevanju, zakaj so dovoljenja tako pomembna, prepoznamo glede na trende uporabnikov pri sprejemanju in zavračanju dovoljenj.
+
+Zbrana so naslednja polja:
+
+- **Data_action** – vsebuje vrednosti, kot so »CameraPermissionAllowed» (ali Denied), »StoragePermissionGranted« (ali Denied), s katerimi ugotovimo, ali je uporabnik sprejel oz. zavrnil dovoljenja za shrambo in kamero.
+
+- **Data_Action** – to polje nam je v pomoč pri razumevanju, katera vrsta dovoljenja je bila zahtevana od uporabnika, npr. kamera ali shramba
+
+- **Data_status** – vsebuje vrednosti, kot so »Allowed«, »Denied« in »DeniedForever«, s katerimi ugotovimo, ali je uporabnik sprejel oz. zavrnil dovoljenja za shrambo in kamero.
+
+
+#### <a name="officelenslenssdksavemedia"></a>Office.Lens.LensSdk.SaveMedia
+
+Ta dogodek je pozvan, ko uporabnik klikne gumb »Dokončaj« in shrani slike v sistem Android ter iOS. Beleži uporabnike, ki so shranili slike v naši aplikaciji, ter tako izberi raven uporabnikove aktivnosti.
+
+Zbrana so sledeča polja (velja samo za naprave s sistemom Android):
+
+- **Data_FileSizeAfterCleanUp** – velikost datoteke, potem ko jo je počistila aplikacija, za razumevanje, kolikšna stopnja stiskanja je bila dosežena po čiščenju.
+
+- **Data_FileSizeAfterSave** – velikost datoteke, potem ko jo shranil uporabnik, za razumevanje, kolikšna stopnja stiskanja je bila dosežena po shranjevanju.
+
+- **Data_FileSizeBeforeCleanUp** – velikost datoteke, preden jo je počistila aplikacija, za razumevanje zajete velikosti datoteke
+
+- **Data_Filter** – filter, uporabljen na sliki.
+
+- **Data_ImageHeightAfterCleanUp** – višina slike, potem ko jo je počistila aplikacija.
+
+- **Data_ImageHeightBeforeCleanUp** – višina slike, preden jo je počistila aplikacija.
+
+- **Data_ImageWidthAfterCleanUp** – širina slike, potem ko jo je počistila aplikacija.
+
+- **Data_ImageWidthBeforeCleanUp** – širina slike, preden jo je počistila aplikacija.
+
+- **Data_MediaId** – identifikator za slike za pomoč pri sledenju uspešne operacije.
+
+- **Data_ProcessMode** – aktiviran način uporabnika pri shranjevanju slike.
+
+- **Data_Source** – določa vir slike, na primer zajem s kamero, uvoz iz galerije itd. 
+
+Zbrana so sledeča polja (velja samo za naprave s sistemom iOS):
+
+- **Data_filter** – filter, uporabljen na sliki. 
+
+- **Data_imageDPI** – zmanjšanje kakovosti slike pri shranjevanju slikovne datoteke
+
+- **Data_imageSize** – velikost slike, potem ko jo je uporabnik shranil
+
+- **Data_mediaId** – identifikator za slike za pomoč pri sledenju uspešne operacije.
+
+- **Data_mode** – aktiviran način uporabnika pri shranjevanju slike.
+
+- **Data_sizeinPixel** – velikost slike v slikovnih pikah
+
+- **Data_source** – določa vir slike, na primer zajem s kamero, uvoz iz galerije itd. 
+
+
+#### <a name="officelenslenssdkserviceidmapping"></a>Office.Lens.LensSdk.ServiceIDMapping
+
+Ta dogodek se zbere pri uspešnem prenosu slike v storitev. Ponazarja, da bo storitev izvedla en ali več poslov za obdelavo slike, in vsebuje ustrezne ID-je za pomoč pri odpravljanju težav pri procesu. Prav tako pomaga analizirati uporabo različnih funkcij storitve.
+
+Zbrana so naslednja polja:
+
+- **CloudConnectorRequestId** – niz, ki se uporablja za prepoznavanje zahteve storitve, ki je bila izvedena za namen pretvorbe slik prek storitve.
+
+- **I2DserviceProcessID** – niz, ki opredeli posel storitev, ki izvaja določeno podzahtevo 
+
+
 #### <a name="officeiospaywallpaywallpresented"></a>Office.iOS.Paywall.Paywall.Presented
 
 Ta telemetrijo kritične uporabe je zbrana, ko je uporabniku prikazan nadzor paywall, ki se uporablja za razumevanje nakupne izkušnje v aplikaciji za uporabnika in optimiziranje enakega stanja za prihodnje različice.
@@ -5204,7 +5355,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officeiospaywallpaywallstats"></a>Office.iOS.Paywall.Paywall.Stats
 
-Ta metapodatki na osnovi seje se zberejo, ko je uporabnik uporabniškega vmesnika za paywall prikazan uporabniku, trajanju interakcije in o tem, ali je bil nakup izveden in je uspel ali ni uspel.  Podatki so uporabljeni za razumevanje uporabe in stanja celotne izkušnje z vplačilom ter debug, optimiziranje in odpravljanje težav z nakupno izkušnjo v aplikaciji v prihodnjih različicah.
+Ta metapodatki na osnovi seje se zberejo, ko je uporabnik uporabniškega vmesnika za paywall prikazan uporabniku, trajanju interakcije in o tem, ali je bil nakup izveden in je uspel ali ni uspel.  Podatki so uporabljeni za razumevanje uporabe in stanja celotne izkušnje plačevanja in odpravljanja napak, optimiziranje in odpravljanje težav z nakupno izkušnjo v aplikaciji v prihodnjih različicah.
 
 Zbrana so sledeča polja:
 
@@ -5273,7 +5424,7 @@ Zbrana so sledeča polja:
 
 - **Data.ecsTagId** – ID oznake za funkcije
 
-- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – identifikator imena dogodka, na primer »LivePersonaCardRenderedAction«
 
 - **Data.eventpriority** – številska vrednost prioritete za pošiljanje dogodka.
 
@@ -5346,7 +5497,7 @@ Zbrana so naslednja polja:
 
 - **AppInfo_Version** – različica gostiteljske aplikacije
 
-- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+- **Data.appContextId** – Naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
 
 - **Data.AppInfo.Name** – ime storitve v uporabi (kartica profila)
 
@@ -5356,11 +5507,11 @@ Zbrana so naslednja polja:
 
 - **Data.clientCorrelationId** – globalni enolični identifikator za sejo aplikacije
 
-- **Data. clientType** – vrsto naprave, v kateri se izvaja aplikacija, npr. »Outlook_Win32«
+- **Data. clientType** – vrsta naprave, v kateri se izvaja aplikacija, na primer »Outlook_Win32«
 
-- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – identifikator imena dogodka, na primer »LivePersonaCardRenderedAction«
 
-- **Data. exportName** – humano berljivo ime dogodka »dejanje uporabnika«, npr. »ClosedExpandedPersonaCard«
+- **Data. exportName** – ime dogodka uporabnika v berljivi obliki zapisa, na primer. »ClosedExpandedPersonaCard«
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
@@ -5411,7 +5562,7 @@ Zbrana so naslednja polja:
 
 - **DeviceInfo_OsVersion** – različica operacijskega sistema
 
-- **PipelineInfo. ClientCountry** – koda države pošiljatelja, ki temelji na naslovu IP, ki ga je razrešila stranka.
+- **PipelineInfo.ClientCountry** – koda države pošiljatelja, ki temelji na naslovu IP, ki ga je razrešila stranka
 
 
 #### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
@@ -5422,7 +5573,7 @@ Zbrana so sledeča polja:
 
 - **BatchId** – globalni enolični identifikator, če je bil izveden nabor zahtev
 
-- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+- **Data.appContextId** – Naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
 
 - **Data.AppInfo.Name** – ime uporabljene storitve (kartica profila)
 
@@ -5438,7 +5589,7 @@ Zbrana so sledeča polja:
 
 - **Data.clientType** – Vrsta naprave, v kateri se izvaja aplikacija
 
-- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – identifikator imena dogodka, na primer »LivePersonaCardRenderedAction«
 
 - **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju.
 
@@ -5489,7 +5640,7 @@ Zbrana so sledeča polja:
 
 - **AppInfo_Version** – različica gostiteljske aplikacije
 
-- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+- **Data.appContextId** – Naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
 
 - **Data.AppInfo.Name** – ime storitve v uporabi (kartica profila)
 
@@ -5503,11 +5654,11 @@ Zbrana so sledeča polja:
 
 - **Data.clientType** – Vrsta naprave, v kateri se izvaja aplikacija
 
-- **Data.eventId** – Identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – identifikator imena dogodka, na primer »LivePersonaCardRenderedAction«
 
-- **Data.externalAppSessionCorrelationId** – Globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju.
+- **Data.externalAppSessionCorrelationId** – globalni enolični identifikator za aplikacijo za prepoznavanje vseh kartic osebe, odprtih v istem podsrečanju.
 
-- **Data.exportName** – Človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+- **Data.exportName** – človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
@@ -5570,9 +5721,9 @@ Zbrana so sledeča polja:
 
 Prijavljen, ko uporabnik odpre Kartico osebe. Uporablja se za opazovanje kritičnih anomalij v stopnjah napake pri uvajanju kartice osebe Live Persona Card.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
-- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v istem programu
+- **Data.appContextId** – naključno ustvarjen ID, ki se uporablja za prepoznavanje različnih računov v isti aplikaciji
 
 - **Data.AppInfo.Name** – Ime storitve v uporabi (kartica profila)
 
@@ -5586,9 +5737,9 @@ Zbrana so naslednja polja:
 
 - **Data.clientType** – vrsto naprave, v kateri se izvaja aplikacija.
 
-- **Data.eventId** – identifikator imena dogodka, npr. »LivePersonaCardRenderedAction«
+- **Data.eventId** – identifikator imena dogodka, na primer »LivePersonaCardRenderedAction«
 
-- **Data.exportName**– človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
+- **Data.exportName** – človeško berljivo ime dogodka dejanja uporabnika, npr. »OpenedPersonaCard«
 
 - **Data.exportType** – Kategorija dogodka za izvoz zahteve uredbe GDPR
 
@@ -5611,7 +5762,7 @@ Zbrana so naslednja polja:
     - **cardCorrelationId** – Dvojnik Data.appContextId zgoraj 
     - **cardPersonaCorrelationId**  – Dvojnik Data.cardCorrelationId zgoraj
     - **consumerCorrelationId**  – Dvojnik Data.clientCorrelationId zgoraj 
-    - **networkEffectiveType** – Učinkovita vrsta omrežne povezave, npr. »slow-2g online«, ki določi, ali je uporabnik povezan z internetom v času, ko prikazuje kartico osebe
+    - **networkEffectiveType** – učinkovita vrsta omrežne povezave, na primer »slow-2g online«, ki določi, ali je uporabnik povezan z internetom v času, ko prikazuje kartico osebe
     - **networkType** – Vrsta omrežne povezljivosti naprave, ki je v uporabi
     - **roundTripEstimateMs** – Ocenjena učinkovita povratna povezava trenutne povezave v milisekundah
 
@@ -5639,7 +5790,7 @@ Zbrana so naslednja polja:
 
 - **NetworkCost** – Označuje strošek/vrsto omrežja (omejen prenos podatkov, omejeno nad zgornjo mejo itd.)
 
-- **NetworkCountry** – Koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
+- **NetworkCountry** – koda države pošiljatelja, ki temelji na neočiščenem naslovu IP odjemalca.
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -5667,9 +5818,9 @@ Ta dogodek je izbran za aplikacijo Office; posname izvajanje postopka odpiranja 
 
 Zbrana so naslednja polja:
 
-- **Data_Doc_ActivationFQDN** – ime domene aplikacije ponudnika za scenarij aktivacije datoteke (prijavljene so le informacije o aplikaciji 1. stranka).
+- **Data_Doc_ActivationFQDN** – ime domene aplikacije ponudnika za scenarij aktivacije datoteke (prijavljene so le informacije o aplikaciji prve stranke).
 
-- **Data_Doc_CreateTelemetryReason** – Telemetry reason for PDF creation.(eg: Create from scan, using “picture to pdf” action, using “document to pdf” action, etc.)
+- **Data_Doc_CreateTelemetryReason** – vzrok telemetrije za ustvarjanje dokumenta PDF (na primer: ustvari iz pregleda z ukazi »slika v PDF«, »dokument v PDF« itd.)
 
 - **Data_Doc_DownloadDurationms** čas za prenos datoteke v oblaku PDF.
 
@@ -5677,7 +5828,7 @@ Zbrana so naslednja polja:
 
 - **Data_Doc_DownloadStartTime** – časovni žig za začetek prenosa datoteke v oblaku.
 
-- **Data_Doc_FileOpSessionID** – Enolični ID seje dokumenta.
+- **Data_Doc_FileOpSessionID** – enolični ID seje dokumenta.
 
 - **Data_Doc_Location** – lokacija datoteke (lokalni disk, ODSP, iCloud, aplikacije tretjih oseb, wopi)
 
@@ -5687,7 +5838,7 @@ Zbrana so naslednja polja:
 
 - **Data_Doc_OpenStartTime** – časovni žig za začetek odprtega delovanja datoteke PDF.
 
-- **Data_Doc_TelemetryReason** – telemetrijo vzroka za odprti dogodek (npr.: odpiranje iz MRU ali brskanje, aktivacija datoteke, aktivacija protokolov itd.).
+- **Data_Doc_TelemetryReason** – telemetrija vzroka za odprt dogodek (na primer: odpiranje iz MRU ali brskanje, aktivacija datoteke, aktivacija protokolov itd.).
 
 - **Doc_RenderDurationms** časa, da postane datoteka PDF
 
@@ -5823,7 +5974,7 @@ Zbrana so sledeča polja:
 
 *[Ta dogodek je bil prej imenovan OneNote.MessageBar.MessageBarClicked.]*
 
-Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili.
+Signal, ki se uporablja za ponazoritev morebitnih težav, nastalih pri uporabi vrstice s sporočili.  S to telemetrijo nadziramo, zaznavamo in odpravljamo morebitne težave pri interakciji vrstice s sporočili
 
 Zbrana so naslednja polja: 
 
@@ -6103,11 +6254,11 @@ Zbrana so naslednja polja
 
 - **SectionError_Tag** – določite mesto v kodi, kjer je vrnjena napaka sinhronizacije odseka.
 
-- **SectionError_Type** – vrsta napake sinhronizacije odseka, npr. »Win32Error« itd.
+- **SectionError_Type** – vrsta napake sinhronizacije odseka, na primer »Win32Error« itd.
 
-- **Success** – označuje, ali je sinhronizacija zvezka uspešna ali ne.
+- **Success** – označuje, ali je sinhronizacija zvezka uspešna ali ne
 
-- **SyncDestinationType** – vrsta cilja sinhronizacije, tj. OneDrive ali SharePoint Online.
+- **SyncDestinationType** – vrsta cilja sinhronizacije, denimo OneDrive ali SharePoint Online
 
 - **SyncId** – številka, ki je enolična za vsako sinhronizacijo zvezka.
 
@@ -6138,7 +6289,7 @@ Zbrana so ta polja:
 
   - **AccountCreationTime** – Čas trajanja ustvarjanja računa.
 
-  - **AccountInfoSource** – Vir nastavitev računa (npr. samodejno odkrivanje, GuessSmart, samodejno zaznavanje itd.).
+  - **AccountInfoSource** – vir nastavitev računa (na primer samodejno odkrivanje, GuessSmart, samodejno zaznavanje itd.).
 
   - **AccountType** – Vrsta konfiguriranega računa.
 
@@ -6177,7 +6328,7 @@ Zbrana so ta polja:
 
 #### <a name="officeoutlookdesktopstorescreatenewstore"></a>Office.Outlook.Desktop.Stores.CreateNewStore
 
-Zbira rezultate ustvarjanja nove shrambe (z vrsto in različico) ter rezultate kod. Z aktivnim spremljanjem tega dogodka nadziramo ustreznost uporabnikove zmogljivosti sinhroniziranja in lokalnega shranjevanja pošte, arhiviranja e-poštnih sporočil (v PST-ju) ali uporabe Skupin.
+Zbira rezultate ustvarjanja nove shrambe (z vrsto in različico) ter kodo rezultatov. Z aktivnim spremljanjem tega dogodka nadziramo ustreznost uporabnikove zmogljivosti sinhroniziranja in lokalnega shranjevanja pošte, arhiviranja e-poštnih sporočil (v PST-ju) ali uporabe Skupin.
 
 Zbrana so sledeča polja:
 
@@ -6297,7 +6448,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
 
-  - **Data\_Doc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+  - **Data\_Doc\_IsOcsSupported:bool** – ali dokument podpira soavtorstvo z novo storitvijo OCS
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
@@ -6307,7 +6458,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_Doc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+  - **Data\_Doc\_NumberCoAuthors:long** –število soavtorjev, ko je bil dokument odprt
 
   - **Data\_Doc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6315,17 +6466,17 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_Doc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+  - **Data\_Doc\_ServerType:long –** nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI)
 
-  - **Data\_Doc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+  - **Data\_Doc\_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16
 
-  - **Data\_Doc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+  - **Data\_Doc\_SessionId:long –** ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa
 
   - **Data\_Doc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni podatki za korelacijo odjemalskega in strežniškega dnevnika.
 
@@ -6341,7 +6492,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
 
-  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, na primer »Dropbox«
 
   - **Data\_DocHasStorage:bool** – Ali ima ta dokument lokalno shrambo?
 
@@ -6425,7 +6576,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
-  - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+  - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
   - **Data\_Doc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
 
@@ -6433,7 +6584,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
 
-  - **Data\_Doc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+  - **Data\_Doc\_IsOcsSupported:bool** – ali dokument podpira soavtorstvo z novo storitvijo OCS
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
 
@@ -6443,7 +6594,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_Doc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+  - **Data\_Doc\_NumberCoAuthors:long** –število soavtorjev, ko je bil dokument odprt
 
   - **Data\_Doc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6451,17 +6602,17 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_Doc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+  - **Data\_Doc\_ServerType:long –** nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI)
 
-  - **Data\_Doc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+  - **Data\_Doc\_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16
 
-  - **Data\_Doc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+  - **Data\_Doc\_SessionId:long –** ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa
 
   - **Data\_Doc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
@@ -6477,7 +6628,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
 
-  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, na primer »Dropbox«
 
   - **Data\_ExecutionCount:long** – Kolikokrat je bil izveden protokol IncOpen pred izvedbo tega (OpenComplete) protokola.
 
@@ -6549,7 +6700,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IdentityUniqueId:string –** enolični identifikator identitete, ki je bila uporabljena za dokumente v skupni rabi
 
-  - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z V/I.
+  - **Data\_Doc\_IOFlags:long** – Bitna maska za različne zastavice danega dokumenta, povezane z VI.
 
   - **Data\_Doc\_IrmRights:long** – Nabor vnaprej določenih vrednosti za vrsto upravljanja pravic do informacij, ki velja za ta dokument (»Forward«, »Reply«, »SecureReader«, »Edit« itd.).
 
@@ -6557,7 +6708,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
 
-  - **Data\_Doc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+  - **Data\_Doc\_IsOcsSupported:bool** – ali dokument podpira soavtorstvo z novo storitvijo OCS
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
@@ -6567,7 +6718,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_Doc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+  - **Data\_Doc\_NumberCoAuthors:long** –število soavtorjev, ko je bil dokument odprt
 
   - **Data\_Doc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6575,17 +6726,17 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_ResourceIdHash:string** – Zgoščena vrednost identifikatorja vira za dokumente, shranjene v oblaku.
 
-  - **Data_Doc_RtcType –**  označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
+  - **Data_Doc_RtcType** – označuje, kako je bil kanal v realnem času (RTC) nastavljen za trenutno datoteko (onemogočeno, nepodprto, na zahtevo, vedno vklopljeno itn.).
 
   - **Data\_Doc\_ServerDocId:string –** nespremenljivi identifikator za dokumente, shranjene v oblaku
 
   - **Data\_Doc\_ServerProtocol:long** – Nabor vnaprej določenih vrednosti, ki jih protokol uporablja za komunikacijo s strežnikom (Http, Cobalt, WOPI itd.).
 
-  - **Data\_Doc\_ServerType:long** – Nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
+  - **Data\_Doc\_ServerType:long –** nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI)
 
-  - **Data\_Doc\_ServerVersion:long** – Preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16.
+  - **Data\_Doc\_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office14, Office15 ali Office 16
 
-  - **Data\_Doc\_SessionId:long** – Ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa.
+  - **Data\_Doc\_SessionId:long –** ustvarjeni GUID, ki prepozna primerek dokumenta v seji istega procesa
 
   - **Data\_Doc\_SharePointServiceContext:string** – Neprosojen niz, običajno »GridManagerID.FarmID«. Uporabni dogodki za korelacijo odjemalskih in strežniških dnevnikov.
 
@@ -6601,7 +6752,7 @@ Zbrana so ta polja:
 
   - **Data\_Doc\_UsedWrsDataOnOpen:bool** – Ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja.
 
-  - **Data\_Doc\_WopiServiceId:string** – Identifikator storitve WOPI, npr. »Dropbox«.
+  - **Data\_Doc\_WopiServiceId:string** – identifikator storitve WOPI, na primer »Dropbox«
 
   - **Data\_DurationUAEOnSaveStartedMs:long** – Trajanje zapiranja neznane aplikacije med shranjevanjem.
 
@@ -6711,7 +6862,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-- **Data_DstDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
+- **Data_DstDoc_NumberCoAuthors:long** – število soavtorjev v trenutku, ko je bil dokument odprt
 
 - **Data_DstDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6725,7 +6876,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16
 
 - **Data_DstDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
@@ -6743,7 +6894,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
+- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, na primer »Dropbox«
 
 - **Data_FileType:long** – nabor vnaprej določenih vrednosti notranje vrste datoteke.
 
@@ -6787,7 +6938,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS
 
 - **Data_SrcDoc_IsOpeningOfflineCopy:bool** – preverja, ali je dokument odprt v lokalnem predpomnilniku.
 
@@ -6797,7 +6948,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.).
 
-- **Data_SrcDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
+- **Data_SrcDoc_NumberCoAuthors:long** – število soavtorjev v trenutku, ko je bil dokument odprt
 
 - **Data_SrcDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6811,7 +6962,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16
 
 - **Data_SrcDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
@@ -6829,7 +6980,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«.
+- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«
 
 - **Data_StopwatchDuration:long** – skupni čas dejavnosti.
 
@@ -6837,7 +6988,7 @@ Zbrana so sledeča polja:
 
 - **Data_WaitForSaveOrMergeSuccess:bool** – Postopek SaveAs je uspel med čakanjem na shranjevanje ali združevanje v ozadju.
  
-- **Data_WaitForSaveOrMergeTimeout:long** – Časovna omejitev postopka SaveAs je potekla med čakanjem na shranjevanje ali združevanje v ozadju.
+- **Data_WaitForSaveOrMergeTimeout:long** – časovna omejitev postopka SaveAs je potekla med čakanjem na shranjevanje ali združevanje v ozadju.
 
 - **DstDoc** – Nova lokacija dokumenta. 
 
@@ -6888,7 +7039,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-- **Data_Doc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_Doc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS
 
 - **Data_Doc_IsOpeningOfflineCopy:bool** – preverja, ali je bil dokument odprt v lokalnem predpomnilniku.
 
@@ -6898,7 +7049,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-- **Data_Doc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
+- **Data_Doc_NumberCoAuthors:long** – število soavtorjev v trenutku, ko je bil dokument odprt
 
 - **Data_Doc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6914,7 +7065,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI). 
 
-- **Data_Doc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+- **Data_Doc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16
 
 - **Data_Doc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
@@ -6932,7 +7083,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-- **Data_Doc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
+- **Data_Doc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«
 
 - **Data_DstDoc_AccessMode:long** – način odpiranja tega dokumenta (samo za branje | branje in pisanje).
 
@@ -6976,7 +7127,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-- **Data_DstDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
+- **Data_DstDoc_NumberCoAuthors:long** – število soavtorjev v trenutku, ko je bil dokument odprt
 
 - **Data_DstDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -6990,7 +7141,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+- **Data_DstDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16
 
 - **Data_DstDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
@@ -7008,7 +7159,7 @@ Zbrana so sledeča polja:
 
 - **Data_DstDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. Dropbox.
+- **Data_DstDoc_WopiServiceId:string** – identifikator storitve WOPI, na primer »Dropbox«
 
 - **Data_FileType:long** – nabor vnaprej določenih vrednosti notranje vrste datoteke.
 
@@ -7050,7 +7201,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_IsIncrementalOpen:bool** – označuje, ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument, ne da bi bilo treba prenesti celoten dokument).
 
-- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS.
+- **Data_SrcDoc_IsOcsSupported:bool** – označuje, ali dokument podpira soavtorstvo z novo storitvijo OCS
 
 - **Data_SrcDoc_IsOpeningOfflineCopy:bool** – preverja, ali je dokument odprt v lokalnem predpomnilniku.
 
@@ -7060,7 +7211,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_LocationDetails:long** – nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve One Drive, slike storitve One Drive itd.)
 
-- **Data_SrcDoc_NumberCoAuthors:long** –število soavtorjev v trenutku, ko je bil dokument odprt.
+- **Data_SrcDoc_NumberCoAuthors:long** – število soavtorjev v trenutku, ko je bil dokument odprt
 
 - **Data_SrcDoc_PasswordFlags:long** – nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -7074,7 +7225,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_ServerType:long** – nabor vnaprej določenih vrednosti za vrsto strežnika (SharePoint, DropBox, WOPI).
 
-- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16.
+- **Data_SrcDoc_ServerVersion:long** – preverja, ali strežnik temelji na sistemu Office 14, Office 15 ali Office 16
 
 - **Data_SrcDoc_SessionId:long** – ustvarjeni GUID, ki prepozna primerek dokumenta v isti seji procesa.
 
@@ -7092,7 +7243,7 @@ Zbrana so sledeča polja:
 
 - **Data_SrcDoc_UsedWrsDataOnOpen:bool** – ima vrednost »true«, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS v gostitelju.
 
-- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«.
+- **Data_SrcDoc_WopiServiceId:string** – identifikator storitve WOPI, npr. »Dropbox«
 
 - **Data_StopwatchDuration:long** – skupni čas dejavnosti.
 
@@ -7148,7 +7299,7 @@ Zbrana so sledeča polja:
 
 - **RehearseSessionId** – ID govorne seje z vhodnih vrat. Ta parameter je uporabljen za odpravljanje napak v dnevnikih storitev.  
 
-- **SummaryPageErrorReceived** – Logična vrednost, ki označuje, ali je bila stran s povzetkom prejeta oziroma ali je prišlo do napake.
+- **SummaryPageErrorReceived** – logična vrednost, ki označuje, ali je bila stran s povzetkom prejeta oziroma ali je prišlo do napake.
 
 - **SummaryPageHtmlLoadTime** – Čas v milisekundah, potreben za nalaganje summarypageHtml. 
 
@@ -7570,7 +7721,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officeuxacccheckeracccheckerfinalviolationcountperrule"></a>Office.UX.AccChecker.AccCheckerFinalViolationCountPerRule
 
-Ta dogodek je sprožen, ko so za trenutno odprt dokument prijavljene težave z dostopnostjo. Ta dogodek predstavlja kršitve dostopnosti (napake, opozorila in namige), ki obstajajo za posamezno pravilo, za odprt dokument na začetku in koncu seje.  Ta dogodek je uporabljen za beleženje števila kršitev dostopnosti (napake, opozorila in namigi) za posamezno opravilo, za odprt dokument na začetku in koncu seje.
+Ta dogodek je sprožen, ko so za trenutno odprt dokument prijavljene težave z dostopnostjo. Ta dogodek predstavlja kršitve dostopnosti (napake, opozorila in namige), ki obstajajo za posamezno pravilo, za odprt dokument na začetku in koncu seje.  Ta dogodek je uporabljen za beleženje števila kršitev dostopnosti (napake, opozorila in namigi) za posamezno opravilo za odprt dokument na začetku in koncu seje.
 
 S podrobnostmi o številu kršitev za posamezno pravilo lahko družba Microsoft identificira, katere težave z dostopnostjo so najpogostejše v Officeovih dokumentih. To je v veliko pomoč pri odpravljanju težav, hkrati pa spodbuja ustvarjanje vključujočega okolja na delovnem mestu in v učilnici za ljudi s posebnimi potrebami.
 
@@ -8449,13 +8600,13 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije
 
 - **AppInfo.Version** – različica aplikacije
 
-- **iKey** – ID strežnika Logger 
+- **iKey** – ID strežnika Logger
 
 - **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
 
@@ -8489,15 +8640,15 @@ Uporablja se za nadzor morebitnih negativnih učinkov na stanje in učinkovitost
 
 Zbrana so sledeča polja: 
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
  
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
  
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
-- **adal_id** – ID za preverjanje pristnosti imenika Active Directory računa, enolični identifikator v Microsoftovem sistemu za preverjanje pristnosti. 
+- **adal_id** – ID za preverjanje pristnosti imenika Active Directory računa, enolični identifikator v Microsoftovem sistemu za preverjanje pristnosti 
 
-- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem.
+- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem
 
 - **event_mode** – mesto v aplikaciji, kjer je uporabnik začel pogovor (skupina ali drugo).
 
@@ -8511,7 +8662,7 @@ Zbrana so sledeča polja:
 
 - **suggested_reply_types** – Označuje vrsto in število predlaganih odgovorov, prikazanih/uporabljenih za ta pogovor. To je slovar. Na primer {text: 2, send_avail: 1}.
   
-- **total_count** – Skupno število okvirjev, ki jih prikaže komponenta.
+- **total_count** – skupno število okvirjev, ki jih prikaže komponenta.
  
 - **view_duration** – čas, ko si je uporabnik ogledoval komponento.
 
@@ -8545,13 +8696,13 @@ Uporablja se za nadzor morebitnih negativnih učinkov na učinkovitost in stanje
 
 Zbrana so sledeča polja:
   
-- **account** – spremlja račun, v katerem se je izvedlo dejanje.
+- **account** – spremlja račun, v katerem se je izvedlo dejanje
 
 - **compose_duration** –spremlja skupni čas, ki ga je uporabnik porabil za sestavljanje sporočila, vključno s sejo z več osnutki.
 
 - **draft_message_id** – spremlja ID sporočila za sestavljanje poslanega sporočila.
 
-- **event_mode** – spremlja način dogodka, če je na voljo za sporočilo (»skupine« ali »drugo«).
+- **event_mode** – spremlja način dogodka, če je na voljo za sporočilo (»skupine« ali »drugo«)
 
 - **has_attachment** – označuje, ali sporočilo vsebuje priponke.
 
@@ -8565,15 +8716,15 @@ Zbrana so sledeča polja:
 
 - **message_id** – spremlja ID sporočila, na katerega želite odgovoriti ali ga posredovati.
 
-- **origin** – ponazarja mesto začetka ustvarjanja sporočila, npr. novo, odgovor, hitri odgovor itd.
+- **origin** – ponazarja mesto začetka ustvarjanja sporočila, denimo novo, odgovor, hitri odgovor itd.
 
-- **send_draft_origin** – ponazarja mesto začetka pošiljanja, npr. ustvari ali hitri odgovor.
+- **send_draft_origin** – ponazarja mesto začetka pošiljanja, denimo ustvari ali hitri odgovor
 
 - **smart_compose_model_version** – spremlja, katero različico modela Smart sestavite uporabljamo
 
 - **source_inbox** – ponazarja vrsto izvirnega nabiralnika za referenčno sporočilo. 
 
-- **suggested_reply_state** – Zajem stanja predlaganega odgovora za to poslano sporočilo, npr. ni na voljo, na voljo, prikazano, uporabljeno, zavrženo.
+- **suggested_reply_state** – zajem stanja predlaganega odgovora za to poslano sporočilo, denimo ni na voljo, na voljo, prikazano, uporabljeno, zavrženo
 
 - **suggested_reply_types** – Označuje vrsto in število predlaganih odgovorov, prikazanih/uporabljenih za to poslano e-poštno sporočilo. To je slovar. Na primer {text: 2,  send_avail: 1}.
 
@@ -8632,20 +8783,20 @@ Zbrana so sledeča polja:
 - **setting_properties** – sledi lastnosti glede na to, kaj je opisano spodaj: 
    - **alternate_app_icon_setting** – izbrana ikona nadomestnega programa (svetlo, temno)
    - **auth_type** – ponazarja vrsto preverjanja pristnosti v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto računa.
-   - **badge_count_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd. 
+   - **badge_count_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, denimo brez značk, samo nabiralnik v fokusu itd. 
    - **changed_folder** – določa, ali je bilo to dejanje arhivirano, načrtovano oz. je bilo izvedeno drugo dejanje.
    - **delete_scope** – spremlja, ali je bilo to dejanje povezano z brisanjem samo v tej napravi ali v vseh napravah (če je to ustrezno). 
   - **enabled_state** – ali je omogočeno stanje, povezano z dejanjem.
   - **in_app_language** – izbrani jezik v aplikaciji, vrsta niza (privzeto, en-US, FA, ru ipd.)
   - **notification_action_setting** – označuje podrobnosti o nastavitvah dejanja obvestila, ki so povezane s tem dejanjem, če je to mogoče.
-    - **notification_action** – označuje, kaj je uporabnik poskušal narediti, tj. zastavica, Izbriši, Arhiviraj, to nam omogoča, da določimo dejanje sporočila, ki ga je uporabnik želel izvesti v obvestilu, in če je dejanje spodletelo oz. ne. 
-    - **notification_action_number** – označuje, katera številka dejanja (dve od treh dejanj je prilagodljiva), je bila dodeljena dejanje obvestila, tj. akcija ena, dejanje dve. To nam omogoča, da ugotovite, ali je prišlo do težave z določenim dejanjem.
-   - **notification_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, npr. brez značk, samo nabiralnik v fokusu itd.
+    - **notification_action** – označuje, kaj je uporabnik poskušal narediti (dodati zastavico, izbrisati arhivirati). Ta dogodek nam omogoča, da določimo dejanje sporočila, ki ga je uporabnik želel izvesti v obvestilu, in če je dejanje morda spodletelo. 
+    - **notification_action_number** – označuje, katera številka dejanja (dve od treh dejanj sta prilagodljivi), je bila dodeljena dejanje obvestila, denimo prvi dejanje, drugo dejanje. To nam omogoča, da ugotovite, ali je prišlo do težave z določenim dejanjem.
+   - **notification_state** – ponazarja vrsto štetja značk, ki jo je zahteval uporabnik, na primer brez značk, samo nabiralnik v fokusu itd.
    - **server_type** – ponazarja vrsto strežnika v zaledju, s katero zaznamo, ali je prišlo do težave z določeno vrsto strežnika.
    - **source** – ponazarja vir obvestil nastavitev, če je to ustrezno, ali za nastavitev »Ne motite«.
    - **swipe_setting** – ponazarja podrobnosti nastavitev podrsljajev, povezane s tem dejanjem (če so na voljo).
-     - **swipe_action** – ponazarja dejanje, ki ga je poskušal izvesti uporabnik, npr. dodajanje zastavice, brisanje, arhiviranje. Omogoča nam, da ugotovimo, katero dejanje je uporabnik želel izvesti in ali je bilo to opravilo uspešno. 
-     - **swipe_direction** – ponazarja nastavljeno smer za poteze podrsljajev, npr. od leve proti desni ali od desne proti levi. S tem dogodkom lahko ugotovimo, ali je prišlo do težave z določeno smerjo podrsljaja.
+     - **swipe_action** – ponazarja dejanje, ki ga je poskušal izvesti uporabnik, na primer dodajanje zastavice, brisanje, arhiviranje. Omogoča nam, da ugotovimo, katero dejanje je uporabnik želel izvesti in ali je bilo to opravilo uspešno. 
+     - **swipe_direction** – ponazarja nastavljeno smer za poteze podrsljajev, na primer od leve proti desni ali od desne proti levi. S tem dogodkom lahko ugotovimo, ali je prišlo do težave z določeno smerjo podrsljaja.
    - **temperature_unit_setting** – izbrana enota temperature, ki bo jena za vreme 
    - **theme_color_setting** – barva aplikacije po meri, ki jo je izbral uporabnik 
    - **ui_mode_setting**– izbrani način uporabniškega vmesnika (temni, svetli, privzeti način, način nizke napolnjenosti baterije itd.).
@@ -8666,17 +8817,17 @@ Podatkovna polja, ki so pogosta za Outlook Mobile za ta dogodek v napravah s sis
 
 - **Račun** – sledi računu in podatkom, povezanim z dogodkom, vrednosti, ki so sledene v teh podatkih, so v skupnem gradivu om Field *[to polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
-- **action** – spremlja vrsto izvedenega dejanja stranske vrstice, npr. zavrženo, izbran gumb pomoči, stranska vrstica pošte itd. 
+- **action** – spremlja vrsto izvedenega dejanja stranske vrstice, na primer zavrženo, izbran gumb pomoči, stranska vrstica pošte itd. 
 
 - **from_favorites** – spremlja, ali je bilo dejanje izvedeno iz priljubljenega elementa. 
 
 - **mail_folder_type** – vrsta izbrane mape med dejanjem stranske vrstice (če je bilo to izvedeno).
 
-- **sidebar_type** – spremlja vrsto stranske vrstice, povezane s tem dogodkom, npr. pošta ali koledar. S tem dogodkom lahko zagotovimo pravilno delovanje nastavitve priljubljenih.
+- **sidebar_type** – spremlja vrsto stranske vrstice, povezane s tem dogodkom, na primer pošta ali koledar. S tem dogodkom lahko zagotovimo pravilno delovanje nastavitve priljubljenih.
 
-Zbrana so sledeča polja: 
+Zbrana so naslednja polja: 
 
-- **account_type** – ponazarja vrsto računa za preverjanje pristnosti, npr. Gmail, Outlook itd. 
+- **account_type** – ponazarja vrsto računa za preverjanje pristnosti, na primer Gmail, Outlook itd. 
 
 - **account_has_groups** – s tem dogodkom preverimo, ali so v računu skupine in ali so nastavljeno pravilno.
 
@@ -8712,7 +8863,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -8722,7 +8873,7 @@ Zbrana so naslednja polja:
 
 - **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
 
-- **RMS.ContentId** – ID vsebine v končni uporabniški licenci
+- **RMS.ContentId** – ID vsebine v licenci končnega uporabnika
 
 - **RMS.Duration** – Skupen čas za izvedbo API priklica
 
@@ -8781,7 +8932,7 @@ Zbrana so sledeča polja:
 
 - **hx_okhttp_mode** – ali komponenta nove storitve za sinhronizacijo e-pošte uporablja način OKHttp za pošiljanje in prejemanje omrežnih zahtev, ki temeljijo na protokolu HTTP.
 
-- **initial_activity_name** – dejavnost sistema Android, ki je zagnala aplikacijo.
+- **initial_activity_name** – dejavnost sistema Android, ki je zagnala aplikacijo
 
 - **manufacturer** – proizvajalec naprave.
 
@@ -8823,7 +8974,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -8879,7 +9030,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije
 
@@ -8919,7 +9070,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
     
 - **AppInfo.Name** – ime aplikacije
 
@@ -8933,7 +9084,7 @@ Zbrana so naslednja polja:
 
 - **RMS.CallbackTime** – čas, porabljen za povratni klic za preverjanje pristnosti 
 
-- **RMS.CorrelationId** – ID korelacije zahteve http
+- **RMS.CorrelationId** – ID korelacije za zahtevo HTTP
 
 - **RMS.DataSize** – velikost podatkov zahteve HTTP
 
@@ -8977,7 +9128,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
     
 - **AppInfo.Name** – ime aplikacije.
 
@@ -9089,7 +9240,7 @@ Zbrana so naslednja polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** ali je bil dokument odprt iz lokalnega predpomnilnika?
 
-  - **Data\_Doc\_IsSyncBacked:bool –** ima vrednost true, če gre za dokument strežnika, ki je na voljo lokalno in je sinhroniziran s strežnikom (npr. prek storitve OneDrive ali odjemalskih aplikacij ODB)
+  - **Data\_Doc\_IsSyncBacked:bool –** ima vrednost »true«, če gre za dokument strežnika, ki je na voljo lokalno in je sinhroniziran s strežnikom (npr. prek storitve OneDrive ali odjemalskih aplikacij ODB)
 
   - **Data\_Doc\_Location:long-**: nabor vnaprej določenih vrednosti za mesto shranjevanja dokumenta (lokalno, SharePoint, WOPI, omrežje itd.)
 
@@ -9111,11 +9262,11 @@ Zbrana so naslednja polja:
 
   - **Data\_Doc\_UrlHash:string –** razpršitev polnega URL-ja za dokumente, shranjene v oblaku
 
-  - **Data\_DpiAwarenessTime:integer –** čas, zahtevan za omogočanje zaznavanja ločljivosti (dpi) na monitor
+  - **Data\_DpiAwarenessTime:integer –** čas, zahtevan za omogočanje zaznavanja ločljivosti (DPI) na monitor
 
   - **Data\_DurationToCompleteInMilliseconds:double –** čas, zahtevan za dokončanje shranjevanja, v milisekundah
 
-  - **Data\_ErrorCode:int -**: 0 za uspešno, celo število za neuspešno shranjevanje
+  - **Data\_ErrorCode:int –**: 0 za uspešno, celo število za neuspešno shranjevanje
 
   - **Data\_FailureReason:integer –** razlog za neuspešno asinhrono shranjevanje
 
@@ -9147,7 +9298,7 @@ Zbrana so naslednja polja:
 
   - **Data\_GdiInitTime:integer –** čas, zahtevan za inicializacijo modula GDI
 
-  - **Data\_HasCoauthUserEdit:bool –** ima vrednost true, če je bil dokument urejen v seji soavtorstva
+  - **Data\_HasCoauthUserEdit:bool –** ima vrednost »true«, če je bil dokument urejen v seji soavtorstva
 
   - **Data\_HasCustomPages:bool –** ima vrednost true, če dokument vsebuje strani po meri
 
@@ -9177,7 +9328,7 @@ Zbrana so naslednja polja:
 
   - **Data\_InitVSSubSystemsTime:integer –** čas, zahteva za inicializacijo Visiovih komponent
 
-  - **Data\_InternalFile:bool –** ima vrednost true, če gre za notranjo datoteko, denimo šablono
+  - **Data\_InternalFile:bool –** ima vrednost true, če gre za notranjo datoteko, na primer šablona
 
   - **Data\_IsAsyncSave:bool –** ima vrednost true, če je bilo zaznano asinhrono shranjevanje
 
@@ -9269,7 +9420,7 @@ Zbrana so naslednja polja:
 
   - **Data\_SDX\_BrowserToken –** identifikator v predpomnilniku brskalnika
 
-  - **Data\_SDX\_HostJsVersion –** predstavlja platformo, specifično za različico datoteke Office.js (npr. outlook web16.01.js). Vsebuje programski vmesnik za dodatke
+  - **Data\_SDX\_HostJsVersion –** predstavlja platformo, specifično za različico datoteke Office.js (na primer outlook web16.01.js). Vsebuje programski vmesnik za dodatke.
 
   - **Data\_SDX\_Id –** GUID dodatka, ki ga enolično identificira
 
@@ -9277,7 +9428,7 @@ Zbrana so naslednja polja:
 
   - **Data\_SDX\_MarketplaceType –** ponazarja vir, iz katerega je bil nameščen dodatek
 
-  - **Data\_SDX\_OfficeJsVersion –** predstavlja različico datoteke Office.js, ki poskrbi za preusmeritev na različico, odvisno od platforme
+  - **Data\_SDX\_OfficeJsVersion –** predstavlja različico datoteke Office.js, ki poskrbi za preusmeritev na različico, odvisno od platforme.
 
   - **Data\_SDX\_Version –** različica dodatka
 
@@ -9333,6 +9484,37 @@ Zbrana so naslednja polja:
 - **TotalTime** – skupni porabljeni čas
 
 - **UsesSharedRuntime** – Označuje, ali aplikacija uporablja sharedRuntime ali ne.
+
+#### <a name="officelenslenssdklaunchlens"></a>Office.Lens.LensSdk.LaunchLens
+
+Ko uporabnik zažene aplikacijo Lens ali uvozi slike v poljubno aplikacijo, se zažene komplet za razvoj programske opreme Lens in zbere ta dogodek. S podatki o zagonu lahko določimo število uporabnikov/naprav, ki so zagnali aplikacijo, in podrobneje razumemo uporabo funkcij. S tem dogodkom spremljamo število uporabnikov, ki uporablja izdelek, ter prepoznavamo spremembe trendov, iščemo pomoč ter odpravljamo težave z izdelkom.
+
+Zbrana so naslednja polja:
+
+- **Data_isResumeSession** – ali je bila aplikacija zagnana po prekinitvi oz. se je uporabnik odločil za svež zagon. (Polje z logično vrednostjo) 
+
+- **Data_launchPerf** – celo število, ki ponazarja čas, zahtevan za zagon aplikacije (v napravah s sistemom Android)
+
+- **Data_LaunchWorkFlowItem** – polje, ki ponazarja, ali je bila aplikacija zagnana z zaslona kamere oz. z zaslona za urejanje. 
+
+- **Data_mediaCompressionFactor** – faktor, s katerim aplikacija stisne slike.
+
+- **Data_RecoveryMode** – polje z logično vrednostjo, ki ponazarja, ali je bila seja obnovljena po zaustavitvi aplikacije (v napravah s sistemom Android)
+
+- **IsDexModeEnabled** – polje z logično vrednostjo, ki ponazarja, ali naprava podpira funkcije Samsung Dex.
+
+- **IsEmbeddedLaunch** – polje z logično vrednostjo, ki ponazarja, ali je uporabnik zagnal kontrolnik v načinu »slika v sliki«.
+
+- **IsInterimCropEnabled** – polje z logično vrednostjo, ki ponazarja, ali je uporabnik slike obrezal ročno.
+
+- **IsMultiWindowEnabled** – polje z logično vrednostjo, ki ponazarja, ali je aplikacijo mogoče zagnati v načinu razdeljenega zaslona.
+
+- **LaunchPerf** – celo število, ki ponazarja čas, zahtevan za zagon aplikacije (v napravah s sistemom iOS)
+
+- **RecoveryMode** – polje z logično vrednostjo, ki ponazarja, ali je bila seja obnovljena po zaustavitvi aplikacije (v napravah s sistemom iOS)
+
+- **SDKMode** – način, v katerem so bile zajete slike.
+
 
 #### <a name="officeofficemobileappactivationlaunch"></a>Office.OfficeMobile.AppActivation.Launch
 
@@ -9558,7 +9740,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ContentTransaction –** nabor vnaprej določenih vrednosti, ko je mogoče ustvariti transakcijo (AllowedOnLoadDocument, AllowedOnOpenComplete itd.)
 
-  - **Data_CorrelationId –** GUID, ki je bil v PowerPoint posredovan z rutino ProtocolHandler za korelacijo telemetrije. ProtocolHandler je ločen proces, ki obravnava Officeove povezave za OS.
+  - **Data_CorrelationId –** GUID, ki je bil v PowerPoint posredovan z rutino ProtocolHandler za korelacijo telemetrije. ProtocolHandler je ločen proces, ki obravnava Officeove povezave za operacijski sistem.
 
   - **Data\_CppUncaughtExceptionCount:long** – Nezaznane izvorne izjeme med izvajanjem dejavnosti.
 
@@ -9608,7 +9790,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_IsIncrementalOpen:bool** – Ali je bil dokument odprt postopoma (nova funkcija, ki odpre dokument tako, da ne prenese celoten dokument).
 
-  - **Data\_Doc\_IsOcsSupported:bool** – Ali dokument podpira soavtorstvo z novo storitvijo OCS.
+  - **Data\_Doc\_IsOcsSupported:bool** – ali dokument podpira soavtorstvo z novo storitvijo OCS
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool** – Ali je bil dokument odprt iz lokalnega predpomnilnika?
 
@@ -9618,7 +9800,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_LocationDetails:long** – Nabor vnaprej določenih vrednosti podrobnejše lokacije (mapa »Začasno«, mapa »Prenosi«, dokumenti storitve OneDrive, slike storitve OneDrive itd.).
 
-  - **Data\_Doc\_NumberCoAuthors:long** –Število soavtorjev, ko je bil dokument odprt.
+  - **Data\_Doc\_NumberCoAuthors:long** –število soavtorjev, ko je bil dokument odprt
 
   - **Data\_Doc\_PasswordFlags:long** – Nabor vnaprej določenih vrednosti za način šifriranja dokumenta z geslom (brez, geslo za branje, geslo za urejanje).
 
@@ -9652,7 +9834,7 @@ Zbrana so sledeča polja:
 
   - **Data\_Doc\_UsedWrsDataOnOpen:bool –** ima vrednost true, če je bila datoteka odprta postopoma z vnaprej predpomnjenimi podatki WRS na strani gostitelja
 
-  - **Data\_Doc\_WopiServiceId:string –** identifikator storitve WOPI, na primer Dropbox
+  - **Data\_Doc\_WopiServiceId:string** – identifikator storitve WOPI, na primer »Dropbox«
 
   - **Data\_DownloadExcludedData –** trajanje izvajanja za način DownloadExcludedData v milisekundah
 
@@ -9989,7 +10171,7 @@ Zbrana so sledeča polja:
 
 - **OfficeProcessSessionStart** pošlje osnovne informacije ob zagonu nove Officeove seje. Ta dogodek se uporablja za štetje števila enoličnih sej, zaznanih v dani napravi. Ta dogodek se uporablja kot signal obveščanja o izvajanju aplikacije, s katerim se zagotovi, ali se aplikacija izvaja v napravi. Poleg tega se uporablja tudi kot kritičen signal za splošno zanesljivost aplikacije.
 
-- **AppSessionGuid** – identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz 4 delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100ns
+- **AppSessionGuid** – identifikator določene seje aplikacije, ki se je začela z ustvarjanjem procesa in traja vse do konca procesa. Dogodek je oblikovan kot standardni 128-bitni GUID, sestavljen iz štirih delov. Ti štirje deli v vrstnem redu so (1) 32-bitni ID procesa (2) 16-bitni ID seje (3) 16-bitni ID zagona (4) čas ustvarjanja 64-bitnega procesa v UTC 100 ns
 
 - **processSessionId** – naključno ustvarjeni GUID za prepoznavanje seje aplikacije
 
@@ -10071,7 +10253,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-- **Data_Doc_AccessMode** – dokument je samo za branje/ga je mogoče urejati.
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
@@ -10196,7 +10378,7 @@ Zbrana so sledeča polja:
 
 - **Data_DetachedDuration** – koliko časa je bila dejavnost ločena od niti.
 
-- **Data_Doc_AccessMode** – dokument je samo za branje/ga je mogoče urejati.
+- **Data.Doc.AccessMode** – dokument je samo za branje/ga je mogoče urejati.
 
 - **Data_Doc_AssistedReadingReasons** – nabor vnaprej določenih vrednosti, zakaj je bil dokument odprt v načinu vodenega branja.
 
@@ -10555,13 +10737,13 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
 - **AppInfo.Version** – različica aplikacije
 
-- **iKey** – ID strežnika Logger 
+- **iKey** – ID strežnika Logger
 
 - **RMS.ApplicationScenarioId** – ID scenarija, ki ga je posredovala aplikacija
 
@@ -10593,7 +10775,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -10817,7 +10999,7 @@ Ta polja so zbrana samo za aplikacijo Outlook Mobile za iOS:
 
 - **clean_exit_reason** – niz besed, ki ponazarjajo, ali je bil na voljo razlog za ustavitev aplikacije.
 
-- **is_agenda_user** – prikaže, ali je uporabnik pred kratkim odprl dnevni red, kar pomeni, da med zagonom zapisujemo podatke na disk.
+- **is_agenda_user** – prikaže, ali je uporabnik pred kratkim odprl dnevni red, kar pomeni, da med zagonom zapisujemo podatke na disk
 
 - **is_watch_supported_and_active** – prikaže, ali je ura podprta in aktivna med sejo.
 
@@ -10828,9 +11010,9 @@ Se uporablja za nadzor kritičnih zrušitev aplikacije. S tem dogodkom zbiramo i
 
 Zbrana so sledeča polja: 
 
-- **android.hardware.** – vrednosti za konfiguracijo strojne opreme, ki jih posreduje okolje Android (npr. android.hardware.bluetooth).
+- **android.hardware.** – vrednosti za konfiguracijo strojne opreme, ki jih posreduje okolje Android (na primer android.hardware.bluetooth)
 
-- **android.software.** – vrednosti za konfiguracijo programske opreme, ki jih posreduje okolje Android (npr. android.software.device_admin).
+- **android.software.** – vrednosti za konfiguracijo programske opreme, ki jih posreduje okolje Android (na primer android.software.device_admin)
 
 - **android_version** – ime različice naprave Android, kot ga navaja android.os.Build.VERSION#RELEASE.
 
@@ -10842,7 +11024,7 @@ Zbrana so sledeča polja:
 
 - **application_version_name** – ime različice aplikacije, ki jo določa aplikacija Outlook. 
 
-- **com.** (npr. com.google.android.feature.FASTPASS_BUILD, com.amazon.feature.PRELOAD, com.samsung.android.bio.face) Konfiguracijske vrednosti proizvajalca, ki jih zagotavlja platforma Android
+- **com.** (Na primer com.google.android.feature.FASTPASS_BUILD, com.amazon.feature.PRELOAD, com.samsung.android.bio.face). Konfiguracijske vrednosti proizvajalca, ki jih zagotavlja platforma Android.
 
 - **crash_report_sdk**-SDK za pošiljanje dnevnikov zrušitve. Hokejski ali AppCenter
 
@@ -10974,7 +11156,7 @@ Zbrana so naslednja polja:
 
 Dogodek, ustvarjen ob zrušitvah dodatka COM v potrošniški različici Officeovih aplikacij. 
 
-Uporaba: s to funkcijo izračunate globalne programe, ki niso značilni za Microsoft 365, za podjetja »posvojitve« za dodatek, ki ga nato uporabljajo orodja, kot je orodje za pripravljenost. S tem strankam podjetja dovolite, da preverijo, ali so dodatki, ki so uvedeni v svojih organizacijah, združljivi z najnovejšimi različicami aplikacij Microsoft 365 za podjetja in da bodo ustrezno načrtovali njihove nadgradnje. 
+S tem dogodkom je mogoče izračunati globalne aplikacije, ki niso značilne za okolje Microsoft 365, za »uvedbo« v podjetjih za dodatek, ki ga nato uporabljajo orodja, kot je orodje za pripravljenost. S tem strankam podjetja dovolite, da preverijo, ali so dodatki, ki so uvedeni v svojih organizacijah, združljivi z najnovejšimi različicami aplikacij Microsoft 365 za podjetja in da bodo ustrezno načrtovali njihove nadgradnje. 
 
 Zbrana so naslednja polja:
 
@@ -11006,7 +11188,7 @@ Zbrana so naslednja polja:
 
 Dogodek, ustvarjen ob zrušitvah dodatka COM v poslovni različici Officeovih aplikacij.
 
-Uporaba: s to funkcijo izračunate globalne programe, ki niso značilni za Microsoft 365, za podjetja »posvojitve« za dodatek, ki ga nato uporabljajo orodja, kot je orodje za pripravljenost. S tem strankam podjetja dovolite, da preverijo, ali so dodatki, ki so uvedeni v svojih organizacijah, združljivi z najnovejšimi različicami aplikacij Microsoft 365 za podjetja in da bodo ustrezno načrtovali njihove nadgradnje. 
+S tem dogodkom je mogoče izračunati globalne aplikacije, ki niso značilne za okolje Microsoft 365, za »uvedbo« v podjetjih za dodatek, ki ga nato uporabljajo orodja, kot je orodje za pripravljenost. S tem strankam podjetja dovolite, da preverijo, ali so dodatki, ki so uvedeni v svojih organizacijah, združljivi z najnovejšimi različicami aplikacij Microsoft 365 za podjetja in da bodo ustrezno načrtovali njihove nadgradnje. 
 
 - **ScopeId** – obseg trenutne niti
 
@@ -11071,9 +11253,9 @@ Zbrana so naslednja polja:
 
 Dogodek, ki se ustvari, ko datoteka z omogočenimi makri naleti na napako pri prevajanju ali izvajanju.
 
-Namizna analitika: uporablja se kot števec pri izračunu stanja poslovnih funkcij za vrste makrov (npr. Wordovi makri, Excelovi makri itd.), ki se uporabljajo za določitev, ali je med pilotnim projektom dodatek »pripravljen na nadgradnjo« v proizvodnem ciklu.
+Namizna analitika: uporablja se kot števec pri izračunu stanja poslovnih funkcij za vrste makrov (na primer Wordovi makri, Excelovi makri itd.), ki se uporabljajo za določitev, ali je med pilotnim projektom dodatek »pripravljen na nadgradnjo« v proizvodnem ciklu.
 
-Zbrana so sledeča polja:
+Zbrana so naslednja polja:
 
 - **TagId** – ID oznake za telemetrijo
 
@@ -11256,6 +11438,38 @@ Zbrana so sledeča polja:
 
   - **Version** – različica zrušene seje
 
+
+#### <a name="officeprogrammabilityaddinscomaddincrash"></a>Office.Programmability.Addins.COMAddInCrash 
+
+Dogodek, ki se ustvari ob zrušitvi dodatka COM. Uporablja se za določanje težav pri uvedbah in zanesljivosti z Officeovimi dodatki. 
+
+Zbrana so naslednja polja:
+
+- **AddinConnectFlag** – predstavlja vedenje nalaganja  
+
+- **AddinDescriptionV2** – opis dodatka 
+
+- **AddinFileNameV2** – ime datoteke DLL dodatka. Ne vključuje lokacije datoteke.
+
+- **AddinFriendlyNameV2** – prijazno ime dodatka
+
+- **AddinIdV2** – ID razreda dodatka (CLSID)
+
+- **AddinProgIdV2** – ID programa dodatka 
+
+- **AddinProviderV2** – ponudnik dodatka 
+
+- **AddinTimeDateStampV2** – časovni žig prevajalnika
+
+- **AddinVersionV2** – različica dodatka 
+
+- **Interface** – vmesnik COM dodatka, ki je povzročil zrušitev 
+
+- **LoadAttempts** – ponazarja število poskusov nalaganj pred zrušitvijo 
+
+- **Method** – metoda COM dodatka, ki je povzročila zrušitev 
+
+
 #### <a name="officeprogrammabilitytelemetryaddincrash"></a>Office.Programmability.Telemetry.AddInCrash
 
 Dogodek, ki se ustvari pri nalaganju dodatka COM. Te informacije so ključnega pomena za določanje, ali je dodatek povzročil zrušitev Officeove aplikacije. Uporablja se za ocenjevanje globalne združljivosti izdelkov v Officeovih aplikacijah.
@@ -11421,21 +11635,21 @@ S tem dogodkom lahko zaznamo in odpravimo težave, ki povzročajo občutno slab�
 
 Zbrana so sledeča polja: 
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
 
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
 
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
 
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
-- **account_counter** – spremlja število računov, povezanih s posameznimi vrstami koledarja, npr. 2 za Gmailov koledar, in ali ta račun uporablja našo novo storitev sinhronizacije.
+- **account_counter** – spremlja število računov, povezanih s posameznimi vrstami koledarja, na primer 2 za Gmailov koledar, in ali ta račun uporablja našo novo storitev sinhronizacije.
 
-- **app_instance** – v Outlooku je na voljo 2 vstopna točka za Duo, ena pa je za koledar, ena pa je za pošto, oba pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
+- **app_instance** – v Outlooku sta na voljo dve vstopni točki za Duo, ena za koledar, druga za pošto, obe pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
 
 - **component_name** – prikaže ime komponente koledarja, kot je pogled dnevnega reda ali dnevni pogled, da lahko zaznamo težave pri učinkovitosti delovanja, ki vplivajo na določeno komponento v koledarju.
 
@@ -11455,7 +11669,7 @@ Zbrana so sledeča polja:
 
 - **accounts_with_filters** – število računov s filtri, ki so bili uporabljeni na seznamu stikov
 
-- **dejanje** – dejanje, ki je bilo izvedeno, npr. ogled stika
+- **dejanje** – dejanje, ki je bilo izvedeno, na primer ogled stika
  
 - **duration_initial_view_load** – trajanje z odpiranjem pogleda na prvotno nalaganje seznama stikov
 
@@ -11522,19 +11736,19 @@ Zbrana so sledeča polja:
 
 Ta dogodek zbere dve vrsti podatkov o uporabniku: stanje naročnine na Microsoft 365 in prikaz oglasov uporabniku. S tem dogodkom lahko zaznamo in odpravimo težave, ki povzročajo občutno slabšo učinkovitost delovanja komponent uporabniškega vmesnika za nabiralnik. Zaradi teh težav e-poštna sporočila, avatar, stanje prebranih/neprebranih sporočil morda ne bodo naloženi ali prikazani pravilno.
 
-Zbrana so sledeča polja: 
+Zbrana so naslednja polja: 
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
 
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
 
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
 
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
 - **account_counter** – števec posameznih vrst računov v napravi, na primer račun za Office 365 = 1 račun, račun za Outlook.com = 1 račun.
 
@@ -11546,9 +11760,9 @@ Zbrana so sledeča polja:
 
 - **age** – staroste osebe (uporablja se za zagotavljanje skladnosti s predpisi glede staroste omejitve za oglase) *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar je lahko še vedno prikazano v starejših graditvah.]*
 
-- **app_instance** – v Outlooku je na voljo 2 vstopna točka za Duo, ena pa je za koledar, ena pa je za pošto, oba pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
+- **app_instance** – v Outlooku sta na voljo dve vstopni točki za Duo, ena za koledar, druga za pošto, obe pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
 
-- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem.
+- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem
 
 - **has_hx** – prikaže, ali je v napravi vsaj en račun Hx (naša nova storitev za sinhronizacijo e-pošte).
 
@@ -11586,7 +11800,7 @@ Zbrana so naslednja polja:
 
 - **stringVariant** – to se uporablja za ugotavljanje vrste nizov, ki so prikazani uporabnikom, ko se znajdejo na naši strani. Na vsaki strani, npr. »Preskusna različica«, je uporabnik upravičen do ogleda različnih nizov, in sicer glede na to, ali ima nameščen podedovan Office ali če je že kdaj prej aktiviral Office. Možni elementi naštevanja za to lastnost so »LegacyUpsell«, »OfficeOpened«, »Privzeto «, »YesIntent«, »NoIntent« itd.
 
-- **windowsBuildType** – to se uporablja za sledenje vrsti graditve WindowsBuildType, ki jo uporabnik uporablja. Npr. »RS4«,»RS5«,»RS19H1«,»Vibranium« ipd. Ker so izkušnje običajno namenjene različnim vrstam graditve WindowsBuildTypes, je ta lastnost ključnega pomena pri razlikovanju med uvedbami. 
+- **windowsBuildType** – to se uporablja za sledenje vrsti graditve WindowsBuildType, ki jo uporabnik uporablja. Na primer »RS4«,»RS5«,»RS19H1«,»Vibranium« ipd. Ker so izkušnje običajno namenjene različnim vrstam graditve WindowsBuildTypes, je ta lastnost ključnega pomena pri razlikovanju med uvedbami. 
 
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
@@ -11594,7 +11808,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -11664,7 +11878,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so sledeča polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -11750,19 +11964,19 @@ Zbrana so naslednja polja:
 
 S tem dogodkom lahko zaznamo in odpravimo težave, ki povzročajo občutno slabšo učinkovitost pri filtriranju e-pošte. Zaradi teh težav filtri morda ne bodo naloženi ali prikazani pravilno.
 
-Zbrana so sledeča polja: 
+Zbrana so naslednja polja: 
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
 
-- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s.
+- **above_40fps** – število okvirjev, upodobljenih nad 40 slik/s
  
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
 
-- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s.
+- **above_50fps** – število okvirjev, upodobljenih nad 50 slik/s
  
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
 
-- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s.
+- **above_55fps** – število okvirjev, upodobljenih nad 55 slik/s
  
 - **account_counter** – števec posameznih vrst računov v napravi, na primer račun za Office 365 = 1 račun, račun za Outlook.com = 1 račun.
  
@@ -11772,11 +11986,11 @@ Zbrana so sledeča polja:
  
 - **age** – starost osebe (se uporablja za potrditev skladnost glede omejitev let v oglasih).
 
-- **app_instance** – v Outlooku je na voljo 2 vstopna točka za Duo, ena pa je za koledar, ena pa je za pošto, oba pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
+- **app_instance** – v Outlooku sta na voljo dve vstopni točki za Duo, ena za koledar, druga za pošto, obe pa ju lahko uvedete drug ob drugem v okolju z več primerki. S tem nam sporočite, na primer, kako bo ta poklic za poročanje, ali pošta ali koledar.
  
-- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem.
+- **component_name** – ime komponente/pogleda, ki je aktiven med filtriranjem
  
-- **folder_type** – vrsta filtrirane mape (npr. nabiralnik, smeti, nesistemska mapa).
+- **folder_type** – vrsta filtrirane mape (na primer nabiralnik, smeti, nesistemska mapa)
  
 - **has_hx** – prikaže, ali je v napravi vsaj en račun Hx (nova storitev za sinhronizacijo e-pošte).
  
@@ -11942,7 +12156,7 @@ Zbrana so naslednja polja:
 
 Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek uporabljamo za nadziranje ustreznosti stanja infrastrukture telemetrije. Ta dogodek pomeni, da je prišlo do napake.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Data_ActualBytesModified** – število spremenjenih bajtov.
 
@@ -12198,9 +12412,9 @@ Zbrana so sledeča polja:
 
 #### <a name="officeonenotesystembootdialogssafebootdialogpending"></a>Office.OneNote.System.BootDialogs.SafeBootDialogPending 
 
-Kritični signal, ki se uporablja za spremljanje, ko se odločimo, da bo uporabnik v pogovornem oknu »Safe boot« v naslednjem zagonu, ker se večkrat zrušimo v zagonu. Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če bodo uporabniki videli pogovorno okno varni zagon, je prišlo do kritične napake pri zagonu in v teh napravah je na voljo več informacij o tem, koliko uporabnikov se sooča s to težavo in koliko uporabnikov je znova zagnalo aplikacijo, da je v resnici prikazano pogovorno okno varni zagon proti število ne vrne.
+Kritični signal, ki se uporablja za spremljanje, ko se odločimo, da bo uporabnik v pogovornem oknu »Safe boot« v naslednjem zagonu, ker se večkrat zrušimo v zagonu. Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če bodo uporabniki videli pogovorno okno varnega zagona, je prišlo do kritične napake pri zagonu in v teh napravah je na voljo več informacij o tem, koliko uporabnikov se sooča s to težavo in koliko uporabnikov je znova zagnalo aplikacijo, da je v resnici prikazano pogovorno okno varni zagon proti število ne vrne.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
  - Nobeno
 
@@ -12285,7 +12499,7 @@ Zbrana so ta polja:
 
 - **TotalWorkingSetMB** – količina pomnilnika v megabajtih v delovnem naboru postopka.
 
-- **VirtualSetMB** – količina pomnilnika v megabajtih v navideznem naboru postopka. (Samo MacOS/iOS)
+- **VirtualSetMB** – količina pomnilnika v megabajtih v navideznem naboru postopka. (samo za MacOS/iOS)
 
 - **WorkingSetPeakMB** – največja količina pomnilnika v megabajtih, ki je bila doslej v delovnem naboru postopka.
 
@@ -12316,7 +12530,7 @@ Zbrana so sledeča polja:
 
 - **ResumeRehearsingCount** – število uporabnikov, ki ste jih kliknili z navodili za vnovično uporabo.
 
-- **Sessionid** – to je id seje »Speech frontdoor«. To se uporablja za iskanje v dnevnikih storitev za odpravljanje napak.
+- **Sessionid** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
 
 - **SlideshowViewLoadTime** – Čas, potreben za nalaganje diaprojekcije.
 
@@ -12331,13 +12545,13 @@ Zbrana so sledeča polja:
 
 - **PostUrlCallTime** – Čas v milisekundah, potreben za objavljanje klica Url. 
 
-- **RehearseSessionid** – ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+- **RehearseSessionId** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
 
 - **RequestPayloadSize** – Velikost koristne vsebine zahteve. 
 
 - **ResourcesLoadTime** – Čas v milisekundah, potreben za nalaganje virov (js, css). 
 
-- **SummaryPageErrorReceived** – Logična vrednost, ki označuje, ali je bila stran s povzetkom prejeta oziroma ali je prišlo do napake.
+- **SummaryPageErrorReceived** – logična vrednost, ki označuje, ali je bila stran s povzetkom prejeta oziroma ali je prišlo do napake.
 
 - **SummaryPageHtmlLoadTime** – Čas v milisekundah, potreben za nalaganje summarypageHtml. 
 
@@ -12389,7 +12603,7 @@ Zbrana so sledeča polja:
 
 - **FirstAudioDelayInMs** – To je čas v milisekundah, potreben za prejem prve zvočne datoteke.
 
-- **FRetriedOnOpenConnection** – Logična vrednost, ki označuje, ali je bil ponovni poskus izveden za odprto povezavo ali ne.
+- **FRetriedOnOpenConnection** – logična vrednost, ki označuje, ali je bil ponovni poskus izveden za odprto povezavo ali ne.
 
 - **InitMediaCaptureLayerDurationInMs** – to je čas, ki ste ga odstranili v milisekundah, da inicializirate plast »Media/Audio Capture«.
 
@@ -12407,15 +12621,15 @@ Zbrana so sledeča polja:
 
 - **SessionDurationInMs** – Trajanje celotne seje od trenutka, ko je uporabnik kliknil možnost začetka, do trenutka, ko je kliknil možnost ustavitve.
 
-- **Sessionid** – To je ID seje sprednjih vrat govora. To lahko uporabimo za odpravljanje napak v dnevnikih storitve.
+- **Sessionid** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
 
-- **SpeechClientResultEventsWithTimestamps** – To je polje kod napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
+- **SpeechClientResultEventsWithTimestamps** – to je polje s kodami napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
 
-- **SpeechHResultsWithTimestamps** – To je polje kod napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
+- **SpeechHResultsWithTimestamps** – to je polje s kodami napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
 
-- **StartSpeechCaptureDurationInMs** – To je čas v milisekundah, potreben za začetek zajema govora.
+- **StartSpeechCaptureDurationInMs** – to je čas v milisekundah, potreben za začetek zajema govora.
 
-- **StartSpeechServiceDurationInMs** – To je polje časa, potrebnega za začetek seje govora pri vsakem ponovnem povezovanju, vključno s trajanjem prvega zagona seje govora. 
+- **StartSpeechServiceDurationInMs** – to je polje časa, potrebnega za začetek seje govora pri vsakem ponovnem povezovanju, vključno s trajanjem prvega zagona seje govora. 
 
 - **TotalMessageCount** – To je skupno število zvočnih sporočil, poslanih v storitev.
 
@@ -12538,7 +12752,7 @@ Zbrana so sledeča polja:
 
   - **Data\_FileType: string –** pripona datoteke za odprti diagram
 
-  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko denimo šablono
+  - **Data\_IsInternalFile: bool –** ima vrednost true, če gre za notranjo datoteko na primer šablona
 
   - **Data\_IsIRM: bool –** ima vrednost true, če ima datoteka zaščito za upravljanje pravic do informacij
 
@@ -12567,7 +12781,7 @@ Zbrana so sledeča polja:
 
 #### <a name="onenoteappsafebootdialogactiontaken-officeonenoteandroidsafebootdialogactiontaken-officeandroidearlytelemetrysafebootdialogactiontaken"></a>OneNote.App.SafeBootDialogActionTaken, Office.OneNote.Android.SafeBootDialogActionTaken, Office.Android.EarlyTelemetry.SafeBootDialogActionTaken
 
-Kritični signal, ki se uporablja za spremljanje odzivanja uporabnikov, ko se prikaže pogovorno okno varni zagon. Pogovorno okno »Safe boot« je prikazano, ko ni bilo mogoče večkrat zagnati. Uporabnik, ki je na varnem zagonu, se uporablja kot dovoljenje za počistitev podatkov programa za uspešno uvedbo. Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Uporabnik si ogleda, ko naleti na kritično napako z zagonskim zrušitvijo. S temi informacijami boste sledili odpravljanju vzrokov zrušitve in ali je uporabnik uspešno zagnal aplikacijo ali ne.
+Kritični signal, ki se uporablja za spremljanje odzivanja uporabnikov, ko se prikaže pogovorno okno varnega zagona. Pogovorno okno »Safe boot« je prikazano, ko ni bilo mogoče večkrat zagnati. Uporabnik, ki je na varnem zagonu, se uporablja kot dovoljenje za počistitev podatkov programa za uspešno uvedbo. Uporablja se za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Uporabnik si ogleda, ko naleti na kritično napako z zagonskim zrušitvijo. S temi informacijami boste sledili odpravljanju vzrokov zrušitve in ali je uporabnik uspešno zagnal aplikacijo ali ne.
 
 Zbrana so ta polja: 
 
@@ -12582,11 +12796,13 @@ Zbrana so sledeča polja:
 
 - **app_start_show_message_list** – pojavila se je težava pri učinkovitosti delovanja med zagonom aplikacije, zaradi katere se je seznam sporočil v mapi »Prejeto« nalagal dolgo časa.
 
-- **average** – zbere količino izvedenih ponovnih nalaganj pogovora glede na število sporočil v določenem pogovoru.  
+- **average** – zbere število izvedenih ponovnih nalaganj pogovora glede na število sporočil v določenem pogovoru.  
 
 - **event_type** – prikaže vrsto dogodka učinkovitosti delovanja, zaradi katerega se je pojavila težava pri učinkovitosti delovanja. S tem dogodkom lahko zaznamo težave, povezane z določeno vrsto.   
 
-- **extra_params** – razvijalec lahko doda dodatne parametre, s pomočjo katerih izvemo več podrobnosti o tem, kaj je lahko vzrok za težavo pri učinkovitosti delovanja, npr. začetek/konec tega dejanja itd. 
+- **extra_params** – razvijalec lahko doda dodatne parametre, s pomočjo katerih izvemo več podrobnosti o tem, kaj je lahko vzrok za težavo pri učinkovitosti delovanja, na primer začetek/konec tega dejanja itd. 
+
+-   **has_work_profile** – ponazarja, ali se aplikacija izvaja v delovnem načinu za Android oz. podobni konfiguraciji, ter se uporablja za povezavo analize o učinkovitosti delovanja s temi sistemi.
 
 - **profiling_summary** – ponuja informacije o skupini opravil, številu opravil in povprečnem času za te skupine, s katerimi lahko lažje razumete morebitna regresija na določenih območjih pri nalaganju aplikacije
 
@@ -12596,7 +12812,7 @@ Zbrana so sledeča polja:
   - **hx_object_type** – Zagotavlja podrobnosti o vrsti predmeta programiranja merjenja.
   - **is_main_thread** – Označuje, ali ta dogodek meri le čas izvajanja glavne niti.
   - **record_count** – Število zapisov, ki jih vrne temeljna plast shrambe.
-  - **scope** – Zagotavlja ime strani/komponent uporabniškega vmesnika, ki jim pripada ta dogodek.
+  - **scope_name** – zagotavlja ime strani/komponent uporabniškega vmesnika, ki jim pripada ta dogodek.
   - **total_cost_time_ns** – Skupni čas izvajanja v nanosekundah. 
 
 - **total_time_elapsed** – čas trajanja dogodka učinkovitosti delovanja, s katerim ugotovimo resnost težave pri učinkovitosti delovanja.
@@ -12658,7 +12874,7 @@ Zbrana so sledeča polja:
 
 - **stacktrace** – sled sklada, kjer se je pojavila izjava, za zaznavanje težav, povezanih z določenim delom kode.
 
-- **type** – vrsta zaznane napake v izjavi, npr. null_folder_name, compose_selected_null_account, za pomoč pri zaznavanju težav, povezanih z določenim delom kode.
+- **type** – vrsta zaznane napake v izjavi, na primer null_folder_name, compose_selected_null_account, za pomoč pri zaznavanju težav, povezanih z določenim delom kode
 
 #### <a name="editcontacterror"></a>edit.contact.error
 
@@ -12678,19 +12894,19 @@ S tem dogodkom lahko zaznamo kritične napake aplikacije in tako preprečimo te�
 
 Zbrana so sledeča polja: 
 
-- **client-request-id** – identifikator zahteve odjemalca za zahtevo, ki je povzročila napako.
+- **client-request-id** – identifikator zahteve odjemalca za zahtevo, ki je povzročila napako
  
-- **date** – časovni žig zahteve, ki je povzročila napako.
+- **date** – časovni žig zahteve, ki je povzročila napako
 
-- **error** – vrsta napake, npr get_mailbox_location_failed.
+- **error** – vrsta napake, na primer get_mailbox_location_failed
  
 - **error_body** – telo sporočila o napaki.
  
 - **is_x_mailbox_anchor_set** – ali je bila v zahtevi uporabljena lastnost X-AnchorMailbox.
  
-- **reason** – vzrok napake, npr. sporočilo o napaki.
+- **reason** – vzrok napake, na primer sporočilo o napaki
  
-- **request-id** – identifikator zahteve strežnika za zahtevo, ki je povzročila napako.
+- **request-id** – identifikator zahteve strežnika za zahtevo, ki je povzročila napako
  
 - **source** – vir napake v infrastrukturi OM, običajno »BE« ali »FE«.
 
@@ -12789,7 +13005,7 @@ Zbrana so naslednja polja:
 
 - **State** – Vrednost oštevilčenja za stanje datoteke. Vrednosti: None, Creating, Created, CreateFailed, Opening, Opened, OpenFailed, Copying, Copied, CopyFailed, Closing, Closed, CloseFail.
 
-- **TemplateName** – Ime dvojiške predloge dokumenta iz storitve predloge, npr. TF10002009.dotx.
+- **TemplateName** – ime dvojiške predloge dokumenta iz storitve predloge, npr. TF10002009.dotx
 
 - **UriScheme** – Shema URL-ja.
 
@@ -13065,7 +13281,7 @@ Zbrana so naslednja polja:
 
 - **State** – Vrednost oštevilčenja za stanje datoteke. Vrednosti: None, Creating, Created, CreateFailed, Opening, Opened, OpenFailed, Copying, Copied, CopyFailed, Closing, Closed, CloseFail.
 
-- **TemplateName** – Ime dvojiške predloge dokumenta iz storitve predloge, npr. TF10002009.dotx.
+- **TemplateName** – ime dvojiške predloge dokumenta iz storitve predloge, npr. TF10002009.dotx
 
 - **UriScheme** – Shema URL-ja.
 
@@ -13122,11 +13338,11 @@ Zbrana so naslednja polja:
 
 - **CollectionTime** – Čas zaključka nakupa naročnine.
 
-- **CountryCode** – Koda države odjemalca, ki je posredovana na DSC za zahtevo prevzema odjemalca.
+- **CountryCode** – koda države odjemalca, ki je posredovana na DSC za zahtevo prevzema odjemalca
 
-- **GoPremiumEntryPoint** – Vstopna točka za sprožitev nakupa. 
+- **GoPremiumEntryPoint** – vstopna točka za sprožitev nakupa 
 
-- **IsActivateExistingSubscription** – Logična vrednost, ki označuje, ali je prišlo do aktiviranja obstoječe naročnine.
+- **IsActivateExistingSubscription** – logična vrednost, ki označuje, ali je prišlo do aktiviranja obstoječe naročnine
 
 - **IsErrorRetriable** – Logična vrednost, ki označuje, ali je prevzem mogoče ponoviti.
 
@@ -13134,9 +13350,9 @@ Zbrana so naslednja polja:
 
 - **IsProvisioningTriggeredByRetry** – Logična vrednost, ki označuje, ali je prišlo do vnovičnega poskusa.
 
-- **LanguageCode** – Koda jezika odjemalca, ki je posredovana na DSC za zahtevo prevzema odjemalca.
+- **LanguageCode** – koda jezika odjemalca, ki je posredovana na DSC za zahtevo prevzema odjemalca
 
-- **ProductIdentifier** – Ime inventarne številke, ki jo odjemalec želi kupiti.
+- **ProductIdentifier** – ime inventarne številke, ki jo odjemalec želi kupiti
 
 - **ProvisioningHttpStatusCode** – Omogočanje kode stanja http.
 
@@ -13233,7 +13449,7 @@ Zbrana so sledeča polja:
 
 - **Data_FreeSpaceInMB** – Prostor, ki je na voljo v napravi.
 
-- **Data_nickName** – Ime knjižnice, ki je ni bilo mogoče naložiti.
+- **Data_nickName** – ime knjižnice, ki je ni bilo mogoče naložiti
 
 #### <a name="officeandroidintuneintunejavacopyfailedattempts"></a>Office.Android.Intune.IntuneJavaCopyFailedAttempts
 
@@ -13419,7 +13635,7 @@ Zbrana so naslednja polja:
 
 - **LastLoginDelta** – Delta čas zadnje uspešne prijave.
 
-- **MSAserverUAID** – ID korelacije s podatki za telemetrijo storitve.
+- **MSAserverUAID** – ID korelacije s podatki za telemetrijo storitve
 
 - **PreviousIdentityState** – Označuje stanje računa, kot je potekla seja. 
 
@@ -13460,7 +13676,7 @@ Sledi različnim obvestilom o napakah, ki prispejo iz peskovnika. Uporablja se z
  
 Zbrana so naslednja polja:
 
-- **AppId** – ID aplikacije.
+- **AppId** – ID aplikacije
 
 - **AppUrl** – pomaknjen URL aplikacije. 
 
@@ -13748,7 +13964,7 @@ Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic 
 
 Zbrana so naslednja polja:
 
-- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se program izvaja v produkcijskem okolju ali v okolju razvijalcev
+- **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
 - **AppInfo.Name** – ime aplikacije.
 
@@ -13794,7 +14010,7 @@ Zbrana so ta polja:
 
 - **error_code** – koda napake za napako WKError
 
-- **function_name** – ime funkcije javascript v primeru napake
+- **function_name** – ime funkcije JavaScript v primeru napake
 
 - **js_exception_column_number** – številka stolpca, ko pride do izjeme JavaScript 
 
@@ -14068,6 +14284,6 @@ Ta dogodek je sprožen ob zagonu upravitelja za storitve v Officeu in ima ključ
 
 Zbrana so sledeča polja:
 
-- **DeviceIdJoinToken** – Uporablja se za združitev podatkov telemetrije iz stanja storitve in uvedbe z drugimi funkcionalnimi podatki, zbranimi prek prodajnih lijakov storitev.
+- **DeviceIdJoinToken** – uporablja se za združitev podatkov telemetrije iz stanja storitve in uvedbe z drugimi funkcionalnimi podatki, zbranimi prek prodajnega lijaka storitev.
 
 - **TenantAssociationKeyStamped** – Zastavica logične vrednosti, ki se uporablja za določanje števila upravljanih naprav v Officeovim ekosistemu.
