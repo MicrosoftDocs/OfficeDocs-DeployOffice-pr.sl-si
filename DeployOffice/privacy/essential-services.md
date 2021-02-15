@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
-ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
+ms.openlocfilehash: 7660e79628e31b17fb2b1c606378391419f15e8e
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49799151"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242170"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -3466,6 +3466,14 @@ Zbrana so sledeča polja:
 
 - **toggleCount** – celo število – prikazuje, kolikokrat je uporabnik preklopil med prikazi različnih izdelkov, preden je tapnil gumb za nakup, v trenutni seji sistema za plačevanje.
 
+### <a name="officeiospaywallsuccessscreenseeallbenefitsbuttontap"></a>Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap
+
+Telemetrija uporabe za pridobivanje informacij o tem, kdaj uporabnik po uspešnem nakupu tapne možnost »Prikaz vseh ugodnosti«, da si ogleda aplikacije in funkcije, ki so vključene v pravkar opravljen nakup. Podatke uporabimo za razvoj prihodnjih izboljšav za zmanjševanje motenj za uporabnike med posodobitvami aplikacij.
+
+Zbrana so sledeča polja:
+
+- **productId** – niz – ID izdelka v storitvi App Store, za katerega si uporabnik ogleduje vse ugodnosti, ki so na voljo
+
 
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
@@ -4333,7 +4341,7 @@ Zbrana so sledeča polja:
 
 ### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
-Ta dogodek pomeni, da je prišlo do napake pri izvajanju preverjanja veljavnosti kode v datoteki s posodobitvijo zavarovanja.  Vsa zavarovanja, ki niso bile podpisane z vpisom kode, je treba upoštevati kot neveljavna.
+Ta dogodek ustvari poročilo o različnih težavah s prenesenimi datotekami, vključno z neujemanjem podpisa dobavitelja in zgoščene vrednosti v preneseni datoteki. S tem dogodkom zaznamo težave v manifestu objave, nastavljenem za aplikacije.
 
 Zbrana so sledeča polja:
 
@@ -4361,9 +4369,15 @@ Zbrana so sledeča polja:
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
+- **FileHash** – zgoščena vrednost prenesene datoteke
+
+- **FileName** – ime datoteke, za katero je prikazano neujemanje zgoščene vrednosti
+
+- **HashInCatalog** – vnos zgoščene vrednosti v pripadajoči datoteki kataloga
+
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje ime datoteke s katalogom z neveljavnim podpisom. V različnih statičnih besedilih so opisani različni pogoji napake.
+- **Payload** – vsebuje informacije o aplikaciji, ki javlja napako
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -7988,11 +8002,13 @@ Zbrana so sledeča polja:
 
 - **HowToCheck** – kako preveriti nastavitev
 
-- **Payload** – statično besedilo
+- **Payload** – statično besedilo *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **Reason** – statično besedilo, ki označuje, da ni mogoče nadaljevati tihe posodobitve, ker je odprt uporabniški vmesnik
 
 - **ID** seje – identifikator za sejo
 
@@ -9393,6 +9409,8 @@ Zbrana so sledeča polja:
 
 - **Channel** – ugodnost občinstva
 
+- **CustomNotification** – logična vrednost, ki označuje, ali je bilo uporabljeno obvestilo po meri.
+
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
 - **DeviceID** – identifikator naprave
@@ -9411,7 +9429,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – besedilo, ki označuje vrsto dogodka.
+- **Nosilnost** – besedilo, ki označuje vrsto dogodka. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -10524,6 +10542,7 @@ Zbrana so ta polja:
 
 - **Success** – označuje, ali je zadevna aplikacija sporočila uspešno izvedbo postopka
 
+- **UpdateID** – identifikator posodobitve
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
@@ -10578,7 +10597,11 @@ Zbrana so sledeča polja:
 
 - **AppVersionLong** – različica aplikacije
 
+- **BundleReachable** – logična vrednost, ki označuje, ali je prišlo do težave pri dostopu do kompleta aplikacije Microsoft AutoUpdate.
+
 - **Channel** – ugodnost občinstva
+
+- **Codesigned** – logična vrednost, ki označuje, ali je bila storitev Update Assistant pravilno sooblikovana.
 
 - **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
 
@@ -10596,9 +10619,11 @@ Zbrana so sledeča polja:
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
+- **Exists** – logična vrednost, ki označuje, ali storitev Update Assistant obstaja na disku.
+
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – vsebuje navedbo, ali komponenta daemon obstaja na pričakovanem mestu in ali je sooblikovana.
+- **Nosilnost** – vsebuje navedbo, ali komponenta daemon obstaja na pričakovanem mestu in ali je sooblikovana. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -15412,7 +15437,7 @@ Zbrana so sledeča polja:
  
 Ta dogodek se zabeleži pri sinhronizaciji hitrih zapiskov za uporabnika med prvo izkušnjo, ki jo izvaja v napravi.  To je specifično za scenarij prvega zagona.
  
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
  
 - **NetworkConnection** – prijavi vrsto povezave, ki jo trenutno uporablja naprava, npr. Wi-Fi, brez povezave, 3G
 

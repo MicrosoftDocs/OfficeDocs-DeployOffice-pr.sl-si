@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 6b099a73550f3a2c31147b9c7a5adb34dce6ff5f
-ms.sourcegitcommit: 9f4afc7525d1d4cb6fbc0feef721a8eaffc09048
+ms.openlocfilehash: 7bf7ce172600d1b944f521da6bb5e0420d6d59f2
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "49867468"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242206"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -29,7 +29,7 @@ Diagnostični podatki so uporabljeni za zaščito, posodobitev ter zaznavanje in
 
 Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika. Nekateri diagnostični podatki so obvezni, medtem ko so drugi izbirni. S kontrolniki zasebnosti lahko izbirate, ali nam boste poslali zahtevane ali izbirne diagnostične podatke, kot so na primer nastavitve pravilnikov za organizacijo. S Pregledovalnikom diagnostičnih podatkov lahko vidite, kateri diagnostični podatki so nam poslani.
 
-***Obvezni diagnostični podatki** _ vključujejo najmanjšo nujno količino podatkov, potrebnih za zagotavljanje varnosti, posodobitev in pričakovanega delovanja Officea v napravi, v kateri je sistem nameščen.
+***Obvezni diagnostični podatki*** vključujejo najmanjšo nujno količino podatkov, potrebnih za zagotavljanje varnosti, posodobitev in pričakovanega delovanja Officea v napravi, v kateri je sistem nameščen.
 
 Z obveznimi diagnostičnimi podatki prepoznate težave z Officeom, ki so morda povezane z napravo ali konfiguracijo programske opreme. Z njimi lahko na primer prepoznate pogoste zrušitve novo uvedenih Officeovih funkcij v določeni različici operacijskega sistema oz. onemogočene Officeove funkcije. Z obveznimi diagnostičnimi podatki lahko hitreje zaznamo, diagnosticiramo in odpravimo te težave ter tako zmanjšamo njihov vpliv na uporabnike ali organizacije.
 
@@ -57,7 +57,7 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 - Seznam podatkovnih polj v posameznih dogodkih
 - Opis posameznih podatkovnih polj
 
-| _ *Kategorija**       | **Podatkovni podtip**| **Opis**    |
+| **Kategorija**       | **Podatkovni podtip**| **Opis**    |
 | ---------- | ------------- | ---- |
 | **Nastavitev programske opreme in inventar** | [Nastavitev Officea in inventar](#office-setup-and-inventory-subtype)   | Nameščeni izdelek, različica in stanje namestitve.  |
 | | [Konfiguracija dodatka za Office](#office-add-in-configuration-subtype)  | Dodatki programske opreme in nastavitve.     |
@@ -1291,6 +1291,7 @@ Zbrana so naslednja polja:
   
   - **LoadResult** – stanje uspeha nalaganja
 
+  - **OfficeArchitecture** – arhitektura Officeovega odjemalca
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -2656,7 +2657,7 @@ Zbrana so sledeča polja:
 
 - **Data_Doc_InitializationScenario** – Oštevilčenje, ki označuje podrobno vrsto scenarija pri odpiranju datoteke.
 
-- **Data_Doc_IOFlags** – Oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
+- **Data_Doc_IOFlags** – oštevilčenje, ki označuje V-/I-zastavice postopka za odpiranje datoteke, na primer, ali je bila datoteka predpomnjena.
 
 - **Data_Doc_IsCloudCollabEnabled** – Ali je za datoteko omogočeno sodelovanje v oblaku.
 
@@ -2794,7 +2795,7 @@ Zbrana so sledeča polja:
 
 Kritični signal, ki se uporablja za nadzor zmogljivosti, kjer si uporabniki Samolepljivih listkov lahko ogledujejo zapiske v aplikaciji. Telemetrija se uporablja za zagotavljanje zaznavanja kritične regresije za aplikacijo OneNote in stanja storitve. Če si uporabniki ne morejo ogledati svojih zapiskov, bo to sprožilo dogodek z visoko stopnjo resnosti.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **HasImages** – zastavica, ki označuje, so v ogledanem zapisku shranjene slike.
 
@@ -4196,7 +4197,7 @@ Podatki o obdelavi posameznih upravičenosti za najemnika in skrbnika storitve O
 
 Uporabljamo ga za grafikone (zahteva ga upravljanje skupin) za določanje uspešnosti strank in analiziranje težav strank.
 
-Zbrana so naslednja polja:
+Zbrana so ta polja:
 
   - **AppVersion** – Različica gostiteljske aplikacije dodatka.
 
@@ -5367,6 +5368,37 @@ Zbrana so sledeča polja:
 
 - **userDuration** – dvojno trajanje v milisekundah, ki jih je uporabnik porabil za paywall
 
+
+#### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Kritična telemetrija inženirstva pri storitvi Microsoft Retail Federation Service (RFS) za zbiranje informacij, ki so bile podane v tem dogodku. Storitev RFS je interna storitev, uporabljena v Microsoftu za navzkrižno preverjanje nakupa. Podatki so uporabljeni za pridobivanje podatkov o ustreznosti stanja klica API, ki je bil opravljen za RFS. Na podlagi teh podatkov je mogoče razumeti stopnjo uspeha in odpravljanja težav pri morebitnih napakah.
+
+Zbrana so sledeča polja:
+
+- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+
+- **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje omogočanje uporabe RFS.
+
+- **productId** – niz – ID trgovine z aplikacijami za izdelek, za katerega je bila podana zahteva
+
+- **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
+
+
+#### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Kritični telemetrični podatki o uporabi za ponazoritev, ko uporabnik tapne gumb za nakup. Uporablja se za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
+
+Zbrana so sledeča polja:
+
+- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+
+- **isDefaultSKU** – logična vrednost – če uporabnik kupuje izdelek, ki smo mu ga priporočili, je ta prikazan privzeto.
+
+- **productId** – niz – ID izdelka iz trgovine z aplikacijami za izdelek, za katerega je uporabnik tapnil gumb za nakup.
+
+- **toggleCount** – celo število – prikazuje, kolikokrat je uporabnik preklopil med prikazi različnih izdelkov, preden je tapnil gumb za nakup, v trenutni seji sistema za plačevanje.
+
+
 #### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
 
 V tem primeru so zbrane funkcije in aplikacije, ki jih uporabnik razširi iz» Oglejte si več prednosti «, in trajanje porabljenega časa.  Podatki so uporabljeni za razumevanje funkcije» Oglejte si vse prednosti «in še naprej Optimizirajte izkušnjo v prihodnjih različicah.
@@ -5378,6 +5410,16 @@ Zbrana so sledeča polja:
 - **ID shrambe, ki je na voljo v** nizu, za katerega uporabnik prikazuje več prednosti, ki jih ponuja
 
 - **userDuration** – dvojno trajanje v milisekundah, ki jih je uporabnik porabil za zaslon z ugodnostmi.
+
+
+### <a name="officeiospaywallskuchooserproductswitched"></a>Office.iOS.Paywall.SKUChooser.ProductSwitched
+
+Telemetrijo uporabe če si želite ogledati, kolikokrat uporabnik preklaplja med različnimi inventarnimi enotami, preden poskusite kupiti nakup.
+
+Zbrana so sledeča polja:
+
+- **productId** – niz – ID izdelka v storitvi App Store, na katerega je uporabnik v izbirniku inventarne številke preklopil med razpoložljivimi izdelki.
+
 
 #### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
 
@@ -11469,6 +11511,7 @@ Zbrana so naslednja polja:
 
 - **Method** – metoda COM dodatka, ki je povzročila zrušitev 
 
+- **OfficeArchitecture** – arhitektura Officeovega odjemalca
 
 #### <a name="officeprogrammabilitytelemetryaddincrash"></a>Office.Programmability.Telemetry.AddInCrash
 
