@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: 8471214380e05fde406d0298dd70b10924f898ef
-ms.sourcegitcommit: 6cffc990cc0d883e2bc84eff12abad37807f9975
+ms.openlocfilehash: fe0d70bb03699af3b393de560234f9a1bb32c3c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "50152781"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597346"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -63,7 +63,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 |Skupna raba obvestil|[Bodite obveščeni, ko člani vaše ekipe posodobijo vašo datoteko v skupni rabi](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Preverjevalnik podobnosti*\* (funkcija Urejevalnika)|[Preverite podobnosti med svojim dokumentom in spletnimi viri](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Smart Lookup*\*   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
-| Predlagani odgovori | [Kaj so predlagani odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
+| Predlagani odgovori | [Kaj so predlagani odgovori?](https://support.microsoft.com/office/58517b93-946e-42d4-95d0-777aa5aa42a5) <br/> [Kako nastajajo predlagani odgovori?](https://support.microsoft.com/office/af9cfa57-4f4f-419f-b76d-bb305c3a9d4d)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
 |Predvidevanje besedila (funkcija Urejevalnika)|[Hitrejše pisanje s predvidevanjem besedila v Wordu](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
 |Prepis |[Prepis vaših posnetkov](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
@@ -83,9 +83,9 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 
 | **Ime**      | **Več informacij**  |
 | ------------- | ------------- |
-| Aplikacije koledarja| [Kaj so aplikacije koledarja?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
+| Aplikacije koledarja| [Kaj so aplikacije koledarja?](https://support.microsoft.com/office/57f5ad1d-c364-4054-924e-c796b80f382b) |
 | Pisave v oblaku                 | [Pisave v oblaku v Officeu](https://support.microsoft.com/office/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Pogosta vprašanja |Ko v Outlooku za iOS in Android izberete možnost **Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** ste preusmerjeni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
+| Pogosta vprašanja |Ko izberete **Nastavitve** > **Pomoč in povratne informacije** > **Pogosta vprašanja** v Outlooku za iOS in Android, boste preusmerjeni v [Pomoč za Outlook za iOS](https://support.microsoft.com/article/4456b5ef-d20e-4e86-abee-c95f9eba26da) ali [Pomoč za Outlook za Android](https://support.microsoft.com/article/8ffeb4f6-b231-4b20-b36a-07e2bce0504b).|
 | Učinki rokopisa                 | [Risanje in pisanje s peresom v Officeu](https://support.microsoft.com/office/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Vstavi ikone                | [Vstavljanje ikon v Microsoft Office](https://support.microsoft.com/office/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Vstavi Microsoft Forms      | [Vstavljanje obrazca ali preskusa znanja v PowerPoint](https://support.microsoft.com/office/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
@@ -94,14 +94,14 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | *Vstavi spletni videoposnetek*\*     | [Vstavljanje videoposnetka iz storitve YouTube ali z drugega spletnega mesta](https://support.microsoft.com/office/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
 | *Zanimivi koledarji*\*| [Naročite se na koledar](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) o najljubših športnih ekipah ali TV-oddajah v Outlooku za iOS in Android. |
 | *Predlogi lokacije*\* | Ko v element koledarja dodate javni kraj z uličnim naslovom, bo Outlook za iOS in Android polje »Lokacija« prav tako izpolnil s celotnim uličnim naslovom. |
-| Zemljevidi in podrobnosti dogodka | Izvedite, kje je vaš cilj z [zemljevidi](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) in podrobnostmi dogodka v Outlooku za iOS in Android. |
+| Zemljevidi in podrobnosti dogodka | Na strani s podrobnostmi o dogodku bo prikazan [zemljevid](https://support.microsoft.com/office/0678bfde-9cb7-4beb-9581-712abfe2bb46), ki temelji na naslovu lokacije dogodka v Outlooku za iOS in Android. |
 | Pomoč za Office                 | Ko izberete **»Pomoč«** > **»Pomoč«** na traku ali uporabite F1 v Officeovem programu   |
 | Iskanje oblik v spletu (Visio) | [Iskanje dodatnih oblik in šablon](https://support.microsoft.com/office/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | *Orodje za hiter začetek za PowerPoint*\*     | [Raziskava teme z orodjem za hiter začetek za PowerPoint](https://support.microsoft.com/office/4784f273-0b2c-456c-9c89-24e5b977c224) |
 | *Raziskovalec*\*    | [Preprosto raziskovanje naloge v Wordu](https://support.microsoft.com/office/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Pokaži mi    | [Opravite delo hitro s funkcijo »Pokaži mi«](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predloge  | [Prenos brezplačnih, vnaprej vgrajenih predlog](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-|*Čas potovanja ocenjujemo v naslednjem*\*|Ko se odločite, da boste za dostop do vaše lokacije omogočili Outlook za iOS in Android, bo ocena vašega potovalnega časa v naslednjem dogodku vključena v [navzgor naslednja](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) kartica na vrhu mape »Prejeto«.|
+|*Čas potovanja ocenjujemo v naslednjem*\*|Ko se odločite, da boste za dostop do vaše lokacije omogočili Outlook za iOS in Android, bo ocena vašega potovalnega časa v naslednjem dogodku vključena v [navzgor naslednja](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) kartica na vrhu mape »Prejeto«.<br/><br/> [Kaj je Čas, da zaprete obvestila?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Vrstica za vreme*\* (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
