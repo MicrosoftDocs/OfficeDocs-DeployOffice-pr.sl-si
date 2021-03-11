@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931452"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597382"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -42,7 +42,7 @@ Tehnologija Bing je uporabljena pri teh izkušnjah v Outlooku za iOS in sistemu 
 
 - **Predlogi za lokacijo:**   Ko v element koledarja dodate javni kraj z uličnim naslovom, se polje »Lokacija« izpolni s celotnim uličnim naslovom.
 - **Zanimivi koledarji:**   [Naročite se](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) lahko na koledarje o vaših najljubših športnih ekipah ali TV-oddajah.
-- **Čas potovanja v naslednjem:** vaš naslednji prihajajoči dogodek bo povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [naslednje](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). V aplikaciji Outlook za Android je za to izkušnjo potrebno, da zemljevidi Bing ponudijo predviden čas potovanja.
+- **Čas potovanja v naslednjem:** vaš naslednji prihajajoči dogodek bo povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [naslednje](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). V aplikaciji Outlook za Android je za to izkušnjo potrebno, da zemljevidi Bing ponudijo predviden čas potovanja.
 
  Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Katere koli poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 za podjetja, so poslane Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
 
@@ -106,7 +106,7 @@ Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.mic
 
 ## <a name="your-privacy-settings"></a>Vaše nastavitve zasebnosti
 
-Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev** , da jih lahko upravljate, kadar želite. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
+Če vam je skrbnik omogočil uporabo izbirnih povezanih izkušenj v aplikaciji za Office, vključno z Aplikacijami ogrodja Microsoft 365 za podjetja, nameščenih v napravi s sistemom Windows, odprite meni **Datoteka** > **Račun** > **Zasebnost računa** in izberite **Upravljanje nastavitev**, da jih lahko upravljate, kadar želite. Če so izbirne povezane izkušnje omogočene, lahko kadar koli uporabite storitve, opisane v tem članku. Če so izbirne povezne izkušnje onemogočene, do njih ni mogoče dostopati.
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. S tem dejanjem odprete pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
