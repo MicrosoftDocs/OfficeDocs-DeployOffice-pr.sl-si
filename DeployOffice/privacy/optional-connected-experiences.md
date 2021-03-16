@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
-ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
+ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
+ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "50597382"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50826422"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -87,7 +87,7 @@ Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitv
 
 ### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Čas potovanja v nadaljevanju v Outlooku za iOS
 
-V programu Outlook za iOS bo vaš naslednji prihajajoči dogodek povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [navzgor naslednja](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). V tej izkušnji je potrebno storitev Apple v lasti družbe Apple Maps za zagotavljanje predvidenega časa potovanja. V aplikaciji Apple Maps [pogoji uporabe](https://www.apple.com/legal/internet-services/maps/) in Apple [pravilniku o zasebnosti](https://www.apple.com/legal/privacy) velja.
+V programu Outlook za iOS bo vaš naslednji prihajajoči dogodek povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [navzgor naslednja](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). V tej izkušnji je potrebno storitev Apple v lasti družbe Apple Maps za zagotavljanje predvidenega časa potovanja. V aplikaciji Apple Maps [pogoji uporabe](https://www.apple.com/legal/internet-services/maps/) in Apple [pravilniku o zasebnosti](https://www.apple.com/legal/privacy) velja.
 
 ### <a name="weather-bar-in-outlook"></a>Vrstica za vreme v Outlooku
 
