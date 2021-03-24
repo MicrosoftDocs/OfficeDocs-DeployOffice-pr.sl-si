@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 7660e79628e31b17fb2b1c606378391419f15e8e
-ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
+ms.openlocfilehash: 8408a2e8a6e9c8594e428762034ba5b8e8a54548
+ms.sourcegitcommit: a31e96cefd11ffece917dce618414989bf3a98da
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50242170"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51031999"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -3374,6 +3374,42 @@ Zbrana so ta polja:
   - 5 – Osnovni spletni URL, naložen v odjemalcu, ni veljaven
 
 
+### <a name="officeandroiddocsuiviewspremiumfeatureupsell"></a>Office.Android.DocsUI.Views.PremiumFeatureUpsell
+
+Ta dogodek zajame klike z brezplačnimi kliki uporabnika, da si ogleda funkcijo za zidom za plačilo. Podatki se uporabljajo za merjenje interakcije uporabnikov s kontekstno izkušnjo prodajalca in razumevanje, katere funkcije ima uporabnik raje in s katerimi uporabniki kupijo naročnino. Tako lahko izboljšamo prednostni nabor vstopnih točk. 
+
+Zbrana so sledeča polja:
+
+- **featureId** - TCID za vrhunske funkcije
+
+- **featureName** – naslov funkcije Premium
+
+- **seePlanButtonClick** – kolikokrat v uporabniškem vmesniku kliknejo »Prikaži gumbe načrta«
+
+### <a name="officeappleiapreviewyoursubscriptionios"></a>Office.Apple.IAPReviewYourSubscriptioniOS
+
+Ta dogodek zajema metapodatke, ki temeljijo na seji, ko je uporabniškega vmesnika (IAP) v aplikaciji prikazan uporabniku, in gumbe, s katerimi uporabnik pozneje komunicira. Ti podatki nam pomagajo razumeti trenja v toku nakupa in jih primerjati z lijakom različne izkušnje nakupa, da bi razumeli, katera izkušnja je za uporabnika boljša. 
+
+Zbrana so sledeča polja:
+
+- **FlowType** – celo število – tok od tam, kjer je bil zagnan IAP.
+
+- **Obnovitev** – niz – oznaka pravila je zabeležena, ko kliknete gumb za obnovitev
+
+- **PremiumFeatures** – niz – oznaka pravila je zabeležena, ko kliknete gumb »PremiumFeatures«
+
+- **Izdelka** – niz – inventarna številka, ki so jo izbrali uporabniki
+
+
+### <a name="officeappleinapppurchasecontext"></a>Office.Apple.InAppPurchaseContext
+
+Ta dogodek meri telemetrijo kritične uporabe za točko vnosa na zaslonu za nakup v aplikaciji. Podatki pomagajo razumeti in izboljšati uporabniško izkušnjo tako, da prepoznajo želeno vstopno točko za nakup v aplikaciji.
+
+Zbrana so sledeča polja:
+
+- **Kontekst** – niz – tok, prek katerega je uporabnik pristal na strani za nakup aplikacije
+
+
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
 Ta dogodek zajame podatke, ki sodelujejo pri nadzoru stanja komponent Dime. To velja na primer za tok nakupa v aplikaciji, kjer se uporabnik odloči za nakup naročnine na Microsoft 365 v aplikaciji Office za Android ali v napravi, v kateri se izvaja sistem Windows.
@@ -3452,6 +3488,16 @@ Zbrana so sledeča polja:
 
 - **Data_UserAgent** – oznake glave
 
+
+### <a name="officedocssharedpremiumfeaturemessagebar"></a>Office.Docs.Shared.PremiumFeatureMessageBar
+
+Ta dogodek zbira brezplačne funkcije uporabnikov, ki so v ozadju plačila. Podatki se uporabljajo za razumevanje nabora funkcij, s katerimi uporabniki komunicirajo, ko se pretvorijo v plačljivega uporabnika. To nam pove želene vstopne točke za uporabnike in izboljša uporabniško izkušnjo.
+
+Zbrana so sledeča polja:
+
+- **featureId** - TCID za vrhunske funkcije, ki jih uporabnik tapne
+
+
 ### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
 
 Kritični telemetrični podatki o uporabi se zbirajo za ponazoritev, ko uporabnik tapne gumb za nakup.  Ti podatki se uporabljajo za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
@@ -3504,6 +3550,26 @@ Zbrana so sledeča polja:
 Če iz neznanega razloga nismo uspeli samodejno aktivirati licence, uporabniku prikažemo čarovnika za aktivacijo. Ti dogodki nam posredujejo informacije, da je bil čarovnih prikazan uporabniku. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Ta dogodek ne zbere nobenega polja.
+
+### <a name="officelicensingbusbarcheckfordynamicbusbarexperiment"></a>Office.Licensing.BusBar.CheckForDynamicBusbarExperiment
+
+Ta dogodek se sproži enkrat za vsako vrsto vrstice za poslovno vrstico licenciranja, ki bo prikazana z dinamičnim letom v poslovni vrstici (skupina za obdelavo). Ta podatkovni dogodek poroča o tem, ali je dinamična poslovna vrstica platforme za programiranje življenjskega cikla pripravljena na disk. Podatki bodo uporabljeni za merjenje stanja nove dinamične poslovne vrstice platforme za programiranje življenjskega cikla.
+
+Zbrana so sledeča polja:
+
+- **DoesIgnExist (bool)** – Označuje, ali je kampanja na disku
+
+- **Vrsta (int32)** – označuje vrsto vrstice za podjetja za licenciranje
+
+
+### <a name="officelicensingbusbarshowstashedbusbar"></a>Office.Licensing.BusBar.ShowStashedBusbar
+
+Ta dogodek se sproži, ko poslovne vrstice dinamične programske platforme za programiranje življenjskega cikla ni mogoče prikazati in je namesto tega treba prikazati statično poslovno vrstico stisnjeno. Ta dogodek podatkov bo uporabljen za uspešno vrnitev v statično poslovno vrstico.
+
+Zbrana so sledeča polja:
+
+- **Vrsta (int32)** – označuje vrsto vrstice za podjetja za licenciranje
+
 
 ### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
  
@@ -4015,6 +4081,17 @@ Zbrana so sledeča polja:
  
 - **EnrollmentResult** – rezultat vpisa InTune
 
+### <a name="skuproductpricenullevent"></a>SKU.PRODUCT.PRICE.NULL.EVENT
+
+Ta dogodek se uporabi za zajem dogodkov za količinsko opredelitev vpliva napake, zaradi katere uporabniki danes vidijo »Null« namesto cene na zaslonu izbiralnika inventarna številka. Napaka bo nadalje diagnosticirana, da bi ugotovili popravek. 
+
+Zbrana so sledeča polja:
+
+- **PriceNotFound** – v trgovini ni mogoče najti cen.
+
+- **StoreNotInitilized** – ko shramba ni uspešno inicializirana.
+
+
 ## <a name="microsoft-autoupdate-mau-events"></a>Dogodki Microsoft AutoUpdate (MAU)
 
 ### <a name="additionalappinfoinvalidpreference"></a>additionalappinfo.invalidpreference
@@ -4216,6 +4293,49 @@ Zbrana so ta polja:
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **SessionId** – identifikator za sejo
+
+### <a name="appinstallxpcremoteobjecterror"></a>appinstall.xpcremoteobjecterror
+
+Ta dogodek poroča o napaki, ki je bila najdena med poskusom vzpostavljanja povezave z orodjem za pomoč privilegiranem pomoč prek povezave XPC. Ta dogodek uporabljamo za sledenje in obravnavanje morebitnih težav z namestitvijo MAU.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppID** – identifikator aplikacije.
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Payload** – vsebuje informacije o naravi napake, do katere je prišlo pri registraciji aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **SessionId** – identifikator za sejo
+
 
 ### <a name="appregistryconfig"></a>appregistry.config
 
@@ -9560,6 +9680,50 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+
+### <a name="guidashboardrowviewupdatestate"></a>gui.dashboardrowview.updatestate
+
+Ta poročila o dogodku so o napaki, ki je bila najdena, ko poskušate prikazati informacije o aplikaciji na MAU UI. S tem dogodkom želimo zagotoviti stanje storitve MAU ter spremljati napake in jih nasloviti.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppID** – identifikator aplikacije.
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **Payload** – vsebuje informacije o naravi napake, do katere je prišlo pri registraciji aplikacije.
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **SessionId** – identifikator za sejo
+
+
 ### <a name="guidashboardviewappisopendialogdisplay"></a>gui.dashboardview.appisopendialog.display 
 
 Ta dogodek označuje, da uporabniški vmesnik prikazuje pogovorno okno za zaprtje odprte aplikacije, da bi se nadaljevala posodobitev aplikacije. Ta dogodek se uporablja za ugotavljanje števila posodobitev z zakasnitvijo, da bi zagotovili prihodnje izboljšave, s katerimi bodo prekinitve uporabnika minimizirane.
@@ -10326,6 +10490,55 @@ Zbrana so sledeča polja:
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
 
 - **ID** seje – identifikator za sejo
+
+
+### <a name="installedappacknowledgedcoreappleevent"></a>installedapp.acknowledgedcoreappleevent
+
+Ta dogodek označuje, da Microsoft Auto Update (MAU) pošilja dogodek Apple v registrirano aplikacijo, da prekine aplikacijo, da bi se lahko nadaljevala čakajoča posodobitev aplikacije. Ta dogodek se trenutno uporablja za pomoč pri prihodnjih izboljšavah, s katerimi bodo kar najbolj zmanjšane prekinitve med posodobitvami aplikacij. 
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppID** – identifikator za aplikacijo, ki se posodablja
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija
+
+- **AppleEventClass** – označuje vrsto dogodka, ki se pošilja ali potrjuje
+
+- **AppleEventID** – enočični identifikator dogodka, ki se pošilja/potrjuje
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je zgodil dogodek iz dnevnika 
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **Payload** – vsebuje število ponovnih poskusov
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+- **UpdateID** – identifikator posodobitve
 
 
 ### <a name="installedappinvalidbundle"></a>installedapp.invalidbundle
@@ -11198,7 +11411,7 @@ Zbrana so sledeča polja:
 
 - **HowTocheck** – ugodnost za preverjanje posodobitev
 
-- **Nosilnost** – besedilo prikazuje uspeh operacije.
+- **Nosilnost** – besedilo prikazuje uspeh operacije. *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -11206,6 +11419,7 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+- **Uspeh** – logični podatki označujejo uspeh postopka.
 
 ### <a name="installupdatestaskupdatestatus"></a>installupdatestask.updatestatus
 
@@ -11847,11 +12061,13 @@ Zbrana so naslednja polja:
 
 - **HowToCheck** – kako preveriti nastavitev
 
-- **Payload** – statično besedilo
+- **Payload** – statično besedilo *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **Payload** – statično besedilo
 
 - **ID** seje – identifikator za sejo
 
@@ -12169,11 +12385,13 @@ Zbrana so naslednja polja:
 
 - **HowToCheck** – kako preveriti nastavitev
 
-- **Payload** – statično besedilo
+- **Payload** – statično besedilo *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
 - **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **Payload** – statično besedilo
 
 - **ID** seje – identifikator za sejo
 
@@ -12321,6 +12539,8 @@ Zbrana so sledeča polja:
 
 - **DeviceInfo_OsBuild** – različica operacijskega sistema
 
+- **Trajanje** – besedilo, ki označuje trajanje čeka
+
 - **Event_ReceivedTime** – ura prejemanja telemetrijo
 
 - **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
@@ -12329,7 +12549,7 @@ Zbrana so sledeča polja:
 
 - **HowToCheck** – kako preveriti nastavitev
 
-- **Payload** – statično besedilo
+- **Payload** – statično besedilo *[To polje je bilo odstranjeno iz tekočih različic Officea, vendar se lahko še vedno prikaže v starejših različicah.]*
 
 - **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
 
@@ -14591,6 +14811,47 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+
+### <a name="updatemanagernetwork"></a>updatemanager.network
+
+Ta dogodek beleži razpoložljivost omrežja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+ 
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – čas, ko je bila prejeta telemetrija
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **SessionId** – identifikator za sejo
+
+- **ServerReacheable** – logična vrednost, ki označuje, ali je omrežje na voljo.
+
     
 ### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
@@ -15448,6 +15709,19 @@ Zbrana so sledeča polja:
 Konfiguracija storitev ne zbira potrebnih dogodkov podatkov storitve.
 
 ## <a name="telemetry-events"></a>Dogodki telemetrije
+
+### <a name="appdeeplink"></a>app.deep.link
+
+Ta dogodek vam je v pomoč pri sledenju uporabi zagona srečanja v koledarju za različne končne točke. Ta dogodek nam omogoča, da ob zagnali srečanje prek Skypa za podjetja in ko je srečanje zagnano prek storitve Teams in če je nameščen program Teams.
+
+Zbrana so sledeča polja: 
+
+- **account** – račun, v katerem se je izvedlo dejanje.
+
+- **action_type** – izvedeno dejanje, na primer zagon srečanja ali namestitev programa
+
+- **Aplikacija** – aplikacija, ki je bila zagnana prek globoke povezave, kot je Teams ali Skype za podjetja
+
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
 
@@ -16364,81 +16638,100 @@ Zbrana so sledeča polja:
 
   - **AppName** – ime vplivane aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedAssignedFlights** – leti, povezani s procesom zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **AppUsedVirtualMemory** – virtualni pomnilnik, ki ga uporablja Officeova aplikacija
 
-  - **CrashedConfigIds** – konfiguracija, dodeljena procesu zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **BucketId** – identifikator vedra Watson za zrušitev
 
-  - **CrashedEcsETag** – identifikator preskusa za proces zrušitve
+- **CabGuid** – identifikator globalnega enoličnega identifikatorja (GUID) za storitev Watson.
 
-  - **CrashedImpressionId** – identifikator vtisa za proces zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **CallStack** – Microsoftov sklad internih klicev, ki povzroča zrušitev.
 
-  - **CrashedModuleName** – ime modula z napako
+- **CrashedAssignedFlights** – leti, povezani s procesom zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedProcessSessionID** – enolični identifikator procesa zrušitve 
+- **CrashedConfigIds** – konfiguracija, dodeljena procesu zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **CrashedProcessSessionInitTime** – čas, ko se je začel vplivani proces 
+- **CrashedEcsETag** – identifikator preskusa za proces zrušitve
 
-  - **CrashedSessionInitTime** – čas, ko se je začel vplivani proces
+- **CrashedImpressionId** – identifikator vtisa za proces zrušitve *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexCrashTag** – enolični identifikator za kodo zrušitve.
+- **CrashedModuleName** – ime modula z napako
 
-  - **CrashType** – identifikator razdeljevanja za vrsto zrušitve
+- **CrashedProcessSessionID** – enolični identifikator procesa zrušitve 
 
-  - **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **CrashedProcessSessionInitTime** – čas, ko se je začel vplivani proces 
 
-  - **ErrorString** – opis napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **CrashedSessionInitTime** – čas, ko se je začel vplivani proces
 
-  - **ExceptionAddress** – mesto v programu, kjer je prišlo do napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **HexCrashTag** – enolični identifikator za kodo zrušitve.
 
-  - **ExceptionCode** – identifikator razdeljevanja za izjemo
+- **CrashType** – identifikator razdeljevanja za vrsto zrušitve
 
-  - **FaultAppName** – ime aplikacije z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **DetectionTime** – čas, ko je bil zaznan nepričakovani izhod *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
+- **ErrorString** – opis napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **InstallType** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **ExceptionAddress** – mesto v programu, kjer je prišlo do napake *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **InstallTypeName** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **ExceptionCode** – identifikator razdeljevanja za izjemo
 
-  - **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **ExceptionInfo** – sistemske informacije za izjemo.
 
-  - **IsMsftInternal** – ali je uporabnik sistema Windows, ki izvaja Office, Microsoftov zaposleni *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **FaultAppName** – ime aplikacije z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **HangTypeCode** – predstavlja razred obešenja, če se je postopek obesil med izvedbo.
 
-  - **ModuleBaseAddress** – osnovni naslov modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **InstallMethod** – ali je bila trenutna gradnja Officea nadgrajena iz, povrnjena v prejšnje stanje oziroma sveža namestitev
 
-  - **ModuleBuildVersion** – številka delovne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **InstallType** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleMajorVersion** – številka glavne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **InstallTypeName** – identifikator za način namestitve Officea *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleMinorVersion** – številka manjše različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **IsLabMachine** – ali se Office izvaja v Microsoftovem laboratoriju *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleName** – ime modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **IsMsftInternal** – ali je uporabnik sistema Windows, ki izvaja Office, Microsoftov zaposleni *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake
+- **ModuleBaseAddress** – osnovni naslov modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleRevisionVersion** – številka različice za revizijo gradnje modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **ModuleBuildVersion** – številka delovne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleSize** – velikost modula z napako v bajtih *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **ModuleMajorVersion** – številka glavne različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ModuleVersion** – različica nedelujočega modula, odgovornega za zrušitev.
+- **ModuleMinorVersion** – številka manjše različice za modul z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **OfficeArchitectureText** – arhitektura namestitve: x64, x86 itd.
+- **ModuleName** – ime modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
+- **HexModuleOffset** – odmik v bajtih (v šestnajstiški obliki) od osnovnega mesta, kjer je prišlo do napake
 
-  - **OSEnvironment** – identifikator za okolje, v katerem se izvaja Office
+- **ModuleRevisionVersion** – številka različice za revizijo gradnje modula z napako *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **PreviousBuild** – prejšnja nameščena delovna različica
+- **ModuleSize** – velikost modula z napako v bajtih *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **ProcessorArchitecture** – arhitektura procesorja za okolje: x64, x86 itd.
+- **ModuleVersion** – različica nedelujočega modula, odgovornega za zrušitev.
 
-  - **SessionFlags** – določa pogoje seje, na primer: datoteka je bila odprta, datoteka je bila urejena, dokument v oblaku je bil odprt, zaporedje zagona je bilo dokončano itd. 
+- **OfficeArchitectureText** – arhitektura namestitve: x64, x86 itd.
 
-  - **UAETypeName** – identifikator razdeljevanja za način nenavadnega izhoda iz aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **OfficeUILang –** jezik uporabniškega vmesnika v Officeovi graditvi
 
-  - **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
+- **OSEnvironment** – identifikator za okolje, v katerem se izvaja Office
 
-  - **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+- **PreviousBuild** – prejšnja nameščena delovna različica
+
+- **ProcessorArchitecture** – arhitektura procesorja za okolje: x64, x86 itd.
+
+- **SessionFlags** – določa pogoje seje, na primer: datoteka je bila odprta, datoteka je bila urejena, dokument v oblaku je bil odprt, zaporedje zagona je bilo dokončano itd. 
+
+- **StackHash** – podaja ID zgoščene vrednosti za sklad neuspeha v Officeu.
+
+- **SystemAvailableMemory** – razpoložljiv pomnilnik v operacijskem sistemu
+
+- **UAETypeName** – identifikator razdeljevanja za način nenavadnega izhoda iz aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+- **UninitLibletId** – enolični identifikator za neuspešne komponente zrušitve.
+
+- **VerifyElseCrashTag** – enolični identifikator za mesto zrušitve aplikacije *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+
+- **WatsonReportId** – identifikator poročila, poslanega v storitev Windows Watson.
+
+- **WerEventCreatedTime** – časovni žig za dogodek poročanja sistema Windows o napakah.
 
 ### <a name="officesystemsystemhealthungracefulappexitimmersive"></a>Office.System.SystemHealthUngracefulAppExitImmersive
 
