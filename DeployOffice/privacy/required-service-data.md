@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office nudijo pregled zahtevanih podatkov storitve, ki so zbrani o povezanih izkušnjah v Officeu.
 hideEdit: true
-ms.openlocfilehash: faa3507708b4768ee3b2b0f51257273c31ad2de7
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: 7480869114096dc8f858ce2b1551575c6224ae64
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440207"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181935"
 ---
 # <a name="required-service-data-for-office"></a>Zahtevani podatki storitev za Office
 
@@ -51,7 +51,7 @@ Zahtevani podatki storitve so ločeni od obveznih ali izbirnih [diagnostičnih p
 
 Zahtevani podatki storitve so zbrani in poslani Microsoftu tudi za [ključne Officeove storitve](essential-services.md), kot je storitev licenciranja, ki potrjuje, da imate ustrezne licence za uporabo Officea. Upravljate lahko številne povezane izkušnje, ki so na voljo za vas ali vaše uporabnike, če ste skrbnik v organizaciji, obstaja pa tudi nabor osnovnih storitev, ki določajo način delovanja Officea in jih tako ni mogoče onemogočiti. Podatki o ključnih storitvah se pri uporabi Officea vedno pošljejo Microsoftu, ki jih obdela, ne glede na to, kako so konfigurirane druge nastavitve, povezane z zasebnostjo.
 
-Zahtevani podatki storitve so na voljo prek zahtev podatkov o storitvi (DSR). Če želite več informacij, glejte [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/privacystatement) in [Zahteve za posameznike, na katere se nanašajo osebni podatki, za Office 365 za uredbe GDPR in CCPA](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365).
+Zahtevani podatki storitve so na voljo prek zahtev podatkov o storitvi (DSR). Če želite več informacij, glejte [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/privacystatement) in [Zahteve za posameznike, na katere se nanašajo osebni podatki, za Office 365 za uredbe GDPR in CCPA](/microsoft-365/compliance/gdpr-dsr-office365).
 
 Če ste skrbnik za vašo organizacijo in želite upravljati povezane izkušnje, glejte naslednje članke:
 

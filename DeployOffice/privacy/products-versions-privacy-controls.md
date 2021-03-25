@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Ponuja informacije o tem, katere Officeove izdelke in različice imajo najnovejše kontrolnike za zasebnost.
 hideEdit: true
-ms.openlocfilehash: 8434891947997908bb4de61ad56606f8b4b59614
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: 01d7658c90706ac2bc5870262e59be4e0d9d1dd5
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931198"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181675"
 ---
 # <a name="privacy-controls-available-for-office-products"></a>Kontrolniki zasebnosti, ki so na voljo za Officeove izdelke
 
@@ -192,7 +192,7 @@ Za Office v spletu so na voljo ti kontrolniki za zasebnost:
 
 ## <a name="related-articles"></a>Sorodni članki
 
-- [Zasebnost in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-privacy)
+- [Zasebnost in Microsoft Teams](/MicrosoftTeams/teams-privacy)
 - [Nastavitve zasebnosti v storitvi Microsoft Whiteboard](https://support.microsoft.com/office/ed9f0de9-71be-44c2-837d-e0f448660be1)
 - [Katero različico Officea uporabljam?](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19)
 - [Katero različico Outlooka imam?](https://support.microsoft.com/office/b3a9568c-edb5-42b9-9825-d48d82b2257c)

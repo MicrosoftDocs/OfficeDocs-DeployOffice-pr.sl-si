@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
-ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
+ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50826422"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181747"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -76,7 +76,7 @@ Ko uporabite Trgovino Office, je ta določena s [pogodbo o Microsoftovih storitv
 
 > [!NOTE]
 > - Skrbnik v vaši organizaciji vam bo morda priskrbel dodatke, tudi če se ne odločite za uporabo shrambe za Office.
-> - Če ste skrbnik za več informacij o dodatkih, glejte razdelek »izbirne povezave« v razdelku [zasebnost in varnost za dodatke za Office](https://docs.microsoft.com/office/dev/add-ins/concepts/privacy-and-security) ter [zasebnost, dovoljenja in varnost za dodatke za Outlook](https://docs.microsoft.com/office/dev/add-ins/outlook/privacy-and-security).
+> - Če ste skrbnik za več informacij o dodatkih, glejte razdelek »izbirne povezave« v razdelku [zasebnost in varnost za dodatke za Office](/office/dev/add-ins/concepts/privacy-and-security) ter [zasebnost, dovoljenja in varnost za dodatke za Outlook](/office/dev/add-ins/outlook/privacy-and-security).
 
 ### <a name="research"></a>Raziskovanje
 
@@ -91,7 +91,7 @@ V programu Outlook za iOS bo vaš naslednji prihajajoči dogodek povzet na vrhu 
 
 ### <a name="weather-bar-in-outlook"></a>Vrstica za vreme v Outlooku
 
-V [vrstici za vreme](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) v Outlooku je prikazana vremenska napoved za geografske lokacije, ki jih izberete. Vrstica za vreme v Outlooku se med uporabo privzeto poveže s storitvijo Vreme MSN. MSN je v lasti Microsofta in upoštevati je treba [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/). Če uporabljate vrstico za vreme s storitvijo Vreme MSN, Microsoft ne zazna vaše lokacije in izbranih mest ni mogoče povezati z vami. [Privzeto nastavitev lahko spremenite](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook), če se želite povezati z drugimi ponudniki vremenskih storitev. Če želite uporabiti drugega ponudnika vremenskih storitev, preberite izjavo o zasebnosti in pogoje licence tega ponudnika, da boste izvedeli, kateri pogoji veljajo.
+V [vrstici za vreme](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) v Outlooku je prikazana vremenska napoved za geografske lokacije, ki jih izberete. Vrstica za vreme v Outlooku se med uporabo privzeto poveže s storitvijo Vreme MSN. MSN je v lasti Microsofta in upoštevati je treba [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [Microsoftovo izjavo o zasebnosti](https://privacy.microsoft.com/). Če uporabljate vrstico za vreme s storitvijo Vreme MSN, Microsoft ne zazna vaše lokacije in izbranih mest ni mogoče povezati z vami. [Privzeto nastavitev lahko spremenite](/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook), če se želite povezati z drugimi ponudniki vremenskih storitev. Če želite uporabiti drugega ponudnika vremenskih storitev, preberite izjavo o zasebnosti in pogoje licence tega ponudnika, da boste izvedeli, kateri pogoji veljajo.
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako ugotovim, ali mi je skrbnik omogočil uporabo izbirnih povezanih izkušenj
 

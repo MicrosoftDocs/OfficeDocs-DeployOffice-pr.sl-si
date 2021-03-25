@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o načinu upravljanja kontrolnikov zasebnosti v storitvi Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus) z uporabo nastavitev pravilnika.
 hideEdit: true
-ms.openlocfilehash: 401cc5ca875dac28a5cda321a812e9b6c25289e5
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: 636916acf0cb36eecc7ba51318467264bb9ff2d4
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931234"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181222"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Uporaba nastavitev pravilnika za upravljanje kontrolnikov zasebnosti za Microsoft 365 aplikacije za podjetja
 
@@ -31,9 +31,9 @@ Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potre
 
 V različici 1904 storitve Aplikacije ogrodja Microsoft 365 za podjetja smo uvedli nove nastavitve zasebnosti, s katerimi lahko upravljate nastavitve, povezane z naslednjo vsebino:
 
-- ***Diagnostični podatki** _ o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
+- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu
 
-- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 V nadaljevanju si lahko ogledate pet novih nastavitev zasebnosti:
 
@@ -43,7 +43,7 @@ V nadaljevanju si lahko ogledate pet novih nastavitev zasebnosti:
 - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
-Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [pravilnika za Office v oblaku](../overview-office-client-policy-service.md). Če uporabljate pravilnik skupine, prenesite najnovejše različice datotek za skrbniške predloge (ADMX/ADML) iz [Microsoftovega centra za prenose](https://www.microsoft.com/download/details.aspx?id=49030).
+Te nastavitve pravilnika lahko uvedete s storitvijo pravilnika skupine ali [pravilnika za Office v oblaku](../overview-office-cloud-policy-service.md). Če uporabljate pravilnik skupine, prenesite najnovejše različice datotek za skrbniške predloge (ADMX/ADML) iz [Microsoftovega centra za prenose](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
 > - Če želite več informacij o upravljanju kontrolnikov zasebnosti za Office for Mac, preberite [Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office for Mac](mac-privacy-preferences.md).
@@ -64,15 +64,15 @@ Vse nove nastavitve pravilnika pazljivo preizkusite v omejenem, nadzorovanem oko
 
 Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka.
 
-Z nastavitvijo pravilnika _Konfiguracija ravni diagnostičnih podatkov o programski opremi odjemalca, ki jih Office pošlje Microsoftu* lahko določite raven diagnostičnih podatkov, ki so poslani Microsoftu.
+Z nastavitvijo pravilnika *Konfiguracija ravni diagnostičnih podatkov o programski opremi odjemalca, ki jih Office pošlje Microsoftu* lahko določite raven diagnostičnih podatkov, ki so poslani Microsoftu.
 
 Če omogočite to nastavitev pravilnika, izberite, katera raven diagnostičnih podatkov bo poslana Microsoftu. Izbirate lahko med naslednji ravnmi: »Zahtevana«, »Izbirna« ali »Nobena«.
 
-- Če izberete * **Zahtevano** _, Microsoft prejme najnižjo raven podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
+- Če izberete ***Zahtevano***, Microsoft prejme najnižjo stopnjo podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
 
-- Če izberete _*_Izbirno_*_ , Microsoft prejme dodatne podatke, ki omogočajo izboljšave izdelkov in nudijo izčrpne informacije za zaznavanje, diagnosticiranje in odpravljanje težav. Če se odločite, da boste poslali izbirne diagnostične podatke, boste prav tako poslali še zahtevane diagnostične podatke.
+- Če izberete ***Izbirno***, Microsoft prejme dodatne podatke, ki zagotavljajo izboljšave izdelkov in omogočajo razširjene informacije za zaznavanje, diagnosticiranje in odpravljanje težav. Če se odločite, da boste poslali izbirne diagnostične podatke, boste prav tako poslali še zahtevane diagnostične podatke.
 
-- Če izberete _*_Nobena_*_ , Microsoft ne prejme nobenih diagnostičnih podatkov o odjemalski programski opremi za napravo, v kateri je nameščen Office. Vendar pa s to možnostjo znatno omejite Microsoftovo zmogljivost zaznavanja, diagnosticiranja in odpravljanja težav, na katere lahko naletijo vaši uporabniki pri uporabi Officea.
+- Če izberete ***Nobena***, Microsoft ne prejme nobenih diagnostičnih podatkov o programski opremi odjemalca za napravo, v kateri je nameščen Office. Vendar pa s to možnostjo znatno omejite Microsoftovo zmogljivost zaznavanja, diagnosticiranja in odpravljanja težav, na katere lahko naletijo vaši uporabniki pri uporabi Officea.
 
 Če onemogočite ali ne konfigurirate te nastavitve pravilnika, Microsoft prejme izbirne in zahtevane diagnostične podatke.
 
@@ -104,9 +104,9 @@ Zavedamo se, da bi morda radi izbirali, katere vrste povezanih izkušenj so na v
 
 To so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer Oblikovalnik za PowerPoint ali Prevajalnik. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
-Z nastavitvijo pravilnika _Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te povezane izkušnje na voljo vašim uporabnikom.
+Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te povezane izkušnje na voljo vašim uporabnikom.
 
-Če onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* , povezane izkušnje, s katerimi lahko analizirate vsebino, ne bodo na voljo vašim uporabnikom.
+Če onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu*, povezane izkušnje, s katerimi lahko analizirate vsebino, ne bodo na voljo vašim uporabnikom.
 
 ### <a name="policy-setting-for-connected-experiences-that-download-online-content"></a>Nastavitev pravilnika za povezane izkušnje, s katerimi lahko prenašate spletno vsebino
 
@@ -114,7 +114,7 @@ S temi izkušnjami lahko poiščete in prenesete spletno vsebino, vključno s pr
 
 Z nastavitvijo pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino* lahko upravljate, ali so te vrste povezanih izkušenj na voljo za vaše uporabnike. Če ne konfigurirate te nastavitve pravilnika, so te povezane izkušnje na voljo vašim uporabnikom.
 
-Če onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* , povezane izkušnje, s katerimi lahko prenašate spletno vsebino, ne bodo na voljo vašim uporabnikom.
+Če onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu*, povezane izkušnje, s katerimi lahko prenašate spletno vsebino, ne bodo na voljo vašim uporabnikom.
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Nastavitev pravilnika za izbirne povezane izkušnje
 
@@ -129,9 +129,9 @@ Z nastavitvijo pravilnika *Dovoli uporabo dodatnih povezanih izkušenj v Officeu
 
 Tudi če se odločite, da bodo te izbirne povezane izkušnje na voljo vašim uporabnikom, jih lahko ti izklopijo kot skupina tako, da odprejo [pogovorno okno z nastavitvami zasebnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vašim uporabnikom je ta izbira na voljo samo, če so vpisani v Office s svojimi poverilnicami organizacije (včasih jih imenujemo tudi službeni ali šolski račun), ne pa če so vpisani z osebnim e-poštnim naslovom.
 
-Nekatere od teh izbirnih povezanih izkušenj lahko uvrščamo tudi v povezane izkušnje, s katerimi lahko analizirate vsebino ali prenašate spletno vsebino. Vstavljanje spletnih slik je denimo izbirna povezana izkušnja, ki jo omogoča Microsoft Bing, obenem pa je tudi povezana izkušnja, s katero lahko prenašate spletno vsebino. Če torej onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino* , vstavljanje spletnih slik ne bo na voljo vašim uporabnikom. Prav tako ne bo na voljo, tudi če ste omogočili nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*. Če želite več informacij o tem, s katerimi povezanimi izkušnjami je mogoče analizirati vsebino ali prenašati spletno vsebino, preberite [Povezane izkušnje v Officeu](connected-experiences.md).
+Nekatere od teh izbirnih povezanih izkušenj lahko uvrščamo tudi v povezane izkušnje, s katerimi lahko analizirate vsebino ali prenašate spletno vsebino. Vstavljanje spletnih slik je denimo izbirna povezana izkušnja, ki jo omogoča Microsoft Bing, obenem pa je tudi povezana izkušnja, s katero lahko prenašate spletno vsebino. Če torej onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko prenašate spletno vsebino*, vstavljanje spletnih slik ne bo na voljo vašim uporabnikom. Prav tako ne bo na voljo, tudi če ste omogočili nastavitev pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*. Če želite več informacij o tem, s katerimi povezanimi izkušnjami je mogoče analizirati vsebino ali prenašati spletno vsebino, preberite [Povezane izkušnje v Officeu](connected-experiences.md).
 
-Obstaja pa izjema, na katero morate biti pozorni. Z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* ni mogoče upravljati izkušenj, ki zahtevajo, da račun za LinkedIn povežete z Microsoftovim službenim ali šolskim računom. Če želite nadzorovati te vrste izkušenj (kot so informacije storitve LinkedIn na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) v Outlooku), glejte [LinkedIn v Microsoftovih aplikacijah in storitvah](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) in [Integracija povezav računa LinkedIn v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Obstaja pa izjema, na katero morate biti pozorni. Z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu* ni mogoče upravljati izkušenj, ki zahtevajo, da račun za LinkedIn povežete z Microsoftovim službenim ali šolskim računom. Če želite nadzorovati te vrste izkušenj (kot so informacije storitve LinkedIn na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) v Outlooku), glejte [LinkedIn v Microsoftovih aplikacijah in storitvah](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) in [Integracija povezav računa LinkedIn v Azure Active Directory](/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Nastavitev pravilnika za najpogostejše povezane izkušnje
 
@@ -160,7 +160,7 @@ Od različice 1904 naprej konfiguriranje teh dveh obstoječih nastavitev praviln
 - Omogočanje uporabe dodatnih povezanih izkušenj v Officeu
 - Omogočanje uporabe povezanih izkušenj v Officeu
 
-Z novimi nastavitvami pravilnika dobite lahko bolj podroben nadzor kot z obstoječima nastavitvama pravilnika. Če ste na primer prej uporabili nastavitev pravilnika *Pošiljanje osebnih podatkov* , sta se izklopila tako orodje za hiter začetek v PowerPointu in pametno iskanje. Toda če sedaj, ko so na voljo nove nastavitve pravilnika, uporabite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino* , da izklopite takšno vrsto povezanih izkušenj, se izklopi samo pametno iskanje. Orodje za hiter začetek v PowerPointu je še vedno na voljo za vaše uporabnike.
+Z novimi nastavitvami pravilnika dobite lahko bolj podroben nadzor kot z obstoječima nastavitvama pravilnika. Če ste na primer prej uporabili nastavitev pravilnika *Pošiljanje osebnih podatkov*, sta se izklopila tako orodje za hiter začetek v PowerPointu in pametno iskanje. Toda če sedaj, ko so na voljo nove nastavitve pravilnika, uporabite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu, s katerimi lahko analizirate vsebino*, da izklopite takšno vrsto povezanih izkušenj, se izklopi samo pametno iskanje. Orodje za hiter začetek v PowerPointu je še vedno na voljo za vaše uporabnike.
 
 Nastavitve pravilnika so še vedno prikazane v orodju za upravljanje pravilnika skupine, saj še vedno veljajo za količinsko licencirane različice sistemov Office 2016 in Office 2019, na primer Office Professional Plus 2019.
 
@@ -174,7 +174,7 @@ Kot se verjetno že izvedeli, so na voljo nekatere obstoječe nastavitve praviln
 
 - *Dovoli funkcijo pomočnika za življenjepis v storitvi LinkedIn* – to nastavitev lahko najdete v razdelku Konfiguracija uporabnika\\Pravilniki\\Skrbniške predloge\\Microsoft Word 2016\\Wordove možnosti\\Splošno
 
- Te obstoječe nastavitve pravilnika lahko še vedno uporabite, če želite izklopiti posamezne povezane izkušnje. Vendar ne pozabite, da če uporabite eno od novih nastavitev pravilnika, lahko z novo nastavitvijo pravilnika izklopite povezano izkušnjo, ki ste jo vklopili z drugo nastavitvijo pravilnika. Če na primer omogočite nastavitev pravilnika *Dovoli funkcijo pomočnika za življenjepis v storitvi LinkedIn* in onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu* , pomočnik za življenjepis v storitvi LinkedIn ne bo na voljo za vaše uporabnike.
+ Te obstoječe nastavitve pravilnika lahko še vedno uporabite, če želite izklopiti posamezne povezane izkušnje. Vendar ne pozabite, da če uporabite eno od novih nastavitev pravilnika, lahko z novo nastavitvijo pravilnika izklopite povezano izkušnjo, ki ste jo vklopili z drugo nastavitvijo pravilnika. Če na primer omogočite nastavitev pravilnika *Dovoli funkcijo pomočnika za življenjepis v storitvi LinkedIn* in onemogočite nastavitev pravilnika *Dovoli uporabo povezanih izkušenj v Officeu*, pomočnik za življenjepis v storitvi LinkedIn ne bo na voljo za vaše uporabnike.
 
 Na splošno velja, da če z eno nastavitvijo pravilnika vklopite določeno povezano izkušnjo, hkrati pa z drugo nastavitvijo pravilnika izklopite to vrsto povezane izkušnje, bo ta določena povezana izkušnja izklopljena za vaše uporabnike.
 
@@ -188,7 +188,7 @@ Vaši uporabniki bodo morda opazili nekatere spremembe uporabniškega vmesnika v
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Nastavitve zasebnosti, odstranjene iz uporabniškega vmesnika za Office
 
-Iz menija **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja …** smo odstranili naslednje nastavitve > **Možnosti zasebnosti** :
+Iz menija **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja …** smo odstranili naslednje nastavitve > **Možnosti zasebnosti**:
 
 - Officeu dovolite, da ustvarja izboljšave izdelkov na osnovi Officeove vsebine v moji napravi in dostopa do njih ter tako pridobite načrte, informacije, priporočila in storitve.
 

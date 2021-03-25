@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: fe0d70bb03699af3b393de560234f9a1bb32c3c7
-ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
+ms.openlocfilehash: d7c4af6af94025136ab09f0709d8c65382f456dd
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "50597346"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181278"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -57,7 +57,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | Oblikovalnik za PowerPoint   | [Ustvarite strokovne postavitve diapozitivov z Oblikovalnikom za PowerPoint](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 |Inštrukcije za predstavitelja (PowerPoint)|[Vadite svojo predstavitev z inštrukcijami za predstavitelja](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
 | Objavi v storitvi Microsoft Stream    | [Pretvorite predstavitev v videoposnetek](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
-| Objavi v storitvi Power BI   | [Objavljanje v storitvi Power BI iz Excela](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
+| Objavi v storitvi Power BI   | [Objavljanje v storitvi Power BI iz Excela](/power-bi/service-publish-from-excel) |
 | *Raziskovanje*\*   | [Dodajte ali spremenite raziskovalne storitve](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Optično branje vizitke|  [Optično preberite ali tapnite, da dodate stike v Outlooku za Android](https://support.microsoft.com/office/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 |Skupna raba obvestil|[Bodite obveščeni, ko člani vaše ekipe posodobijo vašo datoteko v skupni rabi](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
@@ -120,14 +120,14 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Kmalu na voljo (Outlook)  |[Kmalu na voljo](https://support.microsoft.com/office/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Stik s podporo (Outlook) | Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku|
 | Uvoz po meri (Visio)  | [Uvoz podatkov v oblike v risbi](https://support.microsoft.com/office/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |
-| Namigi o pravilnikih o preprečitvi izgube podatkov (DLP)* |[Pošiljajte e-poštna obvestila in prikažite namige o pravilnikih o preprečitvi izgube podatkov](https://docs.microsoft.com/microsoft-365/compliance/use-notifications-and-policy-tips)  |
+| Namigi o pravilnikih o preprečitvi izgube podatkov (DLP)* |[Pošiljajte e-poštna obvestila in prikažite namige o pravilnikih o preprečitvi izgube podatkov](/microsoft-365/compliance/use-notifications-and-policy-tips)  |
 | Vizualizator podatkov (Visio) |[Ustvarite diagram v vizualizatorju podatkov](https://support.microsoft.com/office/17211b46-d144-4ca2-9ea7-b0f48f0ae0a6)  |
 | Oblikovanje tokov (Visio)  | [Oblikujte avtomatiziran potek dela v Visiu](https://support.microsoft.com/office/35f0c9a9-912b-486d-88f7-4fc68013ad1a) |
 | Zunanji seznam (Outlook) |[Povežite zunanji seznam z Outlookom](https://support.microsoft.com/office/9F00540E-A6B8-4510-9CE1-C79E31CBC8C9)  |
 | Mapa »Prejeto« v fokusu (Outlook) |[Mapa »Prejeto« v fokusu v Outlooku](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Upravljanje pravic do informacij |[Odprite datoteko z omejenimi dovoljenji](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kartica stika |[LinkedIn v Microsoftovih aplikacijah in storitvah](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Dodatki za Office*\* | [Ogled, upravljanje in nameščanje dodatkov v Officeovih programih](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(za uporabnike)* <br/> [Uvedite dodatke v skrbniškem središču](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(za skrbnike)* |
+| *Dodatki za Office*\* | [Ogled, upravljanje in nameščanje dodatkov v Officeovih programih](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(za uporabnike)* <br/> [Uvedite dodatke v skrbniškem središču](/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(za skrbnike)* |
 | Povratne informacije o Officeu |[Kako posredujem povratne informacije o sistemu Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podpora za Office (Stik z nami) |Ko izberete **»Pomoč«** > **»Stik s podporo«** na traku |
 | Organigram (Visio) |[Ustvarite organigram v Visiu](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -136,8 +136,8 @@ V spodnji tabeli je naveden seznam drugih povezanih izkušenj ter povezave do ve
 | Nedavni dokumenti |[Odpiranje datotek v meniju »Datoteka«](https://support.microsoft.com/office/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | *Pomočnik za življenjepis*\* |[Uporabite Pomočnika za življenjepis in LinkedIn ter ustvarite sijajne življenjepise](https://support.microsoft.com/office/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Iskalnik sob (Outlook)|[Kako nadzirati Iskalnik sob v Outlooku](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
-|Varni dokumenti|[Varni dokumenti](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Varni dokumenti v storitvi Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs)|
-| Varne povezave |[Varne povezave ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links)  |
+|Varni dokumenti|[Varni dokumenti](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Varni dokumenti v storitvi Microsoft 365 E5](/microsoft-365/security/office-365-security/safe-docs)|
+| Varne povezave |[Varne povezave ATP](/microsoft-365/security/office-365-security/atp-safe-links)  |
 | Oznake občutljivosti |[Uporabite oznake občutljivosti za svoje datoteke in e-pošto v Officeu](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Skupna raba  |[Skupna raba Excelovega delovnega zvezka z drugimi](https://support.microsoft.com/office/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Skupna raba predstavitve (PowerPoint)](https://support.microsoft.com/office/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Skupna raba dokumenta (Word)](https://support.microsoft.com/office/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
 | V skupni rabi z mano |[Oglejte si datoteke, ki so drugi dali v skupno rabo z vami](https://support.microsoft.com/office/e0476dc7-bf2f-4203-b9ad-c809578b03e7)  |
