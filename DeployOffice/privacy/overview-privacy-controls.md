@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja pregled kontrolnikov zasebnosti za Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus), vključno z diagnostičnimi podatki in povezanimi izkušnjami.
 hideEdit: true
-ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: d984be8ef09c8a46c4588ae643c4d6ebad1b2533
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794775"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181711"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrolnikov za zasebnost za Microsoft 365 aplikacije za podjetja
 
@@ -30,8 +30,8 @@ ms.locfileid: "48794775"
 Microsoft si prizadeva, da vam omogoči informacije in kontrolnike, ki jih potrebujete za sprejemanje odločitev o načinu zbiranja in uporabe vaših podatkov pri uporabi storitve Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovan Office 365 ProPlus).
 
 Od različice 1904 storitve Aplikacije ogrodja Microsoft 365 za podjetja dalje, boste lahko uporabljali nove, posodobljene in izboljšanje kontrolnike zasebnosti za ta področja:
-- ***Diagnostični podatki** – zbrani in poslani Microsoftu. V njih so podatki o odjemalski programski opremi za Office v napravi uporabnika v vaši organizaciji.
-- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office v računalnikih z nameščenim sistemom Windows v vaši organizaciji, ki jih je sistem zbral in poslal Microsoftu.
+- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 V sklopu sprememb smo dodali nove in posodobljene elemente uporabniškega vmesnika in nastavitve pravilnika.
 
@@ -43,7 +43,7 @@ Ti diagnostični podatki so zbrani in poslani Microsoftu. V njih so podatki o od
 
 Izbirate lahko med tremi ravnmi diagnostičnih podatkov programske opreme odjemalca za Aplikacije ogrodja Microsoft 365 za podjetja:
 
-- *Zahtevano* * – najnižja raven podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
+- **Zahtevano** – najnižja raven podatkov, ki še omogoča varnost, posodobitev in pričakovano delovanje Officea v napravi, v kateri je sistem nameščen.
 
 - **Izbirno** – dodatni podatki, ki zagotavljajo izboljšave izdelkov in omogočajo razširjene informacije za zaznavanje, diagnosticiranje in odpravljanje težav.
 
@@ -132,4 +132,4 @@ Obstaja tudi nabor osnovnih storitev za delovanje storitve Programi Microsoft 36
 
 ## <a name="related-articles"></a>Sorodni članki
 - [Zasebnost pri Microsoftu](https://privacy.microsoft.com/)
-- [Zasebnost v sistemu Windows](https://docs.microsoft.com/windows/privacy/)
+- [Zasebnost v sistemu Windows](/windows/privacy/)
