@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: 8408a2e8a6e9c8594e428762034ba5b8e8a54548
-ms.sourcegitcommit: a31e96cefd11ffece917dce618414989bf3a98da
+ms.openlocfilehash: d71859f75046ad13901aae1b381bf97227f05383
+ms.sourcegitcommit: 8982800d8026ec2f82e8389b7dfa762381258874
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51031999"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51891220"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -3410,6 +3410,92 @@ Zbrana so sledeča polja:
 - **Kontekst** – niz – tok, prek katerega je uporabnik pristal na strani za nakup aplikacije
 
 
+### <a name="officeapplelicensingcommonpaywallcontrol"></a>Office.Apple.Licensing.CommonPaywallControl
+
+Ta dogodek je uporabljen za razumevanje izkušnje nakupa v aplikaciji (IAP) za uporabnika. Zagotavlja učinkovito delovanje izkušnje IAP ter lažje razumevanje težav uporabnikov za namene optimiziranje izkušnje IAP.  Zbiranje se izvaja z enim od teh poddogodkov.
+
+- **Office.iOS.Paywall.Paywall.Presented** – podatki so zbrani, ko je kontrolnik za Paywall prikazan uporabniku. Podatki so uporabljeni za ustvarjanje pogleda za merjenje vsakokratne spremembe naročnine ter zagotavljanje ustreznega delovanja uporabniškega vmesnika in minimalnih težav med izkušnjo nakupa.
+
+   Zbrana so sledeča polja:
+
+  - **Točka vnosa** -string – gumb/tok, iz katerega je bil prikazan paywall. Npr. gumb »premija za nadgradnjo« ali »prvi zagonski tok«.
+  - **isFRE** -logična vrednost – ali prikazujemo prvo izkušnjo z zagonom ali navadni uporabniški vmesnik?
+
+- **Office.iOS.Paywall.Paywall.Stats** – Podatki so zbrani, ko je uporabniški vmesnik za Paywall prikazan uporabniku, ko je prikazano trajanje interakcije in stanje, ali je bil izveden poskus nakupa ter ali je poskus uspel oziroma ni uspel. Ti podatki so uporabljeni za merjenje učinkovitosti uporabniškega vmesnika in zagotavljanje ustreznega delovanja. 
+
+   Zbrana so sledeča polja:
+
+   - **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »premijska nadgradnja« ali »prvi zagonski tok«.
+   - **isFRE** – logična vrednost – preverite, ali je prikazana uporabniška izkušnja prvega zagona ali navadni uporabniški vmesnik.
+   - **status** – niz– zapiranje stanja za Paywall. Kot je stanje »initiated«, »paymentDone« ali »provisionFailed«.
+   - **userDuration** – dvojno – trajanje v milisekundah, ki jih je uporabnik porabil za Paywall.
+  
+- **Office.iOS.Paywall.SKUChooser.BuyButtonTap** – Podatki so zbrani, ko uporabnik tapne gumb za nakup. Ti podatki so uporabljeni za merjenje učinkovitosti gumba in zagotavljanje ustreznega delovanja.
+
+   Zbrana so sledeča polja:
+
+   - **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+   - **isDefaultSKU** – logična vrednost – če uporabnik kupuje izdelek, ki smo mu ga priporočili, je ta prikazan privzeto.
+   - **productId** – niz – ID izdelka v trgovini z aplikacijami za izdelek, za katerega je uporabnik tapnil gumb za nakup.
+   - **toggleCount** – celo število – prikazuje, kolikokrat je uporabnik preklopil med prikazi različnih izdelkov, preden je tapnil gumb za nakup, v trenutni seji sistema za plačevanje.
+
+- **Office.iOS.Paywall.SKUChooser.Stats** – Zbrani podatki, kjer si lahko ogledate, kako je uporabnik odprl orodje SKU Chooser, koliko časa se je zadrževal na zaslonu orodja SKU Chooser in zakaj je zaprl SKU Chooser. S temi informacijami lahko zagotovimo ustrezno delovanje orodja SKU Chooser ter optimiziramo in izboljšamo izkušnjo za končne uporabnike.
+
+   Zbrana so sledeča polja:
+
+   - **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »premijska nadgradnja« ali »prvi zagonski tok«.
+   - **exitReason** -string – izstop zaradi izbirnika INVENTARne številke. Kot sta »BuyButton« in »CloseButton«.
+   - **isFRE** – logična vrednost – ali je prikazana uporabniška izkušnja prvega zagona ali navadni uporabniški vmesnik?
+   - **userDuration** – dvojno – trajanje uporabe orodja SKU Chooser v milisekundah.
+
+- **Office.iOS.Paywall.FailedScreen.RetryButtonTap** – Podatki so zbrani, ko nakup/omogočanje uporabe/aktivacija ni uspela in je uporabnik tapnil gumb za ponovni poskus. Podatki so uporabljeni za odpravljanje napak pri scenarijih nakupa ter zagotavljanje učinkovitega delovanja.
+
+   Zbrana so ta polja:
+
+   - **failureReason** – String – označuje napako, zaradi katere želi uporabnik izvesti ponovni poskus; na primer »provisioningFailed«, »purchaseFailed«, »activationFailed«.
+   - **productId** – niz – ID izdelka v trgovini App Store, za katerega želi uporabnik znova izvesti neuspelo zahtevo.
+
+- **Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats** – Podatki, zbrani, ko uporabnik tapne možnost »Prikaži več ugodnosti«, da si ogleda vse storitve, aplikacije in funkcije, vključene v nakup. Uporabnik mora razširiti razdelke s podrobnostmi o funkciji za posamezne aplikacije. Ta dogodek zbira funkcije in aplikacije, ki jih je uporabnik razširil ter trajanje prikaza. Podatki so uporabljeni za zagotavljanje ustreznega delovanja uporabniškega vmesnika z informacijami o ugodnostih. 
+
+   Zbrana so ta polja:
+
+   - **appsExpanded** – niz – seznam storitev/aplikacij, ločen z vejico, za katerega so bile razširjene ugodnosti.
+   - **productId** – niz – ID izdelka v trgovini App Store, za katerega si je uporabnik ogledal dodatne ugodnosti.
+   - **userDuration** – dvojno – trajanje prikaza zaslona z ugodnostmi v milisekundah.
+
+- **Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap** – Ta dogodek je zbran, ko uporabnik tapne »Prikaži vse ugodnosti« po uspešnem nakupu, da si ogleda aplikacije in funkcije, vključene v nakup. Ti podatki so uporabljeni za merjenje učinkovitosti delovanja uporabniškega vmesnika.
+
+   Zbrana so ta polja:
+
+   - **productId** – niz – ID izdelka v storitvi App Store, za katerega si je uporabnik ogledal vse razpoložljive ugodnosti.
+
+- **Office.iOS.Paywall.SKUChooser.ProductSwitched** – Telemetrija uporabe za prikaz interakcije končnega uporabnika z določenim uporabniškim vmesnikom za preklapljanje med različnimi inventarnimi številkami ter zagotavljanje učinkovitega delovanja. 
+
+   Zbrana so ta polja:
+
+  - **productId** – niz – ID izdelka v trgovini App Store, katerega si pravkar ogleduje uporabnik v izdelkih, ki so na voljo v orodju SKU Chooser.
+
+- **Office.iOS.Paywall.StoreKit.Response** – Kritična telemetrija inženirstva za beleženje rezultata poskusa nakupa, ki ga je ročno aktiviral uporabnik, ter odziv na ta dogodek v trgovini App Store. Podatki so uporabljeni za merjenje stanja poskusa nakupa in (morebitnih) razlogov za neuspeh ter ustrezno ukrepanje za zagotavljanje učinkovitega delovanja IAP-a in vseh vstopnih točk.
+
+   Zbrana so sledeča polja:
+
+   - **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+   - **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje trgovina App Store.
+   - **productId** – niz – velja samo za »MakePurchase«, »PendingPurchase«; ID trgovine z aplikacijami za izdelek, za katerega je bila ustvarjena zahteva.
+   - **productsCount** – celo število – velja samo za »ProductsFetch«; število izdelkov, ki jih vrne trgovina.
+   - **requestType** – niz – vrsta zahteve za StoreKit. Npr. »ProductsFetch«, »PendingPurchase«
+   - **status** – niz – stanje »Success« ali »Failure«, ki navaja, ali je bila zahteva uspešna oziroma neuspešna.
+
+- **Office.iOS.Paywall.Provisioning.Response** – Kritična telemetrija inženirstva in pogodba s storitvijo Retail Federation Service (RFS) za zbiranje informacij v tem dogodku. Storitev RFS je interna storitev, uporabljena v Microsoftu za navzkrižno preverjanje nakupa. Uporabljena je za pridobivanje informacij o stanju klica API v storitvi RFS za namene zagotavljanje učinkovite integracije.  
+
+   Zbrana so sledeča polja:
+
+   - **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
+   - **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje omogočanje uporabe RFS.
+   - **productId** – niz – ID trgovine z aplikacijami za izdelek, za katerega je bila podana zahteva
+   - **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
+
+
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
 Ta dogodek zajame podatke, ki sodelujejo pri nadzoru stanja komponent Dime. To velja na primer za tok nakupa v aplikaciji, kjer se uporabnik odloči za nakup naročnine na Microsoft 365 v aplikaciji Office za Android ali v napravi, v kateri se izvaja sistem Windows.
@@ -3496,29 +3582,6 @@ Ta dogodek zbira brezplačne funkcije uporabnikov, ki so v ozadju plačila. Poda
 Zbrana so sledeča polja:
 
 - **featureId** - TCID za vrhunske funkcije, ki jih uporabnik tapne
-
-
-### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
-
-Kritični telemetrični podatki o uporabi se zbirajo za ponazoritev, ko uporabnik tapne gumb za nakup.  Ti podatki se uporabljajo za predvidevanje vzorca uporabe in pretvorbo metričnih podatkov za uporabnike, ki poskušajo skleniti naročnino v aplikaciji.
-
-Zbrana so sledeča polja:
-
-- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
-
-- **isDefaultSKU** – logična vrednost – če uporabnik kupuje izdelek, ki smo mu ga priporočili, je ta prikazan privzeto.
-
-- **productId** – niz – ID izdelka iz trgovine z aplikacijami za izdelek, za katerega je uporabnik tapnil gumb za nakup.
-
-- **toggleCount** – celo število – prikazuje, kolikokrat je uporabnik preklopil med prikazi različnih izdelkov, preden je tapnil gumb za nakup, v trenutni seji sistema za plačevanje.
-
-### <a name="officeiospaywallsuccessscreenseeallbenefitsbuttontap"></a>Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap
-
-Telemetrija uporabe za pridobivanje informacij o tem, kdaj uporabnik po uspešnem nakupu tapne možnost »Prikaz vseh ugodnosti«, da si ogleda aplikacije in funkcije, ki so vključene v pravkar opravljen nakup. Podatke uporabimo za razvoj prihodnjih izboljšav za zmanjševanje motenj za uporabnike med posodobitvami aplikacij.
-
-Zbrana so sledeča polja:
-
-- **productId** – niz – ID izdelka v storitvi App Store, za katerega si uporabnik ogleduje vse ugodnosti, ki so na voljo
 
 
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
@@ -3675,7 +3738,7 @@ Zbrana so sledeča polja:
 
 - **ErrorType** – vzrok neuspeha, na primer »AlreadyRedeemedByOther«.
 
-- **InAFOFlow** – znakovni niz tipa Boolean, ki označuje, ali smo v toku AFO redemption.
+- **InAFOFlow** – Logična vrednost, ki označuje, ali se nahajamo v toku prevzema aktiviranja za Office.
 
 - **StatusCode** – rezultat klica storitve z eno besedo, na primer »ustvarjeno«.
 
@@ -3831,6 +3894,107 @@ Ta dogodek se aktivira, če iz neznanega razloga ne uspemo aktivirati uporabnika
 
 Ta dogodek ne zbere nobenega polja.
 
+### <a name="officelicensingoobehandledigitalattachfailure"></a>Office.Licensing.OOBE.HandleDigitalAttachFailure
+
+Ta dogodek je sprožen, ko preverjanje storitve (glejte dogodek Office.Licensing.OOBE.SearchForDigitalAttach) ni našlo ustrezne ponudbe digitalne priloge v napravi. Uporabnikom so prikazana različna pogovorna okna, glede na različne pogoje v napravi. Ta dnevnik zabeleži različne scenarije ravnanja v primeru napake digitalne priloge.
+
+Zbrana so ta polja:
+
+- **Activity_Result_Tag** – Označuje način prehoda uporabnika v različna stanja napake.
+   - 0x222e318f – Nadaljevanje iskanja ponudbe aktiviranja za Office.
+   - 0x222e318e – Povrnitev v način OEM v tej seji, ko za napravo ni na voljo nobene ponudbe digitalne priloge.
+   - 0x222e318d – Ni internetne povezave, zato je uporabniku prikazano pogovorno okno »NoInternetConnectivity«. 
+   - 0 – Uporabniku so prikazane različne napake uporabniškega vmesnika, glede na kodo napake.
+
+- **Data_DigitalAttachErrorType** – Označuje določeno kodo napake klica storitve.
+
+- **Data_FallbackFlight** – Označuje, ali je vklopljena oziroma izklopljena pilotna različica UseAFOAsFallBack.
+
+
+### <a name="officelicensingoobehandledigitalattachsuccess"></a>Office.Licensing.OOBE.HandleDigitalAttachSuccess
+
+Ta dogodek je sprožen, ko preverjanje storitve najde ponudbo digitalne priloge, ki jo je mogoče prevzeti, v tej napravi. Uporabnikom so prikazana različna pogovorna okna, glede na različne pogoje v napravi. Ta dnevnik zabeleži različne scenarije ravnanja v primeru uspešne digitalne priloge.
+
+Zbrana so ta polja:
+
+- **Activity_Result_Tag** – Označuje način ravnanja pri scenarijih uspešne digitalne priloge.
+   - 0 – Omogočeno je samodejno nalaganje identitete in uporabniku je prikazan uporabniški vmesnik »Office je na voljo« (z računom).
+   - 0x222e3191 – Samodejno nalaganje identitete ni omogočeno, zato je prikazan uporabniški vmesnik »Office je na voljo« (brez računa).
+   - 0x222e3193 – Uporabniku je prikazan uporabniški vmesnik »Office je na voljo« (brez računa) ali pa uporabniku ni prikazan noben uporabniški vmesnik »Office je na voljo«, ker je izbrana ponudba, ki temelji na napravi.
+
+- **Data_IsClaimTypeDevice** – Označuje, ali vrsta zahteve ponudbe digitalne priloge temelji na napravi.
+
+### <a name="officelicensingoobepopulatedigitalattachoffersignindex"></a>Office.Licensing.OOBE.PopulateDigitalAttachOfferSignInDEX
+
+Proizvajalci strojne opreme (OEM) prodajajo naprave, ki vključujejo Office (enoletne ali trajne naročnine), ki ga stranka plača ob nakupu naprave. Ta dogodek spremlja, če je zaznana vnaprejšnja upravičenost do Officea za napravo in je uporabnik že vpisan z Microsoftovim računom za namene nadzora ustreznosti stanja sistema in storitev.
+
+Zbrana so ta polja:
+
+- **Data_ExpirationDate** – Označuje datum poteka ponudbe naročnine.
+
+- **Data_IsSubscription** – Označuje, ali ima izdelek, ki bo prevzet, inventarno številko za naročnino ali pa trajno inventarno številko.
+
+- **Data_ProductName** – Označuje ime izdelka ponudbe digitalne priloge.
+
+
+### <a name="officelicensingoobesearchfordigitalattach"></a>Office.Licensing.OOBE.SearchForDigitalAttach
+
+Proizvajalci strojne opreme (OEM) prodajajo naprave, ki vključujejo Office (enoletne ali trajne naročnine), ki ga stranka plača ob nakupu naprave. Naprave, ki so nastavljene z določenim registrskim ključem (OOBEMode: OEMTA), morda vključujejo digitalno prilogo ponudbe za Office. Ko zaženete Office, so izvedena preverjanja storitve za prepoznavanje, ali je na voljo digitalna priloga ponudbe za Office. Ta dejavnost je nastavljena za tega dogodka. 
+
+Zbrana so ta polja:
+
+- **Activity_Result_Tag** – Naveden je splošen rezultat tega preverjanja storitve. 
+   - 0x222e318c – Pilotna različica digitalne priloge je izklopljena, zato ni izvedeno nobeno preverjanje storitve.
+   - 0x222e318b – Odjemalec nima vzpostavljene internetne povezave, zato ni izvedeno nobeno preverjanje storitve.
+   - 0x222e318a – Najdena je bila ponudba digitalne priloge, ki jo je mogoče prevzeti.
+   - 0x222e3189 – Najdena je bila ponudba digitalne priloge, ki je ni mogoče prevzeti.
+
+- **Data_EnableDAFlight** – Označuje ali je pilotna različica digitalne priloge, ki omogoča to preverjanje storitve, vklopljena ali izklopljena.
+
+
+### <a name="officelicensingoobeshowtouchlessattachfailuredialog"></a>Office.Licensing.OOBE.ShowTouchlessAttachFailureDialog
+
+Proizvajalci strojne opreme (OEM) prodajajo naprave, ki vključujejo Office (enoletne ali trajne naročnine), ki ga stranka plača ob nakupu naprave. Ta dogodek je sprožen, ko pride do napake v toku prevzema in aktiviranja digitalne priloge za računalnike proizvajalcev strojne opreme, ki so vnaprej upravičeni do Officea.  Ti podatki so uporabljeni za spremljanje ustreznosti stanja sistemov in storitev ter odpravljanje težav, povezanih s tokom aktiviranja Officea za OEM.
+
+Zbrana so ta polja:
+
+- **Data_Continue** – Označuje, ali je uporabnik kliknil »Nadaljuj« v pogovornem oknu.
+
+- **Activity_Result_Tag** – Označuje gumb, ki ga je uporabnik kliknil v pogovornem oknu.
+   - 0x222e319d – Uporabnik je kliknil »Poskusi znova« v pogovornem oknu.
+   - 0x222e319c – Uporabnik je kliknil »Nadaljuj« v pogovornem oknu.
+   - 0 – Uporabnik je zaprl pogovorno okno.
+
+- **Data_IsForDigitalAttach** – Označuje platformo in potek dela, ki ga uporablja uporabnik – podedovano (aktiviranje za Office (AFO)) ali sodobno (digitalna priloga).
+
+- **Data_Retry** – Označuje, ali je uporabnik kliknil »Poskusi znova« v pogovornem oknu.
+
+
+### <a name="officelicensingoobeshowtouchlessattachofferdialog"></a>Office.Licensing.OOBE.ShowTouchlessAttachOfferDialog
+
+Proizvajalci strojne opreme (OEM) prodajajo naprave, ki vključujejo Office (enoletne ali trajne naročnine), ki ga stranka plača ob nakupu naprave. Ta dogodek spremlja, če je zaznana vnaprejšnja upravičenost do Officea za napravo in uporabnik ni vpisan z Microsoftovim računom za namene nadzora ustreznosti stanja sistema in storitev.
+
+Zbrana so ta polja:
+
+- **Activity_Result_Tag** – Označuje, ali je bila najdena identiteta za uporabnika.
+   - 0x222e3194 – Identitete uporabnika ni bilo mogoče pridobiti (prišlo je do preklica vpisa ali pa preverjanje pristnosti ni bilo uspešno).
+   - 0 – Pridobljena je bila identiteta uporabnika.
+
+- **Data_ExpirationDate** – Označuje datum poteka ponudbe naročnine.
+
+- **Data_IsCentennial** – Označuje, ali se Officeova aplikacija izvaja v platformi Centennial.
+
+- **Data_IsForDigitalAttach** – Označuje, ali je bilo to pogovorno okno sproženo v toku digitalne priloge ali toku aktiviranja za Office.
+
+- **Data_IsSubscription** – Označuje, ali ima izdelek, ki bo prevzet, inventarno številko za naročnino ali pa trajno inventarno številko.
+
+- **Data_OExType** – Označuje, ali je uporabnik zaprl pogovorno okno, ko je kliknil povezavo ChangeAccount.
+
+- **Data_ProductName** – Označuje ime izdelka ponudbe digitalne priloge.
+
+- **Data_UseInAppRedemption** – Označuje, ali je bil uporabljen prevzem v aplikaciji ali spletni prevzem – to je pomembno le za tok aktiviranja za Office.
+
+
 ### <a name="officelicensingoobetrybuychoice"></a>Office.Licensing.OOBE.TryBuyChoice
 
 Uporabniki z vnaprej nameščenim sistemom Office v novih računalnikih, ki nimajo pravice do Officea, so prikazani v pogovornem oknu, s katerim lahko preskusite, kupite ali vnesete ključ izdelka, da dobi licenco. Ta dogodek zajame dejanje uporabnika v pogovornem oknu. Ta dogodek se uporablja za spremljanje dejanja uporabnika, ki se prikaže v pogovornem oknu, ki je prikazano uporabnikom brez pravic za Office, v katerem je bil Office vnaprej nameščen v računalniku, in pomaga ugotoviti, ali je uporabnik licenciral ali ga ni licenciral z načrtom.
@@ -3965,7 +4129,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingtelemetryflowshowafodialogs"></a>Office.Licensing.TelemetryFlow.ShowAFODialogs
 
-Ko ste uspešno dokončali veljaven Officeov PIN, ki je vezan na računalnik, ki je bil vnaprej povezan s sistemom Office, je uporabnik v pogovornem oknu za vpis ali v pogovorno okno za prevzem.  Ko je koda PIN preplačana, je prikazano pogovorno okno »EULA«.  Kot del naše funkcije modernizacije AFO smo osvežili dve pogovorni okni, da bi posredovali več informacij o Officeovem izdelku, ki je na voljo v računalniku.  Ta telemetrijo je namenjena sledenju, če naša funkcija uspešno zmanjša število uporabnikov, pri čemer prevzame njihov izdelek tako, da spremlja potek in izstopne točke postopka prevzema (ki je bil opuščen).
+Ko ste uspešno dokončali veljaven Officeov PIN, ki je vezan na računalnik, ki je bil vnaprej povezan s sistemom Office, je uporabnik v pogovornem oknu za vpis ali v pogovorno okno za prevzem.  Ko je koda PIN preplačana, je prikazano pogovorno okno »EULA«.  Kot del posodobitve funkcije aktiviranja za Office smo osvežili dve pogovorni okni, da bi posredovali več informacij o Officeovem izdelku, ki je na voljo v računalniku.  Ta telemetrijo je namenjena sledenju, če naša funkcija uspešno zmanjša število uporabnikov, pri čemer prevzame njihov izdelek tako, da spremlja potek in izstopne točke postopka prevzema (ki je bil opuščen).
 
 Zbrana so naslednja polja:
 
@@ -3981,9 +4145,9 @@ Zbrana so naslednja polja:
 
 - **DialogEULA** – signal, da smo prikazali pogovorno okno »Sprejmi EULA«. 
 
-- **DialogRedemption** – signal, ki smo ga pokazali v pogovornem oknu »AFO ' Redemption«.
+- **DialogRedemption** – Signal, da je bilo prikazano pogovorno okno za prevzem aktiviranja za Office.
 
-- **DialogSignIn** – signal, da smo prikazali pogovorno okno za vpis v AFO '.
+- **DialogSignIn** – Signal, da je bilo prikazano pogovorno okno za vpis v aktiviranja za Office.
 
 - **EmptyRedemptionDefaults** – sporočilo, da ni bilo mogoče pridobivati privzetih informacij o prevzemu.
  
@@ -3995,7 +4159,7 @@ Zbrana so naslednja polja:
 
 - **OExType** – podrobnosti o napaki, ki se prikaže, ko je bil v pogovornem oknu »vpis identitete« opuščen.
 
-- **Tag** – pove nam, s katerim korakom uporabnik zapusti proces prevzema AFO '. Možna oznaka:
+- **Tag** – Označuje, v katerem koraku uporabnik zapre postopek prevzema aktiviranja za Office. Možna oznaka:
     - 0x0311380b – uporabnik je opustil pogovornega okno »prevzem identitete« iz pogovornega okna »redemption«
     - 0x0311380c – ni uspel samodejnega nalaganja identitete po vpisu uporabnika iz pogovornega okna »redemption«
     - 0x03113810 – ni uspel naložiti demografskih informacij kupca (koda države, jezik, valuta, ponudba za preskusno različico in nastavitve marketinga)
@@ -4010,14 +4174,13 @@ Zbrana so naslednja polja:
     - 0x2370e3c1 obiščite spletno mesto za prevzem PIN-a
     - 0x2370e3a1 obiščite spletno mesto za prevzem PIN-a
     - Pogovorno okno »0x2370e3c0 zaporedje«, ki ga je povzročil uporabnik, ki je bil na tekočem v pogovornem oknu
-    - Uporabnik 0x2370e3a3 je kliknil hiperpovezavo »not Now«, ki preskoči ponudbo za AFO ' za to sejo.
-    - Uporabnik 0x2370e3a2 je kliknil »nikoli mi ne kaži več« hiperpovezave, ki onemogoči ponudbo za AFO '
+    - 0x2370e3a3 – Uporabnik je kliknil hiperpovezavo »Ne zdaj«, ki preskoči ponudbo aktiviranja za Office za to sejo.
+    - 0x2370e3a2 – Uporabnik je kliknil hiperpovezavo »Tega mi nikoli ne prikaži«, kar onemogoči ponudbo aktiviranja za Office.
 
 
-- **UseInAppRedemption** – nam pove, ali imamo uporabniki v aplikaciji za prevzem ali pa jih pošljejo v splet, da bodo lahko izkoristili pogosto kodo PIN (vnaprej izpolnjene).
+- **UseInAppRedemption** – Navaja, ali so uporabniki na voljo v aplikaciji za prevzem ali pa v spletu za prevzem pridobljene kode PIN (vnaprej dopolnjeno).
 
-- **UseModernAFO** – nam pove, ali uporabljate novo ali staro AFO
- izkušnjo.
+- **UseModernAFO** – Navaja, ali uporabljamo novo oziroma staro izkušnjo aktiviranja za Office.
 
 ### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
 
@@ -4027,7 +4190,7 @@ Zbrana so naslednja polja:
 
 - **ActiveView** – pove ID pogovornega okna, ki je prikazan uporabniku
 
-- **CurrentOOBEMode** – pove način prednamestitve (način OOBE, kot je AFO ', OEM itd.)
+- **CurrentOOBEMode** – Navaja način prednamestitve (način OOBE, kot je aktiviranje za Office, OEM itd.)
 
 - **NotInitializedBeforeWhileAdding** – to je zgolj informativno in pove, ali je bil dogodek dodan v preslikavo upravitelja telemetrijo, ne da bi ga izrecno registrirali
 
@@ -10705,6 +10868,55 @@ Zbrana so sledeča polja:
 - **ID** seje – identifikator za sejo
 
 
+### <a name="installedapprespondedcoreappleevent"></a>installedapp.respondedcoreappleevent
+
+Ta dogodek označuje, da je Microsoft Auto Update (MAU) prejel kodo odziva dogodka Apple iz registrirane aplikacije za prekinitev aplikacije za nadaljevanje izvajanja čakajočih posodobitev aplikacije. Ta dogodek se trenutno uporablja za pomoč pri prihodnjih izboljšavah, s katerimi bodo kar najbolj zmanjšane prekinitve med posodobitvami aplikacij. 
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppID** – identifikator za aplikacijo, ki se posodablja
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija
+
+- **AppleEventClass** – označuje vrsto dogodka, ki se pošilja ali potrjuje
+
+- **AppleEventID** – enočični identifikator dogodka, ki se pošilja/potrjuje
+
+- **AppversionLong** – različica programa
+
+- **Channel** – ugodnost občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – ura prejemanja telemetrijo
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je zgodil dogodek iz dnevnika 
+
+- **HowToCheck** – kako preveriti nastavitev
+
+- **Payload** – vsebuje število ponovnih poskusov
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **ID** seje – identifikator za sejo
+
+- **UpdateID** – identifikator posodobitve
+
+
 ### <a name="installedappsendcoreappleevent"></a>installedapp.sendcoreappleevent
 
 Ta dogodek označuje, da Microsoft Auto Update (MAU) pošilja dogodek Apple v registrirano aplikacijo, da prekine aplikacijo, da bi se lahko nadaljevala čakajoča posodobitev aplikacije. Ta dogodek se trenutno uporablja za pomoč pri prihodnjih izboljšavah, s katerimi bodo kar najbolj zmanjšane prekinitve med posodobitvami aplikacij. 
@@ -15765,39 +15977,6 @@ Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. 
 Zbrana so naslednja polja:
 
 - **Data_EventId** – koda, ki označuje nastavitve za diagnostično zbirko podatkov, ki jo je izbral uporabnik.
-
-### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
-
-Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin. Uporablja se za lažje beleženje transakcij in omogočanje uporabe naročnine v bodoče in za notranje usklajevanje.
-
-Zbrana so sledeča polja:
-
-- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
-
-- **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje omogočanje uporabe RFS.
-
-- **productId** – niz – ID trgovine z aplikacijami za izdelek, za katerega je bila podana zahteva
-
-- **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
-
-
-### <a name="officeiospaywallstorekitresponse"></a>Office.iOS.Paywall.StoreKit.Response
-
-Podatki so zbrani kot kritična tehnika telemetrije za beleženje rezultata poskusa nakupa, ki ga je ročno aktiviral uporabnik. Telemetrija izdelka, ki se uporablja za uskladitev informacij o izvedeni transakciji z Microsoftovim trgovinskim sistemom za omogočanje prednosti povezanih naročnin.
-
-Zbrana so sledeča polja:
-
-- **entryPoint** – niz – gumb/potek za prikaz plačilnega sistema Npr. gumb »Nadgradnja Premium« ali »Prvi tok zagona«.
-
-- **failureReason** – niz – se doda samo, če je stanje»neuspeh«. Prikaže odgovor napake, ki ga posreduje trgovina z aplikacijami
-
-- **productId** – niz – velja samo za »MakePurchase«, »PendingPurchase«; ID trgovine z aplikacijami za izdelek, za katerega je bila ustvarjena zahteva.
-
-- **productsCount** – celo število – velja samo za »ProductsFetch«; število izdelkov, ki jih vrne trgovina.
-
-- **requestType** – niz – vrsta zahteve za StoreKit. Npr. »ProductsFetch«, »PendingPurchase«
-
-- **status** – niz – morebitni vrednosti »uspeh« ali »neuspeh«, ki ponazarjata, ali je bila zahteva uspešna/neuspešna
 
 ### <a name="officeonenotegetsharepointidsfordocument"></a>Office.OneNote.GetSharePointIdsForDocument
 
