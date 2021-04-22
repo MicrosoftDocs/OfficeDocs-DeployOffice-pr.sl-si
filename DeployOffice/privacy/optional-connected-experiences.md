@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
-ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
+ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
+ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51181747"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51914961"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -43,6 +43,7 @@ Tehnologija Bing je uporabljena pri teh izkušnjah v Outlooku za iOS in sistemu 
 - **Predlogi za lokacijo:**   Ko v element koledarja dodate javni kraj z uličnim naslovom, se polje »Lokacija« izpolni s celotnim uličnim naslovom.
 - **Zanimivi koledarji:**   [Naročite se](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) lahko na koledarje o vaših najljubših športnih ekipah ali TV-oddajah.
 - **Čas potovanja v naslednjem:** vaš naslednji prihajajoči dogodek bo povzet na vrhu nabiralnika v e-pošti na kartici, ki se imenuje [naslednje](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). V aplikaciji Outlook za Android je za to izkušnjo potrebno, da zemljevidi Bing ponudijo predviden čas potovanja.
+- **Vreme v koledarju:** [vremenska napoved](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2) za trenutno lokacijo bo prikazana na vrhu zaslona koledarja.
 
  Za te storitve, ki za delovanje potrebujejo Bing, prejmete licenco in zanje veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) ter [izjava o zasebnosti](https://privacy.microsoft.com/). Katere koli poizvedbe, ki jih med uporabo teh storitev opravite v organizaciji Office 365 za podjetja, so poslane Microsoft Bing. Organizacija Bing jih ne bo povezala z vami.
 

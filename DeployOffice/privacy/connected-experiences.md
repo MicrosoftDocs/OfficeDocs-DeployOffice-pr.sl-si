@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: d7c4af6af94025136ab09f0709d8c65382f456dd
-ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
+ms.openlocfilehash: c1fb64bc45ed9e97cde37541dad85162a5a3699c
+ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51181278"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51916103"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -36,16 +36,16 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | **Ime**   | **Več informacij**   |
 | ----------- | ------------------ |
 | *3D-zemljevidi*\*    | [Uvod v 3D-zemljevide](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+| Analiza podatkov (prej imenovano zamisli) | [Analiza podatkov v Excelu](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 |Samodejni popravki|[Preprosto in hitro poravnajte vsebino s samodejnimi popravki](https://support.microsoft.com/office/b5ec9a1e-f955-46d5-a91b-f236459525b4)|
 | Samodejno nadomestno besedilo   | [Vse, kar morate vedeti za pisanje učinkovitih nadomestnih besedil](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 |Priporočila za grafikone (Excel za splet)|[Ustvarite grafikon s priporočenimi grafikoni](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
 |Dodatki za zvezek za predavanja (OneNote)|[Uvod v OneNotov zvezek za predavanja: navodila za profesorje](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
 | Podatkovni tipi| [Podatkovni tipi v Excelu: Delnice in geografija](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
 |Oblikovalnik (Word za splet)|[Uporaba Oblikovalnika za ustvarjanje bolj dodelanih dokumentov](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
-| Narekovanje  | [Narekujte svoje dokumente v Wordu](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
+| Narekovanje  | [Narek v okolju Microsoft 365](https://support.microsoft.com/office/eab203e1-d030-43c1-84ef-999b0b9675fe) |
 |Urejevalnik<sup>1</sup> |[Microsoft Editor preveri slovnico in veliko drugega v dokumentih, e-pošti in spletu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 |Prijazne povezave v Outlooku |[Prijaznejša imena povezav v e-pošti](https://support.microsoft.com/office/02040f47-bd56-4806-8311-fc913fed54c0)|
-| Zamisli     | [Zamisli v Excelu](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 |Orodja za učenje|[Orodja za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
@@ -103,6 +103,7 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | Predloge  | [Prenos brezplačnih, vnaprej vgrajenih predlog](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
 |*Čas potovanja ocenjujemo v naslednjem*\*|Ko se odločite, da boste za dostop do vaše lokacije omogočili Outlook za iOS in Android, bo ocena vašega potovalnega časa v naslednjem dogodku vključena v [navzgor naslednja](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) kartica na vrhu mape »Prejeto«.<br/><br/> [Kaj je Čas, da zaprete obvestila?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Vrstica za vreme*\* (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+|*Vreme v koledarju*\* (Outlook Mobile)|[Kako lahko vklopim vreme v koledarju v programu Outlook Mobile?](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2)|
 
 > [!NOTE]
 >\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
