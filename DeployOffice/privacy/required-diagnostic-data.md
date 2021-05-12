@@ -5246,7 +5246,7 @@ Ta dogodek označuje, kdaj je uporabnik uporabil funkcije visoke vrednosti v izd
 
 Zbrana so ta polja: 
 
-- **FeatureAction** – Oznaka, ki navaja funkcijo in dejanje visoke vrednosti, ki ju je izvedel uporabnik – na primer »ContentPickerTried», »TemplatesSeen«.
+- **FeatureAction** – Oznaka, ki navaja funkcijo in dejanje visoke vrednosti, ki ju je izvedel uporabnik, na primer »ContentPickerTried» ali »TemplatesSeen«.
 
 
 #### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
