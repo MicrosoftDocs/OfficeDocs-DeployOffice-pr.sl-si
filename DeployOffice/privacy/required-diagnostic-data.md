@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom za Office so na voljo informacije o obveznih diagnostičnih podatkih v sistemu Office ter seznam dogodkov in podatkovnih polj.
 hideEdit: true
-ms.openlocfilehash: 69abd5fc0355db7758debc0193b4439754eda2f2
-ms.sourcegitcommit: b6f55a032079a9525cedd93b9e431c188ca24775
+ms.openlocfilehash: c61c3072c4c0f61926b51c0fab5e46a1b5151e00
+ms.sourcegitcommit: 2796ba69444926d686e7ed587a89d8ee9e313d84
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51889800"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "52328439"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obvezni diagnostični podatki za Office
 
@@ -62,7 +62,7 @@ V spodnji tabeli je na voljo seznam kategorij za obvezne diagnostične podatke. 
 | **Nastavitev programske opreme in inventar** | [Nastavitev Officea in inventar](#office-setup-and-inventory-subtype)   | Nameščeni izdelek, različica in stanje namestitve.  |
 | | [Konfiguracija dodatka za Office](#office-add-in-configuration-subtype)  | Dodatki programske opreme in nastavitve.     |
 | | [Varnost](#security-subtype)  | Stanje napak dokumentov, funkcij in dodatkov, ki lahko ogrozijo varnost in pripravljenost izdelka za posodobitve.  |
-| **Uporaba izdelka in storitev**    | [Uspešnost izvajanja funkcije aplikacije](#application-feature-success-subtype)   | Uspešnost delovanja aplikacije. Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje). |
+| **Uporaba izdelka in storitev**    | [Uspešnost izvajanja funkcije aplikacije](#application-feature-success-subtype)   | Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje). |
 | | [Stanje in zagon aplikacije](#application-status-and-boot-subtype)    | Prepoznavanje, ali so bili izvedeni določeni dogodki funkcij, kot je zagon ali ustavitev, oz. če se funkcije izvajajo.   |
 | | [Konfiguracija za dostopnost sistema Office](#office-accessibility-configuration-subtype)  | Officeove funkcije dostopnosti       |
 | | [Zasebnost](#privacy-subtype)| Nastavitve zasebnosti za Office|
@@ -91,7 +91,7 @@ Informacije, skupne za vse dogodke, so zbrane v teh kategorijah.
 
 #### <a name="app"></a>Aplikacija 
 
-Informacije o aplikaciji. Vsa polja so nespremenljiva za vse seje določene različice aplikacije.
+Informacije o aplikaciji. Vsa polja so konstantna za vse seje dane različice programa.
 
 Ta kategorija vsebuje ta polja:
 
@@ -103,7 +103,7 @@ Ta kategorija vsebuje ta polja:
 
 #### <a name="client"></a>Odjemalec 
 
-Identifikator, povezan s primerkom sistema Office v napravi. Konstanta za vse seje vseh aplikacij določene različice namestitve za zbirke več aplikacij oz. konstanta za vse seje določene različice aplikacije.
+Identifikator, povezan s primerom Officea v napravi. Konstanta za vse seje vseh aplikacij dane namestitvene različice za zbirke z več aplikacijami ali konstantno za vse seje dane različice programa.
 
 Ta kategorija vsebuje ta polja:
 
@@ -373,7 +373,7 @@ Ta kategorija vsebuje ta polja:
 
   - **RuleVersion** – Identifikator pravila, ki je ustvarilo podatke (če je te ustvarilo pravilo). Omogoča določitev vira dela podatkov, tako da lahko preverimo veljavnost parametrov dogodkov in jih upravljamo.
 
-  - **SampleRate** – navedbo, Kolikšen odstotek uporabnikov pošilja ta del podatkov. Na ta način lahko izvedemo statistične analize podatkov in za zelo pogosta podatkovna mesta ne zahtevajo, da jih pošljejo vsi uporabniki.
+  - **SampleRate** – Navedba odstotka uporabnikov, ki pošiljajo ta del podatkov. Opravimo lahko statistično analizo podatkov in pogostih podatkovnih točk, ki ne zahtevajo, da jih pošiljajo vsi uporabniki.
 
   - **SchemaVersion** – Različica sheme, ki je uporabljena za ustvarjanje diagnostičnih podatkov. Zahtevano za upravljanje podatkov, poslanih iz odjemalca. Omogoča, da lahko sčasoma spremenimo vrsto podatkov, ki jih pošilja odjemalec.
 
@@ -616,6 +616,8 @@ Naslednja podatkovna polja so skupna za vse dogodke storitve Outlook za iOS in A
 
 - **PipelineInfo.IngestionTime** – časovni žig, kdaj smo prejeli telemetrijo za ta dogodek
 
+- **sample_rate** – odstotek naprav, ki zbirajo primerke dogodka. Pomaga izračunati izvirno število primerkov dogodka.
+
 - **Session.Id** – enolični identifikator za sejo aplikacije, da bomo lahko prepoznali težave določene seje
 
 - **Session.ImpressionId** – enolični identifikator za upravljanje izdaj naših funkcij, da lahko zagotovimo uspešno izdajo funkcij za vse uporabnike in naprave
@@ -652,7 +654,13 @@ Poleg tega so naslednja polja skupna za vse dogodke storitve Outlook za Android.
 
 - **is_dex_mode_enabled** – če je omogočen način Samsung DeX, da bomo lahko zaznali težave določenega načina DeX pri napravah Samsung
 
+- **is_preload_install** – nam pove, ali je bil program vnaprej naložen v napravi (naprave s sistemom Android 11 ali novejše različice)
+
 - **is_sliding_drawer_enabled** – če je omogočen vmesnik s premikajočimi se predali, da bomo lahko zaznali težave, ki jih povzroča naš vmesnik s premikajočimi se predali
+
+- **oem_preinstall** – sporoča nam, ali je bila naša aplikacija vnaprej nameščena v napravo
+
+- **oem_preload_property** – Sporoča nam, ali je bila naša aplikacija vnaprej naložena v okviru določene pogodbe z OEM
 
 - **orientation** – fizična usmerjenost zaslona (pokončno/ležeče), da bomo lahko zaznali težave določene usmerjenosti zaslona
 
@@ -921,6 +929,21 @@ Zbrana so naslednja polja:
 - **OnPremNBCount** – Število zvezkov v strežniku na mestu uporabe.
 
 - **TotalNBCount** – Skupno število zvezkov, povezanih z uporabniškim računom.
+
+#### <a name="officeonenotesystemapplifecycleuseraccountinfo"></a>Office.OneNote.System.AppLifeCycle.UserAccountInfo
+
+Ta dogodek se sproži za kodo v skupni rabi in vrednosti zapisov za vrsto računov, vpisane prek isEdu, isMsftInternal, isIW, isMSA. Podatki se zberejo, ko se čakalna vrsta po zagonu prvič nedejavna. Ta oznaka je uporabljena za sledenje vrstam računov, ki so vpisani v napravo. Tako bomo lažje identificirali uporabnike izobraževalnega programa v OneNotu. 
+
+Zbrana so naslednja polja: 
+
+- **IsEdu** – možne vrednosti – true/false
+
+- **IsMSA** – možne vrednosti – true/false
+
+- **IsIW** – možne vrednosti – true/false
+
+- **IsMsftInternal** – možne vrednosti – true/false
+
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
@@ -1201,7 +1224,7 @@ Zbrana so ta polja:
 
 #### <a name="officeoutlookdesktopadd-insadd-inloaded"></a>Office.Outlook.Desktop.Add-ins.Add-inLoaded
 
-Zbira uspešna in neuspešna nalaganja dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje ustreznega delovanja Outlooka s strankinimi dodatki. S temi podatki zaznamo težave in jih raziščemo.
+Te podatke aktivno spremljamo za zagotavljanje ustreznega delovanja Outlooka s strankinimi dodatki. S temi podatki zaznamo težave in jih raziščemo.
 
 Zbrana so naslednja polja:
 
@@ -1209,7 +1232,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeoutlookmacaddinapiusage"></a>Office.Outlook.Mac.AddinAPIUsage
 
-Zbira uspehe in neuspehe izvedb dodatkov v Outlooku. Te podatke aktivno spremljamo za zagotavljanje ustreznega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+Zbira uspeh in neuspeh izvajanja dodatka v Outlooku. Ti podatki so aktivno nadzorovani, da se zagotovi pravilno delovanje Outlooka z dodatki. Ti podatki se uporabljajo za zaznavanje in raziskovanje težav.
 
 Zbrana so naslednja polja:
 
@@ -1230,7 +1253,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeoutlookmacaddineventapisusage"></a>Office.Outlook.Mac.AddinEventAPIsUsage
 
-Zbira uspehe ali neuspehe izvedbe dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje pravilnega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+Zbira uspeh ali neuspeh izvajanja dodatka v Outlooku. Ti podatki so aktivno nadzorovani, da se zagotovi pravilno delovanje Outlooka z dodatki. Ti podatki se uporabljajo za zaznavanje in raziskovanje težav.
 
 Zbrana so naslednja polja:
 
@@ -1244,7 +1267,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeoutlookmacaddininstallationfrominclientstore"></a>Office.Outlook.Mac.AddInInstallationFromInClientStore
 
-Zbira uspehe ali neuspehe namestitve dodatka v Outlooku. Te podatke aktivno spremljamo za zagotavljanje pravilnega delovanja Outlooka z dodatki. S temi podatki zaznamo težave in jih raziščemo.
+Zberi uspešno ali neuspešno namestitev dodatka v Outlooku. Ti podatki so aktivno nadzorovani, da se zagotovi pravilno delovanje Outlooka z dodatki. Ti podatki se uporabljajo za zaznavanje in raziskovanje težav.
 
 Zbrana so naslednja polja:
 
@@ -1538,9 +1561,9 @@ Zbrana so ta polja:
 
 #### <a name="officesecuritysecurereaderhostopeninosr"></a>Office.Security.SecureReaderHost.OpenInOSR
 
-Spremlja dokončanje odprtega zaščitenega pogleda. Z njim diagnosticiramo stanja morebitnih napak pri odpiranju datotek v zaščitenem pogledu, ki vplivajo na varnost in storilnost strank.
+Spremlja dokončanje odprtega v zaščitenem pogledu. Uporablja se za diagnosticiranje pogojev, ki povzročijo napake pri odpiranju datotek v zaščitenem pogledu, ki vplivajo na varnost in storilnost uporabnikov.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
   - Nobeno
 
@@ -1556,7 +1579,7 @@ V nadaljevanju tega članka so navedeni podatkovni podtipi v tej kategoriji:
 
 ### <a name="application-feature-success-subtype"></a>*Podtip uspešnosti izvajanja funkcije aplikacije*
 
-Uspešnost delovanja aplikacije. Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje).
+Omejeno na odpiranje in zapiranje aplikacij in dokumentov, urejanje datoteke ter skupno rabo datotek (sodelovanje).
 
 #### <a name="accountaction"></a>account.action
 
@@ -1745,6 +1768,8 @@ Zbrana so sledeča polja:
 - **meeting_insights_type** – vrsta vpogledov srečanja v podrobnosti dogodka.  Vključuje datoteko in sporočilo. S pomočjo tega dogodka lahko določimo število prikaznih vpogledov srečanja. 
 
 - **meeting_type** – vrsta spletnega srečanja, povezanega z dejanjem.  Vključuje vrste za Skype, Skype za podjetja, Hangout in Teams za podjetja. S pomočjo tega dogodka lahko določimo, ali so spletna srečanja pravilno nastavljena. 
+
+- **online_meeting_provider_switch_type** – vrsta preklopa, ki ga je uporabnik opravil med ponudniki spletnih srečanja. Pomaga nam razumeti uporabnikovo angažiranje funkcije.
 
 - **origin** – izvor dejanja koledarja. Vključuje vrste, kot so dnevni red, koledar, gradnik za dnevni red itd. S pomočjo tega dogodka lahko zagotovimo pravilno komunikacijo med komponentami koledarja. 
 
@@ -1963,9 +1988,9 @@ Zbrana so sledeča polja:
 
 #### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateRepublishingLicense.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu API IpcCreateRepublishingLicense.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -1993,9 +2018,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcgetlicenseproperty"></a>IpcGetLicenseProperty
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateRepublishingLicense.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri priklicu API-ja IpcGetLicenseProperty.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2025,9 +2050,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcgetserializedlicenseproperty"></a>IpcGetSerializedLicenseProperty
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateRepublishingLicense.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride ob priklicu API-ja IpcGetSerializedLicenseProperty.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2057,9 +2082,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcgettemplateissuerlist"></a>IpcGetTemplateIssuerList
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateIssuerList.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu API IpcGetTemplateIssuerList.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2119,9 +2144,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcgettemplatelist"></a>IpcGetTemplateList
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateList.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri priklicu API-ja IpcGetTemplateList.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2183,9 +2208,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcpcreatelicensefromscratch"></a>IpcpCreateLicenseFromScratch
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateLicenseFromScratch.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu API IpcpCreateLicenseFromScratch API.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2237,9 +2262,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcpcreatelicensefromtemplate"></a>IpcpCreateLicenseFromTemplate
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka, ko se izvede priklic API IpcCreateLicenseFromTemplate. 
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu API IpcpCreateLicenseFromTemplate. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2275,9 +2300,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcpgettemplatelistforuser"></a>IpcpGetTemplateListForUser
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcGetTemplateListForUser. 
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride ob klicu IPcpGetTemplateListForUser API. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2393,7 +2418,7 @@ Zbrana so naslednja polja:
 
 - **RMS.LicenseFormat** – oblika licence: Xrml ali Json
 
-- **RMS.PL.KeyType** – vrednost »enojno« ali »dvojno«. Označuje, ali je bil PL zaščiten z zaščito z enojnim ali dvojnim ključem.
+- **RMS.PL.KeyType** – vrednosti »enojno« ali »dvojno«. Označuje, ali je bil PL zaščiten z zaščito z enojnim ali dvojnim ključem.
 
 - **RMS.RACType** – vrsta potrdila o računu pravic
 
@@ -2415,9 +2440,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcsetlicenseproperty"></a>IpcSetLicenseProperty
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API  IpcSetLicenseProperty. 
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri priklicu API-ja IpcSetLicenseProperty. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -2580,6 +2605,8 @@ Uporablja se za nadzor morebitnega negativnega učinka na vašo zmožnost sestav
 Zbrana so sledeča polja: 
 
 - **draft_message_id** – ID osnutka za pogovor, ki ga želite ustvariti kot osnutek, s katerim lahko zaznamo težave, povezane z osnutki e-poštnih sporočil
+
+- **from_context_menu** – Pove nam, ali je sestavljanje iz dejanj v priročnem meniju.
 
 - **message_id** – ID sporočila za pogovor, na katerega ste odgovorili ali vam je bil posredovan, s katerim lahko zaznamo težave, povezane z določenim sporočilom
 
@@ -3064,7 +3091,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officeappleactivateperpetual"></a>Office.Apple.ActivatePerpetual
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek uporabljamo za nadzorovanje ustreznosti stanja stalnega postopka aktiviranja ter preiskovanje vzrokov napak na osnovi pregleda vrednosti FailedAt.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Dogodek se uporabi za spremljanje stanja trajnega toka aktivacije in preiskovanje vzrokov za napake tako, da pregledate vrednosti »FailedAt«.
 
 Zbrana so naslednja polja:
 
@@ -3176,7 +3203,7 @@ Zbrana so ta polja:
 
 #### <a name="officedocsappdocsoperationopenfrommrubypath"></a>Office.Docs.AppDocs.OperationOpenFromMruByPath
 
-Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden s poti, navedene na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete napak uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Zapisi o dogodku, ko se postopek odprte datoteke začne s potjo, ki je na voljo na nedavno uporabljenem seznamu, in se uporablja za razumevanje in določanje prioritet za napake uporabniške izkušnje glede na informacije o operaciji odprte datoteke.
 
 Zbrana so sledeča polja:
 
@@ -3288,7 +3315,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsappdocsoperationopenfrommrubyurl"></a>Office.Docs.AppDocs.OperationOpenFromMruByUrl
 
-Ta dogodek je zbran za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Ta dogodek zabeleži, ko je postopek odpiranja datoteke izveden z URL-ja, navedenega na seznamu nedavno uporabljenih, in je uporabljen za razumevanje in določanje prioritete uporabniške izkušnje na podlagi podatkov o postopku odpiranja datoteke. 
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Android, iOS, Universal ali Windows. Zapisi o dogodku, ko se postopek odprte datoteke začne z URL-ja, ki je na voljo na nedavno uporabljenem seznamu, in se uporablja za razumevanje in določanje prednosti uporabniškim izkušnjam na podlagi informacij o odprtem datotečni aplikaciji. 
 
 Zbrana so sledeča polja:
 
@@ -3862,7 +3889,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsappledocsuxmacatmentioninsertedatmention"></a>Office.Docs.Apple.DocsUXMacAtMentionInsertedAtMention 
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek zabeleži, ko uporabnik »@« omeni drugega uporabnika, uporablja pa se za razumevanje in določanje prednosti uporabniških izkušenj na podlagi tega, kako uporabniki sodelujejo z drugimi uporabniki.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Ta dogodek se zabeleži, ko uporabnik »@« omeni drugega uporabnika in je uporabljen za razumevanje in določanje prednosti uporabniškim izkušnjam glede na to, kako uporabniki sodelujejo z drugimi uporabniki.
 
 Zbrana so sledeča polja:
 
@@ -3870,7 +3897,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsappledocsuxmacodspsharingwebviewsharingcompleted"></a>Office.Docs.Apple.DocsUXMacODSPSharingWebViewSharingCompleted 
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek zabeleži, ko uporabnik da dokument v oblaku v skupno rabo z uporabo izkušnje dajanja v skupno rabo OneDrive, uporablja pa se za boljše razumevanje in določanje prednosti uporabniških izkušenj na podlagi skupne rabe dokumentov.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Ta dogodek se zabeleži, ko se uporabnik odloči za skupno rabo dokumenta v oblaku z uporabo izkušnje skupne rabe v storitvi OneDrive in se uporablja za boljše razumevanje in določanje prednosti uporabniških izkušenj glede na skupno rabo dokumentov.
 
 Zbrana so sledeča polja:
 
@@ -3922,7 +3949,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsuidocstagerecommendedopen"></a>Office.DocsUI.DocStage.RecommendedOpen
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek zabeleži, ko se operacija odpiranja datoteke izvede iz razdelka za priporočene datoteke v galeriji dokumentov, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o operaciji odpiranja datoteke.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Zapisi dogodka, ko se postopek odprte datoteke začne iz razdelka s priporočenimi datotekami v galeriji dokumentov in se uporablja za razumevanje in določanje prednosti uporabniškim izkušnjam na podlagi informacij o odprti datoteki.
 
 Zbrana so naslednja polja:
 
@@ -3930,7 +3957,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officedocsuifileoperationsdocsuifileopenmacrequired"></a>Office.DocsUI.FileOperations.DocsUIFileOpenMacRequired
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek zabeleži, ko se izvede operacija za odpiranje datoteke, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o operaciji odpiranja datoteke, kot so kategorije mest »ServiceType« in prvi štirje znaki pripone.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Zapisi o dogodku, ko se začne postopek odprte datoteke, uporabljena pa je za razumevanje in določanje prednosti uporabniških izkušenj glede na podatke o odprti datoteki, kot so kategorije lokacije »ServiceType« in prvi štirje znaki pripone.
 
 Zbrana so sledeča polja:
 
@@ -3940,7 +3967,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsuifileoperationsopendocumentmeasurements"></a>Office.DocsUI.FileOperations.OpenDocumentMeasurements
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformi iOS. Dogodek se zabeleži ob odpiranju datoteke, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o odpiranju datoteke, zlasti informacije o učinkovitosti.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformi iOS. Zapisi o dogodku, ko se začne postopek odprte datoteke, uporabljena pa je za razumevanje in določanje prednosti uporabniških izkušenj glede na informacije o operaciji odprte datoteke, še posebej informacije o učinkovitosti delovanja.
 
 Zbrana so naslednja polja:
 
@@ -4034,6 +4061,8 @@ Zbrana so naslednja polja:
 
 - **Data_OpenStartTime** – Čas Unixa, ko je bil zagnan postopek odpiranja datoteke.
 
+- **Data_PrefetchSourceOptions** – število, ki označuje, kako je datoteka na voljo brez povezave za dokumente v oblaku, npr. za nedavne in priporočene datoteke. 
+
 - **Data_SilhouetteDuration** – Trajanje upodabljanja za odpiranje datoteke.
 
 - **Data_SourceApplication** – Niz, ki označuje ID snopa izvorne aplikacije, ko je postopek odpiranja datoteke sprožila aplikacija.
@@ -4044,7 +4073,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officedocsuifileoperationsopenfilewithreason"></a>Office.DocsUI.FileOperations.OpenFileWithReason 
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek zabeleži, ko se izvede operacija odpiranja datoteke, uporablja pa za razumevanje in določanje prednosti uporabniških izkušenj na podlagi informacij o operaciji odpiranja datoteke, kot so kategorije mest »ServiceType« in mesto v aplikaciji, s katerega je uporabnik zahteval odpiranje datoteke.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Zapisi o dogodku, ko se začne postopek odprte datoteke, uporabljena pa je za razumevanje in določanje prednosti uporabniških izkušenj glede na podatke o operaciji odprte datoteke, kot so kategorije lokacije »ServiceType« in od kod znotraj programa je uporabnik zahteval odpiranje datoteke.
 
 Zbrana so sledeča polja:
 
@@ -4123,7 +4152,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officedocsuisharinguicopylinkoperation"></a>Office.DocsUI.SharingUI.CopyLinkOperation
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek zabeleži, ko uporabnik da dokument v skupno rabo v oblak z ustvarjanjem povezave do dokumenta v oblaku, uporablja pa se za boljše razumevanje in določanje prednosti uporabniških izkušenj na podlagi skupne rabe dokumentov.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Ta dogodek se zabeleži, ko se uporabnik odloči dati dokument v skupno rabo tako, da ustvari povezavo do dokumenta v oblaku in je uporabljen za boljše razumevanje in določanje prednosti uporabniških izkušenj glede na skupno rabo dokumentov.
 
 Zbrana so sledeča polja:
 
@@ -4135,7 +4164,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsuisharinguidocsuionedriveshare"></a>Office.DocsUI.SharingUI.DocsUIOneDriveShare 
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek zabeleži, ko uporabnik da dokument v oblaku v skupno rabo z uporabo izkušnje dajanja v skupno rabo OneDrive, uporablja pa se za boljše razumevanje in določanje prednosti uporabniških izkušenj na podlagi skupne rabe dokumentov.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Ta dogodek se zabeleži, ko se uporabnik odloči za skupno rabo dokumenta v oblaku z uporabo izkušnje skupne rabe v storitvi OneDrive in se uporablja za boljše razumevanje in določanje prednosti uporabniških izkušenj glede na skupno rabo dokumentov.
 
 Zbrana so naslednja polja:
 
@@ -4151,7 +4180,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officedocsuisharinguiinvitepeople"></a>Office.DocsUI.SharingUI.InvitePeople 
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Ta dogodek zabeleži, ko uporabnik povabi osebe v dokument v oblaku, uporablja pa se za boljše razumevanje in določanje prednosti uporabniških izkušenj na podlagi skupne rabe dokumentov.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Ta dogodek se zabeleži, ko se uporabnik odloči povabiti osebe v dokument v oblaku in je uporabljen za boljše razumevanje in delitev prednosti uporabniškim izkušnjam glede na skupno rabo dokumentov.
 
 Zbrana so sledeča polja:
 
@@ -4167,7 +4196,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officedocsuisharinguisendacopyoperation"></a>Office.DocsUI.SharingUI.SendACopyOperation
 
-Ta dogodek zbiramo za Officeove aplikacije, ki se izvajajo na platformah Apple. Dogodek zabeleži, ko uporabnik pošlje kopijo dokumenta, uporablja pa se za boljše razumevanje in določanje prednosti uporabniških izkušenj na podlagi skupne rabe dokumentov.
+Ta dogodek se zbira za Officeove aplikacije, ki se izvajajo v platformah Apple. Zapisi o dogodku, ko se uporabnik odloči poslati kopijo dokumenta in je uporabljen za boljše razumevanje in razdelitev uporabniških izkušenj glede na prioriteto na osnovi skupne rabe dokumentov.
 
 Zbrana so naslednja polja:
 
@@ -4213,7 +4242,7 @@ Podatki o obdelavi posameznih upravičenosti za najemnika in skrbnika storitve O
 
 Uporabljamo ga za grafikone (zahteva ga upravljanje skupin) za določanje uspešnosti strank in analiziranje težav strank.
 
-Zbrana so ta polja:
+Zbrana so naslednja polja:
 
   - **AppVersion** – Različica gostiteljske aplikacije dodatka.
 
@@ -4416,7 +4445,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officefeedbacksurveyfloodgateclientuserselected"></a>Office.Feedback.Survey.FloodgateClient.UserSelected
 
-Sledi, ko je naprava izbrana za anketo. Uporablja se za oceno stanja postopka izbora uporabnikov ankete in zagotavljanje, da je signal, ki se uporablja za analizo težav z odjemalcem in zdravje, deluje pravilno.
+Spremlja, ko je bila za anketo izbrana naprava. Uporablja se za oceno stanja postopka izbire uporabnika ankete in za zagotavljanje, da signal, uporabljen za analizo težav in stanja uporabnikov, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4486,7 +4515,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officefeedbacksurveyuiwin32toast"></a>Office.Feedback.Survey.UI.Win32.Toast
 
-Sledi, ko je prikazan pozivnik ankete. Uporablja se za oceno stanja popravka postopka ankete ter za zagotavljanje, da signal, ki se uporablja za analizo težav in zdravje strank, deluje pravilno.
+Spremlja, ko se prikaže poziv ankete. Uporablja se za oceno stanja postopka poziva za anketo in za zagotavljanje, da signal, uporabljen za analizo težav in stanja stranke, deluje pravilno.
 
 Zbrana so naslednja polja:
 
@@ -4500,7 +4529,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
-S tem dogodkom lahko prepoznamo, ali je bila datoteka uspešno odprta v plasti FIO. Uporabljamo ga za zagotavljanje ustreznosti delovanja funkcij in nadzor.
+Omogoča nam, da vemo, ali je bila datoteka uspešno odprta s plastjo FIO. Uporablja se za stanje funkcije in nadzor.
 
 Zbrana so ta polja:
 
@@ -5246,13 +5275,13 @@ Ta dogodek označuje, kdaj je uporabnik uporabil funkcije visoke vrednosti v izd
 
 Zbrana so ta polja: 
 
-- **FeatureAction** – Oznaka, ki navaja funkcijo in dejanje visoke vrednosti, ki ju je izvedel uporabnik, na primer »ContentPickerTried» ali »TemplatesSeen«.
+- **FeatureAction** – Oznaka, ki navaja funkcijo in dejanje visoke vrednosti, ki ju je izvedel uporabnik – na primer »ContentPickerTried», »TemplatesSeen«.
 
 
 #### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
 
 Ta dogodek se zbere, ko uporabnik obreže sliko in tapne gumb »Potrdi« pri končni izbiri slike, ki se bo uporabila za optično prepoznavanje znakov.     
-Gre za zapis, ki ga zahteva uporabnik, za storitev, saj v storitvi ni voljo opravilo preslikave od uporabnika v storitev. Polje UserId je zahtevano za izpolnjevanje zahtev Splošne uredbe o varstvu podatkov, saj storitev ni neposredno izpostavljena uporabnikom, temveč prek odjemalcev, in za določanje skupnega števila oseb, ki uporablja storitev. Storitvi pomaga spremljati število uporabnikov, ki uporabljajo izdelek, in prepoznavati spremembe trendov, poiskati pomoč in odpraviti težave z izdelkom.
+To je zapis na zahtevo uporabnika za storitev, saj v storitvi ni preslikave med uporabniki in storitvijo. UserId je potreben za izpolnitev zahtev uredbe GDPR, saj storitev ni neposredno na voljo uporabnikom, ampak prek odjemalcev in prepozna skupno število ljudi, ki uporabljajo storitev, pomaga storitvi spremljati količino uporabnikov, ki uporabljajo izdelek, poleg tega pa prepoznati spremembe v trendih ter iskati in spreminjati težave v izdelku.
 
 Zbrana so naslednja polja:
 
@@ -5368,7 +5397,7 @@ Zbrana so ta polja:
 
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
 
-Dejavnosti beležimo, ko uporabnik zažene aplikacijo za nalaganje kartice osebe in želi odpreti kartico osebe v živo.  S temi podatki določimo, ali je bila kartica naložena pravilno. 
+Prijavimo se, ko je uporabnik v aplikaciji, ki v pričakovanju naloži osebno kartico, ker uporabnik odpre kartico Live Persona.  Podatki se uporabljajo za določanje, ali je kartica pravilno naložena. 
 
 Zbrana so sledeča polja: 
 
@@ -5784,36 +5813,6 @@ Zbrana so ta polja:
 
   - **Data.Log** – Sporočilo dnevnika po meri, ki označuje, ali je bilo vnaprejšnje preverjanje uspešno oz. neuspešno izvedeno.
 
-#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements
-
-Ta dogodek je izbran za aplikacijo Office; posname izvajanje postopka odpiranja datoteke. Zbrali smo te podatke, da bi zagotovili dobro učinkovitost delovanja za vse datoteke, ki se odpre v aplikaciji. 
-
-Zbrana so naslednja polja:
-
-- **Data_Doc_ActivationFQDN** – ime domene aplikacije ponudnika za scenarij aktivacije datoteke (prijavljene so le informacije o aplikaciji prve stranke).
-
-- **Data_Doc_CreateTelemetryReason** – vzrok telemetrije za ustvarjanje dokumenta PDF (na primer: ustvari iz pregleda z ukazi »slika v PDF«, »dokument v PDF« itd.)
-
-- **Data_Doc_DownloadDurationms** čas za prenos datoteke v oblaku PDF.
-
-- **Data_Doc_DownloadEndTime** – časovni žig za konec prenosa datoteke v oblaku.
-
-- **Data_Doc_DownloadStartTime** – časovni žig za začetek prenosa datoteke v oblaku.
-
-- **Data_Doc_FileOpSessionID** – enolični ID seje dokumenta.
-
-- **Data_Doc_Location** – lokacija datoteke (lokalni disk, ODSP, iCloud, aplikacije tretjih oseb, wopi)
-
-- **Data_Doc_OpenCompletionTime** – časovni žig za konec odprtega delovanja datoteke PDF.
-
-- **Data_Doc_OpenDurationms** čas za odpiranje datoteke PDF v milisekundah.
-
-- **Data_Doc_OpenStartTime** – časovni žig za začetek odprtega delovanja datoteke PDF.
-
-- **Data_Doc_TelemetryReason** – telemetrija vzroka za odprt dogodek (na primer: odpiranje iz MRU ali brskanje, aktivacija datoteke, aktivacija protokolov itd.).
-
-- **Doc_RenderDurationms** časa, da postane datoteka PDF
-
 
 #### <a name="officeofficemobilepdfviewerpdffileoperations-on-android"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations (v sistemu Android)
 
@@ -5828,6 +5827,8 @@ Zbrana so sledeča polja:
 - **Data_ErrorMessage** – relevantna koda sporočilo-napaka
 
 - **Data_FailureReason** – če pride do napake pri odpiranju, to oštevilčenje določa vzrok za napako.
+
+- **Data_FetchReason** – Ponaša, kako je bila datoteka pridobite (ročno, predpomnjeno, ne predpomnjeno) 
 
 - **Data_FileGUID** – globalni identifikator za datoteko, ki je ustvarjena slučajno
 
@@ -5866,6 +5867,8 @@ Dogodek se zbira za aplikacijo Office za iOS. Zabeleži, ko pride do dogodka odp
 - **Data_ErrorMessage** – relevantna koda sporočilo-napaka 
 
 - **Data_FailureReason** – če pride do napake pri odpiranju, to oštevilčenje določa vzrok za napako. 
+
+- **Data_FetchReason** – Ponaša, kako je bila datoteka pridobite (ročno, predpomnjeno, ne predpomnjeno)
 
 - **Data_FileGUID** – globalni identifikator za datoteko, ki je ustvarjena slučajno
 
@@ -6166,7 +6169,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
+Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za ugotavljanje, koliko enoličnih ciljev sinhronizacije lahko uporabi pri računanju rezultata sinhronizacije za OneNote.
  
 Zbrana so naslednja polja
 
@@ -6510,7 +6513,7 @@ Zbrana so ta polja:
 
 #### <a name="officepowerpointdocoperationopencompleteprotocol"></a>Office.PowerPoint.DocOperation.OpenCompleteProtocol
 
-Podatki so zbrani ob odpiranju PowerPointovih predstavitev. Ta dogodek vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride v zadnji fazi postopka odpiranja.
+Zbrani, ko PowerPoint odpre predstavitve. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride v končnih fazah odprtega procesa.
 
 Microsoft uporablja te podatke za zagotavljanje ustreznega delovanja funkcije in učinkovitega postopka odpiranja predstavitev.
 
@@ -7318,7 +7321,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officepowerpointpptiosrehearseview"></a>Office.PowerPoint.PPT.IOS.RehearseView 
 
-Ta dogodek označuje, da je uporabnik ustavil sejo vaje. Ti podatki so uporabljeni v kombinaciji s parametrom Office.PowerPoint.IOS.Android.RehearseView.StartSession kot prvi indikator morebitnih zrušitev ali napak, ki jih zazna uporabnik.  
+Ta dogodek pomeni, da je uporabnik ustavil sejo vaja. Podatki se uporabljajo v kombinaciji s programom Office.PowerPoint.IOS.Android.VaditeView.StartSession kot prvi indikator zrušitev ali napak, s katerimi se spopada uporabnik.  
  
 Zbrana so sledeča polja:
 
@@ -7969,7 +7972,7 @@ Zbrana so ta polja:
 
 #### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
 
-Sledi premike funkcij za uporabnike. S tem dogodkom lahko določimo uspešnost ali neuspešnost premikov funkcij.
+Spremlja flighting funkcij za uporabnike. Ta dogodek nam pomaga določiti uspeh ali neuspeh funkcijskih letov.
 
 Zbrana so sledeča polja:
 
@@ -8656,9 +8659,9 @@ Zbrana so naslednja polja:
 
 #### <a name="parselicenseop"></a>ParseLicenseOp
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija razčlenjevanja dovoljenj. 
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij.  Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride med izvajanjem postopka razčlenjevati licence. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -8796,7 +8799,7 @@ Zbrana so sledeča polja:
 
 - **suggestions_requested** – Označuje, koliko predlogov za pametno sestaviti je bilo zahtevano
 
-- **suggestions_results** – Smart sestavite rezultate, tj. sprejeto, zavrnjeno
+- **suggestions_results** – Smart sestavite rezultate predlogov, tj. sprejete, zavrnjene
 
 - **suggestions_returned** – označuje, koliko pametnih predlogov za sestavljanje je vrnjenih iz strežnika
 
@@ -8824,7 +8827,7 @@ Zbrana so sledeča polja:
 
 #### <a name="settingsaction"></a>settings.action
 
-Ta dogodek zbere informacije o konfiguraciji v nastavitvah. Podatki nam omogočajo, da zaznamo primere, kjer je možno negativno vplivanje na sposobnost uporabnikov, Konfigurirajte nastavitve aplikacije, na primer nastavitve obvestil, primarni poštni račun in konfiguracijo e-poštnega podpisa.
+Podatki nam omogočajo, da zaznamo primere, kjer je možno negativno vplivanje na sposobnost uporabnikov, Konfigurirajte nastavitve aplikacije, na primer nastavitve obvestil, primarni poštni račun in konfiguracijo e-poštnega podpisa.
 
 Zbrana so sledeča polja: 
 
@@ -8968,7 +8971,7 @@ Zbrana so naslednja polja:
 
 #### <a name="surveyfloodgatetriggermet"></a>Survey.Floodgate.TriggerMet
 
-Sledi, ko naprava izpolnjuje pogoje za prikaz ankete. Uporablja se za oceno stanja postopka sprožanja ankete in zagotavljanje, da se s signalom, ki se uporablja za analizo težav strank in zdravje, pravilno deluje.
+Spremlja, ko naprava izpolnjuje pogoje za prikaz ankete. Uporablja se za oceno stanja ankete, ki sproži proces, in za zagotavljanje signala, ki se uporablja za analizo težav in stanja strank.
 
 Zbrana so naslednja polja: 
 
@@ -9159,9 +9162,9 @@ Zbrana so naslednja polja:
 
 #### <a name="httpop"></a>HttpOp
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija za http zahtevo.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij.  Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride med izvajanjem postopka zahteve http.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
     
@@ -9217,9 +9220,9 @@ Zbrana so sledeča polja:
 
 #### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcCreateOauth2Token API.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu API za IpcCreateOauth2Token.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
     
@@ -9283,7 +9286,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
-Zapiše informacije o nepričakovanih zaustavitvah v Officeu. Tako lahko prepoznamo zrušitve ali neodzivanja izdelka in ustrezno ukrepamo.
+Zabeleži informacije o nepričakovanih zaustavitvi Officea. Tako lahko prepoznamo sesutja ali sesutja izdelka, da jih lahko obravnavamo.
 
 Zbrana so naslednja polja:
 
@@ -9979,6 +9982,8 @@ Zbrana so sledeča polja:
 
   - **Data_FErrorAfterDocWinCreation:boolean** – Ali je prišlo do morebitne napake ali izjeme po tem, ko je bilo ustvarjeno okno dokumenta.
 
+  - **Data_FileIOClpState:int** – bitna pika, ki vsebuje vrednosti glede stanja oznake občutljivosti. To na primer vključuje informacije o tem, ali je omogočeno soavtovarjanje z zaščitenimi oznakami, ali je za dokument uporabljena oznaka trenutnega najemnika in ali je dokument zaščiten z upravljanje pravic do informacij.
+
   - **Data\_FileUrlLocation –** nabor vnaprej določenih vrednosti za mesto shranjevanja dokumentov (NetworkShare, LocalDrive, ServerOther itd.)
 
   - **Data\_FirstSlideCompressedSize –** stisnjena velikost prvega stisnjenega dela diapozitivov (običajno Slide1.xml)
@@ -10294,7 +10299,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officesystemsessionhandoff"></a>Office.System.SessionHandoff
 
-Označuje, da gre pri trenutni Officeovi seji za sejo prenosa. To pomeni, da je obravnava uporabnikove zahteve za odpiranje dokumenta prenesena na primerek iste aplikacije, ki se že izvaja.
+Označuje, da je trenutna Officeova seja izročena seja odmika. To pomeni, da obravnavanje uporabnikove zahteve za odpiranje dokumenta ne bo dobilo rezultate v primerku istega programa, ki se že izvaja.
 
 Zbrana so naslednja polja.
 
@@ -10886,9 +10891,9 @@ Zbrana so naslednja polja:
 
 #### <a name="servicediscoveryop"></a>ServiceDiscoveryOp
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij.  Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede operacija odkrivanja. 
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij.  Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride med izvajanjem postopka odkrivanja storitve. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -11344,6 +11349,8 @@ Zbrana so naslednja polja:
 - **AssetId** – ID sredstva aplikacije
 
 - **ErrorCode** – skupni porabljeni čas.
+
+- **IsArm64** – označuje, ali se aktiviranje dodatka dogaja v aplikaciji, ki se euje v napravi ARM64
 
 - **IsAugmentationScenario** – označuje, ali je razširitvena zanka odgovorna za inicializacijo nadzora Officeovih rešitev
 
@@ -11920,9 +11927,9 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcpBootstrapUser.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride ob klicu API-ja IpcpBootstrapUser.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **AppInfo.ClientHierarchy** – hierarhija odjemalcev, ki označuje, da se aplikacija izvaja v produkcijskem okolju ali v okolju razvijalcev
 
@@ -11990,7 +11997,7 @@ Zbrana so naslednja polja:
 
 #### <a name="ipcpgetkey"></a>IpcpGetKey
 
-Zbira, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanjem pravic do informacij (IRM) ali uporabiti zaščito za upravljanje pravic do informacij. Vsebuje informacije, potrebne za ustrezno raziskovanje in diagnosticiranje težav, do katerih pride, ko se izvede priklic API IpcpGetKey.
+Zbrani, ko uporabnik poskuša odpreti dokument, zaščiten z upravljanje pravic do informacij (IRM) ali uporabiti zaščito upravljanja pravic do informacij. Vsebuje informacije, ki jih potrebujete, da lahko ustrezno raziščete in diagnosticirate težave, do katerih pride pri klicu IPcpGetKey API.
 
 Zbrana so sledeča polja:
 
@@ -12132,7 +12139,7 @@ Zbrana so naslednja polja:
 
 #### <a name="messagerenderingintercepted"></a>message.rendering.intercepted
 
-S tem dogodkom lahko spremljate, kako pogosto uporabniki prestrežejo postopke uporabljanja, preden so ti dokončani. Ta dogodek je uporabljen za zaznavanje težav z učinkovitostjo delovanja.
+Ta dogodek nam omogoča, da spremljamo, kako pogosto uporabniki pred dokončanim postopkom upodabljanja preseči postopek. Te podatke uporabljamo za zaznavanje težav z učinkovitostjo delovanja.
 
 Zbrana so ta polja: 
 
@@ -12236,6 +12243,38 @@ Zbrana so naslednja polja:
 - **UIRaaSDownloadLanguagePackageBoot** – Informacije, povezane s prenosom jezikovnega paketa.
 
 - **UserDialogInterruptionDuringBoot** – Logična vrednost za blokiranje pogovornih oken med zagonom.
+
+
+#### <a name="officeandroiddocsuiviewsdimepurchaseflowstate"></a>Office.Android.DocsUI.Views.DimePurchaseFlowState
+
+Ta dogodek stanja poskuša zajeti vsako stanje, ki ga preide uporabnik, ko poskuša uporabnik kupiti storitev prek toka nakupa v aplikaciji, ki ga gosti Dime. Podatki se uporabljajo za nadzor in opozorilo o poteku nakupa, sproženega v aplikaciji Office Mobile, ko se uporabnik odloči za nakup naročnine na Microsoft 365.
+
+Zbrana so naslednja polja:
+
+- **Vstopna** – vstopna točka nakupa, ki jo je poskusil uporabnik
+
+- **OEMPreInstalled** – določa, ali je uporabnik program vnaprej namestil ali organsko namestil.
+
+- **Stanje nakupa** – stanje uporabnika pri poskusu nakupa
+    - 0 – Neznana napaka
+    - 1 – Uporabnik poskuša odpreti dime
+    - 2 – napaka omrežja
+    - 3 – Zatemnitev se prikaže uporabniku
+    - 4 – uporabnik prekliče dime
+    - 5 – osveževanje, potrebno ob uspešnem nakupu
+    - 6 – nakup je uspešen
+    - 7 – splošna napaka s zatemnjeno
+    - 8 – Telemetrije dime ni mogoče prenesti zaradi okvare komunikacije
+    - 9 – dva primerka zatemnitve, zaradi česar pride do napake pri prekinitvi
+    - 10 – Base WebURL, naložen v programu officemobile, ni veljaven
+    - 11 – komunikacija med aplikacijo Officemobile in zatemnjeno aplikacijo ni uspela 
+    - 12 – Ni mogoče vzpostaviti komunikacijskega kanala
+    - 13 – ID-ja komunikacije ni mogoče poslati zatemnjeni
+    - 14 – aplikacija officemobile komunicira z napačno končno točko
+    - 15 – AuthToken se ne pridobiva za ta račun MSA
+    - 16 – AuthToken ni poslan v dime
+
+- **WebViewShownDuration** – trajanje, za katerega je uporabniku prikazana stran za nakup dima 
 
 
 #### <a name="officeappleappleappbootmac"></a>Office.Apple.Apple.AppBoot.Mac
@@ -12467,6 +12506,58 @@ Zbrana so sledeča polja:
 
   - **Data.Last Error** – ena od petih vrednosti niza (popisovalnik) za beleženje, katera stopnja pravilnika je bila izvedena, ko je prišlo do izjeme
 
+
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements-on-android"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements (v sistemu Android)
+
+Dogodek je zbran za Officeovo aplikacijo za Android. Zapisi se zabeležijo, ko se začne postopek odpiranje datoteke. Zbrali smo te podatke, da bi zagotovili dobro učinkovitost delovanja za vse datoteke, ki se odpre v aplikaciji. 
+
+Zbrana so naslednja polja:
+
+- **Data_Doc_ActivationFQDN** – ime domene aplikacije ponudnika za scenarij aktivacije datoteke (prijavljene so le informacije o aplikaciji prve stranke).
+
+- **Data_Doc_DownloadDurationms** čas za prenos datoteke v oblaku PDF.
+
+- **Data_Doc_Location** – lokacija datoteke (lokalni disk, ODSP, iCloud, aplikacije tretjih oseb, wopi)
+
+- **Data_Doc_OpenDurationms** čas za odpiranje datoteke PDF v milisekundah.
+
+- **Data_FetchReason** – Ponaša, kako je bila datoteka pridobite (ročno, predpomnjeno, ne predpomnjeno)
+
+- **Doc_RenderDurationms** časa, da postane datoteka PDF
+
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements-on-ios"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations (v sistemu iOS)
+
+Ta dogodek se zbira za Officeovo aplikacijo za iOS. Zapisi se zabeležijo, ko se začne postopek odpiranje datoteke. Zbrali smo te podatke, da bi zagotovili dobro učinkovitost delovanja za vse datoteke, ki se odpre v aplikaciji. 
+
+Zbrana so naslednja polja:
+
+- **Data_Doc_ActivationFQDN** – ime domene aplikacije ponudnika za scenarij aktivacije datoteke (prijavljene so le informacije o aplikaciji prve stranke).
+
+- **Data_Doc_CreateTelemetryReason** – vzrok telemetrije za ustvarjanje dokumenta PDF (na primer: ustvari iz pregleda z ukazi »slika v PDF«, »dokument v PDF« itd.)
+
+- **Data_Doc_DownloadDurationms** čas za prenos datoteke v oblaku PDF.
+
+- **Data_Doc_DownloadEndTime** – časovni žig za konec prenosa datoteke v oblaku.
+
+- **Data_Doc_DownloadStartTime** – časovni žig za začetek prenosa datoteke v oblaku.
+
+- **Data_Doc_FileOpSessionID** – enolični ID seje dokumenta.
+
+- **Data_Doc_Location** – lokacija datoteke (lokalni disk, ODSP, iCloud, aplikacije tretjih oseb, wopi)
+
+- **Data_Doc_OpenCompletionTime** – časovni žig za konec odprtega delovanja datoteke PDF.
+
+- **Data_Doc_OpenDurationms** čas za odpiranje datoteke PDF v milisekundah.
+
+- **Data_Doc_OpenStartTime** – časovni žig za začetek odprtega delovanja datoteke PDF.
+
+- **Data_Doc_TelemetryReason** – telemetrija vzroka za odprt dogodek (na primer: odpiranje iz MRU ali brskanje, aktivacija datoteke, aktivacija protokolov itd.).
+
+- **Data_FetchReason** – Ponaša, kako je bila datoteka pridobite (ročno, predpomnjeno, ne predpomnjeno)
+
+- **Doc_RenderDurationms** časa, da postane datoteka PDF
+
+
 #### <a name="officeonenoteandroidsyncprovisioningcompleted"></a>Office.OneNote.Android.Sync.ProvisioningCompleted
 
 *[Ta dogodek je bil prej imenovan OneNote.Sync.ProvisioningCompleted.]*
@@ -12668,7 +12759,7 @@ Zbrana so sledeča polja:
 
 - **ResumeRehearsingCount** – število uporabnikov, ki ste jih kliknili z navodili za vnovično uporabo.
 
-- **Sessionid** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
+- **Id seje** – to je ID seje pred govorom. To se uporablja za odpravljanje napak v dnevnikih storitve.
 
 - **SlideshowViewLoadTime** – Čas, potreben za nalaganje diaprojekcije.
 
@@ -12683,7 +12774,7 @@ Zbrana so sledeča polja:
 
 - **PostUrlCallTime** – Čas v milisekundah, potreben za objavljanje klica Url. 
 
-- **RehearseSessionId** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
+- **VaditeSessionid -** - to je ID seje pred govorom. To lahko uporabimo za odpravljanje napak v dnevnikih storitev.
 
 - **RequestPayloadSize** – Velikost koristne vsebine zahteve. 
 
@@ -12712,7 +12803,7 @@ Zbrana so naslednja polja:
 
 *[Ta dogodek je bil prej imenovan Office.PowerPoint.PPT.Android.RehearseView.Errors]*
 
-Dogodek se sproži, ko pride do napake. S tem dogodkom pridobite napake, ki so bile prikazane uporabniku, ter zagotovite učinkovito delovanje inštrukcij za predstavitelja v prenosni napravi.
+Dogodek, sprožen, ko pride do katere koli napake. Ta dogodek nam bo pomagal vedeti, s katerimi napakami se je spopadal uporabnik, in bo pomagal ohraniti izvajalca pomočnika za predstavitelja v prenosnih napravah.
 
 Zbrana so ta polja:
 
@@ -12759,7 +12850,7 @@ Zbrana so sledeča polja:
 
 - **SessionDurationInMs** – Trajanje celotne seje od trenutka, ko je uporabnik kliknil možnost začetka, do trenutka, ko je kliknil možnost ustavitve.
 
-- **Sessionid** – ID govorne seje z vhodnih vrat. Ta parameter se uporablja za odpravljanje napak v dnevnikih storitev.
+- **Id seje** – to je ID seje pred govorom. To lahko uporabimo za odpravljanje napak v dnevnikih storitev.
 
 - **SpeechClientResultEventsWithTimestamps** – to je polje s kodami napak, prejetih skupaj s časovnimi žigi, ki so lahko v pomoč pri odpravljanju napak.
 
@@ -12806,7 +12897,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
 
-Uporabniška interakcija sledenja kritičnega signala s pogovornim oknom »Pridružite se programu Office Insider«. Uporablja se za prepoznavanje kakršnih koli težav pri izvajanju sprememb, ki jih sproži uporabnik, kot sta pridružitev programu Office Insider ali zapuščanje tega programa in spreminjanje ravni programa Office Insider.
+Spremljanje kritičnega signala za sledenje uporabniku s pogovornega okna »Pridružite se programu Office Insider«. Uporablja se za prepoznavanje morebitnih težav pri izvajanju sprememb, ki jih začne uporabnik, na primer pridružitev ali zapuščanju programa Office Insider in spreminjanje ravni programa Office Insider.
 
 Zbrana so naslednja polja:
 
@@ -12957,7 +13048,7 @@ Zbrana so sledeča polja:
 
 #### <a name="performancerecord"></a>performance.record
 
-Ta dogodek zbira metriko učinkovitosti delovanja aplikacije. To nam omogoča, da zaznamo in odpravimo primere, kjer je poraba pomnilnika in CPE-ja izjemno visoka ali je prišlo do drugih težav z učinkovitostjo delovanja, kar lahko povzroči upočasnitev delovanja vaše naprave.
+Ta dogodek zbira metrike učinkovitosti delovanja aplikacije. To nam omogoča, da zaznamo in odpravimo situacije, ko se uporaba pomnilnika aplikacije in uporaba CPE-ja bistveno visoka ali ima druge težave z učinkovitostjo delovanja, zaradi česar se lahko vaša naprava upočasni.
 
 Zbrana so naslednja polja: 
 
@@ -13468,7 +13559,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
 
-Telemetrija kritične napake za napake zbirke podatkov med brskanjem datotek in dodajanje mest.  Microsoft s tem dogodkom prepozna težave s poškodbami zbirk podatkov v aplikacijah, ki uporabniku morda preprečujejo dodajanje ali brskanje mest v aplikaciji za aplikacije Word, Excel ali PowerPoint.
+Telemetrija kritične napake za napako zbirke podatkov med ogledom datotek in dodajanje mest.  Microsoft uporablja to funkcijo za prepoznavanje težav s poškodovanimi zbirkami podatkov v aplikacijah, ki lahko uporabnikom ovirajo dodajanje mest ali brskanje po njih v aplikaciji v Wordu, Excelu ali PowerPointu.
 
 Zbrana so naslednja polja:
 
@@ -13510,7 +13601,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officeandroiddbfailurecause"></a>Office.Android.DBFailureCause
 
-Telemetrija kritične napake za napake zbirke podatkov med brskanjem datotek in dodajanje mest.  Microsoft s tem dogodkom prepozna težave s poškodbami zbirk podatkov v aplikacijah, ki uporabniku morda preprečujejo dodajanje ali brskanje mest v aplikaciji za aplikacije Word, Excel ali PowerPoint.
+Telemetrija kritične napake za napako zbirke podatkov med ogledom datotek in dodajanje mest.  Microsoft uporablja to funkcijo za prepoznavanje težav s poškodovanimi zbirkami podatkov v aplikacijah, ki lahko uporabnikom ovirajo dodajanje mest ali brskanje po njih v aplikaciji v Wordu, Excelu ali PowerPointu.
 
 Zbrana so naslednja polja:
 
@@ -14036,7 +14127,7 @@ Zbrana so naslednja polja:
 
 #### <a name="officesystemsystemhealtherrorsetwshim"></a>Office.System.SystemHealthErrorsEtwShim
 
-Ta dogodek se uporablja za prepoznavanje težav, ki vplivajo na uporabnika, v aktivni aplikaciji, zaradi katerih lahko pride do zrušitev ali zmanjšanje funkcionalnosti. Zabeleži napake, ki se pojavijo med izvajanjem procesov.
+Uporablja se za prepoznavanje težav, ki vplivajo na stranko v aplikaciji, ki se izvaja in se lahko pojavi v obliki zrušitev ali zmanjšane funkcionalnosti. Zabeleži napake, do katerih pride med izvajanjem postopka.
 
 Zbrana so sledeča polja:
 
@@ -14052,7 +14143,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officesystemsystemhealtherrorsulsandasserts"></a>Office.System.SystemHealthErrorsUlsAndAsserts
 
-Ta dogodek se uporablja za prepoznavanje težav, ki vplivajo na uporabnika, v aktivni aplikaciji, zaradi katerih lahko pride do zrušitev ali zmanjšanje funkcionalnosti. Zabeleži napake, ki se pojavijo med izvajanjem procesov.
+Uporablja se za prepoznavanje težav, ki vplivajo na stranko v aplikaciji, ki se izvaja in se lahko pojavi v obliki zrušitev ali zmanjšane funkcionalnosti. Zabeleži napake, do katerih pride med izvajanjem postopka.
 
 Zbrana so sledeča polja:
 
@@ -14068,7 +14159,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officesystemsystemhealtherrorsulsworkaround"></a>Office.System.SystemHealthErrorsUlsWorkaround
 
-Ta dogodek se uporablja za prepoznavanje težav, ki vplivajo na uporabnika, v aktivni aplikaciji, zaradi katerih lahko pride do zrušitev ali zmanjšanje funkcionalnosti. Zabeleži napake, ki se pojavijo med izvajanjem procesov.
+Uporablja se za prepoznavanje težav, ki vplivajo na stranko v aplikaciji, ki se izvaja in se lahko pojavi v obliki zrušitev ali zmanjšane funkcionalnosti. Zabeleži napake, do katerih pride med izvajanjem postopka
 
 Zbrana so sledeča polja:
 
@@ -14082,7 +14173,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officesystemsystemhealtherrorswithouttag"></a>Office.System.SystemHealthErrorsWithoutTag
 
-Ta dogodek se uporablja za prepoznavanje težav, ki vplivajo na uporabnika, v aktivni aplikaciji, zaradi katerih lahko pride do zrušitev ali zmanjšanje funkcionalnosti. Zabeleži napake, ki se pojavijo med izvajanjem procesov.
+Uporablja se za prepoznavanje težav, ki vplivajo na stranko v aplikaciji, ki se izvaja in se lahko pojavi v obliki zrušitev ali zmanjšane funkcionalnosti. Zabeleži napake, do katerih pride med izvajanjem postopka.
 
 Zbrana so sledeča polja:
 
@@ -14102,7 +14193,7 @@ Count – število posameznih napak
 
 #### <a name="officesystemsystemhealtherrorswithtag"></a>Office.System.SystemHealthErrorsWithTag
 
-Ta dogodek se uporablja za prepoznavanje težav, ki vplivajo na uporabnika, v aktivni aplikaciji, zaradi katerih lahko pride do zrušitev ali zmanjšanje funkcionalnosti. Zabeleži napake, ki se pojavijo med izvajanjem procesov.
+Uporablja se za prepoznavanje težav, ki vplivajo na stranko v aplikaciji, ki se izvaja in se lahko pojavi v obliki zrušitev ali zmanjšane funkcionalnosti. Zabeleži napake, do katerih pride med izvajanjem postopka.
 
 Zbrana so sledeča polja:
 
@@ -14236,7 +14327,7 @@ Omogoča nam, da zaznamo primere, kjer moramo zaradi pogleda pogovora prek e-po�
 
 Zbrana so sledeča polja:
 
-- Zbrana niso nobena polja ali dodani podatki. Zbirajo se samo dnevniki, če je bilo zaznano puščanje pomnilnika, povezano z nitjo pogovora.
+- Zbrana niso polja ali dodani podatki. Če pride do uhajanja pomnilnika, povezanega s pogovorno nitjo, so zbrani le dnevniki.
 
 #### <a name="coredatacorruption"></a>core.data.corruption
 
@@ -14269,6 +14360,8 @@ Zbrana so sledeča polja:
 Ta dogodek zbira informacije, s katerimi lahko razvrstimo in kategoriziramo težave v Outlookovi aplikaciji, ki so povezane z nastavitvami dostopnosti in naprave.  Ta kategorizacija je zahtevana za določanje prioritet, kako težave vplivajo na stranke.
 
 Zbrana so sledeča polja (velja samo za naprave s sistemom iOS):
+
+- **alternate_app_icon**– Povejte nam ikono nadomestne aplikacije, ki jo je uporabnik trenutno izbral.
 
 - **bold_text** – prikaže, ali je v napravi vklopljena nastavitev krepkega besedila. S tem dogodkom lahko zaznamo težave, povezane s krepkim besedilom.
 
@@ -14307,8 +14400,6 @@ Zbrana so sledeča polja (velja samo za naprave s sistemom Android):
 - **high_contrast** – prikaže, ali je uporabnik v svoji napravi vklopil nastavitev visokega kontrasta. S tem dogodkom lahko zaznamo težave, povezane s to nastavitvijo.
 
 - **large_text** – prikaže, ali je v napravi vklopljena nastavitev večjega besedila. S tem dogodkom lahko zaznamo težave, povezane s to nastavitvijo.
-
-- **oem_preinstall** – prikaže, ali je naša aplikacija vnaprej nameščena v napravo (to velja samo za naprave Samsung).
 
 - **supported_abis** – prikaže, katere vrste binarnih vmesnikov aplikacije podpira okolje naprave. S tem dogodkom lahko zaznamo težave, povezane s to nastavitvijo.
 
@@ -14434,7 +14525,7 @@ Zbrana so sledeča polja:
 
 #### <a name="officepowerpointpptsharednointernetconnectivity"></a>Office.PowerPoint.PPT.Shared.NoInternetConnectivity
 
-Ti podatki so zbrani, kadar PowerPoint zazna, da ni internetne povezave. Microsoft uporablja te podatke za pridobivanje diagnostičnih informacij o internetni povezavi uporabnika, da lahko bolje razume učinek, kako to vpliva na povezljivost z Officeovimi storitvami.
+Zbrani vsakič, ko PowerPoint zazna, da internetna povezava ni na voljo. Microsoft uporablja te podatke za zbiranje diagnostičnih informacij o internetni povezavi uporabnika, da bi lahko razumel, kako to vpliva na povezljivost z Officeovimi storitvami.
 
 Zbrana so sledeča polja:
 
