@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: d71859f75046ad13901aae1b381bf97227f05383
-ms.sourcegitcommit: 8982800d8026ec2f82e8389b7dfa762381258874
+ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
+ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51891220"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52308161"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -47,7 +47,7 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 
 | **Storitev**  | **Opis**  |
 | ------ | ---- |
-| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki je na voljo v različnih platformah, s katero lahko preverite veljavnost identitete uporabnika v Officeu.   S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
+| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki poteka v več platformah in s katero je preverjena vaša identiteta Officeovega uporabnika. S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
 | [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti.  Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
 | [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
@@ -898,7 +898,7 @@ Zbrana so sledeča polja:
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
-Ta dogodek se zabeleži, ko je račun z veljavnim žetonom za osveževanje najden med seznamom računov, ki jih je predložil TokenSharingManager.  Ta primer je specifičen za enotno prijavo (SSO).
+Ta dogodek se zabeleži, ko je račun z veljavnim žetonom za osveževanje najden med seznamom računov, ki jih je predložil TokenSharingManager. Ta scenarij je specifičen za enotno prijavo (SSO).
  
 Zbrana so sledeča polja:
  
@@ -908,7 +908,7 @@ Zbrana so sledeča polja:
 
 ### <a name="onenotesigninssoexternalappsinvalidaccount"></a>OneNote.SignIn.SSOExternalAppsInvalidAccount
 
-Ta dogodek se zabeleži, ko je prišlo do napake pri poskusu pridobivanja žetona za osveževanje za račun na seznamu računov, ki ga je predložil TokenSharingManager. Ta primer je specifičen za enotno prijavo (SSO).
+Ta dogodek se zabeleži, ko je prišlo do napake pri poskusu pridobivanja žetona za osveževanje za račun na seznamu računov, ki ga je predložil TokenSharingManager. Ta scenarij je specifičen za enotno prijavo (SSO).
  
 Zbrana so sledeča polja:
  
@@ -1168,7 +1168,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1266,7 +1266,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskfinalintegrate"></a>Office.ClickToRun.Scenario.InstallTaskFinalintegrate
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office namešča nove licence in nastavitve registra. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Officenamešča licence za nastavitve registra. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
@@ -1320,7 +1320,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1472,7 +1472,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1548,7 +1548,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1570,7 +1570,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltasklastrun"></a>Office.ClickToRun.Scenario.InstallTaskLastrun
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office dokončuje namestitev, pripenja bližnjice in ustvarja dokončne nastavitve registra. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office zaključuje postopek pripenjanja bližnjic in ustvarjanja končnih nastavitev registra. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
@@ -1624,7 +1624,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1700,7 +1700,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1722,7 +1722,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskpublishrsod"></a>Office.ClickToRun.Scenario.InstallTaskPublishrsod
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office objavlja navidezni register za navidezno plast AppV. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office objavlja virtualni register za plast virtualizacije AppV. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
@@ -1852,7 +1852,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1928,7 +1928,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -1950,7 +1950,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskuninstallcentennial"></a>Office.ClickToRun.Scenario.InstallTaskUninstallcentennial
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office odstranjuje prejšnjo različico Officea iz Trgovine. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office odstranjuje prejšnjo različico Officea, nameščeno iz storitve Store. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
@@ -2004,7 +2004,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2080,7 +2080,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2102,7 +2102,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenariorepairtaskfullrepair"></a>Office.ClickToRun.Scenario.RepairTaskFullrepair
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu prenese najnovejšo različico odjemalca s tehnologijo zagona s klikom, da pripravi računalnik na odstranitev in vnovično namestitev. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeovega popravila.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu prenese najnovejšo različico odjemalca s tehnologijo zagona s klikom, da pripravi računalnik na odstranitev in vnovično namestitev. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti popravila Officea.
 
 Zbrana so sledeča polja:
 
@@ -2156,7 +2156,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2178,7 +2178,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenariorepairtaskintegraterepair"></a>Office.ClickToRun.Scenario.RepairTaskIntegraterepair
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu poskuša popraviti nekatere znane vnose v registru z napakami. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeovega popravila.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu poskuša popraviti nekatere znane vnose v registru z napakami. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti popravila Officea.
 
 Zbrana so sledeča polja:
 
@@ -2232,7 +2232,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2254,7 +2254,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenariorepairtaskremoveinstallation"></a>Office.ClickToRun.Scenario.RepairTaskRemoveinstallation
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu iz naprave odstrani Office, da pripravi napravo na vnovično namestitev pri popravilu. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeovega popravila.
+Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko odjemalec za popravila v Officeu iz naprave odstrani Office, da pripravi napravo na vnovično namestitev pri popravilu. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti popravila Officea.
 
 Zbrana so sledeča polja:
 
@@ -2308,7 +2308,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2384,7 +2384,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2460,7 +2460,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2546,7 +2546,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2708,7 +2708,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2796,7 +2796,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -2872,7 +2872,7 @@ Zbrana so sledeča polja:
 
   - **Data\_ScenarioInstanceID** – enolični GUID za scenarij, ki se izvaja 
 
-  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr namesti 
+  - **Data\_ScenarioName** – kateri scenarij se izvaja, npr. namestitev 
 
   - **Data\_ScenarioSubType** – katero vrsto scenarija izvajamo, npr. odstrani, znova namesti 
 
@@ -3053,7 +3053,7 @@ Poročila o dejanjih, ki jih je zaradi vnosa, zbranega z CollectParameters
 
 ### <a name="officeclicktorununiversalbootstrappercollectembeddedsignature"></a>Office.ClickToRun.UniversalBootstrapper.CollectEmbeddedSignature
 
-Poročila o dejanjih, ki preberejo označeno vnašanje iz vdelanega podpisa exe.  To je nedokazano pojmovanje prejšnjega ponovitve namestitve. exe ni bilo mogoče izvesti in je odvisno od tega, na kaj se zanašamo, da bi v postopku setup. exe prenašali možnosti uporabnikov izdelek/jezik/bitnostjo.
+Poročila o dejanju, ki bere ciljani vnos iz podpisa, vdelanega z datoteko exe. To je nedokazano pojmovanje prejšnjega ponovitve namestitve. exe ni bilo mogoče izvesti in je odvisno od tega, na kaj se zanašamo, da bi v postopku setup. exe prenašali možnosti uporabnikov izdelek/jezik/bitnostjo.
  
 - **ErrorCode –** celoštevilska vrednost, povezana z neobravnavano izjemo
 
@@ -3277,7 +3277,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
 
-Kritična telemetrija uporabe, ko je uporabniku prikazan nadzor Paywall. Uporablja se za razumevanje izkušnje nakupa v aplikaciji in optimiziranje možnosti nakupa v aplikacij v prihodnjih različicah.
+Ta telemetrija kritične uporabe je zbrana, ko je uporabniku prikazan nadzor paywall, ki se uporablja za razumevanje nakupne izkušnje v aplikaciji za uporabnika in optimiziranje enakega stanja za prihodnje različice.
 
 Zbrana so sledeča polja:
 
@@ -3598,7 +3598,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
-Naknadna nastavitev licence v stroju, kjer licenco poskušamo aktivirati s klicem storitve AVS. Sporoča rezultat aktivacijskega klica.
+Naknadna nastavitev licence v napravi, kjer licenco poskušamo aktivirati s klicem storitve AVS. To je poročilo z rezultati aktivacijskega klica.
 
 Dogodki so pomembni pri zaznavanju, koliko uporabnikov ima težave pri aktivaciji. Poskrbeli smo za zaznavanje anomalije, s katero zaznamo morebitno regresijo. To je izjemno pomembno, saj imamo zunanje odvisnosti v storitvi AVS, ta signal pa ponazarja, ali naši zunanji partnerji delujejo ustrezno. Te dogodke prav tako uporabljamo za diagnostične namene in preverjanje stanja sistema, ko uporabnik posreduje težavo z računalnikom.
 
@@ -3644,7 +3644,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingdialogswebviewdialoghandleerrornotification"></a>Office.Licensing.Dialogs.WebViewDialog.HandleErrorNotification
  
-Ta dogodek je uporabljen kot signal, ki nam sporoča, da je prišlo do poskusa nalaganja izkušnje nakupa v aplikaciji, vendar je prišlo do napake, zaradi katere pogovorno okno ni prikazano. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da je bil izveden poskus nalaganja izkušnje nakupa v aplikaciji, vendar je prišlo do napake, zaradi katere pogovorno okno ni prikazano. Podatki so uporabljeni za nadzorovanje in opozarjanje glede ustreznosti stanja toka nakupa v aplikaciji, ki zagotavlja, da deluje v skladu s pričakovanji.  
  
 Zbrana so sledeča polja:
   
@@ -3652,7 +3652,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingdialogswebviewdialogpreload"></a>Office.Licensing.Dialogs.WebViewDialog.Preload
  
-Ta dogodek je uporabljen kot signal, ki nam sporoča, da v ozadju poteka postopek nalaganja izkušnje nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da v ozadju poteka nalaganje izkušnje nakupa v aplikaciji. Podatki so uporabljeni za nadzorovanje in opozarjanje glede ustreznosti stanja toka nakupa v aplikaciji, ki zagotavlja, da deluje v skladu s pričakovanji.  
  
 Zbrana so sledeča polja:
 
@@ -3660,7 +3660,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingdialogswebviewdialogshow"></a>Office.Licensing.Dialogs.WebViewDialog.Show
  
-Ta dogodek je uporabljen kot signal, ki nam sporoča, da je uporabniku prikazana izkušnja nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji.  
+Ta dogodek je uporabljen kot signal, ki nam sporoča, da je uporabniku prikazana izkušnja nakupa v aplikaciji. Podatki so uporabljeni za nadzorovanje in opozarjanje glede ustreznosti stanja toka nakupa v aplikaciji.  
 
 Zbrana so sledeča polja:
 
@@ -3685,7 +3685,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-Te informacije se zberejo, ko prikažemo pogovorno okno za potek, ki uporabnika opozori o poteku veljavnosti licence. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Ti podatki so zbrani, ko se pojavi pogovorno okno poteka, v katerem uporabnik izve, da je potekla njegova licenca. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -3718,6 +3718,29 @@ Zbrana so sledeča polja:
 - **EntitlementCount** – število upravičenosti, ki jih je uporabnik
 
 
+### <a name="officelicensinggetnextuserlicense"></a>Office.Licensing.GetNextUserLicense
+
+Ta dogodek je sprožen, ko je med izkušnjo prvega zagona aktivacije pridobivana licenca za Officeov izdelek, ki ga je izbral uporabnik. Te podatke uporabljamo za nadzorovanje ustreznosti stanja sistemov in storitev.
+
+Zbrana so naslednja polja:
+
+- **Activity_Success** – logična vrednost: sporoča nam, ali smo uspešno pridobili licenco za napravo, ki bo aktivirana v tej Officeovi aplikaciji.
+
+- **Data_AllowNULPerpetual** – logična vrednost: sporoča nam, ali je vklopljena preskusna različica za omogočanje storitve vNext Perpetual.
+
+- **Data_AttemptNulReactivation** – logična vrednost: sporoča nam, ali je to scenarij vnovične aktivacije.
+
+- **Data_CurrentMode** – 0 pomeni SPP (podedovan sklad licenciranja), 2 pomeni vNext (sodoben sklad licenciranja).
+
+- **Data_HasError** – logična vrednost: sporoča nam, ali je prišlo do napake, ko smo poskušali pridobiti licenco za izbrano upravičenost, ki temelji na izboru uporabnika.
+
+- **Data_IsSubscription** – logična vrednost: sporoča nam, ali je vnovična aktivacija za naročnino na office.
+
+- **Data_NewMode** – 0 pomeni SPP (podedovan sklad licenciranja), 2 pomeni vNext (sodoben sklad licenciranja). Večinoma pričakujemo 2.
+
+- **Data_SkuToSkuNeeded** – logična vrednost: sporoča nam, ali je treba izvesti pretvorbo inventarne številke v inventarno številko zaradi upravičene inventarne številke Officea, ki se ne ujema z inventarno številko nameščenega Officea.
+
+
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
 Za vsako sejo preverimo, ali je minilo 72 ur od zadnje obnovitve licence, in poskušamo podaljšati potek trenutne licence. S pomočjo tega dogodka lahko ugotovimo, ali je bil klic uspešen ali neuspešen, da lahko podaljšamo potek licence in omogočimo funkcionalnost Officea, ki ga je namestil uporabnik. Pri diagnosticiranju težav, povezanih z naročnino, in težav storitev je ta dogodek ključen za uporabnika ter za zaznavanje regresij za uporabnike z že aktiviranimi naročninami.
@@ -3748,7 +3771,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
-Če se za napravo aktivira način z omejeno funkcionalnostjo, s tem signalom posredujemo, da stanje računalnika ni ustrezno. Dogodek je pomemben pri zaznavanju, ali je uporabnik v dobrem stanju in nima omogočene vse funkcionalnosti; uporabljajo se za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če naprava preklopni v način zmanjšane funkcionalnosti, pošljemo signal, s katerim označimo, da delovanje naprave ni dobro. To je kritično pri zaznavanju, ali je stanje uporabnika dobro in ali mu manjkajo funkcije, uporabljene za ustreznost stanja sistema, uporabljene pa so tudi za diagnostične namene, če uporabnik prijavi težavo s svojim računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -3774,7 +3797,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-Če zaznamo težave pri aktiviranju, zaženemo čarovnika za licence in pošljemo ta signal, ki ponazarja isto vsebino. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če zaznamo težave pri aktivacijskem poteku dela, sprožimo čarovnika za licenciranje in posredujemo ta signal. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -3798,7 +3821,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Ta signal posredujemo, da ponazorimo, da je prišlo do zapiranja ali zrušitve Officea zaradi težave z licenciranjem. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če zapremo ali zrušimo Office zaradi težave z licenciranjem, sprožimo čarovnika za licenciranje in posredujemo ta signal. Dogodki so pomembni pri zaznavanju, ali je uporabnik v dobrem stanju in ima omogočeno vso funkcionalnost, se uporabljajo za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -4228,7 +4251,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
-Če iz neznanega razloga nismo uspeli licencirati uporabnika, namestimo ključ za dovoljeno obdobje in pošljemo ta signal. Dogodek je pomemben pri zaznavanju, ali je uporabnik v dobrem stanju in nima omogočene vse funkcionalnosti; uporabljajo se za stanje sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
+Če ne moremo licecnirati uporabnika, namestimo dovoljen ključ in pošljemo ta signal. To je nujno potrebno pri zaznavanju, ali je stanje uporabnika dobro in ali ima omogočeno vso funkcionalnost. uporabljeno za zaznavanje stanja sistema in za diagnostične namene, ko uporabnik prijavi težavo z računalnikom.
 
 Zbrana so sledeča polja:
 
@@ -4246,7 +4269,7 @@ Zbrana so sledeča polja:
 
 ### <a name="skuproductpricenullevent"></a>SKU.PRODUCT.PRICE.NULL.EVENT
 
-Ta dogodek se uporabi za zajem dogodkov za količinsko opredelitev vpliva napake, zaradi katere uporabniki danes vidijo »Null« namesto cene na zaslonu izbiralnika inventarna številka. Napaka bo nadalje diagnosticirana, da bi ugotovili popravek. 
+Ta dogodek se uporabi za zajem dogodkov za količinsko opredelitev vpliva napake, zaradi katere uporabniki danes vidijo »Null« namesto cene na zaslonu izbiralnika inventarna številka. Napaka bo nadalje diagnosticirana za iskanje popravka. 
 
 Zbrana so sledeča polja:
 
@@ -4542,7 +4565,7 @@ Zbrana so ta polja:
 
 ### <a name="appregistryinfo"></a>appregistry.info
 
-V tem primeru se prikaže sporočilo, da se je program zagnal. Ta dogodek uporabljamo za seznam programov, za katere lahko MAU nadzoruje posodobitve, število kopij, ki so na voljo, ter njihovo različico in lokacijo namestitve (privzeto ali drugo).
+Ta dogodek sporoča, da je bila aplikacija zagnana. Ta dogodek uporabljamo za seznam programov, za katere lahko MAU nadzoruje posodobitve, število kopij, ki so na voljo, ter njihovo različico in lokacijo namestitve (privzeto ali drugo).
 
 Zbrana so sledeča polja:
 
@@ -4670,7 +4693,7 @@ Zbrana so sledeča polja:
 
 ### <a name="cloningtaskbegin"></a>cloningtask.begin
 
-Ta dogodek označuje začetek opravila kloniranja pred posodobitvijo aplikacije. Ta dogodek uporabljamo v povezavi z dogodkom cloningtask.status, da ugotovimo število napak pri kloniranju za določanje, ali je treba funkcijo kloniranja zadušiti v drugih kanalih za občinstvo.
+Ta dogodek označuje začetek opravila kloniranja opravila za posodobitev aplikacije. Ta dogodek uporabljamo v povezavi z dogodkom cloningtask.status, da ugotovimo število napak pri kloniranju za določanje, ali je treba funkcijo kloniranja zadušiti v drugih kanalih za občinstvo.
  
 Zbrana so sledeča polja:
 
@@ -5127,7 +5150,7 @@ Zbrana so sledeča polja:
     
 ### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
-Ta dogodek pomeni, da postopek preverjanja posodobitev ni vrnil nobene nove posodobitve. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+V tem primeru se prikaže potrditveno polje preveri, ali so na voljo posodobitve, ki so bile najdene brez posodobitev, ki jih uporabljamo, če želite zagotoviti, da so posodobitve ponudene pravilno, optimiziranje bremen storitve in določanje, kako pogosti so naši posodobitvi za preverjanje. Optimizirati želimo tudi kadenco izdaj na podlagi pričakovanj uporabnikov ali posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -5333,7 +5356,7 @@ Zbrana so sledeča polja:
     
 ### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
-Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+Ta dogodek pomeni, da postopek preverjanja posodobitev ni bil ustvarjen, ker so programi v napravi posodobljeni. Ta dogodek uporabimo zato, da preverimo, ali so bile posodobitve pravilno ponujene.
 
 Zbrana so sledeča polja:
 
@@ -6932,7 +6955,7 @@ Zbrana so sledeča polja:
 
 ### <a name="downloadmanifestconfiguration"></a>downloadmanifest.configuration
 
-Ta dogodek vključuje sporočilo o napaki v zvezi s konfiguracijo storitve Microsoft Auto Update (MAU) – bodisi z izbiro strežnika po meri v nastavitvah bodisi z definicijami končnih točk v pomočniku za posodobitve v nameščenih komponentah storitve MAU. Ta dogodek uporabljamo za svetovanje skrbnikom za IT pri nastavljanju pravilnih končnih točk strežnika z manifestom.
+Ta dogodek vključuje sporočilo o napaki v zvezi s konfiguracijo storitve Microsoft Auto Update (MAU) – bodisi z izbiro strežnika po meri v nastavitvah bodisi z definicijami končnih točk v pomočniku za posodobitve v nameščenih komponentah storitve MAU. S tem dogodkom svetujemo skrbnikom za IT, da nastavijo končne točke strežnika Manifest Server.
  
 Zbrana so sledeča polja:
 
@@ -7929,9 +7952,9 @@ Zbrana so ta polja:
 
 ### <a name="fbaforceupdatecheck"></a>fba.forceupdatecheck
 
-Ta dogodek označuje, da je preverjanje posodobitev vsiljeno. Ta dogodek uporabimo, da ugotovimo število vsiljenih preverjanj posodobitev, ki se zgodijo zunaj običajnega cikla preverjanja posodobitev.
+Ta dogodek označuje, ali je bilo vsiljeno preverjanje posodobitev. Ta dogodek uporabimo, da ugotovimo število vsiljenih preverjanj posodobitev, ki se zgodijo zunaj običajnega cikla preverjanja posodobitev.
 
-Zbrana so ta polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8009,9 +8032,9 @@ Zbrana so sledeča polja:
 
 ### <a name="fbainstallpending"></a>fba.installpending
 
-Ta dogodek označuje, da je Microsoft Auto Update (MAU) poslal obvestilo glede posodobitev, ki čakajo. Ta dogodek se uporablja za določitev števila posodobitev, ki se začnejo z uporabniškimi obvestili, in za izboljšanje uporabniške izkušnje z minimizacijo prekinitev za uporabnika v prihodnjih izdajah.
+Ta dogodek označuje, da je posodobitev Microsoft Auto Update (MAU) poslala obvestilo glede čakajočih posodobitev. Ta dogodek se uporablja za določitev števila posodobitev, ki se začnejo z uporabniškimi obvestili, in za izboljšanje uporabniške izkušnje z minimizacijo prekinitev za uporabnika v prihodnjih izdajah.
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
 
@@ -8255,7 +8278,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbamausilentupdate"></a>fba.mausilentupdate
 
-Ta dogodek označuje, da Microsoft Update Assistant inicira tihe zagone. Ta dogodek se uporablja za določitev števila posodobitev, ki se uporabijo brez posredovanja uporabnika, da bi pospešili izboljšave uporabniške izkušnje.
+Ta dogodek označuje, da Microsoft Update Assistant inicializira tihe posodobitve. Ta dogodek se uporablja za določitev števila posodobitev, ki se uporabijo brez posredovanja uporabnika, da bi pospešili izboljšave uporabniške izkušnje.
 
 Zbrana so sledeča polja:
 
@@ -10017,9 +10040,9 @@ Zbrana so ta polja:
 
 ### <a name="guidashboardviewupdatemodebuttonclicked"></a>gui.dashboardview.updatemodebutton.clicked
 
-Ta dogodek označuje, da je bil v kontrolniku uporabniškega vmesnika spremenjen način posodobitve. Ta dogodek se uporablja za določitev števila naprav, ki prehajajo z enega načina na drugega in za pomoč pri ugotavljanju, zakaj se stranke zavračajo samodejne posodobitve. 
+Ta dogodek označuje, da se je način posodobitev spremenil v kontrolniku UV. Ta dogodek se uporablja za določitev števila naprav, ki prehajajo z enega načina na drugega in za pomoč pri ugotavljanju, zakaj se stranke zavračajo samodejne posodobitve. 
 
-Zbrana so naslednja polja:
+Zbrana so sledeča polja:
 
 - **Aplikacija** – postopek prijave, ki pošilja dogodek
  
@@ -11733,7 +11756,7 @@ Zbrana so sledeča polja:
 
 ### <a name="lifecyclelaunch"></a>Lifecycle.launch
 
-Ta dogodek označuje začetek storitve Microsoft AutoUpdate ali storitve Microsoft Update Assistant. Ta dogodek je uporabljen tudi za poročanje o morebitnih težavah, do katerih je prišlo med postopkom zagona, hkrati pa je uporabljen tudi način poročanja v primeru storitve Microsoft Update Assistant.
+Ta dogodek označuje začetek storitev Microsoft AutoUpdate ali Microsoft Update Assistant. Ta dogodek je uporabljen tudi za poročanje o morebitnih težavah, do katerih je prišlo med postopkom zagona, hkrati pa je uporabljen tudi način poročanja v primeru storitve Microsoft Update Assistant.
 
 *[Ta dogodek nadomesti dogodke fba.launch in appdelegate.launch.]*
 
@@ -12038,7 +12061,7 @@ Zbrana so sledeča polja:
     
 ### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
-Ta dogodek pomeni, da so bile posodobitve prenesene. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bile prenesene posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -13918,7 +13941,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatefilterhelperinvalidappid"></a>updatefilterhelper.invalidappid
 
-Ta dogodek sporoči napako, ki označuje, da ni bilo mogoče najti nobenih ujemajočih se datotek manifesta z ID-jem aplikacije, pridobljenim iz spletnega odziva. Ta dogodek se uporablja za preiskovanje sporočene napake.
+Ta dogodek sporoči napako, ki označuje, da ni bilo mogoče najti nobenih ujemajočih se datotek manifesta z ID-jem aplikacije, pridobljenim iz spletnega odziva. Ta dogodek je uporabljen za preiskavo prijavljene napake.
 
 Zbrana so sledeča polja: 
 
@@ -13958,7 +13981,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatefilterhelperinvalidappidfromwebservices"></a>updatefilterhelper.invalidappidfromwebservices
 
-Ta dogodek sporoči napako, ki označuje, da ID aplikacije, pridobljen iz spletnega odziva, ni v pričakovani obliki zapisa. Ta dogodek se uporablja za preiskovanje sporočene napake.
+Ta dogodek sporoči napako, ki označuje, da ID aplikacije, pridobljen iz spletnega odziva, ni v pričakovani obliki zapisa. Ta dogodek je uporabljen za preiskavo prijavljene napake.
 
 Zbrana so sledeča polja:
 
@@ -15026,7 +15049,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatemanagernetwork"></a>updatemanager.network
 
-Ta dogodek beleži razpoložljivost omrežja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek zabeleži razpoložljivost omrežja. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -15523,7 +15546,7 @@ Zbrana so ta polja:
 
 ### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote.
+Ta dogodek zabeleži rezultat sinhronizacije zvezka. Uporablja se za ugotavljanje, koliko enoličnih ciljev sinhronizacije lahko uporabi pri računanju rezultata sinhronizacije za OneNote.
  
 Zbrana so naslednja polja
 
@@ -15603,7 +15626,7 @@ Zbrana so naslednja polja
 
 ### <a name="officeonenotestoragerealtimewebsocketsessioninfo"></a>Office.OneNote.Storage.RealTime.WebSocketSessionInfo
  
-Ta dogodek prijavi rezultate sinhronizacije za sinhronizacijo spletne vtičnice za tako vsebino programa OneNote moderne sinhronizacije Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote. Uporablja se tudi za sodobno delovanje nadzorne plošče za sinhronizacijo programa OneNote.
+Ta dogodek prijavi rezultate sinhronizacije za sinhronizacijo spletne vtičnice za tako vsebino programa OneNote moderne sinhronizacije Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote. Uporabljen je tudi za nadzorno ploščo učinkovitosti sodobne sinhronizacije storitve OneNote.
  
 Zbrana so sledeča polja:
  
@@ -15908,7 +15931,7 @@ Zbrana so sledeča polja:
 
 ### <a name="onenotesyncfirstrunerror"></a>OneNote.Sync.FirstRunError
  
-Ta dogodek se zabeleži pri sinhronizaciji hitrih zapiskov za uporabnika med prvo izkušnjo, ki jo izvaja v napravi.  To je specifično za scenarij prvega zagona.
+Ta dogodek se zabeleži pri sinhronizaciji hitrih zapiskov za uporabnika med prvo izkušnjo, ki jo izvaja v napravi. To je specifično za scenarij prvega zagona.
  
 Zbrana so sledeča polja:
  
@@ -15924,7 +15947,7 @@ Konfiguracija storitev ne zbira potrebnih dogodkov podatkov storitve.
 
 ### <a name="appdeeplink"></a>app.deep.link
 
-Ta dogodek vam je v pomoč pri sledenju uporabi zagona srečanja v koledarju za različne končne točke. Ta dogodek nam omogoča, da ob zagnali srečanje prek Skypa za podjetja in ko je srečanje zagnano prek storitve Teams in če je nameščen program Teams.
+S tem dogodkom lahko spremljamo uporabo zagona srečanja iz koledarja v različnih končnih točkah. Ta dogodek nam omogoča, da ob zagnali srečanje prek Skypa za podjetja in ko je srečanje zagnano prek storitve Teams in če je nameščen program Teams.
 
 Zbrana so sledeča polja: 
 
@@ -15933,6 +15956,10 @@ Zbrana so sledeča polja:
 - **action_type** – izvedeno dejanje, na primer zagon srečanja ali namestitev programa
 
 - **Aplikacija** – aplikacija, ki je bila zagnana prek globoke povezave, kot je Teams ali Skype za podjetja
+
+- **context** – izkušnja, krmarjena znotraj aplikacije, na primer office_union - word, office_union – excel itd.
+
+- **source** – izbor dejanja, ki ga je na primer inicializiral uporabnik, ki ga je samodejno inicializiral odjemalec itd.
 
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
@@ -15953,7 +15980,7 @@ Zbrana so sledeča polja:
 
 *[Ta dogodek je bil prej imenovan Office.Android.DocsUI.Views.PaywallSessionData.]*
 
-Metapodatki, ki temeljijo na seji, ko je uporabniški vmesnik za Paywall prikazan uporabniku. Microsoft uporablja to funkcijo za pridobivanje dejavnosti uporabnikov ter razumevanje uporabnikove naprave in različice OS za lažje sprejemanje odločitev glede naložbe za izboljšanje izkušnje na teh področjih.
+Metapodatki na podlagi seje, ko je uporabniku prikazan UV Paywall. Microsoft uporablja to funkcijo za pridobivanje dejavnosti uporabnikov ter razumevanje uporabnikove naprave in različice OS za lažje sprejemanje odločitev glede naložbe za izboljšanje izkušnje na teh področjih.
 
 Zbrana so naslednja polja:
 
@@ -16791,15 +16818,17 @@ Dogodek sproži neobičajna prekinitev aplikacije (na primer prekinitev izvajanj
 
 Zbrana so sledeča polja:
 
-  - **AffectedProcessAppBuild** – identifikator delovne različice za vplivani proces
+  - **AffectedProcessAppBuild** – identifikator delovne različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessAppBuild** – delovna revizija identifikatorja za vplivani proces
+  - **AffectedProcessAppBuild** – delovna revizija identifikatorja za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessAppMajorVer** – identifikator glavne različice za vplivani proces
+  - **AffectedProcessAppMajorVer** – identifikator glavne različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
-  - **AffectedProcessAppMinorVer** – identifikator manjše različice za vplivani proces
+  - **AffectedProcessAppMinorVer** – identifikator manjše različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
   - **AffectedProcessAppName** – ime vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
+  
+  - **AffectedProcessAppVersion** – identifikator različice za prizadeti postopek.
 
   - **AffectedProcessExeBuildVersion** – številka delovne različice vplivanega procesa *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
@@ -16985,6 +17014,8 @@ Zbrana so sledeča polja:
   - **BucketId** – identifikator vedra Watson za zrušitev
  
   - **CabGuid** – identifikator globalnega enoličnega identifikatorja (GUID) za storitev Watson.
+
+  - **CallStack** – Microsoftov sklad internih klicev, ki povzroča zrušitev.
 
   - **CrashedProcessAppBuild** – identifikator delovne različice za vplivani proces *[To polje je bilo odstranjeno iz trenutnih graditev Officea, vendar se bo morda še vedo pojavljalo v starejših graditvah.]*
 
@@ -17433,7 +17464,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officetelemetryrulesenginediskthrottled"></a>Office.Telemetry.RulesEngineDiskThrottled
 
-Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
+Omejena metrika DQ. Zahtevano za zaupanje v druge podatke.
 
 Zbrana so sledeča polja:
 
@@ -17447,13 +17478,13 @@ Zbrana so sledeča polja:
 
 ### <a name="officetelemetryrulesenginemediumcostthrottled"></a>Office.Telemetry.RulesEngineMediumCostThrottled
 
-Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
+Omejena metrika DQ. Zahtevano za zaupanje v druge podatke.
 
 Ta dogodek ne zbere nobenega polja.
 
 ### <a name="officetelemetryrulesenginespikethrottled"></a>Office.Telemetry.RulesEngineSpikeThrottled
 
-Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
+Omejena metrika DQ. Zahtevano za zaupanje v druge podatke.
 
 Zbrana so sledeča polja:
 
@@ -17475,7 +17506,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officetelemetryrulesenginethrottled"></a>Office.Telemetry.RulesEngineThrottled
 
-Omejevanje metrike DQ. Zahtevano za zaupanje v druge podatke.
+Omejena metrika DQ. Zahtevano za zaupanje v druge podatke.
 
 Zbrana so sledeča polja:
 
