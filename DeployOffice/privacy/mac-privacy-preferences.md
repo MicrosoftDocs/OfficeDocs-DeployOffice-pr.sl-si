@@ -14,14 +14,17 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom ponuja informacije o načinu uporabe prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac.
 hideEdit: true
-ms.openlocfilehash: d23d1288adf823888c900b44acd5bc905037cd94
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: b7beda7409cff00d54f36851eb21e4d66a8cacce
+ms.sourcegitcommit: 9b5f18c543c286c95e546e22fc8edb60ef541030
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992889"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52578388"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Uporaba prednostnih nastavitev za upravljanje kontrolnikov zasebnosti za Office za Mac
+
+> [!NOTE]
+> Če si želite ogledati seznam Officeovih izdelkov, ki so zajeti v teh informacijah o zasebnosti, glejte [Kontrolnike zasebnosti, ki so na voljo za Officeove izdelke](products-versions-privacy-controls.md).
 
 V različici 16.28 sistema Office za Mac smo uvedli nove prednostne nastavitve, s katerimi lahko upravljate nastavitve, povezane z naslednjo vsebino:
 
@@ -56,27 +59,26 @@ Nove prednostne nastavitve so združljive z nastavitvami CFPreferences API in ji
 
 Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka. Če želite več informacij, si oglejte [diagnostičnih podatkov, ki so bili poslani iz aplikacij Microsoft 365 za podjetja v Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.office` |
 |**Ključ**  | `DiagnosticDataTypePreference`  |
 |**Vrsta podatkov**  | Niz |
-|**Možne vrednosti**  | `BasicDiagnosticData` *(s tem nastavite raven na možnost »Zahtevana«)* <br/> `FullDiagnosticData` *(s tem nastavite raven na možnost »Izbirna«)* <br/> `ZeroDiagnosticData` *(s tem nastavite raven na možnost »Nobena«)* |
+|**Možne vrednosti**  | `BasicDiagnosticData` *(ta vrednost nastavi raven na »Zahtevano«)* <br/> `FullDiagnosticData` *(ta vrednost nastavi raven na »Izbirno«)* <br/> `ZeroDiagnosticData` *(Ta vrednost nastavi raven na »Nič«)* |
 |**Razpoložljivost** |16.28 in novejše različice |
 
-Če ne nastavite te nastavitve, začnete z novimi nameščenimi različicami 16,30, če ste prejeli le zahtevane diagnostične podatke, če so uporabniki z naročnino na Office 365 (ali Microsoft 365) vpisani s službenim ali šolskim računom ali če imajo uporabniki količinsko licencirano različico sistema Office 2019 za Mac. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
+Če te nastavitve ne izberete, Microsoft v primeru uporabnikov z naročnino na Office 365 (ali Microsoft 365), ki so vpisani s službenim ali šolskim računom, oziroma uporabnikov, ki imajo različico sistema Office 2019 za Mac za količinsko licenciranje, prejema izbirne in zahtevane diagnostične podatke. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
 
 > [!NOTE]
-> - Če namestite različico 16.28 ali 16.29 in ne nastavite te prednostne nastavitve, bodo Microsoftu poslani tako izbirni kot tudi zahtevani diagnostični podatki. Če nato nadgradite na različico 16.30 ali novejšo različico, bodo Microsoftu še vedno poslani tako izbirni kot tudi zahtevani diagnostični podatki, razen če uporabite to prednostno nastavitev za nastavitev druge vrednosti.
-> - Če nastavite to nastavitev, bo veljala tudi za različico 1.00.217856 in novejše različice Teams za računalnike Mac ter različice 16.28 in novejše različice Skype za podjetja za Mac.
+> Prejšnji odstavek smo posodobili. Tako smo natančneje pojasnili, da so izbirni diagnostični podatki Microsoftu poslani, tudi če ne izberete te nastavitve.
 
 Če želite drugim uporabnikom, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), poslati le zahtevane diagnostične podatke, razen če se uporabnik odloči poslati tudi izbirne diagnostične podatke tako, da bo **nastavitve** > **zasebnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Prednostna nastavitev za povezane izkušnje, ki analizirajo vašo vsebino
 
-Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Kot na primer Oblikovalnik za PowerPoint ali Raziskovalec v Wordu. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
+Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Kot na primer Oblikovalnik za PowerPoint ali Raziskovalec v Wordu. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.office` |
 |**Ključ**  | `OfficeExperiencesAnalyzingContentPreference`  |
@@ -94,7 +96,7 @@ Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Off
 
 Povezane izkušnje, s katerimi prenesete spletno vsebino, so izkušnje, ki vam omogočajo, da poiščete in prenesete spletno vsebino, vključno s predlogami, slikami, 3D-modeli, videoposnetki in referenčnim gradivom, s katero izpopolnite svoje dokumente. Denimo Officeove predloge ali orodje za hitri začetek za PowerPoint. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.office` |
 |**Ključ**  | `OfficeExperiencesDownloadingContentPreference`  |
@@ -106,13 +108,13 @@ Povezane izkušnje, s katerimi prenesete spletno vsebino, so izkušnje, ki vam o
 
 Če ima uporabnik naročnino na Office 365 (ali Microsoft 365) in je vpisan s službenim ali šolskim računom ali če ima uporabnik količinsko licencirano različico sistema Office 2019 za Mac, uporabniki ne morejo izklopiti povezanih izkušenj, ki prenašajo spletno vsebino.
 
-Če želite drugim uporabnikom, kot je na primer domači uporabniki z naročnino na Office 365 (ali Microsoft 365), lahko uporabniki izklopijo povezano izkušnjo, s katero prenašate vsebino v spletu, tako da se pomaknete na **nastavitve** > **** zasebnost.
+Če želite drugim uporabnikom, kot je na primer domači uporabniki z naročnino na Office 365 (ali Microsoft 365), lahko uporabniki izklopijo povezano izkušnjo, s katero prenašate vsebino v spletu, tako da se pomaknete na **nastavitve** > zasebnost.
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Prednostna nastavitev za izbirne povezane izkušnje
 
 Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije, imenovanih tudi službeni ali šolski računi. Na primer funkcije LinkedIn pomočnika za življenjepis v Wordu ali vrstice za vreme v Outlooku, ki uporablja storitev Vreme MSN. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.office` |
 |**Ključ**  | `OptionalConnectedExperiencesPreference`  |
@@ -128,7 +130,7 @@ Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodat
 
 S to prednostno nastavitvijo lahko nadzorujete, ali so najpogostejše povezane izkušnje na voljo uporabnikom.
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.office` |
 |**Ključ**  | `ConnectedOfficeExperiencesPreference`  |
@@ -155,9 +157,9 @@ Tudi če to prednostno nastavitev nastavite na `FALSE`, bo še vedno na voljo om
 
 Ob prvem zagonu aplikacije Microsoft AutoUpdate (MAU) 4.12 ali njene poznejše različice je uporabnikom prikazano pogovorno okno **Obvestilo o zahtevanih podatkih**, v katerem so navedene informacije o vrsti podatkov, ki jih MAU pošilja Microsoftu.
 
-Če ne želite, da uporabniki vidijo pogovorno okno**Obvestilo o zahtevanih podatkih** za orodje Microsoft AutoUpdate, lahko nastavite naslednjo prednostno nastavitev. Ne glede na to, katero vrednost nastavite, pogovorno okno vašim uporabnikom ne bo prikazano.
+Če ne želite, da uporabniki vidijo pogovorno okno **Obvestilo o zahtevanih podatkih** za orodje Microsoft AutoUpdate, lahko nastavite naslednjo prednostno nastavitev. Ne glede na to, katero vrednost nastavite, pogovorno okno vašim uporabnikom ne bo prikazano.
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Domena prednostne nastavitve**  | `com.microsoft.autoupdate2` |
 |**Ključ**  | `AcknowledgedDataCollectionPolicy`  |
@@ -168,7 +170,7 @@ Ob prvem zagonu aplikacije Microsoft AutoUpdate (MAU) 4.12 ali njene poznejše r
 Če dovolite, da uporabniki vidijo to pogovorno okno, je v primeru, da uporabnik izbere **V redu**, v pravilnik `AcknowledgedDataCollectionPolicy` zapisana vrednost `RequiredDataOnly`, pogovorno okno pa uporabniku ni več prikazano.
 
 
-## <a name="related-topics"></a>Sorodne teme
+## <a name="related-articles"></a>Sorodni članki
 
 - [Priročnik za konfiguracijski profil (dokumentacija za razvijalce aplikacij za sistem Apple)](https://go.microsoft.com/fwlink/p/?linkid=852998)
 - [Uvajanje prednostnih nastavitev za Office za Mac](../mac/deploy-preferences-for-office-for-mac.md)

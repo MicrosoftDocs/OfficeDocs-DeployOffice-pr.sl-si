@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Officeovim skrbnikom nudi informacije o načinu upravljanja nastavitev zasebnosti v napravah s sistemom iOS.
 hideEdit: true
-ms.openlocfilehash: ed24ac934625bba61eac25e764a892d48365c005
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 000fd2c5e13ed51abf3afba6e7a1433c9d4b912f
+ms.sourcegitcommit: 9b5f18c543c286c95e546e22fc8edb60ef541030
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794673"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52578352"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Uporaba nastavitev za upravljanje kontrolnikov zasebnosti za Office v napravah s sistemom iOS
 
@@ -28,9 +28,9 @@ ms.locfileid: "48794673"
 
 Na voljo so nove prednostne nastavitve za Office v napravah s sistemom iOS, s katerimi lahko nadzorujete nastavitve, povezane z naslednjo vsebino:
 
-- ***Diagnostični podatki** _ o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
+- ***Diagnostični podatki*** o uporabljeni programski opremi odjemalca za Office, ki jih je sistem zbral in poslal Microsoftu.
 
-- _*_Povezane izkušnje_*_ , ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
+- ***Povezane izkušnje***, ki za omogočanje razširjenih Officeovih funkcij uporabljajo storitve v oblaku.
 
 Če želite več informacij o diagnostičnih podatkih in povezanih izkušnjah, preberite članek [Pregled kontrolnikov zasebnosti](overview-privacy-controls.md).
 
@@ -41,7 +41,7 @@ Na voljo so nove prednostne nastavitve za Office v napravah s sistemom iOS, s ka
 ## <a name="setting-device-preferences"></a>Nastavljanje nastavitev naprave
 Te nove prednostne nastavitve lahko nastavite tudi na ravni naprave s strežnikom Upravljanje mobilnih naprav (MDM), ko je nameščena Officeova aplikacija. Mnogi strežniki MDM skrbnikom za IT omogočajo, da dodajo izbirni konfiguracijski slovar, ko strežnik pošlje `InstallApplication` ukaz MDM v napravo s sistemom iOS. Če želite več informacij, si oglejte dokumentacijo strežnika MDM.
 
-Slovar je predstavljen kot nabor parov ključev/vrednosti v obliki zapisa datoteke XML. Na primer:
+Slovar je predstavljen kot nabor parov ključev/vrednosti v obliki zapisa datoteke XML.
 
 ```xml
 <dict>
@@ -67,22 +67,25 @@ Ko ga pošljete napravi, bo konfiguracijski slovar shranjen pod `com.apple.manag
 
 Diagnostični podatki se uporabljajo za zaščito, posodobitev, zaznavanje težav in njihovo odpravljanje v Officeu ter za izboljšave izdelka. Če želite več informacij, si oglejte [diagnostičnih podatkov, ki so bili poslani iz aplikacij Microsoft 365 za podjetja v Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
-|_ *Ključ**  | `DiagnosticDataTypePreference`  |
+|**Ključ**  | `DiagnosticDataTypePreference`  |
 |**Vrsta podatkov**  | Niz |
-|**Možne vrednosti**  | `BasicDiagnosticData` *(s tem nastavite raven na možnost »Zahtevana«)* <br/> `FullDiagnosticData` *(s tem nastavite raven na možnost »Izbirna«)* <br/> `ZeroDiagnosticData` *(s tem nastavite raven na možnost »Nobena«)* |
+|**Možne vrednosti**  | `BasicDiagnosticData` *(ta vrednost nastavi raven na »Zahtevano«)* <br/> `FullDiagnosticData` *(ta vrednost nastavi raven na »Izbirno«)* <br/> `ZeroDiagnosticData` *(Ta vrednost nastavi raven na »Nič«)* |
 
-Če te prednostne nastavitve ne nastavite, se Microsoftu pošljejo le zahtevani diagnostični podatki, če so uporabniki z naročnino na Office 365 (ali Microsoft 365) prijavljeni z delovnim ali šolskim računom. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
+Če te prednostne nastavitve ne nastavite, se Microsoftu pošljejo le zahtevani in izbirni diagnostični podatki, če so uporabniki z naročnino na Office 365 (ali Microsoft 365) prijavljeni z delovnim ali šolskim računom. Ti uporabniki ne morejo spremeniti ravni diagnostičnih podatkov, in sicer ne glede na to, kako nastavite to prednostno nastavitev.
+
+> [!NOTE]
+> Prejšnji odstavek smo posodobili. Tako smo natančneje pojasnili, da so izbirni diagnostični podatki Microsoftu poslani, tudi če ne izberete te nastavitve.
 
 V primeru drugih uporabnikov, kot so domači uporabniki z naročnino na Office 365 (ali Microsoft 365), Microsoft prejema samo zahtevane diagnostične podatke, razen če uporabnik v možnosti **Nastavitve** > **Zasebnost** izbere, da so poslani tudi izbirni diagnostični podatki.
 
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Prednostna nastavitev za povezane izkušnje, ki analizirajo vašo vsebino
 
-Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer »Ideje za oblikovanje« v PowerPointu. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
+Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer »Ideje za oblikovanje« v PowerPointu. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Ključ**  | `OfficeExperiencesAnalyzingContentPreference`  |
 |**Vrsta podatkov**  | Logični |
@@ -99,7 +102,7 @@ Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365 (ali Micr
 
 Povezane izkušnje, s katerimi prenesete spletno vsebino, so izkušnje, ki vam omogočajo, da poiščete in prenesete spletno vsebino, vključno s predlogami, slikami, videoposnetki in referenčnim gradivom, s katero izpopolnite svoje dokumente. Na primer, Officeove predloge ali vstavljanje spletne ikone. Če si želite ogledati seznam povezanih izkušenj, glejte [Povezane izkušnje v Officeu](connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Ključ**  | `OfficeExperiencesDownloadingContentPreference`  |
 |**Vrsta podatkov**  | Logični |
@@ -116,7 +119,7 @@ Drugi uporabniki, kot so domači uporabniki z naročnino na Office 365 (ali Micr
 
 Poleg povezanih izkušenj, omenjenih v tem članku, lahko izbirate še med dodatnimi izbirnimi povezanimi izkušnjami, s katerimi lahko vaši uporabniki dostopajo do svojih računov organizacije, imenovanih tudi službeni ali šolski računi. Na primer, dodatki za Office, ki so preneseni prek Trgovine Office v napravo. Če si želite ogledati več primerov, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md).
 
-|||
+|Kategorija|Podrobnosti|
 |:-----|:-----|
 |**Ključ**  | `OptionalConnectedExperiencesPreference`  |
 |**Vrsta podatkov**  | Logični |
