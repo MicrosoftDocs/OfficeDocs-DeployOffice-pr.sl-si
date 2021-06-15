@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom zagotavlja informacije o osnovnih storitvah v Officeu, kot so zagon s klikom in licenciranje, ter prikaže seznam dogodkov in polja s podatki za te osnovne storitve.
 hideEdit: true
-ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
-ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
+ms.openlocfilehash: 6dede4fdc57074aa5a9daaf28a20a736c813d626
+ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52308161"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52907370"
 ---
 # <a name="essential-services-for-office"></a>Osnovne storitve za Office
 
@@ -47,7 +47,7 @@ V tej tabeli si lahko ogledate seznam osnovnih storitev za Office in opis posame
 
 | **Storitev**  | **Opis**  |
 | ------ | ---- |
-| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki poteka v več platformah in s katero je preverjena vaša identiteta Officeovega uporabnika. S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
+| [Preverjanje pristnosti](#authentication-events) | Preverjanje pristnosti je storitev, ki poteka v več platformah in s katero je preverjena vaša identiteta Officeovega uporabnika. S to storitvijo lahko omogočite vpis v Office, aktivirate licenco za Office, dostopate do datotek, shranjenih v oblaku in zagotovite stalne izkušnje v sejah ter napravah, v katerih je nameščen Office.    |
 | [Zagon s klikom](#click-to-run-events) | Zagon s klikom je tehnologija namestitev, ki se uporablja za namestitev in posodobitev Officea v sistemu Windows. Preveri, ali so na voljo nove različice Officea, in če je na voljo nova različica, jo prenese ter namesti.  Zagon s klikom zazna potrebo, prenese in namesti posodobitve za Office, med drugim tudi varnostne posodobitve.     |
 | [Izboljšana konfiguracijska storitev (ECS)](#enhanced-configuration-service-ecs-events) | Storitev ECS Microsoftu omogoča vnovično konfiguracijo namestitev Office, brez potrebe po vnovični uvedbi Office. Uporablja se za nadzor postopnega izdajanja funkcij ali posodobitev. Učinek izdajanja pa lahko nadzorujete z zbranimi diagnostičnimi podatki. Storitev se prav tako uporablja za preprečevanje varnostnih težav in težav z učinkovitostjo delovanja funkcije oziroma posodobitve. Storitev ECS prav tako podpira spremembe konfiguracije, povezane z diagnostičnimi podatki, ki zagotovijo zbiranje ustreznih dogodkov. |
 | [Licenciranje](#licensing-events)     | Licenciranje je storitev v oblaku, ki podpira aktivacijo Office za nove namestitve in ohrani licenco v vaših napravah, po tem, ko ste aktivirali Office. Registrira posamezne naprave in aktivira Office, preveri stanje vaše naročnine na Office in upravlja vaše ključe izdelkov.    |
@@ -1114,7 +1114,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office zažene na novo prenesene datoteke. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Podatki o nastavitvah sistema Office in inventarju, ki se zberejo, ko namestitveni program za Office prenaša nove datoteke za Office. Uporabljajo se za merjenje uspešnosti/neuspešnosti Officeove namestitve.
 
 Zbrana so sledeča polja:
 
@@ -1646,7 +1646,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskmigrate"></a>Office.ClickToRun.Scenario.InstallTaskMigrate
 
-Podatki o zalogi in nastavitvi Officea, ki se zberejo, ko namestitveni program za Office seli nastavitve iz starejših različic Officea. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove namestitve.
+Nastavitve sistema Office in podatki o zalogi, ki se zberejo, ko namestitveni program Office preseli nastavitve iz starejših različic sistema Office. Uporablja se za merjenje uspešnosti/neuspešnosti namestitve sistema Office.
 
 Zbrana so sledeča polja:
 
@@ -2330,7 +2330,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioupdatetaskintegrateupdate"></a>Office.ClickToRun.Scenario.UpdateTaskIntegrateupdate 
 
-Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo zagona s klikom po potrebi posodobi licence. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove posodobitve.
+Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo zagona s klikom po potrebi posodobi licence, če je to potrebno. Uporabljajo se za merjenje uspešnosti/neuspešnosti Officeove posodobitve.
 
 Zbrana so sledeča polja:
 
@@ -2730,7 +2730,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedownload"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedownload
 
-Podatki o zalogi in nastavitvi Officea se zberejo, ko odjemalec s tehnologijo zagona s klikom prenaša novo posodobitev. Dogodki se uporabljajo za merjenje uspešnosti/neuspešnosti Officeove posodobitve.
+Podatki o namestitvah in zalogah Officea, ki se zberejo, ko odjemalec s tehnologijo zagona s klikom prenese novo posodobitev. Uporabljajo se za merjenje uspešnosti/neuspešnosti Officeove posodobitve.
 
 Zbrana so sledeča polja:
 
@@ -3596,6 +3596,24 @@ Zbrana so sledeča polja:
 
   - **DwEulaId** – številski identifikator za vrsto licenčnih pogojev za Microsoftovo programsko opremo, ki jo je sprejel uporabnik
 
+
+### <a name="officelicensingactivatedeviceentitlement"></a>Office.Licensing.ActivateDeviceEntitlement
+
+Ta dogodek se sproži, ko poskušamo za uporabnika aktivirati trajno ponudbo Officea, ki temelji na napravi. Te podatke uporabljamo za nadzorovanje ustreznosti stanja sistemov in storitev.
+
+Zbrana so naslednja polja: 
+
+- **Activity_Success** – pove nam, ali je naprava licencirana s trajno ponudbo Officea, ki temelji na napravi.
+
+- **Data_Count** – pove nam število trajnih pooblastil za Office, povezanih z napravo. Pravzaprav jih ne bi smelo biti več kot eden.
+
+- **Data_EligibleEntitlementsCount** – pove nam število upravičenosti. Ker bo storitev vrnila vsa pooblastila za napravo, povezana z njo, vendar moramo preveriti tiste ponudbe, ki ustrezajo delujoči aplikaciji Office.
+
+- **Data_Errors** – niz s seznamom napak med pridobivanjem licenc za upravičenosti, ločene z vejico.
+
+- **Data_LicensedEntitlementsCount** – pove nam število upravičenosti, za katere smo uspešno pridobili licenco. Lahko pride do napak pri upravičenju, zaradi katerih ne moremo dobiti licence. 
+
+
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
 Naknadna nastavitev licence v napravi, kjer licenco poskušamo aktivirati s klicem storitve AVS. To je poročilo z rezultati aktivacijskega klica.
@@ -3636,7 +3654,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
  
-Ta dogodek je uporabljen kot signal, da uporabnik ali aplikacija zapira izkušnjo nakupa v aplikaciji. Podatki so uporabljeni za nadzor in opozarjanje o stanju toka nakupa v aplikaciji, da je zagotovljeno delovanje v skladu s pričakovanji.  
+Ta dogodek se uporablja kot signal, ki nam sporoča, da izkušnjo nakupa v aplikaciji zapre uporabnik ali aplikacija. Podatki se uporabljajo za spremljanje in opozarjanje na stanje poteka nakupa v aplikaciji, ki zagotavlja, da deluje v skladu s pričakovanji.  
  
 Zbrana so sledeča polja:
  
@@ -3806,6 +3824,19 @@ Zbrana so sledeča polja:
   - **LicenseStatus** – stanje Officeove licence, ki jo uporabnik uporablja
 
   - **MachineKey** – alfanumerični identifikator licenčnega ključa, ki je bil izdan za uporabnika
+
+### <a name="officelicensinglaunchsetupoffice"></a>Office.Licensing.LaunchSetupOffice
+
+Ta dogodek se sproži, ko unovčimo Officeovo ponudbo za uporabnika, ki je kupil napravo v paketu s predhodnim pooblastilom OEM Office ali je vnesel ključ izdelka. Te podatke uporabljamo za nadzorovanje ustreznosti stanja sistemov in storitev.
+
+Zbrana so naslednja polja:
+
+- **Activity_Result_Tag** – pove nam, kako smo zaključili ta dogodek.
+
+- **Data_DialogResult** – pove nam splošni rezultat postopka prevzema povabila.
+
+- **Data_Scenario** – pove nam scenarij, v katerem je prišlo do prevzema povabila.
+
 
 ### <a name="officelicensinglicensingbar"></a>Office.Licensing.LicensingBar
 
@@ -4691,6 +4722,48 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+
+### <a name="cataloginvalid"></a>catalog.invalid
+
+Ta dogodek beleži stanje napake, ki kaže na prenesen neveljaven katalog manifestov. Ta dogodek uporabljamo za zagotovitev, da v objavljenih datotekah manifestov ni napak. 
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **CatalogFile** – Ime datoteke kataloga, ki je povzročila stanje napake.
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – čas, ko je bila prejeta telemetrija
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **SessionId** – identifikator za sejo
+
+
 ### <a name="cloningtaskbegin"></a>cloningtask.begin
 
 Ta dogodek označuje začetek opravila kloniranja opravila za posodobitev aplikacije. Ta dogodek uporabljamo v povezavi z dogodkom cloningtask.status, da ugotovimo število napak pri kloniranju za določanje, ali je treba funkcijo kloniranja zadušiti v drugih kanalih za občinstvo.
@@ -5192,7 +5265,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
-Ta dogodek pomeni, da je bila izvedena preverjanje posodobitev. Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+Ta dogodek pomeni, da je bilo opravljeno preverjanje posodobitev. Ta dogodek uporabljamo za zagotavljanje pravilne ponudbe posodobitev, optimizacijo obremenitev storitev in za določanje, kako pogosti naj bodo pregledi posodobitev. Prav tako želimo optimizirati svojo kadenco izdaje glede na pričakovanja uporabnikov glede posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -5233,7 +5306,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
-Ta dogodek pomeni, da je bil postopek preverjanja posodobitev preklican (preklical ga je uporabnik ali sistem). Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+V tem primeru se prikaže potrditveno polje preveri, ali so na voljo posodobitve, ki so bile najdene brez posodobitev, ki jih uporabljamo, če želite zagotoviti, da so posodobitve ponudene pravilno, optimiziranje bremen storitve in določanje, kako pogosti so naši posodobitvi za preverjanje. Optimizirati želimo tudi kadenco izdaj na podlagi pričakovanj uporabnikov ali posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -5274,7 +5347,7 @@ Zbrana so sledeča polja:
     
 ### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
-Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno, optimizacija storitvenih bremen in določanje, kako pogosta je preverjanje naših posodobitev. Optimizirali bomo tudi našo izdajo, ki temelji na pričakovanju uporabnikovih posodobitev.
+V tem primeru se prikaže potrditveno polje preveri, ali so na voljo posodobitve, ki so bile najdene brez posodobitev, ki jih uporabljamo, če želite zagotoviti, da so posodobitve ponudene pravilno, optimiziranje bremen storitve in določanje, kako pogosti so naši posodobitvi za preverjanje. Optimizirati želimo tudi kadenco izdaj na podlagi pričakovanj uporabnikov ali posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -5315,7 +5388,7 @@ Zbrana so sledeča polja:
     
 ### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
-Ta dogodek pomeni, da je uporabnik preklical postopek preverjanja za posodobitve.  Ta dogodek uporabljamo, če želite zagotoviti, da so posodobitve na voljo pravilno.
+Ta dogodek označuje, da je postopek preverjanja posodobitev privedel do najdenih posodobitev. Ta dogodek uporabljamo za zagotovitev pravilne ponudbe posodobitev.
 
 Zbrana so sledeča polja:
 
@@ -5807,7 +5880,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
-Ta dogodek pomeni, da je bila povezljivost z omrežjem izgubljena med prenosom posodobitev.  Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da se je med prenosom posodobitev omrežna povezava izgubila. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
 
 Zbrana so sledeča polja:
 
@@ -6052,7 +6125,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
-Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bile vse posodobitve iz trenutne serije uspešne. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
 
 Zbrana so sledeča polja:
 
@@ -6093,7 +6166,7 @@ Zbrana so sledeča polja:
 
 ### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
-Ta dogodek pomeni, da so bile vse posodobitve iz trenutnega paketa uspešne. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bile vse posodobitve iz trenutne serije uspešne. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
 
 Zbrana so sledeča polja:
 
@@ -7527,7 +7600,7 @@ Zbrana so sledeča polja:
 
 ### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
-Ta dogodek zabeleži posodobitev, ki je na voljo za prenos. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži posodobitev, ki se bo kmalu prenesla. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -7832,7 +7905,7 @@ Zbrana so ta polja:
 
 ### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
-Ta dogodek pomeni, da se v ozadju preverjajo posodobitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da postopek v ozadju preverja posodobitve. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8233,7 +8306,7 @@ Zbrana so naslednja polja:
 
 ### <a name="fbalaunchstatus"></a>fba.launchstatus
 
-Ta dogodek se odjavi pri zagonu daemona, medtem ko poskuša zagnati. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži napake daemona med poskusom zagona. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8523,7 +8596,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
-Ta dogodek pomeni, da se uporabnik odloča v tihih posodobitvah. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da se uporabnik odloča za tihe posodobitve. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8645,7 +8718,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbaterminate"></a>fba.terminate
 
-Ta dogodek pomeni, da se je MAU daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da se je daemon običajno prekinil. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -8686,7 +8759,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbaupdatefound"></a>fba.updatefound
 
-Ta dogodek pomeni, da je MAU daemon našel razpoložljive posodobitve, ki so na voljo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek pomeni, da je demon MAU našel razpoložljive posodobitve, ki jih lahko ponudi. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -9065,7 +9138,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
-Ta dogodek pomeni, da je posodobitev prenesena. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek pomeni, da se prenaša posodobitev. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -9323,7 +9396,7 @@ Zbrana so sledeča polja:
 
 ### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
-Ta dogodek pomeni, da so vse posodobitve v paketu dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bile vse posodobitve paketa končane z namestitvijo. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -10994,7 +11067,7 @@ Zbrana so ta polja:
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
-Ta dogodek zabeleži stanje binarne funkcije za sonačrtovanje OS. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži stanje binarnega kodnega znaka OS. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11035,7 +11108,7 @@ Zbrana so sledeča polja:
 
 ### <a name="installstatusdaemon"></a>installstatus.daemon
 
-Ta dogodek zabeleži stanje Microsoftove strežniške storitve Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži stanje demona Microsoft AutoUpdate. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11082,7 +11155,7 @@ Zbrana so sledeča polja:
 
 ### <a name="installstatushelper"></a>installstatus.helper
 
-Ta dogodek zabeleži stanje Microsoftovega orodja pomoči Autoupdate. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži stanje pomožnega orodja Microsoft AutoUpdate. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11451,7 +11524,7 @@ Zbrana so sledeča polja:
 
 ### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
-Ta dogodek pomeni, da so prišlo do napak med postopkom vnovičnega popravka namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so med postopkom ponovnega namestitve prišlo do napak. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11492,7 +11565,7 @@ Zbrana so sledeča polja:
    
 ### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
-Ta dogodek zabeleži napake komunikacije znotraj procesa (komunikacija z orodjem za pomoč MAU). Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži napake v komunikaciji med procesom (komunikacija s pomožnim orodjem MAU). Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11534,7 +11607,7 @@ Zbrana so sledeča polja:
 
 ### <a name="installupdatestaskretryresponse"></a>installupdatestask.retryresponse
 
-V tem dnevniku dogodkov, ki jih vnovičen poskus ne deluje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži, da ponovni poskus ni uspel. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -11575,7 +11648,7 @@ Zbrana so sledeča polja:
 
 ### <a name="installupdatestaskretrysuccess"></a>installupdatestask.retrysuccess
 
-Ta dogodek zabeleži uspešno namestitev posodobitve po vnovičnem poskusu. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži uspešno namestitev posodobitve po ponovnem poskusu. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -12143,7 +12216,7 @@ Zbrana so sledeča polja:
     
 ### <a name="msupdatemonitorprogressfinished"></a>msupdate.monitor.progress.finished
 
-Ta dogodek zabeleži seznam posodobitev, ki so bile dokončane z namestitvijo. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži seznam posodobitev v čakalni vrsti, ki so se dokončale. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -12184,7 +12257,7 @@ Zbrana so sledeča polja:
 
 ### <a name="msupdatemonitorprogressqueued"></a>msupdate.monitor.progress.queued
 
-Ta dogodek zabeleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži seznam posodobitev v čakalni vrsti. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -13130,6 +13203,47 @@ Zbrana so sledeča polja:
 
 - **ID** seje – identifikator za sejo
 
+### <a name="updateclonedisablereason"></a>update.clonedisablereason
+
+Ta dogodek beleži pogoj, da je funkcija Install-On-Clone onemogočena za določeno posodobitev. Ta dogodek uporabljamo za spremljanje stanja funkcije Install-On-Clone in za izboljšanje storitve.
+
+Zbrana so sledeča polja:
+
+- **Aplikacija** – postopek prijave, ki pošilja dogodek
+
+- **AppInfo_Language** – jezik, v katerem se izvaja aplikacija v razdelku.
+
+- **AppVersionLong** – različica aplikacije
+
+- **Channel** – ugodnost za občinstva
+
+- **Device_NetworkCountry** – država/regija naprave (ki temelji na naslovu IP)
+
+- **DeviceID** – identifikator naprave
+
+- **DeviceInfo_Model** – model strojne opreme naprave
+
+- **DeviceInfo_NetworkType** – vrsta omrežja (Wi-Fi, žična, neznana)
+
+- **DeviceInfo_OsBuild** – različica operacijskega sistema
+
+- **Event_ReceivedTime** – čas, ko je bila prejeta telemetrija
+
+- **EventInfo_Name** – ime telemetričnega dogodka, ki se zabeleži.
+
+- **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
+
+- **HowTocheck** – ugodnost za preverjanje posodobitev
+
+- **PipelineInfo_ClientCountry** – država naprave (ki temelji na naslovu IP)
+
+- **PipelineInfo_ClientIp** – prve 3 oktete naslova IP
+
+- **Reason** – Razlog, zakaj je za to posodobitev onemogočena namestitev v klonu.
+
+- **SessionId** – identifikator za sejo
+
+
 ### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Ta dogodek označuje začetek postopka posodobitve aplikacije. Ta dogodek je del posodobitvenega lijaka in se uporablja za določitev ustreznosti stanja posodobitev aplikacije. 
@@ -13430,6 +13544,8 @@ Zbrana so sledeča polja:
 
 - **EventInfo_Time** – čas, ko se je dogodek v dnevniku zgodil 
 
+- **ForcedUpdate** – Oznaka niza, ali skrbnik IT prisili posodobitev
+
 - **HowToCheck** – kako preveriti nastavitev
 
 - **Payload** – označuje, ali je pogled napredka prikazan med namestitvenim postopkom
@@ -13699,7 +13815,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
-Ta dnevnik dogodkov poskuša registrirati aplikacijo in rezultat/razlog. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži poskuse registracije aplikacije in rezultata/razloga. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -13740,7 +13856,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
-Ta dogodek pomeni, da je bil naložen agent za zagon. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek pomeni, da se naloži agent za zagon. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -13820,7 +13936,7 @@ Zbrana so sledeča polja:
 
 ### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
-Ta dnevnik dogodkov se je prizadela, ko je dosegel dostop do programa CDN. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži napake, ki so se pojavile med vzpostavljanjem povezave s CDN. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -14187,7 +14303,7 @@ Zbrana so sledeča polja:
  
 ### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
-Ta dnevnik dogodkov vsakič, ko začnete preverjanje delovanja posodobitev. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek se zabeleži vsakič, ko sprožimo preverjanje posodobitev. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -15090,7 +15206,7 @@ Zbrana so sledeča polja:
     
 ### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
-Ta dogodek pomeni, da so posodobitve našli in čakajoče namestitve. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bile posodobitve najdene in čakajo na namestitev. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -15220,7 +15336,7 @@ Zbrana so sledeča polja:
    
 ### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
-Ta dogodek pomeni, da so bili najdeni tihi kandidati za posodabljanje. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek označuje, da so bili najdeni kandidati za tiho posodabljanje. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -15343,7 +15459,7 @@ Zbrana so sledeča polja:
 
 ### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
-Ta dogodek prijavi zahteve MAU Service, odzivni čas in napake. Ta dogodek uporabljamo za zagotavljanje, da postopek posodabljanja deluje tako, kot je bilo pričakovano, in pomoč pri odpravljanju napak.
+Ta dogodek beleži zahteve v storitev MAU, odzivne čase in napake. Ta dogodek uporabljamo za zagotovitev, da postopek posodobitve deluje po pričakovanjih, in za pomoč pri odpravljanju napak.
  
 Zbrana so sledeča polja:
 
@@ -15678,7 +15794,7 @@ Zbrana so sledeča polja:
 
 ### <a name="officeonenotestoragesectionsyncresult"></a>Office.OneNote.Storage.SectionSyncResult
  
-V tem dnevniku je rezultat sinhronizacije odseka. Uporablja se za prikaz števila enoličnih ciljev sinhronizacije pri izračunavanju rezultata sinhronizacije za OneNote. Uporablja se tudi za sodobno delovanje nadzorne plošče za sinhronizacijo programa OneNote.
+Ta dogodek beleži rezultat sinhronizacije razdelka. Uporablja se za ugotavljanje, koliko edinstvenih ciljev za sinhronizacijo je izračunan rezultat sinhronizacije OneNote. Uporablja se tudi za sodobno nadzorno ploščo za zmogljivost sinhronizacije OneNote.
  
 Zbrana so sledeča polja
 
