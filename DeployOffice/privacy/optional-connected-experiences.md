@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Officeovim skrbnikom omogoča informacije o izbirnih povezanih izkušnjah, vključno s pogoji uporabe.
 hideEdit: true
-ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
-ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
+ms.openlocfilehash: 3583b22e9df50a3cdaff5e4cd3f6e695ab447498
+ms.sourcegitcommit: b906a2ca706cd4441964f09e1f4adf2e8b94d6be
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51914961"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957663"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled izbirnih povezanih izkušenj v Officeu
 
@@ -28,7 +28,8 @@ ms.locfileid: "51914961"
 Če imate službeni ali šolski račun, vam je skrbnik organizacije morda omogočil možnost uporabe ene ali več storitev v oblaku (imenujemo jih tudi »izbirne povezane izkušnje«) za uporabo v aplikacijah storitve Office 365 ProPlus, kot sta Word ali Excel, ki sta vključena v Aplikacije ogrodja Microsoft 365 za podjetja (prej imenovane Office 365 ProPlus). Te storitve v oblaku so izbirne. Sami se odločite, ali jih želite uporabljati. Za storitve veljajo pogoji [pogodbe o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjave o zasebnosti](https://privacy.microsoft.com/). V nekaterih primerih lahko veljajo tudi drugi pogoji. V tem članku smo navedli storitve v oblaku, podrobneje razložili njihove pogoje uporabe in opisali, kako jih lahko kadar koli izklopite oz. vklopite.
 
 > [!NOTE]
-> Če ste skrbnik, si oglejte [skrbniške kontrolnike za izbirne povezane izkušnje](#admin-controls-for-optional-connected-experiences).
+> - Če ste skrbnik, si oglejte [skrbniške kontrolnike za izbirne povezane izkušnje](#admin-controls-for-optional-connected-experiences).
+> - Za aplikacijo Microsoft Teams glejte [ Pregled izbirnih povezanih izkušenj v aplikaciji Microsoft Teams](/microsoftteams/teams-privacy-oce-overview).
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>S katerimi pogoji uporabe se moram strinjati, če želim uporabljati te storitve?
 
@@ -100,7 +101,7 @@ V [vrstici za vreme](https://support.microsoft.com/office/d11b7532-7c58-489e-810
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. S tem dejanjem odprete pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
-Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
+Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
 > [!NOTE]
 > Če vam je skrbnik za organizacijo zagotovil različico izdelka Office 2019, Project 2019 ali Visio 2019 s količinskimi licencami, odprite razdelek **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja** > **Možnosti zasebnosti**. Prikazano mora biti potrditveno polje za možnost **Vklopi izbirne povezane izkušnje**. Če to potrditveno polje ni prikazano v izdelku Project 2019 ali Visio 2019, izberite **Nastavitve zasebnosti ...** v pogovornem oknu tega **Središča zaupanja**. Prikazati se mora pogovorno okno **Nastavitve zasebnosti** s potrditvenim poljem za možnost **Omogoči izbirne povezane izkušnje**.
@@ -111,14 +112,14 @@ Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.mic
 
 Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. S tem dejanjem odprete pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
 
-Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
+Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
 > [!NOTE]
 > Če vam je skrbnik za organizacijo zagotovil različico izdelka Office 2019, Project 2019 ali Visio 2019 s količinskimi licencami, odprite razdelek **Datoteka** > **Možnosti** > **Središče zaupanja** > **Nastavitve središča zaupanja** > **Možnosti zasebnosti**. Prikazano mora biti potrditveno polje za možnost **Vklopi izbirne povezane izkušnje**. Če to potrditveno polje ni prikazano v izdelku Project 2019 ali Visio 2019, izberite **Nastavitve zasebnosti ...** v pogovornem oknu tega **Središča zaupanja**. Prikazati se mora pogovorno okno **Nastavitve zasebnosti** s potrditvenim poljem za možnost **Omogoči izbirne povezane izkušnje**.
 
 ## <a name="required-service-data"></a>Zahtevani podatki storitve
 
-Če uporabljate katero koli od izbirnih storitev v oblaku, ki so opisane v tem članku, lahko Microsoft zbere [zahtevane podatke o storitvi](required-service-data.md) (na primer podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti delovanja, ko ste jo uporabili. Zahtevani podatki storitve lahko vsebujejo »osebni podatki«, kot je določeno v členu 4 Evropskega podjetja uredbe GDPR.   Vsi zahtevani podatki storitve, ki jih Microsoft zbira med uporabo katerega koli programa Microsoft 365 aplikacije za aplikacije in storitve za podjetja, so pod psevdonimi, kot je določeno v standardu ISO/IEC 19944:2017 (oddelek 8.3.3).
+Če uporabljate katero koli od izbirnih storitev v oblaku, ki so opisane v tem članku, lahko Microsoft zbere [zahtevane podatke o storitvi](required-service-data.md) (na primer podatki o uporabi, napake in podatki o učinkovitosti delovanja) o učinkovitosti delovanja, ko ste jo uporabili. Zahtevani podatki storitve lahko vsebujejo »osebni podatki«, kot je določeno v členu 4 Evropskega podjetja uredbe GDPR.   Vsi zahtevani podatki storitve, ki jih Microsoft zbira med uporabo katerega koli programa Microsoft 365 aplikacije za aplikacije in storitve za podjetja, so pod psevdonimi, kot je določeno v standardu ISO/IEC 19944:2017 (oddelek 8.3.3).
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Skrbniki nadzora za izbirne povezane izkušnje 
 

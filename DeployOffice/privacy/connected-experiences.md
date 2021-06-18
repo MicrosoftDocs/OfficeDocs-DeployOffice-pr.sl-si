@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Skrbnikom storitve Office zagotavlja informacije o povezanih izkušnjah v storitvi Office, kot so izkušnje, ki analizirajo vsebine, ali izkušnje, s katerimi prenesete spletno vsebino.
 hideEdit: true
-ms.openlocfilehash: c1fb64bc45ed9e97cde37541dad85162a5a3699c
-ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
+ms.openlocfilehash: 176166681e1e1e14ac6a13dce65e432de4bdac61
+ms.sourcegitcommit: b906a2ca706cd4441964f09e1f4adf2e8b94d6be
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51916103"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957627"
 ---
 # <a name="connected-experiences-in-office"></a>Povezane izkušnje v Officeu
 
@@ -29,7 +29,7 @@ Office sestavljajo aplikacije odjemalske programske opreme in povezane izkušnje
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Povezane izkušnje, ki analizirajo vašo vsebino
 
-Povezane Izkušnje, ki analizirajo vašo vsebino so izkušnje, ki na podlagi Officeove vsebine nudijo priporočila za načrte, predloge za urejanje, vpoglede v podatke in podobne funkcije. Na primer Oblikovalnik za PowerPoint ali Prevajalnik.
+Povezane Izkušnje, ki analizirajo vašo vsebino, so izkušnje, ki uporabljajo vašo Officeovo vsebino, da vam ponudijo priporočila za oblikovanje, predloge za urejanje, vpoglede v podatke in podobne funkcije.
 
 V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vsebino, kot tudi povezave do več informacij o njih.
 
@@ -37,23 +37,21 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 | ----------- | ------------------ |
 | *3D-zemljevidi*\*    | [Uvod v 3D-zemljevide](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Analiza podatkov (prej imenovano zamisli) | [Analiza podatkov v Excelu](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
-|Samodejni popravki|[Preprosto in hitro poravnajte vsebino s samodejnimi popravki](https://support.microsoft.com/office/b5ec9a1e-f955-46d5-a91b-f236459525b4)|
 | Samodejno nadomestno besedilo   | [Vse, kar morate vedeti za pisanje učinkovitih nadomestnih besedil](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
-|Priporočila za grafikone (Excel za splet)|[Ustvarite grafikon s priporočenimi grafikoni](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
+|Priporočila za grafikone|[Ustvarite grafikon s priporočenimi grafikoni](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0)|
 |Dodatki za zvezek za predavanja (OneNote)|[Uvod v OneNotov zvezek za predavanja: navodila za profesorje](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
 | Podatkovni tipi| [Podatkovni tipi v Excelu: Delnice in geografija](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
-|Oblikovalnik (Word za splet)|[Uporaba Oblikovalnika za ustvarjanje bolj dodelanih dokumentov](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
 | Narekovanje  | [Narek v okolju Microsoft 365](https://support.microsoft.com/office/eab203e1-d030-43c1-84ef-999b0b9675fe) |
 |Urejevalnik<sup>1</sup> |[Microsoft Editor preveri slovnico in veliko drugega v dokumentih, e-pošti in spletu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 |Prijazne povezave v Outlooku |[Prijaznejša imena povezav v e-pošti](https://support.microsoft.com/office/02040f47-bd56-4806-8311-fc913fed54c0)|
-| Rokopis v besedilo, rokopis v obliko, rokopis v matematično enačbo | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
+| Rokopis v besedilo, rokopis v obliko, rokopis v matematični izraz<sup>2</sup> | [Spremenite rokopis v oblike, besedilo ali matematično enačbo v PowerPointu za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Vstavljanje podatkov iz slike| [Vstavljanje podatkov iz slike](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 |Orodja za učenje|[Orodja za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
 | Napisi in podnapisi v živo |  [Predstavljajte s samodejnimi napisi in podnapisi v realnem času v PowerPointu](https://support.microsoft.com/office/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | *Grafikon z zemljevidom*\*    | [Ustvarite grafikon z zemljevidom v Excelu](https://support.microsoft.com/office/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Zemljevidi v funkciji Power View   | [Zemljevidi v funkciji Power View](https://support.microsoft.com/office/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Storitev za predstavitve Office  | [Oddajajte svojo PowerPointovo predstavitev oddaljenemu občinstvu v spletu](https://support.microsoft.com/office/25330108-518e-44be-a281-e3d85f784fee)    |
-|Priporočila za vrtilne tabele (Excel za splet)|[Ustvarjanje vrtilne tabele za analizo podatkov delovnega lista](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Web)|
+|Priporočila vrtilne tabele|[Ustvarjanje vrtilne tabele za analizo podatkov delovnega lista](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576)|
 | Oblikovalnik za PowerPoint   | [Ustvarite strokovne postavitve diapozitivov z Oblikovalnikom za PowerPoint](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 |Inštrukcije za predstavitelja (PowerPoint)|[Vadite svojo predstavitev z inštrukcijami za predstavitelja](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
 | Objavi v storitvi Microsoft Stream    | [Pretvorite predstavitev v videoposnetek](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
@@ -63,21 +61,22 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, ki analizirajo vašo vse
 |Skupna raba obvestil|[Bodite obveščeni, ko člani vaše ekipe posodobijo vašo datoteko v skupni rabi](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Preverjevalnik podobnosti*\* (funkcija Urejevalnika)|[Preverite podobnosti med svojim dokumentom in spletnimi viri](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Smart Lookup*\*   | [Pridobite vpoglede v vsebino, ki jo urejate, s pametnim iskanjem](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
-| Predlagani odgovori | [Kaj so predlagani odgovori?](https://support.microsoft.com/office/58517b93-946e-42d4-95d0-777aa5aa42a5) <br/> [Kako nastajajo predlagani odgovori?](https://support.microsoft.com/office/af9cfa57-4f4f-419f-b76d-bb305c3a9d4d)|
+| Predlagani odgovori | [Uporaba predlaganih odgovorov v Outlooku](https://support.microsoft.com/office/19316194-0434-43ba-a742-6b5890157379)|
 | Tapnite za Word (Dodaj iz datotek)   | [Iskanje in uporaba želene vsebine, ko jo potrebujete, ne da bi zaprli Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
 |Predvidevanje besedila (funkcija Urejevalnika)|[Hitrejše pisanje s predvidevanjem besedila v Wordu](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
-|Prepis |[Prepis vaših posnetkov](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Pretvori v spletno stran   | [Preoblikujte Wordov dokument v Sway spletno stran](https://support.microsoft.com/office/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevajalnik   | [Prevajanje besedila v drug jezik](https://support.microsoft.com/office/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
 <sup>1</sup> osnovna funkcionalnost urejevalnika je še vedno na voljo, tudi če nimate vzpostavljene povezave z internetom. Ta ista osnovna funkcionalnost je še vedno na voljo, če se odločite, da boste onemogočili uporabo povezanih izkušenj z analizo vsebine. V obeh primerih se podatki o uporabi urejevalnika ne pošljejo Microsoftu.
+
+<sup>2</sup> Za naprave z operacijskim sistemom Android so te zmogljivosti rokopisa na voljo, tudi če nimate vzpostavljene povezave z internetom. Te zmogljivosti rokopisa so na voljo na napravah z operacijskim sistemom Android, tudi če se odločite onemogočiti uporabo povezanih izkušenj, ki analizirajo vašo vsebino. V obeh primerih se podatki o uporabi teh zmogljivosti rokopisa ne pošljejo Microsoftu.
 
 > [!NOTE]
 > \*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezane izkušnje, s katerimi prenesete spletno vsebino
 
-Povezane izkušnje, s katerimi prenesete spletno vsebino, so izkušnje, ki vam omogočajo, da poiščete in prenesete spletno vsebino, vključno s predlogami, slikami, 3D-modeli, videoposnetki in referenčnim gradivom, s katero izpopolnite svoje dokumente. Denimo Officeove predloge ali orodje za hitri začetek za PowerPoint.
+Povezane izkušnje, ki prenašajo spletno vsebino, so izkušnje, ki vam omogočajo iskanje in prenos spletne vsebine, vključno s predlogami, slikami, 3D-modeli, videoposnetki in referenčnimi gradivi, da bi izboljšali svoje dokumente. To so na primer Officeove predloge ali orodje za hiter začetek za PowerPoint.
 
 V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spletno vsebino, kot tudi povezave do več informacij o njih.
 
@@ -99,11 +98,13 @@ V spodnji tabeli je naveden seznam povezanih izkušenj, s katerimi prenesete spl
 | Iskanje oblik v spletu (Visio) | [Iskanje dodatnih oblik in šablon](https://support.microsoft.com/office/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | *Orodje za hiter začetek za PowerPoint*\*     | [Raziskava teme z orodjem za hiter začetek za PowerPoint](https://support.microsoft.com/office/4784f273-0b2c-456c-9c89-24e5b977c224) |
 | *Raziskovalec*\*    | [Preprosto raziskovanje naloge v Wordu](https://support.microsoft.com/office/1728f286-8702-4d72-8169-ab7677ca0e1f) |
-| Pokaži mi    | [Opravite delo hitro s funkcijo »Pokaži mi«](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
+| Pokaži mi<sup>3</sup>    | [Opravite delo hitro s funkcijo »Pokaži mi«](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predloge  | [Prenos brezplačnih, vnaprej vgrajenih predlog](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
 |*Čas potovanja ocenjujemo v naslednjem*\*|Ko se odločite, da boste za dostop do vaše lokacije omogočili Outlook za iOS in Android, bo ocena vašega potovalnega časa v naslednjem dogodku vključena v [navzgor naslednja](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) kartica na vrhu mape »Prejeto«.<br/><br/> [Kaj je Čas, da zaprete obvestila?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Vrstica za vreme*\* (Outlook)| [Spremenite mesto za vremensko napoved v vrstici za vreme na koledarju](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 |*Vreme v koledarju*\* (Outlook Mobile)|[Kako lahko vklopim vreme v koledarju v programu Outlook Mobile?](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2)|
+
+<sup>3</sup> Osnovne funkcije programa »Pokaži mi« so na voljo, tudi če nimate vzpostavljene povezave z internetom. Enaka osnovna funkcionalnost je na voljo tudi, če se odločite onemogočiti uporabo povezanih izkušenj, ki prenašajo spletno vsebino. V obeh primerih se podatki o uporabi »Pokaži mi« ne pošljejo Microsoftu.
 
 > [!NOTE]
 >\*Ko so uporabniki vpisani s službenim ali šolskim računom, so povezane izkušnje, zgoraj navedene v ležeči pisavi, izbirne in na voljo v skladu s [pogodbo o Microsoftovih storitvah](https://www.microsoft.com/servicesagreement) in [izjavo o zasebnosti](https://privacy.microsoft.com/), veljajo pa lahko tudi drugi pogoji. Če želite izvedeti več, preberite [Pregled izbirnih povezanih izkušenj v Officeu](optional-connected-experiences.md). Če ste skrbnik, lahko te povezane izkušnje upravljate s kontrolniki zasebnosti za povezane izkušnje ali z nastavitvijo pravilnika *Dovoli uporabo dodatnih izbirnih povezanih izkušenj v Officeu*.
@@ -160,7 +161,7 @@ Izberete lahko, če so določene vrste povezanih izkušenj, kot so povezane izku
 
 > [!NOTE]
 > - Če uporabljate Office for Mac, odprite poljubno Officeovo aplikacijo in izberite meni aplikacije (na primer Word ali Excel) > **Preferences (Nastavitve)** > **Privacy (Zasebnost)**. Odpre se pogovorno okno z nastavitvami zasebnosti računa, kjer lahko izberete možnosti za zasebnost.
-> - Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
+> - Za več informacij, glejte [Nastavitve zasebnosti računa.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
 Če ste skrbnik svoje organizacije, lahko uporabite nastavitve pravilnika, da določite, če so te povezane izkušnje na voljo vašim uporabnikom. Če ne uporabite teh nastavitev pravilnika, so vse povezane izkušnje na voljo vašim uporabnikom. Če želite več informacij o uporabi teh nastavitvah pravilnika, si oglejte naslednje članke: 
 
